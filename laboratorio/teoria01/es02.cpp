@@ -22,9 +22,11 @@ int main() {
     if (d >= 0) {
         double x1 = (-b + sqrt(d)) / (2 * a);
         double x2 = (-b - sqrt(d)) / (2 * a);
-        cout << "Le radici dell'equazioni sono: " << x1 << ", " << x2 << endl;
+        cout << "Le radici dell'equazione sono: " << x1 << ", " << x2 << endl;
     } else {
-        cout << "Non esistono soluzioni reali" << endl;
+        double xr = (-b) / (2*a);
+        double xi = +sqrt(-d) / (2 * a);
+        cout << "Le radici dell'equazione sono: " << xr << "+" << xi << "i, " << xr << "-" << xi << "i" << endl;
     }
 
     return 0;
