@@ -18,9 +18,7 @@ int main() {
 
     if (attacker > defender) {
         cout << "VINCE L'ATTACCANTE" << endl;
-    } else if (defender > attacker) {
-        cout << "VINCE IL DIFENSORE" << endl;
     } else {
-        cout << "PAREGGIO" << endl;
+        cout << "VINCE IL DIFENSORE" << endl;
     }
 }

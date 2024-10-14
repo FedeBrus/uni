@@ -4,25 +4,24 @@
 using namespace std;
 
 int main() {
+    int dividendo = 1, divisore = 1, precisione = 1;
 
-    int dividendo = 732, divisore = 81, precisione = 4;
-
-    /*
     cout << "Inserire il dividendo: ";
     cin >> dividendo;
     cout << "Inserire il divisore: ";
     cin >> divisore;
     cout << "Inserire la precisione: ";
     cin >> precisione;
-    */
 
     int fattore = pow(10, precisione);
     dividendo *= fattore; 
-    int quoziente = dividendo / divisore;
+    int divisione = dividendo / divisore;
 
-    int resto = fattore + (quoziente % fattore);
-    quoziente = quoziente / fattore;
+    int quoziente = divisione / fattore;
+    int resto = divisione % fattore + fattore;
 
-    // STAMPA NON FUNZIONANTE WIP
-    cout << quoziente << resto << '\r' << quoziente << '.' << (resto % fattore) << endl;    return 0;
+    cout << quoziente << endl;
+    cout << resto << endl;
+
+    cout << quoziente << resto << '\r' << quoziente << '.' << endl;
 }

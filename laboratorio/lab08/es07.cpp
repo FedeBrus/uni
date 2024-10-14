@@ -31,10 +31,10 @@ int main() {
 
     // Confronto tra i massimi
     if (attackermax > defendermax) attacker_points++;
-    else if (attackermax < defendermax) defender_points++;
+    else defender_points++;
 
     if (attackermin > defendermin) attacker_points++;
-    else if (attackermin < defendermin) defender_points++;
+    else defender_points++;
 
     cout << "Punti attaccante: " << attacker_points << endl;
     cout << "Punti difensore: " << defender_points << endl;
