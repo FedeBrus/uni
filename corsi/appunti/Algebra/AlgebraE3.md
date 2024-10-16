@@ -563,6 +563,8 @@ $$
 0 & 1 & 2 & k \\
 1 & -k & k & k
 \end{bmatrix}
+$$
+$$
 \rightarrow_{E_{3,1}(-1)}
 \begin{bmatrix}
 1 & -1 & -1 & 0 \\
@@ -614,6 +616,8 @@ $$
 0 & 1 & 2 & k \\
 0 & 0 & 1 & \frac{k^{2}}{3k-1}
 \end{bmatrix}
+$$
+$$
 \rightarrow_{E_{2, 3}(-2)}
 \begin{bmatrix}
 1 & -1 & -1 & 0 \\
@@ -700,6 +704,8 @@ $$
 0 & 0 & 2 & 0 \\
 0 & 0 & 0 & 0
 \end{bmatrix}
+$$
+$$
 \rightarrow_{D_{2}\left( \frac{1}{2} \right)}
 \begin{bmatrix}
 1 & -1 & 0 & 1 \\
@@ -753,6 +759,8 @@ k & 1 & 2 & 1 \\
 k & 1 & 2 & 1 \\
 0 & k-1 & 2 & 1-k
 \end{bmatrix}
+$$
+$$
 \rightarrow_{S_{2,3}}
 \begin{bmatrix}
 1 & 1 & 1 & k \\
@@ -806,6 +814,8 @@ x+y+z=k \\
 (4-k)z=-k^{2}-k+2
 \end{cases}
 \qquad
+$$
+$$
 \begin{cases}
 x + y =k -\frac{(k + 2)(1 - k)}{4-k} \\ 
 (k-1)y = 1-k-2\left(\frac{(k + 2)(1 - k)}{4-k} \right) \\

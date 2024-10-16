@@ -274,6 +274,126 @@ Si trovi un’equazione cartesiana del piano $\pi_{4}$ passante per l’origine 
 
 ### c) 
 Si calcoli la proiezione ortogonale dell’origine sul piano $\pi_{1}$.
+
+
+## Es 1.13
+Sia $P$ il punto di coordinate $P(2,1,3)$ e sia $r$ la retta di equazioni cartesiane
+$$
+\begin{cases}
+x-y=0 \\
+y+z-3 = 0
+\end{cases}
+$$
+### a)
+Si trovi la distanza di $P$ da $r$.
+
+Per trovare la distanza di un punto da una retta basta trovare un piano ortogonale alla retta e imporne l'incidenza con il punto:
+
+Prima bisogna trovare la forma parametrica della retta $r$:
+$$
+\begin{cases}
+x = t \\
+y = t \\
+z - 3 = - t
+\end{cases}
+\qquad
+\begin{cases}
+x = t \\
+y = t \\
+z = 3 - t
+\end{cases}
+$$
+Il piano $\pi$ ha equazione del tipo:
+$$
+x + y - z = d
+$$
+Imponendo il piano passa per $P$, inserendo le componenti di $P$ possiamo ricavare il valore di $d$.
+$$
+d = 2 + 1 - 3 = 0 
+$$
+Dunque il piano ha equazione:
+$$
+x + y - z = 0
+$$
+Ora troviamo un punto $A = \pi \cap r$.
+$$
+\pi \cap r: 
+\begin{cases}
+x + y - z = 0 \\
+x = t \\
+y = t \\
+z = 3 - t
+\end{cases}
+\qquad
+\begin{cases}
+t + t - 3 + 3t = 0 \\
+x = t \\
+y = t \\
+z = 3 - t
+\end{cases}
+\qquad
+\begin{cases}
+t = 1 \\
+x = 1 \\
+y = 1 \\
+z = 2
+\end{cases}
+$$
+Ora bisogna trovare un vettore generato dai punti $P$ e $A$.
+$$
+\vec{v} = (1, 0, 1)
+$$
+Ora basta ricavare la lunghezza del vettore:
+$$
+dist = \sqrt{ 1 + 0 + 1 } = \sqrt{ 2 }
+$$
+## Es 1.14
+Nel piano, si considerino le rette $r_{1}, r_{2}, r_{3}$
+$$
+r_{1} :
+\begin{cases}
+x = 1 - 2t \\
+y = 2t
+\end{cases}
+\qquad
+r_{2} : x - 2y + 1 = 0
+\qquad
+r_{3} : 2x + y - 2 = 0
+$$
+### a)
+Si trovi un'equazione cartesiana della retta $r$ parallela a $r_{1}$ e passante per il punto $A = r_{2} \cap r_{3}$
+$$
+r_{2} \cap r_{3}: 
+\begin{cases}
+x -2y + 1 = 0 \\
+2x + y -2 = 0
+\end{cases}
+\qquad
+\begin{cases}
+x = 2y - 1 \\
+4y - 2 + y -2 = 0
+\end{cases}
+\qquad
+\begin{cases}
+x = \frac{3}{5} \\
+y = \frac{4}{5}
+\end{cases}
+$$
+Dunque la retta $r$ è:
+$$
+r: 
+\begin{cases}
+x = \frac{3}{5}-2t \\
+y = \frac{4}{5}+2t
+\end{cases}
+\qquad
+\begin{cases}
+- \frac{x}{2} + \frac{3}{10} = t \\
+y = \frac{4}{5}-x+\frac{3}{5}
+\end{cases}
+\qquad
+x + y = \frac{7}{5}
+$$
 ## Es 1.15
 
 ### Dati:
