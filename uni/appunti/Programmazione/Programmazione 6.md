@@ -1,1 +1,0 @@
-## Passaggio di parametri
