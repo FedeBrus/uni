@@ -33,63 +33,59 @@ $$
 \begin{bmatrix}
 1 & 2 & 0 & 0 \\
 1 & k+1 & 1 & 0 \\
-2 & 4 & 2k-1 & 0 \\
+2 & 4 & 2k-2 & 0 \\
 -1 & k-3 & 2k-1 & 0
 \end{bmatrix}
 \rightarrow_{E_{2,1}(-1)}
 \begin{bmatrix}
 1 & 2 & 0 & 0 \\
 0 & k-1 & 1 & 0 \\
-2 & 4 & 2k-1 & 0 \\
+2 & 4 & 2k-2 & 0 \\
 -1 & k-3 & 2k-1 & 0
 \end{bmatrix}
 \rightarrow_{E_{3,1}(-2)}
 \begin{bmatrix}
 1 & 2 & 0 & 0 \\
 0 & k-1 & 1 & 0 \\
-0 & 0 & 2k-1 & 0 \\
+0 & 0 & 2k-2 & 0 \\
 -1 & k-3 & 2k-1 & 0
 \end{bmatrix}
 \rightarrow_{E_{4,1}(1)}
 \begin{bmatrix}
 1 & 2 & 0 & 0 \\
 0 & k-1 & 1 & 0 \\
-0 & 0 & 2k-1 & 0 \\
+0 & 0 & 2k-2 & 0 \\
 0 & k-1 & 2k-1 & 0
 \end{bmatrix}
 \rightarrow_{E_{4,2}(-1)}
 \begin{bmatrix}
 1 & 2 & 0 & 0 \\
 0 & k-1 & 1 & 0 \\
-0 & 0 & 2k-1 & 0 \\
+0 & 0 & 2k-2 & 0 \\
 0 & 0 & 2k-2 & 0
 \end{bmatrix}
+\rightarrow_{E_{4,3}(-1)}
+\begin{bmatrix}
+1 & 2 & 0 & 0 \\
+0 & k-1 & 1 & 0 \\
+0 & 0 & 2k-2 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
 $$
-Se $k = \frac{1}{2}$ si annulla la terza equazione ma la nullità del sistema rimane $0$.
-Se $k = 1$ la nullità del sistema diventa $2$. Rendendo così le matrici linearmente dipendenti.
+Se $k = 1$ la nullità del sistema diventa $1$. Rendendo così le matrici linearmente dipendenti.
 Se invece $k \neq 1$:
 $$
 \begin{bmatrix}
 1 & 2 & 0 & 0 \\
 0 & k-1 & 1 & 0 \\
-0 & 0 & 2k-1 & 0 \\
-0 & 0 & 2k-2 & 0
+0 & 0 & 2k-2 & 0 \\
+0 & 0 & 0 & 0
 \end{bmatrix}
 \rightarrow
 \begin{cases}
 x = -2y \\
 (k-1)y = -z \\
-(2k-1)z = 0 \\
-(2k-2)z = 0
-\end{cases}
-$$
-Se $k = \frac{1}{2}$ basta escludere la terza equazione.
-$$
-\begin{cases}
-x = -2y \\
-(k-1)y = -z \\
-(2k-1)z = 0 \\
-(2k-2)z = 0
+(2k-2)z = 0 \\
 \end{cases}
 \qquad
 \begin{cases}
@@ -98,7 +94,6 @@ y = 0 \\
 z = 0
 \end{cases}
 $$
-
 ### b)
 Per il valore trovato in a) esprimere $B$ come combinazione lineare di $A,C$.
 Se $k = 1$.
@@ -148,7 +143,7 @@ $$
 \lambda = 2 \\
 \lambda + \mu = 2 \\
 2\lambda = 4 \\
--\lambda + \mu = 1
+-\lambda + \mu = -2
 \end{cases}
 \qquad
 \begin{cases}
@@ -355,7 +350,6 @@ $$
 \end{bmatrix}
 $$
 $rg(A) = n, \forall k \in \mathbb{R}$:
-Il sistema ha soluzione unica se e solo se $k \neq 0$.
 $$
 \begin{bmatrix}
 1 & k & 1 & 0 \\
@@ -521,7 +515,7 @@ $$
 v_{1} = (-1,1,2,1,0), \qquad v_{2} = (0,2,1,1,0), \qquad v_{3} = (1,1,-1,0,0)
 $$
 ### a)
-Trovare una base di $A$.
+Trovare una base di $V$.
 $$
 \begin{bmatrix}
 -1 & 0 & 1 & 0 \\
@@ -706,6 +700,17 @@ $$
 Se $k \neq 3$ il sistema ha un'equazione impossibile dunque $v_{3}$ non è combinazione lineare.
 Se $k = 3$:
 $$
+\begin{bmatrix}
+1 & -2 & 3 \\
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+\lambda - 2\mu = 3
+\end{cases}
+\qquad
 \begin{cases}
 \lambda = 3 + 2t \\
 \mu = t
@@ -729,7 +734,7 @@ $$
 0 & 0 & 0 \\
 3 & -6 & 0
 \end{bmatrix}
-\rightarrow_{\frac{E_{4,2}}{-\frac{3}{2}}}
+\rightarrow_{E_{4,2}\left(-\frac{3}{2}\right)}
 \begin{bmatrix}
 1 & -2 & 0 \\
 2 & -4 & 0 \\
@@ -789,7 +794,7 @@ $$
 0 & 0 & 3k-9 & 0 \\
 0 & 0 & 0 & 0
 \end{bmatrix}
-\rightarrow_{\frac{E_{3,2}}{-3}}
+\rightarrow_{E_{3,2}(-3)}
 \begin{bmatrix}
 1 & -2 & 3 & 0 \\
 0 & 0 & k-3 & 0 \\
@@ -806,7 +811,7 @@ $$
 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0
 \end{bmatrix}
-\rightarrow_{\frac{D_{2}}{\frac{1}{k-3}}}
+\rightarrow_{{D_{2}}\left( \frac{1}{k-3}\right)}
 \begin{bmatrix}
 1 & -2 & 3 & 0 \\
 0 & 0 & 1 & 0 \\
@@ -1197,10 +1202,12 @@ $$
 ### a)
 Stabilire per quali valori di $k$ l'insieme $S$ è un sottospazio di $\mathbb{R}^{3}$.
 $$
+S = Sol \bigg(
 \begin{cases}
 x + y + (k+1)z = k \\
 2x + y + z = 0
 \end{cases}
+\bigg)
 $$
 L'insieme $S$ si presenta dunque come l'insieme di soluzioni di questo sistema lineare, che sappiamo essere uno spazio vettoriale se e solo se è omogeneo, perciò $k = 0$.
 
@@ -1235,7 +1242,7 @@ z = t
 \end{cases}
 $$
 Il sistema ha infinite soluzioni, prendiamone una con $t = 1$, ovvero $v = (0, -1, 1)$.
-Dunque $S$ è generato da $\langle v \rangle$. Ora bisogna dimostrare l'unicità:
+Dunque $S$ è generato da $\langle v \rangle$. Ora bisogna dimostrare l'unicità (in verità non serve perché è una base in automatico nel caso di un sistema lineare omogeneo):
 $$
 \begin{bmatrix}
 0 & 0 \\
@@ -1615,7 +1622,7 @@ Consideriamo che:
 $$
 \mathbb{R}_{2}[x] = a_{0} + a_{1}x + a_{2}x^{2}
 $$
-Considerando la base canonica $\{ 1, x, x^{2}\}$, i coefficienti di un polinomio di $\mathbb{R}_{2}[x]$ hanno come coordinate $(a_{0}, a_{1}, a_{2}) \in \mathbb{R}^{3}$
+Considerando la base canonica $\{ 1, x, x^{2}\}$, i polinomi di $\mathbb{R}_{2}[x]$ hanno come coordinate $(a_{0}, a_{1}, a_{2}) \in \mathbb{R}^{3}$
 Quindi i polinomi di partenza trasformati diventano:
 $$
 v_{1} = (1, 1, 0), \qquad v_{2} = (1, 2, 1), \qquad v_{3} = (0, 1, -1)
@@ -2173,3 +2180,118 @@ k & -2 & k-1 & 0 \\
 \end{bmatrix}
 $$
 In questo caso le tre matrici sono linearmente indipendenti e quindi formano una base. Quindi la dimensione di $W$ è 3.
+
+## Es 5.22
+Sia $V = \langle A, B, C \rangle$ il sottospazio di $M_{2 \times 2}(\mathbb{R})$ dove
+$$
+A = \begin{bmatrix}
+2 & 0 \\
+1 & 2
+\end{bmatrix}, \qquad
+B = \begin{bmatrix}
+2 & 1 \\
+3 & 4
+\end{bmatrix}, \qquad
+C = \begin{bmatrix}
+2 & 3 \\
+7 & 8
+\end{bmatrix}
+$$
+### a)
+Si determini la dimensione e una base di $V$.
+
+Per trovare una base doppiamo vedere quali degli elementi generatori sono linearmente indipendenti tra di loro:
+$$
+\begin{bmatrix}
+2 & 2 & 2 & 0 \\
+0 & 1 & 3 & 0 \\
+1 & 3 & 7 & 0 \\
+2 & 4 & 8 & 0
+\end{bmatrix}
+\rightarrow_{D_{1}\left( \frac{1}{2} \right)}
+\begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & 1 & 3 & 0 \\
+1 & 3 & 7 & 0 \\
+2 & 4 & 8 & 0
+\end{bmatrix}
+\rightarrow_{E_{3,1}(-1)}
+\begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & 1 & 3 & 0 \\
+0 & 2 & 6 & 0 \\
+2 & 4 & 8 & 0
+\end{bmatrix}
+\rightarrow_{D_{3}\left( \frac{1}{2} \right)}
+\begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & 1 & 3 & 0 \\
+0 & 1 & 3 & 0 \\
+2 & 4 & 8 & 0
+\end{bmatrix}
+\rightarrow_{E_{3,2}(-1)}
+\begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & 1 & 3 & 0 \\
+0 & 0 & 0 & 0 \\
+2 & 4 & 8 & 0
+\end{bmatrix}
+\rightarrow_{S_{3,4}}
+\begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & 1 & 3 & 0 \\
+2 & 4 & 8 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+$$
+\rightarrow_{E_{3,1}(-2)}
+\begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & 1 & 3 & 0 \\
+0 & 2 & 6 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{3,2}(-2)}
+\begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & 1 & 3 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{1,2}(-1)}
+\begin{bmatrix}
+1 & 0 & -2 & 0 \\
+0 & 1 & 3 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+Il rango della matrice è $2$, difatti $C$ può essere scritta come combinazione lineare di $A, B$. Quindi una base di $V$ è $\mathcal{B} = \{ A, B \}$
+
+### b)
+Si esprima $D = \begin{bmatrix} 2 & 2 \\ 5 & 6 \end{bmatrix}$ come combinazione lineare della base trovata al punto a).
+
+$$
+\begin{cases}
+2\lambda + 2\mu = 2 \\
+\mu = 2 \\
+\lambda + 3 \mu = 5 \\
+2\lambda + 4\mu = 6
+\end{cases}
+\qquad
+\begin{cases}
+2\lambda + 2\mu = 2 \\
+\mu = 2 \\
+\lambda = -1 \\
+2\lambda + 4\mu = 6
+\end{cases}
+\qquad
+\begin{cases}
+-2 + 4 = 2 \\
+\mu = 2 \\
+\lambda = -1 \\
+-2 + 8 = 6
+\end{cases}
+$$
+Quindi $D = -A + 2B$.
