@@ -255,7 +255,7 @@ o(g_{1}(x)+g_{2}(x)) = o(g_{1}(x)) + o(g_{2}(x))
 $$
 ---
 $$
-f(x) = o(cg(x)) \qquad c in \mathbb{R} \setminus \{ 0 \}
+f(x) = o(cg(x)) \qquad c \in \mathbb{R} \setminus \{ 0 \}
 $$
 1. $f(x) = cg(x)\omega(x)$
 $$
@@ -328,8 +328,10 @@ $$
 $$
 ---
 $$
-e^{x} = 1 + x + o(x)
-e^{x} - 1 - x = o(x)
+\begin{align}
+e^{x} &= 1 + x + o(x) \\
+e^{x} - 1 - x &= o(x)
+\end{align}
 $$
 Definizione quasi equivalente:
 $$
@@ -384,7 +386,7 @@ $$
 $$
 ##### Esempio:
 $$
-\lim_{ x \to 0 } \frac{\sin(2x) + 3tanx}{\arcsin(7x)+ 2\arctan x} = \frac{2x + o(x) + 3 + o(x)}{7x + o(x) + 2x + o(x)} = \frac{5}{9}
+\lim_{ x \to 0 } \frac{\sin(2x) + 3\tan x}{\arcsin(7x)+ 2\arctan x} = \frac{2x + o(x) + 3x + o(x)}{7x + o(x) + 2x + o(x)} = \frac{5}{9}
 $$
 $$
 \sin(2x) = 2x + o(2x) = 2x + o(x)
@@ -438,5 +440,5 @@ $$
 $$
 
 $$
-\log(1+\tan ^{3}(2x)) = 8x^{3} + o(x^{3})+ o(x^{3}+ o(x^{3})) = 8x^{3} +o(x^{3}) + o(x^{3}) + o(o(x^{3})) = 8x^{3} + o(x^{3}) = 0
+\log(1+\tan ^{3}(2x)) = 8x^{3} + o(x^{3})+ o(8x^{3}+ o(x^{3})) = 8x^{3} +o(x^{3}) + o(x^{3}) + o(o(x^{3})) = 8x^{3} + o(x^{3}) = 0 \qquad x \rightarrow 0
 $$

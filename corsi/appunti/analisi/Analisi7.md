@@ -86,6 +86,7 @@ $a_{n} = \frac{(-1)^{n}}{n}$, in questo caso si arriva a $0$ oscillando tra i po
 3. Se $a_{n} \rightarrow 0^{+}$ allora $a_{n}$ decresce definitivamente? FALSO!
 $a_{n}$
 
+
 #### Teorema di unicità:
 Una successione $a_{n}$ ha sempre solo uno dei comportamenti 1, 2, 3, 4.
 Se $a_{n}$ ha comportamento 1:
@@ -107,22 +108,23 @@ Quindi se una successione converge ad un numero reale $l$, allora $l$ è unico.
 - se $a_{n} \rightarrow 2024$, allora ho definitivamente che $a_{n} < 2025$. 
 
 ##### Esempi:
-
+1)
 $$
 a_{n} = n^{2}
 $$
 intuitivamente, $a_{n} \rightarrow +\infty$.
 Lo dimostro usando la caratterizzazione, ossia $\forall M \in \mathbb{R}$, $\exists n_{0} \in \mathbb{N} : a_{n} \geq M, \forall n \geq n_{0}$
-- Se $M \leq 0 \implies a_{n} \geq M$ SEMPRE!
-- se $M>0$, voglio che $a_{n} \geq M$ ossia $n^{2} \geq M \Longleftrightarrow n_{0}^{2}=M+1 \implies n_{0} = \sqrt{ M + 1 } + 1$.
+- se $M \leq 0 \implies a_{n} \geq M$ SEMPRE!
+- se $M>0$, voglio che $a_{n} \geq M$, ossia $n^{2} \geq M \Longleftrightarrow n_{0}^{2}=M+1 \implies n_{0} = \sqrt{ M + 1 } + 1$.
 
 2)
 $$
 a_{n} = \sqrt{ n }
 $$
 intuitivamente, $a_{n} \rightarrow +\infty$
-Fai a casa
-
+Lo dimostro usando la caratterizzazione, ossia $\forall M \in \mathbb{R}$, $\exists n_{0}\in \mathbb{N}:a_{n}\geq M,\forall n\geq n_{0}$
+- se $M \leq 0 \implies a_{n} > M$ SEMPRE!
+- se $M > 0$, voglio che $a_{n} \geq M$, ossia $\sqrt{ n } \geq M \Longleftrightarrow \sqrt{ n_{0} } = M + 1 \implies n_{0} = (M + 1)^{2} + 1$
 3)
 $$
 a_{n} = \lim_{ n \to +\infty } \frac{1}{n+4} = 0^{+}
@@ -130,13 +132,6 @@ $$
 $\forall \varepsilon > 0$ ho che $0<a_{n}\leq\varepsilon$ definitivamente.
 Fissato $\varepsilon > 0$, devo verificare che $\frac{1}{n+4} \leq \varepsilon \implies n+4 \geq \frac{1}{\varepsilon} \implies n \geq \frac{1}{\varepsilon} - 4$
 Quindi $n_{0} = \frac{1}{\varepsilon}-4$
-##### Fatti importanti:
-$$
-\begin{array}{l}
-\lim_{ n \to +\infty } n^{a} = +\infty \text{ se } a > 0 \\
-\lim_{ n \to +\infty } n^{a} = 0^{+} \text{ se } a < 0
-\end{array}
-$$
 ## Retta reale estesa
 $$
 \bar{\mathbb{R}} = \mathbb{R} \cup \{ +\infty \} \cup \{ -\infty \}
@@ -182,6 +177,13 @@ Allora valgono (rispettando le 7 forme indeterminate):
 
 Se il risultato finisce nelle forme indeterminate non è che non diverga, non converga etc..., ma semplicemente non è determinabile il suo comportamento.
 
+##### Fatti importanti:
+$$
+\begin{array}{l}
+\lim_{ n \to +\infty } n^{a} = +\infty \text{ se } a > 0 \\
+\lim_{ n \to +\infty } n^{a} = 0^{+} \text{ se } a < 0
+\end{array}
+$$
 #### Teorema del confronto a 2:
 Siano $a_{n}$ e $b_{n}$ 2 successioni.
 Supponiamo che $a_{n} \leq b_{n}$ definitivamente.
@@ -217,7 +219,7 @@ $$
 $$
 Usando i teoremi algebrici viene fuori una forma indeterminata, allora cerco di manipolarlo algebricamente.
 $$
-\lim_{ n \to +\infty } n^{2}(3-7n) = +\infty(-\infty) = -\infty
+\lim_{ n \to +\infty } n^{3}\left( \frac{3}{n}-7 \right) = +\infty (-7 ) = -\infty
 $$
 4)
 $$
@@ -233,4 +235,8 @@ $$
 Per il teorema dei carabinieri, siccome $\frac{1}{n^{2}}$ converge a $0$, allora anche $\frac{|\sin(n)|}{n^{2}}$ converge a $0$.
 $$
 0 \leq\frac{sin(n)}{n^{2}} \leq \frac{|\sin(n)|}{n^{2}}
+$$
+Dunque anche $\frac{\sin(n)}{n^{2}} \rightarrow 0$, allora il limite originale:
+$$
+\lim_{ n \to +\infty } n^{2}\left( 1 - \frac{\sin n}{n} \right) = +\infty(1) = +\infty
 $$

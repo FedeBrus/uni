@@ -14,7 +14,7 @@ Se abbiamo un'insieme di partenza $A \subseteq \mathbb{R}$, non è detto che $x_
 
 ### Caso 1
 Iniziamo guardando $\lim_{ x \to +\infty } f(x)$:
-1. $= l \in \mathbb{R}$
+1. $l \in \mathbb{R}$
 2. $+\infty$
 3. $-\infty$
 4. non esiste
@@ -38,7 +38,7 @@ Nel secondo caso la caratterizzazione cambia con $l - \varepsilon \leq f(x) \leq
 
 ### Caso 2
 Ora, guardando $\lim_{ x \to -\infty } f(x)$:
-1. $= l \in \mathbb{R}$
+1. $l \in \mathbb{R}$
 2. $+\infty$
 3. $-\infty$
 4. non esiste
@@ -62,7 +62,7 @@ Nel secondo caso la caratterizzazione cambia con $l - \varepsilon \leq f(x) \leq
 
 ### Caso 3
 Ora, guardando $\lim_{ x \to x_{0} } f(x)$:
-1. $= l \in \mathbb{R}$
+1. $l \in \mathbb{R}$
 2. $+\infty$
 3. $-\infty$
 4. non esiste
@@ -112,7 +112,7 @@ Il teorema di radice e rapporto **non** funzionano per i limiti di funzione.
 6. Confronto tra ordini di infiniti. 
 
 ### Continuità
-Una funzione $f : A \rightarrow B, \qquad A \subseteq \mathbb{R}, x_{0} \in A$, è detta *continua* in $x_{0}$ se vale che $\lim_{ x \to x_{0} } f(x) = f(x_{0})$ ($\forall x \in A, x \neq x_{0}$).
+Una funzione $f : A \rightarrow B, A \subseteq \mathbb{R}, x_{0} \in A$, è detta *continua* in $x_{0}$ se vale che $\lim_{ x \to x_{0} } f(x) = f(x_{0})$.
 Diremo che $f$ è continua in $A$ se è continua in ogni punto di $A$, ossia se $\forall y \in A, \lim_{ x \to y } f(x) = f(y)$.
 
 Per le funzioni continue vale che $\lim f(x) = f(\lim x)$.

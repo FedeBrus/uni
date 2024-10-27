@@ -32,8 +32,17 @@ Noi sappiamo che "l'esponenziale batte la potenza" e dunque il limite è 0.
 X casa:
 ##### Dim:
 $$
-\lim_{ x \to o^{+} } x^{a}\log^{b}x = 0 \qquad \forall a > 0, \forall b > 0
+\lim_{ x \to 0^{+} } x^{a}\log^{b}x = 0 \qquad \forall a > 0, \forall b > 0
 $$
+$$
+\lim_{ x \to 0^{+} } \frac{(\log x)^{b}}{x^{-a}}
+$$
+Pongo $y = -\log x$, se $x \rightarrow 0^{+}$ allora $y \rightarrow +\infty$ e $x = 1 / e^{y}$
+$$
+\lim_{ y \to +\infty } -\frac{y^{b}}{e^{ay}}
+$$
+Sappiamo che "l'esponenziale batte la potenza" e dunque il limite è 0.
+
 ---
 ## Criterio funzione $\implies$ successione
 
@@ -53,14 +62,14 @@ $$
 $$
 Pongo $x = \frac{1}{n}$, quindi $n = \frac{1}{x}$, se $n \rightarrow +\infty$, allora $x \rightarrow 0^{+}$.
 $$
-\lim_{ x \to 0^{+} } \frac{1}{x}(2^{x}-1) = \log 2
+\lim_{ x \to 0^{+} } \frac{1}{x}(2^{x}-1) =^{LN} \log 2
 $$
 ---
 Dimostriamo:
 $$
 \lim_{ x \to 0 } \frac{\sin x}{x} = 1
 $$
-Le due funzioni sono dispari quindi il loro rapporto è pari e dunque il grafico è speculare., infatti $\left( \frac{\sin(-x)}{-x} \right) = \frac{-\sin x}{-x} = \frac{\sin_{x}}{x}$, quindi è sufficiente fare $\lim_{ x \to 0^{+} } \frac{\sin{x}}{x}$.
+Le due funzioni sono dispari quindi il loro rapporto è pari e dunque il grafico è speculare, infatti $\left( \frac{\sin(-x)}{-x} \right) = \frac{-\sin x}{-x} = \frac{\sin x}{x}$, quindi è sufficiente fare $\lim_{ x \to 0^{+} } \frac{\sin{x}}{x}$.
 ##### Oss:
 Ne deduciamo che è sufficiente considerare l'intervallo $\left( 0, \frac{\pi}{2} \right)$.
 
@@ -181,8 +190,10 @@ b_{n} & \rightarrow +\infty = x_{0}
 \end{align}
 $$
 $$
-f(a_{n}) = \sin(a_{n}) = \sin\left( \frac{\pi}{2} + 2n\pi \right) \rightarrow 1
-f(b_{n}) = \sin(b_{n}) = \sin\left( \frac{3\pi}{2} + 2n\pi \right) \rightarrow -1
+\begin{align}
+f(a_{n}) = \sin(a_{n}) &= \sin\left( \frac{\pi}{2} + 2n\pi \right) \rightarrow 1 \\
+f(b_{n}) = \sin(b_{n}) &= \sin\left( \frac{3\pi}{2} + 2n\pi \right) \rightarrow -1
+\end{align}
 $$
 ##### Esempio:
 $$

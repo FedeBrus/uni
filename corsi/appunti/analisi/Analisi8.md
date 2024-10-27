@@ -55,11 +55,8 @@ $$
 \lim_{ n \to +\infty } \sqrt[n]{ a_{n} } = l \in \bar{\mathbb{R}}
 $$
 --- 
-
---- 
-
 ### Criterio di de L'Hopital per le successioni
-Supponiamo di avere due successioni $a_{n}$ e $b_{n}$e supponiamo che $b_{n}$ sia strettamente crescente con $b_{n} > 0$ e $\lim_{ n \to +\infty } b_{n} = +\infty$, allora:
+Supponiamo di avere due successioni $a_{n}$ e $b_{n}$, e supponiamo che $b_{n}$ sia strettamente crescente con $b_{n} > 0$ e $\lim_{ n \to +\infty } b_{n} = +\infty$, allora:
 $$
 \lim_{ n \to +\infty } \frac{a_{n+1} - a_{n}}{b_{n+1}-b_{n}} = \lim_{ n \to +\infty } \frac{a_{n}}{b_{n}}
 $$
@@ -80,7 +77,7 @@ $$
 a_{n} \geq \left( \frac{1+l}{2} \right)^{n}
 $$
 Sappiamo che $\frac{1+l}{2}$ è sicuramente positivo dato che $l > 1$.
-Quindi poiché $\left( \frac{1+l}{2} \right)^{n} \rightarrow +\infty$, per il teorema del confronto a due si ah che $a_{n} \rightarrow +\infty$
+Quindi poiché $\left( \frac{1+l}{2} \right)^{n} \rightarrow +\infty$, per il teorema del confronto a due si ha che $a_{n} \rightarrow +\infty$
 
 Supponiamo che $\sqrt[n]{ a_{n} } \rightarrow l < 1$ e supponiamo che $l \in \mathbb{R}$.
 
@@ -104,7 +101,7 @@ $$
 $$
 Applichiamo il criterio del rapporto con $a_{n} = \frac{2^{n}}{n^{2}}$.
 $$
-\frac{a_{n+1}}{a_{n}} = \frac{\frac{2^{n+1}}{n+1}^{2}}{\frac{2^{n}}{n^{2}}} = \frac{2^{n} \cdot 2}{(n+1)^{2}} \cdot \frac{n^{2}}{2^{n}} = 2 \cdot \frac{1}{\left( \frac{n+1}{n} \right)^{2}} = 2 \cdot \frac{1}{\left( 1 + \frac{1}{n} \right)^{2}} = 2 = l > 1
+\frac{a_{n+1}}{a_{n}} = \frac{\frac{2^{n+1}}{(n+1)^{2}}}{\frac{2^{n}}{n^{2}}} = \frac{2^{n} \cdot 2}{(n+1)^{2}} \cdot \frac{n^{2}}{2^{n}} = 2 \cdot \frac{1}{\left( \frac{n+1}{n} \right)^{2}} = 2 \cdot \frac{1}{\left( 1 + \frac{1}{n} \right)^{2}} = 2 = l > 1
 $$
 Siccome $l > 1$, $a_{n} \rightarrow +\infty$
 
@@ -112,18 +109,16 @@ Siccome $l > 1$, $a_{n} \rightarrow +\infty$
 $$
 \lim_{ n \to +\infty } \frac{a^{n}}{n^{b}}
 $$
-Applichiamo il criterio del rapporto con $a_{n} = \frac{a^{n}}{n^{b}}$.
+Applichiamo il criterio del rapporto con $c_{n} = \frac{a^{n}}{n^{b}}$.
 $$
-\frac{\frac{a \cdot a^{n}}{(n+2)^{b}}}{\frac{a^{n}}{n^{b}}} = \frac{a \cdot a^{n}}{(n+1)^{b}} \cdot \frac{n^{b}}{a^{n}} = a \cdot \frac{1}{\left( 1 + \frac{1}{n} \right)^{b}} = a = l
+\frac{\frac{a \cdot a^{n}}{(n+1)^{b}}}{\frac{a^{n}}{n^{b}}} = \frac{a \cdot a^{n}}{(n+1)^{b}} \cdot \frac{n^{b}}{a^{n}} = a \cdot \frac{1}{\left( 1 + \frac{1}{n} \right)^{b}} = a = l
 $$
-Quindi se $a > 1$ allora $a_{n} \rightarrow +\infty$.
-Invece se $a < 1$ allora $a_{n} \rightarrow 0$.
+Quindi se $a > 1$ allora $c_{n} \rightarrow +\infty$.
+Invece se $a < 1$ allora $c_{n} \rightarrow 0$.
 
 In generale: (bagaglio)
 $$
-\boxed{
 \lim_{ n \to +\infty } \frac{a^{n}}{n^{b}} = +\infty \qquad \text{con } a > 1 \qquad \text{e} \qquad b > 0
-}
 $$
 Quindi l'esponenziale *batte* SEMPRE la potenza.
 
@@ -139,9 +134,7 @@ Quindi siccome $l < 1$ allora sappiamo che $a_{n} \rightarrow 0$.
 
 In generale: (bagaglio)
 $$
-\boxed{
 \lim_{ n \to +\infty } \frac{a^{n}}{n!} = 0 \qquad \text{con } a > 1 
-}
 $$
 Quindi il fattoriale *batte* SEMPRE l'esponenziale.
 
@@ -198,7 +191,7 @@ $$
 \left( 1-\frac{1}{n^{2}} \right)^{n}  &  \geq 1 - \frac{1}{n}
 \end{align}
 $$
-Dunque, definitivamente:
+Dunque, almeno definitivamente:
 $$
 \frac{e_{n}}{e_{n-1}} = \frac{\left( 1 - \frac{1}{n^{2}} \right)^{n}}{\left( 1-\frac{1}{n} \right)} > 1
 $$
@@ -212,7 +205,7 @@ $$
  & = \frac{\left( 1+\frac{1}{n-1} \right)^{n}}{\left( 1+\frac{1}{n} \right)^{n+1}} \\ \\
  & = \frac{\left( \frac{n}{n-1} \right)^{n}}{\left(\frac{n+1}{n}\right)^{n+1}} \\ \\
  & = \frac{\left( \frac{n}{n-1} \right)^{n}\left( \frac{n}{n+1} \right)^{n}}{\frac{n+1}{n}} \\ \\
- & = \frac{\left( \frac{n}{n^{2}-1} \right)^{n}}{\frac{n+1}{n}} \\ \\
+ & = \frac{\left( \frac{n^{2}}{n^{2}-1} \right)^{n}}{\frac{n+1}{n}} \\ \\
  & = \frac{\left( 1 + \frac{1}{n^{2}-1} \right)^{n}}{1+ \frac{1}{n}}
 \end{align}
 $$
