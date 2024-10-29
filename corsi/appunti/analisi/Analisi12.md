@@ -43,7 +43,7 @@ $$
 $$
 ##### Esempio:
 $$
-f(x) = \sqrt[3]{ x }, \qquad x_{0} = 0l
+f(x) = \sqrt[3]{ x }, \qquad x_{0} = 0
 $$
 $$
 \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} = \lim_{ h \to 0 } \frac{\sqrt[3]{ x_{0} + h } - \sqrt[3]{ x_{0} }}{h} = \lim_{ h \to 0 } \frac{\sqrt[3]{ h }}{h} = \lim_{ h \to 0 } \frac{1}{h^{\frac{2}{3}}} = +\infty

@@ -53,7 +53,8 @@ $$
 
 Siano $f$ e $g$ definite entrambe almeno in un intervallo comune contenente il punto limite $x_{0} \in \bar{\mathbb{R}}$.
 
-##### Definizione
+##### Definizione& = 
+
 Diremo che $f$ è o-piccolo di $g$ per $x \rightarrow x_{0}$ e si scrive $f(x) = o(g(x)) \quad x \rightarrow x_{0}$ se esiste una funzione $\omega (x)$ tale che:
 1. $f(x) = g(x)\omega(x)$
 2. $\lim_{ x \to x_{0} } \omega(x) = 0$
