@@ -4,7 +4,7 @@ $f: \mathbb{R} \rightarrow \mathbb{R}, x_{0} \in \mathbb{R}, (f: A \rightarrow \
 $h \in \mathbb{R} (x_{0}+h \in A\text{ se } h \rightarrow 0$).
 ### Rapporto incrementale
 $$
-\frac{f(x_{0} + h) - f(x)}{h} 
+\frac{f(x_{0} + h) - f(x_{0})}{h} 
 $$
 ### Definizione formale di derivata
 Si dice che la funzione $f: \mathbb{R} \rightarrow \mathbb{R}$ è derivabile in $x_{0}$ se il limite $h \rightarrow 0$ del rapporto incrementale esiste ed è finito (ossia è un numero reale).
@@ -70,6 +70,7 @@ $$
 \begin{align}
 \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0}) - f'(x_{0})h}{h} &= 0 \\
 \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} - f'(x_{0})  & = 0 \\
+\lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} = a
 \end{align}
 $$
 ### Teorema:
@@ -145,7 +146,7 @@ f(x) = \log x, \qquad x > 0
 $$
 1 modo:
 $$
-\lim_{ h \to 0 } \frac{\log(x + h) - \log x}{h} = \lim_{ h \to 0 } \frac{ \log \left( 1 +\frac{h}{x} \right)}{h} = \frac{\lim_{ h \to 0 } \log\left( 1 + \frac{h}{x} \right)}{\frac{h}{x} x} =^{LN} \frac{1}{x}
+\lim_{ h \to 0 } \frac{\log(x + h) - \log x}{h} = \lim_{ h \to 0 } \frac{ \log \left( 1 +\frac{h}{x} \right)}{h} = \lim_{ h \to 0 } \frac{\log\left( 1 + \frac{h}{x} \right)}{\frac{h}{x} x} =^{LN} \frac{1}{x}
 $$
 2 modo:
 $$
@@ -161,7 +162,7 @@ $$
 1 modo:
 $$
 \begin{align}
-\lim_{ h \to 0 } \frac{f(x + h) - f(x)}{h} = \lim_{ h \to 0 } \frac{\cos(x + h) - \cos x}{h} =  \lim_{ h \to 0 }  \frac{\cos x\cos h - \sin x \sin h - \cos x}{h} \\ = \frac{\cos x(\cos h - 1)}{h^{2}}h - \frac{\sin x \sin h}{h} = \frac{\cos x}{2}h-\sin x = -\sin x
+\lim_{ h \to 0 } \frac{f(x + h) - f(x)}{h} = \lim_{ h \to 0 } \frac{\cos(x + h) - \cos x}{h} =  \lim_{ h \to 0 }  \frac{\cos x\cos h - \sin x \sin h - \cos x}{h} \\ = \frac{\cos x(\cos h - 1)}{h^{2}}h - \frac{\sin x \sin h}{h} =^{LN} \frac{\cos x}{2}h-\sin x = -\sin x
 \end{align}
 $$
 2 modo:
@@ -176,7 +177,7 @@ Date $f(x)$ e $g(x)$, pongo $S(x) = f(x) + g(x)$.
 
 1 modo:
 $$
-S'(x) = \lim_{ h \to 0 } \frac{S(x + h) - S(x)}{h} = \lim_{ h \to 0 } f(x + h) + g(x + h) - f(x) - g(x) = \lim_{ h \to 0 } \frac{f(x + h) - f(x)}{h} + \frac{g(x + h) + g(x)}{h} = f'(x) + g'(x)
+S'(x) = \lim_{ h \to 0 } \frac{S(x + h) - S(x)}{h} = \lim_{ h \to 0 } \frac{f(x + h) + g(x + h) - f(x) - g(x)}{h} = \lim_{ h \to 0 } \frac{f(x + h) - f(x)}{h} + \frac{g(x + h) + g(x)}{h} = f'(x) + g'(x)
 $$
 2 modo:
 $$
@@ -214,6 +215,7 @@ f(x+h) = f(x) + f'(x)h + o(h) \\
 g(x+h) = g(x) + g'(x)h + o(h)
 \end{align}
 $$
+Gli unici termini che contano e che non verranno inghiottiti da $o(h)$ sono i seguenti:
 $$
 P(x+h) = f(x+h)g(x+h) = f(x)g(x) + (f'(x)g(x) + f(x)g'(x))h + o(h), \qquad h \rightarrow 0
 $$
@@ -226,7 +228,7 @@ Date $f(x)$, pongo $Q(x) = \frac{1}{f(x)}$.
 1 modo:
 $$
 Q'(x) = \lim_{ h \to 0 } \frac{Q(x +h) - Q(x)}{h} = \lim_{ h \to 0 } \frac{\frac{1}{f(x +h)} - \frac{1}{f(x)}}{h} = \lim_{ h \to 0 } \frac{1}{h} \frac{f(x) - f(x+h)
-}{f(x)f(x+h)} = - \frac{f'(x)}{\underbrace{ f^{2}(x) }_{ \text{per la continuità} }}
+}{f(x)f(x+h)} = \lim_{ h \to 0 } - \frac{f(x + h) - f(x)}{h} \cdot \frac{1}{f(x)f(x + h)} =- \frac{f'(x)}{\underbrace{ f^{2}(x) }_{ \text{per la continuità} }}
 $$
 
 ### Derivata del rapporto
@@ -237,7 +239,7 @@ $$
 R'(x) = f'(x) \frac{1}{g(x)} + f(x)\left( \frac{1}{g(x)} \right)' = \frac{f'(x)}{g(x)} + f(x)\left( -\frac{g'(x)}{g^{2}(x)} \right) = \frac{f'(x)g(x)-f(x)g'(x)}{g^{2}(x)}
 $$
 ##### Esempio:
-$\tan'(x) = \left( \frac{\sin x}{\cos x} \right)' = \frac{\cos ^{2}x - \sin ^{x}}{\cos ^{2}x} = \frac{1}{\cos ^{2}x} = 1 + \tan ^{2}x$
+$\tan'(x) = \left( \frac{\sin x}{\cos x} \right)' = \frac{\cos ^{2}x + \sin^{2}x}{\cos ^{2}x} = \frac{1}{\cos ^{2}x} = 1 + \tan ^{2}x$
 
 ### Derivata della funzione inversa
 Sia $f$ una funzione che ammette inversa $g$.

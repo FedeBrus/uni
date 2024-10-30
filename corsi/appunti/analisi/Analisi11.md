@@ -53,7 +53,7 @@ $$
 
 Siano $f$ e $g$ definite entrambe almeno in un intervallo comune contenente il punto limite $x_{0} \in \bar{\mathbb{R}}$.
 
-##### Definizione& = 
+##### Definizione 
 
 Diremo che $f$ è o-piccolo di $g$ per $x \rightarrow x_{0}$ e si scrive $f(x) = o(g(x)) \quad x \rightarrow x_{0}$ se esiste una funzione $\omega (x)$ tale che:
 1. $f(x) = g(x)\omega(x)$
@@ -86,7 +86,7 @@ $$
 Qui la definizione normale è scomoda perché non ho due polinomi.
 Definizione quasi equivalente:
 $$
-\lim_{ x \to x_{0} } \frac{f(x)}{g(x)} = \lim_{ x \to 0 }  \frac{\arctan x^{3}}{x^{3}} \cdot \frac{x^{2}}{x} = 1 \cdot 0 = 0
+\lim_{ x \to x_{0} } \frac{f(x)}{g(x)} = \lim_{ x \to 0 }  \frac{\arctan x^{3}}{x^{3}} \cdot x = 1 \cdot 0 = 0
 $$
 Quindi $\omega(x) = \frac{\arctan(x^{3})}{x^{2}}$.
 
