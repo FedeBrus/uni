@@ -154,14 +154,23 @@ $$
 a_{2n} = \sin\left( \pi n \right) = 0
 $$
 $$
-a_{2n + 1} = \sin\left( \pi n + \frac{\pi}{2} \right) = \cos(\pi n) \sin \left( \frac{\pi}{2} \right) = 1
+a_{4n + 1} = \sin\left( 2\pi n + \frac{\pi}{2} \right) = \sin(2\pi n)\cos\left( \frac{\pi}{2} \right) + \cos(2\pi n) \sin \left( \frac{\pi}{2} \right) = 1
 $$
 Siccome le due sotto-successioni tendono a limiti diversi allora la successione $a_{n}$ non ha limite.
 
 ##### Esempio:
+X casa:
 $$
 \lim_{ n \to +\infty } 2^{n} + (-1)^{n}n^{5}
 $$
+$$
+a_{2n} = \lim_{ n \to +\infty } 2^{2n} + (-1)^{2n}(2n)^{5} = \lim_{ n \to +\infty } 4^{n} + (2n)^{5} = +\infty
+$$
+$$
+a_{2n + 1} = \lim_{ n \to +\infty } 2^{(2n + 1)} + (-1)^{2n + 1}(2n + 1)^{5} = \lim_{ n \to +\infty } 2^{(2n + 1)} - (2n + 1)^{5} = \lim_{ n \to +\infty } 2^{(2n+1)}\left( 1 - \frac{(2n + 1)^{5}}{2^{(2n+1)}} \right) = +\infty
+$$
+Dunque la successione iniziale diverge a $+\infty$.
+
 ---
 Supponiamo che:
 $$

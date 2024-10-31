@@ -3,7 +3,7 @@ $$
 f: A \rightarrow \mathbb{R}, \qquad A \subseteq \mathbb{R}, \qquad x_{0} \in A
 $$
 $$
-\mathbb{R} \ni nf'(x_{0}) = \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h}
+\mathbb{R} \ni f'(x_{0}) = \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h}
 $$
 $f$ è derivabile in $A$ se $f$ è derivabile $\forall x_{0} \in A$.
 $$
@@ -27,7 +27,7 @@ $$
 Supponiamo che:
 1. Un po' di condizioni per l'esistenza delle formule di cui parliamo
 2. Il limite sia una forma indeterminata del tipo $\frac{0}{0}$ o $\frac{\infty}{\infty}$
-3. Esiste il limite $\lim_{ x \to 0 } \frac{f'(x)}{g'(x)} = l \in \bar{\mathbb{R}}$
+3. Esiste il limite $\lim_{ x \to x_{0} } \frac{f'(x)}{g'(x)} = l \in \bar{\mathbb{R}}$
 
 Allora:
 $$
@@ -60,7 +60,7 @@ $$
 \lim_{ x \to +\infty } \frac{4x + 3\sin x}{x}
 $$
 $$
-4x + 3 \sin x \geq 4x - 3 \rightarrow +\infty
+N: 4x + 3 \sin x \geq 4x - 3 \rightarrow +\infty
 $$
 Per il teorema del segno: $4x + 3\sin x \rightarrow +\infty$
 $$
@@ -71,7 +71,7 @@ $$
 $$
 De L'Hopital non può essere usato.
 $$
-\lim_{ x \to +\infty } \frac{4x + 3\sin x}{x}= \lim_{ x \to +\infty } \frac{x\left( 4 + \frac{3\sin x}{x} \right)}{x} = 7 
+\lim_{ x \to +\infty } \frac{4x + 3\sin x}{x}= \lim_{ x \to +\infty } \frac{x\left( 4 + \frac{3\sin x}{x} \right)}{x} = 4 
 $$
 ##### Esempio:
 $$
@@ -101,23 +101,23 @@ $$
 $$
 ##### Esempio:
 $$
-\lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{xs_{3}}
+\lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{x^{3}}
 $$
 1 modo:
 $$
 \cancel{
-\lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{xs_{3}} = \lim_{ x \to 0 } \frac{x \left(  1 - \frac{\sin x}{x} \right) + x^{5}}{x^{3}} = x^{2} = 0
+\lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{x^{3}} = \lim_{ x \to 0 } \frac{x \left(  1 - \frac{\sin x}{x} \right) + x^{5}}{x^{3}} = x^{2} = 0
 }
 $$
 Non si fanno i limiti "a pezzi"!
 
 2 modo:
 $$
-\lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{xs_{3}} = \lim_{ x \to 0 } \frac{x - (x + o(x)) +x^{5}}{x^{3}} = \frac{o(x)}{o(x)}
+\lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{x^{3}} = \lim_{ x \to 0 } \frac{x - (x + o(x)) +x^{5}}{x^{3}} = \frac{o(x)}{o(x)}
 $$
 3 modo:
 $$
-\lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{xs_{3}} =^{H} \lim_{ x \to 0 } \frac{1 - \cos x + 5x^{4}}{3x^{2}} =^{H} \lim_{ x \to 0 } \frac{\sin x +20x^{3}}{6x} = \lim_{ x \to 0 } \frac{\cos x + 60x^{2}}{6} = \frac{1}{6}
+\lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{x^{3}} =^{H} \lim_{ x \to 0 } \frac{1 - \cos x + 5x^{4}}{3x^{2}} =^{H} \lim_{ x \to 0 } \frac{\sin x +20x^{3}}{6x} =^{H} \lim_{ x \to 0 } \frac{\cos x + 60x^{2}}{6} = \frac{1}{6}
 $$
 ## Formula di Taylor (Caso $x_{0} = 0$)
 Sia $f$ una funzione definita almeno in un intorno di $x_{0} = 0$ (ma si può fare per ogni punto). Fissiamo un $n \in \mathbb{N}$, sotto opportune ipotesi, esiste un unico polinomio $P_{n}(x)$ tale che:
@@ -161,10 +161,10 @@ P_{3}(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^{2} + \frac{f'''(0)}{3!}x^{3}
 $$
 $$
 \begin{align}
-\phi(0) = f(0) - P_{3}(0) = f(0) - f(0) = 0 \\
-\phi'(0) = f'(0) - (P_{3}(0))' = f'(0) - \left( f'(0) + f''(0)x + \frac{f'''(0)}{2!}x^{2} \right) = 0 \\
-\phi''(0) = f''(0) - (P_{3}(0))'' = f''(0) - (f''(0) + f'''(0)x) = 0 \\
-\phi'''(0) = f'''(0) - (P_{3}(0))''' = f'''(0) - (f'''(0)) = 0
+\phi(0) = f(0) - P_{3}(0) = f(0) - f(0) &= 0 \\ \\
+\phi'(0) = f'(0) - (P_{3}(0))' = f'(0) - \left( f'(0) + f''(0)x + \frac{f'''(0)}{2!}x^{2} \right) = f'(0) - f'(0) &= 0 \\ \\
+\phi''(0) = f''(0) - (P_{3}(0))'' = f''(0) - (f''(0) + f'''(0)x) = f''(0) - f''(0) &= 0 \\ \\
+\phi'''(0) = f'''(0) - (P_{3}(0))''' = f'''(0) - f'''(0) &= 0
 \end{align}
 $$
 Quindi $\phi(x) = o(x^{3})$ e così ho dimostrato la formula di Taylor fino al terzo grado.
@@ -189,10 +189,10 @@ Questo polinomio è unico.
 
 ---
 $$
-f(x) = e^{x} \qquad [e^{x}]^{(k)} = e^{x}, \qquad k \in \mathbb{N}$
+f(x) = e^{x} \qquad [e^{x}]^{(k)} = e^{x}, \qquad k \in \mathbb{N}
 $$
 $$
-[e^{x}]^{(k)}[0] = e^{x}|_{x = 0} = 1
+[e^{x}]^{(k)}(0) = e^{x}|_{x = 0} = 1
 $$
 $$
 P_{n}(x) = \sum_{k=0}^{n} \frac{f^{n}(0)}{k!} x^{k} = \sum_{k=0}^{n} \frac{x^{k}}{k!} = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \dots 
@@ -239,3 +239,4 @@ $$
 $$
 \lim_{ x \to 0 } \frac{x - \sin x + x^{5}}{x^{3} + \log(1 + \arctan ^{11}(\sin x))} = \frac{1}{6}
 $$
+In questo caso al denominatore conta solo il termine $x^{3}$, perché il resto va come $x^{11} + o(x^{11})$.

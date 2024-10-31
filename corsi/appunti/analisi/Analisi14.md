@@ -179,10 +179,10 @@ $f'(x_{0}) = \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} > 0, \exists \de
 
 2 possibilità: 
 1. $h \in (0, \delta] \implies  h > 0, f(x_{0} + h) - f(x_{0}) > 0 \implies f(x_{0}+h) > f(x_{0})$
-2. $h \in [-\delta, 0) \implies h < 0, f(x_{0}+h) -f(x_{0}) < 0 \implies  f(x_{0}-h) < f(x_{0})$
+2. $h \in [-\delta, 0) \implies h < 0, f(x_{0}+h) -f(x_{0}) < 0 \implies  f(x_{0}+h) < f(x_{0})$
 
 ##### Oss:
-se $f'(x_{0}) < 0$
+se $f'(x_{0}) < 0$, la dimostrazione è simmetrica.
 
 
 Rimane da discutere quando la derivata è nulla ($f'(x_{0}) = 0$):
