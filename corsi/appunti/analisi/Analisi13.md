@@ -159,6 +159,7 @@ $$
 $$
 P_{3}(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^{2} + \frac{f'''(0)}{3!}x^{3}
 $$
+In questo esempio bisogna ricordare che le $x = 0$. Infatti non è scritta in maniera esatta.
 $$
 \begin{align}
 \phi(0) = f(0) - P_{3}(0) = f(0) - f(0) &= 0 \\ \\
@@ -182,6 +183,7 @@ Se $\alpha = -1$
 $\frac{1}{1+x} = 1 - x + x^{2} - x^{3}+\dots$
 
 ---
+### Fatto
 $$
 f(x) = P_{n}(x) + o(x^{n}), \qquad x \rightarrow 0
 $$

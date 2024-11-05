@@ -4,7 +4,7 @@ $f: \mathbb{R} \rightarrow \mathbb{R}, x_{0} \in \mathbb{R}, (f: A \rightarrow \
 $h \in \mathbb{R} (x_{0}+h \in A\text{ se } h \rightarrow 0$).
 ### Rapporto incrementale
 $$
-\frac{f(x_{0} + h) - f(x_{0})}{h} 
+\frac{f(x_{0} + h) - f(x_{0})}{h} \qquad h \rightarrow 0
 $$
 ### Definizione formale di derivata
 Si dice che la funzione $f: \mathbb{R} \rightarrow \mathbb{R}$ è derivabile in $x_{0}$ se il limite $h \rightarrow 0$ del rapporto incrementale esiste ed è finito (ossia è un numero reale).
@@ -161,8 +161,9 @@ f(x) = \cos x
 $$
 1 modo:
 $$
-\begin{align}
-\lim_{ h \to 0 } \frac{f(x + h) - f(x)}{h} = \lim_{ h \to 0 } \frac{\cos(x + h) - \cos x}{h} =  \lim_{ h \to 0 }  \frac{\cos x\cos h - \sin x \sin h - \cos x}{h} \\ = \frac{\cos x(\cos h - 1)}{h^{2}}h - \frac{\sin x \sin h}{h} =^{LN} \frac{\cos x}{2}h-\sin x = -\sin x
+	\begin{align}
+\lim_{ h \to 0 } \frac{f(x + h) - f(x)}{h} = \lim_{ h \to 0 } \frac{\cos(x + h) - \cos x}{h} =  \lim_{ h \to 0 }  \frac{\cos x\cos h - \sin x \sin h - \cos x}{h} \\ =
+\lim_{ h \to 0 }  \frac{\cos x(\cos h - 1)}{h^{2}}h - \frac{\sin x \sin h}{h} =^{LN} \lim_{ h \to 0 } \frac{\cos x}{2}h-\sin x = -\sin x
 \end{align}
 $$
 2 modo:
