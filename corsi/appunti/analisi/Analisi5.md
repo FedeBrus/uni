@@ -10,7 +10,7 @@ $$
 ##### Esempio:
 $f(x) = x^{2}$ non è una funzione, bisogna specificare l'insieme di partenza e l'insieme di arrivo.
 
-![[Funzione.png|100]]
+![[funzione.png]]
 
 ### Composizione di funzione
 Dati 3 insiemi non vuoti $A, B, C$ e due funzioni $f: A \rightarrow B$ e $g: B \rightarrow C$.
@@ -20,13 +20,13 @@ $$
 $$
 g(f(a)) = (g \circ f)(a)
 $$
-Che è definita nei punti  di $B$ dove arriva $f$.
+Che è definita nei punti di $B$ dove arriva $f$.
 
 ### Grafico di una funzione
 $$
 \begin{align}
 &f: A \rightarrow B
-&\mathrm{Gr}f: \{ (a, b) \in A \times B : b = f(a) \} \subseteq A \times B
+&\mathrm{Gr}(f): \{ (a, b) \in A \times B : b = f(a) \} \subseteq A \times B
 \end{align}
 $$
 ### Iniettività, surgettività, bigettività
@@ -44,7 +44,7 @@ $$
 $$
 3. la funzione si dice bigettiva quando è sia iniettiva che surgettiva.
 
-![[EsempiFunzione.png|100]]
+![[esempio_funzioni.png|700]]
 
 Quando una funzione $f$ è bigettiva è possibile definire la sua funzione inversa:
 $$
@@ -64,8 +64,15 @@ $f(x) = x^{2}$
 | $[0, +\infty)$ | $\mathbb{R}$   | V         | X          |
 | $[0,+\infty)$  | $[0, +\infty)$ | V         | V          |
 | $(0, +\infty)$ | $(-\infty, 0)$ | /         | /          |
-##### Esempio
-$f:\mathbb{R} \rightarrow [0, +\infty)$
+##### Applicazione:
+$$
+f(x) = f(y) \implies x = y
+$$
+solo se $f$ è iniettiva, ad esempio:
+
+1. $7^{2x+3} = 7^{x + 42} \implies 2x + 3 = x + 42$, perché $7^{x}$ è iniettiva.
+2. $\log_{7}(2x+3) = \log_{7}(x +42) \implies 2x + 3 = x+42$, perché $\log_{7}x$ è iniettiva.
+3. $\cos(2x + 3) = \cos(x + 42) \implies 2x +3 =x + 42$, perché $\cos x$ è iniettiva, ma per fare ciò bisogna restringere l'insieme di partenza a $\left[ 0, \frac{\pi}{2} \right]$
 
 ### Immagine e controimmagine
 Sia $f: A \rightarrow B$, consideriamo $E \subseteq A$.
@@ -109,9 +116,6 @@ La stretta monotonia implica la debole monotonia.
 
 Ogni funzione strettamente monotona è iniettiva.
 
-![[GraficoArcotangente.png|100]]
-[[GraficoEsponenziale.png|100]]
-
 ### Monotonia e disequazioni
 $$
 \begin{align}
@@ -148,4 +152,5 @@ $$
 $$
 x > y \implies g(f(x)) < g(f(y))
 $$
+### Fatto
 Se due funzioni sono iniettive anche la loro composizione è iniettiva.

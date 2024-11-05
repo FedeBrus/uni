@@ -3,19 +3,19 @@ Il principio di induzione riguarda proprietà matematiche che dipendono dalla sc
 
 Esempio:
 1. $(n+1)^{2} = n^{2}+2n+1 \quad \forall n \in \mathbb{N}$
-2. $n^{2} > 7n+2 \quad \forall n \in \mathbb{N}\text{ e }n\geq 8$
+2. $n^{2} > 7n+2 \quad \forall n \in \mathbb{N}, n\geq 8$
 
 In generale $P_{n}$ con $n \in \mathbb{N}$ può essere o vera o falsa.
 
-Con $P_{n}$ complessi, dove non è detto che diventi vero o falso oltre un solo determinato n, torna util il principio di induzione.
+Con $P_{n}$ complessi, dove non è detto che diventi vero o falso oltre un solo determinato $n$, torna utile il principio di induzione.
 
-- Passo base: dimostrare che $P_{o}$ sia vera.
+- Passo base: dimostrare che $P_{0}$ sia vera.
 - Passo induttivo: Si ipotizza che $P_{n}$ sia vera e si dimostra che $P_{n+1}$ è anch'essa vera, ne consegue che $P_{n}$ è vera $\forall n \in \mathbb{N}$.
 
 ##### Variante 1:
-assumo vera $P_{42}$ come caso base, allora la dimostrazione vale solo per $n\in \mathbb{N}$ e $n \geq 42$.
+assumo vera $P_{k}$ come caso base, allora la dimostrazione vale solo per $n\in \mathbb{N}, n \geq k$.
 ##### Variante 2:
-assumo vera $P_{0}$ come caso base, ma il passo induttivo vale solo per $n \in \mathbb{N}$ e $n \geq 3$.
+$P_{0}$ risulta vera come caso base, ma il passo induttivo vale solo per $n \in \mathbb{N}, n \geq k \neq 0$.
 
 ### Esempio 1:
 $$
@@ -38,7 +38,7 @@ $$
 $$
 ### Esempio 2:
 $$
-1+a+a^{2}+a^{3}+\dots+a^{n} = \frac{a^{n+1}-1}{a - 1}, \text{ e } a \neq 1
+1+a+a^{2}+a^{3}+\dots+a^{n} = \frac{a^{n+1}-1}{a - 1}, \qquad a \neq 1
 $$
 
 - Passo base:
@@ -51,7 +51,7 @@ Ipotesi: $P_{n}$ è vera.
 Tesi: $P_{n+1}$ è vera.
 $$
 \begin{align}
-\underbrace{ 1+a+a^{2}+a^{3}+\dots+a^{n}+a^{n+1} }_{ P_{n} } &= \frac{a^{n+2} - 1}{a - 1} \\
+\underbrace{ 1+a+a^{2}+a^{3}+\dots+a^{n}}_{ P_{n} } + a^{n+1} &= \frac{a^{n+2} - 1}{a - 1} \\
 \frac{a^{n+1} - 1}{a - 1} + a^{n+1} &= \frac{a^{n+2} - 1}{a - 1} \\
 \frac{a^{n+1} - a^{n+1} + a^{n+2} - 1}{a - 1} &= \frac{a^{n+2} - 1}{a - 1} \\
 \frac{a^{n+2} - 1}{a - 1} &= \frac{a^{n+2} - 1}{a - 1}
@@ -101,11 +101,11 @@ sapendo che $2 \cdot 2^{n} \geq 2n$
 $$
 2 \cdot 2^{n} \geq n + 1
 $$
-Devo sperare che:
+Sappiamo per ipotesi che:
 $$
-2 \cdot 2^{n} \geq 2n \geq n + 1
+2 \cdot 2^{n} \geq 2n 
 $$
-dunque:
+dunque, dobbiamo sperare che:
 $$
 2n \geq n + 1
 $$
@@ -138,7 +138,7 @@ $$
 4^{n+1} \geq 2^{n+1} + 3^{n+1}
 $$
 Osserviamo la prima parte: $4^{n+1} = 4 \cdot 4^{n}$
-Sappiamo per certo (osservando $P_{n}$, che è ipotesi) che $4 \cdot 4^{n} \geq 4(2^{n} + 3^{n})$ e quindi:
+Sappiamo per certo (osservando $P_{n}$, che è l'ipotesi) che $4 \cdot 4^{n} \geq 4(2^{n} + 3^{n})$ e quindi:
 $$
 4\cdot 4 ^{n} \geq 4 \cdot 2^{n} + 4 \cdot 3^{n}
 $$
@@ -147,7 +147,7 @@ $$
 \begin{align}
 4\cdot 4 ^{n} &\geq 4 \cdot 2^{n} + 4 \cdot 3^{n} \geq 2 \cdot 2^{n} + 3\cdot3^{n} \\
 4\cdot 4 ^{n} &\geq 2 \cdot 2^{n} + 3\cdot3^{n} \\
-4^{n+1} &\geq 2^{n+1} + 3^{n+1}
+4^{n+1} &\geq 2^{n+1} + 3^{n+1} \qquad \forall n \geq 2
 \end{align}
 $$
 
@@ -202,7 +202,7 @@ Tesi: $P_{n+1}$ è vero
 $$
 (1+x)^{n+1} \geq 1 + (n+1)x
 $$
-Osserviamo la prima parte: $(1+x)(1+x)^{n} \geq (1+x)(1+nx)$
+Osserviamo la prima parte: $(1+x)(1+x)^{n} \geq (1+x)(1+nx)$, per ipotesi.
 
 La speranza è che:
 $$

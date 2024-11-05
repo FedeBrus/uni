@@ -8,7 +8,7 @@ Dato un numero complesso $w_{0} \in \mathbb{C}$ e un intero $n \geq 2$, si dicon
 $$
 z^{n} = w_{0}
 $$
-1. se $w_{0}$ = 0 c'è un'unica soluzione ($z = 0$)
+1. se $w_{0} = 0$ c'è un'unica soluzione ($z = 0$)
 2. se $w_{0} \neq 0$ ci sono $n$ soluzioni nei $\mathbb{C}$, che rappresentano gli $n$ vertici di un poligono regolare ($n \geq 3$), o gli estremi di un segmento ($n = 2$). 
 
 $$w_{0} = \rho e^{i\theta} \qquad z = re^{i\phi}$$
@@ -24,7 +24,7 @@ Per trovare tutte le soluzioni uniche, basta considerare le $k$ da $0$ a $n$.
 
 ##### Esempio: 
 $$
-w_{0} = 8i \qquad \sqrt[3]{ z }
+w_{0} = 8i \qquad \sqrt[3]{ w_{0} }
 $$
 $$
 \rho = 8 \qquad \theta = \frac{\pi}{2}
@@ -36,7 +36,7 @@ z^{3} &= 8e^{i \pi/2}  \\
 r &= \sqrt[3]{ 8 } = 2 \\ \\
  \\
 
-\phi &= \frac{\frac{\pi}{2}}{3}+\frac{2k\pi}{3} = \left\{ \begin{array}{l}
+\phi_{n} &= \frac{\frac{\pi}{2}}{3}+\frac{2k\pi}{3} = \left\{ \begin{array}{l}
 \phi_{0} = \frac{\pi}{6} \\
 \phi_{1} = \frac{5\pi}{6} \\
 \phi_{2} = \frac{3\pi}{2}
@@ -88,7 +88,7 @@ $$
 
 ### Molteplicità di radici
 
-Sia $\alpha \in \mathbb{C}$ radice di un polinomio $P(x)$, diremo che $m \in \mathbb{N} \setminus 0$ è la molteplicità di $\alpha$ se $(x - \alpha)^{m}$ divide $P(x)$, ovvero:
+Sia $\alpha \in \mathbb{C}$ radice di un polinomio $P(x)$, diremo che $m \in \mathbb{N} \setminus \{ 0 \}$ è la molteplicità di $\alpha$ se $(x - \alpha)^{m}$ divide $P(x)$, ovvero:
 $$
 P(x) = (x - \alpha)^{m} Q(x)
 $$
@@ -131,7 +131,7 @@ P(x) = x^{3}+8 &= (x+2)(x - (i + i\sqrt{ 3 }))(x - (i - i\sqrt{ 3 }))
 \end{align}
 $$
 ### Fattorizzazione polinomi reali
-Sia $P(x)$ un polinomio $a$ coefficienti reali, ossia $a_{k} \in \mathbb{R}, \quad k = 0, 1, \dots, n$.
+Sia $P(x)$ un polinomio *a coefficienti reali*, ossia $a_{k} \in \mathbb{R}, \quad k = 0, 1, \dots, n$.
 Vale sempre che:
 $$
 P(\bar{z}) = \overline{P(z)} \quad \text{ con } z \in \mathbb{C}
@@ -153,7 +153,7 @@ P(z)  &= a_{n}z^{n} + a_{n-1}z^{n-1} + \dots + a_{2}z^{2}+a_{1}z+a_{0}  \\ \\  \
  & = P(\bar{z})
 \end{align}
 $$
-Conseguenza:
+##### Conseguenza:
 Se il polinomio $P(x)$ ha coefficienti reali e $\alpha \in \mathbb{C}$ è radice di $P(x)$, allora $\bar{\alpha} \in \mathbb{C}$ è anch'essa radice.
 $$
 P(\alpha) = 0 = \bar{0} = \overline{P(\alpha)} = P(\bar{\alpha})
@@ -166,7 +166,7 @@ $$
 (x - \alpha)(x - \bar{\alpha}) &= (x - (a + bi))(x - (a - bi)) \\ 
 	 & = (x^{2} - x(a - bi) - x(a + bi) + (a - bi)(a + bi)) \\
 	 & = x^{2} - 2ax + a^{2} + b^{2}  \\
-	 & = x^{2} - 2\mathrm{Re}(\alpha)x + |a|^{2}
+	 & = x^{2} - 2\mathrm{Re}(\alpha)x + |\alpha|^{2}
 \end{align}
 $$
 

@@ -34,7 +34,7 @@ $$
 A \times B = \{ (1, a), (2, a), (1, b), (2, b) \}
 $$
 ##### Oss:
-1. $A \times B \neq B \times B$
+1. $A \times B \neq B \times A$
 2. $|A \times B| = |A||B|$ ad esempio: $|A \times \emptyset| = 0$
 ### Insiemi numerici
 $\mathbb{N} = \{ 0,1,2,3,\dots \}$
@@ -47,19 +47,19 @@ Sono legate a due operazioni fondamentali: somma e prodotto.
 - Somma
 	1. $a + b = b + a \quad \forall a,b \in \mathbb{R}$ 
 	2. $a+(b+c)=(a+b)+c \quad \forall a,b,c \in \mathbb{R}$
-	3. $\exists! 0 \in \mathbb{R} \quad \forall b \in \mathbb{R}$
+	3. $\exists! 0 \in \mathbb{R} : 0 + b = b \quad \forall b \in \mathbb{R}$
 	4. $\forall a \in \mathbb{R} \quad \exists!b \in \mathbb{R} : a+b=0$
 - Prodotto
 	1. $a \cdot b = b \cdot a \quad \forall a,b \in \mathbb{R}$ 
 	2. $a\cdot(b\cdot c)=(a\cdot b)\cdot c \quad \forall a,b,c \in \mathbb{R}$
-	3. $\exists! 1 \in \mathbb{R} \quad \forall b \in \mathbb{R}$
-	4. $\forall a \in \mathbb{R} \quad \exists!b \in \mathbb{R} : a \cdot b = 1$
+	3. $\exists! 1 \in \mathbb{R} : 1 \cdot b = b \quad \forall b \in \mathbb{R}$
+	4. $\forall a \in \mathbb{R}\setminus \{ 0 \} \quad \exists!b \in \mathbb{R} : a \cdot b = 1$
 $$
 a \cdot (b + c) = a \cdot b + a \cdot c \quad \forall a, b, c \in \mathbb{R}
 $$
 #### Proprietà di ordinamento
-Dati $x \in R, y \in \mathbb{R}$ allora $x \leq y \vee x \geq y$
-1. $x\leq x \quad \forall x \in \mathbb{R} \quad \forall x, y \in \mathbb{R}$
+Dati $x \in R, y \in \mathbb{R}$ allora $x \leq y \vee x \geq y \quad \forall x, y \in \mathbb{R}$
+1. $x\leq x \quad \forall x \in \mathbb{R}$
 2. $x \leq y \wedge y\leq z \implies x \leq z \quad \forall x, y ,z \in \mathbb{R}$ 
 3. $y\leq x \wedge x\leq y \leftrightarrow x=y \quad \forall x, y \in \mathbb{R}$
 #### Ordinamento e operazioni
@@ -67,7 +67,7 @@ Dati $x \in R, y \in \mathbb{R}$ allora $x \leq y \vee x \geq y$
 2. $x\leq y\implies \begin{cases} x\cdot z\leq y\cdot z &\text{se } z \geq 0\\ x\cdot z\geq y\cdot z &\text{se } z \leq 0 \end{cases}\quad\forall z\in \mathbb{R}$
 
 ## Assioma di continuità
-> Afferma che tra due numeri reali c'è sempre un numero infinito di numeri reali e dimostra che i reali sono più dei razionali. 
+Afferma che tra due numeri reali c'è sempre un numero infinito di numeri reali e dimostra che i reali sono più dei razionali. 
 
 Siano $A, B \subseteq \mathbb{R} \text{ e } A, B \neq \emptyset$.
 Supponiamo che $A$ "stia tutto a sinistra di $B$", ossia $a \leq b \quad \forall a \in A, \forall b \in B$.
@@ -78,14 +78,14 @@ Se $A \cap B \neq \emptyset$, essa consisterà di un solo elemento $c$, che sar�
 Questo assioma vale per i reali e non per i razionali:
 $$
 \begin{array}{l}
-A = \{ x \in \mathbb{Q} : x^{2} < 2, x \geq 0\} \\
+A = \{ x \in \mathbb{Q} : x^{2} \leq 2, x \geq 0\} \\
 B = \{ x \in \mathbb{Q} : x^{2} \geq 2, x \geq 0 \} \\
 c = \sqrt{2} \notin \mathbb{Q}
 \end{array}
 $$
 Si deduce che esistono più $\mathbb{R}$ che $\mathbb{Q}$.
 
-Ogni punto della retta è identificabile con un numero real tra due reali ce n'è sempre un altro.
+Ogni punto della retta è identificabile con un numero reale, tra due reali ce n'è sempre un altro.
 
 ## Massimo
 Sia $A \subseteq \mathbb{R}$ e $A \neq \emptyset$, di dice che $M \in \mathbb{R}$ è il massimo di $A$ e si scrive $M=max(A)$ se
@@ -120,13 +120,13 @@ Sia $A \subseteq \mathbb{R}$ e $A \neq \emptyset$, si dice che $b \in \mathbb{R}
 
 Esempio:
 $$
-A = (0, 1)
+A = [0, 1)
 $$
-ha come maggioranti tutti i reali $b \geq 1$ e come minoranti tutti i reali $b<0$.
+ha come maggioranti tutti i reali $b \geq 1$ e come minoranti tutti i reali $b\leq0$.
 
 ## Insiemi limitati
 Un'insieme $A \subseteq \mathbb{R}$ e $A \neq \emptyset$ si dice:
-- *limitato superiormente* se $A$ ha maggioranti
+- limitato superiormente se $A$ ha maggioranti
 - limitato inferiormente se $A$ ha minoranti
 - limitato se $A$ è limitato superiormente e inferiormente
 
@@ -134,14 +134,14 @@ Se $A$ è limitato, $\exists b \in \mathbb{R} : |a| \leq b \quad \forall a \in A
 
 ## Estremi
 Sia $A \subseteq \mathbb{R}$ e $A \neq \emptyset$, allora per definizione:
-- se $A$ non è limitato superiormente, il suo limite superiore $supA = +\infty$.
-- se $A$ non è limitato inferiormente, il suo limite inferiore $infA = -\infty$.
-- se $A$ è limitato superiormente, allora si definisce $supA$ come il minimo dei maggioranti, che sono un sottoinsieme dei reali.
-- se $A$ è limitato inferiormente, allora si definisce $infA$ come il massimo dei minoranti, che sono un sottoinsieme dei reali.
+- se $A$ non è limitato superiormente, il suo limite superiore $sup(A) = +\infty$.
+- se $A$ non è limitato inferiormente, il suo limite inferiore $inf(A) = -\infty$.
+- se $A$ è limitato superiormente, allora si definisce $sup(A)$ come il minimo dei maggioranti, che sono un sottoinsieme dei reali.
+- se $A$ è limitato inferiormente, allora si definisce $inf(A)$ come il massimo dei minoranti, che sono un sottoinsieme dei reali.
 
-##### Teorema
-se $A \subseteq \mathbb{R}$ e $A \neq \emptyset$, allora $supA$ e $infA$ esistono sempre.
-__dim:__ (per l'estremo superiore)
+### Teorema
+se $A \subseteq \mathbb{R}$ e $A \neq \emptyset$, allora $sup(A)$ e $inf(A)$ esistono sempre.
+#### Dim (per l'estremo superiore)
 Supponiamo che $A$ sia limitato superiormente, se così non fosse allora $supA =+\infty$ per definizione.
 Consideriamo l'insieme $B$ dei suoi maggioranti.
 Per definizione $a \leq b \quad \forall a \in A, \forall b \in B$.
@@ -152,14 +152,14 @@ $$
  & c \leq b \quad \forall b \in B \Longleftrightarrow c \text{ è il minimo dell'insieme B }
 \end{align}
 $$
-Essendo $c$ il minimo dell'insieme dei maggioranti di $A$, si ha che per definizione $supA = c$ $\blacksquare$
+Essendo $c$ il minimo dell'insieme dei maggioranti di $A$, si ha che per definizione $sup(A) = c$.
 
 Dunque:
 1. $sup$ e $inf$ esistono sempre.
-2. $sup$ e $ind$ sono unici.
-3. se esiste $maxA = M \implies M \equiv supA$ 
-3. se esiste $minA = m \implies m \equiv infA$ 
-4. $supA$ e $infA$ non è necessariamente un elemento di $A$, se lo è allora valgono le 3.
+2. $sup$ e $inf$ sono unici.
+3. a) se esiste $max(A) = M \implies M \equiv sup(A)$ 
+3. b) se esiste $min(A) = m \implies m \equiv inf(A)$ 
+4. $sup(A)$ e $inf(A)$ non è necessariamente un elemento di $A$, se lo è allora valgono le 3.
 
 |                                          | $sup$        | $inf$         | $max$ | $min$ |
 | ---------------------------------------- | ------------ | ------------- | ----- | ----- |
@@ -169,9 +169,9 @@ Dunque:
 | $\{ x \in \mathbb{R} : 0 < x^{2} < 3 \}$ | $\sqrt{ 3 }$ | $-\sqrt{ 3 }$ | N.E.  | N.E.  |
 ## Caratterizzazione di $sup$ e $inf$
 con $A \subseteq \mathbb{R}$ e $A \neq \emptyset$ 
-- $supA =+\infty \Longleftrightarrow \forall M \in \mathbb{R} \quad \exists a\in A : a \geq M$
-- $infA =-\infty \Longleftrightarrow \forall m \in \mathbb{R} \quad \exists a\in A : a \leq m$
+- $sup(A) =+\infty \Longleftrightarrow \forall M \in \mathbb{R} \quad \exists a\in A : a \geq M$
+- $inf(A) =-\infty \Longleftrightarrow \forall m \in \mathbb{R} \quad \exists a\in A : a \leq m$
 
 nel caso dell'insieme vuoto, per convenzione:
-- $supA =-\infty$
-- $infA =+\infty$
+- $sup(\emptyset) =-\infty$
+- $inf(\emptyset) =+\infty$

@@ -15,7 +15,7 @@ $$
 Si ha che: $i^{2}=-1$
 #### Rappresentazione sul piano di Argand-Gauss
 
-![[PianoArgandGauss|100]]
+![[gauss.png|400]]
 
 ### Regole algebriche in rappresentazione cartesiana
 - somma e differenza
@@ -52,7 +52,7 @@ $$
 $$
 z + w = 0 \quad \text{con } w = -z \quad \forall z \in \mathbb{C}
 $$
-![[Simmetria_rispetto_origine_C|100]]
+![[simmetria_origine.png|600]]
 
 ### Divisione in forma cartesiana
 $$
@@ -65,9 +65,9 @@ $$
 Per controllare:
 $$
 \begin{align}
-z \cdot \frac{1}{z} &= 1 \\
-(a+bi) \frac{a - bi}{a^{2}+b^{2}}  &= 1 \\
-(a^{2}+b^{2})/(a^{2}+b^{2}) &= 1 \\
+z \cdot \frac{1}{z} &= 1 \\ \\
+(a+bi) \frac{a - bi}{a^{2}+b^{2}}  &= 1 \\ \\
+\frac{(a^{2}+b^{2})}{(a^{2}+b^{2})} &= 1 \\ \\
 1 &= 1
 \end{align}
 $$
@@ -77,7 +77,7 @@ $$
 (3+2i) \cdot \frac{5+i}{25 + 1} = \frac{1}{26}(15+10i+3i-2) = \frac{13+13i}{26} = \frac{1}{2} + \frac{1}{2}i
 $$
 ### Coniugato
-![[Simmetria_rispetto_ascisse_C|100]]
+![[simmetria_asse.png|600]]
 $$
 \begin{align}
 z &= a + bi \\
@@ -90,11 +90,11 @@ Sia $z \in \mathbb{C}$
 $$
 \begin{align}
 z &= a+bi  \\
-|z| &= \sqrt{ a^{2} +b^{2} }
+|z| &= \sqrt{ a^{2} +b^{2} } = \sqrt{ z \cdot \bar{z} }
 \end{align}
 $$
 ##### Oss:
-- $\forall z \in \mathbb{C} \quad |z| \in \mathbb{R} e |z| \geq 0$
+- $\forall z \in \mathbb{C} \quad |z| \in \mathbb{R}, |z| \geq 0$
 - $|z|=0 \Longleftrightarrow z = 0$
 - $|z|^{2} = (a + bi)(a - bi) = z \cdot \bar{z}$
 - $\frac{1}{z} = \frac{a-bi}{a^{2}+b^{2}} = \frac{\bar{z}}{|z|^{2}}$
@@ -110,17 +110,22 @@ $$
 $$
 ##### Esempio: 
 Trovare il luogo geometrico in cui $\bar{z} = \frac{1}{z}$
+
+Sappiamo che:
+$$
+\frac{1}{z} = \frac{\bar{z}}{|z|^{2}}
+$$
+Dunque:
 $$
 \begin{align}
-\frac{1}{z} &= \frac{\bar{z}}{|z|^{2}} \\
-\bar{z} & = \frac{\bar{z}}{|z|^{2}} \\
-1 & = |z|^{2} \\ \\
+\bar{z}  &= \frac{\bar{z}}{|z|^{2}} \\
+1  &= |z|^{2} \\ \\
 \end{align}
 $$
 $$
 \underbrace{ a^{2}+b^{2} = 1 }_{ \text{formula della circonferenza con centro origine e raggio 1} }
 $$
-![[Raggio1]]
+![[raggio1.png|500]]
 
 ### Rappresentazione trigonometrica
 Utilizzando coordinate planari su $\mathbb{R}^{2}$
@@ -129,7 +134,7 @@ P(a, b) \leftrightarrow P(\rho, \theta)
 $$
 dove $\rho$ è la distanza di $P$ dall'origine, ovvero $\sqrt{ a^{2}+ b^{2} }$, e $\theta$ è l'angolo tra l'ascissa e la semiretta $\overrightarrow{OP}$.
 
-![[Rappresentazione_Trigonometrica.png|100]]
+![[trigonometrica.png|500]]
 
 $$
 \begin{align}
@@ -150,12 +155,12 @@ z &= a + bi \\
 $$
 $$
 \begin{align}
-\bar{z} &= a - bi \\ \\
+\bar{z} &= a - bi \\ 
  & = \rho \cos \theta - \rho \sin \theta i \\
  & = \rho(\cos (-\theta) + \sin (-\theta) i)
 \end{align}
 $$
-![[Geometricamete_ha_senso.png|100]]
+![[coniugato_trigonometrico.png|500]]
 $$
 \begin{align}
 z &= \rho(\cos \theta + i \sin \theta) \\
@@ -176,16 +181,22 @@ $$
 $$
 \frac{1}{z} = \frac{\bar{z}}{|z|^{2}} = \frac{\rho(\cos(-\theta)+i\sin(-\theta)}{\rho^{2}} = \frac{\cos \theta -i\sin \theta}{\rho} = \left( \frac{1}{\rho} \right) (\cos \theta -i\sin \theta)
 $$
-Quindi:
+## Formule
 $$
 \begin{align}
 z &= (\rho, \theta) \\ \\
+w &= (r, \phi) \\ \\
 
 \frac{1}{z}  & = \left( \frac{1}{\rho}, -\theta \right) \\ \\
 
 \bar{z} & =(\rho, -\theta) \\ \\
 
-|z| & =\rho
+|z| & =\rho  \\ \\
+
+z \cdot w &= (\rho r, \theta + \phi) \\ \\
+
+\frac{z}{w}  & = \left( \frac{\rho}{r}, \theta - \phi \right)
+
 \end{align}
 $$
 ### Divisione in forma trigonometrica
@@ -193,8 +204,8 @@ $$
 \begin{align}
 z = (\rho, \theta) & \qquad w = (r, \phi) \\ \\
 
-z = z \cdot \frac{1}{w} = (\rho, \theta)\left( \frac{1}{r}, -\phi\right) & = \left( \frac{\rho}{r}, \theta-\phi \right)  \\
- & = \frac{\rho}{r}\left( \frac{\cos}{\theta-\phi} + \frac{i\sin}{\theta -\phi} \right)
+z = z \cdot \frac{1}{w} = (\rho, \theta) \cdot \left( \frac{1}{r}, -\phi\right) & = \left( \frac{\rho}{r}, \theta-\phi \right)  \\
+ & = \frac{\rho}{r}\left( \cos(\theta-\phi) + i\sin(\theta -\phi) \right)
 \end{align}
 $$
 ### Proprietà del coniugo
