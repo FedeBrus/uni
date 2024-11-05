@@ -18,13 +18,17 @@ $$
 Facciamo 1° e 4° caso.
 
 1° caso:
-$k$ è pari e $f^{(k)}(x_{0}) > 0$
-
-Per il teorema della conservazione dei segni, $\exists \delta : \frac{f(x_{0}+h)-f(x_{0})}{h^{k}}> 0 \qquad \forall h \in [-\delta, \delta] \setminus \{ 0 \}$
+$k$ è pari e $f^{(k)}(x_{0}) > 0$, guardo il limite:
+$$
+\lim_{ h \to 0 } \frac{f(x_{0}+h)-f(x_{0})}{h^{k}} = \frac{f^{(k)}(x_{0})}{k!} > 0
+$$
+Per il teorema della conservazione dei segni, visto che $f^{(k)}(x_{0})>0$, per ipotesi, e $k! > 0$ sicuramente, $\exists \delta : \frac{f(x_{0}+h)-f(x_{0})}{h^{k}}> 0 \qquad \forall h \in [-\delta, \delta] \setminus \{ 0 \}$
 
 Abbiamo 2 sotto-casi:
-1° $h \in (0, \delta] \implies h > 0 \implies h^{k} > 0 \implies f(x_{0} + h) - f(x_{0}) > 0 \Leftrightarrow f(x_{0}+h) > f(x_{0})$
-2° $h \in [-\delta, 0) \implies h < 0 \implies h^{k} > 0 \implies f(x_{0}+h)- f(x_{0}) > 0\Leftrightarrow f(x_{0}+h) > f(x_{0})$
+1° $h \in (0, \delta] \implies h > 0 \implies h^{k} > 0 \implies f(x_{0} + h) - f(x_{0}) > 0 \Longleftrightarrow f(x_{0}+h) > f(x_{0})$
+2° $h \in [-\delta, 0) \implies h < 0 \implies h^{k} > 0 \implies f(x_{0}+h)- f(x_{0}) > 0\Longleftrightarrow f(x_{0}+h) > f(x_{0})$
+
+Visto che $k$ è pari, $h^{k}$ è positivo in entrambi i casi, e per il teorema della conservazione dei segni il numeratore deve essere per forza positivo. 
 
 Mettendo insieme i due sotto-casi, ho che $x_{0}$ è un punto di minimo. Perché andando sia a destra che a sinistra aumenta, con $\delta$ sufficientemente piccolo.
 Il 1° caso è dunque giustificato.
@@ -34,11 +38,12 @@ $k$ è dispari e $f^{(k)}(x_{0}) < 0$, guardo il limite:
 $$
 \lim_{ h \to 0 } \frac{f(x_{0}+h)-f(x_{0})}{h^{k}} = \frac{f^{(k)}(x_{0})}{k!} < 0
 $$
-Per il teorema della conservazione dei segni, $\exists \delta : \forall h \in [-\delta, \delta]\setminus \{ 0 \}$
+Per il teorema della conservazione dei segni, $\exists \delta : \lim_{ h \to 0 } \frac{f(x_{0}+h)-f(x_{0})}{h^{k}} \qquad \forall h \in [-\delta, \delta]\setminus \{ 0 \}$
+Per il teorema della conservazione dei segni, visto che $f^{(k)}(x_{0})<0$, per ipotesi, e $k! > 0$ sicuramente, $\exists \delta : \lim_{ h \to 0 }\frac{f(x_{0}+h)-f(x_{0})}{h^{k}}< 0 \qquad \forall h \in [-\delta, \delta] \setminus \{ 0 \}$
 
 Abbiamo 2 sotto-casi:
-1° $h \in (0, \delta] \implies h > 0 \implies h^{k} > 0 \implies f(x_{0} + h) - f(x_{0}) < 0 \Leftrightarrow f(x_{0}+h) < f(x_{0})$
-2° $h \in [-\delta, 0) \implies h < 0 \implies h^{k} < 0 \implies f(x_{0}+h)- f(x_{0}) < 0 \Leftrightarrow f(x_{0}+h) > f(x_{0})$
+1° $h \in (0, \delta] \implies h > 0 \implies h^{k} > 0 \implies f(x_{0} + h) - f(x_{0}) < 0 \Longleftrightarrow f(x_{0}+h) < f(x_{0})$
+2° $h \in [-\delta, 0) \implies h < 0 \implies h^{k} < 0 \implies f(x_{0}+h)- f(x_{0}) < 0 \Longleftrightarrow f(x_{0}+h) > f(x_{0})$
 
 Mettendo insieme i due sotto-casi, ho che $x_{0}$ è un punto di flesso orizzontale. Perché andando a destra è un po' più piccolo, e andando a sinistra è un po' più grande.
 Il 4° caso è giustificato.
@@ -79,7 +84,7 @@ Pongo $f(x) = x^{5} - \arctan(x^{3})$
 
 Il dominio massimale è tutta la retta. Essendo composizione di funzioni continue, $f(x)$ è continua. 
 Facciamo uso della prima variante del teorema dell'esistenza degli zeri.
-Ipotesi: $f(x) : [a, b] \rightarrow \mathbb{R}$, $f(x)$ è continua. $f(a)f(b) < 0$.
+Ipotesi: $f(x) : [a, b] \rightarrow \mathbb{R}$, $f(x)$ è continua. $f(a) < 2024$, $f(b) > 2024$.
 
 $a = 0, f(0) = 0 < 2024$
 $b = 10, f(10) \approx 10^{5} > 2024$
@@ -87,7 +92,7 @@ $b = 10, f(10) \approx 10^{5} > 2024$
 Applicando la prima variante, esiste almeno un $c \in (0, 10)$ per cui $f(c) = 2024$
 
 2° metodo:
-Visto che il dominio è tutto $\mathbb{R}$, si possono osservare i limiti agli infiniti e se sono discordanti di segno possiamo affermare che la funzione è surgettiva, e essendo tale possiamo affermare che esiste una $c$ per cui $f(c) = 2024$.
+Visto che il dominio è tutto $\mathbb{R}$ e la funzione è continua, si possono osservare i limiti agli infiniti in modo da poter affermare che la funzione è surgettiva, e essendo tale possiamo affermare che esiste una $c$ per cui $f(c) = 2024$.
 $$
 \lim_{ x \to +\infty } f(x) = +\infty \qquad \lim_{ x \to -\infty } f(x) = -\infty
 $$
@@ -104,13 +109,13 @@ Dunque abbiamo un comportamento di un flesso orizzontale decrescente. Quindi da 
 ## Weierstrass, Rolle, Cauchy, Lagrange, Monotonia, Hopital, Taylor
 Weierstrass $\implies$ Rolle $\implies$ Cauchy $\implies$ Lagrange $\implies$ Monotonia $\implies$ Hopital $\implies$ Taylor
 ### Def:
-Sia $A \subseteq \mathbb{R}, f: A \rightarrow \mathbb{R}$ si dice che $M = max\{ f(x) | x \in A \}$ se:
-1. $f(x) \leq M \forall x \in A$
+Sia $A \subseteq \mathbb{R}, f: A \rightarrow \mathbb{R}$, si dice che $M = max\{ f(x) | x \in A \}$ se:
+1. $f(x) \leq M , \forall x \in A$
 2. $\exists x_{0} : f(x_{0}) = M$
 Inoltre $x_{0}$ viene chiamato "punto di massimo".
 
 Sia $A \subseteq \mathbb{R}, f: A \rightarrow \mathbb{R}$ si dice che $m = min\{ f(x) | x \in A \}$ se:
-1. $f(x) \geq m \forall x \in A$
+1. $f(x) \geq m , \forall x \in A$
 2. $\exists x_{0} : f(x_{0}) = m$
 Inoltre $x_{0}$ viene chiamato "punto di minimo".
 
@@ -164,7 +169,7 @@ Ho 3 possibilità.
 1° modo
 Uso monotonia 1. 
 Se fosse $f'(x_{0}) > 0 \implies$ un poco a destra di $x_{0}$ trovo $f(x) > f(x_{0}) \qquad (x > x_{0})$. Ma questo è assurdo, perché ciò violerebbe l'ipotesi che $x_{0}$ è punto di massimo.
-Se fosse $f'(x_{0}) < 0 \implies$ un poco a sinistra di $x_{0}$ trovo $f(x) > f(x_{0}) \qquad (x > x_{0})$. Ma questo è assurdo, perché ciò violerebbe l'ipotesi che $x_{0}$ è punto di massimo.
+Se fosse $f'(x_{0}) < 0 \implies$ un poco a sinistra di $x_{0}$ trovo $f(x) > f(x_{0}) \qquad (x < x_{0})$. Ma questo è assurdo, perché ciò violerebbe l'ipotesi che $x_{0}$ è punto di massimo.
 
 Rimane solo che $f'(x_{0}) = 0$.
 
@@ -175,12 +180,12 @@ Utilizzando il rapporto incrementale.
 $$
 f(x) = x - x^{3} \qquad x \in [0, 1]
 $$
-cat. 1: Interni stazionari $\implies$ $f'(x) = 1 - 3x^{2} \implies f'(x) = 0 \Leftrightarrow x = \pm \frac{1}{\sqrt{ 3 }}$
+cat. 1: Interni stazionari: $f'(x) = 1 - 3x^{2} \implies f'(x) = 0 \Leftrightarrow x = \pm \frac{1}{\sqrt{ 3 }}$
 Ma devo prendere solamente quello all'interno dell'intervallo di partenza, ovvero $x = \frac{1}{\sqrt{ 3 }}$.
 
-cat. 2: Interni singolari $\implies$ $\emptyset$
+cat. 2: Interni singolari: $\emptyset$, poiché la funzione della derivata è continua.
 
-cat. 3: Bordo $\implies$ $x = 0$, $x = 1$.
+cat. 3: Bordo: $x = 0$, $x = 1$.
 
 $f\left( \frac{1}{\sqrt{ 3 }} \right) = \frac{2}{3\sqrt{ 3 }}$
 $f(0) = 0$
@@ -197,7 +202,10 @@ Allora $\exists c \in (a,b) : f'(c) = 0$
 ![[GraficoRolle]]
 Per (1.) e Weierstrass ho max e min.
 Quindi i punti di max e min ricadono nelle 3 categorie.
-Se fossero solo al bordo $\implies$$a$ e $b$ sarebbero contemporaneamente punti di massimo e minimo $\implies$ poiché da (3.) $f(a) = f(b) \implies$ $f$ è costante $\implies f'(c) = 0, \forall c \in (a, b)$
+
+Il senso è che essendoci per forza max e min, essendo la funzione derivabile in tutto $(a, b)$, si va ad eliminare la possibilità che questi siano di cat. 2.
+Dunque se o max o min è di cat. 1, allora la tesi è verificata.
+Se fossero entrambi al bordo, allora $a$ e $b$ sarebbero massimo e minimo, ma poiché da (3.) $f(a) = f(b)$, allora $f(a) = f(b) = max = min$, il che vuol dire che $f$ è costante $\implies f'(c) = 0, \forall c \in (a, b)$
 
 ## Teorema di Cauchy
 Siano $f:[a, b] \rightarrow \mathbb{R}, g:[a, b] \rightarrow \mathbb{R}$
@@ -212,38 +220,41 @@ Inoltre se supponiamo che:
 Allora $g(b) \neq g(a)$ e vale che $\frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(c)}{g'(c)}$ (Seconda tesi).
 
 ### Dim
+Sia
 $$
 \phi(x) = (f(b)-f(a))g(x) - (g(b)-g(a))f(x)
 $$
+Consideriamo il teorema di Rolle.
 Proprietà di $\phi$:
-1. $\phi$ è continua in tutto $[a, b]$
-2. $\phi$ è derivabile all'interno di $(a, b)$ (Siccome sono moltiplicate per numeri la derivabilità non viene alterata)
+1. $\phi$ è continua in tutto $[a, b]$, perché composizione di funzioni continue per ipotesi.
+2. $\phi$ è derivabile all'interno di $(a, b)$ (Siccome sono moltiplicate per numeri, ovvero $(f(b)-f(a))$ e $(g(b)-g(a))$, la derivabilità non viene alterata)
 3. $\phi(a) = \phi(b)$ (da dimostrare)
-
-DA RISCRIVERE BENE !!!!!
 
 $$
 \begin{align}
 \phi(a) &= (f(b) - f(a))g(a) - (g(b)-g(a))f(a) \\
  & = f(b)g(a) - f(a)g(a) - g(b)f(a) + g(a)f(a) \\
+ & = f(b)g(a) - g(b)f(a) \\
  \\
 \phi(b) & = (f(b) - f(a))g(b) - (g(b)-g(a))f(b) \\
  & = f(b)g(b) - f(a)g(b) - g(b)f(b) + g(a)f(b) \\
+ & = g(a)f(b) - f(a)g(b) \\
  \\
 \end{align}
 $$
+Dunque la terza proprietà richiesta dal teorema di Rolle è verificata.
 Allora applico Rolle, ossia esiste $c \in (a, b)$ tale che $\phi'(c) = 0$.
 $$
 \phi'(c) = (f(b)-f(a))g'(c) - (g(b)-g(a))f'(c) = 0
 $$
 Quindi la prima tesi è verificata.
 
-Per la seconda tesi ho che $g'(x) \neq 0,  \forall x \in (a,b) \implies g(b) \neq g(a)$.
+Per la seconda tesi ho che $g'(x) \neq 0,  \forall x \in (a,b) \implies g(b) \neq g(a)$. Perché altrimenti $g$ risponde al teorema di Rolle.
 Assumiamo per assurdo che $g(a) = g(b)$, allora applico Rolle: 
 $$
 \exists c\in(a,b) : g'(c) = 0
 $$
-Ma questa è una contraddizione con l'ipotesi $g'(x) \neq 0, \forall x \in (a,b) \implies  g(b) \neq g(a)$. Ho la seconda tesi dividendo per $g'(x) \neq 0$ e $(g(b)-g(a)) \neq 0$
+Ma questa è una contraddizione con l'ipotesi $g'(x) \neq 0$. Ho la seconda tesi dividendo per $g'(x) \neq 0$ e $(g(b)-g(a)) \neq 0$
 
 ### Oss:
 $$
@@ -272,3 +283,5 @@ $$
 \frac{f(a) - f(b)}{b-a} = \frac{f'(c)}{1}
 $$
 Basta applicare Cauchy.
+
+!!! Guarda video della lezione per vedere un esercizio bastardo

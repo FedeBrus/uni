@@ -7,9 +7,10 @@ In particolare:
 $$
 \begin{align}
 f(x_{0} + h) &= f(x_{0}) + \frac{f'(x_{0})}{1!}h + \frac{f''(x_{0})}{2!}h^{2} + \dots  + \frac{f^{(n)}(x_{0})}{n!}h^{n} + o(h^{n}) \qquad h \rightarrow  0 \\
- & = \sum_{k=0}^{n} \frac{f^{(k)}(x_{0})}{k!}h^{k} + o(h^{n}) \qquad [f^{(0)}(x_{0}) = x_{0}]
+ & = \sum_{k=0}^{n} \frac{f^{(k)}(x_{0})}{k!}h^{k} + o(h^{n}) \qquad [f^{(0)}(x_{0}) = f(x_{0})]
 \end{align}
 $$
+
 Scrittura alternativa, pongo $x = x_{0} + h$, quindi $h = x - x_{0}$.
 $$
 \begin{align}
@@ -23,7 +24,7 @@ g(h) = f(x_{0} + h)
 $$
 Utilizzando la formula di Taylor in $h = 0$ per la funzione $g$.
 $$
-g(h) = g(0) + \frac{g'(0)}{1}h + \dots  + \frac{g^{(n)}}{n!}h^{n} + o(h^{n}) \qquad h \rightarrow  0
+g(h) = g(0) + \frac{g'(0)}{1}h + \dots  + \frac{g^{(n)}(0)}{n!}h^{n} + o(h^{n}) \qquad h \rightarrow  0
 $$
 $$
 g(0) = f(x_{0}), g'(h) = f'(x_{0} + h) \implies  g'(0) = f'(x_{0}), g''(h) = f''(x_{0} + h) \implies  g''(0) = f''(x_{0})
@@ -95,8 +96,7 @@ $$
 $$
 f^{(2024)}(0) = 0
 $$
-Perché è dispari e ogni coefficiente di termine pari è $0$.
-
+Perché è dispari e ogni coefficiente di termine pari è $0$, basta guardare la serie di Taylor della funzione attorno a $x_{0}$, che in questo caso è ben nota poiché $x_{0} = 0$.
 ## Teorema esistenza degli zeri
 Sia $[a,b] \subseteq \mathbb{R}$ intervallo chiuso e limitato e sia $f:[a,b] \rightarrow \mathbb{R}$ continua in tutto l'intervallo.
 Supponiamo che $f(a) \cdot f(b) < 0$ (implica che i segni sono discordi).
@@ -123,9 +123,9 @@ Che vuol dire che $c$ è l'inf?
 1. $f(x) \leq 0 \qquad \forall x \leq c$
 2. $\forall \varepsilon > 0 \qquad \exists x \in [c, c + \varepsilon]$ per cui $f(x) > 0$
 
-Per assurdo, sia $f(c) > 0$, poiché $f$ è continua, esiste un intervallo centrato in $c$ tale che $f > 0$ per ogni elemento di questo intervallo. Ovvero troverò sempre un intervallo abbastanza piccolo per il quale c'è un po' di spazio tra $c$ e l'asse $x$. Ma questo contraddice il primo punto, quindi per forza $f(c) \not> 0$.
+Per assurdo, sia $f(c) > 0$, poiché $f$ è continua, esiste un intervallo centrato in $c$ tale che $f > 0$ per ogni elemento di questo intervallo. Ovvero troverò sempre un intervallo abbastanza piccolo per il quale c'è un po' di spazio tra $c$ e l'asse $x$. Ma questo contraddice il primo punto, poiché esisterebbe $x < c : f(x) > 0$, quindi per forza $f(c) \not> 0$.
 
-Per assurdo, sia $f(c) < 0$, poiché $f$ è continua, esiste un intervallo centrato in $c$ tale che $f < 0$ per ogni elemento di questo intervallo. Ovvero troverò sempre un intervallo abbastanza piccolo per il quale c'è un po' di spazio tra $c$ e l'asse $x$. Ma questo contraddice il secondo punto, quindi per forza $f(c) \not< 0$.
+Per assurdo, sia $f(c) < 0$, poiché $f$ è continua, esiste un intervallo centrato in $c$ tale che $f < 0$ per ogni elemento di questo intervallo. Ovvero troverò sempre un intervallo abbastanza piccolo per il quale c'è un po' di spazio tra $c$ e l'asse $x$. Ma questo contraddice il secondo punto, poiché esisterebbe $x > c : f(x) < 0$ quindi per forza $f(c) \not< 0$.
 
 Da cui si deduce che $f(c) = 0$.
 
@@ -134,7 +134,7 @@ Sia $f:[a, b] \rightarrow \mathbb{R}$ continua. Sia $\lambda \in \mathbb{R}$.
 Supponiamo che $f(a) < \lambda$ e che $f(b) > \lambda$, o viceversa.
 Allora $\exists c \in (a, b)$ tale che $f(c) = \lambda$.
 
-Per dimostrare basta porre un $g(x) = f(x - \lambda)$
+Per dimostrare basta porre $g(x) = f(x - \lambda)$
 
 ##### Esempio:
 Dimostrare che l'equazione $x^{2}-\sin x^{3} = 2024$ ha almeno una soluzione positiva.
@@ -169,17 +169,19 @@ Variante: $f:(0, +\infty) \rightarrow \mathbb{R}$ continua, se $\lim_{ x \to 0^{
 Variante: $f:(a, b) \rightarrow \mathbb{R}$ continua, se $\lim_{ x \to a^{+} } f(x) = -\infty$ e $\lim_{ x \to b^{-} } f(x) = +\infty$, allora $f$ è surgettiva.
 
 ## Studio locale di funzioni
-Obbiettivo: caratterizzare il grafico di funzioni nell'intorno di un ponto prefissato $x_{0}$.
+Obbiettivo: caratterizzare il grafico di funzioni nell'intorno di un punto prefissato $x_{0}$.
 
 ### Teorema monodromia 1
 Sia $f'(x_{0}) > 0$, allora $\exists \delta > 0$ tale che $f(x) > f(x_{0}), \forall x (x_{0}, x_{0}+\delta]$, $f(x) < f(x_{0}), \forall x \in [x_{0} - \delta, x_{0})$.
 
 ##### Dim:
-$f'(x_{0}) = \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} > 0, \exists \delta > 0 : \forall h \in [-\delta, \delta] \setminus \{ 0 \} \implies \frac{f(x_{0}+h)-f(x_{0})}{h} > 0$.
+$f'(x_{0}) = \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} > 0, \exists \delta > 0 : \forall h \in [-\delta, \delta] \setminus \{ 0 \}, \frac{f(x_{0}+h)-f(x_{0})}{h} > 0$.
 
 2 possibilità: 
 1. $h \in (0, \delta] \implies  h > 0, f(x_{0} + h) - f(x_{0}) > 0 \implies f(x_{0}+h) > f(x_{0})$
 2. $h \in [-\delta, 0) \implies h < 0, f(x_{0}+h) -f(x_{0}) < 0 \implies  f(x_{0}+h) < f(x_{0})$
+
+In entrambi i casi i segni di numeratore e denominatore del rapporto incrementale sono concordi.
 
 ##### Oss:
 se $f'(x_{0}) < 0$, la dimostrazione è simmetrica.
