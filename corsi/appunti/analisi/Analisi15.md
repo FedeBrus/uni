@@ -179,7 +179,7 @@ Utilizzando il rapporto incrementale.
 $$
 f(x) = x - x^{3} \qquad x \in [0, 1]
 $$
-cat. 1: Interni stazionari: $f'(x) = 1 - 3x^{2} \implies f'(x) = 0 \Leftrightarrow x = \pm \frac{1}{\sqrt{ 3 }}$
+cat. 1: Interni stazionari: $f'(x) = 1 - 3x^{2} \implies f'(x) = 0 \Longleftrightarrow x = \pm \frac{1}{\sqrt{ 3 }}$
 Ma devo prendere solamente quello all'interno dell'intervallo di partenza, ovvero $x = \frac{1}{\sqrt{ 3 }}$.
 
 cat. 2: Interni singolari: $\emptyset$, poiché la funzione della derivata è continua.
@@ -199,6 +199,7 @@ Sia $f:[a, b] \rightarrow \mathbb{R}$ tale che:
 3. $f(a) = f(b)$
 Allora $\exists c \in (a,b) : f'(c) = 0$
 ![[GraficoRolle]]
+
 Per (1.) e Weierstrass ho max e min.
 Quindi i punti di max e min ricadono nelle 3 categorie.
 
@@ -248,7 +249,7 @@ $$
 $$
 Quindi la prima tesi è verificata.
 
-Per la seconda tesi ho che $g'(x) \neq 0,  \forall x \in (a,b) \implies g(b) \neq g(a)$. Perché altrimenti $g$ risponde al teorema di Rolle.
+Per la seconda tesi ho che $g'(x) \neq 0,  \forall x \in (a,b) \implies g(b) \neq g(a)$. Perché altrimenti $g$ risponderebbe al teorema di Rolle.
 Assumiamo per assurdo che $g(a) = g(b)$, allora applico Rolle: 
 $$
 \exists c\in(a,b) : g'(c) = 0

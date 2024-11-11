@@ -357,7 +357,7 @@ $$
 \end{align}
 $$
 
-3. $x_{0} \in \mathbb{R}$ è punto a tangente verticale se esiste infinito il limite $\frac{\lim_{ h \to 0^{+} } f(x_{0}+h) - f(x_{0})}{h}$.
+3. $x_{0} \in \mathbb{R}$ è punto a tangente verticale se esiste infinito il limite $\lim_{ h \to 0 } \frac{f(x_{0}+h) - f(x_{0})}{h}$.
 Ad esempio $f(x) = \sqrt[3]{ x }$ non è derivabile in $x_{0} = 0$.
 $$
 \lim_{ x \to 0 } \frac{f(x_{0} + h) - f(h)}{h} = \lim_{ h \to 0 } \frac{f(h)}{h} = \lim_{ h \to  0 } \frac{\sqrt[3]{ h }}{h} = +\infty  \\

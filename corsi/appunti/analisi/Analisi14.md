@@ -169,7 +169,7 @@ Variante: $f:(0, +\infty) \rightarrow \mathbb{R}$ continua, se $\lim_{ x \to 0^{
 Variante: $f:(a, b) \rightarrow \mathbb{R}$ continua, se $\lim_{ x \to a^{+} } f(x) = -\infty$ e $\lim_{ x \to b^{-} } f(x) = +\infty$, allora $f$ è surgettiva.
 
 ## Studio locale di funzioni
-Obbiettivo: caratterizzare il grafico di funzioni nell'intorno di un punto prefissato $x_{0}$.
+Obiettivo: caratterizzare il grafico di funzioni nell'intorno di un punto prefissato $x_{0}$.
 
 ### Teorema monodromia 1
 Sia $f'(x_{0}) > 0$, allora $\exists \delta > 0$ tale che $f(x) > f(x_{0}), \forall x (x_{0}, x_{0}+\delta]$, $f(x) < f(x_{0}), \forall x \in [x_{0} - \delta, x_{0})$.
