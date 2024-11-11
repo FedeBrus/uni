@@ -293,3 +293,140 @@ Si noti come $f'(x) \geq 0, \forall x \in \mathbb{R}$, quindi la funzione, per m
 Siccome $f'(x) = 0$ solo in punti sporadici, per monotonia 3, sappiamo che è strettamente crescente, ma allora $f$ è anche iniettiva.
 
 Quindi sappiamo che l'equazione ha una sola soluzione, che è quella trovata all'inizio.
+
+## Punti di discontinuità
+$f: A \rightarrow \mathbb{R}, a \subseteq \mathbb{R}, x_{0} \in A$
+$$
+\lim_{ x \to x_{0} } f(x) \neq f(x_{0})
+$$
+Allora $x_{0}$ è un punto di discontinuità.
+
+1. Punti di discontinuità di prima specie
+$$
+\lim_{ x \to x_{0}^{+} } f(x) = l^{+} \in \bar{\mathbb{R}}, \lim_{ x \to x_{0}^{-} } = f(x) = l^{-} \in \bar{\mathbb{R}}
+$$
+con $l^{+} \neq l^{-}$.
+Se entrambi i limiti sono distinti allora $l^{+}- l^{-}$ si dice salto di $f$ in $x_{0}$.
+
+2. Punti di discontinuità di seconda specie
+$$
+\begin{align}
+\lim_{ x \to x_{0}^{+} }  f(x) &\qquad\text{non esiste} \\
+&\text{o} \\
+\lim_{ x \to x_{0}^{-} }  f(x) & \qquad\text{non esiste}
+\end{align}
+$$
+
+3. Punti di discontinuità di terza specie
+$$
+\lim_{ x \to x_{0} }  f(x) = l \in \bar{\mathbb{R}}, l \neq f(x_{0})
+$$
+Se $l \in \mathbb{R}$ allora $x_{0}$ si dice punto di discontinuità eliminabile, tramite il prolungamento per continuità. Se $l = \pm \infty$ allora $x_{0}$ si dice punto di discontinuità non eliminabile.
+
+##### Esempio
+$$
+f(x) = \lfloor x \rfloor \qquad \text{parte intera di x}
+$$
+Inteso come il più grande intero non più grande di $x$. In questo caso abbiamo una discontinuità di prima specie.
+
+##### Esempio:
+$$
+f(x) = \begin{cases}
+\cos\left( \frac{1}{x} \right) \qquad \forall x  \in (0, 1] \\
+0 \qquad x = 0
+\end{cases}
+$$
+Il seguente limite va fatto tenendo conto della prima parte della funzione.
+$$
+\lim_{ x \to 0^{+} } f(x) = \lim_{ x \to 0^{+} } \cos\left( \frac{1}{x} \right) \qquad \text{non esiste}
+$$
+
+##### Esempio:
+![[terza_specie]]
+
+## Punti di non derivabilità
+1. $x_{0} \in \mathbb{R}$ è punto angoloso di una funzione se esistono $\lim_{ h \to 0^{+} } \frac{f(x_{0}+h)-f(x_{0})}{h}$ e $\lim_{ h \to 0^{-} } \frac{f(x_{0}+h)-f(x_{0})}{h}$ sono diversi e almeno uno è finito.
+Ad esempio $f(x) = |x|$ non è derivabile in $x_{0} = 0$.
+
+2. $x_{0} \in \mathbb{R}$ è una cuspide se $\lim_{ h \to 0^{+} } \frac{f(x_{0}+h)-f(x_{0})}{h}$ e $\lim_{ h \to 0^{-} } \frac{f(x_{0}+h)-f(x_{0})}{h}$ sono entrambi infiniti ma di segno opposto.
+Ad esempio $f(x) = \sqrt{ |x| }$ non è derivabile in $x_{0} = 0$.
+$$
+\begin{align}
+\lim_{ x \to 0^{+} } \frac{f(x_{0} + h) - f(h)}{h} = \lim_{ h \to 0^{+} } \frac{f(h)}{h} = \lim_{ h \to  0^{+} } \frac{\sqrt{ h }}{h} = +\infty  \\
+\lim_{ x \to 0^{-} } \frac{f(x_{0} + h) - f(h)}{h} = \lim_{ h \to 0^{+} } \frac{f(h)}{h} = \lim_{ h \to  0^{+} } \frac{- \sqrt{ h }}{h} = -\infty
+\end{align}
+$$
+
+3. $x_{0} \in \mathbb{R}$ è punto a tangente verticale se esiste infinito il limite $\frac{\lim_{ h \to 0^{+} } f(x_{0}+h) - f(x_{0})}{h}$.
+Ad esempio $f(x) = \sqrt[3]{ x }$ non è derivabile in $x_{0} = 0$.
+$$
+\lim_{ x \to 0 } \frac{f(x_{0} + h) - f(h)}{h} = \lim_{ h \to 0 } \frac{f(h)}{h} = \lim_{ h \to  0 } \frac{\sqrt[3]{ h }}{h} = +\infty  \\
+$$
+
+## Teorema degli zeri di Bolzano per gli intervalli aperti
+Sia $f: (a, b) \rightarrow \mathbb{R}$ continua, con $-\infty \leq a < b \leq +\infty$, tale che:
+$$
+\begin{align}
+\lim_{ x \to a^{+} } f(x) = l^{-} \in \bar{\mathbb{R}} \\
+\lim_{ x \to b^{-} } f(x) = l^{+} \in \bar{\mathbb{R}}
+\end{align}
+$$
+con $l^{-}$ e $l^{+}$ non nulli e di segno opposto, allora esiste almeno un $c \in (a, b)$ tale che:
+$$
+f(c) = 0
+$$
+## Teorema di Weierstrass per gli intervalli aperti
+Sia $f:(a,b) \rightarrow \mathbb{R}$ continua, con $-\infty \leq a< b \leq +\infty$, tale che esistano (finiti o infiniti) i limiti destro e sinistro:
+$$
+\begin{align}
+\lim_{ x \to a^{+} } f(x) = l^{-} \\
+\lim_{ x \to b^{-} } f(x) = l^{+}
+\end{align}
+$$
+1. Se esiste un punto $x_{0} \in (a, b) : f(x_{0}) > max\{ l^{+}, l^{-} \} \implies$ $f$ ammette un massimo.
+2. Se esiste un punto $x_{0} \in (a,b): f(x_{0}) < min\{ l^{+}, l^{-} \} \implies$ $f$ ammette un minimo.
+
+##### Esempio:
+$$
+f(x) = x^{4} - 4x^{3} + x^{2}
+$$
+E' una funzione continua in tutto $\mathbb{R} = (-\infty, +\infty)$.
+$$
+\begin{align}
+\lim_{ x \to +\infty } f(x) = +\infty \\
+\lim_{ x \to -\infty } f(x) = +\infty
+\end{align}
+$$
+$min\{ l^{+}, l^{-} \} = +\infty$. $\forall x_{0} \in \mathbb{R}, f(x_{0}) < +\infty$, quindi sappiamo che esiste un minimo.
+
+##### Esempio:
+$$
+f(x) = \frac{x}{x^{2} + 1}
+$$
+E' una funzione continua in tutto $\mathbb{R} = (-\infty, +\infty)$.
+$$
+\begin{align}
+\lim_{ x \to +\infty } f(x) = 0 \\
+\lim_{ x \to -\infty } f(x) = 0
+\end{align}
+$$
+$max\{ l^{+}, l^{-} \} = min\{ l^{+}, l^{-} \} = 0$, questa funzione ammette sia minimo che massimo.
+
+##### Grafico $f(x)$
+##### Passo 1
+E' una funzione dispari
+##### Passo 2
+Definita e continua in $\mathbb{R}$, i limiti agli estremi li abbiamo già fatti prima.
+##### Passo 3
+$f(x) = 0 \Longleftrightarrow x = 0$
+$f(x) > 0 \Longleftrightarrow x > 0$
+$f(x) < 0 \Longleftrightarrow x < 0$
+##### Passo 4
+$f'(x) = \frac{x^{2} + 1 - 2x^{2}}{(x^{2}+1)^{2}} = \frac{1 - x^{2}}{(1+x^{2})^{2}}$
+$f'(x) = 0 \Longleftrightarrow x = \pm 1$
+$f'(x) > 0 \Longleftrightarrow x \in (-1, 1)$
+$f'(x) < 0 \Longleftrightarrow x \in (-\infty, -1) \cup (1, +\infty)$
+
+![[grafico]]
+
+Osservando il grafico si nota che $f(-1)$ è il minimo mentre $f(1)$ è il massimo.
