@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     input.open(argv[1], std::ios::in);
 
     if (input.fail()) {
-        std::cerr << "Canno open file" << std::endl;
+        std::cerr << "Cannot open file" << std::endl;
         exit(1);
     }
 
@@ -22,6 +22,7 @@ int main(int argc, char* argv[]) {
         std::cout << ((c == e) ? '?' : c);
     }
 
+    input.close();
     std::cout << std::endl;
 
     return 0;

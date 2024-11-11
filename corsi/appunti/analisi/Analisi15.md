@@ -22,7 +22,7 @@ $k$ è pari e $f^{(k)}(x_{0}) > 0$, guardo il limite:
 $$
 \lim_{ h \to 0 } \frac{f(x_{0}+h)-f(x_{0})}{h^{k}} = \frac{f^{(k)}(x_{0})}{k!} > 0
 $$
-Per il teorema della conservazione dei segni, visto che $f^{(k)}(x_{0})>0$, per ipotesi, e $k! > 0$ sicuramente, $\exists \delta : \frac{f(x_{0}+h)-f(x_{0})}{h^{k}}> 0 \qquad \forall h \in [-\delta, \delta] \setminus \{ 0 \}$
+Per il teorema della conservazione dei segni, visto che $f^{(k)}(x_{0})>0$, per ipotesi, e $k! > 0$ sicuramente, $\exists \delta > 0 : \frac{f(x_{0}+h)-f(x_{0})}{h^{k}}> 0 \qquad \forall h \in [-\delta, \delta] \setminus \{ 0 \}$
 
 Abbiamo 2 sotto-casi:
 1° $h \in (0, \delta] \implies h > 0 \implies h^{k} > 0 \implies f(x_{0} + h) - f(x_{0}) > 0 \Longleftrightarrow f(x_{0}+h) > f(x_{0})$
@@ -38,12 +38,11 @@ $k$ è dispari e $f^{(k)}(x_{0}) < 0$, guardo il limite:
 $$
 \lim_{ h \to 0 } \frac{f(x_{0}+h)-f(x_{0})}{h^{k}} = \frac{f^{(k)}(x_{0})}{k!} < 0
 $$
-Per il teorema della conservazione dei segni, $\exists \delta : \lim_{ h \to 0 } \frac{f(x_{0}+h)-f(x_{0})}{h^{k}} \qquad \forall h \in [-\delta, \delta]\setminus \{ 0 \}$
-Per il teorema della conservazione dei segni, visto che $f^{(k)}(x_{0})<0$, per ipotesi, e $k! > 0$ sicuramente, $\exists \delta : \lim_{ h \to 0 }\frac{f(x_{0}+h)-f(x_{0})}{h^{k}}< 0 \qquad \forall h \in [-\delta, \delta] \setminus \{ 0 \}$
+Per il teorema della conservazione dei segni, visto che $f^{(k)}(x_{0})<0$, per ipotesi, e $k! > 0$ sicuramente, $\exists \delta > 0 : \frac{f(x_{0}+h)-f(x_{0})}{h^{k}}< 0 \qquad \forall h \in [-\delta, \delta] \setminus \{ 0 \}$
 
 Abbiamo 2 sotto-casi:
 1° $h \in (0, \delta] \implies h > 0 \implies h^{k} > 0 \implies f(x_{0} + h) - f(x_{0}) < 0 \Longleftrightarrow f(x_{0}+h) < f(x_{0})$
-2° $h \in [-\delta, 0) \implies h < 0 \implies h^{k} < 0 \implies f(x_{0}+h)- f(x_{0}) < 0 \Longleftrightarrow f(x_{0}+h) > f(x_{0})$
+2° $h \in [-\delta, 0) \implies h < 0 \implies h^{k} < 0 \implies f(x_{0}+h)- f(x_{0}) > 0 \Longleftrightarrow f(x_{0}+h) > f(x_{0})$
 
 Mettendo insieme i due sotto-casi, ho che $x_{0}$ è un punto di flesso orizzontale. Perché andando a destra è un po' più piccolo, e andando a sinistra è un po' più grande.
 Il 4° caso è giustificato.

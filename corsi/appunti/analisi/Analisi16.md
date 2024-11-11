@@ -19,7 +19,7 @@ $$
 $$
 
 In effetti $c$ dipende sia da $x_{0}$ che da $x$.
-Ho utilizzato il teorema di Cauchy il teorema di Cauchy.
+Ho utilizzato il teorema di Cauchy.
 $$
 \frac{f(x) - f(x_{0})}{g(x)- g(x_{0})} =^{TC} \frac{f'(c(x_{0}, x))}{g'(c(x_{0}, x))}
 $$
@@ -36,7 +36,7 @@ Allora valgono le seguenti conclusioni:
 4. Se $f'(x) > 0, \forall x \in (a, b) \implies$ $f$ è strettamente crescente in $(a, b)$
 
 #### Attenzione!
-La seconda conclusione è falsa, si prendi per esempio $f = x^{2} \qquad x \in [-1, 1]$ in $0$.
+La seconda conclusione è falsa, si prendi per esempio $f = x^{3} \qquad x \in [-1, 1]$ in $0$.
 Dunque:
 1. Se $f$ è debolmente crescente $\implies$ $f'(x) \geq 0, \forall x \in (a, b)$
 2. Se $f$ è strettamente crescente $\implies$ $f'(x) \geq 0, \forall x \in (a, b)$
@@ -80,7 +80,7 @@ Controllo i limiti agli estremi. (Gli estremi comprendono anche i limiti destri 
 
 $$
 \begin{align}
-\lim_{ x \to  +\infty }  f(x) &= +\infty
+\lim_{ x \to  +\infty }  f(x) &= +\infty \\
 \lim_{ x \to  -\infty }  f(x) &= -\infty
 \end{align}
 $$
@@ -100,7 +100,7 @@ Supponiamo che $f'(x) = 0$ sporadicamente, ossia in punti $x$ isolati tra loro.
 Allora $f$ è strettamente crescente in $[a, b]$.
 ### Dim
 Per ipotesi e monotonia 2, $f$ è debolmente crescente.
-Se per assurdo, $f$ non è strettamente crescente, allora $f'(x) = 0$ in $(a, b)$.
+Se per assurdo, $f$ non è strettamente crescente, allora $f'(x) = 0$ in un sotto-intervallo non banale di $(a, b)$.
 Ma questo è contrario all'ipotesi di sporadicità, allora $f$ è strettamente crescente.
 
 ## Studio globale delle funzioni
@@ -125,7 +125,7 @@ $$
 \lim_{ x \to 0^{-} } \frac{e^{x}}{x} &= -\infty
 \end{align}
 $$
-Siccome il numeratore è sempre positivo, il limite a meno infinito va a $0$ da sotto, poiché il numeratore è positivo e il denominatore è negativo, rendendo la funzione negativa.
+Il limite a meno infinito va a $0$ da sotto, poiché il numeratore è positivo e il denominatore è negativo, rendendo la funzione negativa.
 
 ### Passo 3
 Determinare gli zeri, determinare il segno della funzione.
