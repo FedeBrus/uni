@@ -51,17 +51,21 @@ node* get_max(node* n);
 int get_max_pos(node* n);
 node* get_min(node* n);
 int get_min_pos(node* n);
-
+int get_pos(node* n, int x);
 
 // miscellanious functions
 bool contains(node* n, int x);
 int* get_array(node* n, int& len);
 void invert(node*& n);
+node* inverse(node* n);
 void concatenate(node* n, node* t);
 void make_circular(node* n);
 bool is_circular(node* n);
 void sort(node*& n);
 node* get_list(int arr[], int n);
+node* copy(node* n);
+void push_up(node*& n);
+void push_down(node*& n);
 
 int main() {
     node* lista = nullptr;
@@ -74,8 +78,11 @@ int main() {
     add_tail(lista, 2);
 
     print(lista);
-    sort(lista);
-    print(lista);
+    for (int i = 0; i < 6; i++) {
+        push_down(lista);
+        print(lista);
+        remove_head(lista);
+    }
 
     deallocate_circular(lista);
     return 0;
@@ -458,6 +465,23 @@ int get_min_pos(node* n) {
     return min_pos;
 }
 
+int get_pos(node* n, int x) {
+    int pos = 0;
+
+    if (!is_empty(n)) {
+        while (n != nullptr && n->val != x) {
+            n = n->next;
+            pos++;
+        }
+
+        if (n == nullptr) pos = -1;
+    } else {
+        pos = -1;
+    }
+
+    return pos;
+}
+
 bool contains(node* n, int x) {
     bool found = false;
 
@@ -498,6 +522,15 @@ void invert(node*& n) {
     n = r;
 }
 
+node* inverse(node* n) {
+    node* c = nullptr;
+    while (n != nullptr) {
+        add_node_head(c, n);
+        n = n->next;
+    }
+    return c;
+}
+
 void concatenate(node* n, node* t) {
     get_tail(n)->next = t;
 }
@@ -527,7 +560,7 @@ void sort(node*& n) {
     while (n != nullptr) {
         node* max = get_max(n);
         int max_pos = get_max_pos(n);
-        add_head(sorted, max->val);
+        add_node_head(sorted, max);
         remove_at(n, max_pos);
     }
 
@@ -542,4 +575,54 @@ node* get_list(int arr[], int n) {
     }
 
     return list;
+}
+
+node* copy(node* n) {
+    node* c = nullptr;
+
+    /* 
+    Facile ma inefficiente
+    while (n != nullptr) {
+        add_tail(head);
+        n = n->next;
+    }
+    */
+
+    node* t = inverse(n);
+    while (t != nullptr) {
+        add_node_head(c, t);
+        t = t->next;
+    }
+
+    return c;
+}
+
+void push_up(node*& n) {
+    int prev_pos = get_max_pos(n) - 1;
+
+    if (prev_pos >= 0) {
+        node* prev = get_at(n, prev_pos);
+        node* max = prev->next;
+        prev->next = prev->next->next;
+        max->next = nullptr;
+        add_node_tail(n, max);
+
+    } else if (prev_pos == -1) {
+        node* max = n;
+        max->next = nullptr;
+        remove_head(n);
+        add_node_tail(n, max);
+    }
+}
+
+void push_down(node*& n) {
+    int prev_pos = get_min_pos(n) - 1;
+
+    if (prev_pos >= 0) {
+        node* prev = get_at(n, prev_pos);
+        node* min = prev->next;
+        prev->next = prev->next->next;
+        add_node_head(n, min);
+
+    }
 }
