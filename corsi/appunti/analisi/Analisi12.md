@@ -18,6 +18,9 @@ f^{(1)}(x_{0}) \\ \\
 \dot{f}(x_{0})
 \end{align}
 $$
+### Interpretazione geometrica
+![[derivata|1000]]
+
 ## Equazione retta tangente al grafico di $f$ in $P = (x_{0}, f(x_{0}))$
 $$
 y = f(x_{0}) + f'(x_{0})(x - x_{0})

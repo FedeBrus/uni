@@ -104,7 +104,7 @@ Allora $\exists c \in (a, b)$ tale che $f(c) = 0$.
 
 Notare che è di fondamentale importanza la continuità di tale funzione.
 Se avessimo una funzione non continua non funzionerebbe:
-![[non_continua]]
+![[immagine_esempio_dimostrazione]]
 
 Se avessimo ad esempio $f(x) = x^{2} - 2$ che è continua ma $f:[0,2] \rightarrow  \mathbb{Q}$.
 $f(a) = -2$ e $f(b) = 2$
@@ -192,6 +192,13 @@ Rimane da discutere quando la derivata è nulla ($f'(x_{0}) = 0$):
 I punti $x$ per cui $f'(x) = 0$ sono detti punti stazionari.
 
 Ci sono 5 possibili configurazioni:
+
+1. ![[tipologia1]]
+2. ![[tipologia2]]
+3. ![[tipologia3]]
+4. ![[tipologia4]]
+5. Funzioni che non hanno un intervallo di $x_{0}$ in cui $f$ ha segno definito.
+
 
 A parte per le funzioni della quinta categoria, dove ogni derivata di qualsiasi ordine sarà $0$.
 

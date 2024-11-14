@@ -138,7 +138,6 @@ Cerco i punti di max e min, ci sono 3 categorie.
 $$
 f(x) = |x - 2| \qquad x \in [0, 4]
 $$
-![[grafico|100]]
 La funzione è continua, quindi per Weierstrass ha un massimo e un minimo.
 In questo caso il punto di minimo è un punto singolare interno, perché $f'(2)$ non esiste. (quindi $x = 2$ è cat. 2).
 In questo caso i punti di massimo sono punti ai bordi, perché $f(0) = f(4) = 2 = max(f)$ (quindi $x = 0$ e $x = 4$ sono cat. 3).
@@ -148,7 +147,7 @@ $$
 f(x) = |\cos x| \qquad x \in [0, 2\pi]
 $$
 La funzione è continua, quindi per Weierstrass ha un massimo e un minimo.
-![[graficocoseno]]
+
 $max\{ |\cos x|  | x \in [0, 2\pi]\} = 1$ 
 $min\{ |\cos x|  | x \in [0, 2\pi]\} = 0$ 
 

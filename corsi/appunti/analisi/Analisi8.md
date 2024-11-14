@@ -65,8 +65,7 @@ $$
 ### Dimostrazione criterio della radice
 Supponiamo che $\sqrt[n]{ a_{n} } \rightarrow l > 1$ e supponiamo che $l \in \mathbb{R}$.
 
-       1   $(l+1)/2$    l
--------|-----|-----|------------------
+![[dimostrazione_teorema_radice1]]
 
 Per il teorema della permanenza del segno ho che almeno definitivamente:
 $$
@@ -81,8 +80,7 @@ Quindi poiché $\left( \frac{1+l}{2} \right)^{n} \rightarrow +\infty$, per il te
 
 Supponiamo che $\sqrt[n]{ a_{n} } \rightarrow l < 1$ e supponiamo che $l \in \mathbb{R}$.
 
-       l   $(l+1)/2$    1
--------|-----|-----|------------------
+![[dimostrazione_teorema_radice2]]
 
 Per il teorema della permanenza del segno ho che almeno definitivamente:
 $$

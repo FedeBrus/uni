@@ -21,12 +21,11 @@ Iniziamo guardando $\lim_{ x \to +\infty } f(x)$:
  Il caso 4 sussiste quando non valgono 1, 2, e 3.
 
 Il caso 2, si caratterizza dicendo che $\forall M \in \mathbb{R}, \exists k \in \mathbb{R} : f(x) \geq M, \forall x \geq k$.
-[[Immagine1|100]]
+![[immagine1]]
 Il caso 3, si caratterizza dicendo che $\forall m \in \mathbb{R}, \exists k \in \mathbb{R}:f(x)\leq m, \forall x \geq k$.
-[[Immagine2|100]]
-[[Immagine3|100]]
+![[immagine2]]
 Nel caso 1, $\forall \varepsilon > 0, \exists k \in \mathbb{R} : l - \varepsilon \leq f(x) \leq l + \varepsilon, \forall x \geq k$.
-[[Immagine4|100]]
+![[immagine3]]
 
 Il caso 1 ha 2 varianti:
 $$
@@ -46,12 +45,11 @@ Ora, guardando $\lim_{ x \to -\infty } f(x)$:
 Il caso 4 sussiste quando non valgono 1, 2, e 3.
 
 Il caso 2, si caratterizza dicendo che $\forall M \in \mathbb{R}, \exists k \in \mathbb{R} : f(x) \geq M, \forall x \leq k$.
-[[Immagine5|100]]
+![[immagine4]]
 Il caso 3, si caratterizza dicendo che $\forall m \in \mathbb{R}, \exists k \in \mathbb{R}:f(x)\leq m, \forall x \leq k$.
-[[Immagine6|100]]
+![[immagine5]]
 Nel caso 1, $\forall \varepsilon > 0, \exists k \in \mathbb{R} : l - \varepsilon \leq f(x) \leq l + \varepsilon, \forall x \leq k$.
-[[Immagine7|100]]
-
+![[immagine6]]
 Il caso 1 ha 2 varianti:
 $$
 \lim_{ x \to -\infty } f(x) = l^{+} \qquad
@@ -70,13 +68,13 @@ Ora, guardando $\lim_{ x \to x_{0} } f(x)$:
 Il caso 4 sussiste quando non valgono 1, 2, e 3.
 
 Il caso 2, si caratterizza dicendo che $\forall M \in \mathbb{R}, \exists \delta > 0 \in \mathbb{R} : f(x) \geq M, \forall x \in [x_{0}-\delta, x_{0} + \delta] \setminus \{ x_{0} \}$.
-[[Immagine8|100]]
+![[immagine7]]
 
 Il caso 3, si caratterizza dicendo che $\forall m \in \mathbb{R}, \exists \delta > 0 \in \mathbb{R} : f(x) \geq m, \forall x \in [x_{0}-\delta, x_{0} + \delta] \setminus \{ x_{0} \}$.
-[[Immagine9|100]]
+![[immagine8]]
 
 Nel caso 4, $\forall \varepsilon > 0, \exists \delta > 0 : l - \varepsilon \leq f(x) \leq l + \varepsilon, \forall x \in [x_{0}-\delta, x_{0}+\delta] \setminus \{ 0 \}$
-[[Immagine10|100]]
+![[immagine9]]
 
 Per i casi 2, 3 e 4 esistono 2 varianti (i limiti destro e sinistro):
 $$
@@ -142,7 +140,6 @@ $$
 $$
 \lim_{ x \to 0 } \frac{1}{x}
 $$
-[[immagine11|100]]
 In questo caso il limite non esiste.
 
 ### Limiti non esistenti

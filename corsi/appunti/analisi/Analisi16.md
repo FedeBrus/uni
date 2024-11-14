@@ -45,9 +45,7 @@ Dunque:
 
 ### Dim
 Della terza conclusione
-
------|-----|----|----|----
-     a     c     d    b
+Sia che $a < b < c < d$.
 Voglio dimostrare che per ogni scelta di $c$ e $d$, $f(c) \leq f(d)$.
 Applico Lagrange all'intervallo $[0, d]$. (Se è derivabile in tutti i punti di $(0, d)$, allora è derivabile anche in $(0, c)$)
 $$
