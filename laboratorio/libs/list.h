@@ -1,8 +1,11 @@
-#ifndef LISTA_H
-#define LISTA_H
+#ifndef LIST_H
+#define LIST_H
 
 namespace list {
-    struct node;
+    struct node {
+        int val;
+        node* next;
+    };
 
     // Convenzioni:
     // n = primo nodo della lista
@@ -13,13 +16,15 @@ namespace list {
     // c = copia temporanea
 
     // utility functions
-    bool is_empty(node* n);
-    void print(node* n);
-    void print_rec(node* n);
-    int length(node* n);
-    int length_rec(node* n);
+    bool is_empty(const node* n);
+    void print(const node* n);
+    void print_rec(const node* n);
+    void print_circular(const node* n);
+    int length(const node* n);
+    int length_rec(const node* n);
 
     // memory managment functinos
+    node* create_list();
     node* create_node(int x); // Creates a node
     node* create_node_after(int x, node* t); // Creates node after a certain node t
     void deallocate(node*& n);
@@ -38,6 +43,7 @@ namespace list {
 
     // removal functions
     void remove_head(node*& n);
+    void remove_circular_head(node*& n);
     void remove_tail(node*& n);
     void remove(node*&, int x);
     void remove_at(node*&, int pos);
