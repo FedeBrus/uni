@@ -330,6 +330,70 @@ namespace array {
 		return new_arr;
 	}
 
+	void add(int* arr1, int* arr2, int size1, int size2) {
+		int min = (size1 < size2) ? size1 : size2;
+		for (int i = 0; i < min; i++) { 
+			arr1[i] += arr2[i];
+		}
+	}
+
+    bool is_sorted(int* arr, int size) {
+		bool sorted = true;
+		for (int i = 0; sorted && i < size - 1; i++) {
+			if (arr[i] > arr[i + 1]) {
+				sorted = false;
+			}
+		}
+
+		return sorted;
+	}
+
+    bool is_sorted_reversed(int* arr, int size) {
+		bool sorted = true;
+		for (int i = 0; sorted && i < size - 1; i++) {
+			if (arr[i] < arr[i + 1]) {
+				sorted = false;
+			}
+		}
+
+		return sorted;
+	}
+
+    bool compare(int* arr1, int* arr2, int size1, int size2) {
+		int result = 0;
+		int i = 0;
+		for (i = 0; result == 0 && i < size1 && i < size2; i++) {
+			if (arr1[i] < arr2[i]) {
+				result = -1;
+			} else if (arr1[i] > arr2[i]) {
+				result = 1;
+			}
+		}
+
+		if (size1 < size2) {
+			result = -1;
+		} else if (size1 > size2) {
+			result = 1;
+		}
+
+		return result;
+	}
+
+	void bubble_sort(int* arr, int size) {
+		bool swaps = true;
+		for (int i = 0; swaps && i < size - 1; i++) {
+			swaps = false;
+			for (int j = 0; j < size - i - 1; j++) {
+				if (arr[j] > arr[j + 1]) {
+					swaps = true;
+					int tmp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = tmp;
+				}
+			}
+		}
+	}
+
 	void print(int* arr, int size) {
 		if (size > 0) {
 			std::cout << "[";

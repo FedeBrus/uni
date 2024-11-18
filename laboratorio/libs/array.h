@@ -39,8 +39,13 @@ namespace array {
     double norm(int* arr, int size);
     void normalize(int* arr, int size);
     int* concatenate(int* arr1, int* arr2, int size1, int size2);
+    void add(int* arr1, int* arr2, int size1, int size2);
 
-    // void add(int* arr1, int* arr2, int size1, int size2);
+    bool is_sorted(int* arr, int size);
+    bool is_sorted_reversed(int* arr, int size);
+    bool compare(int* arr1, int* arr2, int size1, int size2);
+
+    void bubble_sort(int* arr, int size);
 
     void print(int* arr, int size);
 }
