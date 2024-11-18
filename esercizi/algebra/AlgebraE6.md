@@ -237,38 +237,6 @@ $rg(A) = 2$, quindi solo i vettori $w_{1}, w_{2}$ sono linearmente indipendenti,
 Si trovi una base del sottospazio intersezione $V \cap W$.
 
 Per procedere dobbiamo individuare il sottospazio $V \cap W$. Risolviamo il sistema:
-$$
-\begin{bmatrix}
-1 & 1 & 1 & -2 & -1 & -1 & 0 \\
-2 & 1 & 1 & -3 & -2 & -1 & 0 \\
-1 & -1 & 3 & 1 & -2 & 3 & 0
-\end{bmatrix}
-\rightarrow_{E_{2,1}(-2)}
-\begin{bmatrix}
-1 & 1 & 1 & -2 & -1 & -1 & 0 \\
-0 & -1 & -1 & 1 & 0 & 1 & 0 \\
-1 & -1 & 3 & 1 & -2 & 3 & 0
-\end{bmatrix}
-\rightarrow_{E_{3,1}(-1)}
-\begin{bmatrix}
-1 & 1 & 1 & -2 & -1 & -1 & 0 \\
-0 & -1 & -1 & 1 & 0 & 1 & 0 \\
-0 & -2 & 2 & 3 & -1 & 4 & 0
-\end{bmatrix}
-$$
-$$
-\begin{bmatrix}
-1 & 1 & 1 & -2 & -1 & -1 & 0 \\
-0 & -1 & -1 & 1 & 0 & 1 & 0 \\
-0 & -2 & 2 & 3 & -1 & 4 & 0
-\end{bmatrix}
-\rightarrow_{D_{2}(-1)}
-\begin{bmatrix}
-1 & 1 & 1 & -2 & -1 & -1 & 0 \\
-0 & 1 & 1 & -1 & 0 & -1 & 0 \\
-0 & -2 & 2 & 3 & -1 & 4 & 0
-\end{bmatrix}
-$$
 
 
 ## Es 6.3
