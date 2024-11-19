@@ -28,7 +28,7 @@ Allora:
 ##### Esempio:
 $f(x) = x^{4}, \qquad f:\mathbb{R}\rightarrow \mathbb{R}$
 $f''(x) = 12x^{2}$
-$f''(x) = 0$
+$f''(0) = 0$
 
 Ma allora la proposizione (1.) è sbagliata.
 Allora:
@@ -54,7 +54,7 @@ Se $f$ fosse strettamente convessa, allora avrebbe al massimo 2 soluzioni.
 Supponiamo per assurdo che $f(x) = 0$ abbia 3 soluzioni ($x_{1} < x_{2} < x_{3}$).
 Ma quindi $f(x_{1}) = f(x_{2}) = f(x_{3})$.
 Se prendo $P = (x_{1}, f(x_{1})), Q = (x_{3}, f(x_{3}))$.
-Allora $PQ$ deve stare strettamente sopra il grafico, ma ciò è impossibile perché bassa sicuramente per $(x_{2}, f(x_{2}))$.
+Allora $PQ$ deve stare strettamente sopra il grafico, ma ciò è impossibile perché passa sicuramente per $(x_{2}, f(x_{2}))$.
 
 ### Def analitica/algebrica di convessità
 Sia $f:I\rightarrow \mathbb{R}$ con $I$ come nelle 3 tipologie, è convessa se $\forall x \in I, \forall y \in I$ e $\forall \lambda \in [0,1]$, vale che $f(\lambda x+ (1-\lambda)y) \leq \lambda f(x)+ (1- \lambda)f(y)$.

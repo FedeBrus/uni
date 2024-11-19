@@ -53,7 +53,7 @@ $$
 $$
 \Phi = \bigg\{ \int_{a}^{b} \phi(x)dx \bigg| \phi(x) \leq f(x), \forall x \in [a, b] \bigg\}
 $$
-I due insieme sono non vuoti perché $-M \leq f(x) \leq M, \forall x \in [a, b]$ e quindi $y = -M \in \Psi$ e $y = M \in \Phi$, perché $f$ è limitata per ipotesi. Perciò $\Phi, \Psi \neq \emptyset$.
+I due insieme sono non vuoti perché $-M \leq f(x) \leq M, \forall x \in [a, b]$ e quindi $y = M \in \Psi$ e $y = -M \in \Phi$, perché $f$ è limitata per ipotesi. Perciò $\Phi, \Psi \neq \emptyset$.
 
 $inf(\Psi)$ e $sup(\Phi)$ sono sicuramente numeri reali perché non vuoti e limitati da $M$ e $-M$.
 $$
@@ -77,7 +77,7 @@ I^{-}(f, [a,b]) = I^{+}(f, [a,b])
 $$
 Quando questo accade definisco:
 $$
-\int_{a}^{b} = I^{+}(f, [a, b]) = I^{-}(f, [a,b])
+\int_{a}^{b} f(x)dx= I^{+}(f, [a, b]) = I^{-}(f, [a,b])
 $$
 ##### Esempio
 Funzione limitata ma non integrabile (funzione Dirichlet):
@@ -111,7 +111,7 @@ $$
 L'integrazione è lineare sullo spazio lineare delle funzioni integrabili secondo Riemann in $[a, b]$. (Anche la derivata è un'operazione lineare).
 
 $$
-\int_{a}^{b}f(x)dx = \int_{a}^{c}f(x)dx + \int_{c}^{b} f(x)dx, \text{ con } a \leq b \leq c
+\int_{a}^{b}f(x)dx = \int_{a}^{c}f(x)dx + \int_{c}^{b} f(x)dx, \text{ con } a \leq c \leq b
 $$
 La stessa formula funziona anche con $c$ fuori da $[a, b]$ (il segno si inverte poiché $c > b$), sempre che $f$ sia integrabile in $[a, c]$.
 $$
@@ -225,7 +225,7 @@ Scelgo $x_{0} \in [a, b]$.
 Bisogna dimostrare che $\Phi'(x) = f(x_{0})$.
 Il rapporto incrementale di $\Phi$ è:
 $$
-\frac{\Phi(x+ h) - \Phi(x)}{h} = \frac{1}{h} \left( \int_{a}^{x_{0}+h}f(x)dx - \int_{a}^{x_{0}}f(x)dx \right) = \frac{1}{h} \left( \int_{a}^{x_{0}+h}f(x)dx + \int_{x_{0}}^{a}f(x)dx \right) = \frac{1}{h} \int_{x_{0}}^{x_{0}+h}f(x)dx
+\frac{\Phi(x_{0}+ h) - \Phi(x_{0})}{h} = \frac{1}{h} \left( \int_{a}^{x_{0}+h}f(x)dx - \int_{a}^{x_{0}}f(x)dx \right) = \frac{1}{h} \left( \int_{a}^{x_{0}+h}f(x)dx + \int_{x_{0}}^{a}f(x)dx \right) = \frac{1}{h} \int_{x_{0}}^{x_{0}+h}f(x)dx
 $$
 Applico il teorema della media integrale e trovo
 $$

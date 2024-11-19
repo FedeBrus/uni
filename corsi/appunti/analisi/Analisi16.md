@@ -301,10 +301,10 @@ Allora $x_{0}$ è un punto di discontinuità.
 
 1. Punti di discontinuità di prima specie
 $$
-\lim_{ x \to x_{0}^{+} } f(x) = l^{+} \in \bar{\mathbb{R}}, \lim_{ x \to x_{0}^{-} } = f(x) = l^{-} \in \bar{\mathbb{R}}
+\lim_{ x \to x_{0}^{+} } f(x) = l^{+} \in \bar{\mathbb{R}}, \lim_{ x \to x_{0}^{-} } f(x) = l^{-} \in \bar{\mathbb{R}}
 $$
 con $l^{+} \neq l^{-}$.
-Se entrambi i limiti sono distinti allora $l^{+}- l^{-}$ si dice salto di $f$ in $x_{0}$.
+Se entrambi i limiti sono finiti allora $l^{+}- l^{-}$ si dice salto di $f$ in $x_{0}$.
 
 2. Punti di discontinuità di seconda specie
 $$
