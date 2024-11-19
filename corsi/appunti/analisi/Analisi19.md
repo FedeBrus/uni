@@ -223,7 +223,12 @@ $$
 
 ##### Esempio
 $$
-\int x^{2}e^{-2x} dx = -\frac{1}{2}x^{2}e^{-2x} - \int 2x\left( -\frac{e^{-2x}}{2} \right) dx = -\frac{x^{2}e^{-2x}}{2} + \int xe^{-2x} dx = \frac{x^{2}e^{-2x}}{2} - \frac{xe^{-2x}}{2} - \int e^{-2x}dx =  \frac{e^{-2x}}{2} \left( x^{2} +x +\frac{1}{2} \right)
+\begin{align}
+\int x^{2}e^{-2x} dx &= -\frac{1}{2} \left( x^{2}e^{-2x} - \int 2xe^{-2x}dx \right)  \\
+ & = -\frac{1}{2} \left( x^{2}e^{-2x} + xe^{-2x} - \int e^{-2x} dx \right) \\
+ & = -\frac{1}{2} \left( x^{2}e^{-2x}+xe^{-2x}+\frac{1}{2}e^{-2x} \right) \\
+ & = -\frac{e^{-2x}}{2} \left( x^{2}+x+\frac{1}{2} \right)
+\end{align}
 $$
 ##### Esempio
 $$
@@ -249,7 +254,7 @@ $$
 $$
 Metodo 1 (per parti):
 $$
-\int \cos(x)\cos(x) dx = \cos(x)\sin(x) + \int \sin^{2}(x) dx = \cos(x)\sin(x) + \int 1 - \cos ^{2}(x)dx = \cos(x)\sin(x) + x - \int \cos^{2}(x)
+\int \cos(x)\cos(x) dx = \cos(x)\sin(x) + \int \sin^{2}(x) dx = \cos(x)\sin(x) + \int (1 - \cos ^{2}(x))dx = \cos(x)\sin(x) + x - \int \cos^{2}(x) dx
 $$
 Quindi:
 $$
@@ -272,10 +277,10 @@ $$
 $$
 ##### Esempio
 $$
-\int \sin ^{3}(x) dx = \int \sin(x) \sin ^{2}(x) dx = (-\cos(x) \sin ^{2}(x)) + \int 2\sin(x)\cos ^{2}(x) dx = (-\cos(x)\sin ^{2}(x)) + 2\int \sin x(1 - \sin ^{2}(x)) dx
+\int \sin ^{3}(x) dx = \int \sin(x) \sin ^{2}(x) dx = (-\cos(x) \sin ^{2}(x)) + \int 2\sin(x)\cos ^{2}(x) dx = (-\cos(x)\sin ^{2}(x)) + 2\int \sin(x)(1 - \sin ^{2}(x)) dx
 $$
 $$
--\cos(x)\sin ^{2}(x) + 2 \int \sin x dx - 2 \int \sin ^{3}(x) dx
+= (-\cos(x)\sin ^{2}(x)) + 2 \int \sin(x) dx - 2 \int \sin^{3}(x) dx
 $$
 Quindi:
 $$
@@ -283,7 +288,20 @@ $$
 $$
 ##### Esempio
 $$
-\cos ^{4}(x) dx = \int \cos ^{3}(x) \cos(x) dx = \cos ^{3}(x) \sin(x) - \int 3\cos ^{2}(x)(-\sin(x)) \sin(x) dx = 
+\begin{align}
+\cos ^{4}(x) dx &= \int \cos ^{3}(x) \cos(x) dx \\
+ &= \cos ^{3}(x) \sin(x) + \int 3\cos ^{2}(x)\sin^{2}(x)dx \\
+ &= \cos ^{3}(x)\sin(x) +3 \int \cos ^{2}(x)(1-\cos ^{2}(x)) \\
+ &= \cos ^{3}(x)\sin(x) + 3\int \cos ^{2}(x)dx -3\int \cos ^{4}(x)dx \\
+ &= \cos ^{3}(x)\sin(x) + \frac{3}{2}(\cos(x)\sin(x) + x) - 3 \int \cos ^{4}(x)dx
+\end{align}
+$$
+Quindi
+$$
+\begin{align}
+4\int\cos ^{4}(x)dx &= \cos ^{3}\sin(x) + \frac{3}{2}(\cos(x)\sin(x)+x) \\
+\int \cos ^{4}(x)dx &= \frac{\cos ^{3}\sin(x)}{4} + \frac{3}{8}(\cos(x)\sin(x)+x)
+\end{align}
 $$
 
 ## Integrazione di funzioni razionali
