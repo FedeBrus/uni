@@ -407,11 +407,141 @@ $$
 \det A = - (k + 4) \det  \begin{bmatrix}
 2k & 1 & 2k + 2 \\
 0 & k + 4 & 0 \\
-0 & k + 2 & k + 3
+k & k + 2 & k + 3
 \end{bmatrix} = 
 -(k + 4)(k+4) \det \begin{bmatrix}
 2k & 2k+2 \\
-0 & k + 3
+k & k + 3
 \end{bmatrix} =
--(k+4)(k+4)(2k)(2k + 3)
+-(k+4)(k+4)(2k^2+6k-2k^2-2k) = -(k+4)^{2}(4k)
+$$
+Dunque lo spazio $N(A)$ è nullo se $k = -4, 0$.
+
+### b)
+Per i valori di $k$ esclusi nel punto precedente si determini una base di $N(A)$.
+Se $k = 0$:
+$$
+A = \begin{bmatrix}
+1 & 4 & 0 & 8 \\
+0 & 0 & 1 & 2 \\
+0 & 0 & 4 & 0 \\
+0 & 0 & 2 & 3
+\end{bmatrix}\rightarrow_{E_{3,2}(-4)}
+\begin{bmatrix}
+1 & 4 & 0 & 8 \\
+0 & 0 & 1 & 2 \\
+0 & 0 & 0 & -8 \\
+0 & 0 & 2 & 3
+\end{bmatrix}\rightarrow_{E_{4,2}(-2)}
+\begin{bmatrix}
+1 & 4 & 0 & 8 \\
+0 & 0 & 1 & 2 \\
+0 & 0 & 0 & -8 \\
+0 & 0 & 0 & -1
+\end{bmatrix}
+$$
+$$
+\rightarrow_{D_{3}\left( -\frac{1}{8} \right)}
+\begin{bmatrix}
+1 & 4 & 0 & 8 \\
+0 & 0 & 1 & 2 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & -1
+\end{bmatrix}\rightarrow_{E_{4,3}(1)}
+\begin{bmatrix}
+1 & 4 & 0 & 8 \\
+0 & 0 & 1 & 2 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{2, 3}(-2)}
+\begin{bmatrix}
+1 & 4 & 0 & 8 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{1,3}(-8)}
+\begin{bmatrix}
+1 & 4 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -4t \\
+y = t \\
+z = 0 \\
+w = 0
+\end{cases}
+$$
+$N(A) = \{ t(-4, 1, 0, 0) | t \in \mathbb{R} \}$.
+
+Se $k = -4$:
+$$
+A = 
+\begin{bmatrix}
+-31 & 0 & 0 & 4 \\
+-8 & 0 & 1 & -6 \\
+0 & 0 & 0 & 0 \\
+-4 & 0 & -2 & -1
+\end{bmatrix}
+\rightarrow_{D_{1}\left( -\frac{1}{31} \right)}
+\begin{bmatrix}
+1 & 0 & 0 & -\frac{4}{31} \\
+-8 & 0 & 1 & -6 \\
+0 & 0 & 0 & 0 \\
+-4 & 0 & -2 & -1
+\end{bmatrix}
+\rightarrow_{E_{2, 1}(8)}
+\begin{bmatrix}
+1 & 0 & 0 & -\frac{4}{31} \\
+0 & 0 & 1 & -\frac{218}{31} \\
+0 & 0 & 0 & 0 \\
+-4 & 0 & -2 & -1
+\end{bmatrix}
+\rightarrow_{E_{4,1}(4)}
+\begin{bmatrix}
+1 & 0 & 0 & -\frac{4}{31} \\
+0 & 0 & 1 & -\frac{218}{31} \\
+0 & 0 & 0 & 0 \\
+0 & 0 & -2 & -\frac{47}{31}
+\end{bmatrix}
+\rightarrow_{E_{4,2}(2)}
+\begin{bmatrix}
+1 & 0 & 0 & -\frac{4}{31} \\
+0 & 0 & 1 & -\frac{218}{31} \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & -\frac{265}{31}
+\end{bmatrix}
+$$
+$$
+\begin{cases}
+x = 0 \\
+y = t \\
+z = 0 \\
+w = 0
+\end{cases}
+$$
+$N(A) = \{ t(0,1,0,0) | t \in \mathbb{R} \}$.
+
+## Es 7.7
+Sia $V$ il sottospazio di $\mathbb{R}^{4}$ generato dai vettori:
+$$
+\begin{align}
+v_{1} &= (0, k - 1, k^{2} - 1, 3k - 2) \\
+v_{2} &= (1, 3, 0, 3) \\
+v_{3} &= (-1, -2, 1, -1)
+\end{align}
+$$
+Determinare la dimensione e una base di $V$ al variare del parametro reale $k$.
+Consideriamo la matrice associata mettendo i vettori in colonna.
+$$
+\begin{bmatrix}
+0 & 1 & -1 \\
+k-1 & 3 & -2 \\
+k^{2}-1 & 0 & 1 \\
+3k-2 & 3 & -1
+\end{bmatrix}
 $$
