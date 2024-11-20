@@ -303,7 +303,3 @@ $$
 \int \cos ^{4}(x)dx &= \frac{\cos ^{3}\sin(x)}{4} + \frac{3}{8}(\cos(x)\sin(x)+x)
 \end{align}
 $$
-
-## Integrazione di funzioni razionali
-
-## Sostituzioni razionalizzanti
