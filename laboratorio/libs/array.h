@@ -33,6 +33,7 @@ namespace array {
     int range(int* arr, int size);
     double variance(int* arr, int size);
     double std_deviation(int* arr, int size);
+    double median(int* arr, int size);
 
     void scale(int* arr, int size, int value);
     double dot(int* arr1, int* arr2, int size1, int size2);

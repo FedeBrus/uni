@@ -285,6 +285,19 @@ namespace array {
 		return sqrt(variance(arr, size));
 	}
 
+    double median(int* arr, int size) {
+		double m;	
+		int* c = copy(arr, size);
+		bubble_sort(c, size);
+		if (size % 2 != 0) {
+			m = arr[size / 2];
+		} else {
+			m = (arr[size / 2] + arr[size / 2 - 1]) / 2.0;
+		}
+
+		return m;
+	}
+
 	void scale(int* arr, int size, int value) {
 		for (int i = 0; i < size; i++) {
 			arr[i] *= value;
