@@ -478,7 +478,8 @@ namespace list {
     node* inverse(node* n) {
         node* c = nullptr;
         while (n != nullptr) {
-            add_node_head(c, n);
+            node* new_node = create_node(n->val);
+            add_node_head(c, new_node);
             n = n->next;
         }
         return c;
@@ -533,18 +534,19 @@ namespace list {
     node* copy(node* n) {
         node* c = nullptr;
 
-        /* 
-        Facile ma inefficiente
+        /*
+        //Facile ma inefficiente
         while (n != nullptr) {
-            add_tail(head);
+            add_tail(c, n->val);
             n = n->next;
         }
         */
-
+        
         node* t = inverse(n);
         while (t != nullptr) {
-            add_node_head(c, t);
+            node* prev = t;
             t = t->next;
+            add_node_head(c, prev);
         }
 
         return c;
