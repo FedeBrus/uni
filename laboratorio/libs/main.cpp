@@ -18,7 +18,12 @@ void test_stack();
 
 int main() {
     srand(time(NULL));
-
+    list::node* list = list::create_list();
+    list::add_head(list, 1);
+    list::add_head(list, 2);
+    list::add_head(list, 3);
+    list::node* x = list::get_at(list, 2);
+    list::create_node_after(4, x);
     return 0;
 }
 

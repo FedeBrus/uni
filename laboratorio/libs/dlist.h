@@ -19,13 +19,14 @@ namespace dlist {
     // memory managment functinos
     node* create_list();
     node* create_node(int x); // Creates a node
-    node* create_node_after(int x, node* t); // Creates node after a certain node t
+    node* create_node(int x, node* next, node* prev); // Creates node before a certain node t
     void deallocate(node*& n);
     void deallocate_circular(node*& n);
     void deallocate_rec(node*& n);
 
     // insertion functions
     void insert_at_node(node* n, node* t); // Inserts a certain node t after a certain node n
+    // DA RIFARE DA QUI IN POI 
     void insert_at(node*& n, int x, int pos); // Inserts a node at a certain position
     void add_tail(node*& n, int x);
     void add_head(node*& n, int x);

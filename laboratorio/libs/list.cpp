@@ -1,8 +1,6 @@
 #include <iostream>
 #include "list.h"
 
-using namespace list;
-
 namespace list {
     bool is_empty(const node* n) {
         return n == nullptr;
@@ -20,7 +18,7 @@ namespace list {
         return m;
     }
 
-    node* create_node_after(int x, node* t) {
+    node* create_node(int x, node* t) {
         node* m = new node;
         m->val = x;
         m->next = t;
@@ -165,7 +163,7 @@ namespace list {
     }
 
     void add_head(node*& n, int x) {
-        node* m = create_node_after(x, n);
+        node* m = create_node(x, n);
         n = m;
     }
 
