@@ -67,7 +67,7 @@ $$
 \int 2^{5x} dx = \int e^{5x\log(2)} dx = \int e^{\log(2^{5x})} = \int e^{(5\log(2))x} dx = \frac{e^{5\log(2)}}{5\log(2)}
 $$
 $$
-\int \frac{1}{5x} dx = \int 5^{-x} dx = \int e^{-x\log(5)} = \frac{e^{-x\log(5)}}{-\log(5)} = - \frac{1}{\log(5)} \cdot \frac{1}{5^{x}}
+\int \frac{1}{5^x} dx = \int 5^{-x} dx = \int e^{-x\log(5)} = \frac{e^{-x\log(5)}}{-\log(5)} = - \frac{1}{\log(5)} \cdot \frac{1}{5^{x}}
 $$
 $$
 \int \cosh(x+3) dx = \int \frac{e^{x+3} + e^{-(x+3)}}{2} dx = \frac{1}{2} \left[ \int e^{x+3} dx + \int e^{-(x+3)} dx \right] = \frac{1}{2} [e^{x+3} - e^{-(x+3)}] = \frac{e^{x+3} - e^{-(x+3)}}{2} = \sinh(x+3)
@@ -113,11 +113,11 @@ $$
 $$
 ##### Esempio
 $$
-\int cod(\underbrace{ x^{3} }_{ G })\underbrace{ x^{2} }_{ \frac{g}{3} } dx
+\int \cos(\underbrace{ x^{3} }_{ G })\underbrace{ x^{2} }_{ \frac{g}{3} } dx
 $$
 Pongo $y = x^{3} \implies \frac{dy}{dx} = 3x^{2} \implies dy = 3x^{2}dx$
 $$
-\frac{1}{3}\int cod(x^{3})3x^{2}dx = \frac{1}{3} \int \cos(y) dy = \frac{1}{3} \sin(y) = \frac{1}{3} \sin(x^{3})
+\frac{1}{3}\int \cos(x^{3})3x^{2}dx = \frac{1}{3} \int \cos(y) dy = \frac{1}{3} \sin(y) = \frac{1}{3} \sin(x^{3})
 $$
 ##### Esempio
 $$
@@ -195,7 +195,7 @@ X casa
 $$
 \int \frac{1}{ax + b} dx = \frac{1}{a}\log |ax + b|
 $$
-## Integrazione per parti*
+## Integrazione per parti
 $$
 \int_{a}^{b}H'(x)dx = H(b) - H(a)
 $$

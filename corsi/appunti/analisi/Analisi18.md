@@ -1,5 +1,4 @@
 ## Teoria dell'integrazione
-Come si indicano? Significato geometrico? Come si definiscono? Come si calcolano?
 
 #### Notazione
 Integrali propri
@@ -41,10 +40,10 @@ $$
 f(x) = \lambda_{i} \in \mathbb{R}, \qquad \forall x \in [x_{i-1}, x_{i}], \forall i = 1, \dots, n
 $$
 $$
-\int_{a}^{b}f(x)dx = A(R_{1}) + A(R_{2}) + \dots + A(R_{n}) = \lambda_{1}(x_{1} - x_{0}) + \lambda_{2}(x_{2}-x_{1}) + \dots + \lambda_{n}(x_{n - x_{n - 1}}) = \sum _{i = 1}^{n} = \lambda_{i}(x_{i} - x_{i - 1})
+\int_{a}^{b}f(x)dx = A(R_{1}) + A(R_{2}) + \dots + A(R_{n}) = \lambda_{1}(x_{1} - x_{0}) + \lambda_{2}(x_{2}-x_{1}) + \dots + \lambda_{n}(x_{n} - x_{n - 1}) = \sum _{i = 1}^{n} = \lambda_{i}(x_{i} - x_{i - 1})
 $$
 #### Caso generale
-Considero una funzione $f(x): [a, b] \rightarrow \mathbb{R}$ limitata. Si fa un'approssimazione da sotto e da sopra con funzioni a tratti.
+Considerando una funzione $f(x): [a, b] \rightarrow \mathbb{R}$ limitata. Si fa un'approssimazione da sotto e da sopra con funzioni a tratti.
 
 L'approssimazione dipende dalla suddivisione di $[a, b]$. Per un'approssimazione migliore bisogna prendere una suddivisione infinitesimale di $[a, b]$.
 $$
@@ -222,7 +221,7 @@ La funzione integrale $\Phi$ è primitiva di $f$ in $[a, b]$ ossia $\Phi'(x) = f
 
 ### Dim
 Scelgo $x_{0} \in [a, b]$.
-Bisogna dimostrare che $\Phi'(x) = f(x_{0})$.
+Bisogna dimostrare che $\Phi'(x_{0}) = f(x_{0})$.
 Il rapporto incrementale di $\Phi$ è:
 $$
 \frac{\Phi(x_{0}+ h) - \Phi(x_{0})}{h} = \frac{1}{h} \left( \int_{a}^{x_{0}+h}f(x)dx - \int_{a}^{x_{0}}f(x)dx \right) = \frac{1}{h} \left( \int_{a}^{x_{0}+h}f(x)dx + \int_{x_{0}}^{a}f(x)dx \right) = \frac{1}{h} \int_{x_{0}}^{x_{0}+h}f(x)dx
