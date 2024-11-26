@@ -1,23 +1,22 @@
 #include "list.h"
 #include "stack.h"
 
-typedef list::node node;
-
 namespace stack {
-
-    node* create_stack() {
-        return nullptr;
+    stack create_stack() {
+        stack s = new stack_list;
+        s->head = list::create_list();
+        return s;
     }
 
-    node* get_stack(int* arr, int size) {
-        node* s = create_stack();
+    stack get_stack(int* arr, int size) {
+        stack s = create_stack();
         for (int i = 0; i < size; i++) {
             push(s, arr[i]);
         }
         return s;
     }
 
-    int* get_array_se(node*& n) {
+    int* get_array_se(stack& n) {
         int len = length(n);
         int* arr = new int[len];
         // Completely empties the stack
@@ -29,7 +28,7 @@ namespace stack {
         return arr;
     }
 
-    void get_array_aux(node* n, int* arr, int idx) {
+    void get_array_aux(stack n, int* arr, int idx) {
         if (is_empty(n)) return;
 
         arr[idx] = top(n);
@@ -38,52 +37,56 @@ namespace stack {
         push(n, arr[idx]);
     }
 
-    int* get_array(node* n) {
+    int* get_array(stack n) {
         int len = length(n);
         int* arr = new int[len];
         get_array_aux(n, arr, 0);
         return arr;
     }
 
-    bool is_empty(node* n) {
-        return n == nullptr;
+    bool is_empty(stack n) {
+        return n->head == nullptr;
     }
 
-    int length(node* n) {
-        return list::length(n);
+    int length(stack n) {
+        return list::length(n->head);
     }
 
-    void push(node*& n, int x) {
-        list::add_head(n, x);
+    void push(stack& n, int x) {
+        list::add_head(n->head, x);
     }
 
-    void pop(node*& n) {
-        list::remove_head(n);
+    void pop(stack& n) {
+        list::remove_head(n->head);
     }
 
-    int top(node* n) {
-        return n->val;
+    int top(stack n) {
+        return n->head->val;
     }
 
-    int& top_ref(node* n) {
-        return n->val;
+    int& top_ref(stack n) {
+        return n->head->val;
     }
 
-    void empty(node* n) {
+    void empty(stack n) {
         while (!is_empty(n)) {
             pop(n);
         }
     }
 
-    node* copy(node* n) {
-        return list::copy(n);
+    stack copy(stack n) {
+        stack s = create_stack(); 
+        s->head = list::copy(n->head);
+        return s;
     }
 
-    void deallocate(node*& n) {
-        list::deallocate(n);
+    void deallocate(stack& n) {
+        list::deallocate(n->head);
+        delete n;
+        n = nullptr;
     }
 
-    void print(node* n) {
-        list::print(n);
+    void print(stack n) {
+        list::print(n->head);
     }
 }

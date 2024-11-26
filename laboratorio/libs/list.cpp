@@ -2,15 +2,15 @@
 #include "list.h"
 
 namespace list {
-    bool is_empty(const node* n) {
+    bool is_empty(list n) {
         return n == nullptr;
     }
 
-    node* create_list() {
+    list create_list() {
         return nullptr;
     }
 
-    node* create_node(int x) {
+    list create_node(int x) {
         node* m = new node;
         m->val = x;
         m->next = nullptr;
@@ -26,7 +26,14 @@ namespace list {
         return m;
     }
 
-    void print(const node* n) {
+    node* create_node_after(int x, node* t) {
+        node* m = create_node(x);
+        t->next = m;
+        
+        return m;
+    }
+
+    void print(list n) {
         if (!is_empty(n)) {
             std::cout << "{";
             // Ciclo per stampare tutti i l - 1 nodi.
@@ -40,7 +47,7 @@ namespace list {
         }
     }
 
-    void print_rec(const node* n) {
+    void print_rec(list n) {
         if (n == nullptr) {
             std::cout << "NULL" << std::endl;
         } else { 
@@ -49,10 +56,10 @@ namespace list {
         }
     }
 
-    void print_circular(const node* n) {
+    void print_circular(list n) {
         if (!is_empty(n)) {
             std::cout << "{";
-            const node* c = n;
+             node* c = n;
             // Ciclo per stampare tutti i l - 1 nodi.
             while (n->next != c) {
                 std::cout << n->val << "}->{";
@@ -64,7 +71,7 @@ namespace list {
         }
     }
 
-    int length(const node* n) {
+    int length(list n) {
         int l = 0;
         while (n != nullptr) {
             n = n->next;
@@ -74,12 +81,12 @@ namespace list {
         return l;
     }
 
-    int length_rec(const node* n) {
+    int length_rec(list n) {
         if (n == nullptr) return 0;
         else return 1 + length(n->next);
     }
 
-    void deallocate(node*& n) {
+    void deallocate(list& n) {
         if (!is_empty(n)) {
             while (n != nullptr) {
                 node* c = n;
@@ -89,7 +96,7 @@ namespace list {
         }
     }
 
-    void deallocate_circular(node*& n) {
+    void deallocate_circular(list& n) {
         if (!is_empty(n)) {
             node* c = n;
             while (c != n) {
@@ -103,7 +110,7 @@ namespace list {
         }
     }
 
-    void deallocate_rec(node*& n) {
+    void deallocate_rec(list& n) {
         if (n == nullptr) return;
 
         // Si sfrutta la chiusura di chiamate ricorsive per percorrere la lista al contrario
@@ -113,14 +120,14 @@ namespace list {
         n = nullptr; 
     }
 
-    void insert_at_node(node* n, node* t) {
+    void insert_at_node(list n, node* t) {
         if (n != nullptr) {
             t->next = n->next;
             n->next = t;
         }
     }
 
-    void insert_at(node*& n, int x, int pos) {
+    void insert_at(list& n, int x, int pos) {
         node* m = create_node(x);
 
         // Questo serve a creare indici negativi some Python
@@ -144,7 +151,7 @@ namespace list {
         }
     }
 
-    void add_tail(node*& n, int x) {
+    void add_tail(list& n, int x) {
         node* m = create_node(x);
 
         node* c = n;
@@ -162,12 +169,12 @@ namespace list {
         }
     }
 
-    void add_head(node*& n, int x) {
+    void add_head(list& n, int x) {
         node* m = create_node(x, n);
         n = m;
     }
 
-    void add_node_tail(node*& n, node* t) {
+    void add_node_tail(list& n, node* t) {
         node* c = n;
         // Se la lista è vuota bisogna modificare il puntatore all'inizio della lista con il nuovo nodo
         // Altrimenti bisogna posizionarsi alla fine della lista e modificare il puntatore al prossimo elemento dell'ultimo elemento
@@ -184,12 +191,12 @@ namespace list {
 
     }
 
-    void add_node_head(node*& n, node* t) {
+    void add_node_head(list& n, node* t) {
         t->next = n;
         n = t;
     }
 
-    void add_ordered_asc(node*& n, int x) {
+    void add_ordered_asc(list& n, int x) {
         node* m = create_node(x);
 
         // Se la lista è vuota o il primo valore è maggiore di x allora bisogna aggiungere in testa
@@ -207,7 +214,7 @@ namespace list {
         }
     }
 
-    void add_ordered_desc(node*& n, int x) {
+    void add_ordered_desc(list& n, int x) {
         node* m = create_node(x);
 
         // Se la lista è vuota o il primo valore è maggiore di x allora bisogna aggiungere in testa
@@ -225,7 +232,7 @@ namespace list {
         }
     }
 
-    void remove_head(node*& n) {
+    void remove_head(list& n) {
         if (!is_empty(n)) {
             node* c = n;
             n = n->next;
@@ -233,7 +240,7 @@ namespace list {
         }
     }
 
-    void remove_circular_head(node*& n) {
+    void remove_circular_head(list& n) {
         if (!is_empty(n)) {
             if (n->next != n) {
                 node* t = n;
@@ -251,7 +258,7 @@ namespace list {
         }
     }
 
-    void remove_tail(node*& n) {
+    void remove_tail(list& n) {
         if (!is_empty(n)) {
             node* c = n;
 
@@ -269,7 +276,7 @@ namespace list {
         }
     }
 
-    void remove(node*&n, int x) {
+    void remove(list&n, int x) {
         if (!is_empty(n)) {
             node* c = n;
 
@@ -286,7 +293,7 @@ namespace list {
         }
     }
 
-    void remove_at(node*& n, int pos) {
+    void remove_at(list& n, int pos) {
         if (pos < 0) {
             pos += length(n); 
             if (pos < 0) {
@@ -307,7 +314,7 @@ namespace list {
         }
     }
 
-    void remove_at_node(node* n) {
+    void remove_at_node(list n) {
         if (n->next != nullptr) {
             node* c = n->next;
             n->next = c->next;
@@ -315,7 +322,7 @@ namespace list {
         }
     }
 
-    node* get_tail(node* n) {
+    node* get_tail(list n) {
         while (n->next != nullptr) {
             n = n->next;
         }
@@ -323,7 +330,7 @@ namespace list {
         return n;
     }
 
-    node* get_at(node* n, int pos) {
+    node* get_at(list n, int pos) {
         if (!is_empty(n)) {
             for (int i = 0; n->next != nullptr && i < pos; i++) {
                 n = n->next;
@@ -333,7 +340,7 @@ namespace list {
         return n;
     }
 
-    node* get_max(node* n) {
+    node* get_max(list n) {
         node* max_node = n;
 
         if (!is_empty(n)) {
@@ -352,7 +359,7 @@ namespace list {
         return max_node;
     }
 
-    int get_max_pos(node* n) {
+    int get_max_pos(list n) {
         int max_pos = -1;
 
         int i = 0;
@@ -374,7 +381,7 @@ namespace list {
         return max_pos;
     }
 
-    node* get_min(node* n) {
+    node* get_min(list n) {
         node* min_node = nullptr;
 
         if (!is_empty(n)) {
@@ -394,7 +401,7 @@ namespace list {
         return min_node;
     }
 
-    int get_min_pos(node* n) {
+    int get_min_pos(list n) {
         int min_pos = -1;
 
         int i = 0;
@@ -416,7 +423,7 @@ namespace list {
         return min_pos;
     }
 
-    int get_pos(node* n, int x) {
+    int get_pos(list n, int x) {
         int pos = 0;
 
         if (!is_empty(n)) {
@@ -433,7 +440,7 @@ namespace list {
         return pos;
     }
 
-    bool contains(node* n, int x) {
+    bool contains(list n, int x) {
         bool found = false;
 
         if (!is_empty(n)) {
@@ -446,7 +453,7 @@ namespace list {
         return found;
     }
 
-    int* get_array(node* n, int& len) {
+    int* get_array(list n, int& len) {
         len = length(n);
         int* arr = new int[len];
         int i = 0;
@@ -459,7 +466,7 @@ namespace list {
         return arr;
     }
 
-    void invert(node*& n) {
+    void invert(list& n) {
         node* t;
         node* y = n;
         node* r = nullptr;
@@ -473,7 +480,7 @@ namespace list {
         n = r;
     }
 
-    node* inverse(node* n) {
+    node* inverse(list n) {
         node* c = nullptr;
         while (n != nullptr) {
             node* new_node = create_node(n->val);
@@ -483,15 +490,15 @@ namespace list {
         return c;
     }
 
-    void concatenate(node* n, node* t) {
+    void concatenate(list n, node* t) {
         get_tail(n)->next = t;
     }
 
-    void make_circular(node* n) {
+    void make_circular(list n) {
         get_tail(n)->next = n;
     }
 
-    bool is_circular(node* n) {
+    bool is_circular(list n) {
         bool circular = false; 
         if (!is_empty(n)) {
             node* c = n;
@@ -505,7 +512,7 @@ namespace list {
         return circular;
     }
 
-    void sort(node*& n) {
+    void sort(list& n) {
         // Very inefficient but works
         node* sorted = nullptr;
 
@@ -519,7 +526,7 @@ namespace list {
         n = sorted;
     }
 
-    node* get_list(int arr[], int n) {
+    list get_list(int arr[], int n) {
         node* list = nullptr;
         // Reversed loop for O(n) complexity
         for (int i = n - 1; i >= 0; i--) {
@@ -529,7 +536,7 @@ namespace list {
         return list;
     }
 
-    node* copy(node* n) {
+    list copy(list n) {
         node* c = nullptr;
 
         /*
@@ -550,7 +557,7 @@ namespace list {
         return c;
     }
 
-    void push_up(node*& n) {
+    void push_up(list& n) {
         int prev_pos = get_max_pos(n) - 1;
 
         if (prev_pos >= 0) {
@@ -568,7 +575,7 @@ namespace list {
         }
     }
 
-    void push_down(node*& n) {
+    void push_down(list& n) {
         int prev_pos = get_min_pos(n) - 1;
 
         if (prev_pos >= 0) {
