@@ -196,7 +196,7 @@ B. Integranda segno non definito
 	1. Assoluta integrabilità
 	2. Trucco integrazione per parti
 
-### Caso A
+### Integranda $f(x) \geq 0$
 Fatto generale:
 Se $f\geq 0$, allora l'integrale improprio o converge a $l > 0$ o diverge positivamente.
 
