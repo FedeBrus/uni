@@ -20,6 +20,7 @@ void test_stack();
 int main() {
     srand(time(NULL));
     test_queue();
+    test_stack();
     return 0;
 }
 
