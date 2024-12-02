@@ -233,7 +233,7 @@ $$
 $$
 $rg(A) = 2$, quindi solo i vettori $w_{1}, w_{2}$ sono linearmente indipendenti, dunque $dim(V) = 2$.
 
-### b) 
+### b) (DA FARE)
 Si trovi una base del sottospazio intersezione $V \cap W$.
 
 Per procedere dobbiamo individuare il sottospazio $V \cap W$. Risolviamo il sistema:

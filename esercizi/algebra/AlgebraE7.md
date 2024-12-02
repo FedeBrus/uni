@@ -102,7 +102,7 @@ $$
 $$
 Dunque $dim(U + V) = 3$ e una sua base è $\mathcal{B} = \{ u_{1}, u_{2}, v_{1} \} = \{ (0, 1, 1, 0), (0, 0, 0, 1), (-1,1,-2,0) \}$.
 
-### b)
+### b) (DA RIGUARDARE)
 Determinare una base e la dimensione di $U \cap V$.
 
 Utilizzando la formula di Grassman sappiamo che $dim(U \cap V) = dim(U) + dim(V) - dim(U + V) = 1$

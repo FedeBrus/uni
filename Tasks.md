@@ -6,23 +6,28 @@ kanban-plugin: board
 
 ## To do
 
-- [ ] Scheda video
 - [ ] Ordinare libri
 - [ ] Integrali razionali
-- [ ] Finire esame Roveri
+- [ ] Libreria stringhe
+- [ ] Scheda Es 9 Algebra
+- [ ] Scheda integrali Analisi
 
 
 ## Standby
 
+- [ ] Scheda video
 
 
 ## In progress
 
+- [ ] Scheda Es 8 Algebra
 
 
 ## Done
 
 - [ ] Tree library
+- [ ] Recuperare Algebra
+- [ ] Finire esame Roveri
 
 
 
