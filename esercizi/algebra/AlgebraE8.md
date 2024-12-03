@@ -426,4 +426,437 @@ $$
 0 & 0 & 0 & 0
 \end{bmatrix}
 $$
-Perché il sistema risulti risolvibile si ha che $k = 0$.
+Perché il sistema risulti risolvibile si ha che $k = 0$. Dato che il sistema è compatibile solo quando il rango di $A$ è uguale al rango di $A|b$.
+
+## Es 8.9
+Sia $T : \mathbb{R}^{3} \rightarrow \mathbb{R}^{4}$ la funzione lineare definita da: $T (x_{1}, x_{2}, x_{3}) = (2kx_{1} − x_{2}, x_{2} + kx_{3}, x_{1} + x_{2} − x_{3}, x_{1} − x_{2})$
+### a) 
+Trovare le dimensioni del nucleo e dell'immagine di $T$ al variare del parametro reale $k$. 
+
+Per trovare le dimensioni del nucleo di $T$ bisogna risolvere un sistema omogeneo:
+$$
+\begin{bmatrix}
+2k & -1 & 0 \\ 0 & 1 & k \\
+1 & 1 & -1 \\
+1 & -1 & 0
+\end{bmatrix}
+\rightarrow_{S_{1,3}}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+2k & -1 & 0 \\
+1 & -1 & 0
+\end{bmatrix}
+\rightarrow_{E_{3,1}(-2k)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+0 & -1-2k & 2k \\
+1 & -1 & 0
+\end{bmatrix}
+\rightarrow_{E_{4,1}(-1)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+0 & -1-2k & 2k \\
+0 & -2 & 1
+\end{bmatrix}
+\rightarrow_{E_{3,2}(1)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+0 & -2k & 3k \\
+0 & -2 & 1
+\end{bmatrix}
+\rightarrow_{E_{3,2}(2k)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+0 & 0 & 3k+2k^{2} \\
+0 & -2 & 1
+\end{bmatrix}
+$$
+$$
+\rightarrow_{E_{4,2}(2)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+0 & 0 & 3k+2k^{2} \\
+0 & 0 & 1+2k
+\end{bmatrix}
+\rightarrow_{E_{3,4}\left(-k\right)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+0 & 0 & 2k \\
+0 & 0 & 1+2k
+\end{bmatrix}
+\rightarrow_{E_{4,3}(-1)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+0 & 0 & 2k \\
+0 & 0 & 1
+\end{bmatrix}
+\rightarrow_{E_{3,4}(-2k)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & k \\
+0 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+Dunque $rgA=3$ a prescindere da $k$. Dunque $dimN(A) = n - rgA = 0$ e $N(A) = \{ (0,0,0) \}$.
+
+L'immagine di $T$ è definita come:
+$$
+\begin{align}
+\mathrm{Im}(T) &= \{ T(v) | v \in \mathbb{R}^{3} \} \\
+&= \{ 2kx_{1}-x_{2},x_{2}+kx_{3},x_{1}+x_{2}-x_{3},x_{1}-x_{2} | x_{1}, x_{2}, x_{3} \in \mathbb{R} \} \\
+&= \{ x_{1}(2k,0,1,1) + x_{2}(-1,1,1,-1) + x_{3}(0,k,-1,0) | x_{1},x_{2},x_{3} \in \mathbb{R} \} \\
+&= \langle (2k, 0, 1, 1), (-1, 1, 1, -1), (0, k, -1, 0) \rangle
+\end{align}
+$$
+Dunque basterebbe osservare quali vettori sono linearmente indipendenti, ma come abbiamo visto prima tutti e 3 lo sono indipendentemente dal valore di $k$.
+Dunque $dim \mathrm{Im}(T) = 3$.
+### b) 
+Stabilire per quali valori di $k$ il vettore $v = (3, 3, 1, 0)$ appartiene all'immagine di $T$.
+$$
+\begin{bmatrix}
+2k & -1 & 0 & 3 \\
+0 & 1 & k & 3 \\
+1 & 1 & -1 & 1 \\
+1 & -1 & 0 & 0
+\end{bmatrix}
+\rightarrow_{S_{1,3}}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+2k & -1 & 0 & 3 \\
+1 & -1 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{3,1}(-2k)}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+0 & -1-2k & 2k & 3 - 2k \\
+1 & -1 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{4,1}(-1)}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+0 & -1-2k & 2k & 3-2k \\
+0 & -2 & 1 & -1
+\end{bmatrix}
+$$
+$$
+\rightarrow_{E_{3,2}(1)}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+0 & -2k & 3k & 6-2k \\
+0 & -2 & 1 & -1
+\end{bmatrix}
+\rightarrow_{E_{3,2}(2k)}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+0 & 0 & 3k+2k^{2} & 6+4k \\
+0 & -2 & 1 & -1
+\end{bmatrix}
+\rightarrow_{E_{4,2}(2)}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+0 & 0 & 3k+2k^{2} & 6+4k \\
+0 & 0 & 1+2k & 5
+\end{bmatrix}
+\rightarrow_{E_{3,4}\left(-k\right)}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+0 & 0 & 2k & 6-k \\
+0 & 0 & 1+2k & 5
+\end{bmatrix}
+$$
+$$
+\rightarrow_{E_{4,3}(-1)}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+0 & 0 & 2k & 6-k \\
+0 & 0 & 1 & -1+k
+\end{bmatrix}
+\rightarrow_{E_{3,4}(-2k)}
+\begin{bmatrix}
+1 & 1 & -1 & 1 \\
+0 & 1 & k & 3 \\
+0 & 0 & 0 & 6+k-2k^{2} \\
+0 & 0 & 1 & -1+k
+\end{bmatrix}
+$$
+Il sistema risulta compatibile se $6+k-2k^{2} \neq 0$, ovvero se $k \neq 2, -\frac{3}{2}$.
+
+## Es 8.10
+### a) 
+Verificare che le relazioni $T(1, 1, 1) = (−1, 2), T(0, 1, 1) = (0, 4), T (1, 1, 0) = (2, 1)$ definiscono un'unica applicazione lineare $T$ da $\mathbb{R}^{3}$ a $\mathbb{R}^{2}$. 
+
+I vettori $(1,1,1), (0,1,1), (1,1,0)$ sono linearmente indipendenti, e dunque formano una base di $\mathbb{R}^{3}$. Ciò significa che ogni vettore $(x, y, z)$ può essere scritto come combinazione lineare $a(1,1,1) + b(0,1,1) + c(1,1,0)$. Per ricavare $a,b,c$ si risolve il seguente sistema:
+$$
+\begin{bmatrix}
+1 & 0 & 1 & x \\
+1 & 1 & 1 & y \\
+1 & 1 & 0 & z
+\end{bmatrix}
+\rightarrow_{E_{2,1}(-1), E_{3,1}(-1)}
+\begin{bmatrix}
+1 & 0 & 1 & x \\
+0 & 1 & 0 & y-x \\
+0 & 1 & -1 & z-x
+\end{bmatrix}
+\rightarrow_{E_{3,2}(-1)}
+\begin{bmatrix}
+1 & 0 & 1 & x \\
+0 & 1 & 0 & y-x \\
+0 & 0 & -1 & z-y
+\end{bmatrix}
+\rightarrow_{D_{3}(-1)}
+\begin{bmatrix}
+1 & 0 & 1 & x \\
+0 & 1 & 0 & y-x \\
+0 & 0 & 1 & y-z
+\end{bmatrix}
+\rightarrow_{E_{1,3}(-1)}
+\begin{bmatrix}
+1 & 0 & 0 & x-y+z \\
+0 & 1 & 0 & y-x \\
+0 & 0 & 1 & y-z
+\end{bmatrix}
+$$
+Perciò:
+$$
+\begin{align}
+T(x,y,z) &= T((x-y+z)(1,1,1) + (y-x)(0,1,1) + (y-z)(1,1,0)) \\
+ & = (x-y+z)T(1,1,1) + (y-x)T(0,1,1) + (y-z)T(1,1,0) \\
+ & = (x-y+z)(-1,2) + (y-x)(0, 4) + (y-z)(2,1) \\
+ & = (-x+y-z, 2x-2y+2z) + (0, 4y-4x) + (2y-2z, y-z) \\
+ & = (-x+3y-3z, -2x+3y+z)
+\end{align}
+$$
+
+Ecco il ragionamento:
+Un'applicazione lineare è determinata univocamente dal suo comportamento sui vettori di una base. Poiché i vettori $v_{1}, v_{2}, v_{3}$​ costituiscono una base di $\mathbb{R}^3$, basta specificare $T(v_1), T(v_2), T(v_3)$ per definire univocamente $T$ su tutto lo spazio $\mathbb{R}^3$.  
+Ogni vettore $v \in \mathbb{R}^3$ può essere scritto come combinazione lineare di $v_{1},v_{2},v_{3}$​:
+$$
+v = a_1 v_1 + a_2 v_2 + a_3 v_3​
+$$ 
+Per linearità di $T$, si avrà:
+$$
+T(v) = a_1 T(v_1) + a_2 T(v_2) + a_3 T(v_3)
+$$Questo garantisce che $T$ è definita univocamente su ogni vettore di $\mathbb{R}^{3}$, dato che $T(v_{1}), T(v_{2}), T(v_{3})$ sono già specificati.
+L'unicità di $T$ deriva dal fatto che $v_{1},v_{2},v_{3}$​ sono linearmente indipendenti. Se esistessero due applicazioni lineari $T_{1}, T_{2}$​ che soddisfano le stesse condizioni su ​$v_{1},v_{2},v_{3}$, allora per ogni $v \in \mathbb{R}^{3}$: 
+$$
+T_1(v) = T_2(v)
+$$
+perché entrambe sarebbero determinate dagli stessi valori su $v_{1},v_{2},v_{3}$.
+### b) 
+Scrivere la matrice rappresentativa di $T$ rispetto alla basi canoniche.
+$$
+\begin{align}
+T(e_{1}) &= T(1,0,0) = (-1, -2) \\
+T(e_{2}) &= T(0,1,0) = (3, 3) \\
+T(e_{3}) &= T(0,0,1) = (-3, 1) \\
+\end{align}
+$$
+$$
+M(T) = \begin{bmatrix}
+-1 & 3 & -3 \\
+-2 & 3 & 1
+\end{bmatrix}
+$$
+
+### c) 
+Trovare basi di $\mathrm{Im}(T)$ e di $N(T)$.
+$$
+\begin{align}
+\mathrm{Im}(T) &= \{ T(v) | v \in \mathbb{R}^{3} \} \\
+ & = \{ (-x+3y-3z, -2x+3y+z) | x,y,z \in \mathbb{R} \} \\
+ & = \{ x(-1,-2), y(3,3), z(-3, 1) | x,y,z \in \mathbb{R}\} \\
+ & = \langle (-1, -2), (3,3), (-3,1) \rangle
+\end{align}
+$$
+$$
+\begin{bmatrix}
+-1 & 3 & -3 \\
+-2 & 3 & 1 
+\end{bmatrix}
+\rightarrow_{D_{1}(-1), D_{2}(-1)}
+\begin{bmatrix}
+1 & -3 & 3 \\
+2 & -3 & -1 
+\end{bmatrix}
+\rightarrow_{E_{2,1}(-2)}
+\begin{bmatrix}
+1 & -3 & 3 \\
+0 & 3 & -7 
+\end{bmatrix}
+$$
+$(-1, -2), (3,3)$ sono linearmente indipendenti e generatori, quindi formano una base di $\mathrm{Im}(T)$. $\mathcal{B}(\mathrm{Im}(T)) = \{ (-1,-2), (3,3) \}$.
+
+Invece:
+$$
+N(T) = \{ v \in \mathbb{R}^{3} | T(v) = 0 \}
+$$
+Quindi troviamo le soluzioni del sistema $M(T)(x,y,z) = 0$:
+$$
+\begin{bmatrix}
+-1 & 3 & -3 \\
+-2 & 3 & 1 
+\end{bmatrix}
+\rightarrow_{D_{1}(-1), D_{2}(-1)}
+\begin{bmatrix}
+1 & -3 & 3 \\
+2 & -3 & -1 
+\end{bmatrix}
+\rightarrow_{E_{2,1}(-2)}
+\begin{bmatrix}
+1 & -3 & 3 \\
+0 & 3 & -7 
+\end{bmatrix}
+\rightarrow_{D_{2}\left( \frac{1}{3} \right)}
+\begin{bmatrix}
+1 & -3 & 3 \\
+0 & 1 & -\frac{7}{3} 
+\end{bmatrix}
+\rightarrow_{E_{1,2}(3)}
+\begin{bmatrix}
+1 & 0 & -4 \\
+0 & 1 & -\frac{7}{3} 
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 4t \\
+y = \frac{7t}{3} \\
+z = t
+\end{cases}
+$$
+L'insieme delle soluzioni del sistema è $\left\{  t\left( 4, \frac{7}{3}, 1 \right) | t\in \mathbb{R}  \right\}$, dunque $\mathcal{B}(N(T)) = \left\{  \left( 4, \frac{7}{3}, 1 \right)  \right\}$.
+
+## Es 8.11
+Sia $T: \mathbb{R}^{4} \rightarrow \mathbb{R}^{4}$ la funzione lineare definita da $T(x) = Ax$, con:
+$$
+A = \begin{bmatrix}
+1 & 0 & -1 & 1 \\
+-2 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 \\
+0 & 1 & -1 & 1
+\end{bmatrix}
+$$
+
+### a) 
+Stabilire se $T$ invertibile. 
+
+Una funzione lineare $T$ è invertibile se è biettiva, ovvero suriettiva e iniettiva. Ciò accade se la matrice associata ha rango massimo.
+$T$ è invertibile se la sua matrice associata è anch'essa invertibile. Una matrice è invertibile quando ha rango massimo e dunque il suo determinante è diverso da $0$. Calcoliamo allora il determinante di $A$.
+$$
+\det A = 2 \det \begin{bmatrix}
+0 & -1 & 1 \\
+1 & 0 & 0 \\
+1 & -1 & 1
+\end{bmatrix} = 2 \det \begin{bmatrix}
+0 & -1 & 1 \\
+1 & 0 & 0 \\
+0 & -1 & 1
+\end{bmatrix} = 2 (-1) \det \begin{bmatrix}
+-1 & 1 \\
+-1 & 1
+\end{bmatrix} = -2 \det \begin{bmatrix}
+-1 & 1 \\
+0 & 0
+\end{bmatrix} = -2 \cdot 0 = 0
+$$
+### b) 
+Trovare basi del nucleo e dell’immagine di $T$.
+
+In questo caso trovare la base del nucleo è molto diretto perché è sufficiente ridurre a scalini la matrice associata $A$.
+$$
+\begin{bmatrix}
+1 & 0 & -1 & 1 \\
+-2 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 \\
+0 & 1 & -1 & 1
+\end{bmatrix}
+\rightarrow_{E_{2,1}(2), E_{3,1}(-1)}
+\begin{bmatrix}
+1 & 0 & -1 & 1 \\
+0 & 0 & -2 & 2 \\
+0 & 1 & 1 & -1 \\
+0 & 1 & -1 & 1
+\end{bmatrix}
+\rightarrow_{S_{2,3}}
+\begin{bmatrix}
+1 & 0 & -1 & 1 \\
+0 & 1 & 1 & -1 \\
+0 & 0 & -2 & 2 \\
+0 & 1 & -1 & 1
+\end{bmatrix}
+\rightarrow_{E_{4,2}(-1)}
+\begin{bmatrix}
+1 & 0 & -1 & 1 \\
+0 & 1 & 1 & -1 \\
+0 & 0 & -2 & 2 \\
+0 & 0 & -2 & 2
+\end{bmatrix}
+\rightarrow_{E_{4,3}(1)}
+\begin{bmatrix}
+1 & 0 & -1 & 1 \\
+0 & 1 & 1 & -1 \\
+0 & 0 & -2 & 2 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+$$
+\rightarrow_{D_{3}\left( -\frac{1}{2} \right)}
+\begin{bmatrix}
+1 & 0 & -1 & 1 \\
+0 & 1 & 1 & -1 \\
+0 & 0 & 1 & -1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{2,3}(-1)}
+\begin{bmatrix}
+1 & 0 & -1 & 1 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & -1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{1,3}(1)}
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & -1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 0\\
+y = 0 \\
+z = t \\
+w = t
+\end{cases}
+$$
+Dunque la base del nucleo di $T$ è $\mathcal{B}(N(T)) = \{ t(0,0,1,1) | t \in \mathbb{R} \}$.
+$$
+\begin{align}
+\mathrm{Im}(T) &= \{ T(v) | v \in \mathbb{R}^{4} \} \\
+ & = \{ x(1, -2, 1, 0) +  y(0, 0, 1, 1) + z(-1, 0,0,1) + w(1,0,0,1) | x,y,z,w \in \mathbb{R} \}  \\
+ & = \langle (1, -2, 1, 0), (0,0,1,1), (-1,0,0,1),(1,0,0,1) \rangle
+\end{align}
+$$
+Solo i primi 3 vettori sono linearmente indipendenti, quindi $\mathcal{B}(\mathrm{Im}(T)) = \{ (1, -2, 1, 0), (0,0,1,1), (-1, 0,0,1) \}$.
+
+## Es 8.12
+Si consideri il seguente endomorfismo di $R4 T (x, y, z, w) = (−x + z, 2y, x − 2z, w)$ 
+a) 
+Si determino le dimensioni di immagine e nucleo di $T$ e si stabilisca se $T$ è invertibile.
