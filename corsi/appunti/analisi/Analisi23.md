@@ -1,5 +1,3 @@
-## Equazioni differenziali ordinarie
-
 Tipicamente equazioni in cui l'incognita è una funzione e l'equazione mette in correlazione la funzione e alcune delle sue derivate.
 Un'equazione differenziale ordinaria è qualcosa del genere:
 ##### Esempio
