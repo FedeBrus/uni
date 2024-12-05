@@ -64,7 +64,7 @@ $$
 $$
 Alternativamente
 $$
-\int 2^{5x} dx = \int e^{5x\log(2)} dx = \int e^{\log(2^{5x})} = \int e^{(5\log(2))x} dx = \frac{e^{5\log(2)}}{5\log(2)}
+\int 2^{5x} dx = \int e^{5x\log(2)} dx = \int e^{\log(2^{5x})} = \int e^{(5\log(2))x} dx = \frac{e^{5\log(2)x}}{5\log(2)}
 $$
 $$
 \int \frac{1}{5^x} dx = \int 5^{-x} dx = \int e^{-x\log(5)} = \frac{e^{-x\log(5)}}{-\log(5)} = - \frac{1}{\log(5)} \cdot \frac{1}{5^{x}}

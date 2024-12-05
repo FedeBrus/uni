@@ -193,7 +193,7 @@ $$
 Passo 2:
 Fattorizzazione
 $$
-\int \frac{x^{3}+1}{x_{4}+x^{3}}dx = \int \frac{x^{3}+1}{x^{3}(x + 1)}dx
+\int \frac{x^{3}+1}{x^{4}+x^{3}}dx = \int \frac{x^{3}+1}{x^{3}(x + 1)}dx
 $$
 Passo 3:
 $$
@@ -248,7 +248,7 @@ Se $C \leq 0$ allora si torna alla fattorizzazione del denominatore.
 
 ##### Esempio
 $$
-\int \frac{1}{x^{2}+2x+2}dx = \int \frac{1}{x^{2}+2x +1 +1} dx = \int \frac{1}{(x^{2}+1)^{2} + 1}dx
+\int \frac{1}{x^{2}+2x+2}dx = \int \frac{1}{x^{2}+2x +1 +1} dx = \int \frac{1}{(x+1)^{2} + 1}dx
 $$
 Pongo $y = x + 1 \implies dy = dx$
 $$

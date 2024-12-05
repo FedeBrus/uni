@@ -104,22 +104,22 @@ $f''(x) = -\frac{2}{(x+1)^{3}}$
 $f''(x)$ non si annulla mai.
 $f''(x) > 0 \Longleftrightarrow x < -1$
 $f''(x) < 0 \Longleftrightarrow x > -1$
-Dunque la funzione è convessa prima di $-1$ e convessa dopo $-1$.
+Dunque la funzione è convessa prima di $-1$ e concava dopo $-1$.
 
 Per determinare la posizione del grafico rispetto all'asintoto orizzontale, abbiamo due possibilità.
 Prima: risolvere le equazioni $f(x) = 1, f(x) > 1, f(x) < 1$.
 Seconda: studiare le zone di monotonia di $f$.
 
 ### Asintoti obliqui
-Una retta $y = mx + n$ è asintoto obliquo di $f$ per $x \rightarrow -\infty$ se $\lim_{ x \to -\infty }(f(x)-mx-n)=0$, invece è asintoto obliquo di $f$ per $x \rightarrow +\infty$ se $\lim_{ x \to +\infty }(f(x)-mx-n) = 0$.
+Una retta $y = mx + n$ è un asintoto obliquo di $f$ per $x \rightarrow -\infty$ se $\lim_{ x \to -\infty }(f(x)-mx-n)=0$, invece è asintoto obliquo di $f$ per $x \rightarrow +\infty$ se $\lim_{ x \to +\infty }(f(x)-mx-n) = 0$.
 
-Operativamente calcolo $m$ e $n$ (per il secondo caso, la stessa cosa ma con il limite che va a $-\infty$ per il primo).
+Operativamente calcolo $m$ e $n$ (per il secondo caso, la stessa cosa ma con il limite che va a $-\infty$).
 $$
 m = \lim_{ x \to +\infty } \frac{f(x)}{x}, \qquad n = \lim_{ x \to +\infty } (f(x)-mx)
 $$
 ### Dim
 $$
-\frac{f(x)}{x} = \frac{f(x)-mx-n}{x} + \frac{mx-n}{n} \rightarrow  m \qquad x\rightarrow+\infty 
+\frac{f(x)}{x} = \frac{f(x)-mx-n}{x} + \frac{mx+n}{x} = \left[ \frac{0}{x} + m + \frac{n}{x} \right]\rightarrow  m \qquad x\rightarrow+\infty 
 $$
 Perché il numeratore tende a $0$ per ipotesi e il denominatore a $+\infty$ quindi il primo termine si annulla. Il secondo termine tende a $m$ con $x \rightarrow +\infty$.
 
