@@ -1,5 +1,3 @@
-## Equazioni differenziali ordinarie
-
 Tipicamente equazioni in cui l'incognita è una funzione e l'equazione mette in correlazione la funzione e alcune delle sue derivate.
 Un'equazione differenziale ordinaria è qualcosa del genere:
 ##### Esempio
@@ -59,7 +57,7 @@ Se il termine noto è nullo l'equazione si dice omogenea.
 $$
 u'''(t) + \cos(t^{2})u''(t) + \left( \frac{\arctan(t)}{\cosh(t)} \right) u'(t) + t^{3}u(t) = \sin(t^{5})
 $$
-EDO di primo lineare ma non omogenea.
+EDO di primo ordine lineare ma non omogenea.
 ##### Esempio
 $$
 u' + t^{2}u = 42
