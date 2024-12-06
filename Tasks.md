@@ -11,6 +11,9 @@ kanban-plugin: board
 - [ ] Libreria stringhe
 - [ ] Scheda Es 9 Algebra
 - [ ] Scheda integrali Analisi
+- [ ] Sistemare Appunti Algebra
+- [ ] Inserire immagini analisi
+- [ ] Inserire teoria in analisi
 
 
 ## Standby
