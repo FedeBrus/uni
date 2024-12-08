@@ -11,25 +11,25 @@ kanban-plugin: board
 - [ ] Libreria stringhe
 - [ ] Scheda Es 9 Algebra
 - [ ] Scheda integrali Analisi
-- [ ] Sistemare Appunti Algebra
 - [ ] Inserire immagini analisi
-- [ ] Inserire teoria in analisi
 
 
 ## Standby
 
+- [ ] Scheda Es 8 Algebra
 - [ ] Scheda video
 
 
 ## In progress
 
-- [ ] Scheda Es 8 Algebra
+- [ ] Inserire teoria in analisi
 
 
 ## Done
 
 - [ ] Tree library
 - [ ] Recuperare Algebra
+- [ ] Sistemare Appunti Algebra
 - [ ] Finire esame Roveri
 
 

@@ -252,3 +252,121 @@ u^{(4)} + 9u'' = 0
 $$
 Polinomio caratteristico: $x^{4}+9x^{2} = 0 \Longleftrightarrow x^{2}(x^{2}+9) = 0 \Longleftrightarrow x^{2}(x-(\pm3i)) = 0$. 
 La base è $(1, t, \cos(3t), \sin(3t))$ e la soluzione generale $u(t) = c_{1} + c_{2}t + c_{3}\cos(3t) + c_{4}\sin(3t)$.
+
+## Risoluzioni equazioni differenziali ordinari lineari generiche
+$$
+\sum_{j=0}^{n} a_{j}(t)u^{(j)}(t) = f(t)
+$$
+#### Fatto Generale
+Supponiamo che $u(t)$ e $v(t)$ siano due soluzioni dell'equazione. Allora la differenza $u(t)-v(t)$ è soluzione dell'equazione omogenea associata.
+Sia $w(t) = u(t)-v(t) \implies w^{(j)}(t) = u^{(j)}(t)-v^{(j)}(t)$.
+Allora:
+$$
+\sum_{j=0}^{n} a_{j}(t)w^{(j)}(t) = \sum_{j=0}^{n} a_{j}(t)u^{(j)}(t)-\sum_{j=0}^{n} a_{j}(t)v^{(j)}(t) = f(t)-f(t) = 0
+$$
+#### Conseguenza
+Soluzioni dell'equazione non omogenea sono una soluzione della equazione omogenea associata più una qualunque soluzione della non omogenea
+$$
+u(t) = c_{1}u_{1}(t) + c_{2}u_{2}(t) + \dots +c_{n}u_{n}(t) + \bar{u}(t)
+$$
+##### Esempio
+$$
+u'' - 3u' -4u = e^{2t}
+$$
+Passo 1:
+Polinomio caratteristico dell'equazione omogenea associata: $x^{2}-3x+4 = 0 = (x-4)(x+1)$
+Dunque una base delle soluzioni è $(e^{4t}, e^{-t})$. Dunque $u_{om}(t) = c_{1}e^{4t}+c_{2}e^{-t}$.
+
+Passo 2:
+Consideriamo $\bar{u}(t) = \lambda e^{2t}$ e imponiamo che $\bar{u}(t)$ sia soluzione.
+Allora:
+$$
+\begin{align}
+\bar{u}'(t) &= 2\lambda e^{2t} \\
+\bar{u}''(t) &= 4\lambda e^{2t}
+\end{align}
+$$
+Sostituendo $u(t)$ con $\bar{u}(t)$ nell'equazione originale:
+$$
+\begin{align}
+4\lambda e^{2t}-6\lambda e^{2t}-4\lambda e^{2t} &= e^{2t} \\
+-6\lambda &= 1 \\
+\lambda &= -\frac{1}{6}
+\end{align}
+$$
+Allora per il fatto generale possiamo dire che $u(t) = u_{om}(t)-\frac{1}{6}e^{2t}$.
+##### Esempio
+$$
+u'' - 3u' -4u = e^{-7t}
+$$
+Passo 1:
+Polinomio caratteristico dell'equazione omogenea associata: $x^{2}-3x+4 = 0 = (x-4)(x+1)$
+Dunque una base delle soluzioni è $(e^{4t}, e^{-t})$. Dunque $u_{om}(t) = c_{1}e^{4t}+c_{2}e^{-t}$.
+
+Passo 2:
+Consideriamo $\bar{u}(t) = \lambda e^{-7t}$ e imponiamo che $\bar{u}(t)$ sia soluzione.
+Allora:
+$$
+\begin{align}
+\bar{u}'(t) &= -7\lambda e^{-7t} \\
+\bar{u}''(t) &= 49\lambda e^{-7t}
+\end{align}
+$$
+Sostituendo $u(t)$ con $\bar{u}(t)$ nell'equazione originale:
+$$
+\begin{align}
+4\lambda e^{-7t}-6\lambda e^{-7t}-4\lambda e^{-7t} &= e^{-7t} \\
+66\lambda &= 1 \\
+\lambda &= \frac{1}{66}
+\end{align}
+$$
+Allora per il fatto generale possiamo dire che $u(t) = u_{om}(t)+\frac{1}{66}e^{-7t}$.
+##### Esempio
+$$
+u'' - 3u' -4u = e^{4t}
+$$
+Passo 1:
+Polinomio caratteristico dell'equazione omogenea associata: $x^{2}-3x+4 = 0 = (x-4)(x+1)$
+Dunque una base delle soluzioni è $(e^{4t}, e^{-t})$. Dunque $u_{om}(t) = c_{1}e^{4t}+c_{2}e^{-t}$.
+
+Passo 2:
+Consideriamo $\bar{u}(t) = \lambda e^{-4t}$ e imponiamo che $\bar{u}(t)$ sia soluzione.
+Allora:
+$$
+\begin{align}
+\bar{u}'(t) &= 4\lambda e^{4t} \\
+\bar{u}''(t) &= 16\lambda e^{4t}
+\end{align}
+$$
+Sostituendo $u(t)$ con $\bar{u}(t)$ nell'equazione originale:
+$$
+\cancel{
+\begin{align}
+16\lambda e^{4t}-12\lambda e^{4t}-4\lambda e^{4t} &= e^{4t} \\
+0 &= 1
+\end{align}
+}
+$$
+Se il termine forzante è già una soluzione dell'equazione omogenea associata, allora il procedimento non funziona.
+In questo caso si può usare $\bar{u}(t) = \lambda te^{4t}$.
+$$
+\begin{align}
+\bar{u}'(t) &= \lambda e^{4t} + 4\lambda e^{4t} \\
+\bar{u}'(t) &= 4\lambda e^{4t} + 4\lambda e^{4t} + 16\lambda te^{4t} \\
+\bar{u}'(t) &= 8\lambda e^{4t} + 16\lambda te^{4t}
+\end{align}
+$$
+Sostituendo $u(t)$ con $\bar{u}(t)$ nell'equazione originale:
+$$
+\begin{align}
+8\lambda e^{4t} + 16\lambda te^{4t} -3\lambda e^{4t} - 12\lambda te^{4t} -4\lambda te^{4t} &= e^{4t} \\
+5\lambda &= 1 \\
+\lambda &= \frac{1}{5}
+\end{align}
+$$
+Tutti i termini $\lambda t$ si devono annullare, altrimenti si ha sbagliato.
+La soluzione dell'equazione originale è $u(t) = u_{om}(t) + \frac{te^{4t}}{5}$.
+
+Se la radice il cui elemento associato della base uguale all'elemento forzante avesse molteplicità $m$, allora bisogna considerare $\bar{u}(t) = \lambda t^{m}f(t)$.
+Questo metodo funziona solo per $f(t)$ che sono $\sin(t)$,$\cos(t)$,$e^{t}$ sommate o meno tra di loro.
+Ad esempio: se si avesse $e^{t}+\sin(t)$ bisognerebbe trovare due soluzioni isolate con uno dei termini e l'altro annullato e sommarle alla fine.

@@ -11,9 +11,10 @@
 
 	  // Personalizzati
 	{trigger: "qq", replacement: "\\qquad", options: "mA"},
-	{trigger: "sss", replacement: "\\Leftrightarrow", options: "mA"},
+	{trigger: "sss", replacement: "\\Longleftrightarrow", options: "mA"},
 	{trigger: "rarr", replacement: "\\rightarrow", options: "mA"},
 	{trigger: "larr", replacement: "\\leftarrow", options: "mA"},
+	{trigger: "der", replacement: "^{($0)}$1", options: "mA"},
 
     // Greek letters
 	{trigger: "@a", replacement: "\\alpha", options: "mA"},
@@ -108,9 +109,9 @@
     {trigger: "ooo", replacement: "\\infty", options: "mA"},
 	{trigger: "sum", replacement: "\\sum", options: "mA"},
 	{trigger: "prod", replacement: "\\prod", options: "mA"},
-	{trigger: "\\sum", replacement: "\\sum_{${0:i}=${1:1}}^{${2:N}} $3", options: "m"},
-	{trigger: "\\prod", replacement: "\\prod_{${0:i}=${1:1}}^{${2:N}} $3", options: "m"},
-    {trigger: "lim", replacement: "\\lim_{ ${0:n} \\to ${1:\\infty} } $2", options: "mA"},
+	{trigger: "\\sum", replacement: "\\sum_{${0:i}=${1:1}}^{${2:n}} $3", options: "m"},
+	{trigger: "\\prod", replacement: "\\prod_{${0:i}=${1:1}}^{${2:n}} $3", options: "m"},
+    {trigger: "lim", replacement: "\\lim_{ ${0:n} \\to ${1:\\+infty} } $2", options: "mA"},
     {trigger: "+-", replacement: "\\pm", options: "mA"},
 	{trigger: "-+", replacement: "\\mp", options: "mA"},
     {trigger: "...", replacement: "\\dots", options: "mA"},
