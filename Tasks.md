@@ -8,27 +8,28 @@ kanban-plugin: board
 
 - [ ] Ordinare libri
 - [ ] Integrali razionali
-- [ ] Libreria stringhe
-- [ ] Scheda Es 9 Algebra
 - [ ] Scheda integrali Analisi
 - [ ] Inserire immagini analisi
+- [ ] Formulario analisi
 
 
 ## Standby
 
-- [ ] Scheda Es 8 Algebra
 - [ ] Scheda video
+- [ ] Libreria stringhe
 
 
 ## In progress
 
-- [ ] Inserire teoria in analisi
+- [ ] Scheda Es 8 Algebra
+- [ ] Scheda Es 9 Algebra
 
 
 ## Done
 
 - [ ] Tree library
 - [ ] Recuperare Algebra
+- [ ] Inserire teoria in analisi
 - [ ] Sistemare Appunti Algebra
 - [ ] Finire esame Roveri
 
