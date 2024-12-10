@@ -858,5 +858,5 @@ Solo i primi 3 vettori sono linearmente indipendenti, quindi $\mathcal{B}(\mathr
 
 ## Es 8.12
 Si consideri il seguente endomorfismo di $R4 T (x, y, z, w) = (−x + z, 2y, x − 2z, w)$ 
-a) 
+### a) 
 Si determino le dimensioni di immagine e nucleo di $T$ e si stabilisca se $T$ è invertibile.

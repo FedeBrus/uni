@@ -54,7 +54,7 @@ Se invece lifespan $T<+\infty$, allora la soluzione "muore" al tempo $T$.
 1) Se $\lim_{ t \to T^{-} } u(t) = \pm \infty$, si dice che la soluzione ha un blow-up.
 
 Nel caso dell'esempio: $\lim_{ t \to \sqrt[4]{ \frac{4}{7} }^{-} } u(t) = +\infty$
-2) La soluzione non ha blow-up, e quindi "esce dal dominio di definizione" del secondo membro dell'equazione differenziale. Si dice che la soluzione ha un break-down. Tipicamente succede che $\lim_{ t \to T^{+} } u'(t) = \pm \infty$.
+2) La soluzione non ha blow-up, e quindi "esce dal dominio di definizione" del secondo membro dell'equazione differenziale. Si dice che la soluzione ha un break-down. Tipicamente succede che $\lim_{ t \to T^{-} } u'(t) = \pm \infty$.
 
 ##### Esempio
 $$
@@ -91,7 +91,7 @@ $u(0) = \frac{7}{1} = 7$  x CASA
 $$
 u(t) = \frac{7}{1-7\arctan(t)}
 $$
-definita per $1-7\arctan(t) \neq 0 \Longleftrightarrow \arctan(t)\neq \frac{1}{7} \Longleftrightarrow  \tan\left( \frac{1}{7} \right)$
+definita per $1-7\arctan(t) \neq 0 \Longleftrightarrow \arctan(t)\neq \frac{1}{7} \Longleftrightarrow  t \neq \tan\left( \frac{1}{7} \right)$
 $$
 \begin{align}
 &\dots  \\

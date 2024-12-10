@@ -155,7 +155,7 @@ u^{(k)}(t) = F(u^{(k-1)}(t), \dots , u(t), t) \\
 u(t_{0}) = u_{0} \\
 u'(t_{0}) = u_{1} \\
 \dots \\
-u^{(k-1)}(t_{0}) = u^{k - 1}
+u^{(k-1)}(t_{0}) = u_{k - 1}
 \end{cases}
 $$
 $u_{0}, u_{1}, \dots , u_{k-1}$ sono dati del problema.
@@ -213,7 +213,7 @@ $$
 u^{(k)}(t) = F(u^{(k-1)}(t), \dots, u(t), t) \\
 u(t_{0}) = u_{0} \\
 \dots \\
-u^{(k-1)}(t_{0}) = u^{k-1}
+u^{(k-1)}(t_{0}) = u_{k-1}
 \end{cases}
 $$
 Se $F$ è continua, allora la soluzione esiste sempre, localmente, ossia $u:(a,b)\rightarrow \mathbb{R}, t_{0}\in(a,b)$.
@@ -291,7 +291,7 @@ $$
 t \neq \arcsin\left( \frac{1}{3} \right)
 \end{align}
 $$
-Quindi $t = \arcsin\left( \frac{1}{3} \right) + 2k\pi, \qquad k \in \mathbb{Z}$ e $t = \pi - \arcsin\left( \frac{1}{3} \right) + 2k\pi, \qquad k \in \mathbb{Z}$.
+Quindi $t = \arcsin\left( \frac{1}{3} \right) + 2k\pi, k \in \mathbb{Z}$ e $t = \pi - \arcsin\left( \frac{1}{3} \right) + 2k\pi, k \in \mathbb{Z}$.
 
 in ordine:
 $$
