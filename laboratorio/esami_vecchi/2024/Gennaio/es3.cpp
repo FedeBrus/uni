@@ -33,7 +33,6 @@ int main() {
         } else {
             i--;
         }
-        print(cerchio);
     }
     
     cout << "Ci sono " << size(cerchio) << " bambini nella lista." << endl;
@@ -96,8 +95,9 @@ lista cerca(lista n, char nome[]) {
         while (n != start && !found) {
             if (strcmp(n->nome, nome) == 0) {
                 found = true;
+            } else {
+                n = n->next;
             }
-            n = n->next;
         }
 
         if (found) {
@@ -116,7 +116,7 @@ lista coloraPartecipante(lista n, int durata, int idx) {
             n = n->next;
         }
 
-        lista start = n->next;
+        lista start = n;
         color prev, next;
 
         while (n->next != start && n->colore != nero) {
