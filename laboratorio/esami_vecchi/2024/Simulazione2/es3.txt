@@ -1,0 +1,70 @@
+Scrivere nel file esercizio3.cc la dichiarazione e la definizione della funzione creaLista che prende come argomenti un array di interi arrayDiInteri e la dimensione dell’array dimensioneArray. La funzione creaLista deve creare una lista doppiamente concatenata contenente gli elementi dell’array e ritornare il primo nodo di tale lista. Dopo aver creato la lista, scrivere la dichiarazione e la definizione della funzione rimuoviNodiAlternati che prende come argomento il nodo iniziale della lista nodoIniziale. La funzione rimuoviNodiAlternati deve rimuovere dalla lista ogni coppia di nodi alternati (cioè inframezzati da un altro nodo) in cui il valore del primo nodo è diverso dal valore del secondo nodo, e infine ritornare il nodo iniziale della lista così modificata. Quando una coppia di nodi alternati vengono rimossi, i nodi rimanenti della lista devono essere correttamente ricollegati. Notare che questa operazione porta nodi della lista, precedentemente staccati, ad essere adesso alternati.
+
+Questi sono due esempi di esecuzione:
+
+computer > ./a.out
+Lista iniziale: 0 2 1 0 1 2 1 0
+Risultato: 2 0
+
+computer > ./a.out
+Lista iniziale: 0 1 0 1 2 1 2 0
+Risultato: 1 0
+
+Note:
+
+    Scaricare il file esercizio3.cc, modificarlo per inserire la corretta implementazione delle funzioni creaLista e rimuoviNodiAlternati e infine caricare il file risultato delle vostre modifiche a soluzione di questo esercizio nello spazio apposito. Ricordarsi di deallocare la memoria;
+    Le coppie di nodi alternati in cui il valore del primo nodo è diverso dal valore del secondo nodo devono essere rimosse in ordine. Per esempio, data la lista "0 1 1 0", il risultato dovrà essere "1 0" e non "0 1";
+    E’ consentito definire ed implementare funzioni ausiliarie che possano aiutarvi nella soluzione del problema.
+    All’interno di questo programma non è ammesso l’utilizzo di variabili globali o di tipo static e di funzioni di libreria al di fuori di quelle definite in iostream.
+
+https://esamionline.unitn.it/pluginfile.php/62321/question/questiontext/972332/4/296501/esercizio3.cc
+
+File della risposta Domanda 3
+ ATTENZIONE:
+Questo esercizio consente di conseguire la lode, e viene valutato se e solo se tutti gli altri esercizi sono stati svolti correttamente.
+
+
+Un DNA è una lunga catena di unità chiamate nucleotidi. Nel DNA ci sono 4 tipi di nucleotidi denotati con le lettere A, C, G, e T. Gli Esseri Umani (Homo Sapiens) hanno 3 milioni di coppie di nucleotidi Per esempio, una piccola porzione del DNA umano potrebbe essere:
+
+ACTAGGGATCATGAAGATAATGTTGGTGTTTGTATGGTTTTCAGACAATT
+
+In questo esempio, viene denominato k-mer di lunghezza 4 (e viene chiamato 4-mer) una sequenza di 4 nucleotidi consecutivi (i.e. lettere). Alcuni esempi di 4-mers derivati dall’esempio sono:
+
+ACTA, CTAG, TAGG, AGGG, GGGA, etc.
+
+Completare il programma lode.cc inserendo la dichiarazione e la definizione della funzione non ricorsiva genera_k_mer che prende come argomento un intero k, e calcola e stampa a video tutti i possibili k-mer, e ritorni il numero di k-mer calcolati. Matematicamente si tratta di generare tutte le possibili permutazioni di lunghezza k su insieme di caratteri A, C, G, e T, e corrisponde a generare 4 to the power of k possibili k-mer.
+
+https://esamionline.unitn.it/pluginfile.php/62321/question/questiontext/972332/5/295617/lode.cc
+
+Note:
+
+    Scaricare il file lode.cc, modificarlo solo per inserire la dichiarazione e la definizione della funzione generare_k_mers, e caricare il file risultato delle vostre modifiche a soluzione di questo esercizio nello spazio apposito.
+    Cercate di usare il numero minore di cicli (while, for, do, ...) innestati possibili. Ad esempio, esiste una possibile soluzione che richiede solo due cicli innestati per il calcolo di tutti i possibili k-mer.
+    Un possibile suggerimento per risolvere il problema consiste nell’assumere ordine A, C, G, T per i caratteri; partire da una stringa di lunghezza k che contiene sole A, e modificarla fino a quando non si ottiene la stringa di lunghezza k che contiene solo T; ad ogni cambiamento effettuato si rimpiazza A con C, C con G, G con T, e T con A. Ovviamente, questo è solo un suggerimento, esistono diverse soluzioni del problema.
+    All’interno di questo programma non è ammesso l’utilizzo di variabili globali o di tipo static e di funzioni di libreria al di fuori di quelle definite in cstring, cstdlib, iostream.
+
+Il programma per essere eseguito si aspetta di ricevere come argomento il numero positivo k di cui generare tutti i k-mer.
+Questi sono due esempi di esecuzione (i puntini indicano testo rimosso per rendere leggibile l’output):
+
+computer > ./a.out 1
+Start
+ACGT
+Numero di k-mer generati: 4
+Finish! 
+
+
+computer > ./a.out 4
+Start
+AAAA
+CAAA
+GAAA
+TAAA
+ACAA
+....
+....
+ATTT
+CTTT
+GTTT
+TTTT
+Numero di k-mer generati: 256
+Finish! 

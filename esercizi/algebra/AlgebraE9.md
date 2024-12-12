@@ -223,62 +223,56 @@ Si trovi una base del nucleo di $S$ e una base dell'immagine di $S$.
 
 Analizziamo prima $N(S):$
 $$
+A=
 \begin{bmatrix}
-3 & 4 & 1 \\
-0 & -2 & 0 \\
--2 & 2 & 2 \\
-1 & 3 & 2
+3 & 0 & -2 & 1 \\
+4 & -2 & 2 & 3 \\
+1 & 0 & 2 & 2
 \end{bmatrix}
-\rightarrow_{S_{1,4}}
+\rightarrow_{S_{1,3}}
 \begin{bmatrix}
-1 & 3 & 2 \\
-0 & -2 & 0 \\
--2 & 2 & 2 \\
-3 & 4 & 1 
+1 & 0 & 2 & 2 \\
+4 & -2 & 2 & 3 \\
+3 & 0 & -2 & 1
 \end{bmatrix}
-\rightarrow_{E_{3,1}(2)}
-\rightarrow_{E_{4,1}(-3)}
+\rightarrow_{E_{2,1}(-4)}
+\rightarrow_{E_{3,1}(-3)}
 \begin{bmatrix}
-1 & 3 & 2 \\
-0 & -2 & 0 \\
-0 & 8 & 6 \\
-0 & -5 & -5 
+1 & 0 & 2 & 2 \\
+0 & -2 & -6 & -5 \\
+0 & 0 & -8 & -5
+\end{bmatrix}
+$$
+La matrice associata ad $S$ ha rango $rg(A)=3$, le 3 colonne indipendenti sono quelle associate ai primi 3 vettori, dunque una base di $\mathrm{Im}$ è $\mathcal{B} = ((3,4,1), (0, -2, 0), (-2,2,2))$. Per il teorema di nullità + rango si ha che $N(A) = 4-3 = 1$. Per trovarne una base possiamo proseguire con la riduzione della matrice associata:
+$$
+\begin{bmatrix}
+1 & 0 & 2 & 2 \\
+0 & -2 & -6 & -5 \\
+0 & 0 & -8 & -5
 \end{bmatrix}
 \rightarrow_{D_{2}\left( -\frac{1}{2} \right)}
-\rightarrow_{D_{4}\left( -\frac{1}{5} \right)}
+\rightarrow_{D_{3}\left( -\frac{1}{8} \right)}
 \begin{bmatrix}
-1 & 3 & 2 \\
-0 & 1 & 0 \\
-0 & 8 & 6 \\
-0 & 1 & 1 
+1 & 0 & 2 & 2 \\
+0 & 1 & 3 & \frac{5}{2} \\
+0 & 0 & 1 & \frac{5}{8}
 \end{bmatrix}
-\rightarrow_{E_{3,2}(-8)}
-\rightarrow_{E_{4,2}(-1)}
+\rightarrow_{E_{2,3}(-3)}
+\rightarrow_{E_{1,3}(-2)}
 \begin{bmatrix}
-1 & 3 & 2 \\
-0 & 1 & 0 \\
-0 & 0 & 6 \\
-0 & 0 & 1 
+1 & 0 & 0 & \frac{6}{8} \\
+0 & 1 & 0 & \frac{5}{8} \\
+0 & 0 & 1 & \frac{5}{8}
 \end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -\frac{6}{8}t \\
+y = -\frac{5}{8}t \\
+z = -\frac{5}{8}t \\
+w = t
+\end{cases}
 $$
-$$
-\rightarrow_{E_{3,4}(-6)}
-\rightarrow_{E_{1,4}(-2)}
-\begin{bmatrix}
-1 & 3 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 0 \\
-0 & 0 & 1 
-\end{bmatrix}
-\rightarrow_{E_{1,2}(-3)}
-\begin{bmatrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 0 \\
-0 & 0 & 1 
-\end{bmatrix}
-$$
-Lo spazio delle colonne è indipendente, dunque $N(S) = \{ 0 \}$. Mentre $\mathrm{Im}(S) = \langle (3, 0, -2, 1), (4, -2, 2, 3), (1, 0, 2, 2) \rangle$. Essendo tutti i vettori indipendenti allora $\mathcal{B} = ((3, 0, -2, 1), (4, -2, 2, 3), (1, 0, 2, 2))$ è base di $\mathrm{Im}(S)$.
+Perciò una base di $N(A)$ è $\mathcal{N} = (\left( 6,5,5, -8 \right))$.
 ### b) 
 Sia $\mathcal{E}$ la base canonica di $\mathbb{R}^{4}$ e sia $\mathcal{B}$ la base di $\mathbb{R}^{3}$ costituita dai vettori $v_{1} = (1, 0, 1), v_{2} = (1, 0, 0), v_{3} = (1, 1, 1)$ Si determini la matrice $M_{\mathcal{E}}^{\mathcal{B}}(S)$ associata a $S$.
 
@@ -362,7 +356,7 @@ $$
 Dunque la matrice associata alla funzione $T$ ha rango $3$, il che vuol dire che $\text{null}(A) = 0 \Longleftrightarrow T \text{ è iniettiva}$.
 Quindi $T$ è biettiva.
 ### b)
-Si determini la matrice $M_{\mathcal{B}}^{\mathcal{E}}$ associata a $T$ rispetto alla base $\mathcal{B}$ e alla base canonica $\mathcal{E}$.
+Si determini la matrice $M_{\mathcal{B}}^{\mathcal{E}}(T)$ associata a $T$ rispetto alla base $\mathcal{B}$ e alla base canonica $\mathcal{E}$.
 
 Innanzitutto applichiamo la trasformazione ai vettori di $\mathcal{B}$:
 $$
@@ -478,7 +472,7 @@ $$
 \rightarrow_{E_{2,3}(2)}
 \rightarrow_{E_{1,3}(-1)}
 \begin{bmatrix}
-1 & 0 & 0 & 19 & 21 & -8 \\
+1 & 0 & 0 & 17 & 12 & -9 \\
 0 & 1 & 0 & -30 & -26 & 27 \\
 0 & 0 & 1 & -14 & -11 & 10 
 \end{bmatrix}
@@ -595,7 +589,7 @@ y = -t \\
 z = t
 \end{cases}
 $$
-Dunque una base del nucleo è $((0, -1, 1))$, la cui dimensione è ovviamente $1$.
+Dunque una base del nucleo è $((0, -1, 1))$, la cui dimensione è ovviamente $1$. Riducendo in forma a scalini ridotta si sarebbero potute vedere entrambi le basi. I vettori corrispettivi alle colonne dove sono presenti i pivot per la base dell'immagine e la soluzione di base del sistema per la base del sistema.
 ### c)
 Si stabilisca per quali valori di $k$ il vettore $v_{k} = (k + 1,0,k)$ appartiene all'Immagine di $T$.
 $$
@@ -616,17 +610,295 @@ $$
 0 & -1 & -\frac{2(k+1)}{3} \\
 0 & -1 & -1
 \end{bmatrix}
-\rightarrow
-\begin{cases}
-x = \frac{k+1}{3} \\
-y = \frac{2(k+1)}{3}
-\end{cases}
+\rightarrow-D_{2}(-1)
+\begin{bmatrix}
+3 & 0 & k + 1 \\
+0 & 1 & \frac{2(k+1)}{3} \\
+0 & -1 & -1
+\end{bmatrix}
+\rightarrow-_{E_{3,2}(1)}
+\begin{bmatrix}
+3 & 0 & k + 1 \\
+0 & 1 & \frac{2(k+1)}{3} \\
+0 & 0 & -1 + \frac{2(k+1)}{3}
+\end{bmatrix}
 $$
-Quindi il $v_{k}$ fa sempre parte dell'immagine di $T$ a discapito del valore di $k$.
-
+Da cui si deduce che se $v_{k} \in \mathrm{Im}(T) \implies\frac{2(k+1)}{3} = 1 \implies 2k + 2 = 3 \implies k = \frac{1}{2}$.
 ## Es 9.6
 Verificare che $v = (1,0,0,1)$ è autovettore dell'applicazione lineare $T$ così definita
 $$
 T(x_{1},x_{2},x_{3},x_{4}) = (2x_{1}-2x_{3},-x_{1}+2x_{2}+x_{3}+x_{4},x_{3},x_{1}-2x_{3}+x_{4})
 $$
 Determinare inoltre il relativo autovalore.
+Per verificare ciò basta solamente applicare la trasformazione al vettore $v$.
+$$
+T(v) = (2,-1 + 1, 0, 1 + 1) = (2, 0, 0, 2) = 2(v)
+$$
+Dunque $v$ è autovettore di $T$ con rispettivo autovalore $\lambda_{v} = 2$.
+
+## Es 9.7
+Sia $T$ l'endomorfismo di $\mathbb{R}^{3}$ definito da:
+$$
+A = \begin{bmatrix}
+1 & 1 & 0 \\
+0 & 3 & 0 \\
+0 & 0 & 2
+\end{bmatrix}
+$$
+### a)
+Stabilire se esistono autovettori di $T$ ed eventualmente determinarli.
+
+In questo caso è più semplice procedere trovando prima gli autovalori e successivamente i corrispettivi autovettori.
+Per fare ciò bisogna calcolare il polinomio caratteristico, dato da $\det(A - \lambda I_{3})$.
+$$
+\det(A - \lambda I_{3}) = 
+\begin{vmatrix}
+1-\lambda & 1 & 0 \\
+0 & 3 -\lambda & 0 \\
+0 & 0 & 2-\lambda
+\end{vmatrix} =
+(1 - \lambda)(3-\lambda)(2 - \lambda) = p_{A}(\lambda)
+$$
+$p_{A}(\lambda) = 0 \Longleftrightarrow \lambda = 1,2,3$. Gli autovalori di $T$ sono: $\lambda_{1} = 1, \lambda_{2}=2, \lambda_{3}=3$.
+
+Consideriamo $\lambda_{1}$:
+Calcoliamo $N(A - I_{3})$:
+$$
+\begin{bmatrix}
+0 & 1 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = 0 \\
+z = 0
+\end{cases}
+$$
+Il nucleo è $\{ (t,0,0) | t \in \mathbb{R} \} = \langle (1,0,0) \rangle$. Perciò $E(\lambda_{1}) =\langle (1,0,0) \rangle$.
+
+Consideriamo $\lambda_{2}$:
+Calcoliamo $N(A - 2I_{3})$:
+$$
+\begin{bmatrix}
+-1 & 1 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & -1 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 0 \\
+y = 0 \\
+z = t
+\end{cases}
+$$
+Il nucleo è $\{ (0,0,t) | t \in \mathbb{R} \} = \langle (0,0,1) \rangle$. Perciò $E(\lambda_{2}) =\langle (0,0,1) \rangle$.
+
+Consideriamo $\lambda_{3}$:
+Calcoliamo $N(A - 3I_{3})$:
+$$
+\begin{bmatrix}
+-2 & 1 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & -1
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & -\frac{1}{2} & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = \frac{t}{2} \\
+y = t  \\
+z = 0
+\end{cases}
+$$
+Il nucleo è $\left\{  \left( \frac{t}{2},t,0 \right) | t \in \mathbb{R}  \right\} = \langle (1,2,0) \rangle$. Perciò $E(\lambda_{3}) =\langle (1,2,0) \rangle$.
+
+### b)
+Stabilire se $T$ è diagonalizzabile.
+
+In questo caso si può affermare immediatamente che $T$ è diagonalizzabile, in quanto è sono stati trovati 3 autovalori distinti in $\mathbb{R}^{3}$. Perciò gli autovettori associati agli autovalori sono tra loro linearmente indipendenti e dunque formano una base di $\mathbb{R}^{3}$. Avendo trovato dunque una base di $\mathbb{R}^{3}$ composta da autovettori allora $T$ è diagonalizzabile.
+
+### c)
+Determinare la base rispetto alla quale $T$ ha matrice associata $D$ diagonale e determinare la matrice diagonale $D$ e la matrice $P$ diagonalizzante.
+Fissiamo la base $\mathcal{B} = (v_{\lambda_{1}},v_{\lambda_{2}},v_{\lambda_{3}})$ dove $T(v_{\lambda_{i}}) = \lambda_{i}v_{\lambda_{i}}$. Prendiamo $\mathcal{B} = ((1,0,0), (0,0,1),(1,2,0))$.
+Si ha che:
+$$
+D = M_{\mathcal{B}} = \begin{bmatrix}
+T_{\mathcal{B}}(T(v_{\lambda_{1}}) & T_{\mathcal{B}}(T(v_{\lambda_{2}}) & T_{\mathcal{B}}(T(v_{\lambda_{3}}))
+\end{bmatrix}
+= 
+\begin{bmatrix}
+\lambda_{1} & 0 & 0 \\
+0 & \lambda_{2} & 0 \\
+0 & 0 & \lambda_{3}
+\end{bmatrix}
+$$
+La matrice $P$ diagonalizzante è:
+$$
+P = M_{\mathcal{B}}^{\mathcal{E}} = \begin{bmatrix}
+1 & 0 & 1 \\
+0 & 0 & 2 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
+## Es 9.8 (DA FINIRE)
+Riconoscere che le seguenti matrici $M$ sono diagonalizzabili, e calcolare per ciascuna di esse una matrice $P$ diagonalizzante.
+$$
+A = \begin{bmatrix}
+1 & 2 & 3 \\
+0 & 3 & 1 \\
+0 & 0 & 4
+\end{bmatrix}
+$$
+$$
+B = \begin{bmatrix}
+2 & 1 & 1 & 0 \\
+0 & 3 & 4 & 0 \\
+0 & 0 & 5 & 0 \\
+0 & 0 & 0 & 2
+\end{bmatrix} 
+$$
+Consideriamo la matrice $A$:
+Calcoliamo $p_{A}(\lambda)$
+$$
+p_{A}(\lambda) =
+\begin{vmatrix}
+1 - \lambda & 2 & 3 \\
+0 & 3 - \lambda  & 1 \\
+0 & 0 & 4 - \lambda
+\end{vmatrix} = (1- \lambda) (3-\lambda) (4 - \lambda)
+$$
+$p_{A}(\lambda) \Longleftrightarrow \lambda = 1, 3, 4$. Gli autovalori sono dunque $\lambda_{1} = 1, \lambda_{2} = 2, \lambda_{3}=4$.
+
+Consideriamo $\lambda_{1}$:
+$$
+A - I_{3} = 
+\begin{bmatrix}
+0 & 2 & 3 \\
+0 & 2 & 1 &  \\
+0 & 0 & 2
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+0 & 2 & 3 \\
+0 & 0 & -2 \\
+0 & 0 & 2
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix} 
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = 0 \\
+z = 0
+\end{cases}
+$$
+$E(\lambda_{1}) = N(A - I_{3}) = \langle (1,0,0) \rangle$. Chiamiamo $v_{1} = (1,0,0)$.
+
+Consideriamo $\lambda_{2}$:
+$$
+A - 3I_{3} = 
+\begin{bmatrix}
+-2 & 2 & 3 \\
+0 & 0 & 1 \\
+0 & 0 & 4
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & -1 & -\frac{3}{2} \\
+0 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & -1 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x =t \\
+y = t \\
+z = 0
+\end{cases}
+$$
+$E(\lambda_{2}) = N(A - 3I_{3}) = \langle (1,1,0) \rangle$. Chiamiamo $v_{2} = (1,1,0)$.
+
+Consideriamo $\lambda_{3}$:
+$$
+A - 4I_{3} = 
+\begin{bmatrix}
+-3 & 2 & 3 \\
+0 & -1 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & -\frac{2}{3} & -1 \\
+0 & 1 & -1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & 0 & -\frac{5}{3} \\
+0 & 1 & -1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 5t \\
+y = 3t \\
+z = 3t
+\end{cases}
+$$
+$E(\lambda_{3}) = N(A - 4I_{3}) = \langle (5, 3, 3) \rangle$. Chiamiamo $v_{3} = (5, 3, 3)$.
+
+Dunque una matrice associata diagonale $D$ di $T_{A}$ è:
+$$
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 3 & 0 \\
+0 & 0 & 4
+\end{bmatrix}
+$$
+Secondo la base $\mathcal{A} = (v_{1},v_{2},v_{3})$.
+La matrice diagonalizzante $P$ invece è:
+$$
+P = 
+\begin{bmatrix}
+v_{1} & v_{2} & v_{3}
+\end{bmatrix} = 
+\begin{bmatrix}
+1 & 1 & 5 \\
+0 & 1 & 3 \\
+0 & 0 & 3
+\end{bmatrix}
+$$
+Consideriamo $B$:
