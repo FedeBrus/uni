@@ -219,7 +219,7 @@ Quindi:
 $$
 \begin{align}
 \frac{1}{a_{n}^{2}} &= 2n\pi \qquad n \in \mathbb{N} \\
-a_{n} & = \sqrt{ 2n\pi }
+a_{n} & = \frac{1}{\sqrt{ 2n\pi }}
 \end{align}
 $$
 $$

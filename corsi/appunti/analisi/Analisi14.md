@@ -99,7 +99,7 @@ $$
 Perché è dispari e ogni coefficiente di termine pari è $0$, basta guardare la serie di Taylor della funzione attorno a $x_{0}$, che in questo caso è ben nota poiché $x_{0} = 0$.
 ## Teorema esistenza degli zeri
 Sia $[a,b] \subseteq \mathbb{R}$ intervallo chiuso e limitato e sia $f:[a,b] \rightarrow \mathbb{R}$ continua in tutto l'intervallo.
-Supponiamo che $f(a) \cdot f(b) < 0$ (implica che i segni sono discordi).
+Supponiamo che $f(a) \cdot f(b) < 0$ (cioè che i segni sono discordi).
 Allora $\exists c \in (a, b)$ tale che $f(c) = 0$.
 
 Notare che è di fondamentale importanza la continuità di tale funzione.

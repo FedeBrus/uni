@@ -103,7 +103,7 @@ $$
 $$
 \lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{x^{3}}
 $$
-1 modo:
+1 modo (SBAGLIATO):
 $$
 \cancel{
 \lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{x^{3}} = \lim_{ x \to 0 } \frac{x \left(  1 - \frac{\sin x}{x} \right) + x^{5}}{x^{3}} = x^{2} = 0
@@ -111,7 +111,7 @@ $$
 $$
 Non si fanno i limiti "a pezzi"!
 
-2 modo:
+2 modo (SBAGLIATO):
 $$
 \lim_{ x \to 0 } \frac{x - \sin x+x^{5}}{x^{3}} = \lim_{ x \to 0 } \frac{x - (x + o(x)) +x^{5}}{x^{3}} = \frac{o(x)}{o(x)}
 $$
@@ -137,7 +137,7 @@ Sia $\phi$ una funzione n-volte derivabile in intorno di $x_{0} = 0$ e tale che:
 $$
 \phi(0) = \phi'(0) = \phi''(0) = \dots = \phi^{(n)}(0) = 0
 $$
-Allora $\phi(x) = o(x^{n}), \qquad x \rightarrow 0$
+Allora $\phi(x) = o(x^{n}), x \rightarrow 0$
 
 #### Dim:
 $n = 3$

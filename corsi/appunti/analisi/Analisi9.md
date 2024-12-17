@@ -168,7 +168,7 @@ $$
 \lim_{ x \to 0 } \frac{\tan x}{x} = 1 \\ \\
 \lim_{ x \to 0 } \frac{\arctan x}{x} = 1 \\ \\
 \lim_{ x \to 0 } \frac{\arcsin x}{x} = 1 \\ \\
-\lim_{ x \to 0 } \frac{a^{x-1}}{x} = \log a \\ \\
+\lim_{ x \to 0 } \frac{a^{x}-1}{x} = \log a \\ \\
 \lim_{ x \to 0^{+} } x\log x = 0 
 \end{align}
 $$

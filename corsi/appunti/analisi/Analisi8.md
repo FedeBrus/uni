@@ -168,7 +168,7 @@ Dato che $\left( 1 + \frac{1}{n} \right) > 1$ sempre allora si ha che:
 $$
 E_{n} = e_{n}\left( 1 + \frac{1}{n} \right) > e_{n}
 $$
-##### Dimostrazione del  fatto 2:
+##### Dimostrazione del fatto 2:
 Dobbiamo dimostrare che $e_{n}$ è strettamente crescente.
 $$
 e_{n-1} < e_{n} \Longleftrightarrow \frac{e_{n}}{e_{n-1}} > 1

@@ -22,7 +22,7 @@ $$
 $$
 $$
 \begin{align}
-\lim_{ x \to 0 } \frac{1 - \cos x^{2}}{x^{2}} \cdot \frac{x^{2}}{x}  & = \\
+\lim_{ x \to 0 } \frac{1 - \cos x^{2}}{x^{4}} \cdot x^{2}  & = \\
 \frac{1}{2} \cdot 0  & = 0
 \end{align}
 $$
@@ -212,8 +212,8 @@ $$
 $$
 ---
 ## Transitività dell'o-piccolo
-Supponiamo $f(x) = o(g(x)) \qquad x \rightarrow x_{0}$ e $g(x) = o(h(x)) \qquad \rightarrow x \rightarrow x_{0}$.
-Ci aspettiamo che $f(x) = o(h(x)) \qquad x \rightarrow x_{0}$.
+Supponiamo $f(x) = o(g(x)), x \rightarrow x_{0}$ e $g(x) = o(h(x)), x \rightarrow x_{0}$.
+Ci aspettiamo che $f(x) = o(h(x)) x \rightarrow x_{0}$.
 
 Per ipotesi:
 $$

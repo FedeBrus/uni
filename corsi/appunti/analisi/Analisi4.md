@@ -61,7 +61,7 @@ a_{k} \in \mathbb{C} / \mathbb{R} \qquad k = 0, \dots, n \qquad x \in \mathbb{C}
 $$
 Dove $n$ è il grado del polinomio.
 
-Un numero $\alpha \in \mathbb{C}$ si dice radice del  polinomi $P(x)$ se, andando a sostituire $x$ con $\alpha$, il polinomi si annulla, ovvero $P(\alpha) = 0$.
+Un numero $\alpha \in \mathbb{C}$ si dice radice del polinomio $P(x)$ se, andando a sostituire $x$ con $\alpha$, il polinomi si annulla, ovvero $P(\alpha) = 0$.
 
 ### Teoremi
 

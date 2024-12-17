@@ -52,9 +52,9 @@ $$
 \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} = \lim_{ h \to 0 } \frac{\sqrt[3]{ x_{0} + h } - \sqrt[3]{ x_{0} }}{h} = \lim_{ h \to 0 } \frac{\sqrt[3]{ h }}{h} = \lim_{ h \to 0 } \frac{1}{h^{\frac{2}{3}}} = +\infty
 $$
 
-## Funzione differenziale
+## Funzione differenziabile
 #### Definizione formale
-Si dice che la funzione $f$ è differenziabile in $x_{0}$ se esiste un numero $\alpha \in \mathbb{R}$ tale che la funzione $f(x_{0}+h) = f(x_{0}) + \alpha h + o(h)\qquad h \rightarrow 0$.
+Si dice che la funzione $f$ è differenziabile in $x_{0}$ se esiste un numero $\alpha \in \mathbb{R}$ tale che la funzione $f(x_{0}+h) = f(x_{0}) + \alpha h + o(h), h \rightarrow 0$.
 
 ## Teorema
 La funzione $f: \mathbb{R} \rightarrow \mathbb{R}$ è differenziabile in $x_{0}$ se e solo se $f$ è derivabile in $x_{0}$. In tal caso $\alpha = f'(x_{0})$.
@@ -73,7 +73,7 @@ $$
 \begin{align}
 \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0}) - f'(x_{0})h}{h} &= 0 \\
 \lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} - f'(x_{0})  & = 0 \\
-\lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} = a
+\lim_{ h \to 0 } \frac{f(x_{0} + h) - f(x_{0})}{h} = \alpha
 \end{align}
 $$
 ### Teorema:
@@ -92,7 +92,7 @@ $$
 \lim_{ h \to 0 } f(x_{0}) + \alpha h + o(h) = f(x_{0})
 $$
 ## Lista derivate elementari:
-$f'(k)$ = 0
+$f'(k) = 0$
 $f'(x^{k}) = kx^{k-1}$
 $f'(e^{x}) = e^{x}$
 $f'(a^{x}) = a^{x} \log a$

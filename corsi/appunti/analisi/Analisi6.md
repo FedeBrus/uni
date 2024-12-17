@@ -100,10 +100,10 @@ $$
 \arcsin(\sin 2) = 2 \quad \text{falso} \\
 \arcsin(\sin 3) = 3 \quad \text{falso} \\ 
 \arcsin(\sin 4) = 4 \quad \text{falso} \\
-\arccos(\sin 1) = 1 \quad \text{vero} \\
-\arccos(\sin 2) = 2 \quad \text{vero} \\
-\arccos(\sin 3) = 3 \quad \text{vero} \\
-\arccos(\sin 4) = 4 \quad \text{falso}
+\arccos(\cos 1) = 1 \quad \text{vero} \\
+\arccos(\cos 2) = 2 \quad \text{vero} \\
+\arccos(\cos 3) = 3 \quad \text{vero} \\
+\arccos(\cos 4) = 4 \quad \text{falso}
 \end{array}
 $$
 Ad esempio, per fare $\arccos(\cos 4)$

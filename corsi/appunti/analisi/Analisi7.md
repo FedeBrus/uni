@@ -84,7 +84,7 @@ $a_{n} = 2, 1, 4, 3, 6, 5, 8, 7$
 $a_{n} = \frac{(-1)^{n}}{n}$, in questo caso si arriva a $0$ oscillando tra i positivi e i negativi.
 
 3. Se $a_{n} \rightarrow 0^{+}$ allora $a_{n}$ decresce definitivamente? FALSO!
-$a_{n}$
+$a_{n} = \frac{1}{2}, 1, \frac{1}{4}, \frac{1}{3}, \frac{1}{6}, \frac{1}{5}, \frac{1}{8}, \frac{1}{7}$ 
 
 
 #### Teorema di unicità:
