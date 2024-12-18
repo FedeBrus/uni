@@ -7,8 +7,35 @@ $$
 $$
 aT(v) + bT(v) = a(v_{1}^{2}, v_{2}, 2v_{3}) + b(u_{1}^{2}, u_{2}, 2u_{3}) = (av_{1}^{2}+bu_{1}^{2}, av_{2}+bu_{2}, 2av_{3}+2bu_{3})
 $$
-## Es 8.2 (DA FARE)
+## Es 8.2
 Verificare che la funzione determinante definita sull'insieme delle matrici $M_{2 \times 2}$ a valori in $\mathbb{R}$ non è lineare.
+
+Siano $A$ e $B$ due generiche matrici $2 \times 2$:
+$$
+A = \begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix} \qquad
+B = \begin{bmatrix}
+x & y \\
+z & w
+\end{bmatrix}
+$$
+Calcoliamo prima $T(\lambda A + \mu B)$:
+$$
+T(\lambda A + \mu B) = 
+\begin{vmatrix}
+\lambda a + \mu x & \lambda b+\mu y \\
+\lambda c + \mu z & \lambda d+\mu w
+\end{vmatrix} =
+(\lambda a + \mu x)(\lambda d + \mu w) - (\lambda b + \mu y)(\lambda c+\mu z) =
+\lambda^{2}ad + \lambda \mu aw + \lambda \mu dx + \mu^{2}xw - \lambda^{2}bc + \lambda \mu bz + \lambda \mu cy + \mu^{2}zy
+$$
+Calcoliamo ora $\lambda T(A) + \mu T(B)$:
+$$
+\lambda T(A) + \mu T(B) =  \lambda (ad-bc) + \mu(xw-yz) = \lambda ad - \lambda bc + \mu xw - \mu yz
+$$
+Risulta che il determinante non è una funzione lineare.
 
 ## Es 8.3
 Stabilire se esiste una applicazione lineare $T: \mathbb{R}^{2} \rightarrow \mathbb{R}^{2}$ tale che:
@@ -857,6 +884,650 @@ $$
 Solo i primi 3 vettori sono linearmente indipendenti, quindi $\mathcal{B}(\mathrm{Im}(T)) = \{ (1, -2, 1, 0), (0,0,1,1), (-1, 0,0,1) \}$.
 
 ## Es 8.12
-Si consideri il seguente endomorfismo di $R4 T (x, y, z, w) = (−x + z, 2y, x − 2z, w)$ 
+Si consideri il seguente endomorfismo di $\mathbb{R}^{4}$: $T (x, y, z, w) = (−x + z, 2y, x − 2z, w)$ 
 ### a) 
 Si determino le dimensioni di immagine e nucleo di $T$ e si stabilisca se $T$ è invertibile.
+
+Per osservare la dimensione dell'immagine possiamo prima ricavarci la matrice associata all'endomorfismo.
+$$
+A = 
+\begin{bmatrix}
+-1 & 0 & 1 & 0 \\
+0 & 2 & 0 & 0 \\
+1 & 0 & -2 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+La dimensione di $\mathrm{Im}(T)$ è la dimensione dello spazio delle colonne della matrice associata. Per studiare ciò riduciamo a scalini la matrice:
+$$
+A = 
+\begin{bmatrix}
+-1 & 0 & 1 & 0 \\
+0 & 2 & 0 & 0 \\
+1 & 0 & -2 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\rightarrow_{E_{3,1}(1)}
+\begin{bmatrix}
+-1 & 0 & 1 & 0 \\
+0 & 2 & 0 & 0 \\
+0 & 0 & -1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+Si nota subito che le colonne sono tutte indipendenti, dunque la dimensione di $\mathrm{Im}(T)$ è $4$. Per il teorema di nullità + rango è immediato stabilire che $dim(N(T)) = dim(N(A)) = 0$, perciò $T$ è iniettiva. Siccome $T$ è un endomorfismo allora $T$ è anche surgettiva, dunque biettiva e dunque invertibile.
+
+### b)
+Si determini l'inversa $T^{-1}$.
+
+$$
+(A|I_{4}) = 
+\begin{bmatrix}
+-1 & 0 & 1 & 0  & 1 & 0 & 0 & 0 \\
+0 & 2 & 0 & 0  & 0 & 1 & 0 & 0\\
+1 & 0 & -2 & 0  & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 1
+\end{bmatrix}
+\rightarrow_{E_{3,1}(1)}
+\begin{bmatrix}
+-1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
+0 & 2 & 0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & -1 & 0 & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+$$
+\rightarrow_{D_{1}(-1)}
+\rightarrow_{D_{2}\left( \frac{1}{2} \right)}
+\rightarrow_{D_{3}(-1)}
+\begin{bmatrix}
+1 & 0 & -1 & 0 & -1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & \frac{1}{2} & 0 & 0\\
+0 & 0 & 1 & 0 & -1 & 0 & -1 & 0\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 1
+\end{bmatrix}
+\rightarrow_{E_{1,3}(1)}
+\begin{bmatrix}
+1 & 0 & 0 & 0 & -2 & 0 & -1 & 0 \\
+0 & 1 & 0 & 0 & 0 & \frac{1}{2} & 0 & 0\\
+0 & 0 & 1 & 0 & -1 & 0 & -1 & 0\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+La matrice associata alla funzione inversa $T^{-1}$ è:
+$$
+B = \begin{bmatrix}
+-2 & 0 & -1 & 0 \\
+0 & \frac{1}{2} & 0 & 0\\
+-1 & 0 & -1 & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+Dunque $T^{-1}(x,y,z,w) = (-2x - z, \frac{y}{2}, -x-z,w)$.
+
+## Es 8.13
+Sia $f:\mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ l'applicazione lineare definita ponendo
+$$
+f(x, y, z) = (x + y - 2z, 3x -z, 2x - y + z)
+$$
+e sia $g: \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ l'applicazione lineare definita ponendo
+$$
+g(x, y, z) = (x+z,x-y+z,y)
+$$
+Si trovino le dimensioni dei nuclei delle applicazioni lineari $g \circ f$ e $f \circ g$.
+
+Sappiamo che la matrice associata alla composizione di funzioni lineari è il prodotto matriciale delle matrici associate alle funzioni che formano la composizione.
+$$
+A = M(f) =
+\begin{bmatrix}
+1 & 1 & -2 \\
+3 & 0 & -1 \\
+2 & -1 & 1
+\end{bmatrix} \qquad
+B = M(g) =
+\begin{bmatrix}
+1 & 0 & 1 \\
+1 & -1 & 1 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
+$$
+AB = M(f \circ g) = 
+\begin{bmatrix}
+1 & 1 & -2 \\
+3 & 0 & -1 \\
+2 & -1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 1 \\
+1 & -1 & 1 \\
+0 & 1 & 0
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 & -3 & 2 \\
+3 & -1 & 3 \\
+1 & 2 & 1
+\end{bmatrix}
+$$
+$$
+BA = M(g \circ f) = 
+\begin{bmatrix}
+1 & 0 & 1 \\
+1 & -1 & 1 \\
+0 & 1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+1 & 1 & -2 \\
+3 & 0 & -1 \\
+2 & -1 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+3 & 0 & -1 \\
+0 & 0 & 0 \\
+3 & 0 & -1
+\end{bmatrix}
+$$
+Per trovare il nucleo bisogna studiare lo spazio delle colonne delle matrici risultanti.
+$$
+AB = 
+\begin{bmatrix}
+2 & -3 & 2 \\
+3 & -1 & 3 \\
+1 & 2 & 1
+\end{bmatrix}
+\rightarrow_{S_{1,3}}
+\begin{bmatrix}
+1 & 2 & 1 \\
+3 & -1 & 3 \\
+2 & -3 & 2 \\
+\end{bmatrix}
+\rightarrow_{E_{2,1}(-3)}
+\rightarrow_{E_{3,1}(-2)}
+\begin{bmatrix}
+1 & 2 & 1 \\
+0 & -7 & 0 \\
+0 & -7 & 0 \\
+\end{bmatrix}
+\rightarrow_{E_{3,2}(-1)}
+\begin{bmatrix}
+1 & 2 & 1 \\
+0 & -7 & 0 \\
+0 & 0 & 0 \\
+\end{bmatrix}
+$$
+Dunque $dim(N(AB)) = 1$.
+$$
+BA=
+\begin{bmatrix}
+3 & 0 & -1 \\
+0 & 0 & 0 \\
+3 & 0 & -1
+\end{bmatrix}
+\rightarrow_{E_{3,1}(-1)}
+\begin{bmatrix}
+3 & 0 & -1 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+$$
+Dunque $dim(N(BA)) = 2$.
+## Es 8.14
+Si consider la funzione lineare $T:\mathbb{R}^{4} \rightarrow \mathbb{R}^{4}$ definita dalla matrice:
+$$
+A = \begin{bmatrix}
+2k & 0 & 2 & 1 \\
+k & 0 & 1 & 1 \\
+k-1 & -1 & 0 & 1 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+### a)
+Si dica se esistono valori del parametro reale $k$ per i quali $T$ è iniettiva o suriettiva.
+
+La funzione $T$ è iniettiva se e solo se $N(A) = \{0\}$, ciò è vero se la matrice $A$ ha rango massimo.
+$$
+A = 
+\begin{bmatrix}
+2k & 0 & 2 & 1 \\
+k & 0 & 1 & 1 \\
+k-1 & -1 & 0 & 1 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\rightarrow_{E_{1,2}(-2)}
+\rightarrow_{E_{3,2}(-1)}
+\begin{bmatrix}
+0 & 0 & 0 & -1 \\
+k & 0 & 1 & 1 \\
+-1 & -1 & -1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\rightarrow_{E_{2,3}(k)}
+\begin{bmatrix}
+0 & 0 & 0 & -1 \\
+0 & -k & 1-k & 1 \\
+-1 & -1 & -1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\rightarrow_{S_{1,3}}
+\begin{bmatrix}
+-1 & -1 & -1 & 0 \\
+0 & -k & 1-k & 1 \\
+0 & 0 & 0 & -1 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+$$
+\rightarrow_{D_{1}(-1)}
+\rightarrow_{E_{4,3}(1)}
+\begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & -k & 1-k & 1 \\
+0 & 0 & 0 & -1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+Dunque per ogni valore di $k$, $T$ non è iniettiva e non è suriettiva.
+
+### b)
+Si calcoli la dimensione del nucleo $N(T)$ è dell'immagine $\mathrm{Im}(T)$ al variare di $k$.
+
+Per ogni valore di $k$ si ha che $dim(N(T)) = 1$ e $dim(\mathrm{Im}(T)) = 3$.
+## Es 8.15
+Sia $T$ l'endomorfismo di $\mathbb{R}^{3}$ così definito:
+$$
+T(x_{1},x_{2},x_{3}) = (2x_{1}+x_{3}, -2x_{1} +x_{2}+x_{3},x_{2}+2x_{3})
+$$
+### a)
+Scrivere la matrice associata a $T$ rispetto alle basi canoniche e determinare il nucleo e l'immagine di $T$.
+$$
+A =
+\begin{bmatrix}
+2 & 0 & 1 \\
+-2 & 1 & 1 \\
+0 & 1 & 2
+\end{bmatrix}
+$$
+### b)
+Stabilire se $T$ è iniettiva. Trovare, al variare del parametro real $k$, tutti i vettori $v$ tali che $T(v) = (3,3,k)$.
+Per determinare nucleo e immagine bisogna ridurre la matrice associata.
+
+Possiamo rispondere a entrambi i punti in un passaggio solo:
+$$
+A =
+\begin{bmatrix}
+2 & 0 & 1 & 3 \\
+-2 & 1 & 1 & 3\\
+0 & 1 & 2 & k
+\end{bmatrix}
+\rightarrow_{E_{2,1}(1)}
+\begin{bmatrix}
+2 & 0 & 1 & 3 \\
+0 & 1 & 2 & 6 \\
+0 & 1 & 2 & k
+\end{bmatrix}
+\rightarrow_{E_{3,2}(-1)}
+\begin{bmatrix}
+2 & 0 & 1 & 3 \\
+0 & 1 & 2 & 6 \\
+0 & 0 & 0 & k - 6
+\end{bmatrix}
+$$
+Le colonne indipendenti sono $(2, -2, 0), (0,1,1)$. Quindi $\mathrm{Im}(T) = \langle (2,-2,0), (0,1,1) \rangle$. Mentre per studiare $N(T)$ risolviamo il sistema:
+$$
+\begin{cases}
+2x + z = 0 \\
+y + 2z = 0
+\end{cases}
+\rightarrow
+\begin{cases}
+x = -\frac{t}{2} \\
+y = -2t \\
+z = t
+\end{cases}
+$$
+La soluzione del sistema è $N(T) =  \langle \left( -\frac{1}{2}, -2, 1 \right)  \rangle$. 
+Siccome $dim(N(T)) = 1 \neq 0$, $T$ non è iniettiva.
+
+$v \in \mathrm{Im}(T) \Longleftrightarrow k = 6$.
+## Es 8.16
+Sia $T:\mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ l'applicazione lineare definita da
+$$
+A = 
+\begin{bmatrix}
+-3 & 1 & 0 \\
+2 & -1 & 0 \\
+0 & 2 & 1
+\end{bmatrix}
+$$
+Determinare l'immagine attraverso $T$ del piano $\pi : x +2y = 0$.
+
+Troviamo innanzitutto il generico punto di $\pi$.
+$$
+\begin{cases}
+x+2y = 0 \\
+y = t \\
+z = s
+\end{cases}
+\rightarrow
+\begin{cases}
+x =-2t \\
+y = t \\
+z = s
+\end{cases}
+$$
+Ora applichiamo la trasformazione.
+$$
+\begin{bmatrix}
+-3 & 1 & 0 \\
+2 & -1 & 0 \\
+0 & 2 & 1
+\end{bmatrix}
+\begin{bmatrix}
+-2t \\
+t \\
+s
+\end{bmatrix} =
+(6t+t, -4t-t,2t+s) =(7t, -5t, 2t+s)
+$$
+Ricaviamoci l'equazione del nuovo piano.
+$$
+\begin{cases}
+x = 7t \\
+y = -5t \\
+z = 2t + s
+\end{cases}
+\rightarrow
+\begin{cases}
+t = \frac{x}{7} \\
+t = -\frac{y}{5} \\
+s  = z - \frac{2x}{7}
+\end{cases}
+\rightarrow
+-\frac{y}{5} = \frac{x}{7} \rightarrow
+5x + 7y = 0
+$$
+Dunque $T(\pi): 5x + 7y = 0$.
+## Es 8.17
+Sia $T:\mathbb{R}^{2} \rightarrow \mathbb{R}^{3}$ l'applicazione lineare tale che
+$$
+T(x,y) = (kx+4y, x + ky, y)
+$$
+dove $k \in \mathbb{R}$ è un parametro reale.
+Stabilire se $T$ è iniettiva e/o suriettiva al variare del parametro $k$. 
+
+Sappiamo che una funzione lineare è iniettiva quando il nucleo della sua matrice associata ha dimensione nulla.
+Sia $A$ la matrice associata a $T$. Allora
+$$
+A = 
+\begin{bmatrix}
+k & 4 \\
+1 & k \\
+0 & 1
+\end{bmatrix}
+\rightarrow_{E_{2,3}(-k)}
+\rightarrow_{E_{1,3}(-4)}
+\begin{bmatrix}
+k & 0 \\
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+\rightarrow_{E_{1,2}(-k)}
+\begin{bmatrix}
+0 & 0 \\
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+$$
+Siccome $rg(A) = 2 \neq 3 = dim(\mathbb{R}^{3})$, per definizione $T$ non può essere suriettiva per alcun valore di $k$.
+Per il teorema di nullità + rango abbiamo che $dim(N(T)) = dim(\mathbb{R}^{2})-dim(\mathrm{Im}(T)) = 2 - 2 = 0$. Perciò $T$ è sempre iniettiva.
+## Es 8.18
+Sia $T:\mathbb{R}^{4}\rightarrow \mathbb{R}^{4}$ l'applicazione lineare definita dalla matrice
+$$
+A = M(T) = 
+\begin{bmatrix}
+5k & 1 & 3k+4 & 0 \\
+k+1 & 0 & 0 & 0 \\
+3 & k+5 & 1 & k+3 \\
+2k^{2} & 0 & k & 0
+\end{bmatrix}
+$$
+### a)
+Discutere l'iniettività e suriettività di $T$ al variare del parametro reale $k$.
+
+In casi come questi dove la riduzione risulta particolarmente difficile, analizziamo le dimensioni dell'immagine e del nucleo calcolando il determinante.
+Infatti la matrice ha rango massimo quando il determinante è non nullo. Notiamo che $T$ è endomorfismo dunque se $T$ è suriettiva allora è anche iniettiva.
+$$
+\begin{vmatrix}
+5k & 1 & 3k+4 & 0 \\
+k+1 & 0 & 0 & 0 \\
+3 & k+5 & 1 & k+3 \\
+2k^{2} & 0 & k & 0
+\end{vmatrix} = 
+(k+3)\begin{vmatrix}
+5k & 1 & 3k+4 \\
+k+1 & 0 & 0 \\
+2k^{2} & 0 & k
+\end{vmatrix} =
+(k+3)(k+1)\begin{vmatrix}
+1 & 3k+4 \\
+0 & k
+\end{vmatrix} =
+(k+3)(k+1)k
+$$
+Dunque $\det(A) \neq 0 \Longleftrightarrow k\neq-3,-1,0$.
+### b)
+Determinare la dimensione di immagine e nucleo di $T$ al variare di $k$.
+
+Abbiamo già determinato che $dim(\mathrm{Im}(T)) = 4, dim(N(T)) = 0$ se $k \neq -3, -1, 0$. Osserviamo gli altri casi:
+
+Se $k = -3$:
+$$
+A = \begin{bmatrix}
+-15 & 1 & -5 & 0 \\
+-2 & 0 & 0 & 0 \\
+3 & 2 & 1 & 0 \\
+18 & 0 & -3 & 0
+\end{bmatrix}
+$$
+La sottomatrice $3 \times 3$ $A_{4,4}$ ha determinante non nullo, quindi $rg(A) = 3$, quindi $dim(\mathrm{Im}(T)) = 3$ e per il teorema di nullità + rango $dim(N(T)) = 1$.
+
+Se $k \neq -1$:
+$$
+A = 
+\begin{bmatrix}
+-5 & 1 & 1 & 0 \\
+0 & 0 & 0 & 0 \\
+3 & 4 & 1 & 2 \\
+2 & 0 & -1 & 0
+\end{bmatrix}
+$$
+La sottomatrice $3 \times 3$ $A_{2,1}$ ha determinante non nullo, quindi $rg(A) = 3$, quindi $dim(\mathrm{Im}(T)) = 3$ e per il teorema di nullità + rango $dim(N(T)) = 1$.
+
+Se $k = 0$:
+$$
+\begin{bmatrix}
+0 & 1 & 4 & 0 \\
+1 & 0 & 0 & 0 \\
+3 & 5 & 1 & 3 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+La sottomatrice $3 \times 3$ $A_{4,4}$ ha determinante non nullo, quindi $rg(A) = 3$, quindi $dim(\mathrm{Im}(T)) = 3$ e per il teorema di nullità + rango $dim(N(T)) = 1$.
+## Es 8.19
+Sia $T: \mathbb{R}^{4} \rightarrow \mathbb{R}^{3}$ l'applicazione lineare tale che
+$$
+T(x,y,z,w) = (-x-y+z+w, -x+2y-z, -x+y+3z-3w)
+$$
+### a)
+Determinare la matrice $A$ associata a $T$ rispetto alla base canonica.
+
+$$
+A = M(T) = 
+\begin{bmatrix}
+-1 & -1 & 1 & 1 \\
+-1 & 2 & -1 & 0 \\
+-1 & 1 & 3 & -3
+\end{bmatrix}
+$$
+### b)
+Determinare la dimensione e una base dello spazio vettoriale $\mathrm{Im}(T) \subseteq \mathbb{R}^{3}$.
+
+### c)
+Determinare la dimensione e una base dello spazio vettoriale $N(T) \subseteq \mathbb{R}^{4}$.
+
+Per fare ciò riduciamo a scalini la matrice $A$, in modo da studiare lo spazio delle colonne e il sistema omogeneo associato.
+$$
+\rightarrow_{D_{1}(-1)}
+\rightarrow_{E_{2,1}(-1)}
+\rightarrow_{E_{3,1}(-1)}
+\begin{bmatrix}
+1 & 1 & -1 & -1 \\
+0 & 3 & -2 & -1 \\
+0 & 2 & 2 & -4
+\end{bmatrix}
+\rightarrow_{D_{3}\left( \frac{1}{2} \right)}
+\begin{bmatrix}
+1 & 1 & -1 & -1 \\
+0 & 3 & -2 & -1 \\
+0 & 1 & 1 & -2
+\end{bmatrix}
+\rightarrow_{S_{2,3}}
+\begin{bmatrix}
+1 & 1 & -1 & -1 \\
+0 & 1 & 1 & -2 \\
+0 & 3 & -2 & -1
+\end{bmatrix}
+\rightarrow_{E_{3,2}(-3)}
+\begin{bmatrix}
+1 & 1 & -1 & -1 \\
+0 & 1 & 1 & -2 \\
+0 & 0 & -5 & 5
+\end{bmatrix}
+$$
+$$
+\rightarrow_{D_{3}\left( -\frac{1}{5} \right)}
+\begin{bmatrix}
+1 & 1 & -1 & -1 \\
+0 & 1 & 1 & -2 \\
+0 & 0 & 1 & -1
+\end{bmatrix}
+\rightarrow_{E_{2,3}(-1)}
+\rightarrow_{E_{1,3}(1)}
+\begin{bmatrix}
+1 & 1 & 0 & -2 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1 & -1
+\end{bmatrix}
+\rightarrow_{E_{1,2}(-1)}
+\begin{bmatrix}
+1 & 0 & 0 & -1 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1 & -1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x - w = 0 \\
+y - w = 0 \\
+z - w = 0 \\
+w = t
+\end{cases}
+\rightarrow 
+\begin{cases}
+x = t \\
+y = t \\
+z = t \\
+w = t
+\end{cases}
+$$
+Le prime 3 colonne sono linearmente indipendenti e quindi formano una base di $\mathrm{Im}(T)$: cioè $((-1,-1,-1),(-1,2,1),(1,-1,3))$ è base di $\mathrm{Im}(T)$, che ha dimensione $3$. Mentre una base di $N(T)$ è $((1,1,1,1))$ e la sua dimensione $1$.
+## Es 8.20
+Sia $T:\mathbb{R}^{3} \rightarrow \mathbb{R}^{2}$ l'applicazione lineare definita da
+$$
+T(x,y,z) = (x-y,2x-3y)
+$$
+### a)
+Dire se $T$ è iniettiva e/o suriettiva.
+### b)
+Trovare le dimensioni del nucleo e dell'immagine di $T$.
+
+La matrice associata a $T$ è:
+$$
+A = M(T) = 
+\begin{bmatrix}
+1 & -1 & 0\\
+2 & -3 & 0
+\end{bmatrix}
+$$
+Riduciamo la matrice a scalini:
+$$
+\rightarrow_{E_{2,1}(-2)}
+\begin{bmatrix}
+1 & -1 & 0\\
+0 & -1 & 0
+\end{bmatrix}
+\rightarrow_{D_{2}(-1)}
+\begin{bmatrix}
+1 & -1 & 0\\
+0 & 1 & 0
+\end{bmatrix}
+\rightarrow_{E_{1,2}(1)}
+\begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 0 \\
+y = 0 \\
+z = t
+\end{cases}
+$$
+Le prime due colonne sono indipendenti, perciò $((1,2),(-1,-3))$ è una base di $\mathrm{Im}(T)$, la cui dimensione è $2$. Perciò $T$ è suriettiva. Le soluzioni del sistema associato sono $\langle (0,0,1) \rangle$, quindi $((0,0,1))$ è una base di $N(T)$, la cui dimensione è 1. Perciò $T$ non è iniettiva.
+## Es 8.21
+Sia $\mathcal{E} = \{ e_{1},e_{2},e_{3} \}$ la base canonica di $\mathbb{R}^{3}$. Sia $T:\mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ la funzione lineare tale che:
+$$
+T(e_{1}) = 3e_{1}-e_{2}+e_{3}, \qquad T(e_{2}) = e_{2} - e_{3}, \qquad T(e_{3}) = 2T(e_{1}) + T(e_{2})
+$$
+### a)
+Si calcoli la matrice associata a $T$ rispetto ad $\mathcal{E}$.
+
+$T(e_{1}) = 3e_{1}-e_{2}+e_{3} = (3,0,0) - (0,1,0) + (0,0,1) = (3,-1,1)$
+$T(e_{2}) = (0,1,0) - (0,0,1) = (0,1,-1)$
+$T(e_{3}) = 2(3, -1, 1) + (0,1,-1) = (6,-1,1)$
+
+$$
+A = M(T) =
+\begin{bmatrix}
+3 & 0 & 6 \\
+-1 & 1 & -1 \\
+1 & -1 & 1
+\end{bmatrix}
+$$
+### b)
+Trovare basi del nucleo e dell'immagine di $T$ e stabilire se $T$ è invertibile
+
+Siccome $T$ è un endomorfismo, preoccupiamoci di studiare il nucleo di $T$.
+$$
+\rightarrow_{E_{3,2}(1)}
+\rightarrow_{D_{1}\left( \frac{1}{3} \right)}
+\begin{bmatrix}
+1 & 0 & 2 \\
+-1 & 1 & -1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow_{E_{2,1}(1)}
+\begin{bmatrix}
+1 & 0 & 2 \\
+0 & 1 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -2t \\
+y = -t \\
+z = t
+\end{cases}
+$$
+Dunque una base di $N(T)$ è $((-2, -1, 1))$ e la dimensione di $N(T)$ è dunque $1$. Ciò significa che $T$ non è iniettiva, perciò non è biettiva e quindi non è invertibile.

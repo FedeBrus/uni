@@ -798,7 +798,7 @@ $$
 A - I_{3} = 
 \begin{bmatrix}
 0 & 2 & 3 \\
-0 & 2 & 1 &  \\
+0 & 2 & 1  \\
 0 & 0 & 2
 \end{bmatrix}
 \rightarrow
@@ -902,3 +902,97 @@ v_{1} & v_{2} & v_{3}
 \end{bmatrix}
 $$
 Consideriamo $B$:
+## Es 9.9
+$$
+A = \begin{bmatrix}
+-1 & 1 \\
+0 & -1
+\end{bmatrix} \qquad
+B = \begin{bmatrix}
+-1 & 2 \\
+-3 & 1
+\end{bmatrix} \qquad
+C = \begin{bmatrix}
+-3 & 4 \\
+1 & 0
+\end{bmatrix}
+$$
+### a)
+Si determini il polinomio caratteristico di ciascuna matrice.
+### b)
+Si determinino gli autovalori, e i relativi autospazi, di ciascuna matrice.
+### c)
+Si stabilisca se le matrici sono diagonalizzabili.
+
+Consideriamo la matrice $A$:
+Consideriamo $A - \lambda I_{2}$:
+$$
+\det(A - \lambda I_{2}) = \begin{vmatrix}
+-1 - \lambda & 1 \\
+0 & -1 - \lambda
+\end{vmatrix} = (-1 - \lambda)^{2} = p_{A}(\lambda)
+$$
+$\det(A - \lambda I_{2}) = 0 \Longleftrightarrow \lambda = 1$. In questo caso $A$ ha come autovalore $\lambda_{1} = 1$ con $m_{alg}(\lambda_{1}) = 2$. Inoltre $E(\lambda_{1}) = N(A - \lambda_{1}I_{2}) )  = N(A + I_{2})$.
+$$
+A + I_{2} = \begin{bmatrix}
+0 & 1 \\
+0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = 0
+\end{cases}
+$$
+Ovvero $((1, 0))$ è base di $E(\lambda_{1})$. La matrice non è diagonalizzabile poiché la somma delle molteplicità geometriche è inferiore alla somma delle molteplicità algebriche.
+
+Consideriamo la matrice $B$:
+Consideriamo $B - \lambda I_{2}$:
+$$
+\det(A-\lambda I_{2}) = \begin{vmatrix}
+-1 - \lambda & 2 \\
+-3 & 1 - \lambda
+\end{vmatrix} = -(1-\lambda^{2}) +6 = \lambda^{2} + 5 = p_{B}(\lambda)
+$$
+In questo caso la matrice non ha autovalori, perciò non è diagonalizzabile.
+
+Consideriamo la matrice $C$:
+Consideriamo $C - \lambda I_{2}$:
+$$
+\det(C - \lambda I_{2}) = \begin{vmatrix}
+-3 - \lambda & 4 \\
+1 & -\lambda
+\end{vmatrix} =
+\lambda(3+\lambda) - 4 = \lambda^{2}+3\lambda-4 = (\lambda + 4)(\lambda - 1) = p_{C}(\lambda)
+$$
+In questo caso gli autovalori sono $\lambda_{1} = -4$ e $\lambda_{2} = 1$, entrambi con molteplicità algebrica $1$.
+
+Consideriamo $\lambda_{1} = -4$:
+$$
+A + 4I_{2} = \begin{bmatrix}
+1 & 4 \\
+1 & 4
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -4t \\
+y = t
+\end{cases}
+$$
+Dunque $E(\lambda_{1}) = \langle (-4, 1) \rangle$.
+
+Consideriamo $\lambda_{2} = 1$:
+$$
+A - I_{2} = \begin{bmatrix}
+-4 & 4 \\
+1 & -1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = t
+\end{cases}
+$$
+Dunque $E(\lambda_{2}) = \langle (1, 1) \rangle$.
+
+Siccome la somma delle molteplicità geometriche è uguale alla somma delle molteplicità algebriche allora la matrice è diagonalizzabile.
