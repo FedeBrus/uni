@@ -81,5 +81,329 @@ $$
 u_{3} = \left( \frac{1}{\sqrt{ 2 }}, 0, \frac{1}{\sqrt{ 2 }} \right)
 $$
 La base ortonormale $\mathcal{B} =  \left(\left( -\frac{1}{\sqrt{ 2 }}, 0, \frac{1}{\sqrt{ 2 }}\right), (0, 1, 0), \left( \frac{1}{\sqrt{ 2 }}, 0, \frac{1}{\sqrt{ 2 }}\right) \right)$
+## Es 10.7
+Si considerino i vettori di $\mathbb{R}^{3}$:
+$$
+v_{1} = (1,2,1) \qquad v_{2} = (1,1,1)
+$$
+### a)
+Calcolare le lunghezze di $v_{1}$ e di $v_{2}$.
+$$
+\lVert v_{1} \rVert  = \sqrt{1 + 4 + 1 } = \sqrt{ 6 }
+$$
+$$
+\lVert v_{2} \rVert  = \sqrt{ 3 }
+$$
+### b)
+Determinare la proiezione ortogonale di $v_{1}$ su $v_{2}$:
+$$
+pr_{v_{2}}(v_{1}) = \frac{(v_{1} \cdot v_{2}) v_{2}}{\lVert v_{2} \rVert^{2} } = \frac{4(1,1,1)}{3} = \left( \frac{4}{3}, \frac{4}{3}, \frac{4}{3} \right)
+$$
+### c)
+Trovare una base ortonormale del sottospazio di $\mathbb{R}^{3}$ generato dai vettori $v_{1}$ e $v_{2}$:
 
+Troviamo $u_{1}$ normalizzando $v_{1}$:
+$$
+u_{1} = \frac{(1, 2, 1)}{\sqrt{ 6 }} = \left( \frac{1}{\sqrt{ 6 }},\frac{2}{\sqrt{ 6 }},\frac{1}{\sqrt{ 6 }}  \right)
+$$
+Troviamo $u_{2}'$ proiettando $v_{2}$ su $u_{1}$:
+$$
+u_{2}' = v_{2} - (v_{2} \cdot u_{1})u_{1} = (1,1,1) - \left( \frac{2}{3}, \frac{4}{3}, \frac{2}{3} \right) = \left( \frac{1}{3}, -\frac{1}{3}, \frac{1}{3} \right)
+$$
+Normalizziamo $u_{2}'$:
+$$
+u_{2} = \sqrt{ 3 } \left( \frac{1}{3}, -\frac{1}{3}, \frac{1}{3} \right) = \left( \frac{\sqrt{ 3 }}{3}, -\frac{\sqrt{ 3 }}{3}, \frac{\sqrt{ 3 }}{3} \right)
+$$
+Dunque la base ortonormale è: $\left( \frac{1}{\sqrt{ 6 }}(1,2,1), \frac{\sqrt{ 3 }}{3}(1,-1,1) \right)$
+## Es 10.8
+Sia $U$ il sottospazio di $\mathbb{R}^{3}$ costituito dai vettori $(x_{1}, x_{2}, x_{3})$ tali che $2x_{1} + x_{2} = 0$.
+Si determini una base ortonormale di $U$ rispetto al prodotto scalare ordinario di $\mathbb{R}^{3}$.
 
+Il sottospazio è costituito dai vettori che risolvono il seguente sistema:
+$$
+\begin{cases}
+2x + y = 0 \\
+y = t \\
+z = s
+\end{cases}
+\rightarrow
+\begin{cases}
+x = -\frac{t}{2} \\
+y = t \\
+z = s
+\end{cases}
+$$
+Quindi il sottospazio è $\left\langle  (-\frac{1}{2}, 1, 0), (0,0,1)  \right\rangle$. In questo caso i due vettori sono già ortogonali tra di loro, dunque basta normalizzarli:
+$$
+u_{1} = \frac{\left( -\frac{1}{2}, 1, 0 \right)}{\sqrt{ \frac{5}{4} }} =\left( -\frac{1}{\sqrt{ 5 }}, \frac{2}{\sqrt{ 5 }}, 0 \right)
+$$
+$$
+u_{2} = (0, 0, 1)
+$$
+## Es 10.9
+Sia $T: \mathbb{R}^{3} \rightarrow \mathbb{R}^{2}$ la funzione lineare tale che
+$$
+T(1, -2, 1) = (2,1), \qquad T(1,0,0)  = (-1, 2), \qquad T(0, 1, 0) = (-1, 0)
+$$
+### a)
+Che dimensione ha l'immagine di $T$?
+
+Troviamo prima la matrice associata. Notiamo che i vettori di cui conosciamo l'immagine formano una base.
+Troviamo allora la matrice di conversione di base dalla base canonica alla base $\mathcal{B} =((1, -2, 1), (1, 0, 0), (0, 1, 0))$.
+$$
+\begin{bmatrix}
+1 & 1 & 0 & 1 & 0 & 0 \\
+-2 & 0 & 1 & 0 & 1 & 0 \\
+1 & 0 & 0 & 0 & 0 & 1
+\end{bmatrix}
+\rightarrow_{E_{3,1}(-1)}
+\rightarrow_{E_{2,1}(2)}
+\begin{bmatrix}
+1 & 1 & 0 & 1 & 0 & 0 \\
+0 & 2 & 1 & 2 & 1 & 0 \\
+0 & -1 & 0 & -1 & 0 & 1
+\end{bmatrix}
+\rightarrow S_{2,3}
+\begin{bmatrix}
+1 & 1 & 0 & 1 & 0 & 0 \\
+0 & -1 & 0 & -1 & 0 & 1 \\
+0 & 2 & 1 & 2 & 1 & 0
+\end{bmatrix}
+\rightarrow_{D_{2}(-1)}
+\begin{bmatrix}
+1 & 1 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 1 & 0 & -1 \\
+0 & 2 & 1 & 2 & 1 & 0
+\end{bmatrix}
+$$
+$$
+\rightarrow_{E_{3,1}(-2)}
+\begin{bmatrix}
+1 & 1 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 1 & 0 & -1 \\
+0 & 0 & 1 & 0 & 1 & 2
+\end{bmatrix}
+\rightarrow_{E_{1,2}(-1)}
+\begin{bmatrix}
+1 & 0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 & 0 & -1 \\
+0 & 0 & 1 & 0 & 1 & 2
+\end{bmatrix}
+$$
+Dunque:
+$$
+M_{\mathcal{E}}^{\mathcal{B}}(id) = 
+\begin{bmatrix}
+0 & 0 & 1 \\
+1 & 0 & -1 \\
+0 & 1 & 2
+\end{bmatrix}
+$$
+Consideriamo ora la matrice $M_{\mathcal{B}}^{\mathcal{E}}(T)$:
+$$
+M_{\mathcal{B}}^{\mathcal{E}}(T) = 
+\begin{bmatrix}
+2 & -1 & -1 \\
+1 & 2 & 0
+\end{bmatrix}
+$$
+Ora moltiplicando le due matrici si ottiene $M(T)$:
+$$
+M(T) =
+\begin{bmatrix}
+2 & -1 & -1 \\
+1 & 2 & 0
+\end{bmatrix}
+\begin{bmatrix}
+0 & 0 & 1 \\
+1 & 0 & -1 \\
+0 & 1 & 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1 & -1 & 1 \\
+2 & 0 & -1
+\end{bmatrix}
+$$
+Ora analizzando il rango della matrice possiamo trovare la dimensione di $\mathrm{Im}(T)$:
+$$
+\begin{bmatrix}
+-1 & -1 & 1 \\
+2 & 0 & -1
+\end{bmatrix}
+\rightarrow_{D_{1}(-1)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+2 & 0 & -1
+\end{bmatrix}
+\rightarrow_{E_{2,1}(-2)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & -2 & 1
+\end{bmatrix}
+$$
+Dunque $dim(\mathrm{Im}(T)) = 2$.
+
+Ora analizziamo il nucleo di $T$ proseguendo con la riduzione:
+$$
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & -2 & 1
+\end{bmatrix}
+\rightarrow_{D_{2}\left( -\frac{1}{2} \right)}
+\begin{bmatrix}
+1 & 1 & -1 \\
+0 & 1 & -\frac{1}{2}
+\end{bmatrix}
+\rightarrow_{E_{1,2}(-1)}
+\begin{bmatrix}
+1 & 0 & -\frac{1}{2} \\
+0 & 1 & -\frac{1}{2}
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = \frac{1}{2}t \\
+y = \frac{1}{2}t \\
+z = t
+\end{cases}
+$$
+Dunque $N(T)= \left\langle  \left( 1,1,2 \right)  \right\rangle$. Per trovare una base ortonormale basta normalizzare il vettore $(1,1,2)$:
+$$
+u_{1} = \frac{(1,1,2)}{\sqrt{ 6 }} = \left( \frac{1}{\sqrt{ 6 }}, \frac{1}{\sqrt{ 6 }}, \frac{2}{\sqrt{ 6 }} \right)
+$$
+## Es 10.10 (DA FINIRE)
+Calcolare la base ortonormale di $\mathbb{R}^{3}$ formata da autovettori per le matrici:
+$$
+A = \begin{bmatrix}
+1 & 2 & 0 \\
+2 & 1 & 0 \\
+0 & 0 & -1
+\end{bmatrix}
+$$
+Innanzitutto bisogna trovare gli autovalori:
+$$
+\begin{vmatrix}
+1 - \lambda & 2 & 0 \\
+2 & 1 - \lambda & 0 \\
+0 & 0 & -1 - \lambda
+\end{vmatrix} =
+-(1 + \lambda)((1-\lambda)^{2} - 4) =
+-(1 + \lambda)(\lambda^{2}-2\lambda-3) =
+-(1 + \lambda)(\lambda + 1)(\lambda - 3)
+$$
+Quindi gli autovalori sono $\lambda_{1} = -1$ con molteplicità doppia e $\lambda_{2} = 3$.
+Troviamo dunque gli autovalori:
+
+Consideriamo $\lambda_{1}$:
+$$
+\begin{bmatrix}
+2 & 2 & 0 \\
+2 & 2 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -t \\
+y = t \\
+z = s
+\end{cases}
+\rightarrow
+\langle (-1,1,0), (0, 0, 1) \rangle 
+$$
+Consideriamo $\lambda_{2}$:
+$$
+\begin{bmatrix}
+-2 & 2 & 0 \\
+2 & -2 & 0 \\
+0 & 0 & -4
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & -1 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & -1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = t \\
+z = 0
+\end{cases}
+\rightarrow
+\langle (1,1,0) \rangle 
+$$
+Quindi esiste la base $\mathcal{B}= ((-1,1,0), (0,0,1), (1,1,0))$.
+Sia $u_{1} = (0, 0, 1)$ già normale.
+Non serve calcolare $u_{2}'$, perché già ortogonale a $u_{1}$:
+$$
+u_{2}' = (1,1,0)
+$$
+Normalizziamo $u_{2}':$
+$$
+u_{2} = \left( \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }}, 0 \right)
+$$
+Non serve calcolare in quanto è ortogonale sia a $u_{1}$, che a $u_{2}$, $u_{3}':$
+$$
+u_{3}' = (-1,1,0) 
+$$
+Normalizziamo $u_{3}'$:
+$$
+u_{3} = \left( -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }}, 0 \right)
+$$
+Dunque la base ortonormale cercata è: $\left( (0,0,1), \left( \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }}, 0 \right), \left( -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }}, 0 \right) \right)$.
+## Es 10.11 (DA FINIRE)
+Per ognuna delle seguenti matrici simmetriche $A$ si determini una matrice ortogonale $P$ per la quale $P^{T}AP$ sia diagonale.
+$$
+A = \begin{bmatrix}
+1 & 2 \\
+2 & -2
+\end{bmatrix}
+$$
+Innanzitutto troviamo gli autovalori di $A$:
+$$
+\begin{vmatrix}
+1 - \lambda & 2 \\
+2 & -2 - \lambda
+\end{vmatrix} =
+(\lambda - 1)(\lambda + 2)-4 = 
+\lambda^{2} - \lambda + 2\lambda -2 - 4 =
+\lambda^{2} + \lambda -6 =
+(\lambda +3) (\lambda -2)
+$$
+I due autovettori sono $\lambda_{1} = -3$ e $\lambda_{2} = 2$.
+Consideriamo $\lambda_{1}$:
+$$
+\begin{bmatrix}
+4 & 2 \\
+2 & 1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -\frac{1}{2}t  \\
+y = t
+\end{cases}
+\rightarrow
+\langle (-1, 2) \rangle 
+$$
+Consideriamo $\lambda_{2}$:
+$$
+\begin{bmatrix}
+-1 & 2 \\
+2 & -4
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 2t \\
+y = t
+\end{cases}
+\rightarrow
+\langle (2, 1) \rangle 
+$$
+Dunque la matrice $D$ così definita
+$$
+D = \begin{bmatrix}
+-3 & 0 \\
+0 & 2
+\end{bmatrix}
+$$
+è simile ad $A$ con base $\mathcal{B} = ((-1,2), (-2, 1))$.
