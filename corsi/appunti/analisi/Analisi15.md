@@ -212,7 +212,7 @@ Supponiamo che:
 1. $f$ e $g$ sono continue
 2. $f$ e $g$ sono derivabili in $(a, b)$
 
-Allora $\exists c\in(a,b) : (f(b) - f(a))g'(c) = (g(a)-g(b))f'(c)$ (Prima tesi).
+Allora $\exists c\in(a,b) : (f(b) - f(a))g'(c) = (g(b)-g(a))f'(c)$ (Prima tesi).
 
 Inoltre se supponiamo che:
 3. $g'(x) \neq 0, \forall x \in (a, b)$
