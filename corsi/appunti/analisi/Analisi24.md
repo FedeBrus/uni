@@ -351,9 +351,8 @@ Se il termine forzante è già una soluzione dell'equazione omogenea associata, 
 In questo caso si può usare $\bar{u}(t) = \lambda te^{4t}$.
 $$
 \begin{align}
-\bar{u}'(t) &= \lambda e^{4t} + 4\lambda e^{4t} \\
-\bar{u}'(t) &= 4\lambda e^{4t} + 4\lambda e^{4t} + 16\lambda te^{4t} \\
-\bar{u}'(t) &= 8\lambda e^{4t} + 16\lambda te^{4t}
+\bar{u}'(t) &= \lambda e^{4t} + 4\lambda t e^{4t} \\
+\bar{u}''(t) &= 8\lambda e^{4t} + 16\lambda te^{4t}
 \end{align}
 $$
 Sostituendo $u(t)$ con $\bar{u}(t)$ nell'equazione originale:

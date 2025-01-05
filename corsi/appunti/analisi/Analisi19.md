@@ -148,7 +148,7 @@ $$
 \int \frac{ax + b}{1+x^{2}} dx, \qquad a, b \in \mathbb{R}
 $$
 $$
-\int \frac{ax}{1+x^{2}} dx + \int \frac{b}{1+ x^{2}} dx = a \int \frac{x}{1+x^{2}} dx + b \int \frac{1}{1+x^{2}} dx = \frac{a \log (1+x^{2})}{2} + \arctan(x) = a \log(\sqrt{ 1+x^{2} }) + b \arctan(x)
+\int \frac{ax}{1+x^{2}} dx + \int \frac{b}{1+ x^{2}} dx = a \int \frac{x}{1+x^{2}} dx + b \int \frac{1}{1+x^{2}} dx = \frac{a \log (1+x^{2})}{2} + b\arctan(x) = a \log(\sqrt{ 1+x^{2} }) + b \arctan(x)
 $$
 ##### Esempio
 $$

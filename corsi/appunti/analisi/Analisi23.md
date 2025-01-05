@@ -31,7 +31,7 @@ $$
 $$
 (u'(t))^{3} + \cos(t) = t^{2} \Longleftrightarrow (u'(t))^{3} =t^{2}-\cos(t) \Longleftrightarrow u'(t) = \sqrt[3]{ t^{2}-\cos(t) }
 $$
-Questa ad esempio non è normale, per la derivata di grado massimo non è "isolata". Ma può essere ridotta in forma normale unica.
+Questa ad esempio non è normale, perché la derivata di grado massimo non è "isolata". Ma può essere ridotta in forma normale unica.
 ##### Esempio
 $$
 (u'(t))^{2} =  u(t) + 77

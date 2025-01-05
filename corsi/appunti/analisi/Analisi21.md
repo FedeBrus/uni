@@ -201,7 +201,7 @@ Fatto generale:
 Se $f\geq 0$, allora l'integrale improprio o converge a $l > 0$ o diverge positivamente.
 
 #### Criterio del confronto
-Supponiamo che $0 \leq f(x) \leq g(x) \qquad \forall x \in I$ dove $I$ è la zona di integrazione
+Supponiamo che $0 \leq f(x) \leq g(x), \forall x \in I$ dove $I$ è la zona di integrazione
 Allora valgono le seguenti affermazioni, nel caso di integrali mono-problema.
 - Se $\int_{I} g(x)dx < +\infty  \implies \int_{I}f(x)dx < +\infty$
 - Se $\int_{I} f(x)dx = +\infty  \implies  \int_{I}g(x)dx = +\infty$

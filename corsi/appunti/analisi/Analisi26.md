@@ -42,7 +42,7 @@ $$
 Questa è la funzione integrale, ovvero una delle primitive.
 Il discorso di concentra sul comportamento di:
 $$
-\lim_{ t \to  +infty } e^{-2t} F(t)
+\lim_{ t \to  +\infty } e^{-2t} F(t)
 $$
 Sappiamo che ad esempio, per $s$ sufficientemente grande:
 $$
@@ -54,7 +54,7 @@ $$
 Per il teorema del confronto $F(t) \rightarrow +\infty$ se $t \rightarrow +\infty$.
 Ora possiamo utilizzare de l'Hopital per risolvere il limite:
 $$
-\lim_{ t \to +\infty } e^{-2t} F(t) = \lim_{ t \to +\infty } F(t)(e^{2t}) = \left[ \frac{+\infty}{+\infty} \right] = \lim_{ t \to +\infty } \frac{e^{2t}\arctan(t)}{2e^{2t}} = \frac{\pi}{4}
+\lim_{ t \to +\infty } e^{-2t} F(t) = \lim_{ t \to +\infty } \frac{F(t)}{e^{2t}} = \left[ \frac{+\infty}{+\infty} \right] = \lim_{ t \to +\infty } \frac{e^{2t}\arctan(t)}{2e^{2t}} = \frac{\pi}{4}
 $$
 Conclusione:
 $$

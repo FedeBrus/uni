@@ -200,7 +200,7 @@ $$
 \begin{align}
 \int \frac{x^{3}+1}{x^{3}(x + 1)}dx &= \frac{A}{x} + \frac{B}{x+1} + \frac{d}{dx} \frac{Cx + D}{x^{2}}  \\
  & = \frac{A}{x} + \frac{B}{x+ 1} + \frac{Cx^{2} - 2x(Cx + D)}{x^{4}} \\
- & = \frac{A}{x} + B(x+1) + \frac{Cx - 2(Cx + D)}{x^{3}} \\
+ & = \frac{A}{x} + \frac{B}{x+1} + \frac{Cx - 2(Cx + D)}{x^{3}} \\
  & = \frac{Ax^{2}(x+1) + Bx^{3} + (-Cx-2D)(x + 1)}{x^{3}(x+1)} \\
  & = \frac{(A + B)x^{3} + (A - C) x^{2} +(-C-2D)x + (-2D)}{x^{3}(x+1)}
 \end{align}
@@ -240,7 +240,9 @@ $$
  & = \frac{3}{2} \log(x^{2}+2) + \frac{5\sqrt{ 2 }}{2} \int \frac{1}{\left( \frac{x}{\sqrt{ 2 }}^{2} \right) + 1} \frac{dx}{\sqrt{ 2 }} \\
  & = \frac{3}{2}\log(x^{2}+2) +\frac{5\sqrt{ 2 }}{2} \arctan\left( \frac{x}{\sqrt{ 2 }} \right)
 \end{align}
-$$ In generale:
+$$
+
+In generale:
 $$
 \int \frac{Ax+B}{x^{2}+C} dx = \frac{A}{2} \log(x^{2}+C) + \frac{B}{\sqrt{ C }} \arctan\left( \frac{x}{\sqrt{ C }} \right), \text{ se } C > 0
 $$
@@ -274,7 +276,7 @@ $$
  & = \frac{5}{2} \log |x^{2}+2x+2| - 3 \arctan(x+1)
 \end{align}
 $$
-##### Esempio DA RISCRIVERE
+##### Esempio
 $$
 \begin{align}
 \int \frac{1}{\cos(x)} dx  & = \int \frac{\cos(x)}{\cos ^{2}(x)} dx \\
@@ -304,11 +306,13 @@ $$
 
 $$
 \begin{align}
-\frac{1}{2} \\
+\int \frac{1}{2y-2}dy -\int \frac{1}{2y+2} &= \frac{1}{2}\log|y-1|-\frac{1}{2}\log|y+1| \\
+ & = \log \sqrt{ \left| \frac{y-1}{y+1} \right| } \\
+ & = \log \sqrt{ \left| \frac{\sin x-1}{\sin x+1} \right| }
 \end{align}
 $$
 ---
-## Sostituzioni razionalizzanti
+	## Sostituzioni razionalizzanti
 - Funzioni razionali di esponenziali
 - Radici ennesime di cose di grado $1$
 - Radici quadrate di cose di grado $2$
@@ -329,7 +333,7 @@ Pongo $y = e^{x}+1 \implies dy = e^{x}dx$
 $$
 \int \frac{e^{2x}}{e^{x}+1}dx = \int \frac{y - 1}{y} dy = \int dy - \int \frac{1}{y}dy = y - \log |y| = e^{x} + 1 - \log(e^{x} + 1)
 $$
-##### Esempio 2 metodo da finire / controllare
+##### Esempio 2
 $$
 \int \frac{1}{1+e^{2x}} dx
 $$
@@ -358,7 +362,7 @@ $$
 \int \frac{1}{y(y^{2} + 1)} dy = \int -\frac{y}{y^{2} + 1} dy + \int \frac{1}{y} dy = \log |y| - \frac{1}{2} \log (y^{2} + 1) = x - \log (1 + e^{2x}) = \log\left( \frac{e^{x}}{\sqrt{ 1+e^{2x} }} \right)
 $$
 Metodo 2:
-Pongo $y = 1 + e^{2x} \implies  dy 2e^{2x}dx$
+Pongo $y = 1 + e^{2x} \implies  dy = 2e^{2x}dx$
 $$
 \int \frac{1}{1+e^{2x}}dx = \int \frac{1}{2e^{2x}} \frac{2e^{2x}}{1+e^{2x}} dx = \int \frac{1}{2(y - 1)} \frac{1}{y} dy = \frac{1}{2} \int \frac{1}{y(y - 1)} dy
 $$
@@ -374,7 +378,7 @@ $$
 $$
 Pongo $y = 2^{x} \implies dy = 2^{x}\log 2dx$
 $$
- \int \frac{2^{3x}}{3 + 2^{2x}} dx = \int \frac{2^{2x}2}{3+ 2^{2x}}dx = \frac{1}{\log 2} \int \frac{y^{2}}{3+y^{2}} dy = \frac{1}{\log 2} \int dy - \frac{3}{\log 2} \int \frac{1}{3 + y^{2}} dy
+ \int \frac{2^{3x}}{3 + 2^{2x}} dx = \int \frac{2^{2x}2^{x}}{3+ 2^{2x}}dx = \frac{1}{\log 2} \int \frac{y^{2}}{3+y^{2}} dy = \frac{1}{\log 2} \int dy - \frac{3}{\log 2} \int \frac{1}{3 + y^{2}} dy
 $$
 $$
 \frac{1}{\log 2} y - \frac{1}{\log 2} \int \frac{1}{1 + \left( \frac{y}{\sqrt{ 3 }} \right)^{2}} dy = \frac{1}{\log 2}y - \frac{\sqrt{ 3 }}{\log 2} \arctan \left( \frac{y}{\sqrt{ 3 }} \right) = \frac{1}{\log 2} \left( y - \sqrt{ 3 }\arctan\left( \frac{y}{\sqrt{ 3 }} \right) \right) = \frac{1}{\log 2} \left( 2^{x} - \sqrt{ 3 }\arctan\left( \frac{2^{x}}{\sqrt{ 3 }} \right) \right)
@@ -406,7 +410,7 @@ $$
 $$
 \int \sqrt{ \frac{x+3}{x+2} } dx
 $$
-Pongo $y = \sqrt{ \frac{x+3}{x + 2} } \Longleftrightarrow y^{2} = \frac{x+3}{x+2} \Leftrightarrow (x+2)y^{2} = x+3 \Leftrightarrow x(y^{2}-1) = 3-2y^{2} \Leftrightarrow x = \frac{3-y^{2}}{y^{2}-1}$
+Pongo $y = \sqrt{ \frac{x+3}{x + 2} } \Longleftrightarrow y^{2} = \frac{x+3}{x+2} \Longleftrightarrow (x+2)y^{2} = x+3 \Longleftrightarrow x(y^{2}-1) = 3-2y^{2} \Longleftrightarrow x = \frac{3-2y^{2}}{y^{2}-1}$
 Dunque $dx = \left( \frac{3-2y^{2}}{y^{2} - 1} \right)'dy$
 $$
 \int \sqrt{ \frac{x+3}{x+2} } dx = \int y \left( \frac{3-2y^{2}}{y^{2}-1} \right)' dy = y \left( \frac{3-2y^{2}}{y^{2} - 1}\right) - \int \frac{3-2y^{2}}{y^{2} - 1} dy
@@ -421,7 +425,8 @@ Si risolvono così.
 $$
 \int (\sqrt{ x^{2}+3x+5 })dx
 $$
-Pongo $y + x = \sqrt{ x^{2} + 3x +5 }$, dunque $y^{2} + 2xy +x^{2} = x^{2} + 3x + 5$, quindi $x(3-2y) = y^{2} - 5 \Leftrightarrow x = \frac{y^{2}-5}{3-2y} \implies  dx = \left( \frac{y^{2}-5}{3- 2y} \right)'dy$
+Pongo $y + x = \sqrt{ x^{2} + 3x +5 }$, dunque $y^{2} + 2xy +x^{2} = x^{2} + 3x + 5$, quindi $x(3-2y) = y^{2} - 5 \Longleftrightarrow x = \frac{y^{2}-5}{3-2y} \implies  dx = \left( \frac{y^{2}-5}{3- 2y} \right)'dy$
+
 Infine:
 $$
 \int (\sqrt{ x^{2}+3x+5 }) dx = \int \underbrace{ \left( y + \frac{y^{2} -5}{3-2y} \right) }_{ F }\underbrace{ \left( \underbrace{ \frac{y^{2}-5}{3-2y} }_{ G } \right)' }_{ g } dy = \text{ si continua per parti}
@@ -444,7 +449,7 @@ $$
 $4-x^{2} = (2-x)(2+x)$
 $y(2+x) = \sqrt{ 4-x^{2} }$
 $y^{2}(2+x)^{2} = (2+x)(2-x)$
-$y^{2}(2+x)=(2-x) \Leftrightarrow x(y^{2} + 1) = 2 - 2y^{2} \Leftrightarrow  x = \frac{2-2y^{2}}{1+y^{2}} \implies dx = \left( \frac{2-2y^{2}}{1+y^{2}} \right)dy$
+$y^{2}(2+x)=(2-x) \Leftrightarrow x(y^{2} + 1) = 2 - 2y^{2} \Leftrightarrow  x = \frac{2-2y^{2}}{1+y^{2}} \implies dx = \left( \frac{2-2y^{2}}{1+y^{2}} \right)'dy$
 
 #### Punto della situazione:
 1. Se $a>0$ e il $\Delta \geq 0$ ho 2 metodi
@@ -456,7 +461,7 @@ $y^{2}(2+x)=(2-x) \Leftrightarrow x(y^{2} + 1) = 2 - 2y^{2} \Leftrightarrow  x =
 $$
 \int \sqrt{ x^{2} + 1 } dx
 $$
-o fare $y + x = \sqrt{ x^{2} + 1 }$, oppure considerando che $\cosh ^{2}x-\sinh ^{2}x = 1$, $\cosh x= \frac{e^{x}+e^{-x}}{2}$ e $\sinh x = \frac{e^{x}-e^{-x}}{2^{x}}$.
+o fare $y + x = \sqrt{ x^{2} + 1 }$, oppure considerando che $\cosh ^{2}x-\sinh ^{2}x = 1$, $\cosh x= \frac{e^{x}+e^{-x}}{2}$ e $\sinh x = \frac{e^{x}-e^{-x}}{2}$.
 Pongo $x = \sinh(y) \implies 1+x^{2} = 1 +\sinh ^{2}(y) = \cosh ^{2}(x)$, allora $\sqrt{ 1+x^{2} } = \sqrt{ \cosh ^{2}(y) } = \cosh(y)$.
 $dx = \cosh y dy$
 $$
@@ -464,7 +469,7 @@ $$
 $$
 O sviluppo il coseno iperbolico e risolvo con gli esponenziali, oppure integrare per parti con grande ritorno.
 $$
-\int \cosh ^{2}(y) dy = \int \cosh (y) \frac{\cosh}{y} dy = \sinh(y) \cosh(y) - \int \sinh(y)\sinh(y) dy =\sinh(y)\cosh(y)dy + y - \int \cosh ^{2}y dy
+\int \cosh ^{2}(y) dy = \int \cosh (y) \cosh(y) dy = \sinh(y) \cosh(y) - \int \sinh(y)\sinh(y) dy =\sinh(y)\cosh(y)dy + y - \int \cosh ^{2}y dy
 $$
 $$
 \int \cosh ^{2}(y) dy = \frac{1}{2}\left(\sinh(y) \cosh(y) + y \right)

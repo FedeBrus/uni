@@ -271,7 +271,7 @@ Dunque $N(T)= \left\langle  \left( 1,1,2 \right)  \right\rangle$. Per trovare un
 $$
 u_{1} = \frac{(1,1,2)}{\sqrt{ 6 }} = \left( \frac{1}{\sqrt{ 6 }}, \frac{1}{\sqrt{ 6 }}, \frac{2}{\sqrt{ 6 }} \right)
 $$
-## Es 10.10 (DA FINIRE)
+## Es 10.10
 Calcolare la base ortonormale di $\mathbb{R}^{3}$ formata da autovettori per le matrici:
 $$
 A = \begin{bmatrix}
@@ -351,7 +351,128 @@ $$
 u_{3} = \left( -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }}, 0 \right)
 $$
 Dunque la base ortonormale cercata è: $\left( (0,0,1), \left( \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }}, 0 \right), \left( -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }}, 0 \right) \right)$.
-## Es 10.11 (DA FINIRE)
+
+Consideriamo $B$:
+$$
+B = \begin{bmatrix}
+1 & 3 & 0 \\
+3 & -2 & -1 \\
+0 & -1 & 1
+\end{bmatrix}
+$$
+$$
+\begin{align}
+p_{B}(\lambda) = \det(B-\lambda I_{3}) =
+\begin{vmatrix}
+1-\lambda & 3 & 0 \\
+3 & -2-\lambda & -1 \\
+0 & -1 & 1-\lambda
+\end{vmatrix}
+ & = (1-\lambda)[(-2-\lambda)(1-\lambda)-1]-3(3(1-\lambda)) \\
+ & = (1-\lambda)[-2-\lambda+2\lambda+\lambda^{2}-1]-9(1-\lambda) \\
+ & = (1-\lambda)(\lambda^{2}+\lambda-12) \\
+ & = (1-\lambda)(\lambda+4)(\lambda-3)
+\end{align}
+$$
+Gli autovalori di $B$ sono $\lambda_{1}=1,\lambda_{2}=-4,\lambda_{3}=3$
+$$
+E(\lambda_{1}) = 
+N\begin{bmatrix}
+0 & 3 & 0 \\
+3 & -3 & -1 \\
+0 & -1 & 0
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & -1 & -\frac{1}{3} \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & -\frac{1}{3} \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x =\frac{1}{3}t \\
+y = 0 \\
+z = t
+\end{cases}
+\rightarrow
+\langle (1,0,3) \rangle 
+$$
+$$
+E(\lambda_{2}) =
+N\begin{bmatrix}
+5 & 3 & 0 \\
+3 & 2 & -1 \\
+0 & -1 & 5
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+5 & 3 & 0 \\
+0 & \frac{1}{5} & -1 \\
+0 & -1 & 5
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & \frac{3}{5} & 0 \\
+0 & 1 & -5 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -3t \\
+y = 5t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (-3,5,1) \rangle 
+$$
+$$
+E(\lambda_{3}) = N\begin{bmatrix}
+-2 & 3 & 0 \\
+3 & -5 & -1 \\
+0 & -1 & -2
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+-2 & 3 & 0 \\
+0 & -\frac{1}{2} & -1 \\
+0 & -1 & -2
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & -\frac{3}{2} & 0 \\
+0 & 1 & 2 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -3y \\
+y = -2t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (-3,-2,1) \rangle 
+$$
+$\mathcal{B}=((1,0,3),(-3,5,1),(-3,-2,1))$ è base di $\mathbb{R}^{3}$. Ora bisogna normalizzarla.
+Siccome $B$ è una matrice simmetrica sappiamo che autovettori associati ad autovalori diversi sono ortogonali tra loro.
+Normalizziamo $(1,0,3)$:
+$$
+u_{1} = \left( \frac{1}{\sqrt{ 10 }}, 0, \frac{3}{\sqrt{ 10 }} \right)
+$$
+Normalizziamo $(-3,5,1)$:
+$$
+u_{2} = \left( -\frac{3}{\sqrt{ 35 }}, \frac{5}{\sqrt{ 35 }}, \frac{1}{\sqrt{ 35 }} \right)
+$$
+Normalizziamo $(-3,-2,1)$:
+$$
+u_{3} = \left( -\frac{3}{\sqrt{ 14 }}, -\frac{2}{\sqrt{ 14 }}, \frac{1}{\sqrt{ 14 }} \right)
+$$
+## Es 10.11
 Per ognuna delle seguenti matrici simmetriche $A$ si determini una matrice ortogonale $P$ per la quale $P^{T}AP$ sia diagonale.
 $$
 A = \begin{bmatrix}
@@ -406,4 +527,500 @@ D = \begin{bmatrix}
 0 & 2
 \end{bmatrix}
 $$
-è simile ad $A$ con base $\mathcal{B} = ((-1,2), (-2, 1))$.
+è simile ad $A$ con base $\mathcal{B} = ((-1,2), (2, 1))$.
+Siccome la matrice $A$ è simmetrica, sappiamo che autovettori ricavati da autovalori diversi sono tra loro ortogonali.
+Dunque bisogna normalizzare i vettori. Consideriamo ora la base $\mathcal{B}'=\left( \left( -\frac{1}{\sqrt{ 5 }}, \frac{2}{\sqrt{ 5 }} \right), \left( \frac{2}{\sqrt{ 5 }}, \frac{1}{\sqrt{ 5 }} \right) \right)$
+$$
+P = \begin{bmatrix}
+-\frac{1}{\sqrt{ 5 }} & \frac{2}{\sqrt{ 5 }} \\
+\frac{2}{\sqrt{ 5 }} & \frac{1}{\sqrt{ 5 }}
+\end{bmatrix}
+$$
+$$
+B = 
+\begin{bmatrix}
+1 & 0 & 1 \\
+0 & 1 & -1 \\
+1 & -1 & 2
+\end{bmatrix}
+$$
+$$
+\begin{align}
+p_{B}(\lambda) = \begin{vmatrix}
+1 - \lambda & 0 & 1 \\
+0 & 1-\lambda & -1 \\
+1 & -1 & 2-\lambda
+\end{vmatrix} 
+ & = (1-\lambda)[(1-\lambda)(2-\lambda)-1]-(1-\lambda) \\
+ & = (1-\lambda)[(1-\lambda)(2-\lambda)-1-1] \\
+ & = (1-\lambda)[2+\lambda^{2}-2\lambda-\lambda-2] \\
+ & = (1-\lambda)(\lambda^{2}-3\lambda) \\
+ & = \lambda(1-\lambda)(\lambda-3)
+\end{align}
+$$
+Gli autovalori di $B$ sono $\lambda_{1}=0, \lambda_{2}=1, \lambda_{3}=3$.
+$$
+E(\lambda_{1}) = 
+N\begin{bmatrix}
+1 & 0 & 1 \\
+0 & 1 & -1 \\
+1 & -1 & 2
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & 1 \\
+0 & 1 & -1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -t \\
+y = t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (-1,1,1) \rangle 
+$$
+$$
+E(\lambda_{2}) = N\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 0 & -1 \\
+1 & -1 & 1
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & -1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = t \\
+z = 0
+\end{cases}
+\rightarrow
+\langle (1,1,0) \rangle 
+$$
+$$
+E(\lambda_{3}) = N\begin{bmatrix}
+-2 & 0 & 1 \\
+0 & -2 & -1 \\
+1 & -1 & -1
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+0 & -2 & -1 \\
+0 & -2 & -1  \\
+1 & -1 & -1
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & -\frac{1}{2} \\
+0 & 1 & \frac{1}{2} \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow 
+\begin{cases}
+x = \frac{1}{2}t \\
+y = -\frac{1}{2}t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (1,-1,2) \rangle 
+$$
+Essendo $B$ una matrice simmetrica, autovettori associati ad autovalori distinti sono tra loro ortogonali, perciò $((-1,1,1),(1,1,0),(1,-1,2))$ formano una base di $\mathbb{R}^{3}$ dove tutti i vettori sono tra loro ortogonali. Basta normalizzare.
+$$
+u_{1} = \frac{1}{\sqrt{ 3 }}(-1,1,1)
+$$
+$$
+u_{2} = \frac{1}{\sqrt{ 2 }}(1,1,0)
+$$
+$$
+u_{3} = \frac{1}{\sqrt{ 6 }}(1,-1,2)
+$$
+Quindi $P$ è:
+$$
+P = \begin{bmatrix}
+-\frac{1}{\sqrt{ 3 }} & \frac{1}{\sqrt{ 2 }} & \frac{1}{\sqrt{ 6 }} \\
+\frac{1}{\sqrt{ 3 }} & \frac{1}{\sqrt{ 2 }} & -\frac{1}{\sqrt{ 6 }} \\
+\frac{1}{\sqrt{ 3 }} & 0 & \frac{2}{\sqrt{ 6 }}
+\end{bmatrix}
+$$
+## Es 10.12
+Sia $T$ l'endomorfismo di $\mathbb{R}^{3}$ con matrice associata
+$$
+A = \begin{bmatrix}
+4 & 0 & 0 \\
+0 & 5 & -1 \\
+0 & -1 & 5
+\end{bmatrix}
+$$
+rispetto alla base canonica.
+### a)
+Stabilire se l'endomorfismo è diagonalizzabile.
+### b)
+Trovare basi ortonormali degli autospazi di $T$.
+### c)
+Trovare una base ortonormale di $\mathbb{R}^{3}$ formata da autovettori di $T$.
+
+$$
+p_{A}(\lambda) = \begin{vmatrix}
+4-\lambda & 0 & 0 \\
+0 & 5-\lambda & -1 \\
+0 & -1 & 5-\lambda
+\end{vmatrix} =
+(4-\lambda)[(5-\lambda)^{2}-1] =
+(4-\lambda)(\lambda^{2}-10\lambda+24) =
+-(\lambda-4)^{2}(\lambda-6)
+$$
+Gli autovalori sono $\lambda_{1}=4$ e $\lambda_{2} = 6$.
+$$
+E(\lambda_{1}) = 
+N\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 1 & -1 \\
+0 & -1 & 1
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+0 & 1 & -1 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = s \\
+z = s
+\end{cases}
+\rightarrow
+\langle (1,0,0),(0,1,1) \rangle 
+$$
+I due vettori che formano il sottospazio $E(\lambda_{1})$ sono già ortogonali quindi basta normalizzarli:
+$$
+\begin{align}
+u_{1} &= (1,0,0) \\
+u_{2} &= \left( 0, \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right)
+\end{align}
+$$
+Quindi una base di $E(\lambda_{1})$ è $\left( (1,0,0),\left( 0, \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right) \right)$
+$$
+E(\lambda_{2}) = N\begin{bmatrix}
+-2 & 0 & 0 \\
+0 & -1 & -1 \\
+0 & -1 & -1
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 0 \\
+y = -t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (0,-1,1) \rangle 
+$$
+Normalizzando il vettore trovato si ha che una base di $E(\lambda_{2})$ è $\left( \left( 0, -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right) \right)$.
+Applichiamo Gram-Schmidt all'unione dei 3 vettori:
+I primi due vettori sono già ortonormali tra di loro, applichiamo la procedura solo al terzo.
+$$
+u_{3} = \left( 0, -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right) - \left(\left( 0, -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right) \cdot (1, 0, 0)\right)(1,0,0) - \left(\left( 0, -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right)\cdot\left( 0, \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right)\right)\left( 0, \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right) = \left( 0, -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right)
+$$
+Quindi $u_{3}$ era già ortogonale rispetto agli altri due vettori.
+Dunque una base ortonormale di $\mathbb{R}^{3}$ è:
+$$
+\mathcal{B} = \left( \left(1,0,0 \right), \left( 0, \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right), \left( 0, -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right) \right)
+$$
+## Es 10.13
+Sia $A$ la matrice reale 
+$$
+A = \begin{bmatrix}
+6 & 0 & -2 \\
+0 & 5 & 0 \\
+-2 & 0 & 9
+\end{bmatrix}
+$$
+Trovare una base ortonormale di $\mathbb{R}^{3}$ costituita da autovettori di $A$.
+$$
+p_{A}(\lambda) = 
+\begin{bmatrix}
+6 - \lambda & 0 & -2 \\
+0 & 5-\lambda & 0 \\
+-2 & 0 & 9 -\lambda
+\end{bmatrix}=
+(5-\lambda)[(6-\lambda)(9-\lambda)-4] = (5-\lambda)[\lambda^{2}-15\lambda+50] = (5-\lambda)(\lambda-5)(\lambda-10) = (10 - \lambda)(\lambda-5)^{2}
+$$
+Autovalori di $\lambda_{1} = 10,\lambda_{2}= 5$.
+$$
+E(\lambda_{1}) = N\begin{bmatrix}
+-4 & 0 & -2 \\
+0 & -5 & 0 \\
+-2 & 0 & -1
+\end{bmatrix}
+= N\begin{bmatrix}
+1 & 0 & \frac{1}{2} \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -\frac{1}{2}t \\
+y = 0 \\
+z = t
+\end{cases}
+\rightarrow
+\langle (-1,0,2) \rangle 
+$$
+$$
+E(\lambda_{2}) = N\begin{bmatrix}
+1 & 0 & -2 \\
+0 & 0 & 0 \\
+-2 & 0 & 4
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & -2 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 2s \\
+y = t \\
+z = s
+\end{cases}
+\rightarrow
+\langle (0,1,0),(2,0,1) \rangle 
+$$
+Quindi una base di $\mathbb{R}^{3}$ è $\mathcal{B} = ((-1, 0, 2), (0,1,0), (2,0,1))$.
+$$
+u_{1} = \left( -\frac{1}{\sqrt{ 5 }},0, \frac{2}{\sqrt{ 5 }} \right)
+$$
+$$
+u_{2} = (0,1,0)
+$$
+$$
+u_{3} = \left( \frac{2}{\sqrt{ 5 }},0, \frac{1}{\sqrt{ 5 }} \right)
+$$
+La base richiesta è dunque $\mathcal{B'} =(u_{1}, u_{2}, u_{3})$
+## Es 10.14
+Si consideri il seguente endomorfismo di $\mathbb{R}^{3}$
+$$
+T(x, y, z) = (ax, bx +y+z,y+z)
+$$
+con $a,b\in \mathbb{R}$.
+### a)
+Si discuta la diagonalizzabilità di $T$ al variare di $a$ e $b$.
+### b)
+Posto $a=b=0$ si determini una base ortonormale di $\mathbb{R}^{3}$ formata da autovettori di $T$.
+
+La matrice associata a $T$:
+$$
+A = \begin{bmatrix}
+a & 0 & 0 \\
+b & 1 & 1 \\
+0 & 1 & 1
+\end{bmatrix}
+$$
+$$
+p_{A}(\lambda) = \begin{vmatrix}
+a - \lambda & 0 & 0 \\
+b & 1-\lambda & 1 \\
+0 & 1 & 1-\lambda
+\end{vmatrix} = 
+(a-\lambda)[(1-\lambda)^{2}-1] =
+(a-\lambda)[\lambda^{2}-2\lambda]=
+(a-\lambda)\lambda(\lambda-2)
+$$
+Gli autovalori di $T$ sono $\lambda_{1} = a, \lambda_{2}=0, \lambda_{3}=2$
+Se $a \neq 0,2$ si ha che $T$ ha 3 autovalori distinti e quindi sicuramente è diagonalizzabile.
+Se $a = 0$:
+$$
+E(\lambda_{1}) = N\begin{bmatrix}
+0 & 0 & 0 \\
+b & 1 & 1 \\
+0 & 1 & 1
+\end{bmatrix}
+$$
+In questo caso si distinguono due casi:
+Se $a = b = 0$:
+$$
+E(\lambda_{1}) = N\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 1 & 1 \\
+0 & 1 & 1
+\end{bmatrix}\rightarrow
+\begin{cases}
+x = t \\
+y = -s \\
+z = s
+\end{cases}\rightarrow
+\langle (1,0,0),(0,-1,1) \rangle 
+$$
+$$
+E(\lambda_{2}) = N\begin{bmatrix}
+2 & 0 & 0 \\
+0 & -1 & 1 \\
+0 & 1 & -1
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & -1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 0 \\
+y = t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (0,1,1) \rangle 
+$$
+Quindi anche in questo caso $T$ è diagonalizzabile.
+Se $a = 0 \neq b$:
+$$
+E(\lambda_{1}) = N\begin{bmatrix}
+0 & 0 & 0 \\
+b & 1 & 1 \\
+0 & 1 & 1
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 0 \\
+y = -t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (0,-1,1) \rangle 
+$$
+Dunque in questo caso $T$ non è diagonalizzabile.
+
+Se $a = 2$:
+$$
+E(\lambda_{1}) = N\begin{bmatrix}
+0 & 0 & 0 \\
+b & 1 & 1 \\
+0 & 1 & 1 
+\end{bmatrix}
+$$
+Dunque come prima, se $b = 0$ allora $T$ è diagonalizzabile, altrimenti non è diagonalizzabile.
+
+Notiamo che i vettori della base ottenuta unendo i sottospazi sono tra loro ortogonali, quindi basta normalizzarli.
+Quindi una base ortonormale è $\mathcal{B} = \left( (1,0,0),\left( 0, \frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right), \left( 0, -\frac{1}{\sqrt{ 2 }}, \frac{1}{\sqrt{ 2 }} \right) \right)$.
+## Es 10.15
+Sia $T$ l'endomorfismo di $\mathbb{R}^{3}$ così definito:
+$$
+T(x_{1},x_{2},x_{3}) = (2x_{1},2x_{2}+\sqrt{ 3 }x_{3}, \sqrt{ 3 }x_{2})
+$$
+### a)
+Stabilire se $T$ è invertibile.
+### b)
+Mostrare che $T$ è un endomorfismo simmetrico.
+### c)
+Trovare una base ortonormale che diagonalizza $T$.
+
+$$
+A = \begin{bmatrix}
+2 & 0 & 0 \\
+0 & 2 & \sqrt{ 3 } \\
+0 & \sqrt{ 3 } & 0
+\end{bmatrix}
+$$
+Osservando la matrice associata a $T$ notiamo che $T$ è un endomorfismo simmetrico. Studiamone il determinante:
+$$
+\det A = 2(-3) = -6 \neq 0
+$$
+Dunque $T$ è invertibile, poiché la sua matrice associata è invertibile.
+
+Troviamo gli autovalori di $A$:
+$$
+p_{A}(\lambda) = (2-\lambda)[-\lambda(2-\lambda)-3] = (2-\lambda)(-2\lambda+\lambda^{2}-3) = (2-\lambda)(\lambda-3)(\lambda+1)
+$$
+Gli autovalori di $A$ sono $\lambda_{1} = 2, \lambda_{2} = 3, \lambda_{3} = -1$.
+$$
+E(\lambda_{1}) = N\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & \sqrt{ 3 } \\
+0 & \sqrt{ 3 } & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = 0 \\
+z = 0
+\end{cases}\rightarrow
+\langle (1,0,0) \rangle 
+$$
+$$
+E(\lambda_{2}) = N\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & -1 & \sqrt{ 3 } \\
+0 & \sqrt{ 3 } & -3
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & -\sqrt{ 3 } \\
+0 & 0 & 0
+\end{bmatrix}\rightarrow
+\begin{cases}
+x = 0 \\
+y = \sqrt{ 3 }t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (0,\sqrt{ 3 },1) \rangle 
+$$
+$$
+E(\lambda_{3}) = N\begin{bmatrix}
+3 & 0 & 0 \\
+0 & 3 & \sqrt{ 3 } \\
+0 & \sqrt{ 3 } & 1
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & \sqrt{ 3 } \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 0 \\
+3y = -\sqrt{ 3 }t \\
+z = t
+\end{cases}
+\rightarrow
+\begin{cases}
+x = 0 \\
+y = -\frac{1}{\sqrt{ 3 }}t \\
+z = t
+\end{cases}
+\rightarrow 
+\begin{cases}
+x = 0 \\
+y = -t \\
+z = \sqrt{ 3 }t
+\end{cases}
+\rightarrow
+\langle (0,-1,\sqrt{ 3 }) \rangle 
+$$
+I 3 vettori ottenuti sono già ortogonali quindi bisogna normalizzarli per trovare una base.
+$$
+\mathcal{B} = \left( (1,0,0),\left( 0, \frac{\sqrt{ 3 }}{2} , \frac{1}{2}\right), \left( 0, -\frac{1}{2}, \frac{\sqrt{ 3 }}{2} \right) \right)
+$$
+Quindi:
+$$
+P = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & \frac{\sqrt{ 3 }}{2} & -\frac{1}{2} \\
+0 & \frac{1}{2} & \frac{\sqrt{ 3 }}{2}
+\end{bmatrix}
+$$

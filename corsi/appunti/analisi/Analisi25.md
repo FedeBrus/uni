@@ -137,7 +137,7 @@ $$
 $$
 I coefficienti sono $a = -\frac{1}{4}$ e $b = \frac{3}{16}$. Quindi $\bar{u}(t) = -\frac{1}{4}t + \frac{3}{16}$ e $u_{om}(t) = ae^{-t} + be^{4t}$
 
-Con il metodo di Lagrange si prende la soluzione dell'equazione omogenea associata e ne vario le costanti, cioè prendo come soluzione della non omogenea $\bar{u}(t) = a(t)e^{-t}+be^{4t}$.
+Con il metodo di Lagrange si prende la soluzione dell'equazione omogenea associata e ne vario le costanti, cioè prendo come soluzione della non omogenea $\bar{u}(t) = a(t)e^{-t}+b(t)e^{4t}$.
 $$
 \begin{align}
 \bar{u}(t) &= a(t)e^{-t}+b(t)e^{4t} \\
@@ -162,35 +162,35 @@ Deve venire sempre che i termini aventi $a(t)$ e $b(t)$ si annullano. Rimaniamo 
 $$
 -a'(t)e^{-t} + 4b'(t)e^{4t} = t
 $$
-Ora abbiamo questo sistemo
+Ora abbiamo questo sistema
 $$
 \begin{cases}
-a'(t)e^{-t} + 4b'(t)e^{4t} = 0 \\
+a'(t)e^{-t} + b'(t)e^{4t} = 0 \\
 -a'(t)e^{-t} + 4b'(t)e^{4t} = t
 \end{cases}\rightarrow
 \begin{cases}
-5b'(t)e^{4t} = t \\
-b'(t) = a'(t)e^{-5t}
+b'(t) = -a'(t)e^{-5t} \\
+5b'(t)e^{4t} = t
 \end{cases}\rightarrow
-\begin{cases}
-a'(t) = \frac{t}{5}e^{t} \\
+\begin{cases} 
+a'(t) = -\frac{1}{5}te^{t} \\
 b'(t) = \frac{1}{5}te^{-4t}
 \end{cases}
 $$
 $$
 \begin{align}
 a'(t) &= -\frac{1}{5}te^{t} \\
-\int a'(t) &= -\frac{1}{5}\int te^{t} \\
+\int a'(t) dt &= -\frac{1}{5}\int te^{t} dt \\
 a(t) &= -\frac{1}{5}te^{t}+\frac{1}{5}e^{t}  \\
-&= -\frac{1}{5}(t + 1)e^{t}
+a(t) &= -\frac{1}{5}(t + 1)e^{t}
 \end{align}
 $$
 $$
 \begin{align}
 b'(t) &= \frac{1}{5}te^{-4t} \\
-\int b'(t) & = \frac{1}{5} \int te^{-4t} \\
-b(t) & = \frac{1}{5}t\left( -\frac{1}{4}e^{-4t} \right) - \frac{1}{5} \int-\frac{1}{4}e^{-4t}  \\
-b(t) &= -\frac{1}{20}te^{-4t} + \frac{1}{20} \int e^{-4t}  \\
+\int b'(t)dt & = \frac{1}{5} \int te^{-4t} dt \\
+b(t) & = \frac{1}{5}t\left( -\frac{1}{4}e^{-4t} \right) - \frac{1}{5} \int-\frac{1}{4}e^{-4t} dt \\
+b(t) &= -\frac{1}{20}te^{-4t} + \frac{1}{20} \int e^{-4t}dt  \\
 b(t) &= -\frac{1}{20}te^{-4t} - \frac{1}{80} e^{-4t} \\
 b(t)  & = -\frac{1}{20} e^{-4t} \left( t + \frac{1}{4} \right)
 \end{align}
@@ -280,10 +280,4 @@ u(t) &= ce^{-t^{2}} + e^{-t^{2}} \int t^{3}e^{t^{2}} dt \\
  & = ce^{-t^{2}}+ \left( \frac{1}{2} t^{2} - \frac{1}{2}  \right) \\
  & = ce^{-t^{2}}+ \frac{1}{2} \left( t^{2} - 1  \right) \\
 \end{align}
-$$
-
-Metodo 2
-$$
-u' + 2tu = t^{3}
-u' 
 $$

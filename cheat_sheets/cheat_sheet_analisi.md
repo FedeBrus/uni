@@ -18,8 +18,8 @@ $|\bar{z}| = |z|$
 $z^{n}= (\rho^{n}, n\theta)$
 $\sqrt[n]{ z } = \left( \sqrt[n]{ z }, \frac{\theta}{n} + \frac{2k\pi}{n} \right), k = 0,\dots,n-1$
 
-Polinomi
-di grado $n$.
+Polinomi di grado $n$
+
 Se $\alpha \in \mathbb{C}$ è radice, allora si può dividere per $(x-\alpha)$
 Due polinomi si possono sempre dividere.
 Ogni polinomio di grado $n$ ha al massimo $n$ radici reali.
@@ -44,7 +44,7 @@ $x > y \implies g(f(x))<g(f(y))$ se e solo se sono una strettamente crescente e 
 Se due funzioni sono iniettiva allora la composizione è iniettiva.
 
 Proprietà potenze e logaritmi
-$a^{x+y} = a^{x}+a^{y}$
+$a^{x+y} = a^{x} \cdot a^{y}$
 $(a^{x})^{y} = a^{xy}$
 $a^{x}b^{x}=(ab)^{x}$
 $\ln(xy) = \ln x+\ln y$

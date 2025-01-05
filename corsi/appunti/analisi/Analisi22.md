@@ -197,7 +197,7 @@ $$
 \end{cases}
 $$
 $$
-\int_{a}^{b} \frac{1}{|x-b|^{\alpha}} dx = \begin{cases}
+\int_{a}^{b} \frac{1}{|b-x|^{\alpha}} dx = \begin{cases}
 \text{converge se }\alpha < 1 \\
 \text{diverge a } +\infty \text{ se } \alpha \geq 1
 \end{cases}
