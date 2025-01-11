@@ -1074,7 +1074,7 @@ BA=
 $$
 Dunque $dim(N(BA)) = 2$.
 ## Es 8.14
-Si consider la funzione lineare $T:\mathbb{R}^{4} \rightarrow \mathbb{R}^{4}$ definita dalla matrice:
+Si consideri la funzione lineare $T:\mathbb{R}^{4} \rightarrow \mathbb{R}^{4}$ definita dalla matrice:
 $$
 A = \begin{bmatrix}
 2k & 0 & 2 & 1 \\

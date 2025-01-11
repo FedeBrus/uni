@@ -589,7 +589,7 @@ y = -t \\
 z = t
 \end{cases}
 $$
-Dunque una base del nucleo è $((0, -1, 1))$, la cui dimensione è ovviamente $1$. Riducendo in forma a scalini ridotta si sarebbero potute vedere entrambi le basi. I vettori corrispettivi alle colonne dove sono presenti i pivot per la base dell'immagine e la soluzione di base del sistema per la base del sistema.
+Dunque una base del nucleo è $((0, -1, 1))$, la cui dimensione è ovviamente $1$. Riducendo in forma a scalini ridotta si sarebbero potute vedere entrambi le basi. I vettori corrispettivi alle colonne dove sono presenti i pivot per la base dell'immagine e la soluzione di base del sistema per la base del nucleo.
 ### c)
 Si stabilisca per quali valori di $k$ il vettore $v_{k} = (k + 1,0,k)$ appartiene all'Immagine di $T$.
 $$
@@ -932,7 +932,7 @@ $$
 0 & -1 - \lambda
 \end{vmatrix} = (-1 - \lambda)^{2} = p_{A}(\lambda)
 $$
-$\det(A - \lambda I_{2}) = 0 \Longleftrightarrow \lambda = 1$. In questo caso $A$ ha come autovalore $\lambda_{1} = 1$ con $m_{alg}(\lambda_{1}) = 2$. Inoltre $E(\lambda_{1}) = N(A - \lambda_{1}I_{2}) )  = N(A + I_{2})$.
+$\det(A - \lambda I_{2}) = 0 \Longleftrightarrow \lambda = -1$. In questo caso $A$ ha come autovalore $\lambda_{1} = -1$ con $m_{alg}(\lambda_{1}) = 2$. Inoltre $E(\lambda_{1}) = N(A - \lambda_{1}I_{2}) )  = N(A + I_{2})$.
 $$
 A + I_{2} = \begin{bmatrix}
 0 & 1 \\
@@ -954,7 +954,7 @@ $$
 -3 & 1 - \lambda
 \end{vmatrix} = -(1-\lambda^{2}) +6 = \lambda^{2} + 5 = p_{B}(\lambda)
 $$
-In questo caso la matrice non ha autovalori, perciò non è diagonalizzabile.
+In questo caso la matrice non ha autovalori reali, perciò non è diagonalizzabile.
 
 Consideriamo la matrice $C$:
 Consideriamo $C - \lambda I_{2}$:
@@ -996,3 +996,344 @@ $$
 Dunque $E(\lambda_{2}) = \langle (1, 1) \rangle$.
 
 Siccome la somma delle molteplicità geometriche è uguale alla somma delle molteplicità algebriche allora la matrice è diagonalizzabile.
+## Es 9.10
+$$
+A = \begin{bmatrix}
+2 & 1 & 0 \\
+0 & 1 & -1 \\
+0 & 2 & 4
+\end{bmatrix}
+$$
+$$
+p_{A}(\lambda) = (2-\lambda)[(1-\lambda)(4-\lambda)+2] = (2-\lambda)[4-4\lambda-\lambda+\lambda^{2}+2] = (2-\lambda)(\lambda^{2}-5\lambda+6) = (\lambda-2)^{2}(\lambda-3)
+$$
+$$
+N(2) = N\begin{bmatrix}
+0 & 1 & 0 \\
+0 & -1 & -1 \\
+0 & 2 & 2
+\end{bmatrix}
+\rightarrow
+N \begin{bmatrix}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = 0 \\
+z = 0
+\end{cases}
+\rightarrow
+\langle  (1,0,0) \rangle 
+$$
+$$
+N(3) = N\begin{bmatrix}
+-1 & 1 & 0 \\
+0 & -2 & -1 \\
+0 & 2 & 1
+\end{bmatrix}
+\rightarrow
+N \begin{bmatrix}
+1 & -1 & 0 \\
+0 & 1 & \frac{1}{2} \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+N \begin{bmatrix}
+1 & 0 & \frac{1}{2} \\
+0 & 1 & \frac{1}{2} \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -\frac{1}{2}t \\
+y = -\frac{1}{2}t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (1,1,-2t) \rangle 
+$$
+Gli autovettori trovati sono solamente $2$, quindi non è possibile trovare una base di $\mathbb{R}^{3}$ costituita da autovettori, dunque la matrice non è diagonalizzabile.
+
+$$
+B = \begin{bmatrix}
+-3 & 1 & -1 \\
+-7 & 5 & -1 \\
+-6 & 6 & -2
+\end{bmatrix}
+$$
+$$
+p_{B}(\lambda) = \begin{vmatrix}
+-3-\lambda & 1 & -1 \\
+-7 & 5-\lambda & -1 \\
+-6 & 6 & -2-\lambda
+\end{vmatrix} = \begin{vmatrix}
+-2 - \lambda & 1 & -1 \\
+-2 -\lambda & 5-\lambda & -1 \\
+0 & 6 & -2-\lambda
+\end{vmatrix}
+= \begin{vmatrix}
+-2-\lambda & 1 & -1 \\
+0 & 4-\lambda & 0 \\
+0 & 6 & -2-\lambda
+\end{vmatrix} = (2+\lambda)^{2}(4-\lambda)
+$$
+$$
+N(-2) = N\begin{bmatrix}
+-1 & 1 & -1 \\
+-7 & 7 & -1 \\
+-6 & 6 & 0
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+0 & 0 & -1 \\
+-1 & 1 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & -1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t \\
+y = t \\
+z = 0
+\end{cases}
+\rightarrow
+\langle (1, 1, 0) \rangle 
+$$
+$$
+N(4) = \begin{bmatrix}
+-7 & 1 & -1 \\
+-7 & 1 & -1 \\
+-6 & 6 & -6
+\end{bmatrix} \rightarrow
+N \begin{bmatrix}
+7 & -1 & 1 \\
+1 & -1 & 1 \\
+0 & 0 & 0
+\end{bmatrix} \rightarrow
+N \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & -1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 0 \\
+y = t \\
+z = t
+\end{cases}
+\rightarrow
+\langle  (0, 1, 1) \rangle
+$$
+Dunque la matrice non è diagonalizzabile.
+$$
+C = \begin{bmatrix}
+1 & -3 & 3 \\
+3 & -5 & 3 \\
+6 & -6 & 4
+\end{bmatrix}
+$$
+$$
+\begin{align}
+p_{C}(\lambda) &= \begin{vmatrix}
+1-\lambda & -3 & 3 \\
+3 & -5-\lambda & 3 \\
+6 & -6 & 4-\lambda
+\end{vmatrix}
+= \begin{vmatrix}
+1-\lambda & -3 & 0 \\
+3 & -5-\lambda & -2-\lambda \\
+6 & -6 & -2-\lambda
+\end{vmatrix}
+= \begin{vmatrix}
+1-\lambda & -3 & 0 \\
+-3 & 1-\lambda & 0 \\
+6 & -6 & -2-\lambda
+\end{vmatrix} \\
+ & =(-2-\lambda)[(1-\lambda)^{2}-9] = -(2+\lambda)[\lambda^{2} - 2\lambda - 8] = -(2+\lambda)(\lambda-4)(\lambda+2) = (\lambda+2)^{2}(\lambda-4)
+\end{align}
+$$
+$$
+N(-2) = N\begin{bmatrix}
+3 & -3 & 3 \\
+3 & -3 & 3 \\
+6 & -6 & 6 
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & -1 & 1 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = t - s \\
+y = t \\
+z = s
+\end{cases}
+\rightarrow
+\langle (1,1,0), (-1, 0, 1) \rangle 
+$$
+$$
+N(4) = N\begin{bmatrix}
+-3 & -3 & 3 \\
+3 & -9 & 3 \\
+6 & -6 & 0
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+-1 & -1 & 1 \\
+1 & -3 & 1 \\
+1 & -1 & 0
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 1 & -1 \\
+0 & -2 & 1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & -\frac{1}{2} \\
+0 & 1 & -\frac{1}{2} \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+ \\
+x = \frac{1}{2}t \\
+y = \frac{1}{2}t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (1,1,2) \rangle 
+$$
+Dunque $C$ è diagonalizzabile con base di autovettori di $\mathcal{B}=((1,1,0),(-1,0,1),(1,1,2))$.
+## Es 9.11
+Sia $T$ l'endomorfismo definito dalla matrice associata rispetto alla base canonica:
+$$
+A = M(T) = \begin{bmatrix}
+0 & 6 & 0 \\
+1 & 0 & 1 \\
+1 & 0 & 1
+\end{bmatrix}
+$$
+### a)
+Determinare nucleo e immagine di $T$.
+$$
+\begin{bmatrix}
+1 & 0 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -t \\
+y = 0 \\
+z = t
+\end{cases}
+\rightarrow \langle (-1, 0, 1) \rangle 
+$$
+Dunque l'immagine di $T$ è $\langle (0,1,1), (1, 0, 0) \rangle$ e il nucleo di $T$ è $\langle (-1, 0, 1) \rangle$.
+### b)
+Determinare autovalori e autovettori di $T$.
+$$
+\begin{align}
+p_{A}(\lambda) = \begin{vmatrix}
+-\lambda & 6 & 0 \\
+1 & -\lambda & 1 \\
+1 & 0 & 1-\lambda
+\end{vmatrix} &= (-\lambda)[-\lambda(1-\lambda)] - 6[(1-\lambda) - 1]  \\
+&= (-\lambda)[-\lambda + \lambda^{2}] + 6\lambda  \\
+&= \lambda^{2} - \lambda^{3} + 6\lambda  \\
+&= \lambda(-\lambda^{2} + \lambda +6)  \\
+&= -\lambda(\lambda^{2} - \lambda -6)  \\
+ & = -\lambda(\lambda-3)(\lambda+2)
+\end{align}
+$$
+$$
+N(0) = \langle (-1, 0, 1) \rangle 
+$$
+$$
+N(3) = N\begin{bmatrix}
+-3 & 6 & 0 \\
+1 & -3 & 1 \\
+1 & 0 & -2
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & -2 & 0 \\
+0 & -1 & 1 \\
+0 & 2 & -2
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 0 & -2 \\
+0 & 1 & -1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = 2t \\
+y = t \\
+z = t
+\end{cases}
+\rightarrow
+\langle (2,1,1) \rangle 
+$$
+$$
+N(-2) = N \begin{bmatrix}
+2 & 6 & 0 \\
+1 & 2 & 1 \\
+1 & 0 & 3
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix}
+1 & 3 & 0 \\
+0 & -1 & 1 \\
+0 & -3 & 3
+\end{bmatrix}
+\rightarrow
+N\begin{bmatrix} \\
+1 & 0 & 3 \\
+0 & 1 & -1 \\
+0 & 0 & 0
+\end{bmatrix}
+\rightarrow
+\begin{cases}
+x = -3t \\
+y = t \\
+z = t
+\end{cases}
+\langle (-3, 1, 1) \rangle 
+$$
+### c)
+Stabilire se $T$ è diagonalizzabile.
+La matrice ha 3 autovalori reali distinti perciò è sicuramente diagonalizzabile.
+
+### d)
+Stabilire se esiste una base di $\mathbb{R}^{3}$ formata da autovettori di $A$, e in caso positivo determinarla.
+
+La base in questione è $\mathcal{B} =((-1, 0, 1), (2,1,1), (-3, 1, 1))$.
+
+## Es 9.12
+Sia $T:\mathbb{R}^{3}\rightarrow \mathbb{R}^{3}$ l'endomorfismo a cui è associata la matrice
+$$
+A = \begin{bmatrix}
+2 & 0 & 0 \\
+0 & -2 & -6 \\
+0 & 2 & 5
+\end{bmatrix}
+$$
+### a)
+Si determinino gli autovalori di $T$ e si stabilisca se $T$ è diagonalizzabile.
+### b)
+Si determini una base di $\mathbb{R}^{3}$ formata da autovettori di $T$.
+

@@ -164,7 +164,7 @@ C = -\frac{1}{3}
 \begin{cases}
 A = -\frac{2}{9} \\
 B = \frac{2}{9} \\
-C = 0
+C =-\frac{1}{3}
 \end{cases}
 $$
 $$
@@ -312,7 +312,7 @@ $$
 \end{align}
 $$
 ---
-	## Sostituzioni razionalizzanti
+## Sostituzioni razionalizzanti
 - Funzioni razionali di esponenziali
 - Radici ennesime di cose di grado $1$
 - Radici quadrate di cose di grado $2$
@@ -359,7 +359,7 @@ C = 1
 \end{cases}
 $$
 $$
-\int \frac{1}{y(y^{2} + 1)} dy = \int -\frac{y}{y^{2} + 1} dy + \int \frac{1}{y} dy = \log |y| - \frac{1}{2} \log (y^{2} + 1) = x - \log (1 + e^{2x}) = \log\left( \frac{e^{x}}{\sqrt{ 1+e^{2x} }} \right)
+\int \frac{1}{y(y^{2} + 1)} dy = \int -\frac{y}{y^{2} + 1} dy + \int \frac{1}{y} dy = \log |y| - \frac{1}{2} \log (y^{2} + 1) = x - \log (\sqrt{ 1+e^{2x} }) = \log\left( \frac{e^{x}}{\sqrt{ 1+e^{2x} }} \right)
 $$
 Metodo 2:
 Pongo $y = 1 + e^{2x} \implies  dy = 2e^{2x}dx$
