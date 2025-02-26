@@ -6,8 +6,12 @@ Scriveremo $x \notin A$, $x$ non è elemento dell'insieme $A$.
 #### Oss:
 Un insieme può essere anche un elemento. Un elemento non può essere un insieme.
 #### Esempio:
-$X = \{ 1,2,3 \}$
-$2^{X} = \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 3 \}, \{ 1,2 \}, \{ 2,3 \}, \{ 1,3 \}, \{ 1,2,3 \} \}$
+$$
+\begin{align}
+X &= \{ 1,2,3 \} \\
+2^{X} &= \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 3 \}, \{ 1,2 \}, \{ 2,3 \}, \{ 1,3 \}, \{ 1,2,3 \} \}
+\end{align}
+$$
 
 ### Paradosso di Russell
 Consideriamo la seguente "stringa" nel linguaggio della teoria degli insiemi.
@@ -17,7 +21,8 @@ $$
 Supponiamo che $A$ sia un'insieme.
 $A$ è l'insieme di tutti gli insiemi $x$ tali che non contengono se stessi.
 
-Domanda: $A$ è veramente un'insieme? Dobbiamo verificare che dato ogni elemento, tale elemento appartiene o meno ad $A$.
+Domanda: $A$ è veramente un'insieme? 
+Dobbiamo verificare che dato ogni elemento, tale elemento appartiene o meno ad $A$.
 Poiché abbiamo assunto che $A$ sia un insieme, allora è anche un elemento della teoria. 
 Dunque $A \in A$ oppure $A \not\in A$.
 Se è vera la prima, non soddisfa la condizione che definisce $A$.
@@ -25,19 +30,19 @@ Se è vera la seconda, soddisfa la condizione che definisce $A$.
 Sono assurde entrambe.
 Quindi la stringa di partenza non può descrivere un'insieme.
 
-### Assioma 1.1 (Estensionalità)
+### Assioma (1.1) estensionalità
 Dati due insiemi $A, B$, $A = B \Longleftrightarrow (\forall x: x \in A \Longleftrightarrow x \in B)$
 
-- $\emptyset$ l'insieme vuoto è unico, $\forall x : x \not\in \emptyset$
-
+### Def (1.2) vuoto
+$\emptyset$ l'insieme vuoto è unico e non contiene elementi, $\forall x : x \not\in \emptyset$
 ### Def (1.5)
 Sia $X, Y$ due insiemi.
 Scriviamo $X \subset Y$ o $Y \supset X$ se $\forall x, x \in X \implies x \in Y$, in questo caso $X$ si dice sottoinsieme di $Y$.
-
 ##### Esercizio
-$X \subset X$ è vera? Sì, è vera.
+$X \subset X$ è vera? 
+>Sì, è vera.
 
-Se è vero che $X \subset Y$ e $X \neq Y$, allora si scrive $X $
+Se è vero che $X \subset Y$ e $X \neq Y$, allora si scrive $X \subsetneq Y$
 In questo caso $X$ si dice essere un sottoinsieme proprio di $Y$.
 
 ### Assioma 1.6 (Separazione)
@@ -66,10 +71,13 @@ $X \cap Y := \{ x | x \in X \text{ e } x \in Y \}$
 $X\setminus Y := \{ x | x \in X, x \not\in Y \}$
 Se $X \subset Y$, aloora $Y \setminus X$ si dice complementare di $X$ in $Y$ e si denota $\mathcal{C}_{Y}(X)$.
 $X \times Y := \{ (x,y) | x \in X, y \in Y \}$
+
+## Famiglie di insiemi
 Sia $I$ un insieme non vuoto chiamato insieme degli indici, ai cui elementi sono associati insiemi, in modo da creare una famiglia di insiemi.
 $\{ A_{i} \}_{i \in I}$ è la famiglia di insiemi indicizzata da $I$.
-$\bigcup_{i \in I} A_{i} =\{ x | \exists i : x \in A_{i} \}$
-$\bigcap_{i \in I} A_{i} =\{ x | \forall i : x \in A_{i} \}$
+
+$$\bigcup_{i \in I} A_{i} =\{ x | \exists i : x \in A_{i} \}$$
+$$\bigcap_{i \in I} A_{i} =\{ x | \forall i : x \in A_{i} \}$$
 
 ## Relazioni e funzioni
 Siano $X, Y$ due insiemi si dice relazione tra $X$ e $Y$ un sottoinsieme $\mathcal{R} \subset X \times Y$.

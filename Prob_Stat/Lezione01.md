@@ -4,20 +4,18 @@ Una scatola contiene O-ring
 - 30 di diametro 11mm
 
 Estraete un O-ring, qual è la probabilità che compiendo questa operazione si estragga un O-ring del diametro di 10mm.
-
-- 1/3
+> 1/3
 
 $Pr(\text{estrarre O-ring del diametro di 10}) = \frac{30}{90} = \frac{1}{3}$
 $30$ sono i casi favorevoli
 $90$ sono i casi totali
 
 Questo approccio si chiama "Probabilità frequentista".
-
-- Analizzo accuratamente gli O-ring prima di sceglierlo in modo che sia di 10mm.
-- Cerco tre O-ring di dimensione diversa, li ordino e scelgo quello centrale.
+>Analizzo accuratamente gli O-ring prima di sceglierlo in modo che sia di 10mm.
+>Cerco tre O-ring di dimensione diversa, li ordino e scelgo quello centrale.
 
 La probabilità dipende molto da come descriviamo il contesto.
-Dunque è necessaria uan formalizzazione:
+Dunque è necessaria una formalizzazione:
 
 ### Def Esperimento aleatorio
 Un esperimento si dice aleatorio, per un certo individuo, in un certo istante, se l'individuo non è ancora in grado di
@@ -82,21 +80,29 @@ Eventi elementari: $\{ (i, j) \}, \qquad i,j = 1, \dots,6$
 $$
 \Omega = \{ (1, 1), \dots, (1, 6), (2,1), \dots, (2,6), \dots, (6,6) \}
 $$
-Dunque $|\Omega| = 36$.
+Dunque $\# \Omega = 36$.
 
 Oppure:
-Lancio del primo dado $\Omega_{1} = \{ 1,2,3,4,5,6 \}$.
-Lancio del secondo dado $\Omega_{2} = \{ 1,2,3,4,5,6 \}$.
+$$
+\begin{align}
+\text{Lancio del primo dado}:  \Omega_{1} &= \{ 1,2,3,4,5,6 \} \\
+\text{Lancio del secondo dado}:  \Omega_{2} &= \{ 1,2,3,4,5,6 \}
+\end{align}
+$$
 $$
 \Omega = \Omega_{1} \times \Omega_{2}
 $$
 Ora possiamo definire eventi del tipo: 
-$A = \{ \text{almeno una faccia è pari} \}$
-$B_{1} = \{ \text{Solo il primo risultato è pari} \}$
-$B_{2} = \{ \text{Solo il secondo risultato è pari} \}$
-$B_{3} = \{ \text{Entrambi i risultati sono pari} \}$
-$A = B_{1} \cup B_{2} \cup B_{3}$
-$B_{i} \cap B_{j} = \emptyset \qquad i,j = 1,2,3\qquad i\neq j$
+$$
+\begin{align}
+A &= \{ \text{almeno una faccia è pari} \} \\
+B_{1} &= \{ \text{Solo il primo risultato è pari} \} \\
+B_{2} &= \{ \text{Solo il secondo risultato è pari} \} \\
+B_{3} &= \{ \text{Entrambi i risultati sono pari} \} \\
+A &= B_{1} \cup B_{2} \cup B_{3} \\
+B_{i} \cap B_{j} &= \emptyset \qquad i,j = 1,2,3\qquad i\neq j
+\end{align}
+$$
 
 ### Def Insiemi disgiunti
 Dati due insiemi $A, B \subseteq \Omega$, sono disgiunti se $A \cap B \neq \emptyset$.
@@ -109,4 +115,3 @@ $$
 (A^{c})^{c}  &= A
 \end{align}
 $$
-
