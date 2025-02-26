@@ -1,2 +1,0 @@
-# uni
-University stuff

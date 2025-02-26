@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/es06.dir/es06.o -o es06
