@@ -1,15 +1,15 @@
 Concetti primitivi: elemento e insieme.
-Teoria degli insiemi, usando il fondamento di $\in$.
+Teoria degli insiemi, usando il fondamento di appartenenza ($\in$).
 Scriveremo $x \in A$, $x$ elemento dell'insieme A, uguale a $A \ni x$, $A$ contiene $x$.
 Scriveremo $x \notin A$, $x$ non è elemento dell'insieme $A$.
 
-#### Oss:
+#### Oss
 Un insieme può essere anche un elemento. Un elemento non può essere un insieme.
 #### Esempio:
 $$
 \begin{align}
 X &= \{ 1,2,3 \} \\
-2^{X} &= \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 3 \}, \{ 1,2 \}, \{ 2,3 \}, \{ 1,3 \}, \{ 1,2,3 \} \}
+2^{X} = \mathcal{P}(X) &= \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 3 \}, \{ 1,2 \}, \{ 2,3 \}, \{ 1,3 \}, \{ 1,2,3 \} \}
 \end{align}
 $$
 
@@ -35,7 +35,7 @@ Dati due insiemi $A, B$, $A = B \Longleftrightarrow (\forall x: x \in A \Longlef
 
 ### Def (1.2) vuoto
 $\emptyset$ l'insieme vuoto è unico e non contiene elementi, $\forall x : x \not\in \emptyset$
-### Def (1.5)
+### Def (1.5) sottoinsieme
 Sia $X, Y$ due insiemi.
 Scriviamo $X \subset Y$ o $Y \supset X$ se $\forall x, x \in X \implies x \in Y$, in questo caso $X$ si dice sottoinsieme di $Y$.
 ##### Esercizio
@@ -57,7 +57,7 @@ Tornando all'esempio:
 $$
 \{ n \in \mathbb{N} | P(x) \} = \{ 0, 2, 4, 6, \dots \}
 $$
-### Oss.
+#### Oss
 L'insieme che ha per elementi tutti gli insiemi non esiste.
 
 ### Dimostrazione
@@ -69,7 +69,7 @@ Siano $X, Y$ insiemi.
 $X \cup Y := \{ x | x \in X \text{ o } x \in Y \}$
 $X \cap Y := \{ x | x \in X \text{ e } x \in Y \}$
 $X\setminus Y := \{ x | x \in X, x \not\in Y \}$
-Se $X \subset Y$, aloora $Y \setminus X$ si dice complementare di $X$ in $Y$ e si denota $\mathcal{C}_{Y}(X)$.
+Se $X \subset Y$, allora $Y \setminus X$ si dice complementare di $X$ in $Y$ e si denota $\mathcal{C}_{Y}(X)$.
 $X \times Y := \{ (x,y) | x \in X, y \in Y \}$
 
 ## Famiglie di insiemi
@@ -83,6 +83,6 @@ $$\bigcap_{i \in I} A_{i} =\{ x | \forall i : x \in A_{i} \}$$
 Siano $X, Y$ due insiemi si dice relazione tra $X$ e $Y$ un sottoinsieme $\mathcal{R} \subset X \times Y$.
 Se dati $x \in X$, $y \in Y$, la coppia $(x, y) \in \mathcal{R}$, si dice che $x \mathcal{R} y$ e $x$ è in $\mathcal{R}$ relazione con $y$. Se $(x, y) \not\in \mathcal{R}$, si che che $x \cancel{ \mathcal{R} } y$.
 
-### Def 1.10
+### Def (1.10) funzione come relazione
 Siano $X, Y$ due insiemi e $f \subset X \times Y$ una relazione tra $X$ e $Y$. Si dice funzione da $X$ a $Y$ e si indica $f : X \rightarrow Y$ se $\forall x \in X, \exists! y \in Y : (x, y) \in f$.
 Una funzione $f: X \rightarrow Y$ è una terna $(X, Y, f)$, dove $f \subset (X \times Y)$ e soddisfa la proprietà.

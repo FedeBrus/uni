@@ -138,6 +138,3 @@ Assumiamo che $Pr(\{ 1 \}) = p \in [0,1]$.
 - $Pr(\Omega)=1$
 
 In questo caso $Pr(\{ 2 \})$ non ha senso, perché in questo spazio non è un evento.
-
-
-
