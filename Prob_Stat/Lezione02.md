@@ -47,6 +47,8 @@ $\mathcal{A}_{1} = \{ \emptyset, \{ 1 \}, \{ 2 \}, \Omega \}$ è la più grande 
 #### Esercizio (da fare)
 Data una tribù di $\mathcal{A}$ di $\Omega$ allora $\emptyset \in \mathcal{A}$.
 
+Se $\mathcal{A}$ è una tribù allora sappiamo che $\Omega \in \mathcal{A}$. Per la seconda proprietà abbiamo che $\Omega^{c} = \emptyset \in \mathcal{A}$.
+
 #### Esercizio
 Mostrare che dato un insieme finito $\Omega$ e un'algebra $\mathcal{A}$ di $\Omega$, allora $\{ A_{i} \}^{n}_{i = 1}$ tali che $A_{i}\in \mathcal{A}, \forall i = 1,\dots,n$, avrò che $\bigcap_{i = 1}^{n} A_{i} \in \mathcal{A}$.
 
@@ -69,7 +71,7 @@ $\mathcal{A}_{2} = \{ \emptyset, \Omega, \{ 2 \}, \{ 1, 3 \} \}$
 $\mathcal{A} = \mathcal{A}_{1} \cap \mathcal{A}_{2} = \{ \emptyset, \Omega \}$, difatti questa è un'algebra.
 
 Consideriamo l'unione:
-$\mathcal{A}_{1} \cup \mathcal{A}_{2} = \{ \emptyset, \Omega, \{ 1 \}, \{ 2 \}, \{ 2, 3 \}, \{ 1, 3 \} \}$.
+$\mathcal{A}_{1} \cup \mathcal{A}_{2} = \{ \emptyset, \Omega, \{ 1 \}, \{ 2 \}, \{ 2, 3 \}, \{ 1, 3 \} \}$, non è un algebra dunque lo stesso non vale per l'unione.
 
 #### Esempio
 Consideriamo un $\Omega$ e consideriamo $A_{*} = \{ A \subseteq \Omega : A \text{ è un insieme finito} \}$, quest'ultima è un'algebra? No, ad esempio quando $\Omega$ è numerabile.
@@ -98,7 +100,7 @@ $\mathcal{A}_{3}= \{ \emptyset, \Omega , \{ 1 \}, \{ 2,3,4,5,6 \} \}$
 
 Gli spazi sono $(\Omega, \mathcal{A}_{1})$, $(\mathcal{\Omega, \mathcal{A}_{2}})$ e $(\Omega, \mathcal{A}_{3})$.
 
-### Def Probabilità assiomatica di Kolmogoror
+### Def Probabilità assiomatica di Kolmogorov
 Dato uno spazio probabilizzabile $(\Omega, \mathcal{A})$, una funzione di probabilità $Pr$ è una applicazione di questo tipo:
 $$
 Pr : \mathcal{A} \rightarrow \mathbb{R}^{+}
@@ -112,7 +114,7 @@ Per le algebre c'è un analogo detta additività: se $\{ A_{i} \}_{i = 1}^{n}$ t
 
 Noi utilizzeremo sempre tribù.
 ### Def Spazio probabilizzato
-Dato $\Omega$, una tribù $\mathcal{A}$ di $\Omega$ e una probabilità $Pr$ definita sullo spazio probabilizzabile ($\Omega$, $\mathcal{A}$), chiamiamo la terna $(\Omega, \mathcal{A}, Pr)$ uno spazio probabilizzato.
+Dato $\Omega$, una tribù $\mathcal{A}$ di $\Omega$ e una probabilità $Pr$ definita sullo spazio probabilizzabile $(\Omega, \mathcal{A})$, chiamiamo la terna $(\Omega, \mathcal{A}, Pr)$ uno spazio probabilizzato.
 
 #### Esempio
 Consideriamo il lancio di un dado:

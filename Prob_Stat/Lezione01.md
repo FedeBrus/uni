@@ -19,7 +19,7 @@ Dunque è necessaria una formalizzazione:
 
 ### Def Esperimento aleatorio
 Un esperimento si dice aleatorio, per un certo individuo, in un certo istante, se l'individuo non è ancora in grado di
-indicarne con sicurezza il risultato (indipendentemente se l'esperimento è già avvenuto oppure no).
+indicarne con sicurezza il risultato (indipendentemente se l'esperimento sia già avvenuto o meno).
 
 ### Def Esito (o evento elementare)
 L'esito è un possibile risultato del nostro esperimento aleatorio.
@@ -40,7 +40,7 @@ Quindi $\Omega=\{ \text{Verde}, \text{Bianco}, \text{Rosso} \}$.
 
 #### Esempio
 Il nostro esperimento aleatorio è il lancio di un D6.
-Gli esisti sono:
+Gli esiti sono:
 - 1
 - 2
 - 3
@@ -75,7 +75,7 @@ $$
 A seconda dell'interesse che ho, posso definire gli eventi elementari nella maniera più opportuna.
 
 #### Esempio
-Lancio di un D6.
+Lancio di due D6.
 Eventi elementari: $\{ (i, j) \}, \qquad i,j = 1, \dots,6$
 $$
 \Omega = \{ (1, 1), \dots, (1, 6), (2,1), \dots, (2,6), \dots, (6,6) \}
@@ -107,7 +107,7 @@ $$
 ### Def Insiemi disgiunti
 Dati due insiemi $A, B \subseteq \Omega$, sono disgiunti se $A \cap B \neq \emptyset$.
 
-### Regola di De Morgan
+### Regole di De Morgan
 $$
 \begin{align}
 (A \cup B)^{c} &= A^{c} \cap B^{c} \\
