@@ -113,7 +113,6 @@ Per le algebre c'è un analogo detta additività: se $\{ A_{i} \}_{i = 1}^{n}$ t
 Noi utilizzeremo sempre tribù.
 ### Def Spazio probabilizzato
 Dato $\Omega$, una tribù $\mathcal{A}$ di $\Omega$ e una probabilità $Pr$ definita sullo spazio probabilizzabile ($\Omega$, $\mathcal{A}$), chiamiamo la terna $(\Omega, \mathcal{A}, Pr)$ uno spazio probabilizzato.
-
 #### Esempio
 Consideriamo il lancio di un dado:
 $\Omega = \{ 1,2,3,4,5,6 \}$
