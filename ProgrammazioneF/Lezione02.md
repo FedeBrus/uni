@@ -59,6 +59,3 @@ Interi -> Caratteri
 
 Caratteri -> Stringhe
 - str, restituisce una stringa contenente il solo carattere
-
-
-
