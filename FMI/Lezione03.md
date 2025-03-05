@@ -12,12 +12,33 @@ Supponiamo $f,g$ surgettive. Poiché $g$ è surgettiva, $\forall z \in Z,\exists
 Nota: Se $(g \circ f)$ è bigettiva, vuol dire che esiste una sua inversa $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$.
 
 #### Esercizio 1.11
+Siano $X, Y, I$ insiemi, $f:X\rightarrow Y$ e $A_{i}\subset Y,\forall i \in I$. Si provi che:
+$$
+f^{-1} \left (\bigcap_{i \in I} A_{i}\right) = \bigcap_{i \in I}  f^{-1} \left(A_{i}\right) 
+$$
+I due insiemi sono uguali se uno è contenuto nell'altro.
+Dimostriamo che $f^{-1} \left (\bigcap_{i \in I} A_{i}\right) \subset \bigcap_{i \in I}  f^{-1} \left(A_{i}\right)$. 
+Sia $x \in f^{-1}\left( \bigcap_{i \in I} A_{i} \right) \implies f(x) \in  \bigcap_{i \in I} A_{i} \implies f(x) \in A_{i}, \forall i \in I$. Dunque $x \in f^{-1}(A_{i}), \forall i \in I$, il che vuol dire che sicuramente $x \in \bigcap_{i\in I}f^{-1}(x)$.
+
+Dimostriamo che $\bigcap_{i \in I}f^{-1}(A_{i}) \subset f^{-1} \left (\bigcap_{i \in I} A_{i}\right)$. 
+Sia $x \in \bigcap_{i\in I}f^{-1}(A_{i}) \implies x \in f^{-1}(A_{i}), \forall i \in I \implies f(x) \in A_{i}, \forall i \in I$. Dunque $f(x) \in \bigcap_{i \in I} A_{i}$, il che vuol dire che sicuramente $x \in \bigcap_{i \in I}f^{-1}(x)$.
+
+Si provi che:
+$$
+f^{-1} \left (\bigcup_{i \in I} A_{i}\right) = \bigcup_{i \in I}  f^{-1} \left(A_{i}\right) 
+$$
+Dimostriamo che $f^{-1}\left( \bigcup_{i \in I} A_{i} \right) \subset \bigcup_{i \in I}f^{-1}(A_{i})$.
+Sia $x \in f^{-1}\left( \bigcup_{i \in I} A_{i} \right) \implies f(x)\in \bigcup_{i\in I}A_{i}\implies f(x)\in A_{i}$, per qualche $i \in I$. Dunque $x \in f^{-1}(A_{i})$ per qualche $i \in I$, ma allora $x \in \bigcup_{i \in I}f^{-1}(x)$.
+
+Dimostriamo che $\bigcup_{i \in I}f^{-1}(A_{i}) \subset f^{-1}\left( \bigcup_{i \in I} A_{i} \right)$.
+Sia $x \in \bigcup_{i \in I} f^{-1}(A_{i}) \implies x \in f^{-1}(A_{i})$, per qualche $i \in I$. Dunque $f(x) \in A_{i}$, per qualche $i \in I$, ma allora $f(x) \in \bigcup_{i \in I}A_{i}$ e quindi $x \in f^{-1}\left( \bigcup_{i \in I}A_{i} \right)$
+
 #### Esercizio 1.12
 Trovare dei controesempi e correggere le formule.
 
 ## Insiemi equipotenti (cenni)
 ### Definizione 2.1 equipotenza
-Siano $X, Y$ due insiemi, diciamo che $X$ è equipotente a $Y$ oppure che $X$ ha la stessa cardinalità di $Y$ se $\exists f:X\rightarrow Y$ una bigezione, ovvero una funzione bigettiva.  In questo caso scriveremo $X \sim Y$
+Siano $X, Y$ due insiemi, diciamo che $X$ è equipotente a $Y$ oppure che $X$ ha la stessa cardinalità di $Y$ se $\exists f:X\rightarrow Y$ una bigezione, ovvero una funzione bigettiva. In questo caso scriveremo $X \sim Y$
 
 #### Proposizione 2.2
 Siano $X, Y, Z$ tre insiemi, valgono:
@@ -28,22 +49,25 @@ Siano $X, Y, Z$ tre insiemi, valgono:
 ### Definizione insieme cardinale (idea della costruzione)
 La classe di insiemi cardinali possiede delle proprietà.
 1. $\forall X$ insieme, $X \sim |X|$
-2. $|X|~|Y|\implies|X|=|Y|$
-
+2. $|X|\sim|Y|\implies|X|=|Y|$
+![[insiemi_cardinali|1000]]
 #### "Cardinalità finita"
 $|\emptyset| = \emptyset$
 $|\{ 0 \}| = \{ 0 \} \Longleftrightarrow |\{ 0 \}| = 1$
 $|\{ 0,1 \}| = \{ 0,1 \} \Longleftrightarrow |\{ 0, 1 \}| = 2$
 $\dots$
-
 #### Lemma 2.4
 Siano $X, Y$ due insiemi, vale:
 $$
 X \sim Y \Longleftrightarrow |X| = |Y|
 $$
-Dimostrazione:
+Dimostrazione $\impliedby$:
 $$
-X \rightarrow^{\exists f}_{\sim} |X| = |Y| \leftarrow^{\exists g}_{\sim} Y
+X \xrightarrow[\sim]{\exists f} |X| = |Y| \xleftarrow[\sim]{\exists g} Y \implies g^{-1} \circ f: X \xrightarrow[\sim]{}Y \implies X \sim Y
+$$
+Dimostrazione $\implies$:
+$$
+X \sim Y \implies |X| \xleftarrow[\sim]{\exists h} X \xrightarrow[\sim]{\exists f}Y \xrightarrow[\sim]{\exists g}|Y| \implies g \circ f \circ h^{-1} : |X| \xrightarrow[\sim]{g \circ f \circ h^{-1}} |Y| \implies|X| \sim |Y| \implies |X| = |Y|
 $$
 ## Assiomi di Peano
 $$
