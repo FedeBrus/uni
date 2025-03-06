@@ -19,6 +19,12 @@ $$
 Y^{X} = \{ f \in 2^{X \times Y} | \underbrace{ \forall x \in X, \exists! y \in Y : (x, y)\in f }_{ P(f) } \}
 $$
 Per l'assioma di separazione, se si parte da un insieme e ad ogni elemento è associabile una certa affermazione $P(f)$, l'insieme ottenuto è un insieme, dunque $Y^{X}$ è un insieme.
+#### Esercizio 1.6
+Determinare $X^{\emptyset}$ e $\emptyset^{X}$:
+
+Per definizione $X^{\emptyset} = \{ f \in 2^{\emptyset \times X} | \forall y \in \emptyset, \exists!x \in X : (y, x) \in f \}$, ovvero l'insieme $\{ f  | f: \emptyset \rightarrow X \}$, quindi $X^{\emptyset}$ contiene solamente la funzione vuota associa a $X$ e dunque $X^{\emptyset} = \{ \varnothing \}$.
+
+Per definizione $\emptyset^{X} = \{ f \in 2^{X \times \emptyset} | \forall x \in X, \exists!y \in \emptyset : (x, y) \}$, ovvero l'insieme $\{ f | f : X \rightarrow \emptyset \}$, ma per definizione di funzione ogni elemento del dominio deve essere mappato a uno e uno solo elemento del codominio, ma il codominio in questo caso è l'insieme vuoto, dunque non è possibile costruire una tale funzione. Dunque $\emptyset^{X} =  \emptyset$
 
 #### Esempio (1.12) Identità
 La funzione $id_{x}: X \rightarrow X$ definita ponendo $id_{x}(x):=x$, si dice identità di $X$.
