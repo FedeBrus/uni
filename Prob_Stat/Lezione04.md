@@ -41,7 +41,7 @@ $$
 Da cui $P(A \cap B) = 0,2$
 
 Con lo stesso trucco si ricava $P(B)$:
-$P(B) = P((B \cap A) \cup (B \cap A^{c})) = P(A \cap B) + P(B \cap A^{c}) \Longleftrightarrow P(B \cap A^{c}) = 0.2$
+$P(B) = P((B \cap A) \cup (B \cap A^{c})) = P(A \cap B) + P(B \cap A^{c}) \Longleftrightarrow P(B \cap A^{c}) = 0,2$
 
 Infine:
 $P(A^{c}\cap B^{c}) = P((A \cup B)^{c}) = 1 - P(A \cup B) = 1 - P(A) - P(B) + P(A \cap B) = 0,1$
@@ -51,15 +51,15 @@ Mazzo di carte (52 carte) e ne estraiamo una in maniera casuale.
 $\Omega = \{ 1,2,3,\dots,52 \}$
 Con: fiori, picche, cuori, quadri. Con: asso, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K.
 Qual è la probabilità di estrarre una figura qualsiasi o una carta di fiori.
-Consideriamo gli eventi $A_{1} = \{ \text{è  uscita una figura} \} = \{ 11,12,13,24,25,26,37,38,39, 50, 51, 52 \}$, $A_{2} = \{ \text{è uscito un fiore} \} = \{ 1,2,3,4,5,6,7,8,9,10,11 \}$.
+Consideriamo gli eventi $A_{1} = \{ \text{e'  uscita una figura} \} = \{ 11,12,13,24,25,26,37,38,39, 50, 51, 52 \}$, $A_{2} = \{ \text{e' uscito un fiore} \} = \{ 1,2,3,4,5,6,7,8,9,10,11 \}$.
 Prendiamo $\mathcal{F} = \{ A_{1}, A_{2} \}$
 $\mathcal{A}_{\mathcal{F}} = \sigma(\mathcal{F}) = \{ \emptyset, \Omega, A_{1}, A_{2}, A_{1}^{c}, A_{2}^{c}, A_{1} \cup A_{2}, \dots \}$.
-Considerando lo spazio probabilizzabile è $(\Omega, \mathcal{P}(\Omega))$.
+Considerando lo spazio probabilizzabile $(\Omega, \mathcal{P}(\Omega))$.
 La probabilità di ogni carta è $P(\{ \omega \}) = \frac{1}{52}, \omega \in \Omega$.
 $$
 \begin{align}
-P(A_{1}) = \frac{12}{52} = \frac{\#A_{1}}{\#\Omega}
-P(A_{2}) = \frac{13}{52} = \frac{\#A_{2}}{\#\Omega}
+P(A_{1}) &= \frac{12}{52} = \frac{\#A_{1}}{\#\Omega} \\
+P(A_{2}) &= \frac{13}{52} = \frac{\#A_{2}}{\#\Omega}
 \end{align}
 $$
 La domanda dell'esercizio è trovare $P(A_{1} \cup A_{2}) = P(A_{1}) + P(A_{2}) - P(A_{1} \cap A_{2})$.
@@ -74,7 +74,7 @@ Prendiamo come tribù l'insieme delle parti perché non sappiamo bene di cosa pa
 $$
 \mathcal{A_{i}} = \mathcal{P}(\Omega), \qquad i=1,2
 $$
-Abbiamo $\Omega = \Omega_{1} \times \Omega_{2}$ e $\mathcal{A} = \mathcal{A}_{1} \times \mathcal{A}_{2}$.
+Abbiamo $\Omega = \Omega_{1} \times \Omega_{2}$ e $\mathcal{A} = \mathcal{A}_{1} \otimes \mathcal{A}_{2}$.
 Sappiamo che $P_{i}(\{ j \}) = \frac{1}{6}\qquad i = 1,2; j = 1,\dots,6$
 Quindi $P((i,j)) = P_{1}(\{ i \}) \cdot P_{2}(\{ j \}) = \frac{1}{36}$.
 
@@ -104,14 +104,11 @@ In questo caso si considerano solo (1) e (2) ma ogni elemento può comparire una
 $D_{n, r} = n(n-1)\dots(n-r+1)$.
 Introducendo la notazione di fattoriale: $n! = n(n-1)(n-2)\dots 2\cdot 1$. Inoltre $0! = 1$.
 Dunque $D_{n,r} = \frac{n!}{(n-r)!}$
-
 ### Permutazione $P_{n}$
 Le permutazioni possono essere definite come disposizioni speciali $P_{n} \equiv D_{n,n} = \frac{n!}{0!} = n!$
-
-### Combinazioni
+### Combinazioni $C_{n,r}$
 In questo caso si considera solo (1) ma l'ordine non è importante e un oggetto può comparire al più una volta.
 $C_{n, r} = \frac{D_{n,r}}{P_{r}} = \frac{n!}{(n-r)!r!} = \binom{n}{r}$
-
 ##### Esercizio
 Comitato costituito da $5$ persone scelte a caso tra $10$.
 Una persona può comparire al più una volta. L'ordine non è importante.

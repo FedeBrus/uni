@@ -18,16 +18,14 @@ La probabilità dipende molto da come descriviamo il contesto.
 Dunque è necessaria una formalizzazione:
 
 ### Def Esperimento aleatorio
-Un esperimento si dice aleatorio, per un certo individuo, in un certo istante, se l'individuo non è ancora in grado di
-indicarne con sicurezza il risultato (indipendentemente se l'esperimento sia già avvenuto o meno).
+Un esperimento si dice aleatorio, per un certo individuo, in un certo istante, se l'individuo non è ancora in grado di indicarne con sicurezza il risultato (indipendentemente se l'esperimento sia già avvenuto o meno).
 
 ### Def Esito (o evento elementare)
 L'esito è un possibile risultato del nostro esperimento aleatorio.
 (Gli eventi elementari sono tra loro incompatibili).
 
 ### Def Spazio campionario
-Lo spazio campionario è la collezione di tutti gli eventi elementari, lo indicheremo con $\Omega$.
-Gli elementi di $\Omega$ sono a due a due incompatibili. Gli elementi di $\Omega$ sono esaustivi, cioè ci devono essere tutti i possibili risultati.
+Lo spazio campionario è la collezione di tutti gli eventi elementari, lo indicheremo con $\Omega$. Gli elementi di $\Omega$ sono a due a due incompatibili. Gli elementi di $\Omega$ sono esaustivi, cioè ci devono essere tutti i possibili risultati.
 
 #### Esempio
 Abbiamo una scatola contenente 3 palline, una rossa, una bianca e una verde.
@@ -95,9 +93,9 @@ $$
 Ora possiamo definire eventi del tipo: 
 $$
 \begin{align}
-A &= \{ \text{almeno una faccia è pari} \} \\
-B_{1} &= \{ \text{Solo il primo risultato è pari} \} \\
-B_{2} &= \{ \text{Solo il secondo risultato è pari} \} \\
+A &= \{ \text{almeno una faccia e' pari} \} \\
+B_{1} &= \{ \text{Solo il primo risultato e' pari} \} \\
+B_{2} &= \{ \text{Solo il secondo risultato e' pari} \} \\
 B_{3} &= \{ \text{Entrambi i risultati sono pari} \} \\
 A &= B_{1} \cup B_{2} \cup B_{3} \\
 B_{i} \cap B_{j} &= \emptyset \qquad i,j = 1,2,3\qquad i\neq j

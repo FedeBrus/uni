@@ -38,6 +38,47 @@ $$
 Ogni iterata si ferma perché $h$ non è definita su tutto $\mathbb{N} \times X$.
 #### Esercizio 3.1
 Dimostrare che $0+n=n, \forall n \in \mathbb{N}$ e $1+n = n+1, \forall n \in \mathbb{N}$. (Sugg principrio di induzione).
+
+Dimostriamo che $0 + n = n, \forall n \in \mathbb{N}$ con il principio di induzione e la definizione di somma a sinistra con $m = 0$:
+$$
+\begin{cases} 0 + 0 = 0 \\ 0 + succ(n) = succ(0+n), \forall n \in \mathbb{N} \end{cases} 
+$$
+Sia $P(n)$ la seguente proposizione:
+$$ 
+P(n) := 0 + n = n, \qquad\forall n \in \mathbb{N} 
+$$
+Dalla definizione risulta banale verificare $P(0)$, dunque la base dell'induzione è verificata. Si assuma $P(n)$ vera e sia $n \in \mathbb{N}$: bisogna verificare che $P(n) \implies P(succ(n))$. Sappiamo che per un generico $n$ vale che:
+$$ 
+0 + succ(n) = succ(0+n) 
+$$
+Siccome $P(n)$ è assunta essere vera è possibile riscriverla così: 
+$$ 
+0 + succ(n) = succ(n) 
+$$
+Ma questa è proprio $P(succ(n))$. Dunque il passo induttivo ($P(n) \implies P(succ(n))$) è stato verificato e applicando il teorema del principio di induzione $0 + n = n, \forall n \in \mathbb{N}$.
+
+Dimostriamo che $1 + n = n + 1, \forall n \in \mathbb{N}$ con il principio di induzione e la definizione di somma a sinistra con $m = 1$.
+$$
+\begin{cases}
+1 + 0 = 1 \\
+1 + succ(n) = succ(1 + n), \forall n \in \mathbb{N}
+\end{cases}
+$$
+Sia $P(n)$ la seguente proposizione:
+$$
+P(n) := 1 + n = n + 1, \qquad \forall n \in \mathbb{N}
+$$
+Verifichiamo il caso base $P(0)$. Utilizziamo la definizione di somma a sinistra con $m = 0$ e $n = 1$. Essendo il caso base banalmente vero, dalla definizione si ha che $0 + succ(0) = succ(0 + 0) \Longleftrightarrow 0 + 1 = 1$. Ma allora si ha che $P(0)$ è verificata, poiché $1+0 = 1 = 0 + 1$.
+
+Ora si assuma $P(n)$ vera e sia $n \in \mathbb{N}$: bisogna verificare che $P(n) \implies P(succ(n))$. Sappiamo che per un generico $n$ vale che:
+$$
+1 + succ(n) = succ(1 + n)
+$$
+Siccome $P(n)$ è assunta essere vera è possibile la seconda parte dell'equazione nel seguente modo:
+$$
+succ(1+ n) = succ(n+1)
+$$
+Ma dalla definzione della somma a sinistra si evince che $succ(n+1)=succ(n)+1, \forall n \in \mathbb{N}$. Il che significa che $1+succ(n) = succ(1+n) = succ(n+1) = succ(n + 1)$. Dunque il passo induttivo ($P(n) \implies P(succ(n))$) è stato verificato e applicando il teorema del principio di induzione $1+n = n + 1, \forall n \in \mathbb{N}$.
 ### Oss
 $1 = succ(n)$
 $n + 1 = n + succ(0) = succ(n+0) = succ(n)$
@@ -60,7 +101,7 @@ n \leq m \text{ se } \exists k \in \mathbb{N} : n+k = m
 $$
 ### Teorema 3.5
 Considerando $(\mathbb{N}, \leq)$ è un insieme totalemnte ordinato.
-### Esercizio 3.3
+#### Esercizio 3.3
 Dimostrare che $n\leq m$ e $h \leq k \implies n+h \leq m+k$ e $nh \leq mk$.
 
 ### Teorema (Principio di induzione prima forma "shiftato")
