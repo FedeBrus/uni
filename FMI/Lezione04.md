@@ -94,7 +94,7 @@ Devo dimostrare che $P(n + 1)$ è vera:
 $$
 P(n+1) = \left( \sum_{k=1}^{n+1} \frac{k}{2^{2^{k}}} = 2- \frac{(n+1)+2}{2^{n+1}}\right) 
 $$
-1° modo di arrontodare il passo induttivo:
+1° modo di verificare il passo induttivo:
 Vale per associatività della somma:
 $$
 \begin{align}
@@ -106,3 +106,43 @@ $$
 \end{align}
 $$
 Dunque $P(n+1)$ è vera, il passo induttivo è stato fatto, ovvero $P(n) \implies P(n+1)$ è vera. Quindi grazie al teorema del principio di induzione $P(n)$ è vera $\forall n \geq 1$.
+
+2° modo di verificare il passo induttivo:
+Assumiamo che $P(n)$ sia vera per qualche $n \geq 1$ ovvero:
+$$
+\sum_{k=1}^{n}  \frac{k}{2^{k}} = 2 - \frac{n+2}{2^{n}}
+$$
+Dobbiamo dimostrare che:
+$$
+\sum_{k=1}^{n+1}  \frac{k}{2^{k}} =  2 - \frac{(n+1)+2}{2^{n+1}}
+$$
+Vale:
+$$
+\begin{align}
+P(n+1) = \left(\sum_{k=1}^{n+1}  \frac{k}{2^{k}} =  2 - \frac{(n+1)+2}{2^{n+1}}\right)  &\Longleftrightarrow \left( \left( \sum_{k=1}^{n} \frac{k}{2^{k}} \right) + \frac{n+1}{2^{n+1}} = 2- \frac{n+3}{2^{n+1}} \right)  \\
+&\Longleftrightarrow \left( 2- \frac{n+2}{2^{n}} + \frac{n+1}{2^{n+1}} = 2 - \frac{n+3}{2^{n+1}} \right) \\
+&\Longleftrightarrow \frac{-2n-4+n+1}{2^{n+1}} = -\frac{n+3}{2^{n+1}} \\
+&\Longleftrightarrow -n-3 = - n-3
+\end{align}
+$$
+L'ultima affermazione della precedente catena di equivalenze è evidentemente verificata, dunque anche $P(n+1)$ lo è.
+
+Soluzione più snella (ufficiale):
+Procediamo per induzione su $n \geq 1$.
+(Base dell'induzione) $n = 1$.
+Dobbiamo dimostrare che:
+$$
+\begin{align}
+\sum_{k=1}^{1} \frac{k}{2^{k}} &= 2 - \frac{1+2}{2^{1}}  \\
+\frac{1}{2^{1}}  & = 2 - \frac{3}{2} \\
+\frac{1}{2} & = \frac{1}{2}
+\end{align}
+$$
+La base per induzione è verificata in quanto $\sum_{k=1}^{1} \frac{k}{2^{k}}=\frac{1}{2}=2-\frac{1+2}{2^{1}}$.
+(Passo induttivo) $\underbrace{ n \geq 1, n }_{ * } \implies  n+ 1$.
+Assumiamo che $*$ ($\sum_{k=1}^{n} \frac{k}{2^{k}} = 2 - \frac{n+2}{2^{n}}$) per qualche $n\geq 1$ (ipotesi induttiva).
+Dobbiamo provare che:
+$$
+\sum_{k=1}^{n+1}  \frac{k}{2^{k}} = 2 - \frac{(n+1)+2}{2^{n}}
+$$
+Adesso si utilizza il primo o il secondo modo, senza dover dichiarare la $P(n)$.

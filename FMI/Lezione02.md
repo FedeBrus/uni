@@ -26,6 +26,20 @@ Per definizione $X^{\emptyset} = \{ f \in 2^{\emptyset \times X} | \forall y \in
 
 Per definizione $\emptyset^{X} = \{ f \in 2^{X \times \emptyset} | \forall x \in X, \exists!y \in \emptyset : (x, y) \}$, ovvero l'insieme $\{ f | f : X \rightarrow \emptyset \}$, ma per definizione di funzione ogni elemento del dominio deve essere mappato a uno e uno solo elemento del codominio, ma il codominio in questo caso è l'insieme vuoto, dunque non è possibile costruire una tale funzione. Dunque $\emptyset^{X} =  \emptyset$
 
+Soluzione:
+$X = \emptyset \implies X \times Y = \emptyset \times Y = \emptyset$
+$2^{X \times Y} = 2^{\emptyset} = \{ \emptyset \} \implies$ l'unica relazione tra $\emptyset$ e $Y$ è $f=\emptyset$.
+$Y^{\emptyset} = \{ f \in \{ \emptyset \} | \forall x \in \emptyset, \exists!y \in Y: (x,y) \in f\}$
+Non ci sono verifiche da fare, quindi $Y^{\emptyset} = \{ \emptyset \}$.
+
+Dal caso precedente se abbiamo $\emptyset^{\emptyset}$ sappiamo che è $\{ \emptyset \}$.
+
+Sia $X \neq \emptyset$ e voglio calcolare $\emptyset^{X}$
+$\emptyset^{x} = \{ f \in \{ \emptyset \} | \forall x \in X, \exists!y \in \emptyset: (x, y) \in f \}$
+Non esisterà mai una $y$ per alcuna $x$. Dunque $\emptyset^{X} = \emptyset$.
+
+Difatti $|Y^{\emptyset}| = |Y|^{|\emptyset|} = |Y|^{0} = 1$ e $|\emptyset^{X}| = |\emptyset|^{|X|}=0^{|X|} =0$
+
 #### Esempio (1.12) Identità
 La funzione $id_{x}: X \rightarrow X$ definita ponendo $id_{x}(x):=x$, si dice identità di $X$.
 
