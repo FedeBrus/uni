@@ -17,9 +17,11 @@ Con il calcolo combinatorio si può calcolare $\#\Omega$:
 $$
 \#\Omega = D_{100, 3}^{\star} = 100^{3}
 $$
+Probabilità dell'evento generico:
 $$
 P_{\Omega}((i,j,k)) = \frac{1}{\#\Omega} = \frac{1}{100^{3}}
 $$
+Probabilità dell'evento considerato:
 $$
 P_{\Omega}(\text{CVV}) = \frac{20 \cdot 6 \cdot 6}{\#\Omega}
 $$
@@ -43,10 +45,10 @@ $$
 P_{\Omega}(\{ A, B, R, A, D,A,C,A,D,A,B,R,A \}) = \frac{5! \cdot 2! \cdot 2! \cdot 1! \cdot 1!}{11!} = \frac{1}{83160}
 $$
 #### Esempio
-Un'urna contiene 100 palline di cui 30 bianche e 70 rosse. Estrazione senza resinerimento.
+Un'urna contiene 100 palline di cui 30 bianche e 70 rosse. Vengono eseguite 10 estrazioni senza reinserimento. Si determini la probabilità che vengano estratte esattamente 5 palline bianche.
 Eventi elementari: 
 $$
-(a_{1},a_{2},\dots,a_{10}) \qquad a_{i} = \begin{cases}
+\{a_{1},a_{2},\dots,a_{10}\} \qquad a_{i} = \begin{cases}
 B = \text{pallina bianca} \\
 R = \text{pallina rossa}
 \end{cases} \qquad i = 1, \dots,  10
@@ -59,6 +61,16 @@ $$
 P_{\Omega} = \frac{C_{30,5} \cdot C_{70,5}}{C_{100, 10}} = \frac{\binom{30}{5} \binom{70}{5}}{\binom{100}{10}}
 $$
 Per casa fare l'esercizio contando l'ordine.
+Nel caso l'ordine delle palline bisogna considerare il numero di eventi elementari il numero di disposizioni totali senza ripetizione:
+$$
+\#\Omega = D_{100, 10} = \frac{100!}{10!}
+$$
+Dopodiché, intuitivamente il numero di casi favorevoli è dato prendendo il numero totale di gruppi di 10 palline tali che 5 palline siano rosse e 5 siano bianche (il numeratore di prima) e moltiplicarlo per tutti i possibili modi di disporre 10 palline.
+
+Infine il calcolo finale è:
+$$
+P_{\Omega} = \frac{C_{30,5} \cdot C_{70, 5} \cdot P_{10}}{D_{100,10}} 
+$$
 #### Esempio
 Assumiamo che la probabilità di essere nati in un certo giorno dell'anno sia uguale per qualsiasi giorno dell'anno. Un anno è composto da $365$.
 Determinare la probabilità che $n$ persone scelte a caso abbiano tutte compleanno in un giorno diverso.
