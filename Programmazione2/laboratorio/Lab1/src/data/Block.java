@@ -1,9 +1,14 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package data;
 
 public class Block {
     private char content;
 
-    public Block()  {
+    public Block() {
         this.content = '.';
     }
 
@@ -12,7 +17,7 @@ public class Block {
     }
 
     public char display() {
-        return content;
+        return this.content;
     }
 
     public void setContent(char content) {
