@@ -57,4 +57,3 @@ ma spesso si usa questa notazione:
 $$
 |X| = n
 $$
-### Lemma dei cassetti

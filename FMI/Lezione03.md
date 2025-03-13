@@ -110,7 +110,7 @@ Osserviamo che:
 - Prop 2.9 $\Longleftrightarrow succ(\mathbb{N})=\mathbb{N}\setminus\{ 0 \}$
 Quindi possiamo definire al funzione $succ': \mathbb{N} \rightarrow \mathbb{N}\setminus\{ 0 \}, succ'(n):=succ(n), \forall n \in \mathbb{N}$. $succ'$ è una bigezione.
 
-## Teorema 2.10 (Principio di induzione di prima forma)
+## * Teorema 2.10 (Principio di induzione di prima forma)
 Sia $\{ P(n) \}_{n\in \mathbb{N}}$ una famiglia di proposizioni indicizzata su $\mathbb{N}$. Supponiamo che:
 1. $P(0)$ è vera
 2. $\forall n \in \mathbb{N}, P(n) \implies P(succ(n))$ è vera, ovvero devo verificare che se $P(n)$ è vera allora anche $P(succ(n))$ è vera.
