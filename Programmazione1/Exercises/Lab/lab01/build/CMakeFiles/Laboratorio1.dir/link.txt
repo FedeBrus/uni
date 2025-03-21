@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Laboratorio1.dir/es01.o -o Laboratorio1  libarray.a
