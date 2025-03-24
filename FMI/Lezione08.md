@@ -1,4 +1,4 @@
-### Definizione 9.1
+## Definizione 9.1
 Siano $n, m \in \mathbb{Z}$. Diciamo che $n$ è un divisore di $m$, oppure $m$ è un multiplo di $n$, scriveremo $n | m$ che si legge "n divide m" se $\exists k \in \mathbb{Z}$ tale che $nk = m$.
 Se ciò è falso, $n \not{|}\ \    m$
 
@@ -76,13 +76,12 @@ $$
 n = qd \\
 0 \leq r < d
 \end{cases}
-\begin{cases}
+\implies
 d|n
-\end{cases}
 $$
 Lo stesso ragionamento si può fare con $m$ e dunque $d|m$. Perciò $d = (n, m)$.
 
-(XXX) INPUT:
+(Creiamo una procedura per trovare l'MCD) INPUT:
 - $n, m \in \mathbb{Z}$ non entrambi nulli
 - $S:=\{ s \in \mathbb{Z} | s > 0, s =xn+ym \text{ per qualche } x,y \in \mathbb{Z} \}$
 - $d:= min(S)$
@@ -91,29 +90,29 @@ Ma $S$ è infinito, quindi non si può mettere in macchina.
 
 ### Corollario 9.8
 Siano $n,m \in \mathbb{Z}$ non entrambi nulli, allora vale che $(n,m) = xn +ym$ per qualche $x, y \in \mathbb{Z}$.
-
 ### Osservazione 9.8
-$n, m \in \mathbb{Z}$ non entrambi nulli. 
+Siano $n, m \in \mathbb{Z}$ non entrambi nulli. 
 1) Osserviamo che la nozione di divisibilità non dipende dal segno: $d|n \Longleftrightarrow \exists k\in \mathbb{Z} : n=kd \Longleftrightarrow n=(-k)(-d)\Longleftrightarrow -d|n$
 ma se $n = kd \Longleftrightarrow - n = (-k)d = k(-d)$ e quindi $d|-n$ e $-d | -n$.
 Dunque se $d|n$ segue che $d|-n, -d|n, -d|-n$.
 Dunque $(n,m)=(-n,m)=(n, -m)=(-n, -m)=(|n|, |m|)$.
 2) Siccome $(n, m) > 0$, $c|n$ e $c|m$ $\implies$ $c|(n,m)$ $\implies$ $(n, m) = max \{ c \in \mathbb{Z} | \ c|n  \text{ e } c | m \}$.
-3) $(n, 0) = (|n|, 0) = max\{ x \in \mathbb{Z} | \ c | |n| \text{ e } c | 0 \} = max\{ x \in \mathbb{Z} | \ c | |n| \} = |n| \implies (n,0) = |n|$.
+3) $(n, 0) = (|n|, 0) = max\{ c \in \mathbb{Z} | \ c | |n| \text{ e } c | 0 \} = max\{ c \in \mathbb{Z} | \ c | |n| \} = |n| \implies (n,0) = |n|$.
 
 ### Definizione 9.10
 Dati $n,m\in \mathbb{Z}$ non entrambi nulli, diciamo che $n$ e $m$ sono coprimi oppure primi tra loro se $(n,m) = 1$.
 
 ### Osservazione 9.11
 Dati $n,m \in \mathbb{Z}$ come sopra, le seguenti affermazioni sono equivalenti:
-1. $(n, m) = 1$
-2. $\exists x,y \in \mathbb{Z}$ tali che $xn + ym = 1$
+$$
+(n, m) = 1 \Longleftrightarrow \exists x,y \in \mathbb{Z}:xn + ym = 1
+$$
 
 Proviamolo:
-(1) $\implies$ (2) Corolloario 9.8 $\implies$ $\exists x,y \in \mathbb{Z}$  tali che $xn +ym = (n, m) = 1$
-(2) $\implies$ (1) Supponiamo che $xn +ym =  1$ per qualche $x,y \in \mathbb{Z}$. Vale:
+$\implies$ Corolloario 9.8 $\implies$ $\exists x,y \in \mathbb{Z}$  tali che $xn +ym = (n, m) = 1$
+$\impliedby$ Supponiamo che $xn +ym =  1$ per qualche $x,y \in \mathbb{Z}$. Vale:
 $$
-(n, m) | n \text{ e } (n, m) | m \implies (n,m) | xn +ym = 1 \Longleftrightarrow (n, m) > 0, (n, m) | 1 \implies (n,m) = 1
+(n, m) | n \text{ e } (n, m) | m \overbrace{ \implies }^{ L.U. } (n,m) | xn +ym = 1 \Longleftrightarrow (n, m) > 0, (n, m) | 1 \implies (n,m) = 1
 $$
 #### Esempio
 $\forall n \in \mathbb{Z}$, $(n, n+1) = 1$: $(-1)n + 1(n+1)=1$.
@@ -128,7 +127,7 @@ Grazie al corolloario 9.8, vale $d = xn + ym$ per qualche $x,y \in \mathbb{Z}$.
 $$
 \frac{d}{d} = \frac{xn+ym}{d} \Longleftrightarrow 1 = \frac{xn}{d} + \frac{ym}{d} = x\left( \frac{n}{d} \right) + y\left( \frac{m}{d} \right)
 $$
-Siccome $\frac{n}{d}$ e $\frac{m}{d}$ sono interi, allora $\left( \frac{n}{d}, \frac{m}{d} \right) = 1$.
+Siccome $\frac{n}{d}$ e $\frac{m}{d}$ sono interi, allora $\left( \frac{n}{d}, \frac{m}{d} \right) = 1$, per via dell'osservazione 9.11.
 ### Proposizione 9.13
 Siano $n,m \in \mathbb{Z}$ tali che $m \neq 0$. Eseguiamo la divisione di $n$ per $m$.
 $$

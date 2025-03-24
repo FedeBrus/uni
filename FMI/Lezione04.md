@@ -91,7 +91,7 @@ Sia $X$ un insieme non vuoto e sia $\mathcal{R}$ una relazione tra $X$ e $X$, ov
 3. $x\mathcal{R}y$ e $y\mathcal{R}z$, per qualche $x,y,z \in X \implies x\mathcal{R}z$, transitiva
 
 Se in più vale anche 
-1. $\forall x,y \in X$, o $x\mathcal{R}y$ o $y\mathcal{R}x$, tricotomia
+1. $\forall x,y \in X$, $x\mathcal{R}y$ o $y\mathcal{R}x$, totalità
 allora $\mathcal{R}$ si dice ordinamento totale di $X$. Inoltre $(X, \mathcal{R})$ si dice insieme parzialmente (totalmente) ordinato se $\mathcal{R}$ è un ordinamento parziale (totale) di $X$.
 
 ### Def 3.3 

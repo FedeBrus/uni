@@ -50,7 +50,7 @@ Sia $X$ un insieme e per ogni $x \in X$ sia $P(x)$ una affermazione che abbia se
 $X = \mathbb{N}$
 $\forall x \in \mathbb{N}, P(x) =\text{"divisibile per 2"}$
 
-Allora $\{ x | x \in X, P(x) \text{ è vera} \} = \{ x \in X | P(x) \}$ è un vero insieme.
+Allora $\{ x | x \in X, P(x) \text{ e' vera} \} = \{ x \in X | P(x) \}$ è un vero insieme.
 
 Tornando all'esempio:
 $$
@@ -61,7 +61,7 @@ L'insieme che ha per elementi tutti gli insiemi non esiste.
 
 ### Dimostrazione
 Supponiamo che esista un insieme $U$ i cui elementi sono tutti gli insiemi. Prendiamo un suo elemento $x$ con $P(x) = \text{"}x \not\in x\text{"}$.
-Per l'assioma di separazione si avrebbe che $\{ x \in U | x \not\in x \}$ è un'insieme e ci ritroviamo con il paradosso di Russell.
+Per l'assioma di separazione si avrebbe che $\{ x \in U | x \not\in x \}$ è un insieme e ci ritroviamo con il paradosso di Russell.
 
 ## Operazioni tra insiemi
 Siano $X, Y$ insiemi.

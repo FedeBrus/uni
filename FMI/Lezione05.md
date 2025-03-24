@@ -49,7 +49,7 @@ Poiché l'ultima è un'identità, anche la prima uguaglianza è verificata.
 ## Insiemi finiti
 Per ogni $n\in \mathbb{N} \setminus \{ 0 \}$, indichiamo con $I_{n}:= \{ 0,1,\dots,n-1 \}$ e $I_{0}:=\emptyset$
 ### Def 3.10
-Diciamo che un insieme $X$ è finito se $\exists n \in \mathbb{N}:X$ è equipotente a $I_{n}$, ovvero $X \sim I_{n}$ ovvero $\exists f:X \rightarrow I_{n}$ bigezione. Il numero di elmenti di un insieme finito è univocamente determinato.
+Diciamo che un insieme $X$ è finito se $\exists n \in \mathbb{N}:X$ è equipotente a $I_{n}$, ovvero $X \sim I_{n}$ ovvero $\exists f:X \rightarrow I_{n}$ bigezione. Il numero di elementi di un insieme finito è univocamente determinato.
 $$
 |X| = I_{n}
 $$
