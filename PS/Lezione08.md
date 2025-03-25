@@ -40,9 +40,9 @@ Qual è la probabilità che sia bianca la pallina che è stata trasferita.
 $$
 \begin{align}
 b_{A} &= \{ \text{bianca da A} \} \\
-b_{B} &= \{ bianca da B \} \\
-n_{A} &= \{ nera da A \} \\
-n_{B} &= \{ nera da B \}
+b_{B} &= \{ \text{bianca da B} \} \\
+n_{A} &= \{ \text{nera da A} \} \\
+n_{B} &= \{ \text{nera da B} \}
 \end{align}
 $$
 Ciò che si deve calcolare è $P(b_{A}|b_{B})$.
