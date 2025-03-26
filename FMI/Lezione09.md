@@ -53,11 +53,11 @@ Valgono:
 1. $n | mq \implies n|q$
 2. $n|q$ e $m|q$ $\implies nm|q$
 
-### Dimostrazione
+### Dimostrazione 1.
 Grazie al corollario 9.8, $\exists x,y \in \mathbb{Z} : xn+ym =(n,m) = 1 \implies xn+ym=1 \implies qxn+ymq = q$.
 Quindi $qx(n)+y(mq) = q$. Siccome $n|mq$ e $n|n$, grazie al lemma utile $n|qxn+ymq$ e quindi $n|q$.
 
-### Dimostrazione
+### Dimostrazione 2.
 $n|q$ e $m|q$ $\Longleftrightarrow \exists k,h \in \mathbb{Z} :$ $q = nk$ e $q = mh$. Quindi $n | (q=mh)$, ma $n$ e $m$ sono coprimi ma allora per il punto 1 $n|h \Longleftrightarrow \exists l\in \mathbb{Z}:h=nl$. Riprendendo una delle equazioni iniziali si ha che $q = m(nl) = (mn)l \implies mn | q$.
 
 ### Definizione 9.4 (p25)
@@ -83,7 +83,7 @@ Lo stesso vale per $h$. Quindi $p$ è primo.
 Sia $p$ un numero primo.
 Dimostrate per induzione su $k \geq 1$ (1a forma).
 $$
-P(k) := (n,m \dots, n_{k} \in \mathbb{Z}: p|n_{1}n_{2}\dots n_{k} \implies p|n_{i}, \text{ per qualche } i \in \{ 1, \dots, k \})
+P(k) := (n_{1},n_{2} \dots, n_{k} \in \mathbb{Z}: p|n_{1}n_{2}\dots n_{k} \implies p|n_{i}, \text{ per qualche } i \in \{ 1, \dots, k \})
 $$
 
 
