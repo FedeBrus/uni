@@ -7,7 +7,7 @@ $$
 $$
 F(x) = \begin{cases}
 0 \text{ se } x < 0 \\
-x \text{ se } 0\leq x\leq 1 \\
+x \text{ se } 0\leq x < 1 \\
 1 \text{ se } x \geq 1
 \end{cases}
 $$
@@ -19,7 +19,7 @@ Quando siamo in presenza di questo tipo di successione è possibile fare il segu
 $$
 P\left( \lim_{ n \to +\infty } \left( a - \frac{1}{n}, a \right] \right) \underbrace{ = }_{ monotonia } \lim_{ n \to +\infty } P\left( \left( a - \frac{1}{n}, a \right] \right)
 $$
-Assumendo $a \in [0, 1]$.
+Considerando la funzione dell'esempio e assumendo $a \in [0, 1]$.
 $$
 \begin{align}
 P([a, b]) &= P\left( \bigcap_{n=1}^{+\infty} \left( a-\frac{1}{n}, b \right] \right)  \\
@@ -32,12 +32,13 @@ P([a, b]) &= P\left( \bigcap_{n=1}^{+\infty} \left( a-\frac{1}{n}, b \right] \ri
 $$
 Se $a \leq 0$:
 $$
-P([a, b]) = F(b) - \lim_{ n \to +\infty } \left( 0 - \frac{1}{n} \right) = F(b)
+P([a, b]) = F(b) - \lim_{ n \to +\infty } F\left( 0 - \frac{1}{n} \right) = F(b)
 $$
 Se $a \geq 1$:
 $$
-P([a, b]) = F(b) - \lim_{ n \to +\infty } \left( 1 - \frac{1}{n} \right) = F(b) - 1 = 0, \forall b \geq a
+P([a, b]) = F(b) - \lim_{ n \to +\infty } F\left( 1 - \frac{1}{n} \right) = F(b) - 1 = 0, \forall b \geq a
 $$
+Proviamo a calcolare la probabilità di un singoletto.
 $$
 \begin{align}
 P(\{ a \}) &= \lim_{ n \to +\infty } \left( F(a) - F\left( a - \frac{1}{n} \right) \right)  \\
@@ -86,7 +87,7 @@ Consideriamo questa funzione:
 $$
 F(x) = \begin{cases}
 0 \text{ se } x < 0 \\
-\frac{1}{2} \text{ se } 0< x \leq 1 \\
+\frac{1}{2} \text{ se } 0 \leq x < 1 \\
 1 \text{ se } x \geq 1
 \end{cases}
 $$
@@ -96,11 +97,11 @@ P((a,b]) = F(b) - F(a) = \frac{1}{2} - \frac{1}{2} = 0
 $$
 Consideriamo $-\infty \leq a \leq b \leq 0$.
 $$
-P(a, b) = \lim_{ x \to b^{-} } F(x) - F(a) = 0 - 0 = 0
+P((a, b]) = \lim_{ x \to b^{-} } F(x) - F(a) = 0 - 0 = 0
 $$
 Consideriamo $1 \leq a \leq b \leq +\infty$
 $$
-P((a, b)) = \lim_{ x \to b^{-} }  F(x) - F(a) = 1- 1= 0
+P((a, b]) = \lim_{ x \to b^{-} }  F(x) - F(a) = 1- 1= 0
 $$
 Quindi:
 $$
@@ -140,11 +141,13 @@ x \text{ se } 0 \leq x < 1 \\
 \qquad
 F_{2}(x) = \begin{cases}
 0 \text{ se } x < 0 \\
-\frac{1}{2} \text{ se } 0< x \leq 1 \\
+\frac{1}{2} \text{ se } 0\leq x < 1 \\
 1 \text{ se } x \geq 1
 \end{cases}
 $$
-$F_{\varepsilon}(x) = (1-\varepsilon)F_{1}(x) + \varepsilon F_{2}(x),0\leq\varepsilon\leq 1$.
+$$
+F_{\varepsilon}(x) = (1-\varepsilon)F_{1}(x) + \varepsilon F_{2}(x),0\leq\varepsilon\leq 1
+$$
 ![[]]
 
 $$

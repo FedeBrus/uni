@@ -63,7 +63,7 @@ $n|q$ e $m|q$ $\Longleftrightarrow \exists k,h \in \mathbb{Z} :$ $q = nk$ e $q =
 ### Definizione 9.4 (p25)
 Un numero $p \in \mathbb{Z}$ si dice primo se $p \geq 2$ e possiede solo i quattro divisori banali, ovvero $\pm 1, \pm p$.
 
-### Corollario 10.2
+### Corollario 10.2 (Sistemare)
 Sia $p \in \mathbb{Z}$ tale che $p \geq 2$. Allora $p$ è primo se e soltanto se soddisfa la seguente proprietà:
 $$
 (\star) \forall n,m \in \mathbb{Z}: (p|nm \implies p|n \text{ or } p|m)
