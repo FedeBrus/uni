@@ -150,6 +150,3 @@ Una funzione di distribuzione $F$ è:
 - $\lim_{ x \to +\infty } F(x) = 1$
 - $\lim_{ x \to -\infty } F(x) = 0$
 - $P((a, b]) = F(b) - F(a)$
-
-#### Esempio
-

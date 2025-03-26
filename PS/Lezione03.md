@@ -36,13 +36,14 @@ $\emptyset = \Omega^{c}$, quindi $P(\emptyset) = 1 -P(\Omega) = 1-1 = 0$
 Se $A, B$ sono due eventi, allora $Pr(A \cup B) = Pr(A) + Pr(B)-Pr(A \cap B)$.
 Notiamo che:
 $$
-A \cup B = A \cup (B \cap A^{c})
+A \cup B = (A \cup B) \cap (A \cup A^{c}) = A \cup (B \cap A^{c})
+$$
+Risulta anche che
+$$
+A \cap (B \cap A^{c}) = (A \cap A^{c})\cap B = \emptyset \cap B =  \emptyset
 $$
 $$
-A \cap (B \cap A^{c}) = \emptyset
-$$
-$$
-B = (A \cap B) \cup (B \cap A^{c})
+B = (A \cap B) \cup (B \cap A^{c}) = B \cap (A \cup A^{c}) = B \cap \Omega = B
 $$
 Per la (3), $P(A \cup B) = P(A \cup (B \cap A^{c})) = P(A)+P(B \cap A^{c})$.
 Per la (3), $P(B) = P((A \cap B) \cup (B \cap A^{c})) = P(A \cap B)+ P(A^{c} \cap B)$.
@@ -56,7 +57,7 @@ B &= (A \cap B) \cup (A^{c} \cap B) \\
  & = A \cup (A^{c} \cap B)
 \end{align}
 $$
-Quindi $P(B) = P(A)+P(A^{c} + B) \geq P(A)$, perché $P(A^{c} \cap B) \geq 0$ per l'assioma (1).
+Quindi $P(B) = P(A)+P(A^{c} \cap B) \geq P(A)$, perché $P(A^{c} \cap B) \geq 0$ per l'assioma (1).
 
 Nota:
 La regola 3 implica che qualsiasi evento $A$ abbia $P(A) \leq 1$, perché $A \subseteq \Omega \implies P(A) \leq P(\Omega) \implies P(A)\leq 1$.
