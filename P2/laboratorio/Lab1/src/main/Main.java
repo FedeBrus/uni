@@ -3,10 +3,11 @@
 // (powered by FernFlower decompiler)
 //
 
-package Main;
+package main;
 
+import data.AirBlock;
 import data.Block;
-import data.Map;
+import ui.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -18,10 +19,10 @@ public class Main {
 
         map.displayOnOut();
 
-        Block b1 = new Block('#', false, false);
-        Block b2 = new Block('@', true, false);
-        Block b3 = new Block('@', true, false);
-        Block b4 = new Block('@', true, false);
+        Block b1 = new AirBlock();
+        Block b2 = new AirBlock();
+        Block b3 = new AirBlock();
+        Block b4 = new AirBlock();
 
         System.out.println("-----");
         map.insertAtCoords(b1, 0, 4);
@@ -35,5 +36,7 @@ public class Main {
         System.out.println("-----");
         map.insertAtCoords(b4, 2, 1);
         map.displayOnOut();
+
+        System.out.println(b4);
     }
 }

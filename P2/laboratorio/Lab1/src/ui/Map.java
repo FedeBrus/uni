@@ -3,7 +3,10 @@
 // (powered by FernFlower decompiler)
 //
 
-package data;
+package ui;
+
+import data.AirBlock;
+import data.Block;
 
 public class Map {
     private int width;
@@ -17,7 +20,7 @@ public class Map {
 
         for(int i = 0; i < height; ++i) {
             for(int j = 0; j < width; ++j) {
-                this.content[i][j] = new Block();
+                this.content[i][j] = new AirBlock();
             }
         }
     }
@@ -36,12 +39,6 @@ public class Map {
                 System.out.print(this.content[i][j].display());
             }
             System.out.print('\n');
-        }
-    }
-
-    public void changeCell(char c, int x, int y) {
-        if (x >= 0 && x < width && y >= 0 && y < height) {
-            content[y][x].setContent(c);
         }
     }
 
