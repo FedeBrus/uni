@@ -6,3 +6,10 @@ Con le interfacce il compiler avverte di diamond problems, viene scelto il defau
 Allo stesso tempo se due unrelated interfaces hanno un metodo default uguale e ho una classe che le implementa entrambe, questo è un compiler error, perché non sa quale default utilizzare.
 
 Il compilatore controlla i generics ma dopo i parametri diventano effettivamente Object (type erasure). Dunque non si puà eseguire subtype polymorphism con i generics.
+
+Non si può fare overloading dove l'unica modifica è il tipo dopo l'extends o il parametro, perché a runtime verranno salvati entrambi i metodi con tipo Object, perciò non funziona.
+
+Object level composition.
+Avere un oggetto che compone altre oggetti a cui delega il comportamento.
+L'idea è di delegare il comportamento a dei sub-object salvati in dei campi. Questi oggetti sono responsabili di determinate parti di comportamento.
+Composizione.
