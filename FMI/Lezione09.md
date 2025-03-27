@@ -85,5 +85,3 @@ Dimostrate per induzione su $k \geq 1$ (1a forma).
 $$
 P(k) := (n_{1},n_{2} \dots, n_{k} \in \mathbb{Z}: p|n_{1}n_{2}\dots n_{k} \implies p|n_{i}, \text{ per qualche } i \in \{ 1, \dots, k \})
 $$
-
-
