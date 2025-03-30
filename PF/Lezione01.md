@@ -5,12 +5,13 @@
 Le espressioni sono unità sintattiche che producono un valore o non terminano.
 Sono di solito composta da una singola entità (una variabile, una costante) oppure un operatore che opera su operandi che sono a loro volta espressioni.
 
+#### Eager vs Lazy evaluation
 Le espressioni possono essere valutate in due modi:
 - eager: vengono valutati tutti gli operandi e poi viene applicata l'operazione ai valori.
 - lazy: gli operandi sono valutati solo quando necessario.
 
 In ML viene utilizzata la eager evaluation, tranne per alcuni costrutti: 'andalso', 'orelse', 'if-then-else'.
-### I comandi
+### I comandi 
 I comandi sono entità sintattiche la cui valutazione non necessariamente produce un valore ma servono a modificare lo stato.
 ### Side effect
 Un side effect è un cambiamento allo stato del sistema al di fuori dal contesto locale.
@@ -24,6 +25,17 @@ Avere tipi forti aiutano la semantica del programma.
 - char
 - string
 - unit: (), unico valore di unit, utilizzando per le espressioni che non ritornano un valore
+
+### Scalar vs Composite types
+Tipi semplici o scalari: tipi i cui valori non sono una composizione di valori.
+Tipi composti: ottenuti tramite la combinazione di altri tipi
+### Type checking statico e dinamico
+Il type-checking statico avviene a compiletime mentre il type-checking dinamico avviene a runtime.
+
+### Fortemente tipizzato vs debolmente tipizzato
+I linguaggi fortemente tipizzati riducono al minimo o addirittura proibiscono la conversione implicita dei tipi. I linguaggi debolmente tipizzati fanno abbondante uso di coerzione e conversioni implicite.
+
+Un linguaggio che è type-safe è un linguaggio che cattura tutti gli errori di tipi a compile-time.
 #### Interi:
 Possono essere decimali o esademicali, positivi o negativi:
 e.g.: 3, ~3, 0x3, ~0x3

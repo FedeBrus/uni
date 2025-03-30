@@ -5,48 +5,63 @@
 
 package ui;
 
-import data.AirBlock;
-import data.Block;
+import data.*;
+
+import java.util.Random;
 
 public class Map {
-    private int width;
-    private int height;
-    private Block[][] content;
+    private final int width;
+    private final int height;
+    private final Block[][] content;
 
     public Map(int width, int height) {
+        // Mappa di default composta da sola aria
         this.width = width;
         this.height = height;
-        this.content = new Block[height][width];
+        content = new Block[height][width];
 
-        for(int i = 0; i < height; ++i) {
-            for(int j = 0; j < width; ++j) {
-                this.content[i][j] = new AirBlock();
+        for (int i = 0; i < height; i++) {
+            for(int j = 0; j < width; j++) {
+                insertAtCoords(new AirBlock(), j, i);
             }
         }
+        
+        Random rand = new Random();
+        int RANDOM_BLOCKS_TO_ADD = 10;
+        for (int i = 0; i < RANDOM_BLOCKS_TO_ADD; i++){
+            Block b = new SandBlock();
+            int y = rand.nextInt(width);
+            int x = rand.nextInt(height);
+            insertAtCoords(b, x, y);
+        }
+
+        addRiver();
     }
 
     public int getWidth() {
-        return this.width;
+        return width;
     }
 
     public int getHeight() {
-        return this.height;
+        return height;
     }
 
     public void displayOnOut() {
-        for(int i = 0; i < this.height; ++i) {
-            for(int j = 0; j < this.width; ++j) {
-                System.out.print(this.content[i][j].display());
+        // Stampa
+        for(int i = 0; i < height; ++i) {
+            for(int j = 0; j < width; ++j) {
+                System.out.print(content[i][j].display());
             }
             System.out.print('\n');
         }
     }
 
     private void swap(int x, int y) {
-        if (x >= 0 && y >= 0 && x < width - 1 && y < height - 1) {
-            if (content[y + 1][x + 1].isFallsThrough()) {
+        // Scambia un blocco in (x, y) con quello sotto in (x, y + 1)
+        if (x >= 0 && y >= 0 && x < width && y < height - 1) {
+            if (content[y + 1][x].isFallsThrough()) {
                 Block tmp = content[y][x];
-                content[y][x] = content[y + 1][x + 1];
+                content[y][x] = content[y + 1][x];
                 content[y + 1][x] = tmp;
             }
         }
@@ -66,5 +81,45 @@ public class Map {
 
         swap(x, y);
         fall(x, y + 1);
+    }
+
+    private void addWaterRow(int y) {
+        if (y >= 0 && y < height) {
+            for (int x = 0; x < width; x++) {
+                insertAtCoords(new WaterBlock(), x, y);
+            }
+        }
+    }
+
+    public void addRiver() {
+        addWaterRow(0);
+    }
+
+    public void addSea() {
+        addRiver();
+        addRiver();
+        addRiver();
+    }
+
+    public boolean isSmeltableAt(int x, int y) {
+        if (x >= 0 && y >= 0 && x < width && y < height)
+            return content[y][x] instanceof SmeltableBlock;
+
+        return false;
+    }
+
+    public Block at(int x, int y) {
+        if (x >= 0 && y >= 0 && x < width && y < height)
+            return content[y][x];
+
+        return new NullBlock();
+    }
+
+    public SmeltableBlock SmeltableBlockAt(int x, int y) {
+        if (isSmeltableAt(x, y)) {
+            return (SmeltableBlock) at(x, y);
+        } else {
+            return new NullBlock();
+        }
     }
 }

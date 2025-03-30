@@ -123,7 +123,7 @@ Ora consideriamo i casi dove $m < 0$.
 Dobbiamo eseguire la divisione di $n \in \mathbb{Z}$ per $m < 0$. Eseguiamo prima la divisione tra $n$ per $-m > 0$:
 $$
 \begin{cases}
-n = q(-m) + r
+n = q(-m) + r \\
 0 \leq r < -m = |m|
 \end{cases}
 \Longleftrightarrow

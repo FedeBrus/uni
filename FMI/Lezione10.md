@@ -25,12 +25,12 @@ Supponiamo che $n$ e $m$ siano entrambi non nulli. Ha senso dunque, parlare di $
 Osserviamo che $(n, m)|n$ e $(n, m)|m$, ovvero $\exists n',m' \in \mathbb{Z}$ tali che $n = (n,m)n'$ e $m = (n,m)m'$.
 Definiamo $M:= \frac{|n||m|}{(n,m)}$. Assumiamo che $n,m \geq 0$.
 Allora $M \geq 0$.
-Verifichiamoc he vale (1): $n|M$ e $m|M$.
+Verifichiamo che vale (1): $n|M$ e $m|M$.
 Vale:
 $$
 M = \frac{nm}{(n,m)} = \frac{n'(n,m)m'(n,m)}{(n,m)} = n'm'(n,m) \in \mathbb{N} = n'm = nm'
 $$
-Dunque $M = n'm \implies m|N$. Inoltre $M = nm' \implies n|M$.
+Dunque $M = n'm \implies m|M$. Inoltre $M = nm' \implies n|M$.
 Verifichiamo (2): Se $c\in \mathbb{Z}$ tali che $n|c$ e $m|c$, allora $M|c$.
 Osserviamo che:
 - $(n,m)|n$ e $n|c$ $\implies$ $(n,m)|c \Longleftrightarrow \exists c'\in \mathbb{Z}$  tale che $c = c'(n,m)$. La stessa procedura vale per $m$.
@@ -109,4 +109,4 @@ n = (p_{1},\dots,p_{i-1},p_{i + 1}, \dots, p_{m})p_{i} + 1 \\
 0 \leq 1 < (p_{1} \geq 2)
 \end{cases}
 $$
-Ma siccomre $r = 1$ e $p \not{|}\ n$ e ciò p assurdo. Dunque i numeri primi non sono finiti.
+Ma siccomre $r = 1$ e $p \not{|}\ n$ e ciò è assurdo. Dunque i numeri primi non sono finiti.

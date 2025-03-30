@@ -98,3 +98,20 @@ fun powerSet(nil) = [nil]
 powerSet([1,2,3]);
 powerSet([#"a", #"c"]);
 powerSet nil;
+
+fun prod_tail(x, nil) = 1.0
+    | prod_tail(x, head::tail) = (x - head) * prod_tail(x, tail);
+
+fun prod_diff(nil) = 1.0
+    | prod_diff(head::tail) = prod_tail(head, tail) * prod_diff(tail);
+
+prod_diff(nil);
+prod_diff([1.0, 2.0, 3.0]);
+
+fun is_one(1) = "one"
+| is_one(x) = "anything else";
+
+is_one 1;
+is_one 2;
+
+(fn => 1 = "one" | x = "anything else") 1;

@@ -7,6 +7,8 @@ package main;
 
 import data.AirBlock;
 import data.Block;
+import data.WaterBlock;
+import ui.MainView;
 import ui.Map;
 import java.util.Scanner;
 
@@ -15,28 +17,20 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Map map = new Map(5, 5);
+        MainView mv = new MainView(5, 5);
+        mv.displayOnOut();
+        for (int i = 0 ; i < 10 ; i++){
+            System.out.print("Enter row and then column, or enter '9' and then '9' for smelting: ");
 
-        map.displayOnOut();
-
-        Block b1 = new AirBlock();
-        Block b2 = new AirBlock();
-        Block b3 = new AirBlock();
-        Block b4 = new AirBlock();
-
-        System.out.println("-----");
-        map.insertAtCoords(b1, 0, 4);
-        map.displayOnOut();
-        System.out.println("-----");
-        map.insertAtCoords(b2, 0, 2);
-        map.displayOnOut();
-        System.out.println("-----");
-        map.insertAtCoords(b3, 0, 1);
-        map.displayOnOut();
-        System.out.println("-----");
-        map.insertAtCoords(b4, 2, 1);
-        map.displayOnOut();
-
-        System.out.println(b4);
+            Scanner myObj = new Scanner(System.in);
+            int row = myObj.nextInt();
+            int col = myObj.nextInt();
+            if (row == 9 && col == 9){
+                mv.smelt();
+            }else{
+                mv.moveIntoFurnace(row, col);
+            }
+            mv.displayOnOut();
+        }
     }
 }

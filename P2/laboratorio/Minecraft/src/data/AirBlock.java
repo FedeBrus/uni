@@ -7,6 +7,6 @@ package data;
 
 public class AirBlock extends AbstractBlock {
     public AirBlock() {
-        super("Air", ' ', false, true);
+        super("AirBlock", ' ', false, true);
     }
 }
