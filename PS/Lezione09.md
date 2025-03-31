@@ -148,8 +148,6 @@ $$
 $$
 F_{\varepsilon}(x) = (1-\varepsilon)F_{1}(x) + \varepsilon F_{2}(x),0\leq\varepsilon\leq 1
 $$
-![[]]
-
 $$
 \begin{align}
 P(\{ 0 \}) &= \frac{1}{4} \\

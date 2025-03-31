@@ -29,7 +29,7 @@ Il passo induttivo è stato fatto e quindi grazie al principio di induzione la $
 Sia $\{ P(n) \}_{n \in \mathbb{N}}$ una famiglia di proposizioni indicizzata su $\mathbb{N}$.
 Supponiamo che:
 1. (Base dell'induzione) $P(0)$ è vera.
-2. (Passo induttivo di seconda forma) Se $n > 0$ e se $P(k)$ è vera $\forall k \in \mathbb{N}$$ tale che $0\leq k <n$, allora $P(n)$ è vera. In simboli:
+2. (Passo induttivo di seconda forma) Se $n > 0$ e se $P(k)$ è vera $\forall k \in \mathbb{N}$ tale che $0\leq k <n$, allora $P(n)$ è vera. In simboli:
    $n > 0, \left( \forall k \in \mathbb{N}, 0\leq k<n, P(k) \implies P(n) \right)$
 
 Allora $P(n), \forall n \in \mathbb{N}$.
