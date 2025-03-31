@@ -22,7 +22,7 @@ r_{1} = q_{3}r_{2} + r_{3} &\qquad (r_{2}, r_{3}) &\qquad r_{3}  \\
 r_{k-3} = q_{k-1}r_{k-2}+r_{k-1} &\qquad (r_{k-2}, r_{k-1}) & \qquad r_{k-1} \\
 r_{k-2} = q_{k}r_{k-1}+r_{k} &\qquad (r_{k - 1}, r_{k}) &\qquad r_{k} \\
 r_{k-1} = q_{k+1}r_{k}+r_{k+1} &\qquad (r_{k}, 0) &\qquad 0 \\
- & \qquad r_{k} & \qquad
+ r_{k} & \qquad  & \qquad
 \end{align}
 $$
 $\exists!k\in \mathbb{N}, r_{k+1} = 0$.
@@ -45,7 +45,8 @@ $$
 $$
 #### Esempio
 Calcolare $(28, 48)$ e trovare una coppia $(x, y) \in \mathbb{Z} \times \mathbb{Z}$ tale che $x 28 + y 48= (28,48)$.
-
+![[9_1]]
+![[9_2]]
 ## Proprietà dei numeri coprimi e caraterrizzazione dei numeri primi (p. 26)
 ### Proposizione 10.1
 Siano $n, m \in \mathbb{Z}$ non entrambi nulli e coprimi. Sia $q \in \mathbb{Z}$.
@@ -55,7 +56,7 @@ Valgono:
 
 ### Dimostrazione 1.
 Grazie al corollario 9.8, $\exists x,y \in \mathbb{Z} : xn+ym =(n,m) = 1 \implies xn+ym=1 \implies qxn+ymq = q$.
-Quindi $qx(n)+y(mq) = q$. Siccome $n|mq$ e $n|n$, grazie al lemma utile $n|qxn+ymq$ e quindi $n|q$.
+Quindi $qx(n)+y(mq) = q$. Siccome $n|mq$ e $n|n$, grazie al lemma utile $n|qxn+ymq$ e quindi $n|q(xn + ym)\implies n|q(1) \implies n|q$.
 
 ### Dimostrazione 2.
 $n|q$ e $m|q$ $\Longleftrightarrow \exists k,h \in \mathbb{Z} :$ $q = nk$ e $q = mh$. Quindi $n | (q=mh)$, ma $n$ e $m$ sono coprimi ma allora per il punto 1 $n|h \Longleftrightarrow \exists l\in \mathbb{Z}:h=nl$. Riprendendo una delle equazioni iniziali si ha che $q = m(nl) = (mn)l \implies mn | q$.
@@ -69,12 +70,12 @@ $$
 (\star) \forall n,m \in \mathbb{Z}: (p|nm \implies p|n \text{ or } p|m)
 $$
 ### Dimostrazione $\implies$
-Sia $p$ un numero primo. Supponiamo che $n,m \in \mathbb{Z}$ tali che $p|nm$. Dobbiamo provare che $p|n$ oppure $p|m$. Se $p|n$, OK. Supponiamo che $p\not{|}\ n$. Allora $\pm 1$ sono i soli divisori di $p, n$. Ma allora $p|m$.
+Sia $p$ un numero primo. Supponiamo che $n,m \in \mathbb{Z}$ tali che $p|nm$. Dobbiamo provare che $p|n$ oppure $p|m$. Se $p|n$, OK. Supponiamo che $p\not{|}\ n$. Allora $\pm 1$ sono i soli divisori di $p, n$. Ma allora $p|m$ per la proposizione 10.1.
 
 ### Dimostrazione $\impliedby$
 Supponiamo che $p$ soddisfi $(\star)$. Proviamo che $p$ è primo. Scriviamo $p=dh$ per qualche $d, h \in \mathbb{Z}$. Vale:
 $$
-p|p \implies p|dh \overbrace{ \implies }^{ (\star) } p|d \text{ o } p|h
+p|p \implies p|dh \overbrace{ \implies }^{ (\star) } p|d \text{ or } p|h
 $$
 Ma $d|p$ e se valgono entrambe allora $p = d$ o $p=-d$. Se $p = d \implies p = ph \implies h = 1$. Se $p = -d \implies p=-ph \implies h = -1$.
 Lo stesso vale per $h$. Quindi $p$ è primo.

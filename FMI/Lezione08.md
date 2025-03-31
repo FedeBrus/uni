@@ -22,7 +22,7 @@ Se $1-kh = 0 \Longleftrightarrow kh = 1 \Longleftrightarrow$ $k = h = 1$ oppure 
 Se $k = h = 1 \implies m=n$.
 Se $k = h = - 1 \implies  m = -n$.
 
-### Definziione 9.5 e (9.7)
+### Definzione 9.5 e (9.7)
 Siano $n, m \in \mathbb{Z}$ non entrambi nulli e sia $d \in \mathbb{Z}$.
 Si dice che $d$ è un Massimo Comun Divisore tra $n$ e $m$ se $d>0$ e valgono:
 1. $d | n$ e $d|m$
@@ -33,8 +33,8 @@ Siano $n,m \in \mathbb{Z}$ non entrambi nulli e supponiamo che $d, d'$ siano due
 
 ### Dimostrazione
 Sappiamo che $d > 0$ e $d'>0$.
-Mettendo assieme la prima condzione per $d$ e la seconda per $d'$ e con $c = d$ $\implies  d|d'$.
-Mettendo assieme la prima condzione per $d'$ e la seconda per $d$ e con $c = d'$ $\implies  d'|d$.
+Mettendo assieme la prima condizone per $d$ e la seconda per $d'$ e con $c = d$ $\implies  d|d'$.
+Mettendo assieme la prima condizone per $d'$ e la seconda per $d$ e con $c = d'$ $\implies  d'|d$.
 Dunque $d = d'$ oppure $d = -d'$, ma è vera soltanto la prima perché sono entrambi positivi.
 Dunque $d = d'$.
 
@@ -109,7 +109,7 @@ $$
 $$
 
 Proviamolo:
-$\implies$ Corolloario 9.8 $\implies$ $\exists x,y \in \mathbb{Z}$  tali che $xn +ym = (n, m) = 1$
+$\implies$ Corollario 9.8 $\implies$ $\exists x,y \in \mathbb{Z}$  tali che $xn +ym = (n, m) = 1$
 $\impliedby$ Supponiamo che $xn +ym =  1$ per qualche $x,y \in \mathbb{Z}$. Vale:
 $$
 (n, m) | n \text{ e } (n, m) | m \overbrace{ \implies }^{ L.U. } (n,m) | xn +ym = 1 \Longleftrightarrow (n, m) > 0, (n, m) | 1 \implies (n,m) = 1
@@ -128,7 +128,7 @@ $$
 \frac{d}{d} = \frac{xn+ym}{d} \Longleftrightarrow 1 = \frac{xn}{d} + \frac{ym}{d} = x\left( \frac{n}{d} \right) + y\left( \frac{m}{d} \right)
 $$
 Siccome $\frac{n}{d}$ e $\frac{m}{d}$ sono interi, allora $\left( \frac{n}{d}, \frac{m}{d} \right) = 1$, per via dell'osservazione 9.11.
-### Proposizione 9.13
+### * Proposizione 9.13
 Siano $n,m \in \mathbb{Z}$ tali che $m \neq 0$. Eseguiamo la divisione di $n$ per $m$.
 $$
 \begin{cases}

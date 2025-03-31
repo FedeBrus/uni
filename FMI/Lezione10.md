@@ -45,7 +45,7 @@ INPUT: $n, m \in \mathbb{Z}$.
 OUTPUT: se $n = m = 0 \implies [n,m] = 0$, altrimenti $n\neq 0$ or $m \neq 0$, $(n,m)$ con Euclide $\implies [n,m] = \frac{nm}{(n,m)}$.
 
 ## * Teorema fondamentale dell'aritmetica 10.5
-Ogni $n \geq 2, n \in \mathbb{N}$ può essere "fattorizzato in numeri primi", ovvero esistono $p_{1},p_{2},\dots,p_{a}$ numeri primi eventualmente ripetuti per qualche $a \in \mathbb{N} \setminus \{ 0 \}$ tali che $n = p_{1}p_{2} \dots p_{a}$. Tale fattorizzazione è unica a meno di riordinamento dei fattori primi, ovvero se esiste un'altra famiglia finita $q_{1},q_{2},\dots,q_{b}$ numeri primi eventualmente ripetutu per qualche $b \in \mathbb{N} \setminus \{ 0 \}$ tali che $n = q_{1}q_{2}\dots q_{b}$, allora $a = b$ e $\exists$ una bigezione $\phi:\{ 1, \dots ,b \} \rightarrow \{ 1,\dots, a \}$ tale che $q_{i} = p_{\phi(i)}, \forall i \in \{ 1,\dots, b \}$.
+Ogni $n \geq 2, n \in \mathbb{N}$ può essere "fattorizzato in numeri primi", ovvero esistono $p_{1},p_{2},\dots,p_{a}$ numeri primi eventualmente ripetuti per qualche $a \in \mathbb{N} \setminus \{ 0 \}$ tali che $n = p_{1}p_{2} \dots p_{a}$. Tale fattorizzazione è unica a meno di riordinamento dei fattori primi, ovvero se esiste un'altra famiglia finita $q_{1},q_{2},\dots,q_{b}$ numeri primi eventualmente ripetuti per qualche $b \in \mathbb{N} \setminus \{ 0 \}$ tali che $n = q_{1}q_{2}\dots q_{b}$, allora $a = b$ e $\exists$ una bigezione $\phi:\{ 1, \dots ,b \} \rightarrow \{ 1,\dots, a \}$ tale che $q_{i} = p_{\phi(i)}, \forall i \in \{ 1,\dots, b \}$.
 
 ### Dimostrazione esistenza
 Procediamo per induzione di seconda forma shiftato a $2$.

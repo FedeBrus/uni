@@ -100,7 +100,7 @@ $$
 Il passo induttivo è stato fatto, dunque grazie al principio di induzione di seconda forma, $(\star)_{n}$ è vera $\forall n \in \mathbb{N}$.
 
 Consideriamo $n < 0, m > 0$
-Applichiamo il caso precedente a $-n$ e $m$.
+Applichiamo il caso precedente a $-n > 0$ e $m > 0$.
 $$
 \begin{cases}
 -n = qm + r \\
@@ -115,7 +115,7 @@ $$
 Se $r = 0$, allora $n = (-q)m + 0$ e $0 \leq 0 < m$.
 Se $r > 0$, vale:
 $$
-n = (-q)n - r = (-q)m - m + m - r = (-q)m - m + (m - r) = (-q - 1)m + (m - r)
+n = (-q)m - r = (-q)m - m + m - r = (-q)m - m + (m - r) = (-q - 1)m + (m - r)
 $$
 Dunque $n = (-q - 1)m + (m - r)$ e $0 < m - r < m$.
 
