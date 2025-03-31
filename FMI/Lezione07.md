@@ -25,7 +25,7 @@ Per ipotesi induttiva sappiamo che $A \subset  \{ n+1, n+2, \dots \}$ poiché si
 
 Il passo induttivo è stato fatto e quindi grazie al principio di induzione la $P(n)$ vera, $\forall n \in \mathbb{N} \implies B = \mathbb{N} \Longleftrightarrow A = \emptyset \implies (\mathbb{N}, \leq)$ è ben ordinato.
 
-## Teorema 7.5 Principio di induzione di seconda forma
+## * Teorema 7.5 Principio di induzione di seconda forma
 Sia $\{ P(n) \}_{n \in \mathbb{N}}$ una famiglia di proposizioni indicizzata su $\mathbb{N}$.
 Supponiamo che:
 1. (Base dell'induzione) $P(0)$ è vera.
@@ -147,8 +147,17 @@ n = q'm + r' \\
 $$
 Vale:
 $$
-qm + r = n = q'm + r' \implies qm +r = q'm + r' \Longleftrightarrow m(q - q') = r' - r \implies |q - q'||m| = |r - r'| < |m| \implies  |q-q'||m| < |m| \implies  |q - q'| < 1 \implies  |q-q'| = 0 \implies  q = q'
+\begin{align}
+qm + r = n = q'm + r' &\implies qm +r = q'm + r'  \\
+&\Longleftrightarrow m(q - q') = r' - r  \\
+&\implies |q - q'||m| = |r - r'| < |m|  \\
+&\implies  |q-q'||m| < |m|  \\
+&\implies  |q - q'| < 1  \\
+&\implies  |q-q'| = 0  \\
+&\implies  q = q'
+\end{align}
 $$
+
 
 Ma allora:
 $$

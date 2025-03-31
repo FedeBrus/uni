@@ -29,13 +29,13 @@ Per definizione $\emptyset^{X} = \{ f \in 2^{X \times \emptyset} | \forall x \in
 Soluzione:
 $X = \emptyset \implies X \times Y = \emptyset \times Y = \emptyset$
 $2^{X \times Y} = 2^{\emptyset} = \{ \emptyset \} \implies$ l'unica relazione tra $\emptyset$ e $Y$ è $f=\emptyset$.
-$Y^{\emptyset} = \{ f \in \{ \emptyset \} | \forall x \in \emptyset, \exists!y \in Y: (x,y) \in f\}$
+$Y^{\emptyset} = \{ f \in \{ \emptyset \} | \forall x \in f, \exists!y \in Y: (x,y) \in f\}$
 Non ci sono verifiche da fare, quindi $Y^{\emptyset} = \{ \emptyset \}$.
 
 Dal caso precedente se abbiamo $\emptyset^{\emptyset}$ sappiamo che è $\{ \emptyset \}$.
 
 Sia $X \neq \emptyset$ e voglio calcolare $\emptyset^{X}$
-$\emptyset^{X} = \{ f \in \{ \emptyset \} | \forall x \in X, \exists!y \in \emptyset: (x, y) \in f \}$
+$\emptyset^{X} = \{ f \in \{ \emptyset \} | \forall x \in X, \exists!y \in f: (x, y) \in f \}$
 Non esisterà mai una $y$ per alcuna $x$. Dunque $\emptyset^{X} = \emptyset$.
 
 Difatti $|Y^{\emptyset}| = |Y|^{|\emptyset|} = |Y|^{0} = 1$ e $|\emptyset^{X}| = |\emptyset|^{|X|}=0^{|X|} =0$
