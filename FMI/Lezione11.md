@@ -46,15 +46,15 @@ Sia $X$ un'insieme non vuoto e sia $\sim$ una relazione di equivalenza su $X$. V
 ### Definizione
 Siano $X$ e $\sim$ come sopra. Definiamo l'insieme quoziente $X$ modulo $\sim$ come segue:
 $$
-X/\sim := \{ [x]_{\sim} \in 2^{X} | x \in X \} = \bigcup_{x \in X}  \{ [x]_{\sim} \}
+X\big/_{\sim} := \{ [x]_{\sim} \in 2^{X} | x \in X \} = \bigcup_{x \in X}  \{ [x]_{\sim} \}
 $$
 La seconda uguaglianza indica una notazione più precisa perché si eliminano le ripetizioni.
-Le $[x]_{\sim} \in X/\sim$, allora ogni $y \in [x]_{\sim}$ si dice essere un rappresentante della $\sim$-classe $[x]_{\sim}$.
+Le $[x]_{\sim} \in X\big/_{\sim}$, allora ogni $y \in [x]_{\sim}$ si dice essere un rappresentante della $\sim$-classe $[x]_{\sim}$.
 
 Fissiamo $n \in \mathbb{Z}$ Poniamo $X:=\mathbb{Z}$ e $\sim_{n} = (\bullet \equiv \bullet (\text{mod}\ n))$, ovvero $\forall a,b \in \mathbb{Z}$, $a \sim_{n} b \Longleftrightarrow a\equiv b (\text{mod}\ n) \Longleftrightarrow n| a-b$.
-In questo caso, il corrispondente insieme quoziente $\mathbb{Z} /\sim_{n}$ si indica come segue:
+In questo caso, il corrispondente insieme quoziente $\mathbb{Z}\big/_{\sim_{n}}$ si indica come segue:
 $$
-\mathbb{Z} / \sim_{n} =: \mathbb{Z} / n \mathbb{Z}
+\mathbb{Z}\big/_{\sim_{n}} =: \mathbb{Z} \big/_{n \mathbb{Z}}
 $$
 e si chiama insieme degli interi modulo $n$ oppure insieme delle classi di resto modulo $n$.
 Dato $a \in \mathbb{Z}$, la $\sim_{n}$-classe di $a$ in $\mathbb{Z}$ si indica $[a]_{n}:=[a]_{(\bullet \equiv \bullet (\text{mod}\ n))}$ e si chiama classe di $a$ modulo $n$ o anche solo $a$ modulo $n$.
@@ -71,8 +71,8 @@ $$
 \end{align}
 $$
 ### Osservazioni
-$\forall a, n \in \mathbb{Z}, [a]_{n} = [a]_{-n} \implies \mathbb{Z} / n\mathbb{Z} = \mathbb{Z} / -n\mathbb{Z}$. Quindi possiamo solamente studiare il caso $n\geq 0$.
-Se $n = 0$, proviamo a determinare $\mathbb{Z} / 0\mathbb{Z}$. 
+$\forall a, n \in \mathbb{Z}, [a]_{n} = [a]_{-n} \implies \mathbb{Z} \big/_{n \mathbb{Z}} = \mathbb{Z} \big/_{-n \mathbb{Z}}$. Quindi possiamo solamente studiare il caso $n\geq 0$.
+Se $n = 0$, proviamo a determinare $\mathbb{Z} \big/_{0 \mathbb{Z}}$. 
 $$
 \begin{align}
 [0]_{0} &= \{ 0 \} \\
@@ -81,18 +81,18 @@ $$
 \end{align}
 $$
 $\forall a \in \mathbb{Z}, [a]_{0} = \{ a \}$.
-Allora $\mathbb{Z} / 0\mathbb{Z} = \{ \{ 0 \}, \{ 1 \}, \{ 2 \}, \dots \} \subset 2^{\mathbb{Z}}\implies a \in \mathbb{Z} \rightarrow \mathbb{Z} / 0 \mathbb{Z} \ni \{ a \}, a \mapsto \{ a \}$.
+Allora $\mathbb{Z} \big/_{0 \mathbb{Z}} = \{ \{ 0 \}, \{ 1 \}, \{ 2 \}, \dots \} \subset 2^{\mathbb{Z}}\implies a \in \mathbb{Z} \rightarrow \mathbb{Z} \big/_{0 \mathbb{Z}} \ni \{ a \}, a \mapsto \{ a \}$.
 
 Consideriamo $n = 1$.
 $$
 [0]_{1} = \{ \dots, -2, -1, 0, 1, 2, \dots \} = \mathbb{Z} = [1]_{1} = [2]_{1} = \dots
 $$
-Dunque $\mathbb{Z} / 1\mathbb{Z} = \{ [0]_{1} \} \subset 2^{\mathbb{Z}}$
+Dunque $\mathbb{Z} \big/_{1 \mathbb{Z}} = \{ [0]_{1} \} \subset 2^{\mathbb{Z}}$
 
 Consideriamo $n = 2$
 $$
 [0]_{2} = \{ \dots, -4, -2, 0, 2, 4, \dots \} = [2]_{2} = [4]_{2} = \dots
 [1]_{2} = \{ \dots, -3, -1, 1, 3, 5, \dots \} = [3]_{2} = [5]_{2} = \dots
 $$
-Dunque $\mathbb{Z} / 2\mathbb{Z} = \{ [0]_{2}, [1]_{2} \} \subset 2^{\mathbb{Z}}$
+Dunque $\mathbb{Z} \big/_{2 \mathbb{Z}} = \{ [0]_{2}, [1]_{2} \} \subset 2^{\mathbb{Z}}$
 e così via.
