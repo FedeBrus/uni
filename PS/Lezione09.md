@@ -11,6 +11,7 @@ x \text{ se } 0\leq x < 1 \\
 1 \text{ se } x \geq 1
 \end{cases}
 $$
+In questo caso $P((a,b]) = F(b) - F(a) = b - a$ .
 $$
 P(\{ a \}) = P \left( \bigcap_{n=1}^{+\infty} \left( a - \frac{1}{n}, a \right] \right)
 $$
