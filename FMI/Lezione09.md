@@ -65,19 +65,21 @@ $n|q$ e $m|q$ $\Longleftrightarrow \exists k,h \in \mathbb{Z} :$ $q = nk$ e $q =
 Un numero $p \in \mathbb{Z}$ si dice primo se $p \geq 2$ e possiede solo i quattro divisori banali, ovvero $\pm 1, \pm p$.
 
 ### Corollario 10.2 (Sistemare)
-Sia $p \in \mathbb{Z}$ tale che $p \geq 2$. Allora $p$ è primo se e soltanto se soddisfa la seguente proprietà:
+Sia $p \in \mathbb{Z}$ tale che $p \geq 2$. Allora $p$ è primo se e soltanto se e solo se soddisfa la seguente proprietà:
 $$
 (\star) \forall n,m \in \mathbb{Z}: (p|nm \implies p|n \text{ or } p|m)
 $$
 ### Dimostrazione $\implies$
-Sia $p$ un numero primo. Supponiamo che $n,m \in \mathbb{Z}$ tali che $p|nm$. Dobbiamo provare che $p|n$ oppure $p|m$. Se $p|n$, OK. Supponiamo che $p\not{|}\ n$. Allora $\pm 1$ sono i soli divisori di $p, n$. Ma allora $p|m$ per la proposizione 10.1.
+Sia $p$ un numero primo. Supponiamo che $n,m \in \mathbb{Z}$ tali che $p|nm$. Dobbiamo provare che $p|n$ oppure $p|m$. Se $p|n$, OK. Supponiamo che $p\not{|}\ n$. Allora, siccome $p$ è primo per ipotesi, $\pm 1$ sono i soli divisori comuni a $p, n$. Quindi $p,n$ sono coprimi tra loro. Ma allora $p|m$ per la proposizione 10.1. 
 
 ### Dimostrazione $\impliedby$
 Supponiamo che $p$ soddisfi $(\star)$. Proviamo che $p$ è primo. Scriviamo $p=dh$ per qualche $d, h \in \mathbb{Z}$. Vale:
 $$
 p|p \implies p|dh \overbrace{ \implies }^{ (\star) } p|d \text{ or } p|h
 $$
-Ma $d|p$ e se valgono entrambe allora $p = d$ o $p=-d$. Se $p = d \implies p = ph \implies h = 1$. Se $p = -d \implies p=-ph \implies h = -1$.
+Ma $d|p$ poiché $p = dh$ e se valgono entrambe allora $p = d$ o $p=-d$. 
+Se $p = d \implies p = ph \implies h = 1$. 
+Se $p = -d \implies p=-ph \implies h = -1$.
 Lo stesso vale per $h$. Quindi $p$ è primo.
 
 #### Esercizio 10.1

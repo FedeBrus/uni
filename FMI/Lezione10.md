@@ -38,7 +38,7 @@ Osserviamo che:
 - $n|c \Longleftrightarrow \exists k \in \mathbb{Z}$ tale che $c = kn$. $c'(n,m) = c = kn =kn'(n,m) \implies c'(n,m) =kn'(n,m)$. Siccome $(n, m) \neq 0$ per definizione.
 Dunque $c' = kn' \implies n'|c'$. La stessa procedura vale per $m$.
 
-Siccome $(n',m')=1$ e $n'|c'$ e $m'|c'$, per la 9.31 $M = n'm'|c' \implies n'm'(n,m)|c'(n,m) = c$. Dunque $M|c$.
+Siccome $(n',m')=1$ e $n'|c'$ e $m'|c'$, per la 9.31 $n'm'|c' \implies M=n'm'(n,m)|c'(n,m) = c$. Dunque $M|c$.
 
 ### Osservazione computazionale
 INPUT: $n, m \in \mathbb{Z}$.
@@ -71,25 +71,25 @@ Supponiamo che ammetta $\exists p_{1},p_{2},\dots,p_{a}$ e $q_{1},q_{2},\dots,q_
 $$
 p_{1}p_{2}\dots p_{a} = q_{1}q_{2}\dots q_{b}
 $$
-con $a \leq b$. Allora val ehce $a=b$ e, a meno di riordinarli, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a \}$.
+con $a \leq b$. Allora val che $a=b$ e, a meno di riordinarli, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a \}$.
 Tutto ciò è $P(a)$.
 Procediamo per induzione di prima forma su $a\geq 1$.
 
 Base dell'induzione: $a = 1$.
-Siano $p_{1}$ e $q_{1},\dots,q_{b}$ primi eventualmente ripetuti con $b\geq 1$ e $p_{1} = q_{1} \dots q_{b}$. DObbiamo provare che $b = a$. Supponiamo che $b \geq 2$.
+Siano $p_{1}$ e $q_{1},\dots,q_{b}$ primi eventualmente ripetuti con $b\geq 1$ e $p_{1} = q_{1} \dots q_{b}$. Dobbiamo provare che $b = a$. Supponiamo che $b \geq 2$.
 $$
 p_{1} = q_{1}q_{2}\dots q_{b}
 $$
-$q_{1}$ è primo quindi $q_{1} \geq 2$. $q_{2}\dots q_{b} \geq q_{2} \geq 2$. Ma allora l'uguaglianza è impossibile, perché $p_{1}$ ammette solo divisori banali. Dunque $b=1 \implies p_{1}=q_{1}$.
+$q_{1}$ è primo quindi $q_{1} \geq 2$. $q_{2}\dots q_{b} \geq q_{1} \geq 2$. Ma allora l'uguaglianza è impossibile, perché $p_{1}$ ammette solo divisori banali, che non possono essere $\pm 1$ poiché $q_{1},q_{2} \geq 2$. Dunque $b=1 \implies p_{1}=q_{1}$.
 
 Passo induttivo: $a \geq 1, a \implies a+1$.
 Ipotesi induttiva: supponiamo $a\geq 1$ e supponiamo che la seguente affermazione sia vera: se $p_{1},\dots,p_{a}$ e $q_{1},\dots,q_{b}$ primi eventualmente ripetuti tali che $a \leq b$ e $p_{1}\dots p_{a} = q_{1}\dots q_{b}$, allora $a = b$ e meno di riordinamento $p_{i} = q_{i}, \forall i \in \{ 1, \dots, a \}$.
 Dobbiamo provare la stessa affermazione con $a + 1$ al posto di $a$.
-Supponiamo che $p_{1},\dots,p_{a},p_{a+1}$ e $q_{1},\dots,q_{b}$ siano numeri primi tali che $a+1 \leq b$ e $p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b}$. Dobbiamo provare che $a+1 = b$ e, a meno di riordinametno, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a, a+1 \}$.
+Supponiamo che $p_{1},\dots,p_{a},p_{a+1}$ e $q_{1},\dots,q_{b}$ siano numeri primi tali che $a+1 \leq b$ e $p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b}$. Dobbiamo provare che $a+1 = b$ e, a meno di riordinamento, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a, a+1 \}$.
 Osserviamo che:
-$p_{a+1}|p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b} \implies p_{a+1}|q_{1}\dots q_{b}\implies$ a meno di riordinamento dei vari $q_{i}$, possiamo supporre che $p_{a+1}|q_{b}$. I divisori positivi di $q_{b}$ sono $1$ o $q_{b}$, ma un numero primo deve essere $\geq 2$ per definizione. Quindi $p_{a+1}=q_{b}$.
+$p_{a+1}|p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b} \implies p_{a+1}|q_{1}\dots q_{b}\implies$ a meno di riordinamento dei vari $q_{i}$, possiamo supporre che $p_{a+1}|q_{b}$. In quanto primo, i divisori positivi di $q_{b}$ sono $1$ o $q_{b}$, ma un numero primo deve essere $\geq 2$ per definizione. Quindi $p_{a+1}=q_{b}$.
 Dunque $p_{1}\dots p_{a}p_{a+1} = q_{1}\dots q_{b-1}p_{a+1}$ $\implies$ $p_{1}\dots p_{a} = q_{1}\dots q_{b-1}$. Siccome $a \leq b-1$ perché per ipotesi $a+1 \leq b$ possiamo applicare l'ipotesi induttiva.
-Quindi $a = b-1$ e, a meno di riordinamento, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a \}$. Dunque $a+1 = b$ e le corrispondenze tra $p$ e $q$ sono date dal basso induttivo fino ad $a$ e $a+1$ è stato risolto.
+Quindi $a = b-1$ e, a meno di riordinamento, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a \}$. Dunque $a+1 = b$ e le corrispondenze tra $p$ e $q$ sono date dal passo induttivo fino ad $a$ e $a+1$ è stato risolto.
 Dunque il passo induttivo è stato fatto. Grazie al principio di induzione, l'asserto è vero $\forall a\geq 1 \implies$ c'è unicità di fattorizzazione in numeri primi $\forall n\geq 2$.
 
 ### * Corollario 10.6

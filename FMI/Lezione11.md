@@ -1,4 +1,4 @@
-## Congruenze e mod $n$
+## Congruenze e $\text{mod}\ n$
 ### Definizione
 Sia $n \in \mathbb{Z}$. Dati $a,b \in \mathbb{Z}$. Diciamo che $a$ è congruo a $b$ modulo $n$, scriveremo $a \equiv b (\text{mod } n)$, se $n|(a - b)$
 
