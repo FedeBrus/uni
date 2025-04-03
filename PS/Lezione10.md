@@ -75,4 +75,12 @@ P_{X}(\{ \pi \}) &= P(\emptyset) = 0 \\
 $$
 Quindi la variabile aleatoria ha indotto una funzione di probabilità $P_{X}$ sullo spazio $(\mathbb{R}, \mathcal{B}(\mathbb{R}))$.
 
-Consideriamo $B = \{ 3 \} \cup \{ \pi \} \cup \{ (-18.5, 0) \}$. $P_{X}(B) = P_{X}(\{ 3 \}) + P_{X}(\{ \pi \}) + P_{X}((-18.5,0)) = F_{X}(3)-F_{X}(3^{-})+F_{X}(\{ \pi \})-F_{X}(\{ \pi^{-} \})+F_{X}(0^{-})-F_{X}(18.5) = \frac{28}{36}-\frac{25}{36}+\frac{28}{36}-\frac{28}{36}+\frac{15}{36}-0=\frac{1}{2}$.
+Consideriamo $B = \{ 3 \} \cup \{ \pi \} \cup \{ (-18.5, 0) \}$. 
+$$
+\begin{align}
+P_{X}(B) &= P_{X}(\{ 3 \}) + P_{X}(\{ \pi \}) + P_{X}((-18.5,0)) \\
+ &= F_{X}(3)-F_{X}(3^{-})+F_{X}(\{ \pi \})-F_{X}(\{ \pi^{-} \})+F_{X}(0^{-})-F_{X}(18.5)  \\
+&= \frac{28}{36}-\frac{25}{36}+\frac{28}{36}-\frac{28}{36}+\frac{15}{36}-0 \\
+&=\frac{1}{2}
+\end{align}
+$$

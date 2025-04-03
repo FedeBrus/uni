@@ -83,16 +83,28 @@ $$
 $\forall a \in \mathbb{Z}, [a]_{0} = \{ a \}$.
 Allora $\mathbb{Z} \big/_{0 \mathbb{Z}} = \{ \{ 0 \}, \{ 1 \}, \{ 2 \}, \dots \} \subset 2^{\mathbb{Z}}\implies a \in \mathbb{Z} \rightarrow \mathbb{Z} \big/_{0 \mathbb{Z}} \ni \{ a \}, a \mapsto \{ a \}$.
 
-Consideriamo $n = 1$.
+Consideriamo $n = 1$:
 $$
 [0]_{1} = \{ \dots, -2, -1, 0, 1, 2, \dots \} = \mathbb{Z} = [1]_{1} = [2]_{1} = \dots
 $$
-Dunque $\mathbb{Z} \big/_{1 \mathbb{Z}} = \{ [0]_{1} \} \subset 2^{\mathbb{Z}}$
+Dunque $\mathbb{Z} \big/_{1 \mathbb{Z}} = \{ [0]_{1} \} \subset 2^{\mathbb{Z}}$.
 
-Consideriamo $n = 2$
+Consideriamo $n = 2$:
 $$
-[0]_{2} = \{ \dots, -4, -2, 0, 2, 4, \dots \} = [2]_{2} = [4]_{2} = \dots
-[1]_{2} = \{ \dots, -3, -1, 1, 3, 5, \dots \} = [3]_{2} = [5]_{2} = \dots
+\begin{align}
+[0]_{2} &= \{ \dots, -4, -2, 0, 2, 4, \dots \} = [2]_{2} = [4]_{2} = \dots \\
+[1]_{2} &= \{ \dots, -3, -1, 1, 3, 5, \dots \} = [3]_{2} = [5]_{2} = \dots
+\end{align}
 $$
-Dunque $\mathbb{Z} \big/_{2 \mathbb{Z}} = \{ [0]_{2}, [1]_{2} \} \subset 2^{\mathbb{Z}}$
-e così via.
+Dunque $\mathbb{Z} \big/_{2 \mathbb{Z}} = \{ [0]_{2}, [1]_{2} \} \subset 2^{\mathbb{Z}}$.
+
+Consideriamo $n = 3$:
+$$
+\begin{align}
+[0]_{3} &= \{ \dots, -6, -3, 0, 3, 6, \dots \} = [3]_{3} = [6]_{3} = \dots \\
+[1]_{3} &= \{ \dots, -7, -4, 1, 4, 7, \dots \} = [4]_{3} = [7]_{3} = \dots \\
+[2]_{3} &= \{ \dots, -8, -5, 2, 5, 8, \dots \} = [5]_{3} = [8]_{3} = \dots
+\end{align}
+$$
+Dunque $\mathbb{Z} \big/_{3\mathbb{Z}} = \{ [0]_{3}, [1]_{3}, [2]_{3} \} \subset 2^{\mathbb{Z}}$.
+E così via.
