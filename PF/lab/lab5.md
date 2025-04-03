@@ -97,3 +97,28 @@ fun printList(nil) = ()
         );
 
 printList([1,2,3,4]);
+
+fun fact(0) = 1 
+    | fact(n) = n * fact(n - 1);
+
+fun comb(n, 0) = 1
+    | comb(n, m) = (
+        print(Int.toString(n));
+        print("\n");
+        print(Int.toString(m));
+        print("\n");
+        print("The result is: ");
+        fact(n) div (fact(m) * fact(n - m))
+    );
+
+comb(5, 2);
+
+fun printXs(0) = ( print("X") )
+    | printXs(n) = (
+        printXs(n - 1);
+        printXs(n - 1)
+    );
+
+printXs(3);
+
+

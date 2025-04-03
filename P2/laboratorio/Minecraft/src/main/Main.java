@@ -28,7 +28,7 @@ public class Main {
             if (row == 9 && col == 9){
                 mv.smelt();
             }else{
-                mv.moveIntoFurnace(row, col);
+                mv.moveIntoFurnace(col, row);
             }
             mv.displayOnOut();
         }

@@ -114,7 +114,7 @@ public class Map {
         return new NullBlock();
     }
 
-    public SmeltableBlock SmeltableBlockAt(Coordinates coords) {
+    public SmeltableBlock SmeltableBlockAt(int x, int y) {
         if (isSmeltableAt(coords)) return (SmeltableBlock) at(coords);
         return new NullBlock();
     }
