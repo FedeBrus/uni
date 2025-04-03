@@ -30,3 +30,59 @@ Calcolare il rappresentante canonico delle seguenti classi:
 - $[17]_{4} = [4 \cdot 4 + 1]_{4} = [1]_{4}$
 - $[-16]_{5} = [-3\cdot 5-1+5-5]_{5} = [-4 \cdot 5 + 4]_{5} = [4]_{5}$
 
+## Struttura di anello su $\mathbb{Z} \big/_{n\mathbb{Z}}$
+- $(\mathbb{Z}, +, \cdot)$
+	- $3+5=8, +:\mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}, +((3,5))=8$
+	- $3 \cdot 5 = 15, \cdot:\mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}, \cdot((3,5))=8$
+- $(\mathbb{Z} \big/_{n\mathbb{Z}}, +, \cdot)$?
+
+$$
+\begin{align}
++: \mathbb{Z} \big/_{n\mathbb{Z}} \times \mathbb{Z} \big/_{n\mathbb{Z}} &\rightarrow \mathbb{Z} \big/_{n\mathbb{Z}} \\
+ ([a]_{n}, [b]_{n}) &\mapsto [a+b]_{n}
+\end{align}
+$$
+$$
+\begin{align}
+\cdot: \mathbb{Z} \big/_{n\mathbb{Z}} \times \mathbb{Z} \big/_{n\mathbb{Z}} &\rightarrow \mathbb{Z} \big/_{n\mathbb{Z}} \\
+ ([a]_{n}, [b]_{n}) &\mapsto [a \cdot b]_{n}
+\end{align}
+$$
+### Proposizione 11.15
+Sia $n > 0$. Definiamo $+: \mathbb{Z} \big/_{n\mathbb{Z}} \times \mathbb{Z} \big/_{n\mathbb{Z}} \rightarrow \mathbb{Z} \big/_{n\mathbb{Z}}$ e $\cdot: \mathbb{Z} \big/_{n\mathbb{Z}} \times \mathbb{Z} \big/_{n\mathbb{Z}} \rightarrow \mathbb{Z} \big/_{n\mathbb{Z}}$ come:
+$$
+\begin{align}
+[a]_{n} + [b]_{n} &:= [a+b]_{n}
+[a]_{n} \cdot [b]_{n} &:= [a \cdot b]_{n}
+\end{align}
+$$
+La somma $+$ e il prodotto $\cdot$ sono ben definiti, ossia vale:
+$$
+\begin{align}
+\forall a, a', b, b' \in \mathbb{Z}: [a]_{n} = [a']_{n} \text{ e } [b]_{n} = [b']_{n} &\implies [a+b]_{n} = [a'+b']_{n} \\
+\forall a, a', b, b' \in \mathbb{Z}: [a]_{n} = [a']_{n} \text{ e } [b]_{n} = [b']_{n} &\implies [a \cdot b]_{n} = [a' \cdot b']_{n}
+\end{align}
+$$
+### Dimostrazione
+$[a]_{n} = [a']_{n} \Longleftrightarrow a = a'+kn$ per qualche $k \in \mathbb{Z}$.
+$[b]_{n} = [b']_{n} \Longleftrightarrow b = b'+hn$ per qualche $h \in \mathbb{Z}$.
+Ma allora $a+b = (a'+kn) + (b'+hn) = a'+b'+kn+hn = a'+b'+(k+h)n \implies [a+b]_{n} = [a'+b']_{n}$
+Ma allora $a\cdot b = (a'+kn)(b'+hn) = a'b' + a'hn + b'kn+khn^{2} = a'b'+(a'h+b'k+khn)n \implies [a \cdot b]_{n} = [a' \cdot b']_{n}$
+
+### Osservazione
+Sia $n > 0$, sia $a \in \mathbb{Z}$ e sia $m > 0$. Allora:
+$$
+[a]_{n}^{m} := ([a]_{n})^{m} = [a]_{n}[a]_{n}\dots[a]_{n} = [a^{m}]_{n}
+$$
+Dunque $[a]^{m}_{n}=[a^{m}]_{n}$.
+
+"La potenza è nulla senza programmazione teorica".
+#### Problema
+Calcolare il resto della divisione di:
+$$
+41^{10^{128}} \text{ per } 7
+$$
+Vale:
+$$
+[41^{10^{128}}]_{7} = [41]_{7}^{10^{128}} = [6]_{7}^{10^{128}} = [-1]^{10^{128}}_{7} = [1]_{7} = 1
+$$
