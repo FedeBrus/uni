@@ -17,7 +17,7 @@ $a = qn + r \Longleftrightarrow a-r = qn \implies n|a-r \Longleftrightarrow a \e
 ### Corollario 11.14
 $\mathbb{Z} \big/_{n\mathbb{Z}} = \{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}, n>0$.
 ### Dimostraione
-Dalla proposizione precedente, sapiiamo solo che $\mathbb{Z} \big/_{n\mathbb{Z}} \subset \{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}$.
+Dalla proposizione precedente, sappiamo solo che $\mathbb{Z} \big/_{n\mathbb{Z}} \subset \{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}$.
 Siano $r,s \in \mathbb{Z}$ tali che $0 \leq r \leq n -1$ e $0 \leq s \leq n - 1$ tali che $r \neq s \implies [r]_{n} \neq [s]_{n} \Longleftrightarrow s \not\equiv r (n)$.
 A meno di scambiare i due simboli possiamo supporre che $r < s$.
 Supponiamo per assurdo che $s \equiv r (n) \Longleftrightarrow n | s-r$. Sappiamo che $1\leq s-r \leq n - 1$, ma in questo range non esistono multipli di $n$, perciò sicuramente $n \not{|}\ s-r$ e la nostra asserzione è assurda.
