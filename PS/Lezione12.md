@@ -59,10 +59,23 @@ $$
 Questo è un esempio di variabile aleatoria senza memoria. L'avvento di un tot di esiti sfavorevoli non influenza la probabilità di successi futuri.
 ### Definizione di variabile aleatoria binomiale negativa
 Indica quante prove devo fare per $k$ successi.
+$$
+P(X = x) = \begin{cases}
+\binom{x-1}{r - 1}p^{r}(1-p)^{x-r} & x = r, r+1, r+2, \dots \\
+0 & \text{altrove}
+\end{cases}
+$$
 ### Teorema
-Siano $X_{1},X_{2},X_{3}, \dots X_{n} \sim Ber(p)$, allora $X = \sum_{i=1}^{n} X_{i} \sim Bin(n, p)$.
+Siano $X_{1},X_{2},X_{3}, \dots X_{n} \sim Ber(p)$, allora $X = \sum_{i=1}^{n} X_{i} \sim Bi(n, p)$.
+### Teorema
+Sia $X \sim BiNe(r, p)$ e $Z \sim Bi(N, p)$, allora:
+$$
+Pr(Z \geq r) = Pr(X \leq N)
+$$
 
 ### Definizione variabile aleatoria continua
+Una variabile aleatoria $X$ definita su $(\Omega, \mathcal{A})$ è detta continua se la sua funzione di ripartizione è continua.
+
 La indichiamo con $Unif[a,b]$ con $a < b$.
 $$
 f(x) = \begin{cases}
@@ -73,7 +86,7 @@ F_{X}(x) = \int_{-\infty}^{x} \frac{1}{b - a} \mathbb{1}(t \in [a,b]) dt
 $$
 Se $x < a$, allora $F_{X}(x) = \int_{-\infty}^{x} 0dt = 0$.
 Se $a \leq x < b$, allora $F_{X}(x) = \int_{-\infty}^{a}0dt+\int_{a}^{x} \frac{1}{b - a}dt = 0+ \frac{x-a}{b-a} = \frac{x-a}{b-a}$.
-Se $x \geq b$, allora $F_{X}(x) = \int_{-\infty}^{a} 0 dt + \int_{b}^{a} \frac{1}{b-a}dt + \int_{b}^{b}0dt = 0 + 1 + 0 = 1$.
+Se $x \geq b$, allora $F_{X}(x) = \int_{-\infty}^{a} 0 dt + \int_{a}^{b} \frac{1}{b-a}dt + \int_{b}^{b}0dt = 0 + 1 + 0 = 1$.
 
 #### Esempio
 Sia $X \sim Unif[0, 1]$ e sia $Y(x) = x^{2}$. Allora:
@@ -92,14 +105,12 @@ con $0 \leq a < b \leq1$.
 Quindi:
 $$
 f_{Y}(y) = \begin{cases}
-\frac{1}{2\sqrt{ x }}  & 0\leq x\leq 1 \\
+\frac{1}{2\sqrt{ y }}  & 0\leq y\leq 1 \\
 0  & \text{altrimenti}
 \end{cases}
 $$
 per casa calcolare $F_{Y}(y)$
 ### Definizione di variabile aleatoria normale o di Gauss
-
-### Definizione di variabile aleatoria normale standard (o standardizzata)
 $$
 Z \sim N(0,1)
 $$
@@ -188,9 +199,18 @@ Allora $Y(a) = Y(0) = 1$ e $Y(b) = \lim_{ x \to +\infty } Y(x) = +\infty$.
 Dunque $\alpha = 1$ e $\beta = +\infty$.
 Prendiamo $y = e^{x} \Longleftrightarrow x = \log y$, perciò $Y^{-1}(y)= \log y$.
 $\frac{\partial}{\partial y} Y^{-1}(y) = \frac{\partial}{\partial y} \log y = \frac{1}{y}$.
-Infine:
+Allora:
 $$
-f_{Y}(y) = f_{X} \left( Y^{-1}(y)\left| \frac{1}{y}  \right|  \right)
+\begin{align}
+f_{Y}(y) &= \begin{cases}
+f_{X} (Y^{-1}(y)) \left| \frac{\partial}{\partial y}Y^{-1}(y) \right| &  \alpha < y < \beta \\
+0 & \text{altrove}
+\end{cases}  \\
+ & =  \begin{cases}
+\lambda e^{-\lambda \log(y)} \frac{1}{y}  & 1 < y <+\infty \\
+0 & \text{altrove}
+\end{cases}
+\end{align}
 $$
 Per casa:
 1) $f_{Y}(y) \geq 0$
