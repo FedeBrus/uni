@@ -123,3 +123,66 @@ $$
 \end{align}
 $$
 Dunque $c' \in S$.
+#### Appello del 21/06/2016
+Esercizio 2: Si determinino tutte le soluzioni del seguente sistema.
+$$
+\begin{cases}
+x \equiv 33\ (\text{mod}\ 77) \\
+x \equiv -2\ (\text{mod}\ 56)
+\end{cases}
+$$
+Si dimostri inoltre che tutte le soluzioni del sistema sono multiple di $11$.
+#### Soluzione
+Sia $S$ l'insieme delle soluzioni del sistema. Calcolo $S$.
+Passo 1 compatibilità:
+Calcolo $(77,56)$.
+$77 = 7 \cdot 11$
+$56 = 2^{3} \cdot 7$
+Dunque $(77,56) = 7$.
+Poiché $(77, 56) = 7 | 35 = 33-(-2)$, grazie al 中国剩余定理, il sistema è compatibile, ovvero $S\neq \emptyset$.
+Inoltre vale: $33 -(-2) = 5 \cdot (77, 56)$. (1)
+
+Passo 2 calcolo di una soluzione del sistema:
+Applichiamo l'algoritmo di Euclide a $77$ e $56$ con sostituzione a ritroso:
+$$
+\begin{align}
+77 &= 56 + 21 \\
+56 &= 2 \cdot 21 + 14 \\
+21 &= 14 + 7 \\
+14 &= 2 \cdot 7 + 0 
+\end{align}
+$$
+Torniamo indietro:
+$$
+\begin{align}
+7 &= 21 - 14 \\
+7  &= 21 - (56 - 2 \cdot 21) \\
+7 &= 3 \cdot 21 - 56  \\
+7 &= 3 (77 - 56)  -56 \\
+7 &= 3 \cdot 77 - 4 \cdot 56
+\end{align}
+$$
+Dunque vale che (2):
+$$
+7 = (77, 56) = (3) \cdot 77 + (-4) \cdot 56
+$$
+Dalla (1) e la (2) segue che:
+$$
+33 - (-2) = 5(77,56) = 5((3)77 + (-4)56) = 15 \cdot 77 - 20 \cdot 56 = 35
+$$
+Dunque vale:
+$$
+33 - 15 \cdot 77 = (-2) - 20 \cdot 56
+$$
+Ponendo $c := -1122$, allora $c$ è una soluzione.
+
+Passo 3 calcolo di S
+Grazie al 中国剩余定理, vale:
+$$
+S = [-1122]_{[77,56]} \subset \mathbb{Z}
+$$
+dove $[77,56] = \frac{77 \cdot 56}{7} = 11 \cdot 56 = 616$.
+Allora:
+$$
+S = [-1122]_{616} = [-1122 + 616 + 616]_{616} = [110]_{616} = \{ 110 + 616k \in \mathbb{Z} | k \in \mathbb{Z} \}
+$$
