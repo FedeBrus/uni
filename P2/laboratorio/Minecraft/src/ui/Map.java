@@ -110,11 +110,11 @@ public class Map {
     }
 
     public Block at(Coordinates coords) {
-        if (coords.checkBounds()) return content[coords.getY()][coords.getX()];
+        if (coords.checkBounds()) return at(coords);
         return new NullBlock();
     }
 
-    public SmeltableBlock SmeltableBlockAt(int x, int y) {
+    public SmeltableBlock SmeltableBlockAt(Coordinates coords) {
         if (isSmeltableAt(coords)) return (SmeltableBlock) at(coords);
         return new NullBlock();
     }

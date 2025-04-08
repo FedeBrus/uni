@@ -121,4 +121,35 @@ fun printXs(0) = ( print("X") )
 
 printXs(3);
 
+val infile = TextIO.openIn("zap");
 
+val cinque = TextIO.inputN(infile, 5);
+print(cinque);
+
+val linea = case TextIO.inputLine(infile) of 
+        SOME c => c
+        | NONE => "";
+print(linea);
+
+val primoCarattere = case TextIO.lookahead(infile) of 
+        SOME c => c
+        | NONE => #"\000";
+print(str(primoCarattere));
+
+val contenuto = TextIO.input(infile);
+print(contenuto);
+
+TextIO.closeIn(infile);
+
+fun getWord(infile) = case TextIO.input1(infile) of 
+        NONE => nil
+        | SOME #" " => nil
+        | SOME #"\n" => nil 
+        | SOME c => c::getWord(infile);
+
+fun getList(infile) = case implode(getWord(infile)) of 
+        "" => nil
+        | s => s::getList(infile);
+
+val infile = TextIO.openIn("zap");
+getList(infile);

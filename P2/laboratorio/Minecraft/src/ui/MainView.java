@@ -2,6 +2,7 @@ package ui;
 
 import data.AirBlock;
 import data.SmeltableBlock;
+import util.Coordinates;
 
 public class MainView {
     private Map map;
@@ -18,9 +19,10 @@ public class MainView {
     }
 
     public void moveIntoFurnace(int x, int y) {
-        if (map.isSmeltableAt(x, y)) {
-            furnace.setInput((SmeltableBlock) map.SmeltableBlockAt(x, y));
-            map.insertAtCoords(new AirBlock(), x, y);
+        Coordinates coords = new Coordinates(map, x, y);
+        if (map.isSmeltableAt(coords)) {
+            furnace.setInput((SmeltableBlock) map.SmeltableBlockAt(coords));
+            map.insertAtCoords(new AirBlock(), coords);
         }
     }
 

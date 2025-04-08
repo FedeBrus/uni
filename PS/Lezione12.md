@@ -62,7 +62,7 @@ Indica quante prove devo fare per $k$ successi.
 ### Teorema
 Siano $X_{1},X_{2},X_{3}, \dots X_{n} \sim Ber(p)$, allora $X = \sum_{i=1}^{n} X_{i} \sim Bin(n, p)$.
 
-### Definizione variabile aleatoria
+### Definizione variabile aleatoria continua
 La indichiamo con $Unif[a,b]$ con $a < b$.
 $$
 f(x) = \begin{cases}

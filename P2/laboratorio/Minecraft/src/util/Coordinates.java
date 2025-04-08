@@ -9,8 +9,13 @@ public class Coordinates {
 
     public Coordinates(Map map, int x, int y) {
         this.map = map;
-        this.x = x;
-        this.y = y;
+        if (checkBounds()) {
+            this.x = x;
+            this.y = y;
+        } else {
+            this.x = 0;
+            this.y = 0;
+        }
     }
 
     public int getY() {
