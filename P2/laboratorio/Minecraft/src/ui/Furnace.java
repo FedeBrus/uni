@@ -28,4 +28,10 @@ public class Furnace {
             output = input.smelt();
         }
     }
+
+    public Block retrieveOutput() {
+        Block res = output;
+        output = new NullBlock();
+        return res;
+    }
 }

@@ -1,6 +1,6 @@
 package data;
 
-public interface Block {
+public interface Block extends InventoryBlock {
     char display();
     boolean isFallsWithGravity();
     boolean isFallsThrough();

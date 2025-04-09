@@ -34,4 +34,8 @@ public abstract class AbstractBlock implements Block {
         return String.format("%s {\n\tdisplay: '%c',\n\tfallsWithGravity: %b,\n\tfallsThrough: %b\n}",
                 blockName, this.display(), this.isFallsWithGravity(), this.isFallsThrough());
     }
+
+    public void displayInInventory() {
+        System.out.println("[" + content + "]");
+    }
 }

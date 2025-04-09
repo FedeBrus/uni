@@ -32,7 +32,7 @@ Quindi $\mathbb{Z} \big/_{n\mathbb{Z}}$ non è un dominio integrale. Mentre $\ma
 
 Sia $n > 0$, vale:
 In $\mathbb{Z} \big/_{n\mathbb{Z}}$: $\underbrace{ [1]_{n} + [1]_{n} + \dots + [1]_{n} }_{ n } = [0]_{n}$
-In $\mathbb{Z}$: $\underbrace{ 1+1+\dots+1 }_{ n }=0$
+In $\mathbb{Z}$: $\underbrace{ 1+1+\dots+1 }_{ n }=n$
 Se $a \in \mathbb{Z}$, $a$ è invertibile $\Longleftrightarrow$ $\exists b \in \mathbb{Z}, ab=1$, quindi in $\mathbb{Z}$ gli unici elementi invertibili sono quelli banali: $\pm 1$.
 
 ## * 中国剩余定理
@@ -54,7 +54,7 @@ Sia $S$ l'insieme delle soluzioni, ovvero:
 $$
 S := \{ x \in \mathbb{Z} | x \equiv a \ (\text{mod}\ n), x \equiv b \ (\text{mod}\ m) \}
 $$
-Allora $S \neq \emptyset$, ossia il sistema è compatibile se e soltanto se $(n,m) | b-a$.
+Allora $S \neq \emptyset$, ossia il sistema è compatibile, se e soltanto se $(n,m) | b-a$.
 Supponiamo che tale condizione sia verificata, ovvero $S\neq \emptyset$. Sia $c\in S$. Allora:
 $$
 S = [c]_{[n, m]} = \{ c + k[n,m] \in \mathbb{Z} | k \in \mathbb{Z}\} \subset \mathbb{Z}
@@ -70,11 +70,12 @@ x \equiv b \ (\text{mod}\ m)
 \end{cases}
 \Longleftrightarrow
 \begin{cases}
+x \in \mathbb{Z} \\
 \exists k\in \mathbb{Z} : c = a+kn \\
 \exists h\in \mathbb{Z} : c = b+hm \\
 \end{cases}
 $$
-In particolare vale che $a+kn = b+hm \Longleftrightarrow a-b = -kb+hm$.
+In particolare vale che $a+kn = b+hm \Longleftrightarrow a-b = -kn+hm$.
 Poiché $(n,m)|n$ e $(n,m)|m$, grazie al lemma utile, $(n,m)|-kn+hm=a-b$.
 $\impliedby$) Supponiamo che $(n,m)|a-b$, ovvero $\exists k\in \mathbb{Z}$ tale che $a-b = k(n,m)$ (da chiamare (1)).
 Se applichiamo l'algoritmo di Euclide ad $n$ e $m$ con sostituzione a ritroso: $\exists r,s \in \mathbb{Z}$ tali che $(n,m) = rn+sm$ (da chiamare (2)).
