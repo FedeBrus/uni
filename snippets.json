@@ -18,6 +18,8 @@
 	{trigger: "cal", replacement: "\\mathcal{$0}$1", options: "mA"},
 	{trigger: "sottos", replacement: "\\langle $0 \\rangle $1", options: "mA"},
     	{trigger: "comp", replacement: "\\circ", options: "mA"},
+      {trigger: "valatt", replacement: "\\mathbb{E}($0)$1", options: "mA"},
+      {trigger: "EE", replacement: "\\mathbb{E}", options: "mA"},
 
     // Greek letters
 	{trigger: "@a", replacement: "\\alpha", options: "mA"},
