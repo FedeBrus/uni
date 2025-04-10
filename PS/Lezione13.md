@@ -10,7 +10,7 @@ In altri simboli:
 $$
 \mathbb(x) = \int_{-\infty}^{+\infty}  xdF_{X}(x)
 $$
-Il valore atteso esiste se è definito se:
+Il valore atteso esiste se:
 $$
 \sum_{x \in R_{X}} |x| p_{X}(x) < +\infty
 $$
@@ -92,7 +92,7 @@ $$
  & = \mu
 \end{align}
 $$
-Il primo integrale vale $1$ perchè è integrale di una densità, mentre il secondo vale $0$ perchè è integrale da meno a più infinito di una funzione dispari che è prodotto di una parti e una dispari.
+Il primo integrale vale $1$ perchè è integrale di una densità, mentre il secondo vale $0$ perchè è integrale da meno a più infinito di una funzione dispari che è prodotto di una pari e una dispari.
 ::::per casa
 Sia $X \sim Exp(\lambda)$ e mostrare che $\mathbb{E}(x) = \frac{1}{\lambda}$. Suggerimento: integrale per parti.
 ### Proprietà del valore atteso
@@ -139,7 +139,7 @@ $$
 \mathbb{E}(Y) = \mathbb{E}(aX + b) = a\mathbb{E}(X) + b
 $$
 ### Teorema
-Data una viariabile aleatoria mKX e una trasformazione di variabile aleatoria $Y = g(x)$ dove $g : \mathbb{R} \rightarrow \mathbb{R}$ allora, se esiste $\mathbb{E}(Y)$ esso può essere calcolato come:
+Data una viariabile aleatoria $X$ e una trasformazione di variabile aleatoria $Y = g(x)$ dove $g : \mathbb{R} \rightarrow \mathbb{R}$ allora, se esiste $\mathbb{E}(Y)$ esso può essere calcolato come:
 $$
 \mathbb{E}(Y)=  \mathbb{E}(g(X)) = \begin{cases}
 \sum_{x \in R_{X}} g(x) p_{X}(x) & \text{se } X \text{ discreta} \\
