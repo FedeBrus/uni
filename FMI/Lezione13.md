@@ -157,10 +157,10 @@ Torniamo indietro:
 $$
 \begin{align}
 7 &= 21 - 14 \\
-7  &= 21 - (56 - 2 \cdot 21) \\
-7 &= 3 \cdot 21 - 56  \\
-7 &= 3 (77 - 56)  -56 \\
-7 &= 3 \cdot 77 - 4 \cdot 56
+  &= 21 - (56 - 2 \cdot 21) \\
+ &= 3 \cdot 21 - 56  \\
+ &= 3 (77 - 56)  -56 \\
+ &= 3 \cdot 77 - 4 \cdot 56
 \end{align}
 $$
 Dunque vale che (2):
@@ -185,5 +185,25 @@ $$
 dove $[77,56] = \frac{77 \cdot 56}{7} = 11 \cdot 56 = 616$.
 Allora:
 $$
-S = [-1122]_{616} = [-1122 + 616 + 616]_{616} = [110]_{616} = \{ 110 + 616k \in \mathbb{Z} | k \in \mathbb{Z} \}
+S = [-1122]_{616} = [-1122 + 616 + 616]_{616} = [110]_{616} = \{ 110 + 616k \in \mathbb{Z} | k \in \mathbb{Z} \} \subset \mathbb{Z}
 $$
+Ora dobbiamo dimostrare che tutte le soluzioni sono divisibili per $11$.
+Osserviamo che, dato $a \in \mathbb{Z}$, vale: $11|a\Longleftrightarrow[a]_{11}=[0]_{11} \in \mathbb{Z} \big/_{11\mathbb{Z}}$.
+Vale:
+$$
+\begin{align}
+[110 + 616k]_{11} &= [110]_{k} + [616]_{11}[k]_{11}  \\
+ & = [10 \cdot 11]_{11} + [56 \cdot 11]_{k} [k]_{11} \\
+ & = [0]_{11} + [0]_{11}[k]_{11}  \\
+ & = [0 + 0k]_{11}  \\
+ & = [0]_{11}
+\end{align}
+$$
+Ciò equivale a dire che $11 | 110+616k, \forall \in \mathbb{Z}$.
+Un metodo alternativo è:
+$$
+110 + 616k = 10 \cdot 11 + 56 \cdot 11  \cdot k =  (10 + 56k) \cdot 11
+$$
+Dunque tutte le soluzioni sono divisibili per $11$.
+
+Se la compatibilità non è verificata, si dice che grazie al 中国剩余定理 l'insieme $S$ è vuoto.

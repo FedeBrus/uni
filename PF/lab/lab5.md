@@ -153,3 +153,4 @@ fun getList(infile) = case implode(getWord(infile)) of
 
 val infile = TextIO.openIn("zap");
 getList(infile);
+TextIO.closeIn(infile);
