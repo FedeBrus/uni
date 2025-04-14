@@ -13,24 +13,10 @@ import ui.Map;
 import java.util.Scanner;
 
 public class Main {
-    public Main() {
-    }
-
     public static void main(String[] args) {
-        MainView mv = new MainView(5, 5);
-        mv.displayOnOut();
-        for (int i = 0 ; i < 10 ; i++){
-            System.out.print("Enter row and then column, or enter '9' and then '9' for smelting: ");
-
-            Scanner myObj = new Scanner(System.in);
-            int row = myObj.nextInt();
-            int col = myObj.nextInt();
-            if (row == 9 && col == 9){
-                mv.smelt();
-            }else{
-                mv.moveIntoFurnace(col, row);
-            }
-            mv.displayOnOut();
-        }
+        // MainView mv = new MainView(5, 5);
+        // mv.displayOnOut();
+        Map m = new Map(10, 10);
+        m.displayOnOut();
     }
 }

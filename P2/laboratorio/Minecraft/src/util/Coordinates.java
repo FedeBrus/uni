@@ -27,11 +27,15 @@ public class Coordinates {
     }
 
     public boolean checkBounds() {
+        return checkBounds(x, y);
+    }
+
+    public boolean checkBounds(int x, int y) {
         return (x >= 0 && y >= 0 && x < map.getWidth() && y < map.getHeight());
     }
 
     public boolean set(int newX, int newY) {
-        if ((new Coordinates(map, newX, newY).checkBounds())) {
+        if (checkBounds(newX, newY)) {
             x = newX;
             y = newY;
             return true;
@@ -41,13 +45,7 @@ public class Coordinates {
     }
 
     public boolean offset(int offsetX, int offsetY) {
-        if ((new Coordinates(map, x + offsetX, y + offsetY).checkBounds())) {
-            x += offsetX;
-            y += offsetY;
-            return true;
-        } else {
-            return false;
-        }
+        return set(x + offsetX, y + offsetY);
     }
 
     public Coordinates fromOffset(int offsetX, int offsetY) {

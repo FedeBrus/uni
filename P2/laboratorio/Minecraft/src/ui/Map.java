@@ -21,18 +21,24 @@ public class Map {
         content = new Block[height][width];
 
         // Mappa di default composta da sola aria
-        Coordinates coords = new Coordinates(this, 0, 0);
-        for (int i = 0; coords.checkBounds(); i++) {
-            for(int j = 0; coords.checkBounds(); j++) {
+        int i = 0, j = 0;
+        Coordinates coords = new Coordinates(this, i, j);
+
+        while (coords.set(i, j)) {
+            while (coords.set(i, j)) {
                 insertAtCoords(new AirBlock(), coords);
-                coords.set(j, i);
+                j++;
             }
+
+            j = 0;
+            i++;
         }
 
         // Inserimento blocchi random
         Random rand = new Random();
         int RANDOM_BLOCKS_TO_ADD = 10;
-        for (int i = 0; i < RANDOM_BLOCKS_TO_ADD; i++){
+
+        for (i = 0; i < RANDOM_BLOCKS_TO_ADD; i++){
             Block b = new SandBlock();
             coords.set(rand.nextInt(width), rand.nextInt(height));
             insertAtCoords(b, coords);
@@ -52,13 +58,10 @@ public class Map {
 
     public void displayOnOut() {
         // Stampa
-        Coordinates coords = new Coordinates(this, 0, 0);
         for(int i = 0; i < height; ++i) {
             for(int j = 0; j < width; ++j) {
-                System.out.print(at(coords).display());
-                coords.offset(j, 0);
+                System.out.print(content[i][j].display());
             }
-            coords.offset(0, i);
             System.out.print('\n');
         }
     }
@@ -67,8 +70,8 @@ public class Map {
         // Scambia due blocchi
         if (coords1.checkBounds() && coords2.checkBounds()) {
             Block tmp = at(coords1);
-            insertAtCoords(at(coords1), coords2);
-            insertAtCoords(at(coords2), coords1);
+            content[coords1.getY()][coords1.getX()] = at(coords2);
+            content[coords2.getY()][coords2.getX()] = tmp;
         }
     }
 
@@ -82,6 +85,7 @@ public class Map {
     private void update(Coordinates coords) {
         if (!coords.checkBounds()) return;
         if (!at(coords).isFallsWithGravity()) return;
+
         Coordinates belowCoords = coords.fromOffset(0, 1);
         if (!at(belowCoords).isFallsThrough()) return;
 
@@ -90,10 +94,11 @@ public class Map {
     }
 
     private void addWaterRow(int y) {
-        Coordinates coords = new Coordinates(this, 0, y);
-        for (int x = 0; coords.checkBounds(); x++) {
+        int i = 0;
+        Coordinates coords = new Coordinates(this, i, y);
+        while (coords.set(i, y)) {
             insertAtCoords(new WaterBlock(), coords);
-            coords.offset(1, y);
+            i++;
         }
     }
 
@@ -110,7 +115,7 @@ public class Map {
     }
 
     public Block at(Coordinates coords) {
-        if (coords.checkBounds()) return at(coords);
+        if (coords.checkBounds()) return content[coords.getY()][coords.getX()];
         return new NullBlock();
     }
 
