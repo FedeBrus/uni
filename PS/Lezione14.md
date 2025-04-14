@@ -132,7 +132,7 @@ $$
 P(0 < X \leq 2) = P_{X}(1) + P_{X}(2) = \frac{4}{5} = F_{X}(2) - F_{X}(0)
 $$
 #### Esercizio
-Si distribuiscono casualmente due palline in 4 contenitori. Definiamo $X=\{ \text{numero paline nel primo contenitore} \}$
+Si distribuiscono casualmente due palline in 4 contenitori. Definiamo $X=\{ \text{numero palline nel primo contenitore} \}$
 Dunque $R_{X}=\{ 0,1,2 \}$.
 $$
 \Omega_{i} = \{ C_{i}, C_{i}^{c} \}

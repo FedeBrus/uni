@@ -35,7 +35,7 @@ Supponiamo di avere un lotto di $N$ lampadine di cui $M$ sono difettose, $0<M<N$
 $$
 X \sim Geom\left( \frac{M}{N} \right)
 $$
-Abbiamo già datto $y$ estrazione ma non abbiamo ancora estratto una lampadina difettosa.
+Abbiamo già fatto $y$ estrazioni ma non abbiamo ancora estratto una lampadina difettosa.
 Qual è la probabilità di dover fare altre $r>0$  estrazioni per estrarre una lampadina difettosa.
 $$
 P(X = y + r | X > y ) = \frac{P(\{ X = y + r \} \cap \{ X > y \})}{P(X > y)}
@@ -66,7 +66,7 @@ P(X = x) = \begin{cases}
 \end{cases}
 $$
 ### Teorema
-Siano $X_{1},X_{2},X_{3}, \dots X_{n} \sim Ber(p)$, allora $X = \sum_{i=1}^{n} X_{i} \sim Bi(n, p)$.
+Siano $X_{1},X_{2},X_{3}, \dots X_{n}, \sim Ber(p)$, allora $X = \sum_{i=1}^{n} X_{i} \sim Bi(n, p)$.
 ### Teorema
 Sia $X \sim BiNe(r, p)$ e $Z \sim Bi(N, p)$, allora:
 $$
@@ -76,7 +76,7 @@ $$
 ### Definizione variabile aleatoria continua
 Una variabile aleatoria $X$ definita su $(\Omega, \mathcal{A})$ è detta continua se la sua funzione di ripartizione è continua.
 
-La indichiamo con $Unif[a,b]$ con $a < b$.
+Consideriamo una funzione di ripartizione uniforme $[a,b]$ con $a < b$.
 $$
 f(x) = \begin{cases}
 \frac{1}{b-a}  & x \in [a, b] \\

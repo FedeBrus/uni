@@ -139,7 +139,7 @@ $$
 \mathbb{E}(Y) = \mathbb{E}(aX + b) = a\mathbb{E}(X) + b
 $$
 ### Teorema
-Data una viariabile aleatoria $X$ e una trasformazione di variabile aleatoria $Y = g(x)$ dove $g : \mathbb{R} \rightarrow \mathbb{R}$ allora, se esiste $\mathbb{E}(Y)$ esso può essere calcolato come:
+Data una variabile aleatoria $X$ e una trasformazione di variabile aleatoria $Y = g(x)$ dove $g : \mathbb{R} \rightarrow \mathbb{R}$ allora, se esiste $\mathbb{E}(Y)$ esso può essere calcolato come:
 $$
 \mathbb{E}(Y)=  \mathbb{E}(g(X)) = \begin{cases}
 \sum_{x \in R_{X}} g(x) p_{X}(x) & \text{se } X \text{ discreta} \\

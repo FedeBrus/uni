@@ -3,7 +3,7 @@ $$
 P((a,b]) = F(b) - F(a)
 $$
 #### Esempio
-![[Distribuzione|80%]]
+![[Distribuzione|50%]]
 $$
 F(x) = \begin{cases}
 0 \text{ se } x < 0 \\
@@ -11,7 +11,7 @@ x \text{ se } 0\leq x < 1 \\
 1 \text{ se } x \geq 1
 \end{cases}
 $$
-In questo caso $P((a,b]) = F(b) - F(a) = b - a$ .
+In questo caso $P((a,b]) = F(b) - F(a) = b - a$.
 $$
 P(\{ a \}) = P \left( \bigcap_{n=1}^{+\infty} \left( a - \frac{1}{n}, a \right] \right)
 $$
@@ -120,7 +120,7 @@ P(\{ 0 \}) &= P\left( \bigcap_{n = 1}^{+\infty} \left( 0 - \frac{1}{n}, 0 \right
  & = \lim_{ n \to +\infty } P\left( \left( 0-\frac{1}{n}, 0 \right] \right) \\
  & = \lim_{ n \to +\infty } \left( F(0) - F\left( 0 - \frac{1}{n} \right) \right) \\
  & = F(0) - \lim_{ n \to +\infty } F\left( 0 - \frac{1}{n} \right) \\
- & = \frac{1}{2} - 0 = 0
+ & = \frac{1}{2} - 0 = \frac{1}{2}
 \end{align}
 $$
 $$

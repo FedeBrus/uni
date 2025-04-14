@@ -22,9 +22,9 @@ P((a, b]) &= F(b) - F(a) \\
 $$
 Se si fosse cambiato il valore di un singoletto all'interno di $(a, b]$ l'area sottesa al grafico sarebbe rimasta invariata e di conseguenza anche la probabilità. Ad ogni funzione di distribuzione appartiene una classe di funzioni di densità perché sono modificabili in un numero numerabili di punti. Quindi formano una classe di equivalenza.
 ### Definizione Funzione di distribuzione discrete
-Se $F$ è disreta allora esiste una funzione $p$, detta funzione di probabilità tale che:
+Se $F$ è discreta allora esiste una funzione $p$, detta funzione di probabilità tale che:
 - $p$ è non negativa su $\mathbb{R}$
-- $F(x) = \sum_{z : z \leq x} p(z) = \sum_{z\in R: z \leq x} P(z)$
+- $F(x) = \sum_{z : z \leq x} p(z) = \sum_{z\in R: z \leq x} p(z)$
 
 ![[10_3]]
 
@@ -38,9 +38,9 @@ Alla fine $p(x)$ rappresenta l'ampiezza del salto della funzione nel punto $x$.
 ![[10_4]]
 ## Variabili Aleatorie (Variabile Casuale)
 ### Definzione variabile aleatoria reale
-Una variabile aleatoria reale è una funzione $x=X(\omega)$ tale che $\{ \omega \in \Omega:X(\omega) \leq x \} \in \mathcal{A}, \forall x \in \mathbb{R}$, ovvero che l'antimmagine di $(-\infty, x]$ sia un evento della tribù di partenza per ogni $x$.
+Una variabile aleatoria reale è una funzione $y=X(\omega)$ tale che $\{ \omega \in \Omega:X(\omega) \leq x \} \in \mathcal{A}, \forall x \in \mathbb{R}$, ovvero che l'antimmagine di $(-\infty, x]$ sia un evento della tribù di partenza per ogni $x$.
 
-Quindi bisogna prendere ogni boreliano  e controllare che al sua antimmagine sia un evento. Non si può fare il controllo al contrario eprchè potrebbero esserci boreliani "scoperti".
+Quindi bisogna prendere ogni boreliano e controllare che la sua antimmagine sia un evento. Non si può fare il controllo al contrario perché potrebbero esserci boreliani "scoperti".
 In altre parole: per poter parlare della probabilità che una variabile aleatoria assuma certi valori, questi valori devono corrispondere a eventi a cui possiamo assegnare una probabilità.
 ![[10_5|60%]]
 Dunque in base alla scelta delle tribù degli spazi si ha o meno una variabile aleatoria.

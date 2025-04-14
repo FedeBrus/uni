@@ -27,10 +27,10 @@ Si deduce dunque che la funzione di probabilità è discreta.
 | $P_{Y}(Y = y) = p_{Y}(y)$ | $\dfrac{6}{36}$ | $\dfrac{10}{36}$ | $\dfrac{8}{36}$ | $\dfrac{6}{36}$ | $\dfrac{4}{36}$ | $\dfrac{2}{36}$ |
 Le variabile aleatorie si possono comporre:
 $$
-\begin{align}
-(\Omega, \mathcal{A}, P) \xrightarrow{X} (\mathbb{R}, \mathcal{B}(\mathbb{R}), P_{X}) \xrightarrow{Y} (\mathbb{R}, \mathcal{B}(\mathbb{R}), P_{Y})  \\
-(\Omega, \mathcal{A}, P) \xrightarrow{X \circ Y} (\mathbb{R}, \mathcal{B}(\mathbb{R}), P_{Y})\\
-\end{align}
+(\Omega, \mathcal{A}, P) \xrightarrow{X} (\mathbb{R}, \mathcal{B}(\mathbb{R}), P_{X}) \xrightarrow{Y} (\mathbb{R}, \mathcal{B}(\mathbb{R}), P_{Y})
+$$
+$$
+(\Omega, \mathcal{A}, P) \xrightarrow{X \circ Y} (\mathbb{R}, \mathcal{B}(\mathbb{R}), P_{Y})
 $$
 $$
 Y(X(\omega)) = Y(X((\omega_{1}, \omega_{2}))) = \left( \omega_{1} - \omega_{2} \right)^{2}
