@@ -20,7 +20,7 @@ public class Inventory {
     }
 
     public void addBlock(Block b) {
-        if (b != null) {
+        if (!(b instanceof NullBlock)) {
             blockList.add(b);
         }
     }
@@ -38,8 +38,20 @@ public class Inventory {
         return res;
     }
 
+    private Block blockAt(int i) {
+        Block res;
+
+        if (i >= 0 && i < blockList.size()) {
+            res = blockList.get(i);
+        } else {
+            res = new NullBlock();
+        }
+
+        return res;
+    }
+
     public boolean isSmeltable(int i) {
-        return getBlock(i) instanceof SmeltableBlock;
+        return blockAt(i) instanceof SmeltableBlock;
     }
 
     public SmeltableBlock getSmeltableBlock(int i) {

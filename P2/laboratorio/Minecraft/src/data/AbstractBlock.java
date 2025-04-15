@@ -36,6 +36,6 @@ public abstract class AbstractBlock implements Block {
     }
 
     public void displayInInventory() {
-        System.out.println("[" + content + "]");
+        System.out.print("[" + content + "]");
     }
 }
