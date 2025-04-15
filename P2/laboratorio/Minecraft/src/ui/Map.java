@@ -21,27 +21,22 @@ public class Map {
         content = new Block[height][width];
 
         // Mappa di default composta da sola aria
-        int i = 0, j = 0;
-        Coordinates coords = new Coordinates(this, i, j);
-
-        while (coords.set(i, j)) {
-            while (coords.set(i, j)) {
-                insertAtCoords(new AirBlock(), coords);
-                j++;
+        Coordinates coords = new Coordinates();
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                coords.set(i, j);
+                insertAt(new AirBlock(), coords);
             }
-
-            j = 0;
-            i++;
         }
 
         // Inserimento blocchi random
         Random rand = new Random();
         int RANDOM_BLOCKS_TO_ADD = 10;
 
-        for (i = 0; i < RANDOM_BLOCKS_TO_ADD; i++){
+        for (int i = 0; i < RANDOM_BLOCKS_TO_ADD; i++) {
             Block b = new SandBlock();
             coords.set(rand.nextInt(width), rand.nextInt(height));
-            insertAtCoords(b, coords);
+            insertAt(b, coords);
         }
 
         // Inserimento fiume
@@ -57,33 +52,35 @@ public class Map {
     }
 
     public void displayOnOut() {
-        // Stampa
-        for(int i = 0; i < height; ++i) {
-            for(int j = 0; j < width; ++j) {
-                System.out.print(content[i][j].display());
+        Coordinates coords = new Coordinates();
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                coords.set(j, i);
+                System.out.print(at(coords).display());
             }
-            System.out.print('\n');
+            System.out.print("\n");
         }
     }
 
     private void swap(Coordinates coords1, Coordinates coords2) {
         // Scambia due blocchi
-        if (coords1.checkBounds() && coords2.checkBounds()) {
+        if (isInRange(coords1) && isInRange(coords2)) {
             Block tmp = at(coords1);
             content[coords1.getY()][coords1.getX()] = at(coords2);
             content[coords2.getY()][coords2.getX()] = tmp;
         }
     }
 
-    public void insertAtCoords(Block block, Coordinates coords) {
-        if (coords.checkBounds()) {
+    public void insertAt(Block block, Coordinates coords) {
+        if (isInRange(coords)) {
             content[coords.getY()][coords.getX()] = block;
             update(coords);
         }
     }
 
     private void update(Coordinates coords) {
-        if (!coords.checkBounds()) return;
+        if (!isInRange(coords)) return;
+        if (at(coords) == null) return;
         if (!at(coords).isFallsWithGravity()) return;
 
         Coordinates belowCoords = coords.fromOffset(0, 1);
@@ -94,11 +91,10 @@ public class Map {
     }
 
     private void addWaterRow(int y) {
-        int i = 0;
-        Coordinates coords = new Coordinates(this, i, y);
-        while (coords.set(i, y)) {
-            insertAtCoords(new WaterBlock(), coords);
-            i++;
+        Coordinates coords = new Coordinates();
+        for (int i = 0; i < width; i++) {
+            coords.set(i, y);
+            insertAt(new WaterBlock(), coords);
         }
     }
 
@@ -115,12 +111,26 @@ public class Map {
     }
 
     public Block at(Coordinates coords) {
-        if (coords.checkBounds()) return content[coords.getY()][coords.getX()];
+        if (isInRange(coords)) return content[coords.getY()][coords.getX()];
         return new NullBlock();
     }
 
     public SmeltableBlock SmeltableBlockAt(Coordinates coords) {
-        if (isSmeltableAt(coords)) return (SmeltableBlock) at(coords);
+        if (isSmeltableAt(coords)) return (SmeltableBlock)at(coords);
         return new NullBlock();
+    }
+
+    public void removeAt(Coordinates coords) {
+        if (isInRange(coords)) {
+            insertAt(new NullBlock(), coords);
+        }
+    }
+
+    public boolean isInRange(Coordinates coords) {
+        if (coords != null) {
+            return (coords.getX() >= 0 && coords.getX() < width && coords.getY() >= 0 && coords.getY() < height);
+        } else {
+            return false;
+        }
     }
 }

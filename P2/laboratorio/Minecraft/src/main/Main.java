@@ -14,20 +14,21 @@ public class Main {
         int choice;
         Scanner sc = new Scanner(System.in);
         do {
+            System.out.println("Inserire un'opzione: ");
             choice = sc.nextInt();
             switch (choice) {
                 case 1 -> mv.displayOnOut();
                 case 2 -> {
                     int x = sc.nextInt();
                     int y = sc.nextInt();
-                    mv.moveIntoFurnace(x, y);
+                    mv.pickUp(x, y);
                 }
-                case 3 -> mv.smelt();
-                case 4 -> mv.retrieveFromFurnace();
-                case 5 -> {
+                case 3 -> {
                     int i = sc.nextInt();
                     mv.putInFurnace(i);
                 }
+                case 4 -> mv.smelt();
+                case 5 -> mv.retrieveFromFurnace();
             }
         } while (choice != 0);
     }

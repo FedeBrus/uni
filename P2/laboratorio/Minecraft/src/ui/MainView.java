@@ -23,12 +23,11 @@ public class MainView {
         inventory.displayOnOut();
     }
 
-    public void moveIntoFurnace(int x, int y) {
-        Coordinates coords = new Coordinates(map, x, y);
-        if (map.isSmeltableAt(coords)) {
-            inventory.addBlock(furnace.retrieveInput());
-            furnace.setInput(map.SmeltableBlockAt(coords));
-            map.insertAtCoords(new AirBlock(), coords);
+    public void pickUp(int x, int y) {
+        Coordinates coords = new Coordinates(x, y);
+        if (map.isInRange(coords)) {
+            inventory.addBlock(map.at(coords));
+            map.removeAt(coords);
         }
     }
 

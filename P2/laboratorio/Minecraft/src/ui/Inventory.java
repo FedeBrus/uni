@@ -26,25 +26,20 @@ public class Inventory {
     }
 
     public Block getBlock(int i) {
-        Block res;
+        Block res = new NullBlock();
 
         if (i >= 0 && i < blockList.size()) {
-            res = blockList.get(i);
-            blockList.remove(i);
-        } else {
-            res = new NullBlock();
+            res = blockList.remove(i);
         }
 
         return res;
     }
 
     private Block blockAt(int i) {
-        Block res;
+        Block res = new NullBlock();
 
         if (i >= 0 && i < blockList.size()) {
             res = blockList.get(i);
-        } else {
-            res = new NullBlock();
         }
 
         return res;
