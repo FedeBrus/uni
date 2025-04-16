@@ -8,9 +8,9 @@ $14 \not\equiv 4 (\text{mod } 7) \Longleftrightarrow 7 \not{|}\  14 - 4 = 10$
 
 ### Proposizione 11.2
 Fissiamo $n \in \mathbb{Z}$. Siano $a,b,c \in \mathbb{Z}$. Valgono:
-1. $a \equiv a (\text{mod } n)$
-2. 
-3. 
+1. $a \equiv a\ (\text{mod } n), \forall a \in \mathbb{Z}$
+2. $a \equiv b\ (\text{mod}\ n)$ e $b \equiv a\ (\text{mod}\ n) \implies a \equiv b\ (\text{mod}\ n)$
+3. $a \equiv b\ (\text{mod}\ n)$ e $b \equiv c\ (\text{mod}\ n) \implies a \equiv c\ (\text{mod}\ c)$ 
 
 ### Dimostrazione
 1. $a \equiv a (\text{mod}\ n) \Longleftrightarrow n | a - a = 0, 0n = 0$ sono entrambe vere.

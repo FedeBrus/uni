@@ -26,7 +26,7 @@ $$
  &\Longleftrightarrow 2n^{3} + 9n^{2} + 13n + 6 = 2n^{3}+ 9n^{2} + 13n + 6
 \end{align}
 $$
-La catena di equivalenze è evidentemente verificata e il passo induttivo è verificato. Applicando il teorema del princpio di  induzione $\sum_{k=1}^{n} 6k^{2} = n(n+1)(2n+1)$ vale $\forall n \in \mathbb{N}, n \geq 2$
+La catena di equivalenze è evidentemente verificata e il passo induttivo è verificato. Applicando il teorema del princpio di induzione $\sum_{k=1}^{n} 6k^{2} = n(n+1)(2n+1)$ vale $\forall n \in \mathbb{N}, n \geq 2$
 
 Utilizzando il primo metodo si crea una catena di uguaglianze. Ad ogni momento ci si può fermare e verificare che un fattore di questa catena sia uguale a un fattore di ciò che si vuole dimostrare tramite una catena di equivalenze. Mettendo assieme la catena di uguaglianze e la catena di equivalenze, si verifica il passo induttivo.
 

@@ -7,7 +7,7 @@ f(0)=c \\
 f(succ(n)) = h(n, f(n)), \forall n \in \mathbb{N}
 \end{cases}
 $$
-![[intuizione_ricorsione|1200]]
+![[intuizione_ricorsione|50%]]
 ### Applicazioni del teorema di ricorsione
 Fissato un numero $m \in \mathbb{N}$ si vuole definire una "somma a sinistra con $m$", ovvero si vuole dare un significato a ciò che vorrei scrivere con $m + \bullet: \mathbb{N} \rightarrow \mathbb{N}, n \mapsto m + n, \forall n \in N$.
 

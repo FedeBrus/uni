@@ -97,7 +97,7 @@ Allora $A = \mathbb{N}$.
 Sia $n\in \mathbb{N} \setminus \{ 0 \}$. Allora $\exists!m\in \mathbb{N}$ tale che $succ(m) = n$. $m$ è detto predecessore di $n$.
 #### Dimostrazione
 Se $m$ esiste allora è certamente unica, perché $succ$ è iniettiva.
-Supponiamo che l'asserto sia falso, ovvero $\exists n\in \mathbb{N}\setminus\{ 0 \}$ tale che $\forall m\in \mathbb{N}, succ(m) \neq n$. Poniamo $A:=\mathbb{N}\setminus\{ n \}$. Osserviamo che  sicuramente $0 \in A$, perchè $n \neq 0$, dunque $A$ soddisfa (1).
+Supponiamo che l'asserto sia falso, ovvero $\exists n\in \mathbb{N}\setminus\{ 0 \}$ tale che $\forall m\in \mathbb{N}, succ(m) \neq n$. Poniamo $A:=\mathbb{N}\setminus\{ n \}$. Osserviamo che sicuramente $0 \in A$, perchè $n \neq 0$, dunque $A$ soddisfa (1).
 Sia $m \in A$, $succ(m)\neq n$ per ipotesi, quindi $succ(m)\in A$, che dimostra che $A$ soddisfa (2).
 Quindi $A = \mathbb{N}$, ma allora l'esistenza di $n$ è assurda e quindi $\forall n \in \mathbb{N}\setminus\{ 0 \}, \exists m\in \mathbb{N} : succ(m)=n$.
 
