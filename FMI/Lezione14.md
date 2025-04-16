@@ -143,4 +143,4 @@ $(21, 30) = 3 \neq 1$, dunque $21$ non è invertibile modulo $30$.
 Si dica se $11$ è invertibile modulo $30$, e in caso lo sia calcolare tutti gli inversi.
 
 Soluzione:
-$(21, 30) = 3 = 1$, in questo caso la sua classe inversa è se stesso, cosa che non succede nei reali ad esempio.
+$(11, 30) = 1$, in questo caso la sua classe inversa è se stesso, cosa che non succede nei reali ad esempio.

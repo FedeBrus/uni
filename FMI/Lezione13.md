@@ -75,7 +75,7 @@ x \in \mathbb{Z} \\
 \exists h\in \mathbb{Z} : c = b+hm \\
 \end{cases}
 $$
-In particolare vale che $a+kn = b+hm \Longleftrightarrow a-b = -kn+hm$.
+In particolare vale che $a+kn = c = b+hm \Longleftrightarrow a-b = -kn+hm$.
 Poiché $(n,m)|n$ e $(n,m)|m$, grazie al lemma utile, $(n,m)|-kn+hm=a-b$.
 $\impliedby$) Supponiamo che $(n,m)|a-b$, ovvero $\exists k\in \mathbb{Z}$ tale che $a-b = k(n,m)$ (da chiamare (1)).
 Se applichiamo l'algoritmo di Euclide ad $n$ e $m$ con sostituzione a ritroso: $\exists r,s \in \mathbb{Z}$ tali che $(n,m) = rn+sm$ (da chiamare (2)).
@@ -192,14 +192,14 @@ Osserviamo che, dato $a \in \mathbb{Z}$, vale: $11|a\Longleftrightarrow[a]_{11}=
 Vale:
 $$
 \begin{align}
-[110 + 616k]_{11} &= [110]_{k} + [616]_{11}[k]_{11}  \\
+[110 + 616k]_{11} &= [110]_{11} + [616]_{11}[k]_{11}  \\
  & = [10 \cdot 11]_{11} + [56 \cdot 11]_{k} [k]_{11} \\
  & = [0]_{11} + [0]_{11}[k]_{11}  \\
  & = [0 + 0k]_{11}  \\
  & = [0]_{11}
 \end{align}
 $$
-Ciò equivale a dire che $11 | 110+616k, \forall \in \mathbb{Z}$.
+Ciò equivale a dire che $11 | 110+616k, \forall k \in \mathbb{Z}$.
 Un metodo alternativo è:
 $$
 110 + 616k = 10 \cdot 11 + 56 \cdot 11  \cdot k =  (10 + 56k) \cdot 11

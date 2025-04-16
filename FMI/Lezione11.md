@@ -1,21 +1,21 @@
 ## Congruenze e $\text{mod}\ n$
 ### Definizione
-Sia $n \in \mathbb{Z}$. Dati $a,b \in \mathbb{Z}$. Diciamo che $a$ è congruo a $b$ modulo $n$, scriveremo $a \equiv b (\text{mod } n)$, se $n|(a - b)$
+Sia $n \in \mathbb{Z}$. Dati $a,b \in \mathbb{Z}$. Diciamo che $a$ è congruo a $b$ modulo $n$, scriveremo $a \equiv b\  (\text{mod } n)$, se $n|(a - b)$
 
 #### Esempio
-$2 \equiv 16 (\text{mod } 7)\Longleftrightarrow 7|2-16=-14, -14 = (-2)7$. Vera.
-$14 \not\equiv 4 (\text{mod } 7) \Longleftrightarrow 7 \not{|}\  14 - 4 = 10$
+$2 \equiv 16\ (\text{mod } 7)\Longleftrightarrow 7|2-16=-14, -14 = (-2)7$. Vera.
+$14 \not\equiv 4\ (\text{mod } 7) \Longleftrightarrow 7 \not{|}\  14 - 4 = 10$
 
 ### Proposizione 11.2
 Fissiamo $n \in \mathbb{Z}$. Siano $a,b,c \in \mathbb{Z}$. Valgono:
 1. $a \equiv a\ (\text{mod } n), \forall a \in \mathbb{Z}$
-2. $a \equiv b\ (\text{mod}\ n)$ e $b \equiv a\ (\text{mod}\ n) \implies a \equiv b\ (\text{mod}\ n)$
-3. $a \equiv b\ (\text{mod}\ n)$ e $b \equiv c\ (\text{mod}\ n) \implies a \equiv c\ (\text{mod}\ c)$ 
+2. $a \equiv b\ (\text{mod}\ n) \implies b \equiv a\ (\text{mod}\ n), \forall a,b \in \mathbb{Z}$
+3. $a \equiv b\ (\text{mod}\ n)$ e $b \equiv c\ (\text{mod}\ n) \implies a \equiv c\ (\text{mod}\ c), \forall a,b,c \in \mathbb{Z}$ 
 
 ### Dimostrazione
-1. $a \equiv a (\text{mod}\ n) \Longleftrightarrow n | a - a = 0, 0n = 0$ sono entrambe vere.
-2. Supponiamo che $a \equiv b (\text{mod}\ n)$, ovvero $n|a-b \Longleftrightarrow n | -(a-b) = b - a \Longleftrightarrow b \equiv a (\text{mod}\ n)$
-3. Supponiamo che $a \equiv b (\text{mod}\ n)$ e $b \equiv c (\text{mod}\ n)$, ovvero $n|a-b$ e $n|b - c$. Per il lemma utile $n|1(a-b)+1(b-c) =a-c$, ma siccome $n | a- c \Longleftrightarrow a\equiv c (\text{mod}\ n)$ 
+1. $a \equiv a\ (\text{mod}\ n) \Longleftrightarrow n | a - a = 0, 0n = 0$ sono entrambe vere.
+2. Supponiamo che $a \equiv b\ (\text{mod}\ n)$, ovvero $n|a-b \Longleftrightarrow n | -(a-b) = b - a \Longleftrightarrow b \equiv a\ (\text{mod}\ n)$
+3. Supponiamo che $a \equiv b\  (\text{mod}\ n)$ e $b \equiv c\ (\text{mod}\ n)$, ovvero $n|a-b$ e $n|b - c$. Per il lemma utile $n|1(a-b)+1(b-c) =a-c$, ma siccome $n | a- c \Longleftrightarrow a\equiv c\ (\text{mod}\ n)$ 
 
 ### Definizione 11.3
 Sia $X$ un insieme non vuoto e sia $\mathcal{R}$ una relazione binaria su $X$, cioè $\mathcal{R} \subset X \times X$. $\mathcal{R}$ si dice relazione di equivalenza su $X$ se soddisfa le seguenti proprietà:
@@ -40,7 +40,7 @@ Sia $X$ un'insieme non vuoto e sia $\sim$ una relazione di equivalenza su $X$. V
 2. $\implies$: Supponendo che $[x]_{\sim} = [y]_{\sim}$. Vale: $x \in [x]_{\sim} = [y]_{\sim} \implies x \sim y$, per definizione di $[y]_{\sim}$.
 	$\impliedby$: Supponiamo che $x \sim y$, dobbiamo provare che $[x]_{\sim} = [y]_{\sim}$.
 		$[x]_{\sim} \subset [y]_{\sim}$: se $z \in [x]_{\sim}$. Quindi $z \sim x$ e siccome $x \sim y$, allora per la transitività $z \sim y$ e quindi $z \in[y]_{\sim}$.
-		$[x]_{\sim} \supset [y]_{\sim}$. Il procedimento è lo stesso sopra utilizzando la proprietà simmetrica.
+		$[x]_{\sim} \supset [y]_{\sim}$. Il procedimento è lo stesso sopra utilizzando inoltre la proprietà simmetrica.
 3. Supponiamo che $[x]_{\sim} \cap [y]_{\sim} \neq \emptyset$. Scelgo $z \in [x]_{\sim} \cap [y]_{\sim} \Longleftrightarrow z \in [x]_{\sim}, z \in [y]_{\sim}$. Quindi $z \sim x$ e $z \sim y$, ma allora $x \sim y$ e per il punto 2 allora $[x]_{\sim} = [y]_{\sim}$.
 
 ### Definizione
@@ -51,7 +51,7 @@ $$
 La seconda uguaglianza indica una notazione più precisa perché si eliminano le ripetizioni.
 Le $[x]_{\sim} \in X\big/_{\sim}$, allora ogni $y \in [x]_{\sim}$ si dice essere un rappresentante della $\sim$-classe $[x]_{\sim}$.
 
-Fissiamo $n \in \mathbb{Z}$ Poniamo $X:=\mathbb{Z}$ e $\sim_{n} = (\bullet \equiv \bullet (\text{mod}\ n))$, ovvero $\forall a,b \in \mathbb{Z}$, $a \sim_{n} b \Longleftrightarrow a\equiv b (\text{mod}\ n) \Longleftrightarrow n| a-b$.
+Fissiamo $n \in \mathbb{Z}$ Poniamo $X:=\mathbb{Z}$ e $\sim_{n} = (\bullet \equiv \bullet\ (\text{mod}\ n))$, ovvero $\forall a,b \in \mathbb{Z}$, $a \sim_{n} b \Longleftrightarrow a\equiv b\ (\text{mod}\ n) \Longleftrightarrow n| a-b$.
 In questo caso, il corrispondente insieme quoziente $\mathbb{Z}\big/_{\sim_{n}}$ si indica come segue:
 $$
 \mathbb{Z}\big/_{\sim_{n}} =: \mathbb{Z} \big/_{n \mathbb{Z}}

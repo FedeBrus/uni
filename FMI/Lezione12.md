@@ -16,11 +16,11 @@ $a = qn + r \Longleftrightarrow a-r = qn \implies n|a-r \Longleftrightarrow a \e
 
 ### Corollario 11.14
 $\mathbb{Z} \big/_{n\mathbb{Z}} = \{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}, n>0$.
-### Dimostraione
+### Dimostrazione
 Dalla proposizione precedente, sappiamo solo che $\mathbb{Z} \big/_{n\mathbb{Z}} \subset \{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}$.
-Siano $r,s \in \mathbb{Z}$ tali che $0 \leq r \leq n -1$ e $0 \leq s \leq n - 1$ tali che $r \neq s \implies [r]_{n} \neq [s]_{n} \Longleftrightarrow s \not\equiv r (n)$.
+Siano $r,s \in \mathbb{Z}$ tali che $0 \leq r \leq n -1$ e $0 \leq s \leq n - 1$ tali che $r \neq s \implies [r]_{n} \neq [s]_{n} \Longleftrightarrow s \not\equiv r\ (\text{mod}\ n)$.
 A meno di scambiare i due simboli possiamo supporre che $r < s$.
-Supponiamo per assurdo che $s \equiv r (n) \Longleftrightarrow n | s-r$. Sappiamo che $1\leq s-r \leq n - 1$, ma in questo range non esistono multipli di $n$, perciò sicuramente $n \not{|}\ s-r$ e la nostra asserzione è assurda.
+Supponiamo per assurdo che $s \equiv r\ (\text{mod}\ n) \Longleftrightarrow n | s-r$. Sappiamo che $1\leq s-r \leq n - 1$, ma in questo range non esistono multipli di $n$, perciò sicuramente $n \not{|}\ s-r$ e la nostra asserzione è assurda.
 
 #### Notazione
 Sia $n>0$ e sia $a \in \mathbb{Z}$. Consideriamo $x \in [a]_{n}$. Allora $x$ si dice rappresentante della classe $[a]_{n}$. L'unico rapprsentante $r\in[a]_{n}$ compreso tra $0$ e $n-1$ (ovvero $r$ è il resto della divisione di $a$ per $n$), verrà chiamato rappresentante canonico.
@@ -52,7 +52,7 @@ $$
 Sia $n > 0$. Definiamo $+: \mathbb{Z} \big/_{n\mathbb{Z}} \times \mathbb{Z} \big/_{n\mathbb{Z}} \rightarrow \mathbb{Z} \big/_{n\mathbb{Z}}$ e $\cdot: \mathbb{Z} \big/_{n\mathbb{Z}} \times \mathbb{Z} \big/_{n\mathbb{Z}} \rightarrow \mathbb{Z} \big/_{n\mathbb{Z}}$ come:
 $$
 \begin{align}
-[a]_{n} + [b]_{n} &:= [a+b]_{n}
+[a]_{n} + [b]_{n} &:= [a+b]_{n} \\
 [a]_{n} \cdot [b]_{n} &:= [a \cdot b]_{n}
 \end{align}
 $$

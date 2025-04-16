@@ -22,7 +22,6 @@ r_{1} = q_{3}r_{2} + r_{3} &\qquad (r_{2}, r_{3}) &\qquad r_{3}  \\
 r_{k-3} = q_{k-1}r_{k-2}+r_{k-1} &\qquad (r_{k-2}, r_{k-1}) & \qquad r_{k-1} \\
 r_{k-2} = q_{k}r_{k-1}+r_{k} &\qquad (r_{k - 1}, r_{k}) &\qquad r_{k} \\
 r_{k-1} = q_{k+1}r_{k}+r_{k+1} &\qquad (r_{k}, 0) &\qquad 0 \\
- r_{k} & \qquad  & \qquad
 \end{align}
 $$
 $\exists!k\in \mathbb{N}, r_{k+1} = 0$.
@@ -47,7 +46,7 @@ $$
 Calcolare $(28, 48)$ e trovare una coppia $(x, y) \in \mathbb{Z} \times \mathbb{Z}$ tale che $x 28 + y 48= (28,48)$.
 ![[9_1]]
 ![[9_2]]
-## Proprietà dei numeri coprimi e caraterrizzazione dei numeri primi (p. 26)
+## Proprietà dei numeri coprimi e caratterizzazione dei numeri primi (p. 26)
 ### Proposizione 10.1
 Siano $n, m \in \mathbb{Z}$ non entrambi nulli e coprimi. Sia $q \in \mathbb{Z}$.
 Valgono:
@@ -64,7 +63,7 @@ $n|q$ e $m|q$ $\Longleftrightarrow \exists k,h \in \mathbb{Z} :$ $q = nk$ e $q =
 ### Definizione 9.4 (p25)
 Un numero $p \in \mathbb{Z}$ si dice primo se $p \geq 2$ e possiede solo i quattro divisori banali, ovvero $\pm 1, \pm p$.
 
-### Corollario 10.2 (Sistemare)
+### Corollario 10.2
 Sia $p \in \mathbb{Z}$ tale che $p \geq 2$. Allora $p$ è primo se e soltanto se e solo se soddisfa la seguente proprietà:
 $$
 (\star) \forall n,m \in \mathbb{Z}: (p|nm \implies p|n \text{ or } p|m)

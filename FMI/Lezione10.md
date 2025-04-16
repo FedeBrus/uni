@@ -86,6 +86,7 @@ Passo induttivo: $a \geq 1, a \implies a+1$.
 Ipotesi induttiva: supponiamo $a\geq 1$ e supponiamo che la seguente affermazione sia vera: se $p_{1},\dots,p_{a}$ e $q_{1},\dots,q_{b}$ primi eventualmente ripetuti tali che $a \leq b$ e $p_{1}\dots p_{a} = q_{1}\dots q_{b}$, allora $a = b$ e meno di riordinamento $p_{i} = q_{i}, \forall i \in \{ 1, \dots, a \}$.
 Dobbiamo provare la stessa affermazione con $a + 1$ al posto di $a$.
 Supponiamo che $p_{1},\dots,p_{a},p_{a+1}$ e $q_{1},\dots,q_{b}$ siano numeri primi tali che $a+1 \leq b$ e $p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b}$. Dobbiamo provare che $a+1 = b$ e, a meno di riordinamento, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a, a+1 \}$.
+
 Osserviamo che:
 $p_{a+1}|p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b} \implies p_{a+1}|q_{1}\dots q_{b}\implies$ a meno di riordinamento dei vari $q_{i}$, possiamo supporre che $p_{a+1}|q_{b}$. In quanto primo, i divisori positivi di $q_{b}$ sono $1$ o $q_{b}$, ma un numero primo deve essere $\geq 2$ per definizione. Quindi $p_{a+1}=q_{b}$.
 Dunque $p_{1}\dots p_{a}p_{a+1} = q_{1}\dots q_{b-1}p_{a+1}$ $\implies$ $p_{1}\dots p_{a} = q_{1}\dots q_{b-1}$. Siccome $a \leq b-1$ perché per ipotesi $a+1 \leq b$ possiamo applicare l'ipotesi induttiva.
