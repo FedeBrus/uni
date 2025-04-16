@@ -110,13 +110,22 @@ public class Map {
         return at(coords) instanceof SmeltableBlock;
     }
 
-    public Block at(Coordinates coords) {
-        if (isInRange(coords)) return content[coords.getY()][coords.getX()];
-        return new NullBlock();
+    public boolean isPickableAt(Coordinates coords) {
+        return at(coords).isPickable();
     }
 
     public SmeltableBlock SmeltableBlockAt(Coordinates coords) {
         if (isSmeltableAt(coords)) return (SmeltableBlock)at(coords);
+        return new NullBlock();
+    }
+
+    public Block PickableBlockAt(Coordinates coords) {
+        if (isPickableAt(coords)) return at(coords);
+        return new NullBlock();
+    }
+
+    public Block at(Coordinates coords) {
+        if (isInRange(coords)) return content[coords.getY()][coords.getX()];
         return new NullBlock();
     }
 

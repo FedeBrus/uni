@@ -6,6 +6,8 @@
 package main;
 
 import ui.MainView;
+import util.Coordinates;
+
 import java.util.Scanner;
 
 public class Main {
@@ -21,14 +23,15 @@ public class Main {
                 case 2 -> {
                     int x = sc.nextInt();
                     int y = sc.nextInt();
-                    mv.pickUp(x, y);
+                    mv.pickUp(new Coordinates(x, y));
                 }
                 case 3 -> {
                     int i = sc.nextInt();
                     mv.putInFurnace(i);
                 }
                 case 4 -> mv.smelt();
-                case 5 -> mv.retrieveFromFurnace();
+                case 5 -> mv.retrieveOutputFromFurnace();
+                case 6 -> mv.retrieveInputFromFurnace();
             }
         } while (choice != 0);
     }

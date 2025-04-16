@@ -5,12 +5,14 @@ public abstract class AbstractBlock implements Block {
     protected char content;
     protected boolean fallsWithGravity;
     protected boolean fallsThrough;
+    protected boolean pickable;
 
     protected AbstractBlock(String blockName, char content, boolean fallsWithGravity, boolean fallsThrough) {
         this.blockName = blockName;
         this.content = content;
         this.fallsWithGravity = fallsWithGravity;
         this.fallsThrough = fallsThrough;
+        this.pickable = false;
     }
 
     protected AbstractBlock(String blockName, char content) {
@@ -27,6 +29,10 @@ public abstract class AbstractBlock implements Block {
 
     public boolean isFallsThrough() {
         return fallsThrough;
+    }
+
+    public boolean isPickable() {
+        return pickable;
     }
 
     @Override

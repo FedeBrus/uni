@@ -23,8 +23,7 @@ public class MainView {
         inventory.displayOnOut();
     }
 
-    public void pickUp(int x, int y) {
-        Coordinates coords = new Coordinates(x, y);
+    public void pickUp(Coordinates coords) {
         if (map.isInRange(coords)) {
             inventory.addBlock(map.at(coords));
             map.removeAt(coords);
@@ -35,8 +34,19 @@ public class MainView {
         furnace.smelt();
     }
 
-    public void retrieveFromFurnace() {
+    public void toggleInventoryComparator() {
+
+    }
+
+    public void retrieveOutputFromFurnace() {
         Block b = furnace.retrieveOutput();
+        if (!(b instanceof NullBlock)) {
+            inventory.addBlock(b);
+        }
+    }
+
+    public void retrieveInputFromFurnace() {
+        Block b = furnace.retrieveInput();
         if (!(b instanceof NullBlock)) {
             inventory.addBlock(b);
         }
