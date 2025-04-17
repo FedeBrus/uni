@@ -67,3 +67,42 @@ fun negativeToZero(nil) = nil
     | negativeToZero(L:real list) = map(negativeNumberToZero, L);
 
 negativeToZero([0.0, 1.0, ~2.1, ~2.3]);
+
+fun max(a: real, b: real) = if a > b then a else b;
+fun maxList(L) = reduce(max, L);
+
+maxList([1.1, 2.2, 4.4, 3.3]);
+
+fun greaterThanZero(a) = if a > 0.0 then true else false;
+fun keepPositives(L) = filter(greaterThanZero, L);
+
+keepPositives([1.1, ~1.2, ~1.3, 1.4]);
+
+fun readAndSum(inputFileName) = 
+    let 
+        val inputFile = TextIO.openIn(inputFileName);
+
+        fun getWord(infile) = case TextIO.input1(infile) of 
+                NONE => nil
+                | SOME #" " => nil
+                | SOME #"\n" => nil 
+                | SOME c => c::getWord(infile);
+
+        fun getList(infile) = case implode(getWord(infile)) of 
+                "" => nil
+                | s => 
+                    let 
+                        val number = Int.fromString(s);
+                    in
+                        case number of
+                            NONE => nil
+                            | SOME n => n::getList(infile)
+                    end;
+
+        val L = getList(inputFile);
+        val _ = TextIO.closeIn(inputFile);
+    in 
+        reduce(op +, L)
+    end;
+
+readAndSum("numbers");
