@@ -144,3 +144,49 @@ Si dica se $11$ è invertibile modulo $30$, e in caso lo sia calcolare tutti gli
 
 Soluzione:
 $(11, 30) = 1$, in questo caso la sua classe inversa è se stesso, cosa che non succede nei reali ad esempio.
+I passaggi sono:
+Calcolo MCD:
+$$
+\begin{align}
+11 &= 11 \\
+30 &= 2 \cdot 3 \cdot 5
+\end{align}
+$$
+Dunque $(11, 30) = 1$ e dunque esiste un inverso di $[11]_{30}$.
+Lanciamo euclide su $30$ e $11$:
+$$
+\begin{align}
+30 &= 2 \cdot 11 + 8 \\
+11 &= 8 + 3 \\
+8  &= 2 \cdot 3 + 2 \\
+3 &= 2 + 1 \\
+2  &= 2 \cdot 1 + 0
+\end{align}
+$$
+Torniamo indietro:
+$$
+\begin{align}
+1 & = 3 - 2 \\
+ & = 3 - (8 - 2 \cdot 3) \\
+ & = 3 \cdot 3 - 8 \\
+ & = 3 \cdot (11 - 8) - 8 \\
+ & = 3 \cdot 11 - 4 \cdot 8 \\
+ & = 3 \cdot 11 - 4 (30-2\cdot 11) \\
+ & = 11 \cdot  11 - 4 \cdot 30
+\end{align}
+$$
+Dunque $1 = 11 \cdot 11 + (-4) \cdot 30$.
+$$
+\begin{align}
+1 &= 11 \cdot 11 + (-4) \cdot 30 \\
+[1]_{30} &=  [11 \cdot 11 + (-4) \cdot 30]_{30} \\
+[1]_{30} &=  [11]_{30}[11]_{30} + [-4]_{30} [30]_{30} \\
+[1]_{30} &=  [11]_{30}[11]_{30} + [-4]_{30} [0]_{30} \\
+[1]_{30} &=  [11]_{30}[11]_{30} + [-4 \cdot 0]_{30} \\
+[1]_{30} &=  [11]_{30}[11]_{30} + [0]_{30} \\
+[1]_{30} &=  [11 \cdot 11 + 0]_{30} \\
+[1]_{30} &=  [11]_{30}[11]_{30} \\
+\end{align}
+$$
+Da questi conti segue che $[11]_{30}^{-1}=[11]_{30} \in \mathbb{Z} \big/_{30\mathbb{Z}}$, dunque l'insieme degli interi inversi di $11$ modulo $30$ è uguale a $[11]_{30}=\{ \dots, -19, 11, 41, 71, 101, \dots \}\subset \mathbb{Z}$.
+
