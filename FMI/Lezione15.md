@@ -92,3 +92,62 @@ $$
  & = \phi(n)
 \end{align}
 $$
+Calcolo della $\phi$ di Eulero.
+se $p$ è primo, allora $\phi(p) = p - 1$.
+$\phi(1)= | \{ 1 \} | = 1$
+$\phi(2)= |\{ 1, \cancel2 \}|= 1$
+$\phi(4)=|\{ 1,\cancel2,3,\cancel4 \}| = 2$
+$\phi(8)=|\{ 1,\cancel2,3,\cancel4,5,\cancel6,7,\cancel8 \}|=4$
+
+Ma allora quanto vale $\phi(n), n \geq 2$? 
+### Moltiplicatività
+La $\phi$ di Eulero è moltiplicativa sulle coppie coprime:
+Se $n, m \in \mathbb{N} \setminus \{ 0 \}$ con $(n,m)=1$, allora:
+$$
+\phi(nm) = \phi(n)\phi(m)
+$$
+### Dimostrazione
+Non abbiamo tempo. Guardare il libro "Algebretta" di Scimemi.
+
+### Semplificazione del conto
+Sia $n \geq 2$. Sia $n = p_{1}^{m_{1}}p_{2}^{m_{2}}\dots p_{k}^{m_{k}}$ dove i vari $p_{i}$ sono primi $p_{i}\neq p_{j}$ se $i,j\in \{ 1,\dots,k \}$ con $i \neq j$.
+Allora $\phi(n)=\phi(p_{1}^{m_{1}})\phi(p_{2}^{m_{2}}\dots p_{k}^{m_{k}})=\dots=\phi(p_{1}^{m_{1}})\phi(p_{2}^{m_{2}})\dots \phi(p_{k}^{m_{k}})$.
+
+Sia $p$ un primo e sia $m\geq 1$. Calcoliamo:
+$$
+\begin{align}
+\phi(p^{m}) &= \left| \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p^{m}) = 1 \} \right|  \\
+ & = \left| \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p) = 1 \} \right|  \\
+ & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq \leq a \leq p^{m}, (a, p) \neq 1 \} \right| \\
+ & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq \leq a \leq p^{m}, (a, p) \neq p \} \right| \\
+ & = \left| \{ 1, \dots, p^{m} \} \setminus \{ p, 2 \cdot p, \dots, p^{m-1}p \} \right| \\
+ & = p^{m} -p^{m-1}
+\end{align}
+$$
+Perché $p$ ha solo due divisori: o $1$ o $p$.
+
+Segue che se $p$ è primo e $m\geq 1$ allora $\phi(p^{m}) =p^{m}-p^{m-1}$.
+
+### Formula generale
+Sia $n\geq 2$, $n = p_{1}^{m_{1}}p_{2}^{m_{2}}\dots p_{k}^{m_{k}}$ dove i vari $p_{i}$ sono primi e $p_{i}\neq p_{j}$ se $i, j \in \{ 1,\dots,k \}$ con $i \neq j$
+$$
+\phi(n) = \phi(p_{1}^{m_{1}})\phi(p_{2}^{m_{2}})\dots \phi(p_{k}^{m_{k}}) = (p_{1}^{m_{1}}- p_{1}^{m_{1} - 1})(p_{2}^{m_{2}}- p_{2}^{m_{2} - 1})\dots(p_{k}^{m_{k}}- p_{k}^{m_{k} - 1})
+$$
+Dunque il caso $\phi(p)$ con $p$ primo è coerente con questa formula.
+#### Esercizi
+Calcoliamo $\phi(49)$:
+$$
+\phi(49) = \phi(7^{2}) = 7^{2}- 7 = 49 - 7 = 42
+$$
+Calcoliamo $\phi(24)$:
+$$
+\phi(24) = \phi(2^{3} \cdot 3) = \phi(2^{3}) \phi(3) = (2^{3}-2^{2})(3 - 1) = (8-4)(2) = 8
+$$
+Calcoliamo $\phi(21)$:
+$$
+\phi(21) = \phi(3 \cdot 7) = \phi(3)\phi(7) = 2 \cdot 6 = 12
+$$
+Calcoliamo $\phi(100)$:
+$$
+\phi(100)=\phi(2^{2}\cdot 5^{2}) =\phi(2^{2})\phi(5^{2}) = (2^{2}-2)(5^{2}-5) = (4-2)(25- 5) =40
+$$
