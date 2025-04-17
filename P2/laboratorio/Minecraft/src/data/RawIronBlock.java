@@ -8,4 +8,9 @@ public class RawIronBlock extends AbstractSolidBlock implements SmeltableBlock {
     public Block smelt() {
         return new IronBlock();
     }
+
+    @Override
+    public int blockId() {
+        return 5;
+    }
 }

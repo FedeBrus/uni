@@ -9,4 +9,9 @@ public class NullBlock extends AbstractSolidBlock implements SmeltableBlock {
     public Block smelt() {
         return new NullBlock();
     }
+
+    @Override
+    public int blockId() {
+        return 0;
+    }
 }

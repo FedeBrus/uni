@@ -1,9 +1,9 @@
 package ui;
 
-import data.AirBlock;
 import data.Block;
 import data.NullBlock;
 import data.SmeltableBlock;
+import ui.inventory.Inventory;
 import util.Coordinates;
 
 public class MainView {
@@ -35,7 +35,7 @@ public class MainView {
     }
 
     public void toggleInventoryComparator() {
-
+        inventory.toggleComaprator();
     }
 
     public void retrieveOutputFromFurnace() {

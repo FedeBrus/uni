@@ -9,4 +9,8 @@ public class AirBlock extends AbstractBlock {
     public AirBlock() {
         super("AirBlock", '.', false, true);
     }
+
+    public int blockId() {
+        return 1;
+    }
 }

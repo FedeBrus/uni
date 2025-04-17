@@ -9,4 +9,9 @@ public class SandBlock extends AbstractBlock implements SmeltableBlock {
     public Block smelt() {
         return new GlassBlock();
     }
+
+    @Override
+    public int blockId() {
+        return 3;
+    }
 }

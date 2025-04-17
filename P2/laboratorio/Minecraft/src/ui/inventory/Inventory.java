@@ -1,16 +1,20 @@
-package ui;
+package ui.inventory;
 
 import data.Block;
 import data.NullBlock;
 import data.SmeltableBlock;
+
+import java.util.Comparator;
 import java.util.List;
 import java.util.ArrayList;
 
 public class Inventory {
     private List<Block> blockList;
+    private Comparator<Block> comparator;
 
     public Inventory() {
         blockList = new ArrayList<Block>();
+        comparator = new BlockComparator();
     }
 
     public void displayOnOut() {
@@ -22,6 +26,7 @@ public class Inventory {
     public void addBlock(Block b) {
         if (!(b instanceof NullBlock)) {
             blockList.add(b);
+            blockList.sort(comparator);
         }
     }
 
@@ -55,5 +60,13 @@ public class Inventory {
         }
 
         return new NullBlock();
+    }
+
+    public void toggleComaprator() {
+        if (comparator instanceof AlphabeticalBlockComparator) {
+            comparator = new BlockComparator();
+        } else {
+            comparator = new AlphabeticalBlockComparator();
+        }
     }
 }
