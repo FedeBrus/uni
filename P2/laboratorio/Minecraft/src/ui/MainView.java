@@ -1,10 +1,9 @@
 package ui;
 
-import data.Block;
-import data.NullBlock;
-import data.SmeltableBlock;
+import data.*;
 import ui.inventory.Inventory;
 import util.Coordinates;
+import util.WrongCoordinatesException;
 
 public class MainView {
     private final Map map;
@@ -23,10 +22,12 @@ public class MainView {
         inventory.displayOnOut();
     }
 
-    public void pickUp(Coordinates coords) {
-        if (map.isInRange(coords)) {
-            inventory.addBlock(map.at(coords));
+    public void pickUp(Coordinates coords) throws WrongCoordinatesException {
+        try {
+            inventory.addBlock(map.pickableBlockAt(coords));
             map.removeAt(coords);
+        } catch (BlockErrorException bee) {
+            System.out.println(bee.getMessage());
         }
     }
 
@@ -53,8 +54,12 @@ public class MainView {
     }
 
     public void putInFurnace(int i) {
-        SmeltableBlock b = inventory.getSmeltableBlock(i);
-        inventory.addBlock(furnace.retrieveInput());
-        furnace.setInput(b);
+        try {
+            SmeltableBlock b = inventory.getSmeltableBlock(i);
+            inventory.addBlock(furnace.retrieveInput());
+            furnace.setInput(b);
+        } catch (BlockErrorException bee) {
+            System.out.println(bee.getMessage());
+        }
     }
 }

@@ -1,8 +1,6 @@
 package ui.inventory;
 
-import data.Block;
-import data.NullBlock;
-import data.SmeltableBlock;
+import data.*;
 
 import java.util.Comparator;
 import java.util.List;
@@ -50,16 +48,16 @@ public class Inventory {
         return res;
     }
 
-    public boolean isSmeltable(int i) {
+    private boolean isSmeltable(int i) {
         return blockAt(i) instanceof SmeltableBlock;
     }
 
-    public SmeltableBlock getSmeltableBlock(int i) {
+    public SmeltableBlock getSmeltableBlock(int i) throws BlockErrorException {
         if (isSmeltable(i)) {
             return (SmeltableBlock)getBlock(i);
         }
 
-        return new NullBlock();
+        throw new BlockErrorException("Block at " + i + " is not smeltable");
     }
 
     public void toggleComaprator() {
@@ -68,5 +66,7 @@ public class Inventory {
         } else {
             comparator = new AlphabeticalBlockComparator();
         }
+
+        blockList.sort(comparator);
     }
 }

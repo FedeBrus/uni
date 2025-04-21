@@ -35,4 +35,8 @@ public class Coordinates {
     public Coordinates fromOffset(int offsetX, int offsetY) {
         return new Coordinates(x + offsetX, y + offsetY);
     }
+
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
 }

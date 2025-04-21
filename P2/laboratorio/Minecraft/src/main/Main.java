@@ -7,6 +7,7 @@ package main;
 
 import ui.MainView;
 import util.Coordinates;
+import util.WrongCoordinatesException;
 
 import java.util.Scanner;
 
@@ -23,7 +24,11 @@ public class Main {
                 case 2 -> {
                     int x = sc.nextInt();
                     int y = sc.nextInt();
-                    mv.pickUp(new Coordinates(x, y));
+                    try {
+                        mv.pickUp(new Coordinates(x, y));
+                    } catch (WrongCoordinatesException wce) {
+                        System.out.println("Input Coordinates are out of bounds");
+                    }
                 }
                 case 3 -> {
                     int i = sc.nextInt();
@@ -32,6 +37,7 @@ public class Main {
                 case 4 -> mv.smelt();
                 case 5 -> mv.retrieveOutputFromFurnace();
                 case 6 -> mv.retrieveInputFromFurnace();
+                case 7 -> mv.toggleInventoryComparator();
             }
         } while (choice != 0);
     }

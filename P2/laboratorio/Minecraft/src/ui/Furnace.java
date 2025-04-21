@@ -7,10 +7,12 @@ import data.SmeltableBlock;
 public class Furnace {
     SmeltableBlock input;
     Block output;
+    boolean readyToSmelt;
 
     public Furnace() {
         input = new NullBlock();
         output = new NullBlock();
+        readyToSmelt = true;
     }
 
     public void displayOnOut() {
@@ -18,9 +20,10 @@ public class Furnace {
     }
 
     public void smelt() {
-        if (isReadyToSmelt()) {
+        if (readyToSmelt) {
             output = input.smelt();
             input = new NullBlock();
+            readyToSmelt = false;
         }
     }
 
@@ -37,10 +40,11 @@ public class Furnace {
     public Block retrieveOutput() {
         Block res = output;
         output = new NullBlock();
+        readyToSmelt = true;
         return res;
     }
 
     private boolean isReadyToSmelt() {
-        return !(input instanceof NullBlock) && output instanceof NullBlock;
+        return output instanceof NullBlock;
     }
 }
