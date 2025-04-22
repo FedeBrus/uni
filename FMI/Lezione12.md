@@ -33,7 +33,7 @@ Calcolare il rappresentante canonico delle seguenti classi:
 ## Struttura di anello su $\mathbb{Z} \big/_{n\mathbb{Z}}$
 - $(\mathbb{Z}, +, \cdot)$
 	- $3+5=8, +:\mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}, +((3,5))=8$
-	- $3 \cdot 5 = 15, \cdot:\mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}, \cdot((3,5))=8$
+	- $3 \cdot 5 = 15, \cdot:\mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}, \cdot((3,5))=15$
 - $(\mathbb{Z} \big/_{n\mathbb{Z}}, +, \cdot)$?
 
 $$

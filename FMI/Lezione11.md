@@ -57,13 +57,13 @@ $$
 \mathbb{Z}\big/_{\sim_{n}} =: \mathbb{Z} \big/_{n \mathbb{Z}}
 $$
 e si chiama insieme degli interi modulo $n$ oppure insieme delle classi di resto modulo $n$.
-Dato $a \in \mathbb{Z}$, la $\sim_{n}$-classe di $a$ in $\mathbb{Z}$ si indica $[a]_{n}:=[a]_{(\bullet \equiv \bullet (\text{mod}\ n))}$ e si chiama classe di $a$ modulo $n$ o anche solo $a$ modulo $n$.
+Dato $a \in \mathbb{Z}$, la $\sim_{n}$-classe di $a$ in $\mathbb{Z}$ si indica $[a]_{n}:=[a]_{(\bullet \equiv \bullet\ (\text{mod}\ n))}$ e si chiama classe di $a$ modulo $n$ o anche solo $a$ modulo $n$.
 
 ### Calcolo di una classe modulo $n$
 $$
 \begin{align}
 [a]_{n} &= \{ x \in \mathbb{Z} |x \sim_{n} a \} \\
-&=  \{ x \in \mathbb{Z} | x\equiv a (\text{mod}\ n) \}  \\
+&=  \{ x \in \mathbb{Z} | x\equiv a\ (\text{mod}\ n) \}  \\
 &= \{ x \in \mathbb{Z} | n|x-a \}  \\
 &= \{ x \in \mathbb{Z} | \exists k \in \mathbb{Z} \text{ tale che } x-a = kn \} \\
 &= \{ x \in \mathbb{Z} | x = a+kn, \text{ per qualche } k \in \mathbb{Z} \} \\

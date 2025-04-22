@@ -118,8 +118,8 @@ $$
 \begin{align}
 \phi(p^{m}) &= \left| \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p^{m}) = 1 \} \right|  \\
  & = \left| \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p) = 1 \} \right|  \\
- & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq \leq a \leq p^{m}, (a, p) \neq 1 \} \right| \\
- & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq \leq a \leq p^{m}, (a, p) \neq p \} \right| \\
+ & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p) \neq 1 \} \right| \\
+ & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p) \neq p \} \right| \\
  & = \left| \{ 1, \dots, p^{m} \} \setminus \{ p, 2 \cdot p, \dots, p^{m-1}p \} \right| \\
  & = p^{m} -p^{m-1}
 \end{align}
