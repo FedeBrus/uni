@@ -174,7 +174,7 @@ Se $X, Y$ sono stocasticamente indipendenti allora $X, Y$ sono tra loro indipend
 $$
 p_{X,Y}=p_{X}(x)p_{Y}(y) \implies \begin{cases} \mathbb{E}(X|Y = y) = \mathbb{E}(X) & \forall y \in R_{Y} \\ \mathbb{E}(Y | X = x)= \mathbb{E}(Y) & \forall x \in R_{X} \end{cases}
 $$
-### Dimostrazioen
+### Dimostrazione
 $$
 \mathbb{E}(X |Y = y) = \sum_{x \in R_{X}} x p_{X|Y} (x |y) = \sum_{x \in R_{X}} x p_{X}(x) = \mathbb{E}(X), \forall y \in R_{Y}
 $$
