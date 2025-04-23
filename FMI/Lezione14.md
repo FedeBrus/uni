@@ -98,7 +98,7 @@ $$
  &= [10 + k]_{17}
 \end{align}
 $$
-Qui è immediato ma se $3078$ avesse avuto come resto della divisione per $17$ un numero che non fosse $1, -1$, allora si sarebbero dovuti provare 17 $k$ diversi, da $k = 0$ a $k = 16$.
+Qui è immediato scegliere $k=7$, ma se $3078$ avesse avuto come resto della divisione per $17$ un numero che non fosse $1, -1$, allora si sarebbero dovuti provare 17 $k$ diversi, da $k = 0$ a $k = 16$.
 
 ## Elementi invertibili modulo $n$
 Siano $a, n \in \mathbb{Z}$ con $n > 0$.
@@ -130,7 +130,7 @@ Quindi $[x]_{n}$ è la classe inversa di $[a]_{n}$. Dunque $[x]_{n} = [a]_{n}^{-
 ### Dimostrazione
 $\implies$)
 Se $a$ è invertibile modulo $n$, allora $\exists x \in \mathbb{Z}$ tale che $ax \equiv 1\ (\text{mod}\ n) \Longleftrightarrow ax =1 +kn$ per qualche $k \in \mathbb{Z}$.
-Dunque $1 = ax - kn$, e osserviamo che $(a,n)|a$ e $(a,n)|n$, quindi $(a,n)| ax - kn = 1$. Per definizione $(a,n) > 0$ e perciò $(a,n) = 1$.
+Dunque $1 = ax - kn$, e osserviamo che $(a,n)|a$ e $(a,n)|n$, quindi per il lemma utile $(a,n)| ax - kn = 1$. Per definizione $(a,n) > 0$ e perciò $(a,n) = 1$.
 $\impliedby)$
 Supponiamo che $(a,n)=1$. Esistono, utilizzando Euclide, $x,y \in \mathbb{Z}$ tali che $xa+yn = (a,n) = 1 \implies xa +yn = 1 \implies [xa + yn]_{n} = [1]_{n} \implies [xa]_{n}=1 \implies [x]_{n}[a]_{n} = 1 \implies [x]_{n} = [a]_{n}^{-1}$.
 

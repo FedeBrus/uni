@@ -43,9 +43,9 @@ $\mathbb{Z} \big/_{p\mathbb{Z}}=\{ [0]_{p}, [1]_{p}, [2]_{p}, \dots, [p - 1]_{p}
 Siccome $(0, p)=|p|$, ma $p \geq 2$, allora $[0]_{p}\not\in \left( \mathbb{Z} \big/_{p\mathbb{Z}} \right)^{*}$.
 Se $[0]_{p}$ fosse invertibile in $\mathbb{Z} \big/_{p\mathbb{Z}}$ allora esisterebbe $[x]_{p}$ tale che:
 $$
-[0]_{p}=[x \cdot 0]_{p} = [x]_{p}[0]_{p} = [1]_{p}
+[0]_{p}=[x \cdot 0]_{p} = [x]_{p}[0]_{p} = [1]_{p}  \Longleftrightarrow 0 \equiv 1\ (\text{mod}\ p)
 $$
-Ma ciò è impossibile perché: $0 < 1\leq p - 1 \implies [0]_{p} \neq [1]_{p}$.
+Ma $p \not{|}\ 1 -0$ appunto perché $p \geq 2$.
 
 Sia $r \in \{ 1, \dots, p - 1 \}$. Vale:
 $$
@@ -119,11 +119,12 @@ $$
 \phi(p^{m}) &= \left| \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p^{m}) = 1 \} \right|  \\
  & = \left| \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p) = 1 \} \right|  \\
  & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p) \neq 1 \} \right| \\
- & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p) \neq p \} \right| \\
+ & = \left| \{ 1, \dots, p^{m} \} \setminus \{ a \in \mathbb{N} | 1 \leq a \leq p^{m}, (a, p) = p \} \right| \\
  & = \left| \{ 1, \dots, p^{m} \} \setminus \{ p, 2 \cdot p, \dots, p^{m-1}p \} \right| \\
  & = p^{m} -p^{m-1}
 \end{align}
 $$
+
 Perché $p$ ha solo due divisori: o $1$ o $p$.
 
 Segue che se $p$ è primo e $m\geq 1$ allora $\phi(p^{m}) =p^{m}-p^{m-1}$.

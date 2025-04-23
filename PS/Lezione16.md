@@ -182,5 +182,5 @@ La stessa dimostrazione vale per l'altro caso.
 
 ### Definizione indice di dipendeza in media (Rapporto di correlazione)
 $$
-0 \leq n^{2}_{X | Y} = \frac{Var(\mathbb{E}(X |Y))}{Var(X)} = 1- \frac{\mathbb{E}(Var(X | Y))}{Var(X)} \leq 1 \qquad Var(X) > 0
+0 \leq \eta^{2}_{X | Y} = \frac{Var(\mathbb{E}(X |Y))}{Var(X)} = 1- \frac{\mathbb{E}(Var(X | Y))}{Var(X)} \leq 1 \qquad Var(X) > 0
 $$
