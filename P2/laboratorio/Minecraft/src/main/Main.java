@@ -18,10 +18,19 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         do {
             System.out.println("Inserire un'opzione: ");
+            System.out.println("1: display");
+            System.out.println("2: pick up block");
+            System.out.println("3: put in furnace");
+            System.out.println("4: smelt");
+            System.out.println("5: retrieve furnace output");
+            System.out.println("6: retrieve furnace input");
+            System.out.println("7: toggle inventory comparator");
             choice = sc.nextInt();
             switch (choice) {
                 case 1 -> mv.displayOnOut();
                 case 2 -> {
+                    System.out.println("x: ");
+                    System.out.println("y: ");
                     int x = sc.nextInt();
                     int y = sc.nextInt();
                     try {

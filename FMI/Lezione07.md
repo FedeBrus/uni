@@ -45,7 +45,7 @@ Inoltre $\forall k \in \{ 0, \dots, m-1 \}, P(k)\text{ vera}$. Ma per l'ipotesi 
 Ma questo è assurdo, dunque $A = \emptyset$.
 
 Il principio di prima forma funziona solo sui naturali, mentre quello di seconda forma funziona su qualsiasi insieme ben ordinato.
-## Teorema $\exists!$ del quoziente e del resto della divisione euclidea
+## * Teorema $\exists!$ del quoziente e del resto della divisione euclidea
 Sia $\mathbb{Z} := \{ \dots,-2, -1, 0, 1, 2, \dots \}$ l'insieme dei numeri interi.
 Siano $n, m \in \mathbb{Z}$ con $m \neq 0$. Allora $\exists!q,r \in \mathbb{Z}$ tali che:
 $$

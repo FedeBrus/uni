@@ -1,4 +1,4 @@
-## Definizione 9.1
+## * Definizione 9.1
 Siano $n, m \in \mathbb{Z}$. Diciamo che $n$ è un divisore di $m$, oppure $m$ è un multiplo di $n$, scriveremo $n | m$ che si legge "n divide m" se $\exists k \in \mathbb{Z}$ tale che $nk = m$.
 Se ciò è falso, $n \not{|}\ \    m$
 
@@ -22,13 +22,13 @@ Se $1-kh = 0 \Longleftrightarrow kh = 1 \Longleftrightarrow$ $k = h = 1$ oppure 
 Se $k = h = 1 \implies m=n$.
 Se $k = h = - 1 \implies  m = -n$.
 
-### Definzione 9.5 e (9.7)
+### * Definzione 9.5 e (9.7)
 Siano $n, m \in \mathbb{Z}$ non entrambi nulli e sia $d \in \mathbb{Z}$.
 Si dice che $d$ è un Massimo Comun Divisore tra $n$ e $m$ se $d>0$ e valgono:
 1. $d | n$ e $d|m$
 2. Se $c \in \mathbb{Z}$ tale che $c|n$ e $c|m$ allora $c|d$.
 
-### Proposizione 9.6
+### * Proposizione 9.6
 Siano $n,m \in \mathbb{Z}$ non entrambi nulli e supponiamo che $d, d'$ siano due MCD tra $n$ e $m$, allora $d = d'$.
 
 ### Dimostrazione

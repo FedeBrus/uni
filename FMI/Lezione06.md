@@ -79,7 +79,7 @@ $f$ è una bigezione $\implies$ $\mathbb{N}$ è infinito.
 ### Definizione 7.2
 Sia $X$ un insieme e sia $\leq$ un ordinamento parziale di $X$. Consideriamo $A$ un sottoinsieme di $X$. Diciamo che $z \in A$ è un minimo di $A$ in $(X, \leq)$ se $\forall x \in A, z \leq x$.
 
-### Oss
+### Osservazione
 Se $A$ ammette un minimo $z$, allora tale minimo è unico. Infatti se $z' \in A$ fosse un altro minimo varrebbe:
 $$
 z \leq z', z' \leq z
