@@ -79,29 +79,24 @@ fun keepPositives(L) = filter(greaterThanZero, L);
 keepPositives([1.1, ~1.2, ~1.3, 1.4]);
 
 fun readAndSum(inputFileName) = 
-    let 
+    let
         val inputFile = TextIO.openIn(inputFileName);
 
-        fun getWord(infile) = case TextIO.input1(infile) of 
+        fun getWord(infile) = case TextIO.input1(infile) of
                 NONE => nil
                 | SOME #" " => nil
                 | SOME #"\n" => nil 
                 | SOME c => c::getWord(infile);
 
-        fun getList(infile) = case implode(getWord(infile)) of 
+        fun getList(infile) = case implode(getWord(infile)) of
                 "" => nil
-                | s => 
-                    let 
-                        val number = Int.fromString(s);
-                    in
-                        case number of
-                            NONE => nil
-                            | SOME n => n::getList(infile)
-                    end;
+                | s => case Int.fromString(s) of
+                    NONE => nil
+                    | SOME n => n::getList(infile)
 
         val L = getList(inputFile);
         val _ = TextIO.closeIn(inputFile);
-    in 
+    in
         reduce(op +, L)
     end;
 

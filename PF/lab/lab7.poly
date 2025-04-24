@@ -1,0 +1,49 @@
+fun applyList nil = (fn x => nil)
+    | applyList (f::fs) = (fn x => (f x) :: ((applyList fs) x));
+val g = applyList [fn x => x * 2, fn x => x*x*x];
+
+val F = fn (x, y, z) => x * y * z;
+fun curry f = (fn x => (fn y => (fn z => f(x, y, z))));
+curry F 1 2 3;
+curry F 2 3 4;
+
+fun toReal L = map real L;
+toReal [1, 2, 3];
+
+fun andb L = foldr (fn (a, b) => a andalso b) true L;
+andb [true, false, true];
+
+fun implode L = foldr (fn (a, b) => str(a) ^ b) "" L;
+implode [#"a", #"b", #"c"];
+
+datatype 'a btree =
+    Empty 
+    | Node of 'a * 'a btree * 'a btree;
+
+val tree = 
+(Node ("ML", 
+    Node ("as", 
+        Node ("a", Empty, Empty), 
+        Node ("in", Empty, Empty)
+    ), 
+    Node ("types",Empty, Empty)
+    )
+);
+
+fun postOrder Empty = nil
+    | postOrder (Node(key, left, right)) = (postOrder left) @ (postOrder right) @ [key];
+postOrder(tree);
+
+fun inOrder Empty = nil
+    | inOrder (Node(key, left, right)) = (inOrder left) @ [key] @ (inOrder right);
+inOrder(tree);
+
+type ('a, 'b) mapTree = ('a * 'b) btree;
+val mT:(string, int)mapTree = Node (("a", 1), Empty, Empty);
+
+
+fun sumTree (T : ('a, int) mapTree) = case T of
+    Node((_, n), left, right) => n + sumTree left + sumTree right
+    | Empty => 0;
+
+sumTree mT;
