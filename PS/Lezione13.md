@@ -8,7 +8,7 @@ $$
 $$
 In altri simboli:
 $$
-\mathbb(x) = \int_{-\infty}^{+\infty}  xdF_{X}(x)
+\mathbb{E}(x) = \int_{-\infty}^{+\infty}  xdF_{X}(x)
 $$
 Il valore atteso esiste se:
 $$
