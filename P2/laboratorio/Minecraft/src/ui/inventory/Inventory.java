@@ -11,7 +11,7 @@ public class Inventory {
     private Comparator<Block> comparator;
 
     public Inventory() {
-        blockList = new ArrayList<Block>();
+        blockList = new ArrayList<>();
         comparator = new BlockComparator();
     }
 
@@ -22,10 +22,8 @@ public class Inventory {
     }
 
     public void addBlock(Block b) {
-        if (!(b instanceof NullBlock)) {
-            blockList.add(b);
-            blockList.sort(comparator);
-        }
+        blockList.add(b);
+        blockList.sort(comparator);
     }
 
     public Block getBlock(int i) {
