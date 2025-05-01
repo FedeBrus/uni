@@ -1,7 +1,5 @@
 package util;
 
-import ui.Map;
-
 public class Coordinates {
     private int x;
     private int y;

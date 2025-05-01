@@ -5,14 +5,22 @@
 
 package main;
 
-import ui.MainView;
-import util.Coordinates;
-import util.WrongCoordinatesException;
+import data.*;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import ui.gui.BlockPane;
+import ui.gui.FurnacePane;
+import ui.gui.InventoryPane;
+import ui.gui.MapPane;
 
-import java.util.Scanner;
-
-public class Main {
+public class Main extends Application {
     public static void main(String[] args) {
+        /*
         MainView mv = new MainView(5, 5);
         int choice;
         Scanner sc = new Scanner(System.in);
@@ -49,5 +57,25 @@ public class Main {
                 case 7 -> mv.toggleInventoryComparator();
             }
         } while (choice != 0);
+        */
+
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        InventoryPane inventory = new InventoryPane();
+        inventory.addBlock(new BlockPane(new SandBlock()));
+        inventory.addBlock(new BlockPane(new WaterBlock()));
+        inventory.addBlock(new BlockPane(new AirBlock()));
+        inventory.addBlock(new BlockPane(new GlassBlock()));
+
+        MapPane map = new MapPane();
+
+        FurnacePane furnace = new FurnacePane();
+
+        stage.setTitle("Minecraft");
+        stage.setScene(new Scene(furnace, 300, 275));
+        stage.show();
     }
 }
