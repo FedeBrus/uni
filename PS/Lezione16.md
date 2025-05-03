@@ -34,7 +34,7 @@ Var(X|Y=1)  &= (2-2)^{2} \cdot 1 = 0 \\
 Var(X | Y = 2) & = (4- 5)^{2} \cdot \frac{1}{2} + (6-5)^{2} \cdot \frac{1}{2} = 1
 \end{align}
 $$
-Sia $Z(y) = \mathbb{E}(X | Y = y), \forall y \in R_{Y}$. Per ogni $y$ fissato questa è una funzione. Dunque $Z(Y)=\mathbb{E}(X|Y)$
+Sia $Z(y) = \mathbb{E}(X | Y = y), \forall y \in R_{Y}$. Per ogni $y$ fissato questa è una funzione. Dunque ha senso considerare $Z(Y)=\mathbb{E}(X|Y)$.
 Proviamo a calcolare:
 $$
 \begin{align}

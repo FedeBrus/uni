@@ -49,7 +49,7 @@ che è la varianza delle medie condizionate sommata alla media delle varianze co
 
 $\eta^{2}_{Y|X}$ sarà più grande per i dati del grafico di destra, in quanto con $\sigma^{2}_{Y}$ fissato, essendo in esso la varianza delle medie condizionate più grande il rapporto aumenta.
 
-### Definziione Funzione di regressione
+### Definzione Funzione di regressione
 Chimiamiamo funzione di regressione una funzione che passa per tutte le medie condizionate.
 
 Una funzione più semplice che approssima una funzione di regressione viene chiamata modello.
