@@ -13,10 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import ui.gui.BlockPane;
-import ui.gui.FurnacePane;
-import ui.gui.InventoryPane;
-import ui.gui.MapPane;
+import ui.gui.*;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -64,18 +61,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        MapPane map = new MapPane();
         InventoryPane inventory = new InventoryPane();
+        FurnacePane furnace = new FurnacePane();
         inventory.addBlock(new BlockPane(new SandBlock()));
         inventory.addBlock(new BlockPane(new WaterBlock()));
         inventory.addBlock(new BlockPane(new AirBlock()));
         inventory.addBlock(new BlockPane(new GlassBlock()));
+        ButtonListPane buttons = new ButtonListPane();
 
-        MapPane map = new MapPane();
-
-        FurnacePane furnace = new FurnacePane();
+        MainGUI gui = new MainGUI(map, furnace, inventory, buttons);
 
         stage.setTitle("Minecraft");
-        stage.setScene(new Scene(furnace, 300, 275));
+        stage.setScene(new Scene(gui, 750, 750));
         stage.show();
     }
 }
