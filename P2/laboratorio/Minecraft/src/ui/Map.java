@@ -12,15 +12,12 @@ import util.WrongCoordinatesException;
 import java.util.Random;
 
 public class Map {
-    private final int width;
-    private final int height;
+    private final int width = 10;
+    private final int height = 10;
     private final Block[][] content;
 
-    public Map(int width, int height) {
-        this.width = width;
-        this.height = height;
+    public Map() {
         content = new Block[height][width];
-
         // Mappa di default composta da sola aria
         try {
             Coordinates coords = new Coordinates();

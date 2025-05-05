@@ -10,8 +10,8 @@ public class MainView {
     private final Furnace furnace;
     private final Inventory inventory;
 
-    public MainView(int mapWidth, int mapHeight) {
-        map = new Map(mapWidth, mapHeight);
+    public MainView() {
+        map = new Map();
         furnace = new Furnace();
         inventory = new Inventory();
     }

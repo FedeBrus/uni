@@ -18,7 +18,7 @@ $$
 $$
 $\bar{\mu}$ è la media campionaria e gioca il ruolo di $\mathbb{E}(Y)$.
 
-Ora consideriamo $\bar{y}_{1}, \dots, \bar{y}_{2}$ dove $\bar{y}_{i}$ la media aritmetica dei $y_{ij}$ con $i$ fissato. Ovvero:
+Ora consideriamo $\bar{y}_{1}, \dots, \bar{y}_{6}$ dove $\bar{y}_{i}$ la media aritmetica dei $y_{ij}$ con $i$ fissato. Ovvero:
 $$
 \bar{y}_{i} = \frac{\sum_{j=1}^{n_{i}} y_{ij}}{n_{i}}
 $$
@@ -28,7 +28,7 @@ Ora possiamo calcolarci $\sigma_{i}^{2}$:
 $$
 \sigma_{i}^{2}= \sum_{j=1}^{n_{i}} \frac{(y_{ij}-\bar{y}_{i})^{2}}{n_{i}}
 $$
-Queste sono chiamate varianze condizionate e giocaon il ruolo di $Var(Y|X=x_{i})$.
+Queste sono chiamate varianze condizionate e giocano il ruolo di $Var(Y|X=x_{i})$.
 Ma in questo caso i diversi $\bar{y}_{i}$ sono diversi tra di loro quindi $Y$ è dipendente in media rispetto a $X$, in quanto conoscere $X$ cambia la media.
 Siccome le $\sigma_{i}^{2}$ non sono uguali tra di loro, allora la $Y$ è dipendente in varianza rispetto a $X$.
 
@@ -49,7 +49,7 @@ che è la varianza delle medie condizionate sommata alla media delle varianze co
 
 $\eta^{2}_{Y|X}$ sarà più grande per i dati del grafico di destra, in quanto con $\sigma^{2}_{Y}$ fissato, essendo in esso la varianza delle medie condizionate più grande il rapporto aumenta.
 
-### Definziione Funzione di regressione
+### Definzione Funzione di regressione
 Chimiamiamo funzione di regressione una funzione che passa per tutte le medie condizionate.
 
 Una funzione più semplice che approssima una funzione di regressione viene chiamata modello.
@@ -61,7 +61,7 @@ $$
 $$
 y = \sum_{j_{1}=0}^{p_{1}}  \beta_{j_{1}} \sigma \left( \sum_{j_{2} = 0}^{p_{2}} \beta j_{2} x^{j_{2}} \right)^{j_{1}}
 $$
-### Definizione Momenti visti di ordine $r$ e $s$
+### Definizione Momenti misti di ordine $r$ e $s$
 $$
 \mathbb{E}(X^{r}Y^{s}) = \sum_{x \in R_{X}} \sum_{y \in R_{Y}}  x^{r}y^{s} p_{X, Y} (x, y)
 $$
