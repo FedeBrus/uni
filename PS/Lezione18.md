@@ -147,7 +147,7 @@ $$
 X_{i} \xrightarrow{\text{P}} X
 $$
 ### Teorema
-Se la successione $\{ X_{i} \}_{i=1}^{+\infty}$ convere in MQ a $X$ allora la successione convere in probabilità alla stessa variabile aleatoria limite $X$.
+Se la successione $\{ X_{i} \}_{i=1}^{+\infty}$ convere in media quadratica a $X$ allora la successione converge in probabilità alla stessa variabile aleatoria limite $X$.
 
 ### Dimostrazione
 Fissiamo $\varepsilon > 0$ e consideriamo le variabili aleatorie per ogni $i$ $(X_{i}-X)^{2} \geq 0$.

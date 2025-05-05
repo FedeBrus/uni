@@ -72,13 +72,13 @@ $$
 Supponiamo di avere una variabile aleatoria discreta doppia $(X, Y) \sim p_{X, Y}(x, y)$. $x \in R_{X}, y \in R_{Y}$.
 Per ogni $y \in R_{Y}$ definisco una variabile aleatoria $X|Y=y\sim p_{X|Y}(x | y), \forall x \in R_{X}$.
 $$
-p_{X|Y}(x | y) = P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P_{X, Y}(x, y)}{p_{Y}(y)}
+p_{X|Y}(x | y) = P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{p_{X, Y}(x, y)}{p_{Y}(y)}
 $$
 Dove $A = \{ \omega \in \Omega: X (\omega) = x \} = \{ X = x \}$ e $B = \{ \omega \in \Omega : Y(\omega) = y \} = \{ Y = y \}$.
 
 Per ogni $x \in R_{X}$ definisco una variabile aleatoria $Y|X=x\sim p_{Y|X}(y | x), \forall y \in R_{Y}$.
 $$
-p_{X|Y}(x, y) = p_{Y}(y)p_{X, Y}(x | y) = p_{X}(x)p_{X, Y}(y | x)
+p_{X,Y}(x, y) = p_{Y}(y)p_{X, Y}(x | y) = p_{X}(x)p_{X, Y}(y | x)
 $$
 Per il teorema di Bayes.
 

@@ -51,7 +51,7 @@ $$
 $$
 Ma:
 $$
-\mathbb{E}(Z) = \mathbb{E}(\mathbb{E}(X|Y))
+\mathbb{E}(Z) = \mathbb{E}(\mathbb{E}(X|Y)) = \mathbb{E}(X)
 $$
 Ora ne calcoliamo la varianza:
 $$
@@ -137,8 +137,10 @@ p_{X,Y}(x, y) = p_{X}(x)p_{Y}(y), \forall (x, y) \in R_{X} \times R_{Y}
 $$
 Se due variabili aleatorie $X, Y$ sono stocasticamente indipendenti, allora:
 $$
-p_{X | Y}(x | y)= p_{X}(x), \forall (x, y) \in R_{X} \times R_{Y}
-p_{Y | X}(y | x)= p_{Y}(y), \forall (x, y) \in R_{X} \times R_{Y}
+\begin{align}
+p_{X | Y}(x | y)&= p_{X}(x), \forall (x, y) \in R_{X} \times R_{Y} \\
+p_{Y | X}(y | x)&= p_{Y}(y), \forall (x, y) \in R_{X} \times R_{Y}
+\end{align}
 $$
 Infatti:
 $$

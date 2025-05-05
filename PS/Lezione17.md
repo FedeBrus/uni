@@ -9,7 +9,7 @@ $\eta^{2}_{X|Y} = 1 \Longleftrightarrow P(X = \mathbb{E}(X|Y)) = 1$. Vuol dire c
 ### Definizione Inidipendenza in varianza
 Diremo che $X$ variabile aleatoria è indipendente in varianza da $Y$ variabile aleatoria se:
 $$
-Var(X|Y = y) = \sigma^{2}, \qquad \forall y \in R_{Y}
+Var(X|Y = y) = Var(X) = \sigma^{2}, \qquad \forall y \in R_{Y}
 $$
 #### Esempio
 Si prelevano altezza e peso di diverse persone. Le altezze sono $x_{1},x_{2},x_{3},\dots,x_{6}$. Indichiamo $y_{ij}$ con $i = 1,\dots,6$ associate alle $x_{1},\dots,x_{6}$ e $j = 1, \dots, n_{i}$.
