@@ -2,7 +2,7 @@
 $$
 \begin{align}
 Cov(X,Y) &= \mathbb{E}((X - \mathbb{E}(X)) (Y - \mathbb{E}(Y))) \\
- & = \mathbb{E}(XY) - \mathbb{E}(X)(Y)
+ & = \mathbb{E}(XY) - \mathbb{E}(X)\mathbb{E}(Y)
 \end{align}
 $$
 Dunque:
@@ -54,7 +54,7 @@ $$
 \begin{align}
 \sum_{i=1}^{n} \sum_{j=1}^{n} a_{i}a_{j} \sigma_{ij} & = \sum_{i=1}^{n} a_{i}^{2} \sigma_{ii} + \sum_{i=1}^{n} \sum_{j=1, j \neq i}^{n} a_{i}a_{j}\sigma_{ij} \\
  & = \sum_{i=1}^{n} a_{i}^{2} \sigma_{ii} + 2 \sum_{i=1}^{n} \sum_{j<i}  a_{i}a_{j}\sigma_{ij} \\
- & = \sum_{i=1}^{n} a_{i}^{2} Var(X_{i}) + \sum_{i=1}^{n} \sum_{j<i} a_{i}a_{j} \cdot Cov(X_{i}, X_{j})
+ & = \sum_{i=1}^{n} a_{i}^{2} Var(X_{i}) + 2\sum_{i=1}^{n} \sum_{j<i} a_{i}a_{j} \cdot Cov(X_{i}, X_{j})
 \end{align}
 $$
 In particolare, nel caso in cui $n=2$, allora:
@@ -124,7 +124,7 @@ Consideriamo la successione $\{ S_{n} \}_{n = 1}^{+\infty}$.
 Dai risultati precedenti sappiamo che $\mathbb{E}(S_{n}) = \mu$ e $Var(S_{n})= \frac{\sigma^{2}}{n}$.
 Prendiamo come variabile aleatoria limite $S$ tale che $P(S = \mu)=1$.
 $$
-a_{n}= \mathbb{E}((S_{n} - S)^{2}) = \mathbb{E}((S_{n}- \mu)^{2}) = Var(S_{n})
+a_{n}= \mathbb{E}((S_{n} - S)^{2}) = \mathbb{E}((S_{n}- \mu)^{2}) = \mathbb{E}((S_{n}-\mathbb{E}(S_{n}))^{2})=Var(S_{n})
 $$
 $$
 \lim_{ n \to +\infty } a_{n} = \lim_{ n \to +\infty } Var(S_{n}) = \lim_{ n \to +\infty } \frac{\sigma^{2}}{n} = 0
@@ -158,7 +158,7 @@ Consideriamo ora:
 $$
 0 \leq \lim_{ i \to +\infty }  P(|X_{i}-X| \geq \varepsilon) \leq \lim_{ i \to +\infty } \frac{\mathbb{E}((X_{i}-X)^{2})}{\varepsilon^{2}} = 0
 $$
-Dunque:
+Dunque per il teorema dei carabinieri:
 $$
 \lim_{ i \to +\infty } P(|X_{i}-X| \geq \varepsilon) = 0
 $$

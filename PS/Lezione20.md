@@ -92,10 +92,10 @@ $$
 \begin{align}
 \sum_{i=1}^{n}  (x_{i}-\mu) = 0 \\
 \sum_{i=1}^{n} x_{i} - n\mu = 0 \\
-\hat{\mu} = \frac{1}{n} \sum_{i=1}^{n} x_{i} = \bar{x}_{n}
+\implies \hat{\mu} = \frac{1}{n} \sum_{i=1}^{n} x_{i} = \bar{x}_{n}
 \end{align}
 $$
-Facendo la derivata seconda si controlla che si un punto di minimo.
+Facendo la derivata seconda si controlla che sia un punto di minimo.
 
 Lo stimatore lo si ottiene sostituendo ai $x_{i}$ le relative $X_{i}$:
 $$
