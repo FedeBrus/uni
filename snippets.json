@@ -17,9 +17,10 @@
 	{trigger: "der", replacement: "^{($0)}$1", options: "mA"},
 	{trigger: "cal", replacement: "\\mathcal{$0}$1", options: "mA"},
 	{trigger: "sottos", replacement: "\\langle $0 \\rangle $1", options: "mA"},
-    	{trigger: "comp", replacement: "\\circ", options: "mA"},
-      {trigger: "valatt", replacement: "\\mathbb{E}($0)$1", options: "mA"},
-      {trigger: "EE", replacement: "\\mathbb{E}", options: "mA"},
+  {trigger: "comp", replacement: "\\circ", options: "mA"},
+  {trigger: "valatt", replacement: "\\mathbb{E}($0)$1", options: "mA"},
+  {trigger: "EE", replacement: "\\mathbb{E}", options: "mA"},
+  {trigger: "bin", replacement: "\\binom{$0}{$1}$2", options:"mA"},
 
     // Greek letters
 	{trigger: "@a", replacement: "\\alpha", options: "mA"},
