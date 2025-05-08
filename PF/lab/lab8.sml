@@ -33,7 +33,7 @@ signature TREE = sig
   val mirror: 'a T -> 'a T
 end;
 
-structure tree:TREE = struct
+structure Tree:TREE = struct
   datatype 'a T = Lf | Br of 'a * 'a T * 'a T;
   fun countNodes Lf = 0
     | countNodes (Br(_, left, right)) = 1 + countNodes left + countNodes right;
@@ -51,4 +51,28 @@ structure tree:TREE = struct
     | mirror (Br(v, left, right)) = Br(v, mirror right, mirror left);
 end;
 
+Tree.mirror (Tree.Br(3, Tree.Br(2, Tree.Lf, Tree.Lf), Tree.Br(5, Tree.Br(4, Tree.Lf, Tree.Lf), Tree.Lf)));
+
+signature MAPTREE = sig
+  type ('a, 'b) mapTree
+  val lookup: ('a -> 'a -> bool) -> ('a, 'b) mapTree -> 'a -> 'b;
+  val assign: ('a -> 'a -> bool) -> ('a, 'b) mapTree -> 'a -> 'b -> ('a, 'b) mapTree;
+end;
+
+structure mapTree:MAPTREE = struct
+  type ('a, 'b) mapTree = ('a * 'b) Tree.T
+  exception Missing
+
+  fun lookup lt (Tree.Lf) e = raise Missing
+    | lookup lt (Tree.Br((a, b), left, right)) e =
+      if lt e a then lookup lt left e
+      else if lt a e then lookup lt right e
+      else b
+
+  fun assign lt (Tree.Lf) e c = Tree.Br((e, c), Tree.Lf, Tree.Lf)
+    | assign lt (Tree.Br((a, b), left, right)) e c =
+      if lt e a then assign lt left e c
+      else if lt a e then assign lt right e c
+      else Tree.Br((a, c), left, right)
+end;
 
