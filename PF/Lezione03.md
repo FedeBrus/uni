@@ -16,6 +16,8 @@ Lo scope può essere statico o dinamico:
 - scope statico: le associazioni non locali vengono risolte in base a dove è contenuto il blocco corrente.
 - scope dinamico: le associazioni vengono risolte in base a da dove è stato eseguito il blocco corrente.
 
+Nello scoping statico si risolvono le variabili sintatticamente, ovvero si guarda dove è testualmente contenuto il blocco, nello scoping dinamico si guarda nel blocco più recentemente attivato che non è ancora stato chiuso.
+
 Passaggio di parametri:
 - Chiamata per valore
 Viene passata una r-value che verrà assegnata al parametro formale, che verrà trattato come variabile locale. (->)

@@ -34,3 +34,70 @@ P(X = 6|Y = 4)  &= \frac{P(X=6, Y=4)}{P(Y = 4)} \\
 \end{align}
 
 $$
+### Q1
+Siano $X, Y$ variabili aleatorie con densità congiunta $f(x, y) = 0.67$ per $0, < x < 1.7277369, 0 < y < x$ e nulla altrove.
+
+Qual è la probabilità di $P(X < 1.07)$?
+Sia $k := 1.07$.
+$$
+\begin{align}
+P(X < 1.07) &= \int_{x=0}^{k} \int_{0}^{x} f_{X,Y}(x, y) dy dx \\
+ & = \int_{x=0}^{k} \int_{0}^{x} 0.67 dydx \\
+ & =0.67 \int_{0}^{k} xdx \\
+ & = \frac{0.67k^{2}}{2}
+\end{align}
+$$
+Le variabili aleatorie $X$ e $Y$ sono (stocasticamente) indipendenti?
+Troviamoci inanzitutto le densità marginali:
+Sia $\gamma := 1.7277369$.
+$$
+\begin{align}
+f_{X}(x) &= \int_{0}^{x} f_{X,Y}(x,y) dy \\
+ & = \int_{0}^{x} 0.67dy \\
+ & = 0.67 \int_{0}^{x} dy \\
+ & = 0.67x
+\end{align}
+$$
+$$
+\begin{align}
+f_{Y}(y) &= \int_{y}^{\gamma} f_{X,Y}(x,y) dx \\
+ & = \int_{y}^{\gamma} 0.67 dx \\
+ & = 0.67 \int_{y}^{\gamma} dx \\
+ & = 0.67 (\gamma - y)
+\end{align}
+$$
+Ma:
+$$
+0.67 \neq (0.67)^{2} x(\gamma-y)
+$$
+FALSE
+### Q3
+Quando $\mathbb{E}(X)- \mathbb{E}(Y | X = k)$
+$$
+\begin{align}
+\mathbb{E}(X) &= \int_{0}^{\gamma} xf_{X}(x) dx \\
+ & = 0.67 \int_{0}^{\gamma} x^{2}dx \\
+ & = 0.67 \frac{\gamma^{3}}{3}
+\end{align}
+$$
+$$
+\begin{align}
+\mathbb{E}(Y |X=k)&= \int_{0}^{k} y f_{Y|X}(y|k) dy \\
+ & = \int_{0}^{k} y \frac{f_{X, Y}(k,y)}{f_{X}(k)} dy \\
+ & = \int_{0}^{k} \frac{y}{k} dy \\
+ & = \frac{1}{k} \left[ \frac{y^{2}}{2} \right] ^{k}_{0} \\
+ & = \frac{1}{k} \left( \frac{k^{2}}{2} \right)  = \frac{k}{2}
+\end{align}
+$$
+###  Q4
+Quanto vale $\mathbb{E}(\mathbb{E}(Y|X))$?
+Per la proprietà del valore atteso iterato sappiamo che tale quantità è:
+$$
+\begin{align}
+\mathbb{E}(Y) &= \int_{0}^{\gamma} yf_{Y}(y)dy \\
+ & = 0.67 \int_{0}^{\gamma} y(\gamma-y) dy \\
+ & = 0.67 \left[ \frac{\gamma y^{2}}{2} - \frac{y^{3}}{3} \right]^{\gamma}_{0} \\
+ & = 0.67\left( \frac{\gamma^{3}}{2}-\frac{\gamma^{3}}{3} \right) \\
+ & = \frac{\gamma^{3}}{6}0.67
+\end{align}
+$$
