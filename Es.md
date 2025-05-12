@@ -35,7 +35,7 @@ P(X = 6|Y = 4)  &= \frac{P(X=6, Y=4)}{P(Y = 4)} \\
 
 $$
 ### Q1
-Siano $X, Y$ variabili aleatorie con densità congiunta $f(x, y) = 0.67$ per $0, < x < 1.7277369, 0 < y < x$ e nulla altrove.
+Siano $X, Y$ variabili aleatorie con densità congiunta $f(x, y) = 0.67$ per $0 < x < 1.7277369, 0 < y < x$ e nulla altrove.
 
 Qual è la probabilità di $P(X < 1.07)$?
 Sia $k := 1.07$.
@@ -101,3 +101,37 @@ $$
  & = \frac{\gamma^{3}}{6}0.67
 \end{align}
 $$
+### Q1
+La variabile aleatoria esponenziale è senza memoria quindi suffice calcolare:
+Sia $\mu = 114$, dunque $\lambda = \frac{1}{\mu}$
+$$
+P(T>117.1) = 1 - F(117.1) = e^{-\lambda (117.1)}
+$$
+### Q2
+In questo caso bisogna risolvere la seguente per $t$:
+$$
+P(T <t) = 0.93
+$$
+$$
+\begin{align}
+1-e^{-\lambda t} &= 0.93 \\
+e^{-\lambda t} &= 0.07 \\
+t & = -\frac{\ln(0.07)}{\lambda}
+\end{align}
+$$
+### Q3
+Ancora una volta, siccome la variabile è "senza memoria" basta calcolare:
+$$
+F(31) = 1-e^{-\lambda(31)}
+$$
+### Q4
+Attenzione, qua viene chiesta la funzione di densità, non di distrubuzione.
+$$
+f_{Y}(y) = f_{X}(y^{3}) \cdot \left| 3y^{2} \right| = 3\lambda e^{-\lambda y^{3}} y^{2}
+$$
+```R
+function(x) {
+	lambda <- 1/114
+	ifelse(x < 0, 0, 3 * lambda * x^2 * exp(-lambda * x^3))
+}
+```

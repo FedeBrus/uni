@@ -47,4 +47,12 @@ public class Furnace {
     private boolean isReadyToSmelt() {
         return output instanceof NullBlock;
     }
+
+    public Block getInput() {
+        return input;
+    }
+
+    public Block getOutput() {
+        return output;
+    }
 }

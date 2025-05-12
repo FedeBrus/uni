@@ -3,8 +3,8 @@ package ui.gui;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 import data.*;
-import util.Coordinates;
-import util.WrongCoordinatesException;
+import util.Coordinates.Coordinates;
+import util.Coordinates.WrongCoordinatesException;
 
 public class MapPane extends GridPane {
     private final int width = 10;

@@ -2,8 +2,8 @@ package ui;
 
 import data.*;
 import ui.inventory.Inventory;
-import util.Coordinates;
-import util.WrongCoordinatesException;
+import util.Coordinates.Coordinates;
+import util.Coordinates.WrongCoordinatesException;
 
 public class MainView {
     private final Map map;

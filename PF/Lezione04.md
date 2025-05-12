@@ -106,3 +106,48 @@ Un tipo polimorfico garantito di supportare uguaglianza e disuguaglianza viene i
 
 per verificare se una lista è vuota senza forzare un equality type si può usare null(L).
 
+Le funzioni, se passate come parametro, vengono passate con call-by-name!
+La policy di binding nei linguaggi è indipendente dalla policy di scoping.
+
+La funzione op serve a convertire un operatore infisso a un operatore prefisso:
+```sml
+foldr (op+) 0 [1,2,3]
+```
+
+Esiste un operatore o per fare la composizione di funzioni:
+```sml
+val H = G o F (* H(x) = G(F(x)) *)
+```
+
+RINOMINAZIONE PARAMETRIZZATA DI TIPI
+la parola type da sé non è molto utile, serve solo a creare degli alias:
+```sml
+type signal = int list;
+val v:signal = [1, 2];
+val w:int list = [1, 2];
+v = w;
+```
+è utile quando si vuole parametrizzare la cosa:
+```sml
+type ('c, 'd) mapping = ('c * 'd) list;
+val words:(string, int) mapping = [(1,2), (2,3)];
+type ('a, 'b) tripleList = ('a * 'a * 'b) list;
+```
+
+Mentre i type sono alias di fatto, i datatype creano nuovi veri e propri tipi.
+```sml
+datatype ('a,'b) element = P of 'a * 'b 
+						 | S of 'a;
+```
+i datatype possono essere ricorsivi:
+```sml
+datatype 'a btree = Empty | Node of 'a * 'a btree * 'a btree;
+```
+o anche mutualmente esclusive con la keyword and:
+```sml
+datatype 
+	'a eventTree = Empty 
+			     | Enode of 'a * 'a oddTree * 'a oddTree
+and
+	'a oddTree = Onode of 'a * 'a evenTree * 'a evenTree;
+```

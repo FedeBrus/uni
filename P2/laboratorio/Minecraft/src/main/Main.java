@@ -5,14 +5,22 @@
 
 package main;
 
+import controller.FurnaceSimpleController;
 import data.*;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import ui.Furnace;
 import ui.gui.*;
 
 public class Main extends Application {
@@ -64,16 +72,22 @@ public class Main extends Application {
         MapPane map = new MapPane();
         InventoryPane inventory = new InventoryPane();
         FurnacePane furnace = new FurnacePane();
-        inventory.addBlock(new BlockPane(new SandBlock()));
-        inventory.addBlock(new BlockPane(new WaterBlock()));
-        inventory.addBlock(new BlockPane(new AirBlock()));
-        inventory.addBlock(new BlockPane(new GlassBlock()));
+        Furnace furn = new Furnace();
         ButtonListPane buttons = new ButtonListPane();
-
+        map.setAlignment(Pos.CENTER);
+        inventory.setAlignment(Pos.CENTER);
+        furnace.setAlignment(Pos.CENTER);
+        buttons.setAlignment(Pos.CENTER);
         MainGUI gui = new MainGUI(map, furnace, inventory, buttons);
+        startStage(stage, gui);
 
+        FurnaceSimpleController fsc = new FurnaceSimpleController(furn, furnace);
+    }
+
+    public void startStage(Stage stage, MainGUI gui) {
         stage.setTitle("Minecraft");
-        stage.setScene(new Scene(gui, 750, 750));
+        stage.setScene(new Scene(gui, 750, 750, Color.rgb(28, 28, 28)));
+        stage.setResizable(false);
         stage.show();
     }
 }

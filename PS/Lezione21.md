@@ -13,7 +13,7 @@ Andiamo a specificare la distribuzione condizionata della $Y$ data la $X$.
 $$
 Y | X = x \sim N(\alpha+\beta x, \sigma^{2})
 $$
-Da qui possiamo capire che la $Y$ è independete in varianza dalla $X$. Questa assunzione viene chiamata "ipotes omoschedasticità".
+Da qui possiamo capire che la $Y$ è independete in varianza dalla $X$. Questa assunzione viene chiamata "ipotesi omoschedasticità".
 Riassumendo:
 $$
 \begin{align}
@@ -23,7 +23,7 @@ Var(Y | X=x) &= \sigma^{2} \\
 $$
 Quindi stiamo assumendo che la funzione di regressione sia una retta. Inoltre stiamo assumendo che la funzione di distribuzione condizionata è una normale, in particolare questa è simmetrica rispetto al valore medio condizionato.
 Un modello sifatto è un modello lineare semplice. 
-
+### Minimi quadrati
 Utilizziamo il metodo dei minimi quadrati:
 Dobbiamo fare in modo di scegliere $\alpha, \beta$ in maniera tale che minimizzano la seguente quantità:
 $$
@@ -61,10 +61,10 @@ $$
 Ricordando la formula della varianza (guardate per le variabili aleatorie): $Cov(X, Y) = \mathbb{E}(XY)-\mathbb{E}(X)\mathbb{E}(Y)$.
 Otteniamo dunque che:
 $$
-\hat{b} = \frac{\frac{1}{n} \sum_{i=1}^{n} (y_{i}- \bar{y}) (x_{i} - \bar{x})}{\frac{1}{n} \sum_{i=1}^{n} (x_{i}-\bar{x})^{2}}
+\hat{\beta} = \frac{\frac{1}{n} \sum_{i=1}^{n} (y_{i}- \bar{y}) (x_{i} - \bar{x})}{\frac{1}{n} \sum_{i=1}^{n} (x_{i}-\bar{x})^{2}}
 $$
 $$
-\hat{\alpha} = \bar{y} - \hat{b} \bar{x}
+\hat{\alpha} = \bar{y} - \hat{\beta} \bar{x}
 $$
 Ci manca una stima della varianza che si ottiene:
 $$
@@ -100,12 +100,12 @@ f_{X, Y} (x, y) &= f_{Y|X} (y|x) f_{x}(x) \\
 \end{align}
 $$
 $$
-L(\alpha, \beta, \sigma^{2}; (x_{i}- y_{i})_{i = 1}^{n}) \alpha \prod_{i = 1}^{n} f_{X, Y} (x_{i}, y_{i})
+L(\alpha, \beta, \sigma^{2}; (x_{i}, y_{i})_{i = 1}^{n}) = \prod_{i = 1}^{n} f_{X, Y} (x_{i}, y_{i})
 $$
 $$
 \begin{align}
-l(\alpha, \beta, \sigma^{2}; (x_{i}, y_{i})_{i = 1}^{n}) &= \log L(\alpha, \beta, \sigma^{2}; (x_{i}-y_{i})_{i = 1}^{n}) \\
- & = \sum_{i=1}^{n} \left( -\frac{1}{2} \log 2 \pi \right) + \left( -\frac{1}{2} \log \sigma^{2} \right) - \frac{1}{2} \frac{(y_{i}- (\alpha + \beta x_{i}))^{2}}{\sigma^{2}} + \log f_{x}(x)
+l(\alpha, \beta, \sigma^{2}; (x_{i}, y_{i})_{i = 1}^{n}) &= \log L(\alpha, \beta, \sigma^{2}; (x_{i},y_{i})_{i = 1}^{n}) \\
+ & = \sum_{i=1}^{n} \left[\left( -\frac{1}{2} \log 2 \pi \right) + \left( -\frac{1}{2} \log \sigma^{2} \right) - \frac{1}{2} \frac{(y_{i}- (\alpha + \beta x_{i}))^{2}}{\sigma^{2}} + \log f_{x}(x) \right]
 \end{align}
 $$
 Calcoliamo le derivate rispetto ad $\alpha$ e a $\beta$:

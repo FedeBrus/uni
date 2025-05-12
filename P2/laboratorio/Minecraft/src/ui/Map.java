@@ -6,8 +6,8 @@
 package ui;
 
 import data.*;
-import util.Coordinates;
-import util.WrongCoordinatesException;
+import util.Coordinates.Coordinates;
+import util.Coordinates.WrongCoordinatesException;
 
 import java.util.Random;
 

@@ -119,7 +119,7 @@ Quindi possiamo dire che $P(B \leq 25)  \approx \Phi(1.79) = 0.9633$
 
 ## Inferenza statistica
 Quando estraggo il mio campione è come avere $n$ variabili dove ogni $X_{i}(\omega)$ mi dice il valore d'interesse dell'$i$-esima persona estratta. Se avviene estrazione con reinserimento queste variabili sono indipendenti tra di loro. Dunque se $(x_{1}, \dots, x_{n})$ descrive una certa estrazione, la ennupla $(X_{1}(\omega), \dots, X_{n}(\omega))$ descrive tutte le possibili estrazioni.
-Data un'estrazione è possibile calcolarsi la media:
+Data un'estrazione è possibile calcolarsi la media empirica:
 $$
 \bar{x}_{n} = \frac{1}{n} \sum_{i=1}^{n} x_{i}
 $$

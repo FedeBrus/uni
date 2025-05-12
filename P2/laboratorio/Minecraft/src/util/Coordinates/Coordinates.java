@@ -1,4 +1,4 @@
-package util;
+package util.Coordinates;
 
 public class Coordinates {
     private int x;

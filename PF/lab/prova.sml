@@ -11,20 +11,26 @@ structure Set:>SET = struct
 
   val emptyset:''a set = []
 
-  fun isin (nil:''a set) e = false
-    | isin ((S:''a) :: (xs:''a set)) e = 
+  fun isin nil e = false
+    | isin (S :: xs) e = 
         if S = e then true 
         else (isin xs e);
 
-  fun addin (S:''a set) (e:''a) = 
-    if not (isin S e) then [e] @ S
+  fun addin S e = 
+    if not (isin S e) then e :: S
     else S
   
-  fun removefrom (nil:''a set) (e:''a) = emptyset
-    | removefrom ((S:''a) :: (xs:''a set)) (e:''a) =
-        if S = e then xs
-        else S :: (removefrom xs e)
+  fun removefrom nil e = emptyset
+    | removefrom (s :: xs) e =
+        if s = e then xs
+        else s :: (removefrom xs e)
 end;
+
+val s:(string Set.set) = Set.emptyset;
+val s = Set.addin s "ciao";
+val s = Set.addin s "lollo";
+(* val s = s @ ["satana", "barcollo"]; funziona solo con Set:SET, che non tronca l'alias*)
+Set.isin s "lollo";
 
 signature TREE = sig
   datatype 'a T = Lf | Br of 'a * 'a T * 'a T;
@@ -33,7 +39,7 @@ signature TREE = sig
   val mirror: 'a T -> 'a T
 end;
 
-structure Tree:TREE = struct
+structure Tree:>TREE = struct
   datatype 'a T = Lf | Br of 'a * 'a T * 'a T;
   fun countNodes Lf = 0
     | countNodes (Br(_, left, right)) = 1 + countNodes left + countNodes right;
@@ -55,13 +61,16 @@ Tree.mirror (Tree.Br(3, Tree.Br(2, Tree.Lf, Tree.Lf), Tree.Br(5, Tree.Br(4, Tree
 
 signature MAPTREE = sig
   type ('a, 'b) mapTree
+  val empty: ('a, 'b) mapTree;
   val lookup: ('a -> 'a -> bool) -> ('a, 'b) mapTree -> 'a -> 'b;
   val assign: ('a -> 'a -> bool) -> ('a, 'b) mapTree -> 'a -> 'b -> ('a, 'b) mapTree;
 end;
 
-structure mapTree:MAPTREE = struct
+structure MapTree:>MAPTREE = struct
   type ('a, 'b) mapTree = ('a * 'b) Tree.T
   exception Missing
+
+  val empty = Tree.Lf;
 
   fun lookup lt (Tree.Lf) e = raise Missing
     | lookup lt (Tree.Br((a, b), left, right)) e =
@@ -76,3 +85,7 @@ structure mapTree:MAPTREE = struct
       else Tree.Br((a, c), left, right)
 end;
 
+fun lexLt (a:string) (b:string) = a < b;
+
+val mT: (string, int) MapTree.mapTree = MapTree.assign (lexLt) MapTree.empty "barcollo" 0;
+val mD: (string, int) MapTree.mapTree = MapTree.empty;

@@ -115,7 +115,7 @@ f_{X_{1}, \dots, X_{n}} (x_{1}, \dots, x_{n}) &= \prod_{i=1}^{n} f_{X_{i}} (x_{i
 $$
 per $x_{1}, \dots, x_{n}$ fissati, come funzione di $\mu$ è chimata verosimiglianza.
 $$
-\hat{\mu} = \underset{\mu}{\text{argmax}}  (2\pi \sigma^{2})^{-\frac{n}{2}} \exp \left( -\frac{1}{2} \sum_{i=1}^{n} \frac{(x_{i}-\mu)^{2}}{\sigma^{2}} \right) 
+\hat{\mu} = \underset{\mu}{\text{argmax}} \left( (2\pi \sigma^{2})^{-\frac{n}{2}} \exp \left( -\frac{1}{2} \sum_{i=1}^{n} \frac{(x_{i}-\mu)^{2}}{\sigma^{2}} \right) \right)
 $$
 Chiamiamo log-verosimiglianza:
 $$
@@ -138,7 +138,6 @@ Si pone la seguente uguaglianza:
 $$
 \theta = \mathbb{E}(X_{i}) = \bar{x}_{n} = \frac{1}{n} \sum_{i=1}^{n} x_{i}
 $$
-manca tutto diocan
 
 Utilizziamo invece il metodo della massima verosimiglianza.
 $$

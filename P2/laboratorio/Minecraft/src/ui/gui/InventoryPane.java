@@ -13,7 +13,7 @@ public class InventoryPane extends HBox {
         super();
         Text label = new Text("Inventory: ");
         StackPane labelPane = new StackPane();
-        labelPane.getChildren().add(new Rectangle(50, 50, Color.WHITE));
+        labelPane.getChildren().add(new Rectangle(100, 50, Color.WHITE));
         labelPane.getChildren().add(label);
         inventory = new HBox();
         getChildren().addAll(labelPane, inventory);
