@@ -219,4 +219,3 @@ $$
 $$
 P\left( \bar{Y}_{n}- t_{n-1, 1-\frac{\alpha}{2}}\cdot \frac{S}{\sqrt{ n }} \leq \mu \leq \bar{Y}_{n} -t_{n - 1, \frac{\alpha}{2}} \cdot \frac{S}{\sqrt{ n }} \right) = 1 - \alpha
 $$
-

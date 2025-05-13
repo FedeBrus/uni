@@ -125,9 +125,13 @@ $$
 F(31) = 1-e^{-\lambda(31)}
 $$
 ### Q4
-Attenzione, qua viene chiesta la funzione di densità, non di distrubuzione.
+Attenzione, qua viene chiesta la funzione di densità, non di distrubuzione. $Y = \sqrt[3]{X} \implies X=Y^{3}$.
 $$
-f_{Y}(y) = f_{X}(y^{3}) \cdot \left| 3y^{2} \right| = 3\lambda e^{-\lambda y^{3}} y^{2}
+f_{Y}(y) =  
+\begin{cases}
+f_{X}(y^{3}) \cdot \left| 3y^{2} \right| = 3\lambda e^{-\lambda y^{3}} y^{2} & 0 < y < +\infty \\
+0 & \text{altrimenti}
+\end{cases}
 $$
 ```R
 function(x) {
@@ -135,3 +139,30 @@ function(x) {
 	ifelse(x < 0, 0, 3 * lambda * x^2 * exp(-lambda * x^3))
 }
 ```
+### Q1
+Possiamo utilizzare la variabile aleatoria seguente:
+$$
+X = \sum_{i=1}^{40} N(16.5, (0.22)^{2}) \sim N\left( 40 \cdot 16.5, 40 \cdot (0.22)^{2} \right)
+$$
+Ci viene chiesto se:
+$$
+P(X < 658.2746613) = 0.1074877
+$$
+### Q2
+Il secondo esercizio ci chiede:
+$$
+P(X > 658.2746613) = 1-0.1074877 = 0.8925123
+$$
+### Q3
+Il terzo quesito ci chiede di risolvere per $x$:
+$$
+P(X > x) \geq 0.75929
+$$
+$$
+\begin{align}
+P(X > x) &\geq 0.75929 \\
+1-P(X \leq x) &\geq 0.75929 \\
+P(X \leq x) &\leq 0.24071 \\
+x &= 659.0204
+\end{align}
+$$
