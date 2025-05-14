@@ -153,7 +153,7 @@ P\left( z_{\frac{\alpha}{2}} \leq z_{n} \leq z_{1-\frac{\alpha}{2}} \right) = \b
 1
 \end{cases}
 $$
-dove $z_{n} = \sqrt{ n } \left( \frac{\bar{x}_{n}-\mu}{\sigma_{0}} \right)$.
+dove $Z_{n} = \sqrt{ n } \left( \frac{\bar{x}_{n}-\mu}{\sigma_{0}} \right)$.
 $$
 \begin{align}
 P\left( z_{\frac{\alpha}{2}} \leq Z_{n} \leq z_{1-\frac{\alpha}{2}} \right) = 1 - \alpha \\

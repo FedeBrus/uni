@@ -134,10 +134,7 @@ f_{X}(y^{3}) \cdot \left| 3y^{2} \right| = 3\lambda e^{-\lambda y^{3}} y^{2} & 0
 \end{cases}
 $$
 ```R
-function(x) {
-	lambda <- 1/114
-	ifelse(x < 0, 0, 3 * lambda * x^2 * exp(-lambda * x^3))
-}
+function(x){ifelse(x<=0,0,3*(1/114)*(x^2)*exp(-(1/114)*(x^3)))}
 ```
 ### Q1
 Possiamo utilizzare la variabile aleatoria seguente:
@@ -166,3 +163,12 @@ P(X \leq x) &\leq 0.24071 \\
 x &= 659.0204
 \end{align}
 $$
+### Q1
+```r
+function(x) {
+	ifelse(x <= 0, 
+		0, 
+		ifelse(
+	))
+}
+```

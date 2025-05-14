@@ -16,6 +16,6 @@ public class InventoryController implements SimpleController {
 
     public void redraw() {
         inventoryPane.getChildren().clear();
-        inventoryPane.insertChildren(inventory);
+        //inventoryPane.insertChildren(inventory);
     }
 }
