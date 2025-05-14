@@ -1,4 +1,4 @@
-package ui.inventory;
+package model.inventory.comparators;
 
 import data.Block;
 

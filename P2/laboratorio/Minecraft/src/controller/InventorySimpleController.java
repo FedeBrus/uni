@@ -4,7 +4,7 @@ import data.Block;
 import data.SandBlock;
 import ui.gui.BlockPane;
 import ui.gui.InventoryPane;
-import ui.inventory.Inventory;
+import model.inventory.Inventory;
 
 import java.util.Iterator;
 import java.util.LinkedList;

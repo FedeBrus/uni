@@ -12,9 +12,9 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import ui.Furnace;
+import model.Furnace;
 import ui.gui.*;
-import ui.inventory.Inventory;
+import model.inventory.Inventory;
 
 public class Main extends Application {
     public static void main(String[] args) {

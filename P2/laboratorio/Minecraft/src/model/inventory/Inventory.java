@@ -1,6 +1,8 @@
-package ui.inventory;
+package model.inventory;
 
 import data.*;
+import model.inventory.comparators.AlphabeticalBlockComparator;
+import model.inventory.comparators.BlockComparator;
 
 import java.util.Comparator;
 import java.util.Iterator;

@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package ui;
+package model;
 
 import data.*;
 import util.Coordinates.Coordinates;
@@ -45,6 +45,14 @@ public class Map {
             System.out.println("Map Initialization Failed");
             System.out.println(wce.getMessage());
         }
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     public void displayOnOut() {

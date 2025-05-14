@@ -1,4 +1,4 @@
-package ui;
+package model;
 
 import data.Block;
 import data.NullBlock;

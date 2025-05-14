@@ -1,6 +1,6 @@
 package controller;
 
-import ui.Furnace;
+import model.Furnace;
 import ui.gui.BlockPane;
 import ui.gui.FurnacePane;
 

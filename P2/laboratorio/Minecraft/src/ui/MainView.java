@@ -1,7 +1,9 @@
 package ui;
 
 import data.*;
-import ui.inventory.Inventory;
+import model.Furnace;
+import model.Map;
+import model.inventory.Inventory;
 import util.Coordinates.Coordinates;
 import util.Coordinates.WrongCoordinatesException;
 
