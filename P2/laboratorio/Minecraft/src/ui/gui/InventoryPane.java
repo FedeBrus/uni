@@ -1,5 +1,8 @@
 package ui.gui;
 
+import data.AirBlock;
+import data.WaterBlock;
+import data.SandBlock;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -16,6 +19,9 @@ public class InventoryPane extends HBox {
         labelPane.getChildren().add(new Rectangle(100, 50, Color.WHITE));
         labelPane.getChildren().add(label);
         inventory = new HBox();
+        addBlock(new BlockPane(new SandBlock()));
+        addBlock(new BlockPane(new AirBlock()));
+        addBlock(new BlockPane(new WaterBlock()));
         getChildren().addAll(labelPane, inventory);
     }
 

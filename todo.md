@@ -1,4 +1,4 @@
-[] -> esercizio del 12
-[] -> esercizio del 13
 [] -> iscriversi agli esami
-[] -> 
+[] -> esercizio del 14
+[] -> ripassone calcolatori
+[] -> studio challenge funzionale

@@ -34,6 +34,6 @@ public class FurnacePane extends VBox {
         StackPane arrowPane = new StackPane();
         arrowPane.getChildren().add(new Rectangle(50, 50, Color.WHITE));
         arrowPane.getChildren().add(arrow);
-        getChildren().add(arrow);
+        getChildren().add(arrowPane);
     }
 }
