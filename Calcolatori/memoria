@@ -1,0 +1,13 @@
+Per spazio di indirizzamento software si intende che sarà 
+il sistema operativo a dover gestire le richieste di lettura 
+e scrittura su memoria periferica.
+
+Il sistema operativo gestisce il trasferimento della risorsa periferica 
+alla memoria principale, dalla quale poi il processore può prelevare le 
+informazioni.
+
+☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️
+
+bx' indica il negato del valore di quel bit
+
+La presenza del segnale negato è una garanzia contro errori che possono essere causati da interferenze etc.
