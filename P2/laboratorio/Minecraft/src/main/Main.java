@@ -6,22 +6,15 @@
 package main;
 
 import controller.FurnaceSimpleController;
-import data.*;
+import controller.InventorySimpleController;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import ui.Furnace;
 import ui.gui.*;
+import ui.inventory.Inventory;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -70,9 +63,13 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         MapPane map = new MapPane();
+
         InventoryPane inventory = new InventoryPane();
+        Inventory inv = new Inventory();
+
         FurnacePane furnace = new FurnacePane();
         Furnace furn = new Furnace();
+
         ButtonListPane buttons = new ButtonListPane();
         map.setAlignment(Pos.CENTER);
         inventory.setAlignment(Pos.CENTER);
@@ -82,6 +79,7 @@ public class Main extends Application {
         startStage(stage, gui);
 
         FurnaceSimpleController fsc = new FurnaceSimpleController(furn, furnace);
+        InventorySimpleController isc = new InventorySimpleController(inv, inventory);
     }
 
     public void startStage(Stage stage, MainGUI gui) {

@@ -21,7 +21,7 @@ public class FurnacePane extends VBox {
         getChildren().add(output);
     }
 
-    public void insertLabel() {
+    private void insertLabel() {
         Text label = new Text("Furnace: ");
         StackPane labelPane = new StackPane();
         labelPane.getChildren().add(new Rectangle(80, 50, Color.WHITE));
@@ -29,7 +29,7 @@ public class FurnacePane extends VBox {
         getChildren().add(labelPane);
     }
 
-    public void insertArrow() {
+    private void insertArrow() {
         Text arrow = new Text("-->");
         StackPane arrowPane = new StackPane();
         arrowPane.getChildren().add(new Rectangle(50, 50, Color.WHITE));
