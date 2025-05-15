@@ -31,7 +31,7 @@ fun choose n m = if n <= 0 then raise OutOfRange(n, m)
                             0 
                           );
 
-  type signal = int list;
+type signal = int list;
 val v:signal = [1, 2];
 val w:int list = [1, 2];
 v = w;

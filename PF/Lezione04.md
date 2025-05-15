@@ -83,18 +83,18 @@ l'handle segue un espressione e serve a gestire le eccezioni:
 exception OutOfRange of int * int
 
 fun choose n m = if n <= 0 then raise OutOfRange(n, m) 
-                 else if m < 0 orelse m > n then raise OutOfRange (n, m) 
-                 else if m = 0 orelse m = n then 1 
-                 else choose (n - 1) m + choose (n - 1) (m - 1)
-                 handle OutOfRange (0, 0) => 1
-                      | OutOfRange (n, m) => ( 
-                            print ("out of range: n="); 
-                            print (Int.toString(n)); 
-                            print (" m="); 
-                            print (Int.toString(m)); 
-                            print ("\n"); 
-                            0 
-                          );
+				 else if m < 0 orelse m > n then raise OutOfRange(n, m) 
+				 else if m = 0 orelse m = n then 1 
+				 else choose (n - 1) m + choose (n - 1) (m - 1)
+				 handle OutOfRange(0, 0) => 1
+					  | OutOfRange(n, m) => ( 
+							print("out of range: n="); 
+							print(Int.toString(n)); 
+							print(" m="); 
+							print(Int.toString(m)); 
+							print("\n"); 
+							0 
+						  );
 ```
 
 Le funzioni in ML sono polimorfiche di default.

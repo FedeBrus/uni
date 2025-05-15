@@ -79,7 +79,7 @@ Al posto del 3 ci sarà il lemma dei cassetti, con definizione di cardinalità f
 ## Grafi
 > "non esiste neanche in matematica, figuriamoci se esiste davvero".
 
-Datu un insieme $V$, indichiamo con $\binom{V}{2}$ (che si legge "$V$ su $2$") l'insieme i cui elementi sono tutti i sottoinsiemi di $V$ aventi cardinalità $2$, ovvero $\binom{V}{2} := \{ A \in 2^{V} |\  |A| = 2\}$. Un sottoinsieme di cardinalità $2$ di $V$ si dice anche $2$-sottoinsieme di $V$.
+Dato un insieme $V$, indichiamo con $\binom{V}{2}$ (che si legge "$V$ su $2$") l'insieme i cui elementi sono tutti i sottoinsiemi di $V$ aventi cardinalità $2$, ovvero $\binom{V}{2} := \{ A \in 2^{V} |\  |A| = 2\}$. Un sottoinsieme di cardinalità $2$ di $V$ si dice anche $2$-sottoinsieme di $V$.
 
 #### Esempi
 - Se $V= \emptyset$ oppure $V=\{ a \}\implies\binom{V}{2}=\emptyset$.
@@ -92,7 +92,7 @@ $$
 \left| \binom{V}{2} \right| = \frac{\left| V \right| (\left| V \right| -1)}{2} = \binom{\left| V \right| }{2} = \frac{|V|!}{2!(|V|-2)!} 
 $$
 ### Definizione 14.1
-Un grafo $G$ è una coppia $(V, E)$, dove $V$ è un'insieme non vuoto, detto insieme dei vertici di $G$, e $E$ è un sottoinsieme di $\binom{V}{2}$, detto insieme dei lati di $G$.
+Un grafo $G$ è una coppia $(V, E)$, dove $V$ è un insieme non vuoto, detto insieme dei vertici di $G$, e $E$ è un sottoinsieme di $\binom{V}{2}$, detto insieme dei lati di $G$.
 Se $e=\{ v_{1},v_{2} \} \in E$ , cioè è un lato di $G$, allora i vertici $v_{1}$ e $v_{2}$ si dicono estremi del lato e si dice che il lato $e$ congiunge $v_{1}$ e $v_{2}$ in $G$. Si scrive anche: $V = V(G), E = E(G)$.
 
 #### Esempi 14.2 (rappresentazione dei grafi)
