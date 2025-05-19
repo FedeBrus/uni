@@ -1,5 +1,5 @@
 $$
-F_{x}(x) = P_{x}(\left( -\infty,x \right]) = \sum_{z: z \leq x}p_{x}(z) = \begin{cases}0 & x \lt 5 \\ \frac{1}{36} & -5 \leq x \lt -4 \\ \frac{3}{36} & -4 \leq x \lt -3 \\ \frac{6}{36} & -3 \leq x \lt -2 \\ \vdots \\ 1 & x > 5\end{cases}
+F_{X}(x) = P_{X}(\left( -\infty,x \right]) = \sum_{z: z \leq x}p_{X}(z) = \begin{cases}0 & x \lt 5 \\ \frac{1}{36} & -5 \leq x \lt -4 \\ \frac{3}{36} & -4 \leq x \lt -3 \\ \frac{6}{36} & -3 \leq x \lt -2 \\ \vdots \\ 1 & x > 5\end{cases}
 $$ 
 ![[.images/11_1]]
 $$
@@ -102,7 +102,7 @@ $$
 Fissiamo $\lambda \gt 0, p=\dfrac{\lambda}{n}$.
 $$
 \begin{align}
-P_{x}(x) &= \binom{n}{x} p^{x}(1-p)^{n-x} \\
+P_{X}(x) &= \binom{n}{x} p^{x}(1-p)^{n-x} \\
 &= \displaystyle \binom{n}{x} \left( \frac{\lambda}{n} \right)^{x}\left( 1 - \frac{\lambda}{n} \right)^{n - x} \\
 &= \frac{n!}{(n-x)!x!} \frac{\lambda^{x}}{n^{x}}\left( 1 - \frac{\lambda}{n} \right)^{n}\left( 1-\frac{\lambda}{n} \right)^{-x} \\
 &= \frac{n!}{n^{x}(n-x)!} \frac{\lambda^{x}}{x!}\left( 1-\frac{\lambda}{n} \right)^{n}\left( 1-\frac{\lambda}{n} \right)^{-x}
@@ -118,7 +118,7 @@ $$
 $$
 
 $$
-P_{x}(x) = \begin{cases}
+P_{X}(x) = \begin{cases}
 \frac{\lambda^{x}}{x!}e^{-\lambda}  & x \in \mathbb{N} \\ 0 & \text{altrimenti}
 \end{cases}
 $$
@@ -143,9 +143,9 @@ Ipotizziamo che il problema ci dica di dover fermare l'estrazione quando si estr
 Utilizziamo una variabile aleatoria $X$ che conta il numero di estrazioni che faccio.
 $$
 \begin{align}
-P_{x}(X = 1) &= P(E_{1}) = p \\
-P_{x}(X = 2) &= P(E_{1}^{c} \cap E_{2}) = P(E_{1}^{c}) \cdot P(E_{2}) = \left( 1-p \right) p \\
-P_{x}(X = 3) &= P(E_{1}^{c} \cap E_{2}^{c} \cap E_{3}) = \left( 1-p \right)\left( 1-p \right)p = \left( 1-p \right)^{2}  p \\
-P_{x}(X = x) &= (1-p)^{x-1} p = \left( \prod_{i=1}^{x - 1}(1-p) \right)p = \left( \prod_{i=1}^{x-1}P(E_{i}^{c}) \right) P(E_{x}),\qquad x \in \mathbb{N}
+P_{X}(X = 1) &= P(E_{1}) = p \\
+P_{X}(X = 2) &= P(E_{1}^{c} \cap E_{2}) = P(E_{1}^{c}) \cdot P(E_{2}) = \left( 1-p \right) p \\
+P_{X}(X = 3) &= P(E_{1}^{c} \cap E_{2}^{c} \cap E_{3}) = \left( 1-p \right)\left( 1-p \right)p = \left( 1-p \right)^{2}  p \\
+P_{X}(X = x) &= (1-p)^{x-1} p = \left( \prod_{i=1}^{x - 1}(1-p) \right)p = \left( \prod_{i=1}^{x-1}P(E_{i}^{c}) \right) P(E_{x}),\qquad x \in \mathbb{N}
 \end{align}
 $$

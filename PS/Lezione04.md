@@ -75,7 +75,7 @@ $$
 \mathcal{A_{i}} = \mathcal{P}(\Omega), \qquad i=1,2
 $$
 Abbiamo $\Omega = \Omega_{1} \times \Omega_{2}$ e $\mathcal{A} = \mathcal{A}_{1} \otimes \mathcal{A}_{2}$.
-Sappiamo che $P_{i}(\{ j \}) = \frac{1}{6}\qquad i = 1,2; j = 1,\dots,6$
+Sappiamo che $P_{i}(\{ j \}) = \frac{1}{6}, i = 1,2; j = 1,\dots,6$
 Quindi $P((i,j)) = P_{1}(\{ i \}) \cdot P_{2}(\{ j \}) = \frac{1}{36}$.
 
 Calcola la probabilità che la somma dei due dadi sia pari.

@@ -127,3 +127,82 @@ Per Bayes:
 $$
 P(E_{1}|A) = \frac{P(A|E_{1})P(E_{1})}{P(A)} \approx 0.872
 $$
+## 2017-01-16
+
+### 1
+Si considerino i seguenti eventi:
+$$
+\begin{align}
+M &= \{ \text{portatore} \} \\
+E &= \{ \text{positivo} \}
+\end{align}
+$$
+Allora lo spazio campionario:
+$$
+\Omega = \{ (M \cap E), (M^{c} \cap E), (M \cap E^{c}), (M^{c} \cap E^{c}) \}
+$$
+e la tribù:
+$$
+\mathcal{A} = \mathcal{P}(\Omega)
+$$
+sono adatte a descrivere il problema.
+
+Ci viene chiesta la probabilità di:
+$$
+\begin{align}
+P(E^{c}) &= 1-P(E)  \\
+ &= 1- (P(M \cap E) + P(M^{c} \cap E)) \\
+ &= 1- (P(E|M)P(M) + P(E|M^{c})P(M^{c})) \\
+ &= 1- (P(E|M)P(M) + P(E|M^{c})(1-P(M))) \\
+ &= 1 - (0.95 \cdot 0.23 + 0.09 \cdot 0.77) \\
+ &= 0.7122
+\end{align}
+$$
+Ci viene chiesta la probabilità di:
+$$
+\begin{align}
+P(M|E^{c}) &= \frac{P(M \cap E^{c})}{P(E^{c})} \\
+ & = \frac{P(E^{c}|M)P(M)}{P(E^{c})} \\
+ & = \frac{(1- P(E|M))P(M)}{P(E^{c})} \\
+ & = \frac{(1-0.95)(0.23)}{0.7122} \\
+ & = 0.01614714968
+\end{align}
+$$
+
+### 2
+$$
+\begin{align}
+P(L > 2) &= 1 - P(L < 2) \\
+ & = 1 - \left( \frac{1}{2} P(U< 2) + \frac{1}{2}P(S < 2) \right) \\
+ & = 1- \frac{1}{2}\left( F_{U}(2) + F_{S}(2)\right) \\
+ & = 1 - \frac{1}{2}\left( 2 - \frac{1}{e} -\frac{1}{e^{2/5}} \right)  \\
+ & = \frac{1}{2} \left( \frac{1}{e}+\frac{1}{e^{2/5}} \right) \\
+ & = 0.5190997436
+\end{align}
+$$
+$$
+\begin{align}
+\mathbb{E}(L) &= \mathbb{E}(L|U)P(U) + \mathbb{E}(L|S)P(S) \\
+ & = 2\cdot \frac{1}{2} + 5 \cdot \frac{1}{2} \\
+ & = 3.5
+\end{align}
+$$
+### 3
+La famiglia parametrica adatta a descrive il fenomeno è una distribuzione di Poisson di parametro $\lambda$. $X_{i} \sim Pois(\lambda)$. dove $\lambda$ è il numero di persone che accedono all'ufficio ogni giorno.
+
+Metodo dei momenti:
+$$
+\begin{align}
+\mathbb{E}(\lambda) = \lambda
+\end{align}
+$$
+Da cui:
+$$
+\begin{align}
+\hat{\lambda}&=  \frac{1}{n} \sum_{i=1}^{n} x_{i} \\
+ & = 13.14286
+\end{align}
+$$
+$$
+\widehat{\mathbb{E}(X)} = \hat{\lambda} = 13.14286
+$$

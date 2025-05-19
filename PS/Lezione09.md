@@ -27,7 +27,7 @@ P([a, b]) &= P\left( \bigcap_{n=1}^{+\infty} \left( a-\frac{1}{n}, b \right] \ri
 &= \lim_{ n \to +\infty } P\left( \left( a-\frac{1}{n}, b \right] \right) \\
 &= \lim_{ n \to +\infty } \left(F(b) - F\left( a - \frac{1}{n} \right) \right)\\
 &= F(b) - \lim_{ n \to +\infty } F\left( a - \frac{1}{n} \right) \\
-&= F(b) - \lim_{ n \to +\infty } \left( a - \frac{1}{n} \right) \\
+&= b - \lim_{ n \to +\infty } \left( a - \frac{1}{n} \right) \\
 &= b - a
 \end{align}
 $$

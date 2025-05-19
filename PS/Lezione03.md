@@ -80,7 +80,7 @@ Ad ogni $\omega_{i} \in \Omega$ si assegna un peso $p(\{ \omega_{i} \}), i = 1,\
 - $\sum_{i=1}^{+\infty}P(\{ \omega_{i} \}) = 1$
 La probabilità di un evento $A$ è data da:
 $$
-P(A) = P \left( \bigcup_{\omega_{i} \in \mathcal{A}}\{ \omega_{i} \} \right) = \sum_{\omega_{i}\in \mathcal{A}} P(\{ \omega_{i} \}) = \sum_{\omega_{i} \in \mathcal{A}} p(\{ \omega_{i} \})
+P(A) = P \left( \bigcup_{\omega_{i} \in A}\{ \omega_{i} \} \right) = \sum_{\omega_{i}\in A} P(\{ \omega_{i} \}) = \sum_{\omega_{i} \in A} p(\{ \omega_{i} \})
 $$
 Nota:
 $\Omega = \bigcup_{i = 1}^{\infty} \omega_{i}$, $1 = P(\Omega)=P\left( \bigcup_{i = 1}^{\infty} \omega_{i} \right) =\sum_{i=1}^{\infty}P(\{ \omega_{i} \}) = \sum_{i=1}^{\infty}p$, ammesso che ogni evento elementare sia equiprobabile.

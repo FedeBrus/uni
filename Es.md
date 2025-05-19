@@ -169,7 +169,7 @@ function(x) {
 	ifelse(x <= 0, 
 		0, 
 		1 - exp(-1.6 * x)
-	))
+	)
 }
 ```
 
@@ -202,4 +202,63 @@ $$
  & = \frac{1}{0.6} \cdot 1 \\
  & = 1.666667
 \end{align}
+$$
+### Q1
+Essendo $S$ una variabile aleatoria discreta la probabilità chiesta si riduce a:
+$$
+p_{S}(4) = \binom{14}{4}(0.573)^{4}(1-0.573)^{14-4} = 0.02174539
+$$
+### Q2
+La probabilità chiesta è:
+$$
+\begin{align}
+P(X = 4 | S = 8)  & = \frac{P(\{ X=4 \} \cap \{ S = 8 \})}{P(S = 8)} \\
+ & = \frac{P(S = 8|X=4)P(X=4)}{P(S=8)} \\
+ & = \frac{P(Y=4)P(X=4)}{P(S = 8)} \\
+ & = 0.2097902
+\end{align}
+$$
+### Q3
+$$
+\begin{align}
+P(Y \in [1, 3] | S=8) &= \frac{P(\{Y \in [1,3]\} \cap \{ S = 8 \})}{P(S=8)} \\
+ & = \frac{P(S = 8| Y \in[1, 3])P(Y\in[1,3])}{P(S=8)} \\
+ & =\sum_{i=1}^{3}\frac{ P(S = 8|Y =i)P(Y = i)}{P(S=8)} \\
+ & = \sum_{i=1}^{3} \frac{ P(X = 8-i)P(Y = i)}{P(S=8)} \\
+ & = 0.7592408
+\end{align}
+$$
+### Q1
+$$
+\begin{align}
+p_{X, Y}(-6, -9) &= p_{Y|X}(-9|-6)p_{X}(-6) \\
+ & = 0.17 \cdot 0.26 \\
+ & = 0.0442
+\end{align}
+$$
+### Q2
+$$
+Cov(X, Y) = \mathbb{E}(XY) - \mathbb{E}(X)\mathbb{E}(Y)
+$$
+$$
+\begin{align}
+Cov(X,Y) &= \sum_{x \in R_{X}} \sum_{y \in R_{Y}} xyp_{X,Y}(x, y) - \left( \sum_{x \in R_{X}} xp_{X}(x) \right)\left( \sum_{y\in R_{Y}} y p_{Y}(y) \right) \\
+ & = \left( \sum_{x \in R_{X}} \sum_{y \in R_{Y}} xy (p_{Y|X}(y|x)p_{X}(x)) \right) - \left( \sum_{x \in R_{X}} xp_{X}(x) \right) \left(  \sum_{y \in R_{Y}} y p_{Y}(y)  \right)   \\
+ & = 11.9162 - \left( 2.345 \cdot 3.933 \right)  \\
+ & = 2.693315
+\end{align}
+$$
+Ricordando che
+$$
+P(Y=y) = \sum_{x \in R_{X}} P(\{ Y = y \} \cap \{ X = x \}) = \sum_{x \in R_{X}} P(\{ Y = y \}|\{ X=x \})P(\{ X = x \})
+$$
+### Q3
+$$
+Var(X) = \mathbb{E}(X^{2}) - \mathbb{E}(X)^{2} = 30.8375 - 5.499025 = 25.33847
+$$
+$$
+Var(Y) = \mathbb{E}(Y^{2}) - \mathbb{E}(Y)^{2} = 48.1995 - 15.46849 = 32.73101
+$$
+$$
+\rho(X,Y) = \frac{Cov(X, Y)}{\sqrt{ Var(X)Var(Y) }} = \frac{2.693315}{\sqrt{ 25.33847 \cdot 32.73101 }} = 0.09352274
 $$

@@ -109,7 +109,7 @@ P(A_{2}|B_{1}) =  P(C_{2} | B_{1}) = \frac{1}{2}
 \end{align}
 $$
 La probabilità di impiegarci 3 giorni è: $B_{1} \cap C_{2}$.
-La probabilità di impiegarci 5 giorni è: $(A_{1} \cap B_{2}) \cup (B_{1} \cap A_{1})$
+La probabilità di impiegarci 5 giorni è: $(A_{1} \cap B_{2}) \cup (B_{1} \cap A_{2})$
 Dunque la probabilità che esca in 3 o 5 giorni è: $P((B_{1} \cap C_{2})+ (A_{1}\cap B_{2})+ (B_{1} \cap A_{2}))$
 $$
 \begin{align}
@@ -140,7 +140,7 @@ Esempi:
 - $(-\infty, b] \in \mathcal{B}(\mathbb{R})$
 - $(a, +\infty) \in \mathcal{B}(\mathbb{R})$
 - $\{ a \} \in \mathcal{B}(\mathbb{R})$
-- gli insiemi numerabili di $\mathbb{R}$ sono Borealiani
+- gli insiemi numerabili di $\mathbb{R}$ sono Boreliani
 
 ### Definizione Funzione di distribuzione
 Una funzione di distribuzione $F$ è:

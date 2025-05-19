@@ -15,12 +15,12 @@ come la fase più lenta (concetto analogo all'implementazione
 con ciclo singolo dove la durata di ogni istruzione veniva
 estesa alla durata di quella più lenta).
 
-xEsiste una fase di riempimento della pipeline,
+Esiste una fase di riempimento della pipeline,
 dopodiché la pipeline entrerà in saturazione per
 poi venir svuotata.
 
-Il miglioramento è dettato da la durata dell'istruzione massima
-e la durata della fase più lunga.
+Il miglioramento è dettato dalla durata dell'istruzione massima
+e dalla durata della fase più lunga.
 
 DOMANDA CLASSICA ESAME: determinare il miglioramento che
 si otterebbe con una determinata pipeline.

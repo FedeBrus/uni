@@ -187,7 +187,7 @@ $$
 $$
 $$
 f_{Y}(y) = \begin{cases}
-f_{x}(Y^{-1}(y)) \cdot | \frac{\partial}{\partial y} Y^{-1}(y) |  & \alpha < y < \beta \\
+f_{X}(Y^{-1}(y)) \cdot | \frac{\partial}{\partial y} Y^{-1}(y) |  & \alpha < y < \beta \\
 0 & \text{altrimenti} 
 \end{cases}
 $$

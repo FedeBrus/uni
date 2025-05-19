@@ -26,8 +26,8 @@ $$
 P_{\Omega}(\text{CVV}) = \frac{20 \cdot 6 \cdot 6}{\#\Omega}
 $$
 #### Esempio
-Consideriamo il seguente insieme $\{ A_{1},A_{2},A_{3},A_{4},A_{5}, B_{1}, B_{2}, C_{1}, D_{1}, R_{1},R_{2} \}$.
-Qual è la probabilità che estraendo da questo insieme una lettera alla volta, compaia l'allineamento $\{ A, B, R, A, D,A,C,A,D,A,B,R,A \}$. (Estrazione senza reinsetimento)
+Consideriamo il seguente insieme $\{ A_{1},A_{2},A_{3},A_{4},A_{5}, B_{1}, B_{2}, C_{1}, D_{1}, D_{2}, R_{1},R_{2} \}$.
+Qual è la probabilità che estraendo da questo insieme una lettera alla volta, compaia l'allineamento $\{ A, B, A, D,A,C,A,D,A,B,R,A \}$. (Estrazione senza reinsetimento)
 $$
 \begin{align}
 \Omega &= \{ \text{tutte le permutazioni degli 11 oggetti distinti} \} \\

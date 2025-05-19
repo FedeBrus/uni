@@ -70,7 +70,7 @@ $$
 F_{X,Y} (x, y) = \sum_{u \leq x} \sum_{v \leq y} p_{X, Y} (u, v)
 $$
 Supponiamo di avere una variabile aleatoria discreta doppia $(X, Y) \sim p_{X, Y}(x, y)$. $x \in R_{X}, y \in R_{Y}$.
-Per ogni $y \in R_{Y}$ definisco una variabile aleatoria $X|Y=y\sim p_{X|Y}(x | y), \forall x \in R_{X}$.
+Per ogni $y \in R_{Y}$ definisco una variabile aleatoria $X|Y \sim y =  p_{X|Y}(x | y), \forall x \in R_{X}$.
 $$
 p_{X|Y}(x | y) = P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{p_{X, Y}(x, y)}{p_{Y}(y)}
 $$
@@ -78,7 +78,7 @@ Dove $A = \{ \omega \in \Omega: X (\omega) = x \} = \{ X = x \}$ e $B = \{ \omeg
 
 Per ogni $x \in R_{X}$ definisco una variabile aleatoria $Y|X=x\sim p_{Y|X}(y | x), \forall y \in R_{Y}$.
 $$
-p_{X,Y}(x, y) = p_{Y}(y)p_{X, Y}(x | y) = p_{X}(x)p_{X, Y}(y | x)
+p_{X,Y}(x, y) = p_{Y}(y)p_{X|Y}(x | y) = p_{X}(x)p_{Y|X}(y | x)
 $$
 Per il teorema di Bayes.
 
@@ -92,7 +92,7 @@ Formiamo la tabella per $p_{X|Y}(x | y)$
 |     | $1$ | $0$           | $1$ | $0$           | $0$           | $0$           | $0$           | $1$ |
 |     | $2$ | $0$           | $0$ | $0$           | $\frac{1}{2}$ | $0$           | $\frac{1}{2}$ | $1$ |
 :::: per casa
-Calcolare la tabella di $p_{X, Y}(y | x), \forall x \in R_{X}$.
+Calcolare la tabella di $p_{Y|X}(y | x), \forall x \in R_{X}$.
 
 #### Esempio
 Consideriamo:
