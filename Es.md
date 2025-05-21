@@ -273,7 +273,7 @@ $$
 Dunque la variabile aleatoria $X = \sum_{i=1}^{n}X_{i} \overset{a}{\sim} N\left( \lambda, \frac{\lambda}{n} \right)$.
 Procediamo con la creazione della normale:
 $$
-Z = \frac{X + 0.5 - \lambda}{\sqrt{ \lambda }} \sqrt{ n } \overset{a}{\sim} N(0,1)
+Z = \frac{X + 0.5 - n\lambda}{\sqrt{ n\lambda }} \overset{a}{\sim} N(0,1)
 $$
 Per rispondere al primo quesito dunque:
 $$
@@ -327,3 +327,37 @@ $$
 n \geq (3.496254989)^{2} = 12.2238
 $$
 Dunque $n \geq 12.2238$, per le restrizioni del problema abbiamo che $n = 13$.
+### Q1
+Sia $\mu = 5.473$ e $\sigma = 0.763$
+Siano $X_{i} \sim N(\mu, \sigma^{2})$ con $i \in \mathbb{N} \setminus 0$
+$$
+\begin{align}
+P(\{X_{1} < 4.4881789 \} \cup \{ X_{1} > 6.7982755 \}) &= 1 - P(4.4881789 \leq X_{1} \leq 6.7982755) \\
+ & = 1 - (F_{X_{1}}(6.7982755) - F_{X_{1}}(4.4881789 )) \\
+ & = 0.1396
+\end{align}
+$$
+### Q2
+Consideriamo:
+$$
+X = \sum_{i=1}^{43} X_{i}
+$$
+Allora $\mathbb{E}(X) = \sum_{i=1}^{43} \mathbb{E}(X_{i}) = 43\mu$ e $Var(X) = \sum_{i=1}^{43} Var(X_{i}) = 43\sigma^{2}$.
+Quindi $X \sim N(43\mu, \sqrt{ 43 }\sigma)$
+$$
+\begin{align}
+P(X > 241.393024) &= 1 - P(X \leq 241.393024) \\
+ & = 1 - F_{X}(241.393024) \\
+ & = 0.1131394
+\end{align}
+$$
+### Q3
+Abbiamo stabilito che $P(X \text{ da scartare}) = 0.1396$.
+Sia $Y \sim Bin(43, 1-0.1396)$.
+Ciò che ci viene chiesto è dunque:
+$$
+\begin{align}
+P(Y \leq 37) &= F_{Y}(37) \\
+ & = 0.5669825
+\end{align}
+$$
