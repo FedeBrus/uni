@@ -262,3 +262,68 @@ $$
 $$
 \rho(X,Y) = \frac{Cov(X, Y)}{\sqrt{ Var(X)Var(Y) }} = \frac{2.693315}{\sqrt{ 25.33847 \cdot 32.73101 }} = 0.09352274
 $$
+### Q1
+Se vogliamo utilizzare un'approssimazione normale dobbiamo trovarci i parametri di questa normale.
+$$
+\begin{align}
+\mu &= \mathbb{E}\left( \sum_{i=1}^{n} X_{i} \right) = \sum_{i=1}^{n} \mathbb{E}(X_{i}) = n\lambda = 2000 \\
+\sigma^{2} &= Var\left( \sum_{i=1}^{n} X_{i} \right) = n\lambda = 2000
+\end{align}
+$$
+Dunque la variabile aleatoria $X = \sum_{i=1}^{n}X_{i} \overset{a}{\sim} N\left( \lambda, \frac{\lambda}{n} \right)$.
+Procediamo con la creazione della normale:
+$$
+Z = \frac{X + 0.5 - \lambda}{\sqrt{ \lambda }} \sqrt{ n } \overset{a}{\sim} N(0,1)
+$$
+Per rispondere al primo quesito dunque:
+$$
+\begin{align}
+P(X > 2000) &= 1 - P(X \leq 2000) \\
+ & = 1 - P\left( Z \leq \frac{2000 + 0.5-2000}{\sqrt{ 2000 }} \right) \\
+ & = 1 - P(Z \leq 0.01118034) \\
+ & = 1 - \Phi(0.01118034) \\
+ & = 1 - 0.5044602 \\
+ & = 0.4955398
+\end{align}
+$$
+### Q2
+Il valore esatto possiamo ottenerlo utilizzando la variabile $X \sim Pois(n\lambda)$.
+$$
+\begin{align}
+|0.4955398 - (1 - P(X \leq 2000))| & = |0.4955398 - 0.4940533| \\
+ & = 0.0014865
+\end{align}
+$$
+### Q3
+$$
+\begin{align}
+P(X \geq 2400) &\geq 0.82 \\
+1 - P(X < 2400) & \geq 0.82 \\
+P(X < 2400)  & \leq 0.18 \\
+P\left( Z\leq \frac{2399+0.5-n\lambda}{\sqrt{ n\lambda }} \right) & \leq 0.18 \\
+\end{align}
+$$
+Calcolando $\Phi^{-1}$ di entrambi i membri:
+$$
+\begin{align}
+\frac{2399.5-200n}{\sqrt{ 200n }}&\leq -0.9153651 \\
+2399.5 - 200n & \leq -0.9153651\sqrt{ 200 } \sqrt{ n } \\
+-200n +0.9153651\sqrt{ 200 }\sqrt{ n } +2399.5 &\leq 0
+\end{align}
+$$
+Sia $t = \sqrt{ n }$.
+$$
+-200t^{2} + 12.94522t + 2399.5 \leq 0
+$$
+$$
+\begin{align}
+t_{1,2} &=\frac{-12.94522 \pm \sqrt{ (12.94522)^{2} -4(-200)(2399.5) }}{2(-200)} \\
+t_{1} &= -3.431528889 \\
+t_{2} &= 3.496254989
+\end{align}
+$$
+Però $t = \sqrt{ n }$ dunque dobbiamo prendere il risultato positivo.
+$$
+n \geq (3.496254989)^{2} = 12.2238
+$$
+Dunque $n \geq 12.2238$, per le restrizioni del problema abbiamo che $n = 13$.
