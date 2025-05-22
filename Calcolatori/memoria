@@ -6,8 +6,33 @@ Il sistema operativo gestisce il trasferimento della risorsa periferica
 alla memoria principale, dalla quale poi il processore può prelevare le 
 informazioni.
 
-☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️☝️
-
 bx' indica il negato del valore di quel bit
-
 La presenza del segnale negato è una garanzia contro errori che possono essere causati da interferenze etc.
+
+Principio di località spaziale significa che dato una sezione di dati è molto probabile che vengano usate anche le sezioni di dati vicine
+Principio di località temporale significa che dato una sezione di dati è molto probabile che venga utilizzata più volti in un breve arco di tempo
+
+Nel caso di continuo register spilling se bisogna scaricare e caricare spesso regsitri allora per il principio di località temporale ha senso tenersi i dati vicini.
+Inoltre nel caso di cicli le stesse istruzioni vengono eseguite di continuo.
+
+Nel caso di ciclo di array ad esempio è comodo caricare porzioni di array.
+I programmi assembly sono una successioni di istruzioni memorizzate in porzioni di memoria contigue quindi anche qua ha senso caricare porzioni di istruzioni,
+perché a meno di salti il flusso del programma è quello.
+
+Nella mappatura semplice si mappa ogni indirizzo della memoria principale a un indirizzo della cache secondo un'operazione di divisione modulo il numero di indirizzi della cache fondamentalmente.
+
+In questo caso il tag, ovvero l'informazion aggiuntiva, è semplicemente il prefisso dell'indirizzo del dato salvato, quindi se l'operazione di modulo ci accomuna tutti
+gli indirizzi con suffisso uguale, allora il prefisso è ciò che ci aiuta a distinguerli.
+
+Un cache miss è gestito come un hazard, ovvero viene messa in pausa la pipeline finché non viene caricato il dato dalla memoria principale.
+
+
+Il write-through scrive sia in cache e propaga la scrittura in memoria principale, ma questo è molto costoso e renderebbe la cache utile solo in lettura.
+
+Si possono introdurre dei buffer tra cache e memoria principale e sporadicamente si fa il flush per rendere effettivi le scritture sulla memoria.
+
+La strategia write back aggiorna solo la cache e la scrittura viene programmata solo quando il dato in cache viene sostituito.
+
+Per quanto riguarda la memoria istruzioni non esistono vere scritture, al massimo si altera l'indirizzo e il problema dunque non si pone.
+
+In cache completamente associativa non so a prescindere dove si trova l'indirizzo che sto cercando in cache, quindi devo controllare tutti i blocchi di cache per vedere se c'è.
