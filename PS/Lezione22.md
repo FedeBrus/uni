@@ -19,7 +19,7 @@ e lo abbiamo portato ad un gioco diverso:
 $$
 P\left( \bar{X}_{n} - z_{1 - \frac{\alpha}{2}} \frac{\sigma_{0}}{\sqrt{ n }} \leq \mu \leq \bar{X}_{n} - z_{\frac{\alpha}{2}} \frac{\sigma_{0}}{\sqrt{ n }} \right) = 1-\alpha
 $$
-Dunque osserviamo un solo cambione $x_{1}, \dots, x_{n}$ su cui calcoliamo la stima puntuale $\bar{x}_{n}$ e da questo campionamento otteniamo un intervallo:
+Dunque osserviamo un solo campione $x_{1}, \dots, x_{n}$ su cui calcoliamo la stima puntuale $\bar{x}_{n}$ e da questo campionamento otteniamo un intervallo:
 $$
 \left(   \bar{x}_{n} - z_{1- \frac{\alpha}{2}} \frac{\sigma_{0}}{\sqrt{ n }},  \bar{x}_{n}-z_{\frac{\alpha}{2}} \frac{\sigma_{0}}{\sqrt{ n }}  \right) 
 $$
@@ -133,7 +133,10 @@ $$
 $$
 Ora vogliamo uno stimatore intervallare. Consideriamo il seguente:
 $$
-\left( \frac{1}{n} \sum_{i=1}^{n} \frac{(Y_{i}-\mu_{0})^{2}}{\sigma^{2}} \right) \sim \frac{\chi_{n}^{2}}{n}
+\left( \frac{1}{n} \sum_{i=1}^{n} \frac{(Y_{i}-\mu_{0})^{2}}{\sigma^{2}} \right) = \frac{1}{n}W \sim \frac{\chi_{n}^{2}}{n}
+$$
+$$
+\frac{\sum_{i=1}^{n} (Y_{i}-\mu_{0})^{2}}{\sigma^{2}} = W \sim \chi^{2}_{n}
 $$
 Ora possiamo scrivere il seguente:
 $$
@@ -175,7 +178,7 @@ $$
 Ora consideriamo la seguente quantità:
 $$
 (n-1)\frac{S^{2}}{\sigma^{2}} =  \sum_{i=1}^{n} \frac{(Y_{i}-\bar{Y}_{n})^{2}}{\sigma^{2}} = \sum_{i=1}^{n} \frac{(Y_{i}-\mu)^{2}}{\sigma^{2}} - \frac{n(\bar{Y}_{n}- \mu)^{2}}{\sigma^{2}}
-=\sum_{i=1}^{n} \left( \frac{Y_{i}-\mu}{\sigma} \right)^{2} = (n-1)\frac{S^{2}}{\sigma^{2}} + \left( \frac{\bar{Y}_{n}-\mu}{\frac{\sigma}{\sqrt{ n }}} \right) ^{2}
+=\sum_{i=1}^{n} \left( \frac{Y_{i}-\mu}{\sigma} \right)^{2} - n \left( \frac{\bar{Y}_{n}- \mu}{\sigma} \right)^{2} \implies (n-1)\frac{S^{2}}{\sigma^{2}} + \left( \frac{\bar{Y}_{n}-\mu}{\frac{\sigma}{\sqrt{ n }}} \right) ^{2} = \sum_{i=1}^{n} \left( \frac{Y_{i}-\mu}{\sigma } \right) ^{2}
 $$
 $$
 P\left( w_{n - 1, \frac{\alpha}{2}} \leq (n-1)\frac{S^{2}}{\sigma^{2}} \leq w_{n-1, 1- \frac{\alpha}{2}} \right) = 1-\alpha
@@ -204,7 +207,7 @@ $$
 S^{2} = \frac{1}{n - 1} \sum_{i=1}^{n} (Y_{i}-\bar{Y}_{n})^{2}
 $$
 $$
-\mathbb{E}(\bar{Y}_{n}) = \mu, \qquad Var(\bar{Y}_{n}) \frac{\sigma^{2}}{n}, \qquad \mathbb{E}(S^{2}) = \sigma^{2}
+\mathbb{E}(\bar{Y}_{n}) = \mu, \qquad Var(\bar{Y}_{n})= \frac{\sigma^{2}}{n}, \qquad \mathbb{E}(S^{2}) = \sigma^{2}
 $$
 $$
 Z_{n}= \frac{\bar{Y}_{n} - \mu}{\sqrt{ S^{2} }} \sqrt{ n } = \frac{\frac{\bar{Y}_{n}- \mu}{\sigma} \sqrt{ n }}{\sqrt{ \frac{S^{2}}{\sigma^{2}} }} = \frac{\frac{\bar{Y}_{n}- \mu}{\sigma} \sqrt{ n }}{\sqrt{ \frac{\sum_{i=1}^{n} \left( \frac{Y_{i}- \bar{Y}_{n}}{\sigma} \right)^{2}}{n-1} }}

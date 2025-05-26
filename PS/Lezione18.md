@@ -113,7 +113,7 @@ $$
 Si chiama successione di variabili aleatorie l'oggetto $\{ X_{i} \}_{i = 1}^{+\infty}$ in cui si intende che ad ogni valore dell'indice $i\in \mathbb{N}$ si associa la corrispondente variabile aleatoria $X_{i}$. 
 
 ### Definizione Convergenza in media quadratica
-La successione di variabili aleatorie converge in media quadratica alla variabile aleatoria limite $X$ se considerando la successione numerica $\{ a_{i} \}_{i = 1}^{+\infty}$ definita come $a_{i} = \mathbb{E}((X_{i} - X)^{2})$, $\lim_{ i \to +\infty } a_{i} = 0$.
+La successione di variabili aleatorie converge in media quadratica alla variabile aleatoria limite $X$ se considerando la successione numerica $\{ a_{i} \}_{i = 1}^{+\infty}$ definita come $a_{i} = \mathbb{E}((X_{i} - X)^{2})$, $\lim_{ i \to +\infty } a_{i} = 0$. 
 
 #### Esempio
 Consideriamo la successione di variabili aleatorie $\{ X_{i} \}_{i = 1}^{+\infty }$ tali che $\mu = \mathbb{E}(X_{i}), \sigma^{2} = Var(X_{i}), Cov(X_{i}, X_{j}) = 0, \forall i\neq j$.

@@ -206,3 +206,37 @@ $$
 $$
 \widehat{\mathbb{E}(X)} = \hat{\lambda} = 13.14286
 $$
+## Esame a caso
+### Esercizio 1
+Nella nota località Vason sul Monte Bondone, la quantità di neve che cade in un giorno, durante l’inverno, può essere descritta come una variabile aleatoria di media 10.96 cm e deviazione standard 2.29 cm.
+### Quesito 1 
+Qual è la probabilità che in 27 giorni cadano tra 285.91 e 298.93 centimetri di neve? (Consideriamo indipendenti i centimetri di neve caduti in giorni diversi.)
+
+Possiamo trovarci al variabile aleatoria $X$ così definita:
+$$
+X = \sum_{i=1}^{27} X_{i} \sim N(27(10.96), 27(2.29)^{2})
+$$
+Dopodichè basta trovare l'intervallo richiesto:
+$$
+0.3997413
+$$
+### Esercizio 2
+Il numero di nubifragi che ci sono in un anno nella capitale del paese di Ailati è distribuito secondo una Poisson di parametro 2.1. In occasione di un nubifragio viene allagato un numero di quartieri casuale, distribuito uniformemente tra 1 e 8. Il numero di quartieri allagati in nubifragi diversi è da pensarsi indipendente.
+### Quesito 2 
+Con che probabilità l’anno prossimo ci saranno esattamente 4 nubifragi, sapendo che ce ne sarà almeno 1?
+### Quesito 3
+Con che probabilità tra due anni non ci saranno nubifragi nei quali il numero di quartieri allagati sia esattamente 2?
+
+Sia $X \sim Pois(2.1)$
+Nel quesito due ci viene chiesto:
+$$
+\begin{align}
+P(X=4|X\geq 1) &= \frac{P(\{ X=4 \} \cap \{ X \geq 1 \})}{P(X \geq 1)} \\
+ & = \frac{P(X=4)}{1 - P(X = 0)} \\
+ & = 0.1130782
+\end{align}
+$$
+Per il secondo quesito possiamo usare la sottopoissonizzazione.
+$$
+K \sim Pois\left( 2.1 \cdot 2 \cdot \frac{1}{8} \right)
+$$

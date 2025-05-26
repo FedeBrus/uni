@@ -13,7 +13,7 @@ Andiamo a specificare la distribuzione condizionata della $Y$ data la $X$.
 $$
 Y | X = x \sim N(\alpha+\beta x, \sigma^{2})
 $$
-Da qui possiamo capire che la $Y$ è independete in varianza dalla $X$. Questa assunzione viene chiamata "ipotesi omoschedasticità".
+Da qui possiamo capire che la $Y$ è independete in varianza dalla $X$. Questa assunzione viene chiamata "ipotesi di omoschedasticità".
 Riassumendo:
 $$
 \begin{align}
@@ -27,7 +27,7 @@ Un modello sifatto è un modello lineare semplice.
 Utilizziamo il metodo dei minimi quadrati:
 Dobbiamo fare in modo di scegliere $\alpha, \beta$ in maniera tale che minimizzano la seguente quantità:
 $$
-(\hat{\alpha}, \hat{\beta}) = \underset{\alpha, \beta}{\text{argmin}} \sum_{i=1}^{n} ( y_{i} - (\alpha + \beta x_{i}) )^{2} = \underset{\alpha, \beta}{\text{argmin}} S(\alpha, \beta)
+(\hat{\alpha}, \hat{\beta}) = \underset{\alpha, \beta}{\text{argmin}} \sum_{i=1}^{n} ( y_{i} - (\alpha + \beta x_{i}) )^{2} = \underset{\alpha, \beta}{\text{argmin}} \ S(\alpha, \beta)
 $$
 In altre parole si cerca di minimizzare la distanza assoluta tra la retta che cerca di stimare il fenomeno e i valori effettivi di $y$.
 $$
@@ -39,7 +39,7 @@ $$
 Qundi si crea il sistema ponendo a $0$ le derivate.
 Guardiamo la prima:
 $$
-\frac{1}{n} \sum_{i=1}^{n} y_{i} - \alpha - \beta  \frac{1}{n} \sum_{i=1}^{n} x_{i}
+\frac{1}{n} \sum_{i=1}^{n} y_{i} - \alpha - \beta  \frac{1}{n} \sum_{i=1}^{n} x_{i} = 0
 $$
 ora la seconda:
 $$

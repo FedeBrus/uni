@@ -141,7 +141,7 @@ $$
 
 Utilizziamo invece il metodo della massima verosimiglianza.
 $$
-p_{X_{1}, \dots, X_{n}} = (x_{1}, \dots, x_{n}) = \prod_{i=1}^{n} p_{X_{i}} (x_{i}) = \prod_{i=1}^{n} \theta^{x_{i}} (1- \theta)^{1-x_{i}} = \theta^{\sum x_{i}} (1- \theta)^{n - \sum x_{i}}
+p_{X_{1}, \dots, X_{n}} (x_{1}, \dots, x_{n}) = \prod_{i=1}^{n} p_{X_{i}} (x_{i}) = \prod_{i=1}^{n} \theta^{x_{i}} (1- \theta)^{1-x_{i}} = \theta^{\sum x_{i}} (1- \theta)^{n - \sum x_{i}}
 $$
 $$
 l(\theta; x_{1}, \dots, x_{n}) = \sum_{i=1}^{n} x_{i} \log \theta + \left( n - \sum_{i=1}^{n} x_{i} \right) \log(1-\theta)

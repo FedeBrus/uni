@@ -20,7 +20,7 @@ dopodiché la pipeline entrerà in saturazione per
 poi venir svuotata.
 
 Il miglioramento è dettato dalla durata dell'istruzione massima
-e dalla durata della fase più lunga.
+e la durata della fase più lunga.
 
 DOMANDA CLASSICA ESAME: determinare il miglioramento che
 si otterebbe con una determinata pipeline.

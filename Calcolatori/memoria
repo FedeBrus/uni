@@ -28,10 +28,8 @@ Un cache miss è gestito come un hazard, ovvero viene messa in pausa la pipeline
 
 
 Il write-through scrive sia in cache e propaga la scrittura in memoria principale, ma questo è molto costoso e renderebbe la cache utile solo in lettura.
-
 Si possono introdurre dei buffer tra cache e memoria principale e sporadicamente si fa il flush per rendere effettivi le scritture sulla memoria.
-
-La strategia write back aggiorna solo la cache e la scrittura viene programmata solo quando il dato in cache viene sostituito.
+La strategia write-back aggiorna solo la cache e la scrittura viene programmata solo quando il dato in cache viene sostituito.
 
 Per quanto riguarda la memoria istruzioni non esistono vere scritture, al massimo si altera l'indirizzo e il problema dunque non si pone.
 

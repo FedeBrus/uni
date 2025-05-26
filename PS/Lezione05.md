@@ -63,7 +63,7 @@ $$
 Per casa fare l'esercizio contando l'ordine.
 Nel caso l'ordine delle palline bisogna considerare il numero di eventi elementari il numero di disposizioni totali senza ripetizione:
 $$
-\#\Omega = D_{100, 10} = \frac{100!}{10!}
+\#\Omega = D_{100, 10} = \frac{100!}{90!}
 $$
 Dopodiché, intuitivamente il numero di casi favorevoli è dato prendendo il numero totale di gruppi di 10 palline tali che 5 palline siano rosse e 5 siano bianche (il numeratore di prima) e moltiplicarlo per tutti i possibili modi di disporre 10 palline.
 

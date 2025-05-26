@@ -31,10 +31,12 @@ L'intero processore va temporizzato con un tempo T che può essere determinato o
 Tutto ciò che può essere parallelizzato viene parallelizzato. Dunque per la determinazione del cammino critico bisogna osservare il componente più lento in ogni parallelizzazione.
 Per le istruzioni di tipo R ad esempio sono necessari il register-file e la ALU.
 Per le istruzioni load e store serve inoltre il blocco di memoria dati.
-Esiste un componente di estensione del segno che prende i 32 bit di istruzione e la estende a 64, prende i valori dell'istruzione che identificano l'immediato a 12 bit e esegue un'estensione di segno, prendendo il bit più significativo e lo estende.
+Esiste un componente di estensione del segno che prende i 32 bit di istruzione e la estende a 64, prende i valori dell'istruzione che identificano 
+l'immediato a 12 bit e esegue un'estensione di segno, prendendo il bit più significativo e lo estende.
 
 Istruzioni di salto
-Siccome le istruzioni sono a 32 bit a noi basterebbe shiftare il PC di multipli di 4 e normalmente avrebbe senso shiftare di 2 l'immediato, solo che in RISCV esistono istruzioni speciali codificate a 16 bit e quindi si decide di shiftare solamente di 1. Questo ci permette di poter fare salti più grandi.
+Siccome le istruzioni sono a 32 bit a noi basterebbe shiftare il PC di multipli di 4 e normalmente avrebbe senso shiftare di 2 l'immediato, solo che in 
+RISCV esistono istruzioni speciali codificate a 16 bit e quindi si decide di shiftare solamente di 1. Questo ci permette di poter fare salti più grandi.
 
 In ogni ciclo di clock si può accedere una sola volta a ciascun componente, per questo esiste la separazione tra memoria dati e memoria istruzioni.
 

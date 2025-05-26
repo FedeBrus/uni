@@ -1,5 +1,5 @@
 #### Esempio
-Abbiamo una popolazione $Y_{i} \sim N(\mu_{1}, \sigma^{2})$. Abbiamo poi un'altra popolazione $Y_{2}\sim N(\mu_{2}, \sigma^{2})$ con stessa varianza ignota.
+Abbiamo una popolazione $Y_{1} \sim N(\mu_{1}, \sigma^{2})$. Abbiamo poi un'altra popolazione $Y_{2}\sim N(\mu_{2}, \sigma^{2})$ con stessa varianza ignota.
 Il nostro parametro di interessa non è tanto $\mu_{1}$ o $\mu_{2}$ ma $\theta=\mu_{1}-\mu_{2}$. Tutti i parametri sono ignoti.
 $$
 \hat{\theta} = \hat{\mu}_{1} - \hat{\mu}_{2}

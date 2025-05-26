@@ -361,3 +361,144 @@ P(Y \leq 37) &= F_{Y}(37) \\
  & = 0.5669825
 \end{align}
 $$
+### Q1
+$$
+P(X+Y \geq 23) \leq \frac{\mathbb{E}(X+Y)}{23}
+$$
+Ma siccome $X$ e $Y$ sono indipendenti:
+$$
+P(X + Y \geq 23) \leq \frac{\mathbb{E}(X)+\mathbb{E}(Y)}{23}
+$$
+Calcoliamo allora i valori attesi:
+$$
+\begin{align}
+\mathbb{E}(X) &= \lambda_{X} = 3 \\
+\mathbb{E}(Y) &= \lambda_{Y} = 10
+\end{align}
+$$
+Dunque:
+$$
+P(X + Y\geq 23) \leq \frac{13}{23} = 0.5652174
+$$
+### Q2
+$$
+P(X \geq 6.11 | X + Y = 23) \leq \frac{\mathbb{E}(X| X + Y =23)}{6.11}
+$$
+Procediamo al calcolo di:
+$$
+\begin{align}
+\mathbb{E}(X|X+Y=23) &= \sum_{i=0}^{23} i P_{X|X+Y}(X=i|X+Y=23) \\
+ & = \sum_{i=0}^{23} i \frac{P_{X, X + Y} (\{ X = i \} \cap \{X + Y = 23 \})}{P_{X+Y}(X+Y=23)} \\
+ & = \sum_{i=0}^{23} i \frac{P_{X,X+Y}(\{ X=i \} \cap \{ Y=23 - i \})}{P_{X+Y}(X+Y = 23)} \\
+ & = \sum_{i=0}^{23} i \frac{p_{X}(i)p_{Y}(23-i)}{p_{x+y}(23)}
+\end{align}
+$$
+in R:
+```R
+result <- 0
+lambda_x <- 3
+lambda_y <- 10
+
+for (i in 0:23) {
+	result <- result + (i * dpois(i, lambda_x) * dpois(23 - i, lambda_y)) / dpois(23, lambda_x + lambda_y)
+}
+
+result
+```
+$$
+\begin{align}
+\mathbb{E}(X|X+Y=23) & = 5.307692
+\end{align}
+$$
+Dunque:
+$$
+P(X \geq 6.11 | X + Y = 23) \leq \frac{\mathbb{E}(X| X + Y =23)}{6.11} = 0.8686894
+$$
+### Q3
+Osserviamo i parametri di $W$:
+$$
+\mu = \mathbb{E}(W)= \mathbb{E}(1.9 Z) = 1.9\mathbb{E}(Z) = 0
+$$
+$$
+\sigma^{2} = Var(W) = Var(1.9Z) = (1.9)^{2} = 3.61
+$$
+$$
+\begin{align}
+P(|W| < 2.9) &= 1 - P(|W - 0| \geq 2.9)
+\end{align}
+$$
+$$
+\begin{align}
+P(|W - 0| \geq 2.9) &\leq \frac{3.61}{8.41} \\
+P(|W| \geq 2.9) &\leq 0.4292509 \\
+\end{align}
+$$
+Quindi:
+$$
+\begin{align}
+P(|W| \geq 2.9) &\leq 0.4292509 \\
+1-P(|W|<2.9) & \leq 0.4292509 \\
+-P(|W|<2.9) & \leq -0.5707491 \\
+P(|W|<2.9) & \geq 0.5707491
+\end{align}
+$$
+### Q4
+Il valore reale si può ottenere facilmente in R nel seguemente modo:
+```R
+pnorm(2.9, 0, 1.9) - pnorm(-2.9, 0, 1.9)
+```
+$$
+P(|W|<2.9) = 0.8730688
+$$
+$$
+|​0.8730688−0.5707491| = 0.3023197
+$$
+### Q1
+Ci viene chiesto di calcolare:
+$$
+\begin{align}
+B(T_{1}, w) &= \mathbb{E}(T_{1}) - w \\
+B(T_{2}, w) &= \mathbb{E}(T_{2}) - w 
+\end{align}
+$$
+$$
+\begin{align}
+\mathbb{E}\left( \frac{9X_{1} + 8X_{2}+4X_{3}}{21} \right) -w & = \frac{9\mathbb{E}(X_{1}) + 8\mathbb{E}(X_{2}) + 4\mathbb{E}(X_{3})}{21} - w \\
+ & = \frac{21w}{21} - w  \\
+& = w - w  \\
+ & = 0
+\end{align}
+$$
+Allo stesso modo:
+$$
+\begin{align}
+\mathbb{E}\left( \frac{9X_{1}+4X_{3}}{13} \right) - w &=0
+\end{align}
+$$
+Dunque entrambi gli stimatore non sono distorti.
+
+### Q2
+Calcoliamo ora le varianze:
+$$
+\begin{align}
+Var(T_{1}) = Var\left( \frac{9X_{1}+8X_{2}+4X_{3}}{21} \right) &= \frac{81w^{2} + 64w^{2} + 16w^{2}}{21^{2}} \\
+ & = 0.3650794w^{2} \\
+ & = 0.8771033
+\end{align}
+$$
+Allo stesso modo:
+$$
+\begin{align}
+Var(T_{2}) = Var\left( \frac{9X_{1} + 4X_{3}}{13} \right) &= \frac{81w^{2} + 16w^{2}}{13^{2}} \\
+ & = 0.5739645w^{2} \\
+ & = 1.37895
+\end{align}
+$$
+### Q3
+Infine calcolare l'errore quadratico medio è facile:
+$$
+\begin{align}
+MQE(T_{1})=  Var(T_{1}) + B(T_{1}, w)^{2} = 0.8771033 \\ 
+MQE(T_{2})=  Var(T_{2}) + B(T_{2}, w)^{2} = 1.37895
+\end{align}
+$$
