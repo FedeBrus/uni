@@ -503,6 +503,7 @@ MQE(T_{2})=  Var(T_{2}) + B(T_{2}, w)^{2} = 1.37895
 \end{align}
 $$
 ### Q1
+Ci viene detto che $X \sim Bin(m=14, \theta )$.
 $$
 \mathbb{E}(X) = m\theta
 $$
@@ -510,7 +511,7 @@ $$
 \hat{\theta} = \frac{1}{nm} \sum_{i=1}^{n} X_{i}  = \frac{\bar{X}_{n}}{m}
 $$
 $$
-\hat{\theta} = 8.692308
+\hat{\theta} = 0.6208791
 $$
 ### Q2
 $$
@@ -540,6 +541,43 @@ $$
 \begin{align}
 n\bar{x}_{n} - n\bar{x}_{n}\theta - n\theta m +n\bar{x}_{n}\theta &= 0 \\
 \bar{x}_{n} &= \theta m \\
-\theta &= \frac{\bar{x}_{n}}{m}
+\hat{\theta} &= \frac{\bar{x}_{n}}{m}
 \end{align}
+$$
+### Q3
+Calcoliamo la varianza dello stimatore trovato:
+$$
+\begin{align}
+Var(\hat{\theta}) & = Var\left( \frac{\bar{X}_{n}}{m} \right) \\
+ & = \frac{1}{m^{2}} Var(\bar{X}_{n}) \\
+ & = \frac{1}{m^{2}} \frac{m\theta(1-\theta)}{n} \\
+ & = \frac{\theta(1-\theta)}{mn}
+\end{align}
+$$
+L'intervallo di confidenza lo si ottiene nel seguente modo:
+$$
+\begin{align}
+P\left( z_{\frac{\alpha}{2}} \leq \frac{\hat{\theta}-\theta}{\sqrt{\theta(1-\theta) }}\sqrt{ mn } \leq z_{1-\frac{\alpha}{2}} \right) &=  1-\alpha
+\end{align}
+$$
+Utilizzando la tecnica di Wald otteniamo:
+$$
+\begin{align}
+P\left( z_{\frac{\alpha}{2}} \leq \frac{\hat{\theta}-\theta}{\sqrt{  \hat{\theta}(1-\hat{\theta}) }}\sqrt{ mn } \leq z_{1-\frac{\alpha}{2}} \right) &=  1-\alpha \\
+P\left( z_{\frac{\alpha}{2}}\sqrt{ \hat{\theta}(1-\hat{\theta}) } \leq (\hat{\theta} - \theta)\sqrt{ mn } \leq z_{1-\frac{\alpha}{2}}\sqrt{ \hat{\theta}(1-\hat{\theta}) } \right) & = 1-\alpha \\
+P\left( \frac{z_{\frac{\alpha}{2}}\sqrt{\hat{\theta}(1-\hat{\theta}) }}{\sqrt{ mn }} - \hat{ \theta} \leq - \theta \leq \frac{z_{1-\frac{\alpha}{2}}\sqrt{ \hat{\theta}(1-\hat{\theta}) }}{\sqrt{ mn }} -\hat{\theta} \right) & = 1-\alpha \\
+P\left( \hat{\theta}-z_{1-\frac{\alpha}{2}}\sqrt{ \frac{\hat{\theta}(1-\hat{\theta})}{mn}} \leq \theta \leq \hat{\theta}-z_{\frac{\alpha}{2}}\sqrt{ \frac{\hat{\theta}(1-\hat{\theta})}{mn}} \right)  & = 1-\alpha
+\end{align}
+$$
+Ora utilizziamo i dati:
+$$
+\begin{align}
+\hat{\theta} =  \frac{\bar{x}_{n}}{m} &= 0.6208791 \\
+1-\alpha &= 0.99 \\
+z_{\frac{\alpha}{2}} = -z_{1-\frac{\alpha}{2}} &= -2.575829 \\
+m  &= 14
+\end{align}
+$$
+$$
+P(0.5282444 \leq \theta \leq 0.7135138) = 0.99
 $$
