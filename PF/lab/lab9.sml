@@ -38,4 +38,8 @@ Tree.subtree 1 n;
 Tree.subtree 2 n;
 Tree.subtree (~1) n;
 
-
+signature SIMPLE = sig
+    datatype tree = Node of int * int tree list;
+    exception Missing;
+    val build:  tree list -> tree;
+end;
