@@ -502,3 +502,44 @@ MQE(T_{1})=  Var(T_{1}) + B(T_{1}, w)^{2} = 0.8771033 \\
 MQE(T_{2})=  Var(T_{2}) + B(T_{2}, w)^{2} = 1.37895
 \end{align}
 $$
+### Q1
+$$
+\mathbb{E}(X) = m\theta
+$$
+$$
+\hat{\theta} = \frac{1}{nm} \sum_{i=1}^{n} X_{i}  = \frac{\bar{X}_{n}}{m}
+$$
+$$
+\hat{\theta} = 8.692308
+$$
+### Q2
+$$
+\begin{align}
+f_{X_{1}, \dots, X_{n}}(x_{1}, \dots,x_{n}) &= \prod_{i=1}^{n} f_{X_{i}}(x_{i}) \\
+ & = \prod_{i=1}^{n} \left( \binom{m}{x_{i}} \theta^{x_{i}}(1-\theta)^{m-x_{i}} \right) \\
+ & = \prod_{i=1}^{n} \binom{m}{x_{i}} \theta^{\sum x_{i}} (1-\theta)^{\left( nm- \sum x_{i} \right)} \\
+\end{align}
+$$
+Passiamo alla log-verosimiglianza:
+$$
+\begin{align}
+\log\left(\prod_{i=1}^{n} \binom{m}{x_{i}} \right) + \left( \sum_{i=1}^{n} x_{i} \right) \log(\theta) + \left( nm - \sum_{i=1}^{n} x_{i} \right) \log(1-\theta)
+\end{align}
+$$
+Ora deriviamo secondo $\theta$:
+$$
+\begin{align}
+\frac{d}{d\theta}\left(\log\left(\prod_{i=1}^{n} \binom{m}{x_{i}} \right) + \left( \sum_{i=1}^{n} x_{i} \right) \log(\theta) + \left( nm - \sum_{i=1}^{n} x_{i} \right) \log(1-\theta)
+  \right) &=  \frac{n\bar{x}_{n}}{\theta} - \frac{n(m-\bar{x}_{n})}{1-\theta} \\
+ & = \frac{n\bar{x}_{n}(1-\theta) - n(m-\bar{x}_{n})\theta}{\theta(1-\theta)} \\ \
+ & = 0
+\end{align}
+$$
+Ma allora:
+$$
+\begin{align}
+n\bar{x}_{n} - n\bar{x}_{n}\theta - n\theta m +n\bar{x}_{n}\theta &= 0 \\
+\bar{x}_{n} &= \theta m \\
+\theta &= \frac{\bar{x}_{n}}{m}
+\end{align}
+$$
