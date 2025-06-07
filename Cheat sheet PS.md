@@ -100,10 +100,10 @@ destandardizzazione: $X = \sigma Z+\mu$
 probabilità di un rettangolo:
 $P_{Z} (\{x_{1}<X\leq x_{2} \} \cap \{ y_{1} < Y \leq y_{2} \}) = F_{X, Y}(x_{2},y_{2}) - F_{X, Y}(x_{2},y_{1}) -F_{X,Y}(x_{1},y_{2}) + F_{X, Y}(x_{1},y_{1})$
 $f_{X, Y}(x, y) \geq 0, \forall(x, y) \in \mathbb{R}^{2}, \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f_{X, Y} (x, y) dydx = 1, F_{X, Y}(x, y) = \int_{-\infty}^{x} \int_{-\infty}^{y} f_{X, Y} (u, v) dvdu$
-idem discreta
 $p_{X}(x) = \sum_{y \in R_{Y}} p_{X, Y}(x, y)$
 $p_{Y}(y) = \sum_{x \in R_{X}} p_{X, Y}(x, y)$
 $F_{X,Y} (x, y) = \sum_{u \leq x} \sum_{v \leq y} p_{X, Y} (u, v)$
+
 $p_{X|Y}(x | y) = \frac{p_{X, Y}(x, y)}{p_{Y}(y)}$
 $\mathbb{E}(X | Y = y) = \sum_{x \in R_{X}} x p_{X | Y} (x | y), \forall y \in R_{Y}$
 $\mathbb{E}(X^{r}|Y = y) = \sum_{x \in R_{X}} x^{r} p_{X |Y}(x, y), \forall r \in \mathbb{N}$
@@ -114,7 +114,7 @@ $Var(X) = \mathbb{E}(Var(X|Y)) + Var(\mathbb{E}(X|Y))$
 $X$ è ind in media da $Y$ se:
 $\mathbb{E}(X | Y = y) = \mathbb{E}(X), \forall y \in R_{Y}$
 Questa indipendenza non è simmetrica.
-### Definizione Indicie di dipendenza in media (Rapporto di correlazione)
+### Definizione Indice di dipendenza in media (Rapporto di correlazione)
 $0 \leq \eta^{2}_{X|Y} = \frac{Var(\mathbb{E}(X|Y))}{Var(X)} = 1 - \frac{\mathbb{E}(Var(X|Y))}{Var(X)} \leq 1$
 $\eta^{2}_{X|Y} = 0 \Longleftrightarrow Var(\mathbb{E}(X|Y)) = 0 \Longleftrightarrow \mathbb{E}(X|Y)$ è degenere. Cioè $X$ è indipendente in media da $Y$.
 $\eta^{2}_{X|Y}>0$ allora $X$ è dipendente in media da $Y$.
@@ -247,3 +247,17 @@ metodo della verosomiglianze
 - fanne il logaritmo se semplifica
 - deriva rispetto al parametro
 - poni la derivata a 0 e trova il parametro
+![[Pasted image 20250531190907.png]]
+
+Stima media, varianza nota.
+![[Pasted image 20250607153231.png]]
+Stima media, varianza non nota.
+![[Pasted image 20250607160538.png]]
+Stima varianza, media nota.
+![[Pasted image 20250607165545.png]]
+Stima varianza, media non nota.
+![[Pasted image 20250607165618.png]]
+Stima differenza tra medie di due popolazioni, varianze ignote ma uguali.
+![[Pasted image 20250607184116.png]]
+Stima rapporto di varianze di due popolazioni, medie ignote.
+![[Pasted image 20250607185552.png]]

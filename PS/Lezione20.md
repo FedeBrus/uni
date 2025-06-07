@@ -102,7 +102,7 @@ $$
 \hat{\mu} = \frac{1}{n} \sum_{i=1}^{n} X_{i} = \bar{X}_{n}
 $$
 ### Metodo dei momenti
-Consideriamo i momenti teorici $\mu =\mathbb{E}(X_{1})$. Si iniziano a calcolare i momenti di una variabile e mi fermo quando il momento caloclato è funzione del parametro ignoto. In questo caso lo si trova subito. Una volta trovato si va a trovare il corrispondente momento empirico, che è dello stesso grado di quello teorico trovato. In questo caso il momento empirico: $\frac{1}{n} \sum_{i=1}^{n} x_{i} = \bar{x}_{n}$. ... Manca roba
+
 
 ### Metodo della massima verosimiglianza
 Assumiamo che $X_{i} \sim N(\mu, \sigma^{2})$ in modo che $\mu = \mathbb{E}(X_{i})$. Dopodiché bisogna esplicitare:

@@ -53,7 +53,7 @@ Qui abbiamo un problema perché al denominatore abbiamo parametri ignoti.
 Possiamo utilizzare due tecniche diverse, la prima è la tecnica di Wald.
 Possiamo approssimare il problema ad un altro problema, che è il seguente:
 $$
-P\left( z_{\frac{\alpha}{2}} \leq \sqrt{ n } \frac{\bar{X}_{n} - \theta}{\sqrt{ \bar{X_{n}}(1- \bar{X}_{n}) }} \leq z_{1 - \frac{\alpha}{2}} \right) \approx 1- \alpha
+P\left( z_{\frac{\alpha}{2}} \leq \sqrt{ n } \frac{\bar{X}_{n} - \theta}{\sqrt{ \bar{X}_{n}(1- \bar{X}_{n}) }} \leq z_{1 - \frac{\alpha}{2}} \right) \approx 1- \alpha
 $$
 $$
 P\left( \bar{X}_{n} - z_{1-\frac{\alpha}{2}} \frac{\sqrt{ \bar{X}_{n} (1 - \bar{X}_{n}) }}{\sqrt{ n }} \leq \theta \leq \bar{X}_{n} - z_{\frac{\alpha}{2}} \frac{\sqrt{ \bar{X}_{n}(1 - \bar{X}_{n}) }}{\sqrt{ n }} \right) \approx 1- \alpha

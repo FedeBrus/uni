@@ -1,4 +1,4 @@
-Verifica delle ipotesi 
+## Verifica delle ipotesi 
 Abbiamo un modello $X \sim N(\mu, \sigma_{0}^{2})$ con varianza nota e siamo interessati a $\mu$.
 Allora:
 $$
@@ -51,9 +51,9 @@ Inoltre:
 $$
 T(X_{1}, \dots, X_{n}) = \sqrt{ n } \frac{\bar{X}_{n} - \mu_{0}}{\sigma_{0}}
 $$
-Questa variabile aleatoria è standardizzata solo se è vera $H_{0}$.
+Notare che questa variabile aleatoria è standardizzata solo se è vera $H_{0}$.
 Ricapitolando: se $H_{0}$ è vera allora $T(X_{1}, \dots, X_{n}) \sim N(0, 1)$, altrimenti se $H_{1}$ è vera, essendo una combinazione lineare di normali è normale, ma dobbiamo calcolare i suoi parametri.
-Facciamo che se $H_{1}$ è vera allora $\mu = \mu_{1} \neq \mu_{0}$.
+Assumiamo che se $H_{1}$ è vera allora $\mu = \mu_{1} \neq \mu_{0}$.
 $$
 \mathbb{E}(T(X_{1}, ..., X_{n}) | H_{1} \text{ vera}) = \sqrt{ n } \frac{\mathbb{E}((\bar{X}_{n} - \mu_{0}))}{\sigma_{0}} = \frac{\sqrt{ n }(\mu_{1}- \mu_{0})}{\sigma_{0}}
 $$
@@ -107,7 +107,7 @@ $$
 P(T(X_{1}, \dots ,X_{n}) \in A | H_{0} \text{ vera}) &= 1-\alpha \\
 P(T(X_{1}, \dots ,X_{n}) \in A | H_{0} \text{ falsa}) &= \beta \\
 P(T(X_{1}, \dots ,X_{n}) \not\in A | H_{0} \text{ vera}) &= \alpha \\
-P(T(X_{1}, \dots ,X_{n}) \not\in A | H_{0} \text{ falsa}) &= \beta
+P(T(X_{1}, \dots ,X_{n}) \not\in A | H_{0} \text{ falsa}) &= 1-\beta\  (\text{potenza del test})
 \end{align}
 $$
 Cambiamo modello per capire come fare questa procedura in modo generale:
@@ -127,7 +127,7 @@ $$
 T(X_{1}, \dots, X_{n}) = \sqrt{ n } \frac{\bar{X}_{n} - \lambda}{\sqrt{ \lambda }} \overset{a}{\sim} N(0, 1)
 $$
 per il teorema centrale del limite.
-Creaimo un sistema di ipotesi:
+Creiamo un sistema di ipotesi:
 $$
 \begin{cases}
 H_{0}: \lambda = \lambda_{0} \\

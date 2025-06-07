@@ -25,8 +25,8 @@ Sia $G$ un grafo con $score(G)=d$, allora $|V(G)|=n$ di cui $k$ di grado massimo
 
 ### Ostruzione 3
 ### Corollario 3
-Siano $n \in \mathbb{N}, n \geq 3$ e $d=(d_{1},\dots,d_{n}) \in \mathbb{N}N^{n}$ con $d_{1} \leq \dots \leq d_{n}$.
-Definiamo $L := |\{ i \in \{ 1, \dots, n-2 \} | d_{i}>2 \}|$.
+Siano $n \in \mathbb{N}, n \geq 3$ e $d=(d_{1},\dots,d_{n}) \in \mathbb{N}^{n}$ con $d_{1} \leq \dots \leq d_{n}$.
+Definiamo $L := |\{ i \in \{ 1, \dots, n-2 \} | d_{i}\geq2 \}|$.
 Se $L < d_{n} + d_{n- 1}-n \implies d$ non è lo score di un grafo.
 ### Dimostrazione
 Supponiamo per assurdo che $\exists G$ grafo con $score(G)=d$. Siano $v\neq w \in V(G):deg_{G}(v)=d_{n-1}, deg_{G}(w)=d_{n}$.

@@ -1,8 +1,11 @@
+## 04/24
 ### Q1
 $$
 \begin{align}
 p_{Y}(4) &= \sum_{x \in R_{X}} p_{X,Y}(x, 4) \\
  & = \sum_{x \in R_{X}} p_{Y|X}(4|x)p_{X}(x) \\
+ & = \sum_{x=1}^{10} p_{X}(x) \binom{x}{4} p^{x} (1-p)^{x-4} \\
+ & = \sum_{x=4}^{10} p_{X}(x) \binom{x}{4} p^{x} (1-p)^{x-4} \\
  & = \frac{2}{20} Bin(1,4,0.64) + \frac{1}{20} Bin(2,4, 0.64) + \dots + \frac{2}{20} Bin(10,4, 0.64) \\
  & = 0.1308570723
 \end{align}
@@ -34,6 +37,19 @@ P(X = 6|Y = 4)  &= \frac{P(X=6, Y=4)}{P(Y = 4)} \\
 \end{align}
 
 $$
+## Es 05/07
+$$
+\begin{align}
+\frac{1}{k} &=  \int_{0}^{1} \int_{0}^{1} (5x + 2y) dy dx \\
+ & = \int_{0}^{1} \left[ 5xy + y^{2} \right]^{1}_{0} dx \\
+ & = \int_{0}^{1} (5x + 1)d x \\
+ & = \left[ \frac{5x^{2}}{2} + x \right]_{0}^{1} \\
+ & = \frac{7}{2}
+\end{align}
+$$
+$k = \frac{2}{7}$.
+
+## Es 05/09
 ### Q1
 Siano $X, Y$ variabili aleatorie con densità congiunta $f(x, y) = 0.67$ per $0 < x < 1.7277369, 0 < y < x$ e nulla altrove.
 
@@ -47,6 +63,7 @@ P(X < 1.07) &= \int_{x=0}^{k} \int_{0}^{x} f_{X,Y}(x, y) dy dx \\
  & = \frac{0.67k^{2}}{2}
 \end{align}
 $$
+### Q2
 Le variabili aleatorie $X$ e $Y$ sono (stocasticamente) indipendenti?
 Troviamoci inanzitutto le densità marginali:
 Sia $\gamma := 1.7277369$.
@@ -89,7 +106,7 @@ $$
  & = \frac{1}{k} \left( \frac{k^{2}}{2} \right)  = \frac{k}{2}
 \end{align}
 $$
-###  Q4
+### Q4
 Quanto vale $\mathbb{E}(\mathbb{E}(Y|X))$?
 Per la proprietà del valore atteso iterato sappiamo che tale quantità è:
 $$
@@ -102,7 +119,7 @@ $$
 \end{align}
 $$
 ### Q1
-La variabile aleatoria esponenziale è senza memoria quindi suffice calcolare:
+La variabile aleatoria esponenziale è senza memoria quindi basta calcolare:
 Sia $\mu = 114$, dunque $\lambda = \frac{1}{\mu}$
 $$
 P(T>117.1) = 1 - F(117.1) = e^{-\lambda (117.1)}
@@ -252,6 +269,19 @@ Ricordando che
 $$
 P(Y=y) = \sum_{x \in R_{X}} P(\{ Y = y \} \cap \{ X = x \}) = \sum_{x \in R_{X}} P(\{ Y = y \}|\{ X=x \})P(\{ X = x \})
 $$
+Questo è concettualmente corretto, ma inutilmente tedioso:
+Definiamo il seguente:
+$$
+m(x) = \sum_{y \in R_{Y}} y p_{Y|X}(y |x) = \mathbb{E}(Y|X=x)
+$$
+$$
+\begin{align}
+\mathbb{E}(XY) - \mathbb{E}(X)\mathbb{E}(Y) & = \mathbb{E}(X\mathbb{E}(Y|X)) - \mathbb{E}(X)\mathbb{E}(\mathbb{E}(Y|X)) \\
+ & = \mathbb{E}(Xm(X)) - \mathbb{E}(X)\mathbb{E}(m(X)) \\
+ & = \sum_{x \in R_{X}} ( xm(x)p_{X}(x)) - \sum_{x \in R_{X}} (xp_{X}(x)) \sum_{x \in R_{X}} (m(x)p_{X}(x))
+\end{align}
+$$
+In totale questi sono 3 prodotti per trovarsi gli $m(x)$. Dopodiché per ogni sommatoria sono solo 3 somme ciascuna.
 ### Q3
 $$
 Var(X) = \mathbb{E}(X^{2}) - \mathbb{E}(X)^{2} = 30.8375 - 5.499025 = 25.33847
@@ -262,6 +292,7 @@ $$
 $$
 \rho(X,Y) = \frac{Cov(X, Y)}{\sqrt{ Var(X)Var(Y) }} = \frac{2.693315}{\sqrt{ 25.33847 \cdot 32.73101 }} = 0.09352274
 $$
+Qui l'unico conto tedioso è $\mathbb{E}(Y^{2})$ per il quale conviene crearsi una tabellina di $p_{Y}(y)$.
 ### Q1
 Se vogliamo utilizzare un'approssimazione normale dobbiamo trovarci i parametri di questa normale.
 $$
@@ -580,4 +611,171 @@ m  &= 14
 $$
 $$
 P(0.5282444 \leq \theta \leq 0.7135138) = 0.99
+$$
+### Q1
+$$
+\begin{align}
+f_{X_{1},\dots,X_{n}}(x_{1}, \dots,x_{n}) &= \prod_{i=1}^{n} f_{Xi}(x_{i}) \\
+ & = \prod_{i=1}^{n} \left( \theta e^{-\theta x_{i}} \right) \\
+ & = \theta^{n} e^{\sum (-\theta x_{i})}
+\end{align}
+$$
+Consideriamo ora la log-verosimiglianza:
+$$
+\begin{align}
+\log \left( \theta^{n} e^{\sum (-\theta x_{i})} \right) & = \log(\theta^{n}) + \log\left( e^{\sum(-\theta x_{i})} \right) \\
+ & = n\log \theta -\theta \sum_{i=1}^{n} x_{i}
+\end{align}
+$$
+Ora poniamo la derivata secondo $\theta$ a $0$:
+$$
+\begin{align}
+\frac{d}{d\theta} \left( n\log \theta -\theta \sum_{i=1}^{n} x_{i} \right)  & = \frac{n}{\theta} -\sum_{i=1}^{n} x_{i} \\
+ & = \frac{n}{\theta} - n\bar{x}_{n} \\
+ & = \frac{n-n\theta \bar{x}_{n}}{\theta}  \\
+ & = \frac{n(1 - \theta \bar{x}_{n})}{\theta} \\
+ & = 0
+\end{align}
+$$
+Dunque:
+Sapendo che $n > 0$.
+$$
+\begin{align}
+1 - \hat{\theta} \bar{x}_{n} &= 0 \\
+1 &= \hat{\theta} \bar{x}_{n} \\
+\hat{\theta}  & = \frac{1}{\bar{x}_{n}}
+\end{align}
+$$
+Dunque la nostra stima è:
+$$
+\hat{\theta} = \frac{1}{1.725333333} = 0.5795981453
+$$
+### Q2
+Dalla teoria sappiamo che:
+$$
+Var(X) = \frac{1}{\theta^{2}}
+$$
+se $X \sim Exp(\theta)$.
+Ma allora possiamo inserire lo stimatore e ottenere:
+$$
+\widehat{Var}(X) = \frac{1}{\hat{\theta}^{2}} = \bar{x}_{n}^{2} = 2.976775 
+$$
+### Q3
+Dunque per il teorema centrale del limite:
+$$
+\begin{align}
+P\left( z_{\frac{\alpha}{2}} \leq \left( \bar{X}_{n} - \frac{1}{\theta} \right)\theta\sqrt{ n } \leq z_{1-\frac{\alpha}{2}} \right) & = 1-\alpha \\
+P\left( z_{\frac{\alpha}{2}} \leq \sqrt{ n }(\bar{X}_{n}\theta - 1) \leq z_{1-\frac{\alpha}{2}} \right) &= 1-\alpha \\
+P\left( \frac{\frac{z_{\frac{\alpha}{2}}}{\sqrt{ n }} + 1}{\bar{X}_{n}} \leq \theta \leq \frac{\frac{z_{1-\frac{\alpha}{2}}}{\sqrt{ n }}+1}{\bar{X}_{n}}\right) &= 1-\alpha
+\end{align}
+$$
+## Es 05/29
+### Q1
+$$
+\begin{align}
+1 =\sum_{i=1}^{+\infty} \lim_{ a \to (i-1)^{+} } \int_{a}^{i} \int_{0}^{T} \left( \frac{1}{2} \right)^{i} dy dx &= \sum_{i=1}^{+\infty}  \lim_{ a \to +(i-1)^{+}} \int_{a}^{i}  \left( \frac{1}{2} \right)^{i}Tdx \\
+ & = \sum_{i=1}^{+\infty} \lim_{ a \to (i-1)^{+} } \left( \left( \frac{1}{2} \right)^{i}Ti - \left( \frac{1}{2} \right)^{i}Ta \right)  \\
+ & = \sum_{i=1}^{+\infty} \left( \frac{1}{2} \right)^{i}T  \left( i - i + 1 \right)  \\
+ & = T \sum_{i=1}^{+\infty} \left( \frac{1}{2} \right)^{i} \\
+ & = T \left( \frac{1}{1- \frac{1}{2}} -1\right)  \\
+ & = T
+\end{align}
+$$
+Dunque perché $f(x,y)$ sia una funzione di densità deve essere che $T = 1$.
+### Q2
+$$
+\begin{align}
+f(y) &= \int_{0}^{+\infty} f(x,y)dx \\
+ & = \sum_{i=1}^{+\infty} \int_{i-1}^{i} \left( \frac{1}{2} \right)^{i} dx \\
+ & = \sum_{i=1}^{+\infty} \left( \frac{1}{2} \right)^{i} \\
+ & = \left( \frac{1}{1-\frac{1}{2}} -1 \right)  \\
+ & = 2 - 1 \\
+ & = 1
+\end{align}
+$$
+Ammesso che $y \in [0,1]$
+### Q3
+Le due variabili sono indipendenti se:
+$$
+f(x,y) = f(x)f(y) \implies f(x,y) = f(x)
+$$
+$$
+\begin{align}
+f(x) &= \int_{0}^{1} f(x,y) dy \\
+ & = \int_{0}^{1} \left( \frac{1}{2} \right)^{i} dy \\
+ & = \left( \frac{1}{2} \right)^{i}
+\end{align}
+$$
+Ma allora $f(x,y) = f(x) \implies X, Y$ indipendenti.
+### Q4
+$$
+\begin{align}
+\mathbb{E}(Y|X=3.9) & = \int_{0}^{1} yf(y|X=3.9)dy \\
+ & = \int_{0}^{1} y f(y) dy \\
+ & = \int_{0}^{1} ydy \\
+ & = \frac{1}{2}
+\end{align}
+$$
+## Ultimo es
+### Q1
+$$
+\begin{align}
+\mathbb{E}\left( \alpha_{1} \cdot \frac{1}{10} \sum_{i=1}^{10}  X_{i} \right) &= \theta \\
+\frac{\alpha_{1}}{10} \cdot \sum_{i=1}^{10} \mathbb{E}(X_{i}) &= \theta \\
+\alpha_{1} \frac{\theta}{2} &= \theta \\
+\alpha_{1} &= 2
+\end{align}
+$$
+Dunque la riposta è $\alpha_{1}=2$.
+
+### Q2
+$$
+\begin{align}
+\mathbb{E}((\theta_{1} - \theta)^{2}) &= \frac{1}{k_{1}}\theta^{2}  \\
+Var(\theta_{1})  & = \frac{1}{k_{1}} \theta^{2} \\
+Var\left( \frac{\alpha_{1}}{10} \sum_{i=1}^{10} X_{i} \right)  & = \frac{1}{k_{1}} \theta^{2} \\
+\frac{\alpha_{1}^{2}}{100} \sum_{i=1}^{10} \frac{\theta^{2}}{12}  & = \frac{1}{k_{1}} \theta^{2} \\
+\frac{\theta^{2}}{30} &= \frac{1}{k_{1}}\theta^{2} \\
+k_{1} & = 30
+\end{align}
+$$
+### Q3
+$$
+\begin{align}
+F_{Y}(y)&=\prod_{i=1}^{10} F_{X_{i}}(y) \\
+ & = \prod_{i=1}^{10} \frac{y}{\theta} \\
+ & = \left( \frac{y}{\theta} \right)^{10}
+\end{align}
+$$
+Ma allora:
+$$
+\begin{align}
+f_{Y}(y) & = \frac{d}{dy} F_{Y}(y) \\
+ & = \frac{1}{\theta^{10}} \frac{d}{dy}y^{10} \\
+ & = \frac{10y^{9}}{\theta^{10}}
+\end{align}
+$$
+Tornando alla richiesta:
+$$
+\begin{align}
+\alpha_{2} \mathbb{E}(Y) &= \theta \\
+\alpha_{2} \int_{0}^{\theta} yf_{Y}(y) dy & = \theta \\
+\alpha_{2} \left(  \int_{0}^{\theta} \frac{10y^{10}}{\theta^{10}} dy \right)  & = \theta \\
+\alpha_{2} \left( \left[ \frac{10y^{11}}{11\theta^{10}} \right] ^{\theta}_{0} \right) &= \theta \\
+\alpha_{2}  & = \frac{11}{10}
+\end{align}
+$$
+### Q4
+$$
+\begin{align}
+\mathbb{E}((\theta_{2}-\theta)^{2}) & = \frac{1}{k_{2}} \theta^{2} \\
+\mathbb{E}(\theta_{2}^{2}) + \theta^{2}-2\theta \mathbb{E}(\theta_{2})  & = \frac{1}{k_{2}}\theta^{2} \\
+\mathbb{E}(\theta^{2}_{2}) - \theta^{2} & = \frac{1}{k_{2}} \theta^{2} \\
+\mathbb{E}((\alpha_{2}Y)^{2}) - \theta^{2} & = \frac{1}{k_{2}}\theta^{2} \\
+\alpha_{2}^{2} \mathbb{E}(Y^{2}) - \theta^{2} &= \frac{1}{k_{2}}\theta^{2} \\
+\alpha^{2}_{2} \frac{10}{\theta^{10}} \left( \int_{0}^{\theta} y^{11} dy \right)  - \theta^{2} & =\frac{1}{k_{2}}\theta^{2} \\
+\alpha^{2}_{2} \frac{10}{\theta^{10}} \left( \frac{\theta^{12}}{12} \right) - \theta^{2}  & = \frac{1}{k_{2}} \theta^{2} \\
+\theta^{2}\left( \alpha^{2}_{2} \frac{5}{6} -1 \right) &=\frac{1}{k_{2}}\theta^{2} \\
+k_{2} &= 120
+\end{align}
 $$
