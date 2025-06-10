@@ -48,10 +48,28 @@ $$
 \end{align}
 $$
 $k = \frac{2}{7}$.
-
+$$
+\begin{align}
+F(x,y) & = k \int_{0}^{x} \int_{0}^{y} (5a+ 2b)dbda \\
+ & = k \int_{0}^{x} \left( 5ay + y^{2} \right) da \\
+ & = k \left( \frac{5x^{2}y}{2} + xy^{2} \right)
+\end{align}
+$$
+$$
+\begin{align}
+\frac{1}{k}\mathbb{E}(XY) & = \int_{0}^{1} \int_{0}^{1} xy(5x +2y)dydx \\
+ & = \int_{0}^{1} \int_{0}^{1} 5x^{2}y  +2xy^{2} dydx \\
+ & = \int_{0}^{1} \left( \frac{5x^{2}}{2} + \frac{2x}{3} \right)dx \\
+ & = \frac{5}{6}   + \frac{1}{3} \\
+ & = \frac{7}{6}
+\end{align}
+$$
+$$
+\mathbb{E}(XY)=  \frac{1}{3}
+$$
 ## Es 05/09
 ### Q1
-Siano $X, Y$ variabili aleatorie con densità congiunta $f(x, y) = 0.67$ per $0 < x < 1.7277369, 0 < y < x$ e nulla altrove.
+Siano $X, Y$ variabili aleatorie con densità congiunta $f(x, y) = 0.67$ per $0 < y < x < 1.7277369, 0 < y < x$ e nulla altrove.
 
 Qual è la probabilità di $P(X < 1.07)$?
 Sia $k := 1.07$.
@@ -115,6 +133,15 @@ $$
  & = 0.67 \int_{0}^{\gamma} y(\gamma-y) dy \\
  & = 0.67 \left[ \frac{\gamma y^{2}}{2} - \frac{y^{3}}{3} \right]^{\gamma}_{0} \\
  & = 0.67\left( \frac{\gamma^{3}}{2}-\frac{\gamma^{3}}{3} \right) \\
+ & = \frac{\gamma^{3}}{6}0.67
+\end{align}
+$$
+O in alternativa
+$$
+\begin{align}
+\mathbb{E}(\mathbb{E}(Y|X))  &= \int_{0}^{\gamma} f_{X}(x)\int_{0}^{x} y \frac{f(y,x)}{f_{X}(x)}dydx \\
+ & = \int_{0}^{\gamma} f_{X}(x) \frac{x}{2} dx \\
+ & = \left[ \frac{0.67x^{3}}{6} \right]^{\gamma}_{0} \\
  & = \frac{\gamma^{3}}{6}0.67
 \end{align}
 $$
@@ -207,7 +234,6 @@ $$
 P(U > 0.231 | Y > 0.474)  &= \frac{P(\{ U > 0.231 \} \cap \{ Y > 0.474 \})}{P(Y > 0.474)} \\
  & = \frac{P(\{ X > 0.231 \} \cap \{ Y > 0.231 \} \cap \{ Y>0.474 \})}{P(Y>0.474)} \\
  & = \frac{P(\{ X>0.231 \} \cap \{ Y>0.474 \})}{P(Y>0.474)} \\
- & = (1 - F_{X}(0.231)) \\
  & = 0.8705762
 \end{align}
 $$
@@ -255,6 +281,23 @@ p_{X, Y}(-6, -9) &= p_{Y|X}(-9|-6)p_{X}(-6) \\
 $$
 ### Q2
 $$
+\begin{align}
+Cov(X,Y)  &= \mathbb{E}(XY) - \mathbb{E}(X)\mathbb{E}(Y) \\
+ & = \sum_{x} \sum_{y} (xyp(x,y)) - \sum_{x} (xp(x)) \sum_{x} p(x) \sum_{y}(yp(y|X=x)) \\
+ & = \sum_{x} \sum_{y}  xy p(y|X=x)p(x) - \sum_{x} (xp(x)) \sum_{x} p(x) \sum_{y}(yp(y|X=x)) \\
+ & = \sum_{x} xp(x) \sum_{y} yp(y|X=x) - \sum_{x} (xp(x)) \sum_{x}p(x) \sum_{y}(yp(y|X=x))
+\end{align}
+$$
+Ora immaginiamo di aver creato una tabella per una funzione $m(x) = \mathbb{E}(Y|X=x)$ e per $g(x) = xp(x)$, allora:
+$$
+\begin{align}
+Cov(X,Y) & = \sum_{x} g(x)m(x) - \sum_{x} g(x) \sum_{x} p(x)m(x)
+\end{align}
+$$
+Essendoci 3 entrate sia per $X$ che per $Y$ i conti che devono essere fatti sono 3 sommatorie da 3 per calcolare $m(x)$ e 1 sommatoria da 3 per calcolare $g(x)$. Dopodiché ci sono 3 sommatorie da 3 ciascuna per il calcolo della covarianza.
+
+---
+$$
 Cov(X, Y) = \mathbb{E}(XY) - \mathbb{E}(X)\mathbb{E}(Y)
 $$
 $$
@@ -301,7 +344,6 @@ $$
 \sigma^{2} &= Var\left( \sum_{i=1}^{n} X_{i} \right) = n\lambda = 2000
 \end{align}
 $$
-Dunque la variabile aleatoria $X = \sum_{i=1}^{n}X_{i} \overset{a}{\sim} N\left( \lambda, \frac{\lambda}{n} \right)$.
 Procediamo con la creazione della normale:
 $$
 Z = \frac{X + 0.5 - n\lambda}{\sqrt{ n\lambda }} \overset{a}{\sim} N(0,1)
@@ -779,3 +821,14 @@ $$
 k_{2} &= 120
 \end{align}
 $$
+```r
+function(x) { 
+	sapply(x, function(b) { 
+		if (b < 0 || b %% 1 != 0) {-10000} 
+		else {
+			tryCatch({ 1/(integrate(function(t) t^3 * (1 - t)^b, 0, 1))$value }, 
+			error = function(e) {-10000} )
+		}
+	})
+}
+```

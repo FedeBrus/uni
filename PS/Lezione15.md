@@ -70,7 +70,7 @@ $$
 F_{X,Y} (x, y) = \sum_{u \leq x} \sum_{v \leq y} p_{X, Y} (u, v)
 $$
 Supponiamo di avere una variabile aleatoria discreta doppia $(X, Y) \sim p_{X, Y}(x, y)$. $x \in R_{X}, y \in R_{Y}$.
-Per ogni $y \in R_{Y}$ definisco una variabile aleatoria $X|Y \sim y =  p_{X|Y}(x | y), \forall x \in R_{X}$.
+Per ogni $y \in R_{Y}$ definisco una variabile aleatoria $X|Y = y \sim  p_{X|Y}(x | y), \forall x \in R_{X}$.
 $$
 p_{X|Y}(x | y) = P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{p_{X, Y}(x, y)}{p_{Y}(y)}
 $$
