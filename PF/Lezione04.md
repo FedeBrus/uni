@@ -7,7 +7,7 @@ Per creare funzioni mutualmente ricorsive bisogna usare la parola riservata and.
 ```sml
 fun
 	take nil = nil
-	| take (x::xs) = skip xs
+	| take (x::xs) = x :: (skip xs)
 and
 	skip nil = nil
 	| skip (x::xs) = take xs
@@ -35,7 +35,15 @@ val daynd = fn n => case n of
 	| 2 => "Tuesday"
 	| _ => "Someday"
 ```
-let in end viene usato per creare un environment locale. Utile soprattutto quando bisogna decomporre il risultato di una funzione o anche solo recuperarlo nel caso venga usato più volte.
+
+I pattern non devono essere per forza costanti, ad esempio si può fare
+```sml
+val isNonZero = fn a => case a of
+	0 => false
+   | x => true
+```
+
+let in end viene usato per creare un environment locale. Utile soprattutto quando bisogna decomporre il risultato di una funzione o anche solo recuperarlo nel caso venga usato più volte. Dentro il let possono esserci val, fun, exception, type e datatype.
 
 Se la decomposizione serve nel pattern matching allora ha senso usare as. Altrimenti usare un blocco let va bene.
 
@@ -55,7 +63,8 @@ Per le stampe tornano utili i compound statements:
 ```
 
 Aprire un file:
-val inputFile = TextIO.openIn("test"); -> TextIO.instream
+
+val infile = TextIO.openIn("test"); -> TextIO.instream
 TextIO.endOfStream(infile) -> bool 
 TextIO.inputN(infile, 4) -> string (legge 4 caratteri)
 TextIO.inputLine(infile) -> string option
@@ -80,7 +89,7 @@ raise Foo("bar");
 ```
 l'handle segue un espressione e serve a gestire le eccezioni:
 ```sml
-exception OutOfRange of int * int
+exception OutOfRange of int * int;
 
 fun choose n m = if n <= 0 then raise OutOfRange(n, m) 
 				 else if m < 0 orelse m > n then raise OutOfRange(n, m) 
@@ -97,22 +106,52 @@ fun choose n m = if n <= 0 then raise OutOfRange(n, m)
 						  );
 ```
 
+Sarebbe meglio lasciare la gestione delle eccezioni al chiamante. Guarda il seguente esempio:
+```sml
+exception OutOfRange of int * int;
+
+fun choose n k = if n <= 0 then raise OutOfRange(n, m)
+				else if m < 0 orelse m > n then raise OutOfRange(n, m)
+				else if m = 0 orelse m = n then 1
+				else choose (n - 1) m + choose (n - 1) (m - 1);
+
+val result = choose 10 2 handle OutOfRange(0, 0) => 1
+						  | OutOfRange(n, m) => ( 
+							print("out of range: n="); 
+							print(Int.toString(n)); 
+							print(" m="); 
+							print(Int.toString(m)); 
+							print("\n"); 
+							0 
+						  );
+```
+
 Le funzioni in ML sono polimorfiche di default.
 Ciò che restringe il polimorfismo sono + - * ~ -> interi, div mod -> interi, / -> reali, < > <= >= -> interi, andalso orelse not -> bool, ^ -> stringhe e tutte le funzioni per convertire (str, floor, ord, chr, real, ceil, round, truc).
 
 Ciò che invece permette il polimorfismo sono tuple, liste e operatori di uguaglianza (=, <>).
 
-Un tipo polimorfico garantito di supportare uguaglianza e disuguaglianza viene indicato con il doppio apice ''a.
+Un tipo polimorfico garantito di supportare uguaglianza e disuguaglianza viene indicato con il doppio apice ''a. Non fanno parte di questa categoria i numeri reali e le funzioni (ricordarsi che sono valori).
 
 per verificare se una lista è vuota senza forzare un equality type si può usare null(L).
+Prima di poter utilizzare l'operatore # per una tupla bisogna che l'arità della tupla sia deducbile staticamente.
 
-Le funzioni, se passate come parametro, vengono passate con call-by-name!
+Quando una funzione viene passata come parametro ad un altra funzione, viene chiamata attraverso il parametro attuale.
+
+Il call by name può essere simulato ed è quindi un caso particolare di funzioni passate come parametri. In particolare se si usa una funzione senza parametri questa viene valutata ogni volta che viene chiamata nel corpo della funzione.
+
 La policy di binding nei linguaggi è indipendente dalla policy di scoping.
+Il deep binding fa si che l'environment della funzione è quello al momento della creazione del link tra procedura e parametro formale.
+Lo shallow binding fa si che l'environment venga determinato al momento della chiamata.
+
+Se lo scoping è statico il binding è sempre deep.
 
 La funzione op serve a convertire un operatore infisso a un operatore prefisso:
 ```sml
 foldr (op+) 0 [1,2,3]
 ```
+
+Funzione Curried: divide i suoi argomenti in modo che vengano parzialmente forniti producento funzioni intermedie che accettano gli argomenti rimanenti.
 
 Esiste un operatore o per fare la composizione di funzioni:
 ```sml
@@ -134,6 +173,7 @@ val words:(string, int) mapping = [(1,2), (2,3)];
 type ('a, 'b) tripleList = ('a * 'a * 'b) list;
 ```
 
+I type constructor sono i nomi dei datatype mentre i data constructor sono i possibili valori. I data constructors possono venire parametrizzati.
 Mentre i type sono alias di fatto, i datatype creano nuovi veri e propri tipi.
 ```sml
 datatype ('a,'b) element = P of 'a * 'b 
@@ -143,7 +183,7 @@ i datatype possono essere ricorsivi:
 ```sml
 datatype 'a btree = Empty | Node of 'a * 'a btree * 'a btree;
 ```
-o anche mutualmente esclusive con la keyword and:
+o anche mutualmente ricorsive con la keyword and:
 ```sml
 datatype 
 	'a eventTree = Empty 
@@ -151,3 +191,16 @@ datatype
 and
 	'a oddTree = Onode of 'a * 'a evenTree * 'a evenTree;
 ```
+
+### Tipi di dato astratti
+L'idea di base sta nel separare l'interfaccia dall'implementazione.
+- Interfaccia: tipi e operazioni che sono accessibili all'utente.
+- Implementazione: struttura interna dei dati e delle operazioni che agiscono su tali dati.
+
+La caratteristiche dei ADT sono:
+- Un nome
+- Un'implementazione per il tipo (tipo concreto)
+- Nomi che denotino le operazioni per manipolare i valori del tipo
+- Per ogni operazione, un'implmentazione che usi la rappresentazione concreta del tipo.
+- Una capsula di sicurezza che separi i nomi del tipo e delle operazioni dalle rispettive implmentazioni
+

@@ -17,7 +17,7 @@ H_{1}: \mu \in \Theta \setminus \Theta_{0}
 $$
 Si chiama ipotesi semplice se $\Theta_{0}$ è un singoletto. Altrimenti viene chiamata composta.
 
-Dato un campione $(x_{1}, \dots,x_{n})$ sobbiamo decidere se considerare vera $H_{0}$ o $H_{1}$.
+Dato un campione $(x_{1}, \dots,x_{n})$ dobbiamo decidere se considerare vera $H_{0}$ o $H_{1}$.
 Prendiamo il campione e lo sintetizziamo tramite una statistica test:
 $$
 (x_{1},\dots,x_{n}) \rightarrow T(x_{1},\dots,x_{n}) \rightarrow D(T(x_{1},\dots,x_{n})) = \begin{cases}
@@ -158,7 +158,7 @@ Ipotizziamo di voler variare la regione di accettazione in modo che riesca a con
 $$
 \begin{align}
 P(T(X_{1}, \dots, X_{n}) \not\in A_{oss} | H_{0} \text{ vera}) &= \alpha_{oss} \\
-P(|T(X_{1}, \dots, X_{n})| > |t_{oss}| \big| H_{0} \text{ vera})  &= a_{oss}
+P(|T(X_{1}, \dots, X_{n})| > |t_{oss}| \big| H_{0} \text{ vera})  &= \alpha_{oss}
 \end{align}
 $$
 Se $\alpha_{oss} < \alpha$ allora per forza di cose il $t_{oss}$ deve essere stato rifiutato inizialmente e rifiuto $H_{0}$, se invece $\alpha_{oss} > \alpha$ allora accetto $H_{0}$. Quindi a partire solamente da $\alpha_{oss}$. Senza sapere la statistica usata, senza sapere $t_{oss}$, come sono fatte le ipotesi, eccetera.
