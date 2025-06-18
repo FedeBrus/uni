@@ -1,4 +1,4 @@
-### * Teorema 3.11 (Teorema dei cassetti)
+## Teorema 3.11 (Teorema dei cassetti)
 Siano $X, Y$ due insiemi e siano $n, m \in \mathbb{N} : n < m, X \sim I_{n}, Y \sim I_{m}$. Allora ogni funzione $f:Y\rightarrow X$ non è iniettiva.
 
 ### Dimostrazione

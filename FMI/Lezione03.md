@@ -33,16 +33,13 @@ Sia $x \in f^{-1}\left( \bigcup_{i \in I} A_{i} \right) \implies f(x)\in \bigcup
 Dimostriamo che $\bigcup_{i \in I}f^{-1}(A_{i}) \subset f^{-1}\left( \bigcup_{i \in I} A_{i} \right)$.
 Sia $x \in \bigcup_{i \in I} f^{-1}(A_{i}) \implies x \in f^{-1}(A_{i})$, per qualche $i \in I$. Dunque $f(x) \in A_{i}$, per qualche $i \in I$, ma allora $f(x) \in \bigcup_{i \in I}A_{i}$ e quindi $x \in f^{-1}\left( \bigcup_{i \in I}A_{i} \right)$
 
-#### Esercizio 1.12
-Trovare dei controesempi e correggere le formule.
-
 ## Insiemi equipotenti (cenni)
 ### Definizione 2.1 equipotenza
-Siano $X, Y$ due insiemi, diciamo che $X$ è equipotente a $Y$ oppure che $X$ ha la stessa cardinalità di $Y$ se $\exists f:X\rightarrow Y$ una bigezione, ovvero una funzione bigettiva. In questo caso scriveremo $X \sim Y$
+Siano $X, Y$ due insiemi, diciamo che $X$ è equipotente a $Y$ oppure che $X$ ha la stessa cardinalità di $Y$ se $\exists f:X\rightarrow Y$ una bigezione, ovvero una funzione bigettiva. In questo caso scriveremo $X \sim Y$.
 
 #### Proposizione 2.2
 Siano $X, Y, Z$ tre insiemi, valgono:
-1. $X \sim X$ (DIM $id_{x}:X \rightarrow X$ è una bigezione).
+1. $X \sim X$ (DIM $id_{X}:X \rightarrow X$ è una bigezione).
 2. $X \sim Y$ e $Y \sim Z \implies X \sim Z$ (DIM se $f:X \rightarrow Y$ bigezione e $g:Y\rightarrow Z$ bigezione, sappiamo che $(f \circ g)$ è bigezione).
 3. $X \sim Y \implies Y \sim X$ (DIM se $f:X \rightarrow Y$ bigezione esiste anche $f^{-1}:Y \rightarrow Z$ bigezione).
 
@@ -51,12 +48,12 @@ La classe di insiemi cardinali possiede delle proprietà.
 1. $\forall X$ insieme, $X \sim |X|$
 2. $|X|\sim|Y|\implies|X|=|Y|$
 ![[insiemi_cardinali|1000]]
-#### "Cardinalità finita"
+#### Cardinalità finita
 $|\emptyset| = \emptyset$
 $|\{ 0 \}| = \{ 0 \} \Longleftrightarrow |\{ 0 \}| = 1$
 $|\{ 0,1 \}| = \{ 0,1 \} \Longleftrightarrow |\{ 0, 1 \}| = 2$
 $\dots$
-#### Lemma 2.4
+### Lemma 2.4
 Siano $X, Y$ due insiemi, vale:
 $$
 X \sim Y \Longleftrightarrow |X| = |Y|
@@ -93,30 +90,30 @@ Sia $A$ un sottoinsieme di $\mathbb{N}$. Supponiamo che $A$ soddisfi le seguenti
 2. $\forall n \in \mathbb{N}, \underbrace{ n \in A }_{ \text{ipotesi induttiva} } \implies \underbrace{ succ(n) \in A }_{ \text{passo induttivo} }$ 
 Allora $A = \mathbb{N}$.
 
-#### Proposizione 2.9
+### Proposizione 2.9
 Sia $n\in \mathbb{N} \setminus \{ 0 \}$. Allora $\exists!m\in \mathbb{N}$ tale che $succ(m) = n$. $m$ è detto predecessore di $n$.
-#### Dimostrazione
+### Dimostrazione
 Se $m$ esiste allora è certamente unica, perché $succ$ è iniettiva.
 Supponiamo che l'asserto sia falso, ovvero $\exists n\in \mathbb{N}\setminus\{ 0 \}$ tale che $\forall m\in \mathbb{N}, succ(m) \neq n$. Poniamo $A:=\mathbb{N}\setminus\{ n \}$. Osserviamo che sicuramente $0 \in A$, perchè $n \neq 0$, dunque $A$ soddisfa (1).
 Sia $m \in A$, $succ(m)\neq n$ per ipotesi, quindi $succ(m)\in A$, che dimostra che $A$ soddisfa (2).
 Quindi $A = \mathbb{N}$, ma allora l'esistenza di $n$ è assurda e quindi $\forall n \in \mathbb{N}\setminus\{ 0 \}, \exists m\in \mathbb{N} : succ(m)=n$.
 
-### Corollario 2.9'
+### Corollario 2.9
 $\mathbb{N}$ è equipotente a $\mathbb{N} \setminus \{ 0 \}$, ovvero $|\mathbb{N}|=|\mathbb{N}\setminus\{ 0 \}|$
 
-#### Dimostrazione
+### Dimostrazione
 Osserviamo che:
 - Asssioma 3 $\Longleftrightarrow$ $succ(\mathbb{N}) \subset \mathbb{N}\setminus\{ 0 \}$
 - Prop 2.9 $\Longleftrightarrow succ(\mathbb{N})=\mathbb{N}\setminus\{ 0 \}$
 Quindi possiamo definire al funzione $succ': \mathbb{N} \rightarrow \mathbb{N}\setminus\{ 0 \}, succ'(n):=succ(n), \forall n \in \mathbb{N}$. $succ'$ è una bigezione.
 
-## * Teorema 2.10 Principio di induzione di prima forma
+## Teorema 2.10 Principio di induzione di prima forma
 Sia $\{ P(n) \}_{n\in \mathbb{N}}$ una famiglia di proposizioni indicizzata su $\mathbb{N}$. Supponiamo che:
 1. $P(0)$ è vera
 2. $\forall n \in \mathbb{N}, P(n) \implies P(succ(n))$ è vera, ovvero devo verificare che se $P(n)$ è vera allora anche $P(succ(n))$ è vera.
 
 Allora $P(n)$ è vera $\forall n \in \mathbb{N}$.
-#### Dimostrazione
+### Dimostrazione
 Poniamo $A:= \{ n \in \mathbb{N} | P(n) \text{ è vera} \}$. Valgono:
 - (1) $\implies 0 \in A$
 - (2) $\implies \forall n \in \mathbb{N}$ tale che $P(n) \text{ è vera} = n \in A \implies P(succ(n))\text{ è vera} = succ(n) \in A$. Per l'assioma 4 $A = \mathbb{N}$, ovvero $P(n)\text{ è vera } \forall n \in \mathbb{N}$.

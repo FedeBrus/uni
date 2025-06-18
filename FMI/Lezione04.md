@@ -79,7 +79,7 @@ $$
 succ(1+ n) = succ(n+1)
 $$
 Ma dalla definzione della somma a sinistra si evince che $succ(n+1)=succ(n)+1, \forall n \in \mathbb{N}$. Il che significa che $1+succ(n) = succ(1+n) = succ(n+1) = succ(n + 1)$. Dunque il passo induttivo ($P(n) \implies P(succ(n))$) è stato verificato e applicando il teorema del principio di induzione $1+n = n + 1, \forall n \in \mathbb{N}$.
-### Oss
+### Osservazione
 $1 = succ(0)$
 $n + 1 = n + succ(0) = succ(n+0) = succ(n)$
 In questo caso non serve dimostrare per induzione, perché è dato dalle definizioni date.
@@ -94,7 +94,7 @@ Se in più vale anche
 1. $\forall x,y \in X$, $x\mathcal{R}y$ o $y\mathcal{R}x$, totalità
 allora $\mathcal{R}$ si dice ordinamento totale di $X$. Inoltre $(X, \mathcal{R})$ si dice insieme parzialmente (totalmente) ordinato se $\mathcal{R}$ è un ordinamento parziale (totale) di $X$.
 
-### Def 3.3 
+### Definizione 3.3 
 Definiamo la relazione binaria $\leq$ su $X$ ovvero $\leq \subset \mathbb{N}\times \mathbb{N}$ ponendo:
 $$
 n \leq m \text{ se } \exists k \in \mathbb{N} : n+k = m

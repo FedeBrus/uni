@@ -7,13 +7,13 @@ In questo caso l'insieme $X$ è il dominio e l'insieme $Y$ è il suo codominio. 
 #### Equivalenza tra le due nozioni di funzione come relazione e come legge
 Queste due definizioni di funzione sono equivalenti se e solo se $X, Y \neq \emptyset$, altrimenti bisogna fare riferimento alla definizione più formale.
 
-#### Oss
+### Osservazione
 Se $A$ è un insieme, allora con $2^{A}$ si indica l'insieme delle parti di $A$, ovvero gli elementi di $2^{A}$ sono tutti e soli i sottoinsiemi di $A$.
 
 ### Def potenza di insiemi
 Dati $X$ e $Y$ due insiemi (eventualmente vuoti, perciò bisogna considerare la definizione di funzione come relazione), indichiamo $Y^{X}$ come l'insieme di tutte le funzioni $f \subset X \times Y$ da $X$ in $Y$.
 
-#### Oss
+### Osservazione
 Poiché esiste l'insieme delle parti di ogni insieme dato, allora:
 $$
 Y^{X} = \{ f \in 2^{X \times Y} | \underbrace{ \forall x \in X, \exists! y \in Y : (x, y)\in f }_{ P(f) } \}
@@ -22,7 +22,7 @@ Per l'assioma di separazione, se si parte da un insieme e ad ogni elemento è as
 #### Esercizio 1.6
 Determinare $Y^{\emptyset}$ e $\emptyset^{X}$:
 
-Per definizione $Y^{\emptyset} = \{ f \in 2^{\emptyset \times Y} | \forall x \in \emptyset, \exists!y \in Y : (x, y) \in f \}$, ovvero l'insieme $\{ f  | f: \emptyset \rightarrow Y \}$, quindi $Y^{\emptyset}$ contiene solamente la funzione vuota associa a $Y$ e dunque $Y^{\emptyset} = \{ \varnothing \}$.
+Per definizione $Y^{\emptyset} = \{ f \in 2^{\emptyset \times Y} | \forall x \in \emptyset, \exists!y \in Y : (x, y) \in f \}$, ovvero l'insieme $\{ f  | f: \emptyset \rightarrow Y \}$, quindi $Y^{\emptyset}$ contiene solamente la funzione vuota associa a $Y$ e dunque $Y^{\emptyset} = \{ \emptyset \}$.
 
 Per definizione $\emptyset^{X} = \{ f \in 2^{X \times \emptyset} | \forall x \in X, \exists!y \in \emptyset : (x, y) \}$, ovvero l'insieme $\{ f | f : X \rightarrow \emptyset \}$, ma per definizione di funzione ogni elemento del dominio deve essere mappato a uno e uno solo elemento del codominio, ma il codominio in questo caso è l'insieme vuoto, dunque non è possibile costruire una tale funzione. Dunque $\emptyset^{X} =  \emptyset$
 
@@ -41,7 +41,7 @@ Non esisterà mai una $y$ per alcuna $x$. Dunque $\emptyset^{X} = \emptyset$.
 Difatti $|Y^{\emptyset}| = |Y|^{|\emptyset|} = |Y|^{0} = 1$ e $|\emptyset^{X}| = |\emptyset|^{|X|}=0^{|X|} =0$
 
 #### Esempio (1.12) Identità
-La funzione $id_{x}: X \rightarrow X$ definita ponendo $id_{x}(x):=x$, si dice identità di $X$.
+La funzione $id_{X}: X \rightarrow X$ definita ponendo $id_{X}(x):=x$, si dice identità di $X$.
 
 ### Def (1.15) Composizione
 Siano $X, Y, Z$ insiemi non vuoti e siano $f:X\rightarrow Y$ e $g:Y\rightarrow Z$. Definiamo la composizione di $f$ con $g$ come la funzione $g \circ f: X \rightarrow Z$ il seguente:
@@ -53,21 +53,19 @@ Siano $X, Y$ due insiemi non vuoti e sia $f:X \rightarrow Y$ una funzione. Dato 
 $$
 f(A) := \{ f(x) \in Y | x \in A \}
 $$
-Se $A = X$, allora $f(x)$ si dice essere l'immagine di $f$.
+Se $A = X$, allora $f(X)$ si dice essere l'immagine di $f$.
 
-### Definizione Controimmagine
+### Definizione Controimmagine e Fibra
 Siano $X, Y$ due insiemi non vuoti e sia $f:X \rightarrow Y$ una funzione. Dato un sottoinsieme $B$ di $Y$, definiamo la controimmagine di $B$ tramite $f$ ponendo:
 $$
 f^{-1}(B) := \{ x \in X |f(x) \in B \} 
 $$
 In particolare, se $B = \{ b \}$, allora $f^{-1}(\{ b \})$ si indica con $f^{-1}(b)$ e $f^{-1}(b)$ si dice fibra di $f$ sopra $b$.
-
-#### Oss
+### Osservazione
 $$
 f^{-1}(b) = \{ x \in X | f(x) = b \}
 $$
 Dunque una fibra rappresenta l'insieme delle soluzioni di $f(x) = b$.
-
 ### Def Iniettività
 Sia $f: X \rightarrow Y$ una funzione.
 Diciamo che $f$ è iniettiva se $\forall x_{1},x_{2}\in X : x_{1} \neq x_{2}\implies f(x_{1}) \neq f(x_{2})$, ovvero se le sue fibre sono vuote o singoletti.
@@ -95,8 +93,8 @@ Diciamo che $f$ è invertibile se $\exists g:Y \rightarrow X  : g(f(x)) = x,  \f
 ### Proposizione (1.21)
 Sia $f:X \rightarrow Y$ una funzione bigettiva. Allora $f$ è invertibile ed esiste una sola inversa di $f$, detta $f^{-1}:Y\rightarrow X$.
 
-#### Dim
-Osservo che $\forall y \in Y, f^{-1}(y) = \{ x_{y} \}$ per qualche unico $x_{y} \in X$ (ovvero $f(x_{y}) = y$). Definiamo $g:Y\rightarrow X$ ponendo $g(y) := x_{y}, \forall y \in Y$.
+### Dimostrazione
+Osserviamo che $\forall y \in Y, f^{-1}(y) = \{ x_{y} \}$ per qualche unico $x_{y} \in X$ (ovvero $f(x_{y}) = y$). Definiamo $g:Y\rightarrow X$ ponendo $g(y) := x_{y}, \forall y \in Y$.
 Vale:
 - $(f \circ g)(y) = f(g(y)) = f(x_{y}) = y, \forall y \in Y$, ovvero $(f \circ g) = id_{Y}$
 - $\forall x \in X, (f \circ g)(f(x)) = f(x) = (f \circ g \circ f)(x) =f((g \circ f)(x)) \implies (g \circ f)(x) = x$
