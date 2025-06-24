@@ -112,7 +112,7 @@ signature TOTALORDER = sig
   val lt: element * element -> bool
 end;
 
-functor MakeBST (Lt:TOTALORDER): sig
+functor MakeBST (Lt:TOTALORDER):> sig
   type btree
   exception EmptyTree
   val create: btree
