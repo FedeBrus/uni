@@ -2,7 +2,6 @@
 Un blocco è una sezione di un programma che contiene le dichiarazioni locali a quella regione.
 
 L'environment di un blocco può essere suddiviso nell'environment locale (variabili locali e parametri formali), evnironment non locale (associazioni ereditate da blocchi che contengono il blocco corrrente) e environment globale (associazioni comuni a tutti i blocchi del programma)
-
 ## Cosa definisce un ambiente?
 - Regole di visibilità
 - Regole di scope

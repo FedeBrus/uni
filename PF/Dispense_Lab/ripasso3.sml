@@ -1,7 +1,7 @@
 fun fact 0 = 0
   | fact n = n * fact (n - 1);
 
-fun cyclei nil i = nil
+fun cyclei nil _ = nil
   | cyclei L 0 = L
   | cyclei (x::xs) i = cyclei (xs @ [x]) (i - 1);
 

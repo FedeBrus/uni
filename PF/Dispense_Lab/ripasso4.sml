@@ -9,6 +9,11 @@ fun remove nil _ = nil
   | remove (x::xs) 0 = xs
   | remove (x::xs) i = x :: (remove xs (i - 1));
 
+exception OutOfBounds;
+fun at nil _ = raise OutOfBounds;
+  | at (x::xs) 0 = x;
+  | at (x::xs) n = at xs (n - 1);
+
 remove [1] 0;
 remove [1, 2, 3] 2;
 remove [1, 2, 3, 4] 2;
@@ -24,7 +29,7 @@ square 0;
 fun flip_pairs nil = nil
   | flip_pairs ((x, y)::xs) = if x < y then (x, y)::(flip_pairs xs) else (y, x)::(flip_pairs xs);
 
-flip_pairs [(1, 2), (4,3)];
+flip_pairs [(1, 2), (4, 3)];
 flip_pairs [(5, 2), (4, 3), (6, 5), (1, 2)];
 
 fun vowel (#"a"::xs) = true
@@ -40,7 +45,7 @@ vowel [#"a"];
 vowel nil;
 
 fun member nil _ = false
-  | member (x::xs) e = (e = x orelse member xs e);
+  | member (x::xs) e = (e = x) orelse (member xs e);
 
 member [2, 3] 1;
 member [2, 3, 1] 2;

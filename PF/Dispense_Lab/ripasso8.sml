@@ -30,7 +30,8 @@ Set.isin a 2;
 Set.removefrom a 2;
 
 signature TREE = sig
-  datatype 'a T = Lf | Br of 'a * 'a T * 'a T
+  (*datatype 'a T = Lf | Br of 'a * 'a T * 'a T*)
+  type 'a T
   val countNodes: 'a T -> int
   val depth: 'a T -> int
   val mirror: 'a T -> 'a T
@@ -44,7 +45,7 @@ structure Tree = struct
 
   fun depth Lf = 0
     | depth (Br(key, left, right)) = 
-      1 + (fn (x, y) => if x > y then x else y)(depth left, depth right);
+      1 + (fn (x, y) => if x > y then x else y) (depth left, depth right);
 
   fun mirror Lf = Lf
     | mirror (Br(key, left, right)) = Br(key, mirror right, mirror left);
