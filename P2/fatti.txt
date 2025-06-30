@@ -1,0 +1,100 @@
+- Tipi di riferimento sono classi, interfacce e array.
+- Tipi di riferimento hanno come valore di default null.
+- In mancanza di inizializzazione, l'array non alloca spazio.
+- Una volta inizializzato viene popolato con i valori di default.
+- I parametri di tipi primitivi sono passati per copia.
+- I parametri di tipi riferimento sono passati per riferimento.
+- Una garbage collection può essere chiamata tramite System.gc();
+- Esiste il metodo finalize() che serve a rilasciare risorse diverse dalla memoria, non è un distruttore.
+- I costruttori possono essere overloadati.
+- In assenza di costruttore il compilatore inserisce un costruttore senza parametri di default che allocherà lo spazio necessario per gli attributi dell'oggetto e li inizializzerà al valore di default.
+- Le asserzioni possono venir abilitate con java -ea.
+- Attributi e metodi statici possono venir acceduti da contesti non statici.
+- Attributi e metodi non statici non possono venir acceduti da contesti statici.
+- Ogni file .java è detto compilation unit, ogni compilation unit contiene classi facenti parte dello stesso package e ogni compilation unit contiene una sola classe public (la prima) e eventualmente altre classi private.
+- Il package java.lang non necessita di venir importato per essere utilizzato.
+- Enum possono avere attributi e metodi
+- Gli enum sono di default final e estendono java.lang.Enum
+- Hanno il metodo .toString() e .values().
+- Una enum può estendere un'interfaccia.
+- Tutte le classi sono legate alla gerarchia di ereditarietà.
+- La sottoclasse eredita tuttli attributi ed i metodi dalla superclasse ma non i costruttori.
+- L'ereditarietà è semplice, può essere ereditata una sola superclasse.
+- In assenza di clausola extends, la classe estende automaticamente Object.
+- Alcuni metodi importanti forniti da Object sono .equals(Object o) .finalize() e .toString().
+- Le estensioni date dall'ereditarietà possono essere strutturali e comportamentali.
+- All'interno di un costruttore è possibile richiamare il costruttore della superclasse tramite la notazione super(<params>) posta come prima istruzione del costruttore.
+- Se non si mette nessun costruttore come prima istruzione allora il compilatore automaticamente inserisce un'invocazione al costruttore di default della superclasse. Se non esiste un costruttore senza parametri nella superclasse allora si ha un errore di compilazione.
+- Object definisce un costruttore di default.
+- All'interno di una classe possono esservi più metodi con lo stesso nome purché cambi il numero o il tipo dei parametri.
+- Un metodo astratto è un metodo per il quale non è specificata alcuna implementazione.
+- Una classe astratta è tale se contiene almeno un metodo astratto.
+- Non è possibile creare istanze di una classe astratta
+- Il polimorfismo è la capacità di un elemento sintattico di riferirsi a elementi di diverso tipo.
+- Il polimorfismo ad Hoc riguarda l'overloadati.
+- Il polimorfismo di Sottotipo è quello che avviene tramite l'ereditarietà.
+- Il polimorfismo parametrico è quello dei generici.
+- Il principio di sostituzione di Liskov afferma che se X è un sottotipo di T, allora variabili di tipo T in un programma possono essere sostituite da variabili di tipo X senza alterare alcuna proprietà desderabile del programma.
+- Una variabili di tipo di riferimento T può riferirsi ad un qualsiasi oggetto il cui tipo sia T o un suo sottotipo.
+- Analogamente, un parametro formale di tipo riferimento T può riferirsi a parametri attuali il cui tipo sia T o un suo sottotipo.
+- Il legame tra un oggetto e il suo tipo è dinamico.
+- In presenza di polimorfismo si distingue tra tipo statico ed il tipo dinamico.
+- La regola di sostituzione obbliga il tipo dinamico ad essere un sottotipo del tipo statico.
+- Riguardarsi bene il layout degli oggetti in memoria (vtable)
+- Riguardarsi l'algoritmo di dynamic dispatch.
+- In Java le decisioni per il dispatch dei metodi sono sempre a runtime, tranne per i costruttori che non possono essere mai ereditati e sono quindi determinabili a compile time, idem per metodi static, private e final.
+- Dichiarando una classe final si impedisce che questa possa venire estesa.
+- Analogamente è possibile proibire l'override di un metodo dichiarandolo final.
+- Se un metodo è private e esiste una ridefinizione di esso in una sottoclasse, questo non verrà mai scelto con il dynamic dispatch, in quanto non è formalmente un suo override e verrà sempre scelta l'implementazione della superclasse.
+- Per ogni tipo primitivo esiste una classe wrapper, nelle ultime versioni di Java c'è autoboxing e autounboxing.
+- Queste conversioni automatiche non eliminano tutte le conversioni.
+- Si può forzare la conversione da un tipo riferimento T ad un sottotipo T1 purché il tipo dinamico dell'oggetto convertito T1 o un suo sottotipo.
+- Questo tipo di conversione si chiama downcast, mentre quello eseguito dal polimorfismo nel senso opposto è chiamato upcast.
+- Gli errori di cast sono errori a runtime.
+- Si può determinare il tipo dinamico di un oggetto con l'operatore instanceof.
+- I metodi definiti nelle interfacce sono public di default.
+- Un interfaccia può essere utilizzata per definire il tipo di una variabile e valgono le regole del polimorfismo.
+- I parametri tipo sono visibili nell'intera definizione della classe.
+- Dati due tipi generici G<A> e G<B> dove B è una sottoclasse di A, non è vero che G<B> è una sottoclasse di G<A>.
+- I generics in Java sono implementati mediante type erasure, l'informazione sui parametri di tipo esiste solo a compilation time. Viene eliminata dopo i controlli statici e dopo aver inserito gli opportuni cast per mantenere i vincoli sul tipo.
+- Per creare metodi generici polimorfici si possono usare le wildcard.
+- Quando si usa extends con la wildcard è possibile specificare una classe, un'interfaccia o una classe e più interfacce, in tale caso la classe deve essere la prima e vanno separate con &.
+- La stessa notazione può essere usata con un generico T e nessuna wildcard se è necessario fare riferimento al tipo.
+
+static <T extends Number> double average(T[] nums);
+class Squadra<T extends Atleta> { ... };
+static double average(List<? extends Number> nums)
+static <T extends Number> double average(List<T> nums);
+
+- La restrizione con super non può essere usata con un bounded type, ma solo con la wildcard.
+- Non si possono fare array con tipi generici.
+- I parametri di tipo non possono essere tipi primtiivi.
+- Non si può usare instanceof con i generics.
+- A differenza degli array, la dimensione massima della collection non è prefissata.
+- Il Java Collection Framework contiene tre elementi fondamentali: interfacce, implementazioni e algoritmi.
+- Per usare il Java Collections Framework si usa import java.util.*;
+- Il for-each può essere utilizzato con gli array.
+- Il metodo remove degli iteratori può essere usato una sola volta per ogni invocazione di next.
+- I for-each sono comodi in sola lettura, se bisogna eliminare o modificare un elemento allora è meglio fare un for.
+- Non si può modificare una collection tramite i suoi metodi quando si sta usando un suo iteratore, mentr è possibile delegare la rimozione all'iteratore stesso.
+- Il metodo equals della classe Object implementa la relazione di equivalenza più discriminante possibile tra oggetti, ovvero ritorna true se e solo se x e y si riferiscono allo stesso oggetto in memoria.
+- Bisogna prestare attenzione a non fare l'overloading di equals bensì l'overriding, dato che equals prende come parametro un riferimento di tipo Object.
+- equals deve essere riflessivo, simmetrico, transitivo, consistente (ovvero che se nessuna delle informazioni utilizzate da equals sono state modificate allora deve ritornare sempre lo stesso risultato) e per ogni riferimento non nullo x allora x.equals(null) ritorna false.
+- La funzione hashCode è una funzione non iniettiva che mappa un oggetto ad un intero.
+- Se invocato più volte sullo stesso oggetto ritorna lo stesso intero (almeno nella stessa esecuzione).
+- Se due oggetti sono uguali secondo equals, allora hashCode deve quantomeno ritornare lo stesso risultato su entrambi.
+- Invecce non è richiesto che due oggetti non uguali secondo equals debbano ritornare lo stesso risultato con hashCode.
+- Un trick è semplicemente usare Objects.hash(param1, param2, ...) dovere paramN sono i campi utilizzati da equals.
+- L'interfaccia Comparable<T> consente di definire un ordinamento totale fra gli oggetti che la implementano. Questa interfaccia definisce un solo metodo (int compareTo(T o)) che ritorna un numero negativo se this è minore di o, un intero positivo se this è maggiore di o e infine 0 se sono uguali.
+- Deve valere che -sgn(x.compareTo(y)) == sng(y.comapreTo(x))
+- Deve valere che se (x.compareTo(y) > 0 && y.compare.To(z) > 0) allora x.compareTo(z) > 0
+- Deve valere che se x.compareTo(y) == 0 allora sgn(x.compareTo(z)) == sgn(y.compareTo(z))
+- Fortemente consigliato che (x.compareTo(y) == 0) == (x.equals(y))
+- L'inserimento in un SortedSet o in un SortedMap di elementi che non implementano Comparable crea un'eccezione a runtime.
+- Una List o un array i cui elementi implementino Comparable possono essere ordinati con Collections.sort(o) o Arrays.sort(o).
+- L'interfaccia Comparator<T> consente di delegare il confronto a una classe separata consentendo maggiore flessibilità e fornisce il solo metodo int compare(T o1, T o2).
+- Un'eccezione è rappresentata da un oggetto.
+- Ogni metodo deve gestire le eccezioni che possono essere sollevate all'interno del proprio corpo oppure propagarle.
+- In presenza di più handler viene eseguito il primo blocco catch compatibile con l'eccezione sollevata, per questo gli handler delle sottoclassi vanno dichiarati prima delle rispettive superclassi.
+- Un metodo che fa override può sollevare solamente le eccezioni del metodo che sta ridefinendo o loro sottoeccezzioni. Può anche non lanciare alcuna eccezione, l'importane è che non si sollevino nuove eccezioni. Ciò non vale per i costruttori.
+- Le RunTimeException non serve che vengano gestite, perché possono capitare talmente spesso che renderebbe illeggibile il codice, mentre gli Error sono troppo gravi e terminano il programma.
