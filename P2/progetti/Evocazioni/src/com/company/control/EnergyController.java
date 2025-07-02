@@ -8,10 +8,15 @@ public class EnergyController {
     private EnergyPane ep;
     private PlayerController pc;
 
-    public EnergyController(Energy energy, PlayerController pc) {
+    public EnergyController(Energy energy) {
         this.energy = energy;
         ep = new EnergyPane(energy.getColor());
-        ep.setHandler(e -> pc.applyEnergy(energy));
+        ep.setHandler(e -> pc.applyEnergy(this));
+    }
+
+    public void setPlayerController(PlayerController pc) {
+        this.pc = pc;
+        this.pc.redraw();
     }
 
     public EnergyPane getEnergyPane() {

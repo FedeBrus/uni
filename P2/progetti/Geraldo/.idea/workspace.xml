@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7fea6459-3b95-4d0b-8a65-79edb907d266" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Evocazioni/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/GameOverException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-10-16 11.41.11.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-10-18 10.44.35.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-10-18 11.46.02.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-10-23 11.35.37.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-11-06 11.38.02.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-11-08 08.52.29.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-11-08 09.34.03.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE7.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/AlgebraE9.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es01.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es02.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es03.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es04.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es05.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es06.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es07.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es08.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es09.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Exercises/es10.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez01.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez02.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez03.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez04.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez05.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez06.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez07.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez08.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Material/lez09.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra11.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra14.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra15.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra16.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra17.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra18.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra19.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra20.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra21.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra22.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra23.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra24.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra25.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra26.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra27.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra28.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra29.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Algebra3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Drawing 2024-10-16 11.41.11.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Drawing 2024-10-18 10.44.35.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Drawing 2024-10-18 11.46.02.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Drawing 2024-10-23 11.35.37.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Algebra_lin/Notes/Drawing 2024-11-06 11.38.02.excalidraw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es10/analisiE10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es11/analisiE11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es12/analisiE12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es13/analisiE13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es3/analisiE3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es4/analisiE4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es4/analisiE4A.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es5/analisiE5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es6/analisiE6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es6/analisiE6A.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es6/analisiE6B.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es6/analisiE6C.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es6/analisiE6D.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es7/analisiE7A.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es7/analisiE7B.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es8/analisiE8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es9/analisiE9.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Es9/analisiE9A.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Exams/22_07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Exams/22_08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Exams/23_02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Exams/23_06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Exams/23_07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Exams/23_09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Exams/24_02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Tutorato/AnalisiT8A.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Tutorato/AnalisiT8B.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Tutorato/Tutorato20241128.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Tutorato/Tutorato20241205.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Tutorato/Tutorato20241212.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Tutorato/analisiT1A.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Exercises/Tutorato/analisiT7A.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Material/Notes.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi14.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi15.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi16.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi17.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi18.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi19.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi20.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi21.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi22.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi23.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi24.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi25.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi26.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi7.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Analisi9.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione10/dimostrazione1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione10/dimostrazione2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione12/derivata.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione14/immagine_esempio_dimostrazione.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione14/non_continua.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione14/tipologia1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione14/tipologia2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione14/tipologia3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione14/tipologia4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione3/coniugato_trigonometrico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione3/gauss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione3/raggio1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione3/simmetria_asse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione3/simmetria_origine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione3/trigonometrica.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione5/esempio_funzioni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione5/funzione.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Arcocoseno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Arcoseno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Arcotangente.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Coseno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Esponenziali.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Esponenziali_minori1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Logaritmi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Logaritmi_minori1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Potenze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Potenze_dispari.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Radici.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Radici_dispari.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Seno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione6/Tangente.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione7/contraddizione.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione8/dimostrazione_teorema_radice1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione8/dimostrazione_teorema_radice2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine7.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Analisi/Notes/Images/Lezione9/immagine9.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/01AritmeticaCalcolatori.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/04CodificaTesto.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/05RetiLogiche.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/06Assembly.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/07riscv.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/08riscv.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/09riscv.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/10riscv.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/11Intel.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/12ARM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/13RISCV-Intel.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/14RISCV-ARM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/15ToolChain.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/16CPU.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/17CPU.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/18Pipeline.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/19Memoria.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/20Memoria.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/21IO.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/Dispense/22IO.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/INTEL ARM.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/cpu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/memoria" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/pipeline" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calcolatori/toolchain" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Cheat sheet PS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Dimenticatoio/PF/Dispense_Lab/esami" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Dimenticatoio/PF/Dispense_Lab/esempio1.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Dimenticatoio/PF/Dispense_Lab/esercizi_sml.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Es.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Esami PS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2011/Febbraio/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2011/Febbraio/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2011/Gennaio/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2013/Gennaio/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2013/Gennaio/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2013/Giugno/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2013/Giugno/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Agosto/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Agosto/coda.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Agosto/coda.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Agosto/es1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Agosto/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Agosto/es3.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Agosto/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Febbraio/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Febbraio/coda.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Febbraio/coda.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Febbraio/es1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Febbraio/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Febbraio/es3.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Febbraio/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Febbraio/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Giugno/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Giugno/es3.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/es1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/es3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/queue.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/queue.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/stack.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2023/Luglio/stack.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Febbraio/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Febbraio/es1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Febbraio/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Febbraio/es3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Febbraio/input1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Febbraio/input2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Gennaio/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Gennaio/es1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Gennaio/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Gennaio/es3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Gennaio/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Gennaio/lista.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Gennaio/lista.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Gennaio/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Giugno/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Giugno/es1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Giugno/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Giugno/es3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Giugno/paziente1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Luglio/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Luglio/es1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Luglio/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Luglio/es3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Luglio/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Settembre/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Settembre/es1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Settembre/es2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Settembre/es3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Settembre/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Simulazione2/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Simulazione2/es3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Simulazione2/esercizio1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Simulazione2/esercizio2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Simulazione2/esercizio3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Simulazione2/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2024/Simulazione2/lode.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/3.30.5/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/es01.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/es01.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Laboratorio1.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/home/haida/Notes/uni/laboratorio/Array/array.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/home/haida/Notes/uni/laboratorio/Array/array.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/array.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/es01.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/es01.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es01.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/es02.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/es02.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es02.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/es03.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/es03.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es03.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/es04.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/es04.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es04.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/es05.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/es05.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es05.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/es06.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/es06.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es06.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/es07.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/es07.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/es07.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/es01.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/es01.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/es01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/es02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/es03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/es04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/es05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/es06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/es07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/build/libarray.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab01/es07.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab02/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab02/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab02/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab03/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab03/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab03/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab03/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab03/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab04/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab04/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab04/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab04/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab04/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab04/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab05/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab05/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab05/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab05/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab05/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab05/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab06/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab06/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab06/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab06/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab06/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab06/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab06/es07.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab07/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab07/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab07/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab07/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab07/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab08/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab08/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab08/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab08/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab08/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab08/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab08/es07.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab09/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab09/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab09/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab09/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab09/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab09/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab09/es07.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab10/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab10/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab10/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab10/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab10/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab10/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab10/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab11/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab11/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab11/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab11/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab11/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab11/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab11/es07.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab12/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab12/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab12/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab12/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab12/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab12/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab12/es07.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab13/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab13/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es02alt.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es03alt.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab14/es07.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/divina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/divina_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/es06.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/es07.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/file1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab15/file2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab16/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab16/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab16/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab16/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab16/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab16/lorem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab16/temperature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab17/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab17/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab17/es03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab17/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab17/students.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es01/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es01/es01.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es01/main01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es02/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es02/main02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es03/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es03/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es03/es03.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es03/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es03/main03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab18/es04/main04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/coda.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/coda.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/coda_int.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/coda_int.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/pila.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/lab20/pila.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria01/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria01/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria01/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria01/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria02/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria02/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria02/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria04/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria05/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria05/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria05/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/3.30.5/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/home/haida/Notes/uni/laboratorio/Array/array.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/array.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es01.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es03.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es04.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/es05.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/es04.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria06/es05.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria10/es01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria10/es02.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria10/es03.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria10/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria10/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Lab/random/teoria11/giuseppe_flavio.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/array.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/array.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/dlist.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/dlist.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/list.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/list.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/queue.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/queue.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/stack.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/stack.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/tree.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Libs/tree.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/10p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/11p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/12p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/1p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/2p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/3p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/4p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/5p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/6p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/7p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/8p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../P1/Material/9p.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fatti.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/.idea/runConfigurations/Main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/.idea/runConfigurations/Main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/EnergyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/EnergyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/SummonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/SummonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/SummonDeadException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/WrongEnergyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/WrongEnergyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/summons/AbstractSummon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/summons/AbstractSummon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/summons/Summon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/summons/Summon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/EnergyMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/EnergyMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/EnergyPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/EnergyPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/MainView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/SummonMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/SummonMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L1 - Introduction.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L10 - Lambda Calculus.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L10_2 - Lambda Calculus.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L11_1 - Logic Programming.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L11_2 - Logic Programming.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L12 - Intro_to_Scala.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L2 - Expressions and Types.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L3 - Type errors, variables and functions.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L4 - Abstraction of control.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L4_2 - Abstraction of control.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L5 - Patterns and local environment.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L6 - Input-output, exceptions and polymorphic functions.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L7 - Higher order and curried functions.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L8 - Curried functions and data types.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L9 - Abstract_data_types.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab5.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab6.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab7.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab8.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/Lab9.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/esami.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/numbers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso1.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso2.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso3.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso4.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso5.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso6.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso7.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso8.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/ripasso9.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/sudoku.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/Dispense_Lab/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/appunti/Lezione01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/appunti/Lezione02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/appunti/Lezione03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/appunti/Lezione04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/appunti/Lezione05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/appunti/Programmazione Logica.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab1.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab2.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab3.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab4.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab5.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab6.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab7.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab8.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/lab9.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/numbers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/prova.sml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PF/lab/zap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 7.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Esercizi/Giorno 8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Images/10_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Images/10_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Images/10_3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Images/10_4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Images/10_5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Images/Distribuzione.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Images/Tabellone.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Info.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione09.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione10.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione11.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione12.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione14.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione15.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione16.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione17.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione18.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione19.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione20.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione21.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione22.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione23.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/Lezione24.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/probabilita-dispensa.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250525133854.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250525134115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607153231.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607160538.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607165545.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607165618.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607184116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607185552.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/runConfigurations/Main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/template-meta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/testing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/untitled/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/untitled/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/untitled/untitled.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../programmi/calcolatori.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../todo.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf ideFingerprint="1n62zf0b4kal2" SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="483">
+              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+        <tab>{&quot;tabTitle&quot;:&quot;Main.java&quot;,&quot;foregroundColor&quot;:-2104859,&quot;textAttributes&quot;:{&quot;name&quot;:&quot;a&quot;},&quot;icon&quot;:[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}</tab>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2zK4OTqS8bz0cMWfpu1j7TPo3zI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7fea6459-3b95-4d0b-8a65-79edb907d266" name="Changes" comment="" />
+      <created>1751466400223</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751466400223</updated>
+    </task>
+    <servers />
+  </component>
+</project>

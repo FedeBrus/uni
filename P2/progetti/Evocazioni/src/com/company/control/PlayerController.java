@@ -1,58 +1,82 @@
 package com.company.control;
 
-import com.company.model.Player;
-import com.company.model.SummonDeadException;
-import com.company.model.WrongEnergyException;
-import com.company.model.energies.Energy;
-import com.company.model.summons.Summon;
+import com.company.model.GameOverException;
+import com.company.view.EnergyMenu;
+import com.company.view.EnergyPane;
+import com.company.view.SummonMenu;
+import com.company.view.SummonPane;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PlayerController {
+    private List<EnergyController> ecs;
+    private List<SummonController> scs;
+    private MainController mc;
 
-    private Player p1;
-    private Player p2;
-    private List<SummonController> scs1;
-    private List<SummonController> scs2;
-    private List<EnergyController> ecs1;
-    private List<EnergyController> ecs2;
-
-    public PlayerController(Player p1, Player opponent,
-                            List<SummonController> scs1, List<SummonController> scs2,
-                            List<EnergyController> ecs1, List<EnergyController> ecs2) {
-        this.p1 = p1;
-        this.p2 = p2;
-        this.scs1 = scs1;
-        this.ecs1 = ecs1;
-        this.scs2 = scs2;
-        this.ecs2 = ecs2;
+    public PlayerController(List<EnergyController> ecs, List<SummonController> scs) {
+        this.ecs = ecs;
+        this.scs = scs;
     }
 
-    public void applyEnergy(Energy energy) {
-        try {
-            scs1.getFirst().applyEnergy(energy);
-            removeEnergy(energy);
-        } catch (WrongEnergyException e) {
+    public void setMainController(MainController mc) {
+        this.mc = mc;
+        this.mc.redraw();
+    }
 
+    public List<SummonController> getScs() {
+        return scs;
+    }
+
+    public EnergyMenu getEnergyMenu() {
+        List<EnergyPane> eps = new ArrayList<>();
+        for (EnergyController i : ecs) {
+            eps.add(i.getEnergyPane());
         }
+        return new EnergyMenu(eps);
     }
 
-    private void removeEnergy(Energy energy) {
-        for (Iterator<EnergyController> ec = ecs1.iterator(); ec.hasNext();) {
-            if (ec.next().getEnergy() == energy) {
-                ec.remove();
-                return;
+    public void removeEnergy(EnergyController ec) {
+        ecs.remove(ec);
+        mc.setCurrentPlayerEnergies(getEnergyMenu());
+    }
+
+    public void applyEnergy(EnergyController ec) {
+        mc.applyEnergy(this, ec);
+    }
+
+    public void applyAttack(SummonController summonController) throws GameOverException {
+        mc.applyAttack(this, summonController);
+    }
+
+    public SummonMenu getSummonMenu() {
+        List<SummonPane> sps = new ArrayList<>();
+        scs = scs.stream().filter(x -> !x.getSummon().isDead()).collect(Collectors.toList());
+        for (SummonController i : scs) {
+            sps.add(i.getSummonPane());
+        }
+
+        return new SummonMenu(sps);
+    }
+
+    public void receiveAttack(SummonController sc) {
+        if (sc.getSummon().isSupreme()) {
+            for (SummonController i : scs) {
+                i.receiveAttack(sc);
             }
+        } else {
+            scs.getFirst().receiveAttack(sc);
         }
+
+        mc.setOpposingPlayerSummons(getSummonMenu());
     }
 
-    public void attack(Summon summon) {
-        int multiplier = (summon.getEnergy().isStrong(scs2.getFirst().getSummon().getEnergy().getType()) ? 2 : 1);
-        try {
-            scs2.getFirst().applyDamage(summon.getAttack().getDamage() * multiplier);
-        } catch (SummonDeadException e) {
-            scs2.getFirst().kill();
-        }
+    public boolean noSummonsLeft() {
+        return scs.isEmpty();
+    }
+
+    public void redraw() {
+        mc.redraw();
     }
 }

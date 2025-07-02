@@ -1,6 +1,5 @@
 package com.company.model.summons;
 
-import com.company.model.SummonDeadException;
 import com.company.model.WrongEnergyException;
 import com.company.model.energies.Attack;
 import com.company.model.energies.Energy;
@@ -54,7 +53,7 @@ public abstract class AbstractSummon implements Summon {
 
     @Override
     public void applyEnergy(Energy energy) {
-        if (energy.getType() == EnergyType.NEUTRAL || energy == this.energy) {
+        if (energy.getType() == EnergyType.NEUTRAL || energy.getType() == this.energy.getType()) {
             appliedEnergiesNumber++;
         } else {
             throw new WrongEnergyException();
@@ -62,11 +61,20 @@ public abstract class AbstractSummon implements Summon {
     }
 
     @Override
-    public void applyDamage(int damage) throws SummonDeadException {
-        currentHealthPoints -= damage;
+    public void receiveAttack(Summon attacker) {
+        currentHealthPoints -= attacker.getAttack().getDamage() * (attacker.getEnergy().isStrong(energy.getType()) ? 2 : 1);
         if (currentHealthPoints <= 0) {
             currentHealthPoints = 0;
-            throw new SummonDeadException();
         }
+    }
+
+    @Override
+    public boolean isReadyToAttack() {
+        return appliedEnergiesNumber >= attack.getRequiredEnergy();
+    }
+
+    @Override
+    public boolean isDead() {
+        return (currentHealthPoints == 0);
     }
 }

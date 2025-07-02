@@ -7,8 +7,8 @@ import javafx.scene.shape.Rectangle;
 
 public class EnergyPane extends Rectangle {
     public EnergyPane(Color color) {
-        setX(70);
-        setY(30);
+        setWidth(70);
+        setHeight(30);
         setFill(color);
     }
 
