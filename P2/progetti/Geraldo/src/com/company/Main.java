@@ -1,6 +1,9 @@
 package com.company;
 
 
+import com.company.control.PlayerController;
+import com.company.model.Player;
+import com.company.model.mutations.*;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,6 +11,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main extends Application {
 
@@ -17,18 +23,24 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Button button = new Button("Say Hello World!");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                System.out.println("Hello World!");
-            }
-        });
+        Player p = new Player("Geraldo");
+        Mutation m1 = new StrengthMutation();
+        Mutation m2 = new SpeedMutation();
+        Mutation m3 = new ToleranceMutation();
+        Mutation m4 = new FireMutation();
+        Mutation m5 = new DefenseMutation();
 
-        StackPane root = new StackPane(button);
+        List<Mutation> availableMutations = new ArrayList<>();
+        availableMutations.add(m1);
+        availableMutations.add(m2);
+        availableMutations.add(m3);
+        availableMutations.add(m4);
+        availableMutations.add(m5);
+
+        PlayerController pc = new PlayerController(p, availableMutations);
 
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(pc.getMainView(), 400, 400));
         primaryStage.show();
     }
 }

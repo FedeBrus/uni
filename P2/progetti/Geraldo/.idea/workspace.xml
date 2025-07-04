@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7fea6459-3b95-4d0b-8a65-79edb907d266" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Evocazioni/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/GameOverException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/control/MutationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/control/PlayerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/CantMutateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/Spell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/AbstractCombatMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/AbstractMagicMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/AbstractPotionMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/DefenseMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/FireMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/Mutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/SpeedMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/StrengthMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/mutations/ToleranceMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/view/MutationPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/view/PlayerMutationsPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/view/PlayerStatsPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-10-16 11.41.11.excalidraw.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-10-18 10.44.35.excalidraw.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../#Excalidraw/Drawing 2024-10-18 11.46.02.excalidraw.md" beforeDir="false" />
@@ -192,9 +209,6 @@
       <change beforePath="$PROJECT_DIR$/../../../Calcolatori/pipeline" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Calcolatori/toolchain" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Cheat sheet PS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Dimenticatoio/PF/Dispense_Lab/esami" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Dimenticatoio/PF/Dispense_Lab/esempio1.sml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Dimenticatoio/PF/Dispense_Lab/esercizi_sml.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Es.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Esami PS.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../P1/Exercises/Exams/2011/Febbraio/a.out" beforeDir="false" />
@@ -656,22 +670,8 @@
       <change beforePath="$PROJECT_DIR$/../../../P1/Material/7p.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../P1/Material/8p.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../P1/Material/9p.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fatti.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/.idea/runConfigurations/Main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/.idea/runConfigurations/Main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/EnergyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/EnergyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/SummonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/control/SummonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/SummonDeadException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/WrongEnergyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/WrongEnergyException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/summons/AbstractSummon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/summons/AbstractSummon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/summons/Summon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/model/summons/Summon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/EnergyMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/EnergyMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/EnergyPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/EnergyPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/MainView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/SummonMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Evocazioni/src/com/company/view/SummonMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L1 - Introduction.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L10 - Lambda Calculus.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../PF/Dispense/L10_2 - Lambda Calculus.pdf" beforeDir="false" />
@@ -778,6 +778,24 @@
       <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607165618.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607184116.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Pasted image 20250607185552.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/control/FanController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/control/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/Fan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/comparators/CostFanComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/comparators/MountFanComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/mount/CeilingMount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/mount/FloorMount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/mount/Mount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/mount/MountType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/mount/WallMount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/power/BatteryPowerSupply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/power/MechanicalPowerSupply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/power/OutletPowerSupply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/power/PowerSupply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/model/power/PowerSupplyType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/view/FanPane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/SoloVentilatori/src/com/company/view/UserPane.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/description.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Programmazione2/laboratorio/testing/.idea/misc.xml" beforeDir="false" />
@@ -817,12 +835,21 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2zK4OTqS8bz0cMWfpu1j7TPo3zI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -830,11 +857,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/haida/JavaTesting"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.model" />
+      <recent name="com.company.view" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7fea6459-3b95-4d0b-8a65-79edb907d266" name="Changes" comment="" />

@@ -64,8 +64,8 @@
 - La stessa notazione può essere usata con un generico T e nessuna wildcard se è necessario fare riferimento al tipo.
 
 static <T extends Number> double average(T[] nums);
+static double average(List<? extends Number> nums);
 class Squadra<T extends Atleta> { ... };
-static double average(List<? extends Number> nums)
 static <T extends Number> double average(List<T> nums);
 
 - La restrizione con super non può essere usata con un bounded type, ma solo con la wildcard.

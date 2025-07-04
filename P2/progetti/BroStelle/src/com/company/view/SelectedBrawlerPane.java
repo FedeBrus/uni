@@ -32,6 +32,7 @@ public class SelectedBrawlerPane extends StackPane {
 
     private final Text attackText;
     private final Rectangle backGround;
+    private VBox text;
     private Rectangle rectangle;
 
     private Circle hitArea;
@@ -53,7 +54,7 @@ public class SelectedBrawlerPane extends StackPane {
         hpSpeed.setAlignment(Pos.CENTER);
 
         attackText = new Text();
-        VBox text = new VBox(nameLevel, hpSpeed, attackText);
+        text = new VBox(nameLevel, hpSpeed, attackText);
         text.setSpacing(10);
         text.setAlignment(Pos.CENTER);
 
@@ -102,12 +103,13 @@ public class SelectedBrawlerPane extends StackPane {
         hitArea.setFill(Color.GREEN);
         hitArea.setRadius(range);
         hitArea.setOnMouseClicked(ac);
+        hitArea.setPickOnBounds(false);
         compose();
     }
 
     private void compose() {
         hb = new HBox(info, levelUpButton);
-        hb.addEventHandler(MouseEvent.MOUSE_CLICKED, me -> hitArea.fireEvent(me));
+        text.addEventHandler(MouseEvent.MOUSE_CLICKED, me -> hitArea.fireEvent(me));
         hb.setSpacing(10);
         hb.setAlignment(Pos.CENTER);
 
