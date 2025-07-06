@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Main" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-    <module name="HelloFx" />
+    <module name="BroStelle2" />
     <option name="VM_PARAMETERS" value="--module-path ${JAVAFX_PATH} --add-modules javafx.controls,javafx.fxml" />
     <RunnerSettings RunnerId="Run" />
     <ConfigurationWrapper RunnerId="Run" />
