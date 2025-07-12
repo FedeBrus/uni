@@ -1,0 +1,17 @@
+Non ci devono essere reference tra View e Model, quindi invece di passare uno studente direttamente si può pensare di passare un int age e una String name.
+
+Il controller estende EventHandler<Event>. Il controller ha nei campi delle reference al model Student e la view Student. Ad esempio nel costruttore ha senso passare una classe Studente
+e inizializzare la StudentView nel costruttore a partire dall'argomento passato.
+
+o il controller è un handler o ha la logica di controller e gli handlers della view chiamano il controller appropriato.
+
+Se il controller è eventHandler. Nel costruttore dello studentController si gettano i bottoni della view e associa se stesso come handler.
+Soluzione che ti costringe a essere evnetHandler<Event> e una fila di instanceof per separare le logiche legate ad eventi diversi. Nell'handle posso cambiare la logica nel model e aggiornare la view.
+
+Bisogna mantenere lo stato coerente quindi bisogna aggiornare la view tramite getter del model, per evitare stati di inconsistenza.
+
+Nei costruttori delle view bisogna passare i controller.
+
+spesso e volentieri nel controller serve anche avere una reference a più parti della view.
+
+Se esiste una composizione sia nella view che nel model allora ha senso farlo anche nel controller.
