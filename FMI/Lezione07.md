@@ -21,7 +21,7 @@ Dobbiamo provare che $\{ 0 \} \subset B \Longleftrightarrow 0 \in B \Longleftrig
 Passo induttivo, $n \geq 0, n \implies  n+1$:
 Assumiamo che $\{ 0,1,\dots,n \}\subset B$ per qualche $n$ (ipotesi induttiva).
 Dobbiamo dimostrare che $\{ 0,1,\dots, n, n+1 \} \subset B$.
-Per ipotesi induttiva sappiamo che $A \subset  \{ n+1, n+2, \dots \}$ poiché sicura $\{ 0,1, \dots, n \} \not\in A$. Osserviamo che $n+1 \not\in A$, altrimenti $n+1=min(A)$ , che è sicuramente falso. Se $n+1 \not\in A \implies n+1 \in B \implies \{ 0,1,\dots,n,n+1 \} \subset B$.
+Per ipotesi induttiva sappiamo che $A \subset  \{ n+1, n+2, \dots \}$ poiché sicuramente $\{ 0,1, \dots, n \} \not\in A$. Osserviamo che $n+1 \not\in A$, altrimenti $n+1=min(A)$ , che è sicuramente falso. Se $n+1 \not\in A \implies n+1 \in B \implies \{ 0,1,\dots,n,n+1 \} \subset B$.
 
 Il passo induttivo è stato fatto e quindi grazie al principio di induzione la $P(n)$ vera, $\forall n \in \mathbb{N} \implies B = \mathbb{N} \Longleftrightarrow A = \emptyset \implies (\mathbb{N}, \leq)$ è ben ordinato.
 

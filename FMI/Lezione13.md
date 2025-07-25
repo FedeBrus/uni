@@ -64,13 +64,13 @@ Dobbiamo trovare che $S \neq \emptyset \Longleftrightarrow (n,m) |a -b$.
 $\implies$) Supponiamo che $S \neq \emptyset$, scegliamo $c \in S$, ovvero $c \equiv a\ \left( \text{mod}\ n \right)$ e $c \equiv b\ \left( \text{mod}\ m \right)$.
 $$
 \begin{cases}
-x \in \mathbb{Z} \\
-x \equiv a \ (\text{mod}\ n) \\
-x \equiv b \ (\text{mod}\ m)
+c \in \mathbb{Z} \\
+c \equiv a \ (\text{mod}\ n) \\
+c \equiv b \ (\text{mod}\ m)
 \end{cases}
 \Longleftrightarrow
 \begin{cases}
-x \in \mathbb{Z} \\
+c \in \mathbb{Z} \\
 \exists k\in \mathbb{Z} : c = a+kn \\
 \exists h\in \mathbb{Z} : c = b+hm \\
 \end{cases}

@@ -15,18 +15,17 @@ Poiché $(c,\phi(n))=1$, $[c]_{\phi(n)} \in (\mathbb{Z} \big/_{n\mathbb{Z}})^{*}
 
 Osserviamo che: $x \in \mathbb{Z}, x^{c} \equiv a\ (\text{mod}\ n) \Longleftrightarrow [x^{c}]_{n} = [a]_{n} \Longleftrightarrow [x]_{n}^{c} = [a]_{n}$.
 
-Dimostriamo che $[y]_{n}$ non può esistere.
 Sia $x \in \mathbb{Z}$ tale che $[x]_{n}^{c} = [a]_{n}$.
 Siccome $c \geq 1$:
 $$
 \begin{align}
 [x]_{n}[x]_{n}^{c - 1} = [x]_{n}^{c} = [a]_{n} &\implies [x]_{n} [x]_{n}^{c - 1} [a]_{n}^{-1} = [a]_{n} [a]_{n}^{-1} = [1]_{n} \\
  & \implies [x]_{n}([x]_{n}^{c-1}[a]_{n}^{-1}) = [1]_{n} \\
- & \implies [x]_{n} \in (\mathbb{Z} \big/_{n\mathbb{Z}})*
+ & \implies [x]_{n} \in (\mathbb{Z} \big/_{n\mathbb{Z}})^{*}
 \end{align}
 $$
 Quindi le uniche soluzioni sono quelle invertibili, ma allora per il teorema fondamentale la soluzione è unica.
-Poiché se $x$ sta in $S$ la sua classe è invertibile, l'unica class soluzione ha la seguente forma, grazie al teorema fondamentale della crittografia RSA:
+Poiché se $x \in S$ la sua classe è invertibile, l'unica classe soluzione ha la seguente forma, grazie al teorema fondamentale della crittografia RSA:
 $$
 [x]_{n} = P_{d}([a]_{n}) = [a]_{n}^{d} = [a^{d}]_{n} \subset \mathbb{Z}
 $$
@@ -47,7 +46,7 @@ Dobbiamo verificare le seguenti due proprietà:
 2) $(11, \phi(38)) = 1$
 
 Vale: $35 = 5 \cdot 7$, $38 = 2 \cdot 19$, non ci sono primi comuni quindi $(35, 38) = 1$. Inoltre $\phi(38) = \phi(2 \cdot 19) = \phi(2)\phi(19) = (2 - 1)(19 - 1) = 1 \cdot 18 = 18$.
-Seque che $11$ è primo e $11 \not{|}\ 18 = \phi(38) \implies (11, \phi(38)) = 1$. Poiché entrambe le condizioni sono verificate si può applicare il metodo RSA ottenendo:
+Segue che $11$ è primo e $11 \not{|}\ 18 = \phi(38) \implies (11, \phi(38)) = 1$. Poiché entrambe le condizioni sono verificate si può applicare il metodo RSA ottenendo:
 $$
 S = [35^{d}]_{38} \subset \mathbb{Z}, d > 0, d \in [11]_{18}^{-1}
 $$
@@ -91,7 +90,7 @@ x^{9} \equiv 49\ (\text{mod}\ 60)
 $$
 Si determini inoltre la massima soluzione negativa.
 #### Soluzione
-Sia $S$ l'insieme della solva della precedente congruenza.
+Sia $S$ l'insieme delle soluzioni della precedente congruenza.
 
 1° passo:
 Verifichiamo che valgono $(49, 60) = 1$ e $(9, \phi(60)) = 1$.
@@ -111,10 +110,10 @@ $$
 \begin{align}
 k \in N^{*} &\qquad \text{rappresentante di } [49^{k}]_{60} \\
 1 & \qquad 49^{1} = 49 \\
-2 & \qquad 49^{2} = 2401 = 40 \cdot 60 + 1 = 1
+2 & \qquad 49^{2} = 2401 = 40 \cdot 60 + 1 = [1]_{60}
 \end{align}
 $$
-Dunque esta orbita è molto piccola.
+Dunque questa orbita è molto piccola.
 Da prima risulta che $[49]_{60}^{2}=[1]_{60}$.
 Infine:
 $$

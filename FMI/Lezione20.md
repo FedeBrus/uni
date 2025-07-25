@@ -2,7 +2,7 @@
 Dato un grafo $G = (V, G)$ e $v, w \in V$, diciamo che $v$ è congiungibile a $w$ in $G$ se lo è per cammini o per passeggiate.
 
 ### Proposizione 15.6
-Sia $G = (V,E)$ un grafo e sia $\sim$ la relazione binaria su $V$ (cioè $\sim \in 2^{V\times V}$) definita ponendo: $\forall v, w \in V$, $v \sim w$ se $v$ è congiungibile a $w$ in $G$. La relazione $\sim$ un $V$ è di equivalenza.
+Sia $G = (V,E)$ un grafo e sia $\sim$ la relazione binaria su $V$ (cioè $\sim \in 2^{V\times V}$) definita ponendo: $\forall v, w \in V$, $v \sim w$ se $v$ è congiungibile a $w$ in $G$. La relazione $\sim$ su $V$ è di equivalenza.
 ### Dimostrazione
 1) $\forall v \in V$, $v \sim v$, poiché $(v)$ è una passeggiata in $G$. (riflessiva)
 2) $\forall v, w \in V$, $v \sim w$, ovvero $\exists(v_{0},v_{1},\dots,v_{n})$ passeggiata in $G$ tale che $v_{0} = v$ e $v_{n}=w$. Osserviamo che $(v_{n}, v_{n-1},\dots, v_{0})$ è una passeggiata in $G$ dato che i lati coinvolti sono gli stessi. Dunque anche $w \sim v$.

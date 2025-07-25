@@ -116,4 +116,4 @@ Allora $P(n)$ è vera $\forall n \in \mathbb{N}$.
 ### Dimostrazione
 Poniamo $A:= \{ n \in \mathbb{N} | P(n) \text{ è vera} \}$. Valgono:
 - (1) $\implies 0 \in A$
-- (2) $\implies \forall n \in \mathbb{N}$ tale che $P(n) \text{ è vera} = n \in A \implies P(succ(n))\text{ è vera} = succ(n) \in A$. Per l'assioma 4 $A = \mathbb{N}$, ovvero $P(n)\text{ è vera } \forall n \in \mathbb{N}$.
+- (2) $\implies \forall n \in \mathbb{N}$ tale che $P(n) \text{ è vera} \implies n \in A \implies P(succ(n))\text{ è vera} \implies succ(n) \in A$. Per l'assioma 4 $A = \mathbb{N}$, ovvero $P(n)\text{ è vera } \forall n \in \mathbb{N}$.

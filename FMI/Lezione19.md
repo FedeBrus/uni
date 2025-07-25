@@ -40,7 +40,7 @@ Siano $G$ e $G'$ due grafi e sia $f:V(G) \rightarrow V(G')$ una funzione. Diciam
 2) $f$ è un morfismo da $G$ in $G'$, cioè $f:G \rightarrow G'$ è un morfismo (abuso di notazione).
 3) $f^{-1}:V(G')\rightarrow V(G)$ è un morfismo dal grafo $G'$ in $G$, cioè $f^{-1}:G' \rightarrow G$ è un morfismo (abuso di notazione).
 
-Se esiste (almeno) un morfismo da $G$ in $G'$ allora si dice che $G$ è isomorfo a $G'$ e si scrive $G \cong G'$.
+Se esiste (almeno) un isomorfismo da $G$ in $G'$ allora si dice che $G$ è isomorfo a $G'$ e si scrive $G \cong G'$.
 
 Notiamo che per la 2, $f(E) \subset E'$. Invece per la 3 vale che $f^{-1}(E') \subset E$. Dunque $f(f^{-1}(E')) \subset f(E) \Longleftrightarrow E' \subset f(E)$. Siccome $f(E) \subset E'$ e $E' \subset f(E)$, allora $f(E) = E'$.
 ### Proposizione 14.11
@@ -116,3 +116,5 @@ $$
 $$
 dove $l(P)$ è la lunghezza di $P$.
 Osserviamo che $\mathcal{P} \neq \emptyset$, in quanto $Q \in \mathcal{P} \implies \mathcal{A}\neq \emptyset$, in quanto $l(Q) \in \mathcal{A}$. Poiché $\mathcal{A}$ è un sottoinsieme non vuoto di $\mathbb{N}$, grazie al teorema di buon ordinamento dei naturali, sappiamo $\exists m := min(\mathcal{A}) \implies \exists P_{0} \in \mathcal{P} : l(P_{0}) = m$. $P_{0}$ è un cammino $(v_{0},v_{1},\dots,v_{n})$ in quanto se non lo fosse, ci sarebbe un $v_{i} = v_{j}$ per qualche $i\neq j$ che potrebbe essere cancellata per ottenere una passeggiata più corta.
+Scritto meglio:
+Supponiamo per assurdo che $P_{0} = (v = v_{0}, v_{1}, \dots, v_{n} = w)$ non sia un cammino, allora $\exists i, j \in \{ 0, 1, \dots, n \} : i \neq j,v_{i} = v_{j}$. Possiamo supporre che $i < j$. Consideriamo $P_{1} = (v_{0}, v_{1}, \dots, v_{i}, v_{j+1}, \dots, v_{n})$, iottenuto da $P_{0}$ rimuovendo il ciclo $(v_{i+1}, \dots, v_{j})$, allora $P_{1} \in \mathcal{P}$  poiché $\{ v_{i}, v_{j+1} \} = \{ v_{j}, v_{j+1} \} \in E$. Vale: $l(P_{1}) = l(P_{0}) - (j - i) = m - (j - i) < m = min(\mathcal{A})$. Ma ciò è assurdo perché contraddice la minimalità di $m$.

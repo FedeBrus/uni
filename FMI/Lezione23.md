@@ -15,7 +15,7 @@ Se $d=(\underbrace{ 0,\dots,0 }_{ m },d_{1},\dots,d_{n}) \in \mathbb{N}^{n+m}$ c
 
 ### Ostruzione 2
 #### Esempio
-$d=(1,2,3,4,5,6,7,8,8)\in \mathbb{N}^{8}$.
+$d=(1,2,3,4,5,6,7,8,8)\in \mathbb{N}^{9}$.
 Supponiamo che $\exists G$ con $score(G)=d$, allora $|V(G)|=9$ e due suoi vertici $v,w$ sono di grado massimo ($deg_{G}(v)=8, deg_{G}(w)=8$). Allora $\forall x \in V(G), deg_{G}(x)\geq 2$. Ma $d$ ha un'entrata uguale a $1$ quindi non può essere lo score di un grafo.
 ### Corollario
 Fissiamo $h,k \in \mathbb{N} \setminus \{ 0 \}, n = h+k$.
@@ -55,7 +55,7 @@ Sia $n \in \mathbb{N} \setminus \{ 0 \}$, sia $d=(d_{1},\dots,d_{n})\in \mathbb{
 
 1. Se $d = (0, \dots, 0, 2)$ o $d=(0,\dots,0,2,2)$ allora $d$ non è lo score di un grafo.
 2. Se $d=(0,\dots,0)$ allora $d$ è lo score del grafo avente $n$ vertici isolati.
-3. Se $d = (0,\dots , 0, \underbrace{ 2,\dots, 2 }_{ m }, m \geq 3$ allora $d$ è lo score di $n - m$ vertici isolati e un $m$-ciclo.
+3. Se $d = (0,\dots , 0, \underbrace{ 2,\dots, 2 }_{ m }), m \geq 3$ allora $d$ è lo score di $n - m$ vertici isolati e un $m$-ciclo.
 4. Se $d$ ha un numero disapri di entrate $1$ allora $d$ non è lo score di un grafo
 Supponiamo quindi che $d$ possieda un numero pari di componenti uguali a $1$. Più precisamente:
 $$

@@ -6,10 +6,10 @@ Dati $\alpha, \beta \in \left(\mathbb{Z} \big/_{n\mathbb{Z}} \right)^{*}$, valgo
 
 ### Dimostrazione
 $(\alpha \beta)(\beta^{-1}\alpha^{-1}) = \alpha(\beta \beta^{-1})\alpha^{-1} = (\alpha [1]_{n})\alpha^{-1} = \alpha \alpha^{-1} = [1]_{n}$.
-$\alpha \in \left(\mathbb{Z} \big/_{n\mathbb{Z}} \right)^{*} \Longleftrightarrow \exists a^{-1} \in \mathbb{Z} \big/_{n\mathbb{Z}}$ tale che $\alpha(\alpha^{-1}) = [1]_{n} \implies a^{-1} \in \left(\mathbb{Z} \big/_{n\mathbb{Z}} \right)^{*}$ e $\alpha = (\alpha^{-1})^{-1}$.
+$\alpha \in \left(\mathbb{Z} \big/_{n\mathbb{Z}} \right)^{*} \Longleftrightarrow \exists \alpha^{-1} \in \mathbb{Z} \big/_{n\mathbb{Z}}$ tale che $\alpha(\alpha^{-1}) = [1]_{n} \implies \alpha^{-1} \in \left(\mathbb{Z} \big/_{n\mathbb{Z}} \right)^{*}$ e $\alpha = (\alpha^{-1})^{-1}$.
 
 ### * Teorema 13.5 (Teorema di Fermat-Eulero)
-Sia $n > 0$. Per ogni $\alpha \in (\mathbb{Z} \big/ _n \mathbb{Z})^{*}$, vale:
+Sia $n > 0$. Per ogni $\alpha \in (\mathbb{Z} \big/ _{n \mathbb{Z}})^{*}$, vale:
 $$
 \alpha^{\phi(n)} = [1]_{n} \text{ in } \left( \mathbb{Z} \big/_{n\mathbb{Z}} \right)^{*}
 $$
@@ -26,18 +26,28 @@ L_{\alpha} : \beta &\mapsto \alpha \beta
 \end{align}
 $$
 ovvero $L_{\alpha}(\beta):=\alpha \beta, \forall \beta \in (\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}$. Con il lemma precedente proviamo che $L_{\alpha}$ è iniettiva.
-Siano $\beta_{1}, \beta_{2} \in (\mathbb{Z} \big/ _{n\mathbb{Z}})*$ tale che $L_{\alpha}(\beta_{1}) = L_{\alpha}(\beta_{2})$.
-$L_{\alpha}(\beta_{1}) = \alpha \beta_{1}$ e $L_{\alpha}(\beta_{2})=\alpha \beta_{2}$. Siccome $L_{\alpha}$ è ben definita allora: $\beta_{1} = \beta_{1}[1]_{n} = (\alpha^{-1}\alpha)\beta_{1} = \alpha \beta_{1} =L_{\alpha}(\beta_{1}) = L_{\alpha}(\beta_{2})=\alpha \beta_{2}=(\alpha^{-1}\alpha)\beta_{2}=[1]_{n}\beta_{2}=\beta_{2} \implies \beta_{1} = \beta_{2}$.
-
+Siano $\beta_{1}, \beta_{2} \in (\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}$ tale che $L_{\alpha}(\beta_{1}) = L_{\alpha}(\beta_{2})$.
+$L_{\alpha}(\beta_{1}) = \alpha \beta_{1}$ e $L_{\alpha}(\beta_{2})=\alpha \beta_{2}$. Siccome $L_{\alpha}$ è ben definita allora: 
+$$
+\begin{align}
+L_{\alpha}(\beta_{1}) &= L_{\alpha}(\beta_{2}) \\
+\alpha \beta_{1}  & = \alpha \beta_{2} \\
+&\Downarrow \\
+\alpha^{-1}\alpha \beta_{1}  & = \alpha^{-1}\alpha \beta_{2}  \\
+[1]_{n}\beta_{1} & = [1]_{n} \beta_{2} \\
+ & \Downarrow \\
+\beta_{1} &= \beta_{2}
+\end{align}
+$$
 Si ha che $\left| (\mathbb{Z} \big/ _{n \mathbb{Z}})^{*} \right| = \left| L_{\alpha} (\mathbb{Z} \big/ _{n\mathbb{Z}})^{*} \right|$ per via del lemma dei cassetti.
 Siccome è un insieme finito, $L_{\alpha}$ è anche surgettiva, perciò essendo anche iniettiva è una bigezione.
 
 Segue che $L_{\alpha}$ è una permutazione di $(\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}$. Dunque se $(\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}=\{ \beta_{1}, \beta_{2}, \dots, \beta_{k} \}$ con $k = \phi(n)$, allora $\{ \alpha \beta_{1}, \alpha \beta_{2}, \dots, \alpha \beta_{k} \} = \{ \beta_{1}, \beta_{2}, \dots, \beta_{k} \}$.
 Poiché sono gli stessi elementi eventualmente permutatu di $\mathbb{Z} \big/_{n\mathbb{Z}}$ e $(\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}$ ha un prodotto associativo e commutativo, vale:
 $$
-\beta_{1} \beta_{2}\dots \beta_{k} =\alpha \beta_{1} \alpha \beta_{2}\dots \alpha \beta_{k} = \alpha^{k} \beta_{1} \beta_{2} \dots \beta_{k}
+\beta_{1} \beta_{2}\dots \beta_{k} = L_{\alpha}(\beta_{1})L_{\alpha}(\beta_{2})\dots L_{\alpha}(\beta_{k}) = \alpha \beta_{1} \alpha \beta_{2}\dots \alpha \beta_{k} = \alpha^{k} \beta_{1} \beta_{2} \dots \beta_{k}
 $$
-Definiamo $\gamma:= \beta_{1}\beta_{2}\dots \beta_{k} \in (\mathbb{Z} \big/ _n\mathbb{Z})^{*}$ grazie al lemma 13.4.
+Definiamo $\gamma:= \beta_{1}\beta_{2}\dots \beta_{k} \in (\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}$ grazie al lemma 13.4.
 Dunque $\gamma = \alpha^{k}\gamma \implies [1]_{n} = \gamma \gamma^{-1} = \alpha^{k}(\gamma \gamma^{-1})=\alpha^{k}[1]_{n}=\alpha^{k} \implies \alpha^{k}=[1]_{n}$ e quindi $\alpha^{\phi(n)} = [1]_{n}$.
 
 ### Corollario 13.6 (Piccolo teorema di Fermat)

@@ -73,7 +73,7 @@ Siccome è la somma di numeri dispari, allora $|D|$ è pari.
 $$
 score(G) = (1,2,2,4,4,5,5,6,7,7)
 $$
-Il grado $G$ non può esistere per il lemma delle strette di mano.
+Il grafo $G$ non può esistere per il lemma delle strette di mano.
 
 ### Osservazione
 Sia $d = (1,2,2,4,4,5,5,6,7)$.
@@ -101,4 +101,4 @@ In generale si dice $n$-connesso se posseide almeno $n+1$ vertici e vale: $\fora
 Ogni grafo 2-connesso è connesso.
 
 ### Dimostrazione
-Sia $G=(V,E)$ 2-connesso. Vogliamo che $\forall v, w \in V, v\neq w, v,w$ sono congiungibili. Se prendiamo $z \in V \setminus \{ v, w \}$. Se togliamo $z$ abbiamo che per definizione $G - z$ è connesso. Siccome $v,w \in V(G- z)$, allora $\exists P$ passeggiata in $G-z$ che congiunge $v, w$. Poiché $G-z$ è un sottografo di $G$, allora $v \sim w$ in $G$ e dunque per l'arbitrarietà di $v, w$, $G$ è connesso.
+Sia $G=(V,E)$ 2-connesso. Vogliamo che $\forall v, w \in V, v\neq w, v,w$ sono congiungibili. Prendiamo $z \in V \setminus \{ v, w \}$. Se togliamo $z$ abbiamo che per definizione $G - z$ è connesso. Siccome $v,w \in V(G- z)$, allora $\exists P$ passeggiata in $G-z$ che congiunge $v, w$. Poiché $G-z$ è un sottografo di $G$, allora $v \sim w$ in $G$ e dunque per l'arbitrarietà di $v, w$, $G$ è connesso.

@@ -74,7 +74,7 @@ Ora si assuma $P(n)$ vera e sia $n \in \mathbb{N}$: bisogna verificare che $P(n)
 $$
 1 + succ(n) = succ(1 + n)
 $$
-Siccome $P(n)$ è assunta essere vera è possibile la seconda parte dell'equazione nel seguente modo:
+Siccome $P(n)$ è assunta essere vera è possibile scrivere la seconda parte dell'equazione nel seguente modo:
 $$
 succ(1+ n) = succ(n+1)
 $$
@@ -124,7 +124,7 @@ Verifichiamo la seguente condizione:
 $$
 P(1) = \left(  \frac{1}{2^{1}}  = 2- \frac{3}{2}\right) \Longleftrightarrow P(1) = \left( \frac{1}{2} = \frac{4-3}{2} \right)  \Longleftrightarrow P(1) = \left( \frac{1}{2} = \frac{1}{2} \right)
 $$
-Dunque la abse dell'induzione (per $h = 1$) è verificata, in quanto $P(1)$ è vera, (base dell'induzione).
+Dunque la base dell'induzione (per $h = 1$) è verificata, in quanto $P(1)$ è vera, (base dell'induzione).
 - Sia $n \in \mathbb{N}$ e si assuma che $P(n)$ sia vera, ovvero:
 $$
 P(n) = \left( \sum_{k=1}^{n}  \frac{k}{2^{k}} = 2 - \frac{n + 2}{2^{n}} \right)  \text{ è vera}

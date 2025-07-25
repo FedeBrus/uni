@@ -6,9 +6,9 @@ Un grafo hamiltoniano è sempre un grafo finito e possiede almeno tre vertici, i
 
 ### Lemma 17.18 
 Un grafo hamiltoniano è 2-connesso.
+
 ### Dimostrazione
-Sia $G= (V,E)$ un grafo hamiltoniano. Sappiamo che $|V|\geq 3$. Disponendo i vertici in una disposizione planare in modo che siano
-i vertici di un poligono regolare. Allora possiamo supporre che i lati di tale poligono formino il ciclo hamiltoniano. Se si considera ora $G - v_{i}$, qualsiasi $v_{i}$, il grafo $G-v_{i}$ possiede un cammino verde che connette tutti gli altri vertici.
+Sia $G= (V,E)$ un grafo hamiltoniano. Sappiamo che $|V|\geq 3$. Disponendo i vertici in una disposizione planare in modo che siano i vertici di un poligono regolare. Allora possiamo supporre che i lati di tale poligono formino il ciclo hamiltoniano. Se si considera ora $G - v_{i}$, qualsiasi $v_{i}$, il grafo $G-v_{i}$ possiede un cammino verde che connette tutti gli altri vertici.
 
 ### Osservazione
 Hamiltonianità $\implies$ 2-connessione $\implies$ connessione.
@@ -66,4 +66,4 @@ Saltiamo il 3° passo.
 Il primo è hamiltoniano, mentre gli altri due no. Sicuramente $G$ non è isomorfo a $G'$ e a $G''$.
 Rimane però il dubbio tra $G'$ e $G''$.
 
-Possiamo costruire un isomorfismo partendo dalle sizurezze. Ad esempio dobbiamo sicuramente mappare $g'$ a $g''$. Dopodiché diffondendo si sarebbe dovuto prendere il vertice adiacente di grado massimo e mappare il vertice di grado massimo adiacente a $g'$ al vertice di grado massimo adiacente a $g''$.
+Possiamo costruire un isomorfismo partendo dalle sicurezze. Ad esempio dobbiamo sicuramente mappare $g'$ a $g''$. Dopodiché diffondendo si sarebbe dovuto prendere il vertice adiacente di grado massimo e mappare il vertice di grado massimo adiacente a $g'$ al vertice di grado massimo adiacente a $g''$.

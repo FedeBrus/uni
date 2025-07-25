@@ -143,9 +143,3 @@ $$
 Siano $G = (V, E)$ e $G'=(V', E')$. Diciamo che $G'$ è sottografo di $G$ se $V' \subset V$ e $E' \subset E$.
 
 Se $G'$ è un sottografo di $G$ e i lati $E' = \{ e \in E | e = \{ v_{1},v_{2} \}, v_{1},v_{2} \in V' \}$, allora $G'$ è il sottografo di $G$ indotto da $V'$ e si indica con $G' = G[V']$.
-
-#### Esempio
-Consideriamo $G$ e $G'$ i seguenti grafi:
-
-
-Allora $G'$ è sottografo di $G$. Ma non è indotto, perché manca il lato $\{ 3, 5 \}$.

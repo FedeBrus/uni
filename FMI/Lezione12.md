@@ -11,9 +11,6 @@ Allora $[a]_{n} = [r]_{n}$.
 ### Dimostrazione
 $a = qn + r \Longleftrightarrow a-r = qn \implies n|a-r \Longleftrightarrow a \equiv r\  (\text{mod}\ n) \implies [a]_{n}=[r]_{n} \in 2^{\mathbb{Z}}$.
 
-#### Interpretazione geometrica
-![[12_1]]
-
 ### Corollario 11.14
 $\mathbb{Z} \big/_{n\mathbb{Z}} = \{ [0]_{n}, [1]_{n}, \dots, [n-1]_{n} \}, n>0$.
 ### Dimostrazione

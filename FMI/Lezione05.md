@@ -15,7 +15,7 @@ $$
 $$
 La base per induzione è verificata.
 (Passo induttivo) $\underbrace{ n \geq 2, n }_{ * } \implies  n+ 1$.
-Assumiamo che $\sum_{k=1}^{n} 6k^{2} = n(n+1)(2n+1)$ per qualche $n\geq 1$ (ipotesi induttiva).
+Assumiamo che $\sum_{k=1}^{n} 6k^{2} = n(n+1)(2n+1)$ per qualche $n\geq 2$ (ipotesi induttiva).
 Dobbiamo provare che:
 $$
 \begin{align}
@@ -41,7 +41,7 @@ $$
 \begin{align}
 (n+1)[n(2n+1)+6(n+1)] = (n+1)(n+2)(2n+3) &\Longleftrightarrow (n(2n+1)+6(n+1)) = (n+2)(2n+3) \\
 &\Longleftrightarrow 2n^{2} + n + 6n +6 = 2n^{2} + 3n + 4n +6 \\
-& \Longleftrightarrow 2n^{2} + 7n 6 = 2n^{2} + 7n +6
+& \Longleftrightarrow 2n^{2} + 7n + 6 = 2n^{2} + 7n +6
 \end{align}
 $$
 Poiché l'ultima è un'identità, anche la prima uguaglianza è verificata.

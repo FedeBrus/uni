@@ -47,7 +47,7 @@ Sia $n:=|X|$. Procediamo per induzione su $n$.
 
 Base induzione $n=0$.
 Sia $|X| = 0$, ovvero $X=\emptyset \implies Y=\emptyset \implies |Y| = 0 \leq 0 = |X|$.
-La base è dimostrata.
+La base dell'induzione è dimostrata.
 
 Passo induttivo $n \geq 0, n \implies n+1$.
 Assumo l'asserto vero per $n$ e lo dimostro per $n + 1$.
@@ -64,7 +64,7 @@ Il passo induttivo è stato fatto e dunque grazie al principio di induzione l'as
 
 Poiché $X$ finito, $Y \subsetneq X \implies |Y| < |X|$, abbiamo il seguente corollario.
 ### Corollario
-Un'insieme finito non è equipotente a nessuno dei suoi sottoinsiemi propri.
+Un insieme finito non è equipotente a nessuno dei suoi sottoinsiemi propri.
 ### Corollario
 L'insieme $\mathbb{N}$ dei numeri naturali è infinito.
 ### Dimostrazione

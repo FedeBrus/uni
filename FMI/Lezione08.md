@@ -46,7 +46,7 @@ $c|m$ e $c|n$ $\Longleftrightarrow$ $\exists k,h \in \mathbb{Z}$ tali che $n = c
 Dunque $xn + ym =xch+yck = c(xh + yk) \implies  c | xn + ym$.
 
 ## Teorema 9.8
-Per ogni coppia $n,m \in \mathbb{Z}$ non entrambi nulli, esiste ed è unico il MCD, che verrà indicato con $(n,m):= MCD(m, m)$.
+Per ogni coppia $n,m \in \mathbb{Z}$ non entrambi nulli, esiste ed è unico il MCD, che verrà indicato con $(n,m):= MCD(n, m)$.
 ### Dimostrazione
 L'unicità è dimsotrata nella proposizione 9.6.
 Proviamo l'esistenza.

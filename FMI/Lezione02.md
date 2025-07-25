@@ -21,12 +21,6 @@ $$
 Per l'assioma di separazione, se si parte da un insieme e ad ogni elemento è associabile una certa affermazione $P(f)$, l'insieme ottenuto è un insieme, dunque $Y^{X}$ è un insieme.
 #### Esercizio 1.6
 Determinare $Y^{\emptyset}$ e $\emptyset^{X}$:
-
-Per definizione $Y^{\emptyset} = \{ f \in 2^{\emptyset \times Y} | \forall x \in \emptyset, \exists!y \in Y : (x, y) \in f \}$, ovvero l'insieme $\{ f  | f: \emptyset \rightarrow Y \}$, quindi $Y^{\emptyset}$ contiene solamente la funzione vuota associa a $Y$ e dunque $Y^{\emptyset} = \{ \emptyset \}$.
-
-Per definizione $\emptyset^{X} = \{ f \in 2^{X \times \emptyset} | \forall x \in X, \exists!y \in \emptyset : (x, y) \}$, ovvero l'insieme $\{ f | f : X \rightarrow \emptyset \}$, ma per definizione di funzione ogni elemento del dominio deve essere mappato a uno e uno solo elemento del codominio, ma il codominio in questo caso è l'insieme vuoto, dunque non è possibile costruire una tale funzione. Dunque $\emptyset^{X} =  \emptyset$
-
-Soluzione:
 $X = \emptyset \implies X \times Y = \emptyset \times Y = \emptyset$
 $2^{X \times Y} = 2^{\emptyset} = \{ \emptyset \} \implies$ l'unica relazione tra $\emptyset$ e $Y$ è $f=\emptyset$.
 $Y^{\emptyset} = \{ f \in \{ \emptyset \} | \forall x \in f, \exists!y \in Y: (x,y) \in f\}$
@@ -69,10 +63,10 @@ Dunque una fibra rappresenta l'insieme delle soluzioni di $f(x) = b$.
 ### Def Iniettività
 Sia $f: X \rightarrow Y$ una funzione.
 Diciamo che $f$ è iniettiva se $\forall x_{1},x_{2}\in X : x_{1} \neq x_{2}\implies f(x_{1}) \neq f(x_{2})$, ovvero se le sue fibre sono vuote o singoletti.
-### Def Suriettiva 
+### Def Suriettività 
 Sia $f: X \rightarrow Y$ una funzione.
 Diciamo che $f$ è suriettiva se $f(X) = Y$, ovvero $\forall y\in Y, \exists x \in X : f(x) = y$, ovvero se le sue fibre sono non vuote.
-### Def Bigettiva
+### Def Bigettività
 Sia $f: X \rightarrow Y$ una funzione.
 Diciamo che $f$ è bigettiva se è al contempo iniettiva e suriettiva, ovvero se le sue fibre sono singoletti.
 #### Esempio
@@ -92,7 +86,6 @@ Diciamo che $f$ è invertibile se $\exists g:Y \rightarrow X  : g(f(x)) = x,  \f
 
 ### Proposizione (1.21)
 Sia $f:X \rightarrow Y$ una funzione bigettiva. Allora $f$ è invertibile ed esiste una sola inversa di $f$, detta $f^{-1}:Y\rightarrow X$.
-
 ### Dimostrazione
 Osserviamo che $\forall y \in Y, f^{-1}(y) = \{ x_{y} \}$ per qualche unico $x_{y} \in X$ (ovvero $f(x_{y}) = y$). Definiamo $g:Y\rightarrow X$ ponendo $g(y) := x_{y}, \forall y \in Y$.
 Vale:

@@ -38,7 +38,7 @@ Osserviamo che:
 - $n|c \Longleftrightarrow \exists k \in \mathbb{Z}$ tale che $c = kn$. $c'(n,m) = c = kn =kn'(n,m) \implies c'(n,m) =kn'(n,m)$. Siccome $(n, m) \neq 0$ per definizione.
 Dunque $c' = kn' \implies n'|c'$. La stessa procedura vale per $m$.
 
-Siccome $(n',m')=1$ e $n'|c'$ e $m'|c'$, per la 9.31 $n'm'|c' \implies M=n'm'(n,m)|c'(n,m) = c$. Dunque $M|c$.
+Siccome $(n',m')=1$ e $n'|c'$ e $m'|c'$, per la 10.1 $n'm'|c' \implies M=n'm'(n,m)|c'(n,m) = c$. Dunque $M|c$.
 
 ### Osservazione computazionale
 INPUT: $n, m \in \mathbb{Z}$.
@@ -58,8 +58,8 @@ Ipotesi induttiva: Sia dato $n \geq 2, n\in \mathbb{N}$. Assumiamo di saper fatt
 
 Dobbiamo provare che siamo in grado di fattorizzare anche $n$.
 Se $n$ è primo, allora $a = 1, p_{1}=n \implies n = p_{1}$.
-Se $n$ non è primo, ovvero $n = d_{1}d_{2}$. $d_{1}\neq 0,1,n$ sicuramente. Inoltre uno dei due non può essere maggiore di $n$, perché siccome sicuramente sono maggiori di $1$, $d_{1}d_{2}>n$ ma questo è assurdo. Dunque $2 \leq d_{1} < n$ e $2 \leq d_{2} < n$.
-Per ipotesi induttiva $\exists p_{1},\dots,p_{a}$ primi eventualmente ripetutti e $\exists p_{a+1},\dots,p_{a+b}$ primi eventualmente ripetuti tali che $d_{1} = p_{1}p_{2} \dots p_{a}$ e $d_{2} = p_{a+1}p_{a+2} \dots p_{a+b}$. Ma allora:
+Se $n$ non è primo, ovvero $n = d_{1}d_{2}$. $d_{1}, d_{2}\neq 0,1,n$ sicuramente. Inoltre uno dei due non può essere maggiore di $n$, perché siccome sicuramente sono maggiori di $1$, $d_{1}d_{2}>n$ ma questo è assurdo. Dunque $2 \leq d_{1} < n$ e $2 \leq d_{2} < n$.
+Per ipotesi induttiva $\exists (p_{1},\dots,p_{a})$ primi eventualmente ripetutti e $\exists (p_{a+1},\dots,p_{a+b})$ primi eventualmente ripetuti tali che $d_{1} = p_{1}p_{2} \dots p_{a}$ e $d_{2} = p_{a+1}p_{a+2} \dots p_{a+b}$. Ma allora:
 $$
 n = d_{1}d_{2} = p_{1}p_{2}\dots p_{a}p_{a+1}p_{a+2}\dots p_{a+b}
 $$
@@ -67,7 +67,7 @@ Quindi $n$ è prodotto di numeri primi eventualmente ripetuti.
 Dunque il passo induttivo è stato fatto. Segue che, grazie al principio di induzione di seconda forma, l'asserto è vero $\forall n \geq 2$.
 
 ### Dimostrazione unicità
-Supponiamo che ammetta $\exists p_{1},p_{2},\dots,p_{a}$ e $q_{1},q_{2},\dots,q_{b}$ primi eventualmente ripetuti tali che:
+Supponiamo che $\exists (p_{1},p_{2},\dots,p_{a})$ e $(q_{1},q_{2},\dots,q_{b})$ primi eventualmente ripetuti tali che:
 $$
 p_{1}p_{2}\dots p_{a} = q_{1}q_{2}\dots q_{b}
 $$
@@ -97,7 +97,7 @@ Dunque il passo induttivo è stato fatto. Grazie al principio di induzione, l'as
 L'insieme dei numeri primi è infinito.
 
 ### Dimostrazione
-Supponiamo che $\{ p_{1}, p_{2}, \dots,p_{m} \}$ sia l'insieme di tutti i numeri primi con $m \in \mathbb{N}$.
+Supponiamo per assurdo che $\{ p_{1}, p_{2}, \dots,p_{m} \}$ sia l'insieme di tutti i numeri primi con $m \in \mathbb{N}, m > 0$.
 Definiamo $n:=1+p_{1}p_{2}\dots p_{m} \in \mathbb{N}$. Osserviamo che $n \geq 1+2=3$. Grazie al teorema fondamentale dell'aritmetica, $n$ si può fattorizzare utilizzando $p_{1},\dots,p_{m} \implies \exists i \in \{ 1, \dots, m \}, p_{i}|n$.
 Osserviamo che:
 $$
@@ -110,4 +110,4 @@ n = (p_{1},\dots,p_{i-1},p_{i + 1}, \dots, p_{m})p_{i} + 1 \\
 0 \leq 1 < (p_{1} \geq 2)
 \end{cases}
 $$
-Ma siccomre $r = 1$ e $p \not{|}\ n$ e ciò è assurdo. Dunque i numeri primi non sono finiti.
+Ma siccomre $r = 1$ e $p \not{|}\ n$, ciò è assurdo. Dunque i numeri primi non sono finiti.

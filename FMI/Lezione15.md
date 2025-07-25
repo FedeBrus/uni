@@ -51,7 +51,7 @@ Sia $r \in \{ 1, \dots, p - 1 \}$. Vale:
 $$
 [r]_{p} \in \left( \mathbb{Z} \big/_{p\mathbb{Z}} \right) ^{*} \Longleftrightarrow (p, r) = 1
 $$
-Ma siccome $p \not{|}\ r$ e $p$ primo $\implies$ $(p, r)=1 \implies \exists[r]_{p}^{-1}$
+Ma siccome $p \not{|}\ r$ e $p$ primo $\implies$ $(p, r)=1 \implies \exists[r]_{p}^{-1}$.
 ### Corollario
 Se $p$ è primo,
 $$

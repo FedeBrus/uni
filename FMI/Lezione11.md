@@ -40,7 +40,7 @@ Sia $X$ un'insieme non vuoto e sia $\sim$ una relazione di equivalenza su $X$. V
 2. $\implies$: Supponendo che $[x]_{\sim} = [y]_{\sim}$. Vale: $x \in [x]_{\sim} = [y]_{\sim} \implies x \sim y$, per definizione di $[y]_{\sim}$.
 	$\impliedby$: Supponiamo che $x \sim y$, dobbiamo provare che $[x]_{\sim} = [y]_{\sim}$.
 		$[x]_{\sim} \subset [y]_{\sim}$: se $z \in [x]_{\sim}$. Quindi $z \sim x$ e siccome $x \sim y$, allora per la transitività $z \sim y$ e quindi $z \in[y]_{\sim}$.
-		$[x]_{\sim} \supset [y]_{\sim}$. Il procedimento è lo stesso sopra utilizzando inoltre la proprietà simmetrica.
+		$[x]_{\sim} \supset [y]_{\sim}$.:Il procedimento è lo stesso sopra utilizzando inoltre la proprietà simmetrica.
 3. Supponiamo che $[x]_{\sim} \cap [y]_{\sim} \neq \emptyset$. Scelgo $z \in [x]_{\sim} \cap [y]_{\sim} \Longleftrightarrow z \in [x]_{\sim}, z \in [y]_{\sim}$. Quindi $z \sim x$ e $z \sim y$, ma allora $x \sim y$ e per il punto 2 allora $[x]_{\sim} = [y]_{\sim}$.
 
 ### Definizione
@@ -48,7 +48,7 @@ Siano $X$ e $\sim$ come sopra. Definiamo l'insieme quoziente $X$ modulo $\sim$ c
 $$
 X\big/_{\sim} := \{ [x]_{\sim} \in 2^{X} | x \in X \} = \bigcup_{x \in X}  \{ [x]_{\sim} \}
 $$
-La seconda uguaglianza indica una notazione più precisa perché si eliminano le ripetizioni.
+La prima uguaglianza indica una notazione più precisa perché si eliminano le ripetizioni.
 Le $[x]_{\sim} \in X\big/_{\sim}$, allora ogni $y \in [x]_{\sim}$ si dice essere un rappresentante della $\sim$-classe $[x]_{\sim}$.
 
 Fissiamo $n \in \mathbb{Z}$ Poniamo $X:=\mathbb{Z}$ e $\sim_{n} = (\bullet \equiv \bullet\ (\text{mod}\ n))$, ovvero $\forall a,b \in \mathbb{Z}$, $a \sim_{n} b \Longleftrightarrow a\equiv b\ (\text{mod}\ n) \Longleftrightarrow n| a-b$.

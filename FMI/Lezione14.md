@@ -76,7 +76,7 @@ x \equiv 333\ (\text{mod}\ 3078) \\
 x \equiv 0\ (\text{mod}\ 17)
 \end{cases}
 $$
-Grazie al 中国剩余定理, il sistema è compatibile $(3078, 17)|333 - 0$.
+Grazie al 中国剩余定理, il sistema è compatibile se $(3078, 17)|333 - 0$.
 $$
 (3078, 17) = 1 | 333 = 333 - 0
 $$
@@ -189,4 +189,3 @@ $$
 \end{align}
 $$
 Da questi conti segue che $[11]_{30}^{-1}=[11]_{30} \in \mathbb{Z} \big/_{30\mathbb{Z}}$, dunque l'insieme degli interi inversi di $11$ modulo $30$ è uguale a $[11]_{30}=\{ \dots, -19, 11, 41, 71, 101, \dots \}\subset \mathbb{Z}$.
-
