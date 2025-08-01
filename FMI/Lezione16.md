@@ -43,7 +43,7 @@ Si ha che $\left| (\mathbb{Z} \big/ _{n \mathbb{Z}})^{*} \right| = \left| L_{\al
 Siccome è un insieme finito, $L_{\alpha}$ è anche surgettiva, perciò essendo anche iniettiva è una bigezione.
 
 Segue che $L_{\alpha}$ è una permutazione di $(\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}$. Dunque se $(\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}=\{ \beta_{1}, \beta_{2}, \dots, \beta_{k} \}$ con $k = \phi(n)$, allora $\{ \alpha \beta_{1}, \alpha \beta_{2}, \dots, \alpha \beta_{k} \} = \{ \beta_{1}, \beta_{2}, \dots, \beta_{k} \}$.
-Poiché sono gli stessi elementi eventualmente permutatu di $\mathbb{Z} \big/_{n\mathbb{Z}}$ e $(\mathbb{Z} \big/ _{n\mathbb{Z}})^{*}$ ha un prodotto associativo e commutativo, vale:
+Poiché sono gli stessi elementi eventualmente permutati di $\mathbb{Z} \big/_{n\mathbb{Z}}$ (e quindi $(\mathbb{Z} \big/ _{n\mathbb{Z}})^{*})$ e ha un prodotto associativo e commutativo, vale:
 $$
 \beta_{1} \beta_{2}\dots \beta_{k} = L_{\alpha}(\beta_{1})L_{\alpha}(\beta_{2})\dots L_{\alpha}(\beta_{k}) = \alpha \beta_{1} \alpha \beta_{2}\dots \alpha \beta_{k} = \alpha^{k} \beta_{1} \beta_{2} \dots \beta_{k}
 $$

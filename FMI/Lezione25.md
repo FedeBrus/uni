@@ -12,7 +12,7 @@ $\impliedby)$ Supponiamo che valga $(\star \star)$. Allora osserviamo che:
 - $n = 1 + \frac{1}{2} \sum_{i=1}^{n} d_i, d_{1} \geq 1 \implies n\geq 2$
 - $d_{1} = 1$, se non lo fosse, allora $d_{i} \geq 2, \forall i$ e si avrebbe che $2n - 2 = \sum_{i=1}^{n} d_{i} \geq \sum_{i=1}^{n} 2 = 2n$, il che è impossibile.
 - $d_{2} = 1$, se non lo fosse, allora $d_{i} \geq 2, \forall i \geq 2$, e si avrebbe che $2n - 2 = d_{1} + \sum_{i=2}^{n} d_{i} \geq 1 + 2(n-1) = 2n - 1$, il che è impossibile.
-- Se $d_{i} = 1, \forall i$ allora si avrebbe che $2n - 2 = \sum_{i=1}^{n} 1 = n \Longleftrightarrow 2n-2 =n \Longleftrightarrow n = 2 \implies d=(1,1)$ e in questo caso $d$ è lo score di (mostra l'albero con due palline), che è un albero.
+- Se $d_{i} = 1, \forall i$ allora si avrebbe che $2n - 2 = \sum_{i=1}^{n} 1 = n \Longleftrightarrow 2n-2 =n \Longleftrightarrow n = 2 \implies d=(1,1)$ e in questo caso $d$ è lo score di un grado composto da due vertici e un lato incidente su di essi, che è un albero.
 
 Supponiamo infine che $d$ sia di questa forma:
 $$
@@ -24,7 +24,7 @@ Si crei un grafo segmento con $v_{m+1}$ fino a $v_{n}$. Dobbiamo aggiungere a $v
 Chiamiamo questo grafo $T$. Allora $T$ è un grafo con $n - m$ vertici $v_{m+1}, \dots, v_{n}$ di grado $d_{m+1}, \dots, d_{n}$ rispettivamente. Gli altri vertici sono foglie per costruzione. Dunque basta verificare che il numero totale di foglie sia $m$.
 $$
 \begin{align}
-\#F &= (d_{m+1} - 1) (d_{m+2} - 2) + \dots + (d_{n-1}-2) + (d_{n} - 1) \\
+\#F &= (d_{m+1} - 1) + (d_{m+2} - 2) + \dots + (d_{n-1}-2) + (d_{n} - 1) \\
  & = \left( \sum_{i= m+1}^{n} d_{i} \right) - 2 - 2((n-1) - (m+1)) \\
  & = \left( \sum_{i= m+ 1}^{n} d_{i} \right) - 2 - 2n + 2m + 4 \\
  & = \left( \sum_{i=1}^{n} d_{i} \right)  - 2n + m + 2 \\
@@ -85,7 +85,7 @@ $$
 $$
 Perché per ipotesi $|E(G)| = \frac{1}{2} \sum_{i=1}^{n} d_{i} < n - 1 = |V(G)| - 1$.
 Risulta che $|E(G)| < |E(G)|$, che è assurdo. Quindi $G$ non è connesso.
-Se $(FS)$ non vale, non si può dire nulla circa l'esistenza di grafi connessi/sconnessi cons score $d$.
+Se $(FS)$ non vale, non si può dire nulla circa l'esistenza di grafi connessi/sconnessi con score $d$.
 
 ### Lemma di forzatura alla connessione
 Siano $n \in \mathbb{N} \setminus \{ 0 \}$, $d = (d_{1}, \dots, d_{n}) \in \mathbb{N}^{n}$ con $d_{1} \leq \dots \leq d_{n}$. Se vale:
@@ -99,7 +99,7 @@ Se $n= 1 \implies d = (d_{1})$ e $d_{1} = 0 = d_{n}$ e dunque $0+0 = 1-1 =0$. Qu
 Se $n \geq 2$, sia $w \in V(G)$ con $deg_{G}(w) = d_{n}$. Mostriamo che ogni vertice di $V(G)$ è collegato a $w$ con un cammino di lunghezza $\leq 2$.
 Siano $v_{1}, \dots, v_{d_{n}}$ i vertici adiacenti a $w$. Per loro non c'è nulla da dimostrare.
 Sia quindi $v \in V(G) \setminus \{ v_{1}, \dots, v_{d_{n}}, w \}$. Vogliamo mostrare che $v$ è adiacente a uno dei $v_{i}$. Supponiamo che non lo sia, siano $d' = deg_{G}(v) \geq d_{1}$ e $v_{1}', \dots, v_{d'}'$ i vertici adiacenti a $v$.
-Chiamiamo $A = \{ v, v_{1}', \dots, v'_{d'} \}$, $B = \{ w, v_{1}, \dots, v_{d_{n}} \}$. Allora $A \cap B \neq \emptyset$, $A \cup B \subset V(G)$, quindi $n = |V(G)| \geq |A \cup B| = |A| + |B| - |A \cap B| = |A| + |B| = d' + 1 + d_{n}+1 \geq d_{1}+ d_{n} + 2 \geq n - 1 + 2 = n+1$.
+Chiamiamo $A = \{ v, v_{1}', \dots, v'_{d'} \}$, $B = \{ w, v_{1}, \dots, v_{d_{n}} \}$. Allora $A \cap B = \emptyset$, $A \cup B \subset V(G)$, quindi $n = |V(G)| \geq |A \cup B| = |A| + |B| - |A \cap B| = |A| + |B| = d' + 1 + d_{n}+1 \geq d_{1}+ d_{n} + 2 \geq n - 1 + 2 = n+1$.
 Mettendo assieme i pezzi abbiamo trovato che $n \geq n+1$, che è impossibile.
 Allora $v$ è adiacente a uno dei $v_{i}$. Dunque $G$ è connesso.
 ### Osservazione

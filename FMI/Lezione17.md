@@ -2,7 +2,7 @@
 Sia $n > 0$, sia $c > 0$ tale che $(c, \phi(n)) = 1$ e sia $d > 0$ tale che $d\in[c]_{\phi(n)}^{-1}$. Allora $P_{c}: (\mathbb{Z} \big/_{n\mathbb{Z}})^{*} \rightarrow (\mathbb{Z} \big/_{n\mathbb{Z}})^{*}$ $P_{c}(\alpha) = \alpha^{c}$ è invertibile e l'inversa è $P_{d}$.
 
 ### Corollario 13.8
-Sia $n > 0$. Sia $a, c \in \mathbb{Z}$ tali che $c > 0, (c, \phi(n))>1, (a,n)=1$. Consideriamo la seguente congruenza con potenza:
+Sia $n > 0$. Sia $a, c \in \mathbb{Z}$ tali che $c > 0, (c, \phi(n))=1, (a,n)=1$. Consideriamo la seguente congruenza con potenza:
 $$
 x^{c} \equiv a\ (\text{mod}\ n), x \in \mathbb{Z}
 $$

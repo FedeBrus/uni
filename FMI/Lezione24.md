@@ -150,3 +150,27 @@ $$
 \end{align}
 $$
 ma allora $T$ soddisfa la $5)$. Inoltre è connesso perché è un albero. Il passo induttivo è stato risolto perciò per il principio di induzione $1) \implies 5)$ è vera.
+
+Dimostrazione che $5) \implies 1)$: procediamo per induzione su $|V|\geq 1$.
+Passo base: $|V| = 1$:
+L'unico grafo connesso $T$, con $|V|=1$ è un singolo vertice isolato, dunque $T$ è un albero.
+Passo induttivo: sia $T$ un grafo connesso che soddisfa la formula di Eulero e con $|V| \geq 2$. Suppponiamo che $5) \implies 1)$ sia vera per ogni grafo finito con $|V| - 1$ vertici (ipotesi induttiva). Dimostriamo che $T$ è un albero.
+$T$ ha sicuramente almeno una foglia, se così non fosse allora $\forall v\in V, deg_{T}(v) \geq 2$ e dunque:
+$$
+\underbrace{ 2|V| - 2 = 2|E| }_{ \text{formula di Eulero} }\geq \sum_{v\in V} deg_{T}(v) \geq \sum_{v \in V}2=2|V|
+$$
+Ma questo è assurdo perché vorrebbe dire che $2|V|-2\geq 2|V|$. Dunque $\exists v \in V$ foglia.
+Consideriamo il grafo $T-v$. $T-v$ è connesso per via dell'esercizio precedente e soddisfa la formula di Eulero poiché $T$ la soddisfa, infatti $|V(T-v)| = |V(T)|-1$, $|E(T-v)|=|E(T)|-1$ poiché $v$ è foglia.
+Poiché $|V(T-v)| = |V(T)|-1$, per ipotesi induttiva $T-v$ è un albero. Ma allora anche $T$ è un albero, infatti sicuramente è connesso per ipotesi.
+Inoltre $T$ non ha cicli, perché se esistesse un ciclo $(v_{0},\dots,v_{k})$ in $T$ allora, siccome $deg_{T}(v_{i})\geq 2, \forall i \in \{ 0, \dots,k \}$, il ciclo non passerebbe per $v$. Dunque si avrebbe un ciclo in $T-v$, ma ciò è impossibile perché $T-v$ è albero.
+
+Grazie al principio di induzione, $5) \implies 1)$ per ogni grafo finito.
+
+### Osservazione
+Esistono grafi non connessi che soddisfano la formula di Eulero, quindi la connessione in $5)$ è una condizione necessaria.
+
+### Corollario
+Siano $n \in \mathbb{N} \setminus \{ 0 \}$ e $d=(d_{1},\dots,d_{n})\in \mathbb{N}^{n}$ con $1\leq d_{1}\leq\dots \leq d_{n}$. Esiste un alberoo con score $d \Longleftrightarrow$ vale:
+$$
+n-1= \frac{1}{2} \sum_{i=1}^{n} d_{i}
+$$
