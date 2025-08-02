@@ -50,7 +50,6 @@ Ma allora la formula di Eulero vale. Costruiamo un albero con tale score:
 ## Alberi di copertura (Spanning trees)
 Sia $G$ un grafo. Un sottografo $T$ di $G$ è un albero di copertura per $G$ se è un albero e $V(T)=V(G)$.
 Gli alberi di copertura non sono unici.
-
 ### Teorema
 Ogni grafo finito e connesso $G$ possiede almeno un albero di copertura.
 ### Dimostrazione

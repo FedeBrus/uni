@@ -1,4 +1,4 @@
 package com.company.view;
 
-public class ReturnPane {
+public class ClientePane {
 }

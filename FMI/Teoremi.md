@@ -23,6 +23,8 @@ $$
 Sia $X$ un insieme e sia $\leq$ un ordinamento parziale di $X$. Consideriamo $A$ un sottoinsieme di $X$. Diciamo che $z \in A$ è un minimo di $A$ in $(X, \leq)$ se $\forall x \in A, z \leq x$.
 ### Definzione (7.3)
 Un insieme $(X, \leq)$ totalmente ordinato si dice ben ordinato se ogni sottoinsieme non vuoto $A$ di $X$, ammette il minimo. In questo caso di dice che $\leq$ è un buon ordinamento su $X$.
+### Proposizione
+$(\mathbb{N}, \leq)$ è un insieme totalmente ordinato.
 ## Teorema 3.5
 Considerando $(\mathbb{N}, \leq)$ è un insieme ben ordinato.
 ### Dimostrazione
@@ -36,7 +38,7 @@ Base dell'induzione, $n = 0$:
 Dobbiamo provare che $\{ 0 \} \subset B \Longleftrightarrow 0 \in B \Longleftrightarrow 0 \not\in A$. La condizione $0 \not\in A$ è verificata, altrimenti $0 \in A$ e quindi $0$ sarebbe il minimo di $A$ in quanto è addirittura il minimo di $\mathbb{N}$. Segue che $0 \in B$ e la base dell'induzione è verificata.
 
 Passo induttivo, $n \geq 0, n \implies  n+1$:
-Per ipotesi induttiva sappiamo che $A \subset  \{ n+1, n+2, \dots \}$ poiché sicura $\{ 0,1, \dots, n \} \cap A = \emptyset$. Osserviamo che $n+1 \not\in A$, altrimenti $n+1=min(A)$, che è sicuramente falso. Se $n+1 \not\in A \implies n+1 \in B \implies \{ 0,1,\dots,n,n+1 \} \subset B$.
+Per ipotesi induttiva sappiamo che $A \subset  \{ n+1, n+2, \dots \}$ dato che per ipotesi induttiva $\{ 0,1, \dots, n \} \cap A = \emptyset$. Osserviamo che $n+1 \not\in A$, altrimenti $n+1=min(A)$, che è sicuramente falso. Se $n+1 \not\in A \implies n+1 \in B \implies \{ 0,1,\dots,n,n+1 \} \subset B$.
 
 Il passo induttivo è stato fatto e quindi grazie al principio di induzione la $P(n)$ vera, $\forall n \in \mathbb{N} \implies B = \mathbb{N} \Longleftrightarrow A = \emptyset \implies (\mathbb{N}, \leq)$ è ben ordinato.
 ## Teorema 7.5 Principio di induzione di seconda forma
@@ -190,34 +192,45 @@ Siano $X, Y$ due insiemi e siano $n, m \in \mathbb{N} : n < m, X \sim I_{n}, Y \
 Procediamo per induzione su $n\geq0$.
 
 Base dell'induzione $n = 0$.
-Siano $X, Y$ due insiemi e sia $m \in \mathbb{N}$, tale che $0 < m, X \sim I_{0}, Y \sim I_{m} \implies X = \emptyset, Y \neq \emptyset$. Osserviamo che $X^{Y} = \emptyset^{Y}=\emptyset$. Dunque non esistono funzioni $f:Y\rightarrow X$, dunque non esistono neanche iniettive.
+Siano $X, Y$ due insiemi e sia $m \in \mathbb{N}$, tale che $0 < m, X \sim I_{0}, Y \sim I_{m} \neq \emptyset \implies X = \emptyset, Y \neq \emptyset$. Osserviamo che $X^{Y} = \emptyset^{Y}=\emptyset$. Dunque non esistono funzioni $f:Y\rightarrow X$, dunque non esistono neanche iniettive. Dunque la base dell'induzione è verificata.
 
 Passo induttivo $n\geq 0, n \implies n + 1$.
 Siano $X, Y$ due insiemi e sia $m \in \mathbb{N}$ tale che $n + 1 < m, X \sim I_{n+1}, Y \sim I_{m}$.
-Sia $g:I_{n+1} \rightarrow X$ una bigezione e sia $x_{n} := g(n)$.
-Poniamo $X':=X\setminus\{ x_{n} \}$. Definiamo $g^{\star}:I_{n}\rightarrow X'$ ponendo $g^{\star}(a):=g(a), \forall a \in I_{n}$. Dunque $g^{\star}$ è una bigezione $\implies$ $X' \sim I_{n}$.
+Per ipotesi $\exists g:I_{n+1} \rightarrow X$ bigezione. 
+Poniamo $x_{n} := g(n)$.
+Poniamo $X':=X\setminus\{ x_{n} \}$. 
+Osserviamo che la funzione $g^{\star}:I_{n}\rightarrow X'$ ponendo $g^{\star}(a):=g(a), \forall a \in I_{n}$ è una bigezione. Dunque $X' \sim I_{n}$.
 
 Supponiamo per assurdo che esista $f:Y \rightarrow X$ iniettiva.
 Distinguiamo due casi:
 1. $f(Y) \not\ni x_{n}$, ovvero $f(Y)\subset X'$.
 2. $f(Y) \ni x_{n}$.
-Caso 1:
-$f(Y)\subset X'$. Posso definire $f^{\star}:Y \rightarrow X'$ tale che $f^{\star}(y):=f(y),\forall y \in Y$. Allora $f^{\star}$ è iniettiva. Ricordando che $m > n+1>n$, sappiamo per certo che $f^{\star}$ non esiste e dunque $f$ non esiste.
-Caso 2:
-$f(Y) \ni x_{n}$. Poiché $f$ è iniettiva per ipotesi, $\exists!y_{n}\in Y : f(y_{n})=x_{n}$.
-Se $Y':=Y\setminus \{ y_{n} \}$, allora $Y' \sim I_{m - 1}$ e possiamo determinare $f^{\star}:Y' \rightarrow X'$ ponendo $f^{\star}(y):=f(y), \forall y \in Y'$. Dunque $f^{\star}$ è iniettiva. Siccome $m>n+1 \Longleftrightarrow m - 1 > n$, l'ipotesi induttiva ci dice che questo è impossibile, quindi $f^{\star}$ non esiste, quindi $f$ non esiste.
-Abbiamo dunque dimostrato che $P(n+1)$.
+
+Caso 1: $f(Y)\subset X'$. 
+Posso definire $f^{\star}:Y \rightarrow X'$ tale che $f^{\star}(y):=f(y),\forall y \in Y$. 
+Allora $f^{\star}$ è iniettiva. 
+Ricordando che $m > n+1>n$, per ipotesi induttiva $f^{\star}$ non esiste e dunque $f$ non esiste.
+
+Caso 2: $f(Y) \ni x_{n}$. 
+Poiché $f^{-1}(x_{n}) \neq \emptyset$ e $f$ è iniettiva per ipotesi, $\exists!y_{n}\in Y : f(y_{n})=x_{n}$.
+Poniamo $Y':=Y\setminus \{ y_{n} \}$, allora $Y' \sim I_{m - 1}$ e $f(Y') \subset X'$. 
+Possiamo definire $f^{\star}:Y' \rightarrow X'$ ponendo $f^{\star}(y):=f(y), \forall y \in Y'$. 
+Allora $f^{\star}$ è iniettiva. 
+Siccome $m>n+1 \Longleftrightarrow m - 1 > n$, per ipotesi induttiva $f^{\star}$ non esiste e dunque $f$ non esiste.
+
 Il passo induttivo è stato fatto, dunque grazie al principio di induzione l'enunciato del teorema è vera $\forall n\in \mathbb{N}$.
 
-### * Corolloario 4.1
+### Corolloario 4.1
 Siano $X, Y$ due insiemi e siano $n, m \in \mathbb{N}$ tali che $X \sim I_{n}$ e $Y \sim I_{m}$. Allora $X \sim Y \Longleftrightarrow n = m$.
-In particolare, se $\exists n' \in \mathbb{N}$ tale che $X \sim I_{n'}$ allora $n = n'$.
-### Dimostrazione $\impliedby$
+In particolare, se $n' \in \mathbb{N}$ tale che $X \sim I_{n'}$ allora $n = n'$.
+### Dimostrazione
 Se $n = m$, allora $X \sim I_{n}=I_{m} \sim Y \implies X \sim Y$. Componendo le due bigezioni si ottiene una bigezione da $X$ a $Y$.
-### Dimostrazione $\implies$
 Supponiamo che $X \sim Y$. Dobbiamo dimostrare che $n = m$. 
 Supponiamo che $n \neq m$. A meno di scambiare $n$ con $m$ e $X$ con $Y$, possiamo suppore anche che $n < m$: per l'ipotesi sappiamo che $\exists f:I_{m} \sim Y\xrightarrow[\sim]{} X \sim I_{n}$ e dalle ipotesi sappiamo che $n < m$, ma ciò è impossibile per il lemma dei cassetti $\implies n = m$.
 Se $X \sim I_{n'}$, allora $I_{n} \sim X \sim I_{n'}$ e le due composizioni si possono comporre $\implies I_{n} \sim I_{n'} \implies n = n'$.
+
+### Definizione
+Sia $X$ un insieme finito. Definiamo la cardinalità di $X$ come l'unico $n \in \mathbb{N}$ tale che $X \sim I_{n}$. In questo caso scriveremo $|X| = n$.
 ### Proposizione 4.4
 Sia $X$ un insieme finito e sia $Y \subset X$. Allora $Y$ è finito e $|Y| \leq |X|$. Inoltre se $Y$ è un sottoinsieme proprio di $X$ allora $|Y| < |X|$.
 ### Dimostrazione 
@@ -225,10 +238,10 @@ Sia $n:=|X|$. Procediamo per induzione su $n$.
 
 Base induzione $n=0$.
 Sia $|X| = 0$, ovvero $X=\emptyset \implies Y=\emptyset \implies |Y| = 0 \leq 0 = |X|$.
-La base è dimostrata.
+La base dell'induzione è stata dimostrata.
 
 Passo induttivo $n \geq 0, n \implies n+1$.
-Sia $X$ un insieme finito con $|X| = n+1$ e sia $Y$ un suo sottoinsieme.
+Sia $X$ un insieme finito con $|X| = n+1$ e sia $Y \subset X$.
 Usando lo stesso trucco del lemma dei cassetti, poniamo $X' := X \setminus \{ x_{n} \} \implies |X'| = n + 1 - 1= n$.
 Distinguiamo due possibilità:
 1. $Y \not\ni x_{n}$
@@ -360,21 +373,27 @@ Siccome $(n',m')=1$ e $n'|c'$ e $m'|c'$, per la 10.1 $n'm'|c' \implies M=n'm'(n,
 ### Definizione 9.4 (p25)
 Un numero $p \in \mathbb{Z}$ si dice primo se $p \geq 2$ e possiede solo i quattro divisori banali, ovvero $\pm 1, \pm p$.
 
+#### Esercizio 10.1
+Sia $p$ un numero primo. Siano $n_{1},n_{2} \dots, n_{k} \in \mathbb{Z}$.
+$$
+p|n_{1}n_{2}\dots n_{k} \implies p|n_{i}, \text{ per qualche } i \in \{ 1, \dots, k \}
+$$
 ## * Teorema fondamentale dell'aritmetica 10.5
 Ogni $n \geq 2, n \in \mathbb{N}$ può essere "fattorizzato in numeri primi", ovvero esistono $p_{1},p_{2},\dots,p_{a}$ numeri primi eventualmente ripetuti per qualche $a \in \mathbb{N} \setminus \{ 0 \}$ tali che $n = p_{1}p_{2} \dots p_{a}$. Tale fattorizzazione è unica a meno di riordinamento dei fattori primi, ovvero se esiste un'altra famiglia finita $q_{1},q_{2},\dots,q_{b}$ numeri primi eventualmente ripetuti per qualche $b \in \mathbb{N} \setminus \{ 0 \}$ tali che $n = q_{1}q_{2}\dots q_{b}$, allora $a = b$ e $\exists$ una bigezione $\phi:\{ 1, \dots ,b \} \rightarrow \{ 1,\dots, a \}$ tale che $q_{i} = p_{\phi(i)}, \forall i \in \{ 1,\dots, b \}$.
 
 ### Dimostrazione esistenza
-Procediamo per induzione di seconda forma shiftato a $2$.
+Procediamo per induzione di seconda forma su $n\geq 2$.
 
 Base dell'induzione: $n = 2$.
-Ma $2$ è primo, difatti $2 \geq 2$, $\pm 1, \pm 2$ sono i suoi soli divisori. Quindi $a = 1$ e $p_{1}=2$ $\implies$ $n = 2 = p_{1}$.
+Osservando che $n=2$ è un numero primo, basta porre $a:=1$ e $p_{1}:=2$
 
-Passo induttivo: ($n > 2$, $(2 \leq k < n) \implies n)$.
-Ipotesi induttiva: Sia dato $n \geq 2, n\in \mathbb{N}$. Assumiamo di saper fattorizzare tutti i naturali $k$ tali che $2 \leq k\leq n-1$.
-
-Dobbiamo provare che siamo in grado di fattorizzare anche $n$.
+Passo induttivo: $n > 2$, $(\forall k, 2 \leq k < n) \implies n$.
 Se $n$ è primo, allora $a = 1, p_{1}=n \implies n = p_{1}$.
-Se $n$ non è primo, ovvero $n = d_{1}d_{2}$. $d_{1}, d_{2}\neq 0,1,n$ sicuramente. Inoltre uno dei due non può essere maggiore di $n$, perché siccome sicuramente sono maggiori di $1$, $d_{1}d_{2}>n$ ma questo è assurdo. Dunque $2 \leq d_{1} < n$ e $2 \leq d_{2} < n$.
+Se $n$ non è primo, allora $n = d_{1}d_{2}$. 
+$n > 2 \implies d_{1},d_{2} \neq 0$.
+$n$ è primo $\implies$ $d_{1}, d_{2}\neq1$ e $d_{1},d_{2} \neq n$. 
+Inoltre $d_{1},d_{2} < n$. Supponiamo per assurdo $d_{1} > n$. Sappiamo che $d_{2} \geq 2$. Perciò $d_{1}d_{2} \geq 2d_{1} > 2n \neq n$.
+Dunque $2 \leq d_{1} < n$ e $2 \leq d_{2} < n$.
 Per ipotesi induttiva $\exists (p_{1},\dots,p_{a})$ primi eventualmente ripetutti e $\exists (p_{a+1},\dots,p_{a+b})$ primi eventualmente ripetuti tali che $d_{1} = p_{1}p_{2} \dots p_{a}$ e $d_{2} = p_{a+1}p_{a+2} \dots p_{a+b}$. Ma allora:
 $$
 n = d_{1}d_{2} = p_{1}p_{2}\dots p_{a}p_{a+1}p_{a+2}\dots p_{a+b}
@@ -387,27 +406,30 @@ Supponiamo che $\exists (p_{1},p_{2},\dots,p_{a})$ e $(q_{1},q_{2},\dots,q_{b})$
 $$
 p_{1}p_{2}\dots p_{a} = q_{1}q_{2}\dots q_{b}
 $$
-con $a \leq b$. Allora val che $a=b$ e, a meno di riordinarli, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a \}$.
-Tutto ciò è $P(a)$.
+A meno di scambiare $a$ con $b$, possiamo supporre che $a \leq b$. 
+Allora val che $a=b$ e, a meno di riordinamento, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a \}$.
 Procediamo per induzione di prima forma su $a\geq 1$.
 
 Base dell'induzione: $a = 1$.
-Siano $p_{1}$ e $q_{1},\dots,q_{b}$ primi eventualmente ripetuti con $b\geq 1$ e $p_{1} = q_{1} \dots q_{b}$. Dobbiamo provare che $b = a$. Supponiamo che $b \geq 2$.
+Siano $p_{1}$ e $q_{1},\dots,q_{b}$ primi eventualmente ripetuti con $b\geq 1$ e $p_{1} = q_{1} \dots q_{b}$. Dobbiamo provare che $b = a$.
 $$
-p_{1} = q_{1}q_{2}\dots q_{b}
+p_{1} = q_{1}\dots q_{b}
 $$
-$q_{1}$ è primo quindi $q_{1} \geq 2$. $q_{2}\dots q_{b} \geq q_{1} \geq 2$. Ma allora l'uguaglianza è impossibile, perché $p_{1}$ ammette solo divisori banali, che non possono essere $\pm 1$ poiché $q_{1},q_{2} \geq 2$. Dunque $b=1 \implies p_{1}=q_{1}$.
+Osserviamo che $p_{1} | p_{1} = q_{1}\dots q_{b}$. 
+Per l'esercizio 10.1 sappiamo che $p_{1}|q_{i}$ per qualche $i \in \{ 0, \dots, b \}$. 
+A meno di riordinamento degli indici possiamo supporre che $p_{1}|q_{1}$. 
+Siccome $q_{1}$ è un numero primo, gli unici suoi divisori sono $\pm 1, \pm q_{1}$, ma $p_{1} \geq 2$ perciò $p_{1} = q_{1}$.
+Se per assurdo $b \geq 2$, allora $p_{1} = q_{1}q_{2}\dots q_{b} = p_{1}q_{2}\dots q_{b}\implies 1 = q_{2}\dots q_{b}$, ma $q_{2}\dots q_{b}\geq 2$ e l'uguaglianza è assurda. Perciò $b = 1$ e $p_{1} = q_{1}$.
 
 Passo induttivo: $a \geq 1, a \implies a+1$.
-Ipotesi induttiva: supponiamo $a\geq 1$ e supponiamo che la seguente affermazione sia vera: se $p_{1},\dots,p_{a}$ e $q_{1},\dots,q_{b}$ primi eventualmente ripetuti tali che $a \leq b$ e $p_{1}\dots p_{a} = q_{1}\dots q_{b}$, allora $a = b$ e meno di riordinamento $p_{i} = q_{i}, \forall i \in \{ 1, \dots, a \}$.
-Dobbiamo provare la stessa affermazione con $a + 1$ al posto di $a$.
-Supponiamo che $p_{1},\dots,p_{a},p_{a+1}$ e $q_{1},\dots,q_{b}$ siano numeri primi tali che $a+1 \leq b$ e $p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b}$. Dobbiamo provare che $a+1 = b$ e, a meno di riordinamento, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a, a+1 \}$.
-
-Osserviamo che:
-$p_{a+1}|p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b} \implies p_{a+1}|q_{1}\dots q_{b}\implies$ a meno di riordinamento dei vari $q_{i}$, possiamo supporre che $p_{a+1}|q_{b}$. In quanto primo, i divisori positivi di $q_{b}$ sono $1$ o $q_{b}$, ma un numero primo deve essere $\geq 2$ per definizione. Quindi $p_{a+1}=q_{b}$.
-Dunque $p_{1}\dots p_{a}p_{a+1} = q_{1}\dots q_{b-1}p_{a+1}$ $\implies$ $p_{1}\dots p_{a} = q_{1}\dots q_{b-1}$. Siccome $a \leq b-1$ perché per ipotesi $a+1 \leq b$ possiamo applicare l'ipotesi induttiva.
-Quindi $a = b-1$ e, a meno di riordinamento, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a \}$. Dunque $a+1 = b$ e le corrispondenze tra $p$ e $q$ sono date dal passo induttivo fino ad $a$ e $a+1$ è stato risolto.
-Dunque il passo induttivo è stato fatto. Grazie al principio di induzione, l'asserto è vero $\forall a\geq 1 \implies$ c'è unicità di fattorizzazione in numeri primi $\forall n\geq 2$.
+Supponiamo che $(p_{1},\dots,p_{a},p_{a+1})$ e $(q_{1},\dots,q_{b})$ siano numeri primi tali che $a+1 \leq b$ e $p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b}$. 
+Osserviamo che $p_{a+1}|p_{1}\dots p_{a}p_{a+1}=q_{1}\dots q_{b} \implies p_{a+1}|q_{1}\dots q_{b}\implies$ a meno di riordinamento dei vari $q_{i}$, possiamo supporre che $p_{a+1}|q_{b}$. 
+Siccome $q_{b}$ è un numero primo, gli unici suoi divisori sono $\pm1$ o $\pm q_{b}$, ma $p_{1} \geq 2$, perciò $p_{a+1}=q_{b}$.
+Dunque $p_{1}\dots p_{a}p_{a+1} = q_{1}\dots q_{b-1}p_{a+1}$ $\implies$ $p_{1}\dots p_{a} = q_{1}\dots q_{b-1}$. 
+Siccome $a \leq b-1$ perché per ipotesi $a+1 \leq b$ possiamo applicare l'ipotesi induttiva.
+Quindi $a = b-1$ e, a meno di riordinamento, $p_{i}=q_{i}, \forall i \in \{ 1, \dots, a \}$. 
+Dunque $a+1 = b$ e le corrispondenze tra $p$ e $q$ sono date dal passo induttivo fino ad $a$ e $a+1$ è stato risolto ($p_{a+1}=q_{b}$).
+Dunque il passo induttivo è stato fatto, grazie al principio di induzione l'asserto è vero $\forall a\geq 1 \implies$ c'è unicità di fattorizzazione in numeri primi $\forall n\geq 2$.
 
 ### * Corollario 10.6
 L'insieme dei numeri primi è infinito.
@@ -585,3 +607,206 @@ $$
 \alpha ([1]_{n})^{k} = \alpha[1^{k}]_{n} = \alpha [1]_{n} = \alpha
 $$
 La dimostrazione per $P_{c}(P_{d}(\beta))$ è analoga, poiché gli esponenti $d$ e $c$ possono essere scambiati per la commutività.
+### Corollario 13.8
+Sia $n > 0$. Sia $a, c \in \mathbb{Z}$ tali che $c > 0, (c, \phi(n))=1, (a,n)=1$. Consideriamo la seguente congruenza con potenza:
+$$
+x^{c} \equiv a\ (\text{mod}\ n), x \in \mathbb{Z}
+$$
+Sia inoltre $S$ l'insieme delle soluzioni della precedente congruenza, ovvero $S := \{ x \in \mathbb{Z} | x^{c} \equiv a\ (\text{mod}\ n) \}$.
+Allora $\exists d > 0$ tale che $d \in [c]_{\phi(n)}^{-1}$ e $S = [a^{d}]_{n} = \{ a^{d}+kn \in \mathbb{Z} | k \in \mathbb{Z} \} \subset \mathbb{Z}$.
+
+### Dimostrazione
+Poiché $(a,n)=1$, $[a]_{n} \in (\mathbb{Z} \big/_{n\mathbb{Z}})^{*}$.
+Poiché $(c,\phi(n))=1$, $[c]_{\phi(n)} \in (\mathbb{Z} \big/_{n\mathbb{Z}})^{*}$, ovvero $\exists[c]_{\phi(n)}^{-1} \ni d, d > 0$. (L'esistenza di un rappresentante $d > 0$ di $[c]_{\phi(n)}^{-1}$ è assicurata dal fatto che $\phi(n) \geq 1$).
+
+Osserviamo che: $x \in \mathbb{Z}, x^{c} \equiv a\ (\text{mod}\ n) \Longleftrightarrow [x^{c}]_{n} = [a]_{n} \Longleftrightarrow [x]_{n}^{c} = [a]_{n}$.
+
+Sia $x \in \mathbb{Z}$ tale che $[x]_{n}^{c} = [a]_{n}$.
+Siccome $c \geq 1$:
+$$
+\begin{align}
+[x]_{n}[x]_{n}^{c - 1} = [x]_{n}^{c} = [a]_{n} &\implies [x]_{n} [x]_{n}^{c - 1} [a]_{n}^{-1} = [a]_{n} [a]_{n}^{-1} = [1]_{n} \\
+ & \implies [x]_{n}([x]_{n}^{c-1}[a]_{n}^{-1}) = [1]_{n} \\
+ & \implies [x]_{n} \in (\mathbb{Z} \big/_{n\mathbb{Z}})^{*}
+\end{align}
+$$
+Quindi le uniche soluzioni sono quelle invertibili, ma allora per il teorema fondamentale la soluzione è unica.
+Poiché se $x \in S$ la sua classe è invertibile, l'unica classe soluzione ha la seguente forma, grazie al teorema fondamentale della crittografia RSA:
+$$
+[x]_{n} = P_{d}([a]_{n}) = [a]_{n}^{d} = [a^{d}]_{n} \subset \mathbb{Z}
+$$
+$d$ si può portare dentro perché $d > 0$.a
+
+---
+### Def 15.1
+Sia $G = (V, E)$ un grafo. Una successione finita ordinata $(v_{0},v_{1},\dots,v_{n})$ di vertici di $G$ (ovvero $v_{0}, v_{1}, \dots, v_{n} \in V(G)$) si dice:
+- Passeggiata in $G$ se $n = 0$, oppure $n \geq 1, \{ v_{i}, v_{i+1} \} \in E, \forall i \in \{ 0,1,\dots,n-1 \}$.
+- Cammino in $G$ se è una passeggiata in $G$ e $v_{i} \neq v_{j}, \forall i,j \in \{ 0,1,\dots,n \} : i\neq j$. (Non si può ripassare dallo stesso vertice).
+- Ciclo in $G$ se è una passeggiata in $G$ e $n\geq 3$ e $v_{0} = v_{n}$ e $(v_{0}, v_{1}, \dots, v_{n-1})$ è un cammino in $G$.
+
+Se $(v_{0}, v_{1},\dots,v_{n})$ è una passeggiata in $G$, allora $n$ si dice lunghezza della passeggiata, ovvero la lunghezza della passeggiata coincide con il numero di lati che sono stati attraversati.
+### Def 15.3
+Sia $G = (V, E)$ un grafo e siano $v,w \in V$. Diciamo che $v$ è congiungibile a $w$ in $G$ per passeggiate (per cammini) se esiste una passeggiata $(v_{0}, v_{1}, \dots, v_{n})$ (rispettivamente un cammino $(v_{0},v_{1},\dots,v_{n})$) in $G$ tali che $v_{0} = v$ e $v_{n} = w$.
+
+### Proposizione 15.4
+Siano $G=(V,E)$ un grafo e siano $v,w \in V$. Allora $v$ è congiungibile a $w$ per cammini se e solo se lo sono per passeggiate.
+### Dimostrazione
+L'implicazione ($\implies$) è banale in quanto un cammino $(v_{0}, v_{1}, \dots, v_{n})$ in $G$ tale che $v_{0} = v$ e $v_{n} = w$ è anche una passeggiata in $G$ tale che $v_{0} = v$ e $v_{n} = w$, quindi $v$ è congiungibile a $w$ anche per passeggiate.
+Supponiamo che $v$ sia congiungibile a $w$ attraverso una passeggiata $Q$ in $G$. Definiamo i seguenti insiemi:
+$$
+\begin{align}
+\mathcal{P} &:= \{ P | P\ \text{passeggiata} (v_{0}, v_{1}, \dots, v_{n})\ \text{in}\ G: v_{0} = v, v_{n}=w\} \\
+\mathcal{A} &:= \{ l(P) \in \mathbb{N} | P \in \mathcal{P} \}
+\end{align}
+$$
+dove $l(P)$ è la lunghezza di $P$.
+Osserviamo che $\mathcal{P} \neq \emptyset$, in quanto $Q \in \mathcal{P} \implies \mathcal{A}\neq \emptyset$, in quanto $l(Q) \in \mathcal{A}$. Poiché $\mathcal{A}$ è un sottoinsieme non vuoto di $\mathbb{N}$, grazie al teorema di buon ordinamento dei naturali, sappiamo $\exists m := min(\mathcal{A}) \implies \exists P_{0} \in \mathcal{P} : l(P_{0}) = m$. $P_{0}$ è un cammino $(v_{0},v_{1},\dots,v_{n})$ in quanto se non lo fosse, ci sarebbe un $v_{i} = v_{j}$ per qualche $i\neq j$ che potrebbe essere cancellata per ottenere una passeggiata più corta.
+Scritto meglio:
+Supponiamo per assurdo che $P_{0} = (v = v_{0}, v_{1}, \dots, v_{n} = w)$ non sia un cammino, allora $\exists i, j \in \{ 0, 1, \dots, n \} : i \neq j,v_{i} = v_{j}$. Possiamo supporre che $i < j$. Consideriamo $P_{1} = (v_{0}, v_{1}, \dots, v_{i}, v_{j+1}, \dots, v_{n})$, iottenuto da $P_{0}$ rimuovendo il ciclo $(v_{i+1}, \dots, v_{j})$, allora $P_{1} \in \mathcal{P}$  poiché $\{ v_{i}, v_{j+1} \} = \{ v_{j}, v_{j+1} \} \in E$. Vale: $l(P_{1}) = l(P_{0}) - (j - i) = m - (j - i) < m = min(\mathcal{A})$. Ma ciò è assurdo perché contraddice la minimalità di $m$.
+### Oss 15.5
+Dato un grafo $G = (V, G)$ e $v, w \in V$, diciamo che $v$ è congiungibile a $w$ in $G$ se lo è per cammini o per passeggiate.
+### Proposizione 15.6
+Sia $G = (V,E)$ un grafo e sia $\sim$ la relazione binaria su $V$ (cioè $\sim \in 2^{V\times V}$) definita ponendo: $\forall v, w \in V$, $v \sim w$ se $v$ è congiungibile a $w$ in $G$. La relazione $\sim$ su $V$ è di equivalenza.
+### Dimostrazione
+1) $\forall v \in V$, $v \sim v$, poiché $(v)$ è una passeggiata in $G$. (riflessiva)
+2) $\forall v, w \in V$, $v \sim w$, ovvero $\exists(v_{0},v_{1},\dots,v_{n})$ passeggiata in $G$ tale che $v_{0} = v$ e $v_{n}=w$. Osserviamo che $(v_{n}, v_{n-1},\dots, v_{0})$ è una passeggiata in $G$ dato che i lati coinvolti sono gli stessi. Dunque anche $w \sim v$.
+3) $\forall v,w,z \in V$, $v \sim w$ e $w \sim z$, dunque $\exists(v_{0},v_{1},\dots,v_{n})$ passeggiata in $G$ tale che $v_{0} = v$ e $v_{n}=w$ e $\exists(w_{0},w_{1}, \dots, w_{n})$ passeggiata in $G$ tale che $w_{0}=w$ e $w_{n}=z$. Osserviamo $(v_{0},v_{1},\dots v_{n}, w_{1}, \dots, w_{n})$. Prendeno in rassegna tutte le coppie di vertici e per ipotesi $(v_{i}, v_{i+1})$ è un lato, idem per $(w_{i}, w_{i+1})$, $\forall i \in \{ 0, \dots, n-1 \}$. Inoltre $(v_{n}, w_{1})$ è un lato perché $v_{n}=w_{0}$ e per ipotesi $(w_{0}, w_{1})$ è un lato. Dunque $v \sim z$.
+Allora $\sim$ è una relazione di equivalenza.
+
+---
+### Relazioni fondamentali tra gradi di vertici e numero dei lati in un grafo
+
+### Proposizione 17.4
+Sia $G=(V,E)$ un grafo finito. Allora:
+$$
+\sum_{v \in V} deg_{G}(v) = 2 \left| E \right| 
+$$
+La somma dei gradi dei vertici di $G$ è uguale al doppio del numero dei lati di $G$.
+### Dimostrazione
+Siano $V = \{ v_{1},\dots,v_{n} \}$ e $E=\{ e_{1}, \dots, e_{k} \}$, in particolare $|V| = n$ e $|E|=k$. Definiamo:
+$$
+m_{ij} := \begin{cases}
+1 & \text{se}\  v_{i} \in e_{j} \\
+0 & \text{se}\ v_{i} \in e_{j}
+\end{cases}
+$$
+Con $i \in \{ 1, \dots, n \}$ e $j \in \{ 1, \dots, k \}$. Questa è una matrice di adiacenza.
+Questa matrice può essere rappresentanto su un piano cartesiano. Ad ogni $(i, j)$ si associa $m_{ij}$.
+
+Per associatività dell'addizione su $\mathbb{Z}$, vale:
+$$
+\sum_{i=1}^{n} \sum_{j=1}^{k} m_{ij} = \sum_{j=1}^{k} \sum_{i=1}^{n} m_{ij}
+$$
+Vale:
+$$
+\sum_{j=1}^{k} m_{ij} = \left| \{ i \in \{ 1, \dots, k \} | v_{i} \in e_{j} \} \right| = deg_{G}(v_{i}) \implies \sum_{i=1}^{n} \sum_{j=1}^{k} m_{ij} = \sum_{i=1}^{n} deg_{G}(v_{i}) = \sum_{v \in V} deg_{G}(v)
+$$
+$$
+\sum_{i=1}^{n} m_{ij} = \left| \{ i \in \{ 1,\dots,n \} | v_{i} \in e_{j} \} \right| = 2 \implies \sum_{j=1}^{k} \sum_{i=1}^{n} m_{ij} = \sum_{j = 1}^{k} 2 = 2k = 2 \left| E \right| 
+$$
+Dunque:
+$$
+\sum_{v \in V} deg_{G}(v) = 2 \left| E \right| 
+$$
+### Definizione 17.7
+Sia $G=(V,E)$ un grafo finito. Definiamo lo score di $G$, indicandolo col simbolo $score(G)$, come la ennupla ($n:=|V(G)|$) dei gradi dei vertici di $G$, vista a meno di ordinamento.
+Lo score si dirà in forma canonica se le sue componenti sono ordinate in modo non decrescente.
+
+### Osservazione (riformulazione della relazione fondamentale dei grafi finiti dato lo score)
+Sia $G=(V,E)$ un grafo finito e sia $score(G) = (d_{1},\dots,d_{n})$. Allora:
+$$
+\frac{\sum_{i=1}^{n} d_{i}}{2} = |E(G)|
+$$
+### Corollario 17.6 (Lemma delle strette di mano)
+In un grafo finito il numero di vertici di grado dispari è pari.
+
+### Dimostrazione
+Sia $G=(V,E)$ un grafo finito. Definiamo:
+$$
+\begin{align}
+P &:= \{ v \in V | deg_{G}(v) \text{ pari} \} \\
+D &:= \{ v \in V | deg_{G}(v) \text{ dispari} \}
+\end{align}
+$$
+$$
+\begin{align}
+P \cap D &= \emptyset \\
+P \cup D &= V
+\end{align}
+$$
+$$
+2|E| = \sum_{v \in V} deg_{G}(v) = \sum_{v\in P} deg_{G}(v) + \sum_{v \in D} deg_{G}(v)
+$$
+Dunque:
+$$
+\begin{align}
+\underbrace{ \overbrace{ 2|E| }^{ \text{pari} } - \overbrace{ \sum_{v \in P} deg_{G}(v) }^{ \text{pari} } }_{ \text{pari} } = \underbrace{ \sum_{v \in D} \overbrace{ deg_{G}(v) }^{ dispari } }_{ pari }
+\end{align}
+$$
+Siccome è la somma di numeri dispari, allora $|D|$ è pari.
+
+---
+
+### Definizione
+Un grafo è un albero se è connesso e senza cicli. Una foresta è un grafo senza cicli.
+Se $G$ è un albero $\implies$ $G$ è una foresta.
+
+### Teorema di caraterizzazione degli alberi finiti
+Sia $T=(V,E)$ un grafo finito, allora sono equivalenti i seguenti fatti:
+1. $T$ è un albero
+2. $\forall v, v' \in V, \exists!$ un cammino da $v$ a $v'$.
+3. $T$ è connesso e $\forall e \in E, T-e = (V, E \setminus \{ e \})$ è sconnesso.
+4. $T$ è senza cicli e $\forall e \in \binom{V}{2} \setminus E$, il grado $T+e=(V, E \cup \{ e \})$  ha almeno un ciclo.
+5. $T$ è connesso e soddisfa la formula di Eulero: $|V| - 1 = |E|$.
+
+Dimostrazione che $1) \implies 5)$: procediamo per induzione sulla cardinalità di $V$, $|V| \geq 1$.
+Passo base: $|V|=1$:
+L'unico albero esistente con $|V|=1$ è un singolo vertice isolato, dunque vale che $|E| = 0 = |V| - 1$.
+Passo induttivo: sia $T$ un albero con $|V| \geq 2$ e supponiamo che $1) \implies 5)$ sia vero $\forall$ albero con $|V|-1$.
+Poiché $T$ è finito e connesso e $|V|\geq 2$ per il lemma $T$ ha almeno due foglie. Sia $v \in V$ una foglia. Allora per il precedente esercizio $T-v$ è albero e soddisfa la formula di Eulero.
+$$
+|V(T-v)| - 1 = |E(T-v)|
+$$
+Sappiamo che $|V(T-v)| = |V(T)| - 1$ e $|E(T-v)| = |E(T)| - 1$ poiché $v$ è foglia. Ma allora:
+$$
+\begin{align}
+(|V(T)| - 1) -1 &= |E(T)| - 1 \\
+|V(T)| - 1 &= |E(T)|
+\end{align}
+$$
+ma allora $T$ soddisfa la $5)$. Inoltre è connesso perché è un albero. Il passo induttivo è stato risolto perciò per il principio di induzione $1) \implies 5)$ è vera.
+
+Dimostrazione che $5) \implies 1)$: procediamo per induzione su $|V|\geq 1$.
+Passo base: $|V| = 1$:
+L'unico grafo connesso $T$, con $|V|=1$ è un singolo vertice isolato, dunque $T$ è un albero.
+Passo induttivo: sia $T$ un grafo connesso che soddisfa la formula di Eulero e con $|V| \geq 2$. Suppponiamo che $5) \implies 1)$ sia vera per ogni grafo finito con $|V| - 1$ vertici (ipotesi induttiva). Dimostriamo che $T$ è un albero.
+$T$ ha sicuramente almeno una foglia, se così non fosse allora $\forall v\in V, deg_{T}(v) \geq 2$ e dunque:
+$$
+\underbrace{ 2|V| - 2 = 2|E| }_{ \text{formula di Eulero} }\geq \sum_{v\in V} deg_{T}(v) \geq \sum_{v \in V}2=2|V|
+$$
+Ma questo è assurdo perché vorrebbe dire che $2|V|-2\geq 2|V|$. Dunque $\exists v \in V$ foglia.
+Consideriamo il grafo $T-v$. $T-v$ è connesso per via dell'esercizio precedente e soddisfa la formula di Eulero poiché $T$ la soddisfa, infatti $|V(T-v)| = |V(T)|-1$, $|E(T-v)|=|E(T)|-1$ poiché $v$ è foglia.
+Poiché $|V(T-v)| = |V(T)|-1$, per ipotesi induttiva $T-v$ è un albero. Ma allora anche $T$ è un albero, infatti sicuramente è connesso per ipotesi.
+Inoltre $T$ non ha cicli, perché se esistesse un ciclo $(v_{0},\dots,v_{k})$ in $T$ allora, siccome $deg_{T}(v_{i})\geq 2, \forall i \in \{ 0, \dots,k \}$, il ciclo non passerebbe per $v$. Dunque si avrebbe un ciclo in $T-v$, ma ciò è impossibile perché $T-v$ è albero.
+
+Grazie al principio di induzione, $5) \implies 1)$ per ogni grafo finito.
+
+---
+
+## Alberi di copertura (Spanning trees)
+Sia $G$ un grafo. Un sottografo $T$ di $G$ è un albero di copertura per $G$ se è un albero e $V(T)=V(G)$.
+Gli alberi di copertura non sono unici.
+### Teorema
+Ogni grafo finito e connesso $G$ possiede almeno un albero di copertura.
+### Dimostrazione
+Definiamo $\mathcal{C} := \{ C \text{ sottografo di } G : C \text{ connesso }, V(C)=V(G) \}$.
+Chiaramente $\mathcal{C} \neq \emptyset$ perché $G \in \mathcal{C}$. Definiamo:
+$$
+S := \{ n \in \mathbb{N} : n = |E(C)| \text{ per un certo } C \in \mathcal{C} \}
+$$
+Siccome $\mathcal{C} \neq \emptyset \implies S\neq \emptyset$ e dunque per il principio del buono ordinamento, $\exists \bar{n} = min(S)$. Sia $\bar{C} \in \mathcal{C}$ tale che $|E(\bar{C})|= \bar{n}$. Mostriamo che $\bar{C}$ è un albero, se lo facciamo, siccome $V(\bar{C}) = V(G)$ per costruzione, avremo che $\bar{C}$ è un albero di copertura.
+Supponiamo per assurdo che $\bar{C}$ non sia un albero. Per l'equivalenza $(1) \Longleftrightarrow (3)$ del teorema di caraterrizzazione degli alberi, deve esistere un lato $e \in E(T)$ tale che $\bar{C} - e = (V(\bar{C}), E(\bar{C}) \setminus \{ e \})$ è connesso. Ma allora:
+- $V(\bar{C} - e) = V(\bar{C}) = V(G) \implies \bar{C}-e \in \mathcal{C}$.
+- $|E(\bar{C} -e)| = |E(\bar{C}) - \{ e \}| = |E(\bar{C})| - 1 = \bar{n} - 1 < \bar{n}$
+Ma ciò è assurdo perché $\bar{n} = min(S)$.
+Quindi $\bar{C}$ è un albero.
