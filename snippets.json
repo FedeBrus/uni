@@ -21,6 +21,7 @@
   {trigger: "valatt", replacement: "\\mathbb{E}($0)$1", options: "mA"},
   {trigger: "EE", replacement: "\\mathbb{E}", options: "mA"},
   {trigger: "bin", replacement: "\\binom{$0}{$1}$2", options:"mA"},
+  {trigger: "zinv", replacement: "(\\mathbb{Z} \\big/_{n\\mathbb{Z}})^{*}", options:"mA"},
 
     // Greek letters
 	{trigger: "@a", replacement: "\\alpha", options: "mA"},

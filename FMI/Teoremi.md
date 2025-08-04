@@ -391,7 +391,7 @@ Passo induttivo: $n > 2$, $(\forall k, 2 \leq k < n) \implies n$.
 Se $n$ è primo, allora $a = 1, p_{1}=n \implies n = p_{1}$.
 Se $n$ non è primo, allora $n = d_{1}d_{2}$. 
 $n > 2 \implies d_{1},d_{2} \neq 0$.
-$n$ è primo $\implies$ $d_{1}, d_{2}\neq1$ e $d_{1},d_{2} \neq n$. 
+$n$ non è primo $\implies$ $d_{1}, d_{2}\neq1$ e $d_{1},d_{2} \neq n$. 
 Inoltre $d_{1},d_{2} < n$. Supponiamo per assurdo $d_{1} > n$. Sappiamo che $d_{2} \geq 2$. Perciò $d_{1}d_{2} \geq 2d_{1} > 2n \neq n$.
 Dunque $2 \leq d_{1} < n$ e $2 \leq d_{2} < n$.
 Per ipotesi induttiva $\exists (p_{1},\dots,p_{a})$ primi eventualmente ripetutti e $\exists (p_{a+1},\dots,p_{a+b})$ primi eventualmente ripetuti tali che $d_{1} = p_{1}p_{2} \dots p_{a}$ e $d_{2} = p_{a+1}p_{a+2} \dots p_{a+b}$. Ma allora:
@@ -635,7 +635,7 @@ Poiché se $x \in S$ la sua classe è invertibile, l'unica classe soluzione ha l
 $$
 [x]_{n} = P_{d}([a]_{n}) = [a]_{n}^{d} = [a^{d}]_{n} \subset \mathbb{Z}
 $$
-$d$ si può portare dentro perché $d > 0$.a
+$d$ si può portare dentro perché $d > 0$.
 
 ---
 ### Def 15.1
@@ -655,14 +655,16 @@ L'implicazione ($\implies$) è banale in quanto un cammino $(v_{0}, v_{1}, \dots
 Supponiamo che $v$ sia congiungibile a $w$ attraverso una passeggiata $Q$ in $G$. Definiamo i seguenti insiemi:
 $$
 \begin{align}
-\mathcal{P} &:= \{ P | P\ \text{passeggiata} (v_{0}, v_{1}, \dots, v_{n})\ \text{in}\ G: v_{0} = v, v_{n}=w\} \\
+\mathcal{P} &:= \{ P | P\ \text{passeggiata}\ (v_{0}, v_{1}, \dots, v_{n})\ \text{in}\ G: v_{0} = v, v_{n}=w\} \\
 \mathcal{A} &:= \{ l(P) \in \mathbb{N} | P \in \mathcal{P} \}
 \end{align}
 $$
 dove $l(P)$ è la lunghezza di $P$.
-Osserviamo che $\mathcal{P} \neq \emptyset$, in quanto $Q \in \mathcal{P} \implies \mathcal{A}\neq \emptyset$, in quanto $l(Q) \in \mathcal{A}$. Poiché $\mathcal{A}$ è un sottoinsieme non vuoto di $\mathbb{N}$, grazie al teorema di buon ordinamento dei naturali, sappiamo $\exists m := min(\mathcal{A}) \implies \exists P_{0} \in \mathcal{P} : l(P_{0}) = m$. $P_{0}$ è un cammino $(v_{0},v_{1},\dots,v_{n})$ in quanto se non lo fosse, ci sarebbe un $v_{i} = v_{j}$ per qualche $i\neq j$ che potrebbe essere cancellata per ottenere una passeggiata più corta.
-Scritto meglio:
-Supponiamo per assurdo che $P_{0} = (v = v_{0}, v_{1}, \dots, v_{n} = w)$ non sia un cammino, allora $\exists i, j \in \{ 0, 1, \dots, n \} : i \neq j,v_{i} = v_{j}$. Possiamo supporre che $i < j$. Consideriamo $P_{1} = (v_{0}, v_{1}, \dots, v_{i}, v_{j+1}, \dots, v_{n})$, iottenuto da $P_{0}$ rimuovendo il ciclo $(v_{i+1}, \dots, v_{j})$, allora $P_{1} \in \mathcal{P}$  poiché $\{ v_{i}, v_{j+1} \} = \{ v_{j}, v_{j+1} \} \in E$. Vale: $l(P_{1}) = l(P_{0}) - (j - i) = m - (j - i) < m = min(\mathcal{A})$. Ma ciò è assurdo perché contraddice la minimalità di $m$.
+Osserviamo che $\mathcal{P} \neq \emptyset$, in quanto $Q \in \mathcal{P} \implies \mathcal{A}\neq \emptyset$, in quanto $l(Q) \in \mathcal{A}$. 
+Poiché $\mathcal{A}$ è un sottoinsieme non vuoto di $\mathbb{N}$, grazie al teorema di buon ordinamento dei naturali, sappiamo $\exists m := min(\mathcal{A}) \implies \exists P_{0} \in \mathcal{P} : l(P_{0}) = m$. 
+Suffice dimostrare che $P_{0}$ è un cammino.
+Supponiamo per assurdo che $P_{0} = (v = v_{0}, v_{1}, \dots, v_{n} = w)$ non sia un cammino, allora $\exists i, j \in \{ 0, 1, \dots, n \} : i \neq j,v_{i} = v_{j}$. Possiamo supporre che $i < j$. Consideriamo $P_{1} = (v_{0}, v_{1}, \dots, v_{i}, v_{j+1}, \dots, v_{n})$, ottenuto da $P_{0}$ rimuovendo la sottosequenze $(v_{i+1}, \dots, v_{j})$.
+Allora $P_{1} \in \mathcal{P}$ poiché $\{ v_{i}, v_{j+1} \} = \{ v_{j}, v_{j+1} \} \in E$. Vale: $l(P_{1}) = l(P_{0}) - (j - i) = m - (j - i) < m = min(\mathcal{A})$. Ma ciò è assurdo perché contraddice la minimalità di $m$.
 ### Oss 15.5
 Dato un grafo $G = (V, G)$ e $v, w \in V$, diciamo che $v$ è congiungibile a $w$ in $G$ se lo è per cammini o per passeggiate.
 ### Proposizione 15.6
@@ -690,16 +692,14 @@ m_{ij} := \begin{cases}
 0 & \text{se}\ v_{i} \in e_{j}
 \end{cases}
 $$
-Con $i \in \{ 1, \dots, n \}$ e $j \in \{ 1, \dots, k \}$. Questa è una matrice di adiacenza.
-Questa matrice può essere rappresentanto su un piano cartesiano. Ad ogni $(i, j)$ si associa $m_{ij}$.
-
-Per associatività dell'addizione su $\mathbb{Z}$, vale:
+Con $i \in \{ 1, \dots, n \}$ e $j \in \{ 1, \dots, k \}$.
+Per associatività e commutatività dell'addizione su $\mathbb{Z}$, vale:
 $$
 \sum_{i=1}^{n} \sum_{j=1}^{k} m_{ij} = \sum_{j=1}^{k} \sum_{i=1}^{n} m_{ij}
 $$
 Vale:
 $$
-\sum_{j=1}^{k} m_{ij} = \left| \{ i \in \{ 1, \dots, k \} | v_{i} \in e_{j} \} \right| = deg_{G}(v_{i}) \implies \sum_{i=1}^{n} \sum_{j=1}^{k} m_{ij} = \sum_{i=1}^{n} deg_{G}(v_{i}) = \sum_{v \in V} deg_{G}(v)
+\sum_{j=1}^{k} m_{ij} = \left| \{ j \in \{ 1, \dots, k \} | v_{i} \in e_{j} \} \right| = deg_{G}(v_{i}) \implies \sum_{i=1}^{n} \sum_{j=1}^{k} m_{ij} = \sum_{i=1}^{n} deg_{G}(v_{i}) = \sum_{v \in V} deg_{G}(v)
 $$
 $$
 \sum_{i=1}^{n} m_{ij} = \left| \{ i \in \{ 1,\dots,n \} | v_{i} \in e_{j} \} \right| = 2 \implies \sum_{j=1}^{k} \sum_{i=1}^{n} m_{ij} = \sum_{j = 1}^{k} 2 = 2k = 2 \left| E \right| 
