@@ -1,4 +1,4 @@
-### Teorema 2.11 di ricorsione
+### Teorema 2.11 di ricorsione
 Sia $X$ un certo insieme non vuoto, sia $h:\mathbb{N}\times X\rightarrow X$ una qualunque funzione e sia $c \in X$, detto dato iniziale. Allora $\exists!f:\mathbb{N}\rightarrow X$ tale che:
 $$
 (\star)_{c} 

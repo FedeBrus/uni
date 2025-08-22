@@ -117,7 +117,7 @@ Se $T$ non è finito il lemma non vale.
 Sia $G$ un grafo connesso, sia $v \in V(G)$ una foglia. Allora $G - v$ è connesso.
 
 Svolgimento:
-Vediamo che $\forall v_{1},v_{2} in V(G-v) = V(G) \setminus \{ v \}, v_{1} \neq v_{2}$, esiste un cammino da $v_{1}$ a $v_{2}$. Tale cammino non passa per $v$ (altrimenti $deg_{T}(v) \geq 2$). Allora $v_{1},v_{2}$ sono connessi in $G-v$.
+Vediamo che $\forall v_{1},v_{2}$ in $V(G-v) = V(G) \setminus \{ v \}, v_{1} \neq v_{2}$, esiste un cammino da $v_{1}$ a $v_{2}$. Tale cammino non passa per $v$ (altrimenti $deg_{T}(v) \geq 2$). Allora $v_{1},v_{2}$ sono connessi in $G-v$.
 
 #### Esercizio
 Sia $T=(V,E)$ albero, $v \in V$ foglia $\implies$ $T-v$ è un albero.

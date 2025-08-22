@@ -6,7 +6,7 @@ $$
 #### Svolgimento
 Procediamo per induzion su $n \in \mathbb{N}, n \geq 1$:
 #### Passo base ($n = 1$)
-Verifichiamo che $(\star)$ + vera per $n = 1$.
+Verifichiamo che $(\star)$ sia vera per $n = 1$.
 $$
 \begin{align}
 4 \cdot 3 &=  3+3^{2} (2-1) \\

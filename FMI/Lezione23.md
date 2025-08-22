@@ -56,7 +56,7 @@ Sia $n \in \mathbb{N} \setminus \{ 0 \}$, sia $d=(d_{1},\dots,d_{n})\in \mathbb{
 1. Se $d = (0, \dots, 0, 2)$ o $d=(0,\dots,0,2,2)$ allora $d$ non è lo score di un grafo.
 2. Se $d=(0,\dots,0)$ allora $d$ è lo score del grafo avente $n$ vertici isolati.
 3. Se $d = (0,\dots , 0, \underbrace{ 2,\dots, 2 }_{ m }), m \geq 3$ allora $d$ è lo score di $n - m$ vertici isolati e un $m$-ciclo.
-4. Se $d$ ha un numero disapri di entrate $1$ allora $d$ non è lo score di un grafo
+4. Se $d$ ha un numero dispari di entrate $1$ allora $d$ non è lo score di un grafo
 Supponiamo quindi che $d$ possieda un numero pari di componenti uguali a $1$. Più precisamente:
 $$
 d = (\underbrace{ 0, \dots, 0 }_{ h }, \underbrace{ 1, \dots, 1 }_{ 2k + 2 }, \underbrace{ 2, \dots, 2 }_{ m })

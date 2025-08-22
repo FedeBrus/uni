@@ -750,14 +750,16 @@ Siccome è la somma di numeri dispari, allora $|D|$ è pari.
 ### Definizione
 Un grafo è un albero se è connesso e senza cicli. Una foresta è un grafo senza cicli.
 Se $G$ è un albero $\implies$ $G$ è una foresta.
-
+### Lemma
+Sia $T = (V, E)$ un albero finito con $|V| \geq 2$, allora $T$ ha almeno due foglie.
+#### Esercizio
+Sia $G$ un grafo connesso, sia $v \in V(G)$ una foglia. Allora $G - v$ è connesso.
+#### Esercizio
+Sia $T=(V,E)$ albero, $v \in V$ foglia $\implies$ $T-v$ è un albero.
 ### Teorema di caraterizzazione degli alberi finiti
 Sia $T=(V,E)$ un grafo finito, allora sono equivalenti i seguenti fatti:
 1. $T$ è un albero
-2. $\forall v, v' \in V, \exists!$ un cammino da $v$ a $v'$.
-3. $T$ è connesso e $\forall e \in E, T-e = (V, E \setminus \{ e \})$ è sconnesso.
-4. $T$ è senza cicli e $\forall e \in \binom{V}{2} \setminus E$, il grado $T+e=(V, E \cup \{ e \})$  ha almeno un ciclo.
-5. $T$ è connesso e soddisfa la formula di Eulero: $|V| - 1 = |E|$.
+2. $T$ è connesso e soddisfa la formula di Eulero: $|V| - 1 = |E|$.
 
 Dimostrazione che $1) \implies 5)$: procediamo per induzione sulla cardinalità di $V$, $|V| \geq 1$.
 Passo base: $|V|=1$:
@@ -782,18 +784,17 @@ L'unico grafo connesso $T$, con $|V|=1$ è un singolo vertice isolato, dunque $T
 Passo induttivo: sia $T$ un grafo connesso che soddisfa la formula di Eulero e con $|V| \geq 2$. Suppponiamo che $5) \implies 1)$ sia vera per ogni grafo finito con $|V| - 1$ vertici (ipotesi induttiva). Dimostriamo che $T$ è un albero.
 $T$ ha sicuramente almeno una foglia, se così non fosse allora $\forall v\in V, deg_{T}(v) \geq 2$ e dunque:
 $$
-\underbrace{ 2|V| - 2 = 2|E| }_{ \text{formula di Eulero} }\geq \sum_{v\in V} deg_{T}(v) \geq \sum_{v \in V}2=2|V|
+\underbrace{ 2|V| - 2 = 2|E| }_{ \text{formula di Eulero} } = \sum_{v\in V} deg_{T}(v) \geq \sum_{v \in V}2=2|V|
 $$
 Ma questo è assurdo perché vorrebbe dire che $2|V|-2\geq 2|V|$. Dunque $\exists v \in V$ foglia.
-Consideriamo il grafo $T-v$. $T-v$ è connesso per via dell'esercizio precedente e soddisfa la formula di Eulero poiché $T$ la soddisfa, infatti $|V(T-v)| = |V(T)|-1$, $|E(T-v)|=|E(T)|-1$ poiché $v$ è foglia.
-Poiché $|V(T-v)| = |V(T)|-1$, per ipotesi induttiva $T-v$ è un albero. Ma allora anche $T$ è un albero, infatti sicuramente è connesso per ipotesi.
-Inoltre $T$ non ha cicli, perché se esistesse un ciclo $(v_{0},\dots,v_{k})$ in $T$ allora, siccome $deg_{T}(v_{i})\geq 2, \forall i \in \{ 0, \dots,k \}$, il ciclo non passerebbe per $v$. Dunque si avrebbe un ciclo in $T-v$, ma ciò è impossibile perché $T-v$ è albero.
+Consideriamo il grafo $T-v$. $T-v$ è connesso per via dell'esercizio precedente e soddisfa la formula di Eulero, infatti $|V(T-v)| = |V(T)|-1$, $|E(T-v)|=|E(T)|-1$ poiché $v$ è foglia.
+Poiché $|V(T-v)| = |V(T)|-1$, per ipotesi induttiva $T-v$ è un albero. Ma allora anche $T$ è un albero, perché connesso per ipotesi e non ha cicli, perché se esistesse un ciclo $(v_{0},\dots,v_{k})$ in $T$ allora, siccome $deg_{T}(v_{i})\geq 2, \forall i \in \{ 0, \dots,k \}$, il ciclo non passerebbe per $v$. Dunque si avrebbe un ciclo in $T-v$, ma ciò è impossibile perché $T-v$ è albero.
 
 Grazie al principio di induzione, $5) \implies 1)$ per ogni grafo finito.
 
 ---
 
-## Alberi di copertura (Spanning trees)
+### Definizione alberi di copertura (Spanning trees)
 Sia $G$ un grafo. Un sottografo $T$ di $G$ è un albero di copertura per $G$ se è un albero e $V(T)=V(G)$.
 Gli alberi di copertura non sono unici.
 ### Teorema

@@ -33,7 +33,7 @@ E(G) &\xrightarrow{\text{"}f\ \text{"}} \binom{V(G')}{2} \\
 \{ 1,4 \} &\mapsto \{ f(1), f(4) \} = \{ d, e \} \in E(G')
 \end{align} \implies f \text{ morfismo}
 $$
-la $f$ ha apici perché è non è $f$ ma la mappa indotta da essa sui lati.
+la $f$ è tra apici perché è non è $f$ ma la mappa indotta da essa sui lati.
 ### Def 14.10
 Siano $G$ e $G'$ due grafi e sia $f:V(G) \rightarrow V(G')$ una funzione. Diciamo che $f$ è un isomorfismo da $G$ in $G'$ se:
 1) $f$ è bigettiva

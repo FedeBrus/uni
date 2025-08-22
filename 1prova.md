@@ -24,7 +24,7 @@ Definiamo $\leq \subset \mathbb{N}\times \mathbb{N}$. Siano $n, m \in \mathbb{N}
 ### Proposizione
 $(\mathbb{N}, \leq)$ è un insieme totalmente ordinato.
 
-### Definizione
+### Definizione buon ordinamento
 Sia $(X, \mathcal{R})$ un insieme parzialmente ordinato, allora $(X, \mathcal{R})$ si dice essere ben ordinato se ogni sottoinsieme non-vuoto di $X$ ammette un minimo.
 
 ### Teorema del buon ordinamento dei naturali
@@ -207,7 +207,7 @@ Allora possiamo definire $f^{\star}:Y' \rightarrow X'$ dove $f^{\star}(y):=f(y),
 Il passo induttivo è stato svolto.
 Grazie al principio di induzione di prima forma l'asserto è vero $\forall n\in \mathbb{N}$.
 
-### Definizione
+### Definizione caridinalità
 Sia $X$ un insieme finito, dunque $\exists n \in \mathbb{N}$ tale che $X \sim I_{n}$. Indichiamo allora $|X|=n$ la cardinalità di $X$.
 
 ### Corollario
@@ -260,7 +260,7 @@ Vale che:
 ### Lemma utile
 Siano $n,m \in \mathbb{Z}$. Sia $c\in \mathbb{Z}$ tale che $c|n$ e $c|m$, allora $c|xn+ym, \forall x,y \in \mathbb{Z}$.
 
-### Teorema
+### Teorema esistenza e unicità di MCD
 Siano $n,m\in \mathbb{Z}$ non entrambi nulli, allora $\exists!d\in \mathbb{Z}, d>0$ tale che $d$ è MCD di $n,m$.
 
 Dimostrazione unicità:
@@ -299,7 +299,7 @@ Siano $n,m\in \mathbb{Z}$ e sia $M\in \mathbb{Z}, M\geq 0$ tale che:
 - Se $\exists c\in \mathbb{Z}$ tale che $n|c$ e $m|c$, allora $M|c$
 Allora $M$ è detto essere mcm di $n,m$ e $[n,m]:=M$.
 
-### Proposizione
+### Definizione coprimi
 Siano $n,m \in \mathbb{Z}$ non entrambi nulli, $n$ e $m$ si dicono coprimi tra loro se $(n,m) = 1$.
 
 ### Proposizione
@@ -310,7 +310,7 @@ Siano $n,m \in \mathbb{Z}$ tali che $(n,m)=1$, allora vale che:
 - $n|mq \implies n|q, \forall q\in \mathbb{Z}$
 - $n|q$ e $m|q$ $\implies$ $nm|q, \forall q\in \mathbb{Z}$.
 
-### Teorema
+### Teorema esistenza e unicità di mcm
 Siano $n,m \in \mathbb{Z}$. Allora $\exists!M\in \mathbb{Z}, M\geq 0$ tale che $M$ è mcm di $n,m$. Inoltre se $n=m=0$ allora $M=0$.
 Se $n,m$ non sono entrambi nulli allora $M=\frac{|n||m|}{(n,m)}$.
 
@@ -511,3 +511,181 @@ Dunque $[x]_{n}$ è invertibile con inversa $[x]^{c-1}_{n}[a]_{n}^{-1}$. Dunque 
 Allora la congruenza iniziale può essere riscritta come $P_{c}(x)=a$ e per il teorema fondamentale $x=P_{d}(a)$.
 
 ---
+### Definizione passeggiata cammino ciclo
+Sia $G=(V,E)$ un grafo e sia $(v_{0},\dots,v_{n})$ una successione di $n$ suoi vertici, $v_{i}\in V, \forall i\in \{ 0,\dots,n \}$. $(v_{0},\dots,v_{n})$ si dice essere:
+- Una passeggiata in $G$ se $n = 0$ oppure se $n\geq 1$ e $\forall i\in \{ 0,\dots,n-1 \}, \{ v_{i},v_{i+1} \}\in E$.
+- Un cammino in $G$ se è una passeggiata e $v_{i}\neq v_{j},\forall i,j\in \{ 0,\dots,n \}$ tali che $i\neq j$.
+- Un ciclo in $G$ se $n\geq 3$ ed è una passeggiata e $(v_{0},\dots,v_{n-1})$ è un cammino in $G$.
+e $n$ è la sua lunghezza.
+
+### Definizione congiungibilità
+Sia $G=(V,E)$ un grafo. Siano $v, w \in V$. $v$ si dice congiungibile per passeggiate (per cammini) con $w$ se $\exists(v_{0},\dots,v_{n})$ passeggiata (cammino) in $G$ tale che $v_{0} = v$ e $v_{n}=w$.
+
+### Teorema equivalenza tra congiungibilità
+Sia $G=(V,E)$ un grafo. Siano $v, w \in V$. $v$ è congiungibile per passeggiate a $w$ se e solo se lo è per cammini.
+
+Dimostrazione.
+Supponiamo che $v$ sia congiungibile a $w$ per cammini. Dunque $\exists(v_{0},\dots,v_{n})$ successione di vertici di $G$ cammino con $v_{0} = v, v_{n}=w$, ma ogni cammino per definizione è anche una passeggiata.
+Supponiamo che $v$ sia congiungibile a $w$ per passeggiate.
+Poniamo $\mathcal{P}:=\{ (v_{0},\dots,v_{n}) \text{ passeggiata in } G | v_{0} =v, v_{n} = w \}$.
+Poniamo $\mathcal{A}:=\{ l(P) \in \mathbb{N} | P \in \mathcal{P} \}$.
+Osserviamo che $\mathcal{P}\neq \emptyset$ per ipotesi $\implies \mathcal{A \neq \emptyset}$.
+Siccome $\mathcal{A}$ è un sottoinsieme non-vuoto di $\mathbb{N}$. Per il buon ordinamento dei numeri naturali $\exists m:=min(\mathcal{A}) \implies \exists P_{0}\in P:l(P_{0})=m$.
+Dimostriamo che $P_{0}$ è un cammino.
+Supponiamo per assurdo che $P_{0}=(v_{0},\dots,v_{m})$ non sia un cammino. Allora $\exists i,j \in \{ 0,\dots,m \}$ tali che $i \neq j$ per i quali $v_{i}=v_{j}$. Sia $P_{1}$ la seguenza ordinata di vertici ottenuta a partire da $P_{0}$ rimuovendo la sottosequenza $(v_{i+1}, \dots, v_{j})$.
+Poiché $P_{0}$ è passeggiata in $G$, $\{ v_{i}, v_{i+1} \} \in E, \forall i \in \{ 0, \dots, m-1 \}$. $P_{0}=(v_{0},\dots,v_{i},v_{j+1}, \dots, v_{m})$, dunque l'unico lato da controllare è $\{ v_{i}, v_{j+1} \}$.
+Sappiamo che $v_{i}=v_{j} \implies \{ v_{i}, v_{j+1} \}=\{ v_{j}, v_{j+1} \} \in E$. Allora $P_{1}$ è una passeggiata in $G$ $\implies P_{1}\in \mathcal{P}$.
+Ma $\mathcal{A} \ni l(P_{1})=l(P_{0})-(j-i)<l(P_{0})=m$. Ma questo è assurdo perché contraddice la minimalità di $m$ in $\mathcal{A}$.
+Segue ceh $P_{0}$ è un cammino.
+
+### Definizione congiungibilità
+Sia $G=(V,E)$ un grafo. Sia $\sim \subset V \times V$ una relazione binaria tale che $\forall v,w \in V, v \sim w \Longleftrightarrow$ $v$ è congiungibile a $w$ in $G$.
+
+### Teorema congiungibilità come relazione di equivalenza
+La relazione bianria $\sim$ è una relazione di equivalenza:
+
+Dimostrazione riflessività.
+Sia $v \in V$. Allora $v \sim v$, poiché $(v)$ è una passeggiata in $G$.
+Sia $v,w \in V$ tali che $v \sim w$. Allora $\exists(v_{0}=v,\dots,v_{n}=w)$ passeggiata in $G$. Allora $\{ v_{i},v_{i+1} \} \in E, \forall i \in \{ 0, \dots, n-1 \}$.
+Allora $(v_{n},v_{n-1},\dots,v_{0})$ è anch'essa una passegiata in $G$ dato che i lati coinvolti sono gli stessi. Segue che $w \sim v$.
+Sia $v,w,z \in V$ tali che $v \sim w$ e $w \sim z$. Allora $\exists(v_{0}=v, \dots, v_{n}=w),(w_{0}=w, \dots, w_{m}=z)$ successioni ordinate di vertici di $G$. Osserviamo che $v_{n}=w=w_{0} \implies v_{n}=w_{0} \implies \{ v_{n}, w_{1} \}=\{ w_{0},w_{1} \}\in E$.
+Allora la successione $(v_{0},\dots,v_{n},w_{1},\dots,w_{m})$ è una passeggiata in $G$ e vale che $v_{0} = w$ e $w_{m}=z$. Segue che $v \sim z$.
+
+---
+### Definzione grafo finito
+Sia $G=(V,E)$ un grafo, allora $G$ si dice finito se $V$ è un insieme finito.
+### Definizione grado di un vertice
+Sia $G=(V,E)$ un grafo. Sia $v \in V$.
+Si indica con $deg_{G}(v)$ il grado di $v$ in $G$. 
+Vale che $deg_{G}(v) := |\{ e \in E|v \in e \}|$.
+### Teorema di caratterizzazione dei grafi finiti
+Sia $G=(V,E)$ un grafo finito. Allora
+$$
+\sum_{v\in V}deg_{G}(v) = 2|E|
+$$
+Dimostrazione:
+Siano $V=\{ v_{1},\dots,v_{n} \}$ e $E = \{ e_{1},\dots,e_{k} \}$:
+Definiamo $m_{ij}$:
+$$
+m_{ij} := \begin{cases}
+1 & \text{se } v_{i} \in e_{j} \\
+0 & \text{se } v_{i} \not\in e_{j}
+\end{cases}
+$$
+Consideriamo la seguente sommatoria:
+$$
+\sum_{i=1}^{n} \sum_{j=1}^{k} m_{ij}
+$$
+per associatività e commutatività della somma in $\mathbb{Z}$:
+$$
+\sum_{i=1}^{n} \sum_{j=1}^{k} m_{ij} = \sum_{j=1}^{k} \sum_{i=1}^{n} m_{ij}
+$$
+Osserviamo che:
+$$
+\sum_{j=1}^{k} m_{ij} = |\{ j\in \{ 1,\dots,k \} | v_{i} \in e_{j} \}| = deg_{G}(v_i) \implies \sum_{i=1}^{n} \sum_{j=1}^{k} m_{ij} = \sum_{i=1}^{n} deg_{G}(v_{i})
+$$
+Inoltre osserviamo che:
+$$
+\sum_{i=1}^{n} m_{ij} = |\{ v \in \{ 1,\dots,n \} |v_{i} \in e_{j} \}| = 2 \implies \sum_{j=1}^{k} \sum_{i=1}^{n} m_{ij} = \sum_{j=1}^{k} 2 = 2k = 2|E|
+$$
+Dunque l'uguaglianza è verificata.
+
+### Definizione di score di un grafo
+Sia $G=(V,E)$ un grafo finito. Definiamo come score del grefo $G$ la $n$-upla con $n:=|V(G)|$ dei gradi dei vertici di $G$, vista a meno di ordinamento.
+
+### Lemma delle strette di mano.
+Sia $G=(V,E)$ un grafo finito.
+Il numero di vertici di grado dispari è pari.
+
+Dimostrazione:
+Poniamo $P:= \{ v \in V|deg_{G}(v) \text{ pari} \}$.
+Poniamo $D:= \{ v \in V|deg_{G}(v) \text{ dispari} \}$.
+Osserviamo che $P\cap D = \emptyset$ e $P \cup D =V$.
+Allora vale che:
+$$
+ 2|E| = \sum_{v \in V} deg_{G}(v) = \sum_{v \in P} deg_{G}(v) + \sum_{v \in D} deg_{G}(v) 
+$$
+Allora:
+$$
+2|E|-\sum_{v \in P} deg_{G}(v)  = \sum_{v \in D}deg_{G}(v)
+$$
+Osserviamo che: $2|E|$ è pari. La somma di numeri pari è sempre pari, dunque $\sum_{v \in P}deg_{G}(v)$ è pari e dunque l'intera parte sinistra dell'uguaglianza è pari. Segue che anche la parte destra è pari.
+Osseviamo inoltre che $deg_{G}(v), \forall v\in D$ è un numero dispari, e solo la somma di numero pari di numeri dispari è pari, dunque $|D|$ è pari.
+
+---
+
+### Definzione albero di copertura
+Sia $G=(V,E)$ un grafo finito e connesso. Un sottografo $T$ di $G$ si dice essere un albero di copertura di $G$ se $T$ è albero e $V(T)=V(G)$.
+Gli alberi di copertura non sono unici.
+
+### Proposizione
+Sia $T$ un grafo finito. Allora $T$ è un albero se e solo se $T$ è connesso e $T-e$ è sconnesso $\forall e\in E(T)$.
+
+### Teorema esistenza di un albero di copertura
+Sia $G=(V,E)$ un grafo finito e connesso, allora possiede almeno un albero di copertura.
+
+Dimostrazione:
+Poniamo $\mathcal{C}:=\{ C \text{ sottografo di } G | C\text{ connesso}, V(C)=V(G)\}$.
+Poniamo $\mathcal{A}:=\{ n\in \mathbb{N}| n=|E(C)| \text{ per qualche } C\in \mathcal{C} \}$.
+Osserviamo che $G$ è sottografo connesso di $G$ e vale che $V(G)=V(G)\implies G\in \mathcal{C}\implies \mathcal{C}\neq \emptyset \implies \mathcal{A}\neq \emptyset$.
+Siccome $\mathcal{A}\neq \emptyset$ e $\mathcal{A}\subset \mathbb{N}$, per il buon ordinamento dei naturali, si ha che $\exists \bar{n}:=min(\mathcal{A})\implies \exists \bar{C}\in \mathcal{C}:|E(\bar{C})|=\bar{n}$.
+Dimostriamo che $\bar{C}$ è un albero.
+Supponiamo per assurdo che non lo sia.
+$\bar{C}$ è connesso per costruzione, dunque deve valere che $\exists e\in E(\bar{C}):\bar{C}-e$ è connesso.
+Osserviamo che $V(\bar{C}-e)=V(\bar{C})=V(G) \implies \bar{C}-e \in \mathcal{C}\implies|E(\bar{C}-e)|\in \mathcal{A}$.
+Inoltre osserviamo che $|E(\bar{C})-e|=|E(\bar{C})|-1<|E(\bar{C})|=\bar{n}$, ma ciò è assurdo perché contraddice la minimalità di $\bar{n}$. 
+Segue che $\bar{C}$ è un albero.
+
+---
+
+### Definizione albero
+Sia $T=(V,E)$ un grafo. $T$ si dice essere un albero se è connesso e non contiene cicli. $T$ si dice foresta se non contiene cicli.
+
+### Lemma
+Sia $T=(V,E)$ un albero finito con $|V|\geq 2$, allora contiene almeno 2 foglie.
+
+### Lemma
+Sia $G=(V,E)$ un grafo connesso, sia $v\in V$ tale che $v$ è foglia, ovvero $deg_{G}(v)=1$. Allora $G-v$ è connesso.
+
+### Lemma
+Sia $T=(V,E)$ un albero, sia $v\in V$ tale che $v$ è foglia, ovvero $deg_{G}(v)=1$. Allora $T-v$ è un albero.
+
+### Teorema caratterizzazione degli alberi
+Sia $T=(V,E)$ un grafo finito. $T$ è un albero se e solo se è connesso e $|V|-1=|E|$.
+
+Dimostrazione.
+Supponiamo che $T$ sia un albero. Procediamo per induzione di prima forma shifatata su $n=|V|\geq 1$.
+
+Passo base, $n=1$:
+Sia $T=(V,E)$ un albero con $|V|=n=1$. L'unica costruzione possibile è un vertice isolato senza lati. Allora vale che $|V|-1=1-1=0=|E|$.
+Il passo base è stato risolto.
+
+Passo induttivo, $n\geq 1, n \implies n+1$:
+Sia $T=(V,E)$ un albero con $|V|=n+1$, supponiamo che ogni albero con $n-1$ vertici rispetti la formula di Eulero (ipotesi induttiva). 
+Osserviamo che $|V|\geq 2\implies \exists v\in V$ foglia. 
+Consideriamo $T-v$, questo è un albero per il lemma precedente.
+Osserviamo che $|V(T-v)|=|V|-1$ e $|E(T-v)|=|E|-1$ perché $v$ è foglia.
+Applicando l'ipotesi induttiva su $T-v$ otteniamo che $|V(T-v)|-1=|E(T-v)|\implies|V|-1-1=|E|-1\Longleftrightarrow|V|-1=|E|$. Dunque $T$ rispetta la formula di Eulero ed è connesso in quanto albero.
+Il passo induttivo è stato svolto.
+
+Grazie al principio di induzione di prima forma shiftato $T=(V,E)$ albero $\implies |V|-1=|E|$ con $|V|=n,\forall n\in \mathbb{N},n\geq 1$.
+
+Supponiamo che $T=(V,E)$ sia un grafo conneso e $|V|-1=|E|$. Procediamo per induzione di prima forma shiftata su $n=|V|\geq 1$.
+
+Passo base, $n=1$:
+Sia $T=(V,E)$ un grafo connesso con $|V|=n=1$. L'unica costruzione possibile è un vertice isolato senza lati e questo è un albero.
+Il passo base è stato risolto.
+
+Passo induttivo, $n\geq 1 , n \implies n+1$:
+Sia $T=(V,E)$ un grafo connesso con $|V|=n+1$ tale che $|V|-1=|E|$. Supponiamo che ogni grafo connesso con $|V|-1$ vertici e $|V|-1-1=|E|-1$ lati sia un albero (ipotesi induttiva).
+Osserviamo che esiste almeno una foglia in $V$. Supponiamo per assurdo che non ci siano foglie. Allora $deg_{T}(v)\geq 2, \forall v\in V$.
+Per la formula di Eulero: $|V|-1=|E|\Longleftrightarrow 2|V|-2=2|E|$. Per la caratterizzazione dei grafi finiti si ha che $2|E|=\sum_{v\in V}deg_{T}(v)\geq \sum_{v\in V}2=2|V|$. Ma ciò è assurdo perché $2|V|-2=2|E|\geq 2|V|$ è assurdo.
+Possiamo concludere che $\exists v\in V$ foglia.
+Consideriamo allora $T-v$ che per il lemma precedente è un grafo connesso. Osserviamo che $|V(T-v)|=|V(T)|-1$ e $|E(T-v)|=|E(T)|-1$, dunque vale $|V(T-v)|-1=|E(T)|$, dunque applicando l'ipotesi induttiva sappiamo che $T-v$ è un albero.
+A questo punto supponiamo per assurdo che $T$ non sia un albero. $T$ è connesso per ipotesi quindi $\exists(v_{0},\dots,v_{n})$ ciclo in $T$. Osserviamo che $deg_{T}(v_{i})\geq 2, \forall i\in \{ 0,\dots,n \}$. Ma allora $v \not\in \{ v_{0},\dots,v_{n} \}$, perché $deg_{T}(v)=1$.
+Ciò vorrebbe dire che il $(v_{0},\dots,v_{n})$ ciclo in $T$ è anche ciclo in $T-v$, ma ciò è assurdo perché $T-v$ è un albero.
+Segue ceh $T$ è un albero.
+Il passo induttivo è stato svolto.
+Grazie al principio di induzione di prima forma shiftato, l'asserto vale $\forall n\in \mathbb{N},n\geq 1$.
+
+

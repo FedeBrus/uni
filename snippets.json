@@ -22,7 +22,8 @@
   {trigger: "EE", replacement: "\\mathbb{E}", options: "mA"},
   {trigger: "bin", replacement: "\\binom{$0}{$1}$2", options:"mA"},
   {trigger: "zinv", replacement: "(\\mathbb{Z} \\big/_{n\\mathbb{Z}})^{*}", options:"mA"},
-
+  {trigger: "mdl", replacement: "\\equiv $0\\ (\\text{mod}\\ $1)$2", options:"mA"},
+  {trigger: "inv", replacement: "^{-1}", options:"mA"},
     // Greek letters
 	{trigger: "@a", replacement: "\\alpha", options: "mA"},
 	{trigger: "@b", replacement: "\\beta", options: "mA"},
