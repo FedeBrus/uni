@@ -1,0 +1,51 @@
+2 fasi che non dipendono dall'istruzione:
+  - Fetch (prelievo dell'istruzione memorizzata)
+  - Decode (interpretazione dell'istruzione prelevata)
+
+3 tipi di istruzioni:
+  - Accesso in memoria
+  - operazioni di tipo r o i
+  - operazioni di branch 
+
+Tutte le operazioni usano l'ALU
+Tutte le operazioni usano il blocco dei registri (non tutte ci scrivono)
+Una componente non utilizzata da tutte le istruzioni invece è la memoria
+
+Ogni registro è un banco di Flip-Flop
+
+Program Counter
+> Fetch
+Memoria Istrizioni
+> Decode
+Banco registri
+> Execute
+ALU
+Memoria Dati
+
+La parte superiore dello schema serve ad aggiornare il PC
+
+In base al codop l'unità di controllo altera il comportamento.
+Il segnale zero che esce dalla alu serve per comunicare se la condizione di salto si sta verificano o meno.
+I fili neri sono a 64bit nel caso di indirizzi o 32 nel caso di valori.
+L'intero processore va temporizzato con un tempo T che può essere determinato osservando il cammino critico (ovvero il più lungo) in modo da non creare stati indecidibili.
+Tutto ciò che può essere parallelizzato viene parallelizzato. Dunque per la determinazione del cammino critico bisogna osservare il componente più lento in ogni parallelizzazione.
+Per le istruzioni di tipo R ad esempio sono necessari il register-file e la ALU.
+Per le istruzioni load e store serve inoltre il blocco di memoria dati.
+Esiste un componente di estensione del segno che prende i 32 bit di istruzione e la estende a 64, prende i valori dell'istruzione che identificano 
+l'immediato a 12 bit e esegue un'estensione di segno, prendendo il bit più significativo e lo estende.
+
+Istruzioni di salto
+Siccome le istruzioni sono a 32 bit a noi basterebbe shiftare il PC di multipli di 4 e normalmente avrebbe senso shiftare di 2 l'immediato, solo che in 
+RISCV esistono istruzioni speciali codificate a 16 bit e quindi si decide di shiftare solamente di 1. Questo ci permette di poter fare salti più grandi.
+
+In ogni ciclo di clock si può accedere una sola volta a ciascun componente, per questo esiste la separazione tra memoria dati e memoria istruzioni.
+
+Per determinare l'istruzione ALU da eseguire bastano i 2 bit di aluOP e 
+solamente il 30-esimo bit e dal 12-esimo fino al 14-esimo bit di istruzione 
+(sesto bit di funz7 e i 3 bit di funz3). 
+Dunque una volta capito tramite aluOP che l'istruzione è di tipo 3 bisogna 
+guardare questi 4 bit aggiuntivi. Nel caso di operazioni di tipo L, S, BS 
+allora in quei casi si può capire direttamente da aluOP.
+
+Mentre i segnali che l'unità di controllo principale deve generare sono determinati 
+dal codop dell'istruzione, ovvero i 7 bit meno significativi
