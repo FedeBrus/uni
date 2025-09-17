@@ -26,3 +26,8 @@ Authenticity is the property of being genuine and being able to be verified and 
 Non-repudiation is the protection against an individual falsely denying having performed a particular action.
 Notice how sometimes non-repudiation can invalidate privacy.
 ### Availability
+Ensuring timely and reliable access to and use of information.
+A requirement intended to assure that systems work promptly and service is not
+denied to authorized users.
+The security goal that generates the requirement for protection against intentional
+or accidental attempts to perform unauthorized deletion of data or otherwise cause a denial of service or data.
