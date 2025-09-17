@@ -83,3 +83,17 @@ La $FK$ può fare riferimento alla stessa relazione di appartenenza della $PK$ (
 Inoltre gli attributi appartenenti alla $FK$ non necessariamente hanno lo stesso nome dei corrispondenti attributi appartenenti alla $PK$.
 ### Valore NULL
 Il valore NULL nel modello relazionale ha significato ambiguo, può indicare l'inesistenza dell'informazione o il fatto che non la si conosce.
+### Schema di un database relazionale
+A differenza degli altri vincoli, i vincoli di integrità referenziale coinvolgono più di una relazione, per cui non basta considerare lo schemadi una singola relazione.
+Uno schemda di un database relazionale è un insieme $S=\langle \{ R_{1},\dots ,R_{n} \}, \text{IC} \rangle$, dove $R_{1},\dots,R_{n}$ sono i singoli schemi di relazione che appartengono alla base di dati e IC è un insieme di vincoli di integrità.
+### Stato di una base di dati relazionale
+Uno stato di una base di dati relazionale con schema $S$ è un insieme di stati delle relazioni $\{ r_{1}, \dots, r_{m} \}$ tali che ogni $r_{i}$ è uno stato di $R_{i}$ e tale che $r_{i}$ soddisfi i vincoli di integrità relazionale in IC.
+Uno stato di una base di dati relazionale viene talvolta chiamato un'istantanea (snapshot) o istanza (instance) della base di dati.
+Uno stato di base di dati che non rispetti i vincoli in IC è uno stato non valido.
+Dunqeu lo stato della base di dati è l'unione di tutti i singoli stati delle relazioni che compongono la base di dati.
+Ogni volta che la base di dati è modificata, si passa in un nuovo stato. Le principali operazioni per cambiare lo stato di una base di dati sono:
+- INSERT
+- DELETE
+- MODIFY
+Queste operazioni non devono portare alla violazione di alcun vincolo di integrità, ovvero non devono creare un stato non valido.
+Garantire questa condizione richiede di propagare automaticamente gli aggiornamenti.
