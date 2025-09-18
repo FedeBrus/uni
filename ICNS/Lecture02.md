@@ -7,7 +7,7 @@ Again, it is impossible to have a perfectly secure system, the point of security
 Bugs cause vulnerabilities and hackers are always looking for soft spots. When a bug becomes a vulenrability, a strategy for an attack can be developed.
 ### Orthogonality
 The CIA dimensions are not orthogonal, one cannot address one without taking in considerations the otehr two, they are dependent of each other.
-This entanglement is what makes security inherently complex, the lack of modularity makes standard engeneering problem-solving methods uneffective.
+This entanglement is what makes security inherently complex, the lack of modularity makes standard engeneering problem-solving methods ineffective.
 ### Security policies
 You can think of them as a set of rules that are declarative, they guarantee the CIA principles. They characterize what the CIA means in a particular scenario. 
 Their declarative nature makes them a high-level aspect of security.
