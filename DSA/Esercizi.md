@@ -1,4 +1,4 @@
-qSi trovi la complessità di:
+Si trovi la complessità di:
 $$
 T(n) = \begin{cases}
 1  & n\leq 1 \\

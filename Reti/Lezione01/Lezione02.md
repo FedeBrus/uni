@@ -1,1 +1,0 @@
-Su internet non si può richiedere garanzia di throughput e temporizzazione, non è possibile, quindi le applicazioni si attaccano

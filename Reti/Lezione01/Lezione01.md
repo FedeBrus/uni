@@ -52,10 +52,8 @@ Supponendo che i pacchetti vengano trasmessi in base al principio “primo arriv
 Una volta che un bit viene inserito nel collegamento, deve propagarsi. 
 Il tempo necessario per propagarsi dall'inizio del collegamento è il ritardo di propagazione. Il bit si propaga alla velocità di propagazione del collegamento. La velocità di propagazione dipende dal mezzo fisico del collegamento. Il ritardo di propagazione è la distanza tra due nodi divisa per la velocità di propagazione. 
 Cioè, il ritardo di propagazione è d/s, dove d è la distanza tra nodi e s è la velocità di propagazione del collegamento.
-
 ##### Differenza tra ritardo di trsmissione e propagazione
 [Applet](https://www.tkn.tu-berlin.de/teaching/rn/animations/propagation/)
-
 #### Packet loss
 Quando il ritardo di accodamento è elevato e quando è insignificante? La risposta a questa domanda dipende dalla velocità con cui il traffico arriva alla coda, dalla velocità di trasmissione del collegamento e dalla natura del traffico in arrivo, ovvero se il traffico arriva periodicamente o a raffiche. 
 Per comprendere meglio questo concetto, indichiamo con a la velocità media con cui i pacchetti arrivano alla coda (a è espresso in pacchetti/secondo). Ricordiamo che R è la velocità di trasmissione, ovvero la velocità (in bit/sec) alla quale i bit vengono espulsi dalla coda. Supponiamo inoltre, per semplicità, che tutti i pacchetti siano costituiti da L bit. Infine, supponiamo che la coda possa contenere un numero infinito di bit. 
@@ -78,9 +76,35 @@ Generalizzando, per un percorso con n collegamenti, con velocità R1, R2, ..., R
 Nel contesto dell'Internet odierna, dove il core della rete è spesso "sovra-dimensionato" con collegamenti ad alta velocità, il fattore limitante per il throughput è tipicamente la rete di accesso.
 
 ### Architettura a livelli 
-Ogni livello fornisce il proprio servizio (1) eseguendo determinate azioni all'interno di quel livello e (2) utilizzando i servizi del livello direttamente sottostante. 
+Ogni livello fornisce il proprio servizio:
+1. Eseguendo determinate azioni all'interno di quel livello
+2. Utilizzando i servizi del livello direttamente sottostante. 
 Un'architettura a livelli ci consente di discutere una parte ben definita e specifica di un sistema ampio e complesso. Questa semplificazione è di per sé di notevole valore in quanto fornisce modularità, rendendo molto più facile modificare l'implementazione del servizio fornito dal livello. Finché il livello fornisce lo stesso servizio al livello superiore e utilizza gli stessi servizi dal livello sottostante, il resto del sistema rimane invariato quando viene modificata l'implementazione di un livello.
 
 #### Stratificazione dei protocolli
 I progettisti di rete organizzano i protocolli, l'hardware e il software di rete, in livelli. Ogni protocollo appartiene a uno dei livelli. Ci interessano nuovamente i servizi che un livello offre al livello superiore, il cosiddetto modello di servizio di un livello. 
 La stratificazione dei protocolli presenta vantaggi concettuali e strutturali. La stratificazione fornisce un modo strutturato per discutere i componenti del sistema. La modularità rende più facile l'aggiornamento dei componenti del sistema.
+![[InternetProtocolStack.png]]
+#### Livello applicativo 
+Il livello applicativo è quello in cui risiedono le applicazioni di rete e i relativi protocolli. Il livello applicativo di Internet comprende numerosi protocolli, quali il protocollo HTTP, SMTP, FTP e DNS. Un protocollo a livello di applicazione è distribuito su più sistemi finali, con l'applicazione in un sistema finale che utilizza il protocollo per scambiare pacchetti di informazioni con l'applicazione in un altro sistema finale. Questo pacchetto di informazioni a livello di applicazione viene detto messaggio.
+
+#### Livello di trasporto
+Il livello di trasporto di Internet trasporta i messaggi del livello applicativo tra gli endpoint delle applicazioni. In Internet esistono due protocolli di trasporto, TCP e UDP, entrambi in grado di trasportare messaggi del livello applicativo. Faremo riferimento a un pacchetto del livello di trasporto come segmento.
+
+#### Livello di rete
+Il livello di rete di Internet è responsabile dello spostamento dei pacchetti di livello di rete, noti come datagrammi, da un host all'altro. Il livello di rete fornisce quindi il servizio di consegna del segmento al livello di trasporto nell'host di destinazione. Il livello di rete di Internet include il famoso protocollo IP, che definisce i campi nel datagramma e il modo in cui i sistemi finali e i router agiscono su questi campi. Esiste un solo protocollo IP e tutti i componenti Internet che hanno un livello di rete devono eseguire il protocollo IP.
+
+#### Livello di collegamento
+Il livello di rete di Internet instrada un datagramma attraverso una serie di router tra l'origine e la destinazione. Per spostare un pacchetto da un nodo al nodo successivo nel percorso, il livello di rete si affida ai servizi del livello di collegamento. In particolare, ad ogni nodo, il livello di rete passa il datagramma al livello di collegamento, che lo consegna al nodo successivo lungo il percorso. In questo nodo successivo, il livello di collegamento passa il datagramma al livello di rete. 
+Ad esempio, alcuni protocolli di livello di collegamento forniscono una consegna affidabile, dal nodo di trasmissione, su un collegamento, al nodo di ricezione. Si noti che questo servizio di consegna affidabile è diverso dal servizio di consegna affidabile del TCP, che fornisce una consegna affidabile da un sistema terminale all'altro.
+
+#### Livello fisico
+Il compito del livello fisico è quello di spostare i singoli bit all'interno del frame da un nodo al successivo. Anche in questo caso i protocolli di questo livello dipendono dal collegamento e, inoltre, dal mezzo di trasmissione effettivo del collegamento. Ad esempio, Ethernet ha molti protocolli di livello fisico: uno per il cavo in rame a doppino intrecciato, un altro per il cavo coassiale, un altro per la fibra e così via. In ciascun caso, un bit viene trasferito attraverso il collegamento in modo diverso.
+
+### Incapsulamento
+![[Incapsulamento.png]]
+I router e gli switch a livello di collegamento non implementano tutti i livelli dello stack di protocolli; in genere implementano solo i livelli inferiori.
+Nell'host mittente, un messaggio a livello di applicazione M viene trasmesso al livello di trasporto. Nel caso più semplice, il livello di trasporto prende il messaggio e aggiunge ulteriori informazioni che saranno utilizzate dal livello di trasporto del lato ricevente. Il messaggio a livello di applicazione e le informazioni di intestazione a livello di trasporto costituiscono insieme il segmento a livello di trasporto. Il segmento a livello di trasporto incapsula quindi il messaggio a livello di applicazione. Il livello di trasporto passa quindi il segmento al livello di rete, che aggiunge le informazioni dell'intestazione del livello di rete, come gli indirizzi dei sistemi finali di origine e destinazione, creando un datagramma del livello di rete. Il datagramma viene quindi passato al livello di collegamento, che aggiungerà le proprie informazioni di intestazione del livello di collegamento e creerà un frame del livello di collegamento. 
+Vediamo quindi che in ogni strato un pacchetto ha due tipi di campi: i campi dell'intestazione e un campo di payload. Il payload è in genere un pacchetto proveniente dallo strato superiore.
+
+In un sistema con M layer, i dati da trasmettere costituiscono una M-SDU (Service Data Unit di Layer M). A ciò il layer aggancia la propria M-PCI (Protocol Control Information di Layer M). Il risultato è una M-PDU (Protocol Data Unit di Layer M). Ogni layer considera la PDU del layer superiore come una "busta chiusa". Ad esempio, la N-PDU del layer N è la (N-1)-SDU del layer N-1 e Preponendo la (N-1)-PCI, diventa la (N-1)-PDU. Al ricevitore, si inverte il processo e gni layer rimuove le proprie PCI.

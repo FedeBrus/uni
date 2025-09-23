@@ -20,9 +20,9 @@ r(R) = \{ t_{1},\dots,t_{m} \}
 $$
 dove ogni $t_{i}$ è una tupla $\forall i\in \{ 1,\dots,m \}$.
 $$
-t_{i}= \langle v_{1}, \dots,v_{k} \rangle
+t_{i}= \langle v_{1}, \dots,v_{n} \rangle
 $$
-dove ogni $v_{i}$ è un elemento di $dom(A_{i})$ $\forall i\in \{ 1,\dots,k \}$.
+dove ogni $v_{i}$ è un elemento di $dom(A_{i})$ $\forall i\in \{ 1,\dots,n \}$.
 ### Chiave
 Ogni riga di una relazione ha un campo (o un insieme di campi) il cui valore (o i cui valori) identificano unicamente quella riga in quella tabella. Tale campo o insiemi di campi viene detta chiave della relazione.
 Nel caso una chiave sia un'unione di campi viene detta chiave composta.
@@ -43,9 +43,8 @@ Un'authority è un ente che garantisce l'unicità di un dato, che può essere ut
 I vincoli determinano quali stati di una relazione in una base di dati relazionale sono ammissibili e quali non lo sono.
 I principali vincoli sono di tre tipi:
 - Vincoli impliciti: dipendono dal data model stesso (ad esempio il modello relazionale non ammette liste come valore di alcun attributo).
-- Vincoli basati sull schema (o espliciti):  sono definiti nello schema usando gli strumenti forniti dal modello.
+- Vincoli basati sullo schema (o espliciti): sono definiti nello schema usando gli strumenti forniti dal modello.
 - Vincoli applicativi (o semantici): si tratta di vincoli che vanno al di là del potere espressivo del modello e devono essere imposti a livello di programma applicativo.
-
 ### Vincoli di integrità relazionale
 Un vincolo è definito come una condizione che deve valere affinché lo stato di una relazione sia valido.
 I principali tipi di vincoli espliciti che possono essere espressi nel modello relazionale sono:
@@ -54,9 +53,9 @@ I principali tipi di vincoli espliciti che possono essere espressi nel modello r
 - Vincolo di integrità delle entità
 - Vincolo di integrità referenziale
 ### Superchiave
-La superchiave di una relazione $R$ è un insieme $\{ S_{k} \}$ tale che non esistono due tuple di $r(R)$ in cui gli attributi $\{ S_{k} \}$ hanno lo stesso valore, ovvero se $t_{i}$ e $t_{j}$ sono tuple distinte di $r(R)$, allora $t_{i}[S_{k}]\neq t_{j}[S_{k}], \forall i\neq j$. Questa condizione deve essere rispettata in ogni stato valido di $R$.
+La superchiave di una relazione $R$ è un insieme $SK$ tale che non esistono due tuple di $r(R)$ in cui gli attributi in $SK$ hanno lo stesso valore, ovvero se $t_{i}$ e $t_{j}$ sono tuple distinte di $r(R)$, allora $t_{i}[SK]\neq t_{j}[SK], \forall i\neq j$. Questa condizione deve essere rispettata in ogni stato valido di $R$.
 ### Superchiave minimale
-Una chiave è una superchiave minimale, ovvero una superchiave tale che la rimozione di qualsiasi attributo $S_{k}$ produrrebbe un insieme di attributi che non è più una superchiave di $R$. La superchiave minimale è anche detta chiave candidata.
+Una chiave è una superchiave minimale, ovvero una superchiave tale che la rimozione di qualsiasi attributo $SK$ produrrebbe un insieme di attributi che non è più una superchiave di $R$. La superchiave minimale è anche detta chiave candidata.
 Una chiave (superchiave minimale) è sempre una superchiave, ma non viceversa.
 ### Chiave primaria
 Se una relazione ha più di una chiave candidata, una viene scelta come chiave primaria.
@@ -85,7 +84,7 @@ Inoltre gli attributi appartenenti alla $FK$ non necessariamente hanno lo stesso
 Il valore NULL nel modello relazionale ha significato ambiguo, può indicare l'inesistenza dell'informazione o il fatto che non la si conosce.
 ### Schema di un database relazionale
 A differenza degli altri vincoli, i vincoli di integrità referenziale coinvolgono più di una relazione, per cui non basta considerare lo schemadi una singola relazione.
-Uno schemda di un database relazionale è un insieme $S=\langle \{ R_{1},\dots ,R_{n} \}, \text{IC} \rangle$, dove $R_{1},\dots,R_{n}$ sono i singoli schemi di relazione che appartengono alla base di dati e IC è un insieme di vincoli di integrità.
+Uno schemda di un database relazionale è un insieme $S=\langle \{ R_{1},\dots ,R_{n} \}, \text{IC} \rangle$, dove $R_{1},\dots,R_{n}$ sono i singoli schemi di relazione che appartengono alla base di dati e $IC$ è un insieme di vincoli di integrità.
 ### Stato di una base di dati relazionale
 Uno stato di una base di dati relazionale con schema $S$ è un insieme di stati delle relazioni $\{ r_{1}, \dots, r_{m} \}$ tali che ogni $r_{i}$ è uno stato di $R_{i}$ e tale che $r_{i}$ soddisfi i vincoli di integrità relazionale in IC.
 Uno stato di una base di dati relazionale viene talvolta chiamato un'istantanea (snapshot) o istanza (instance) della base di dati.
