@@ -22,7 +22,7 @@ DISTINCT è una chiave opzionale per indicare che i duplicati devono essere elim
 ##### Esempio
 ```sql
 SELECT s.sid, b.name, b.color
-FROM sailors s, reservations r, boats b
+FROM sailors s, reserves r, boats b
 WHERE s.sid = r.sid and r.bid = b.bid;
 ```
 
