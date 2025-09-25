@@ -43,6 +43,7 @@ $$
 It is impossible to have a perfectly secure system, the point of security is to minimize this risk function.
 Bugs cause vulnerabilities and hackers are always looking for soft spots. When a bug becomes a vulenrability, a strategy for an attack can be developed.
 Impact is evaluated with respect to each stakeholder, while the likelihood is given by the threats and the vulnerabilities that they would exploit. Threats are characterized as a combination of the propensity to attack and the ability to successfully attack. Vulnerabilities are characterized by how easy it is to identify and exploit them.
+Likelihood refers to the likelihood of a certain attack exploiting a certain vulnerability, while impact is defined as the negative consequences on a stakeholder in relation to a certain system. Risk must be minimized to respect to each stakeholder involved (Pareto optimality problem).
 ```merm
 stateDiagram-v2
     Threat --> Vulnerability: Exploits
@@ -51,6 +52,13 @@ stateDiagram-v2
     Mitigation --> Threat: Affects
 ```
 ### Threat Model
-A threat model is a structured representation of all the information that affects the security of an application. It usually includes a description of the system to be modelled, assumptions that can be checked/challenged in the future as the threat landscape changes, potential threats to the system, controls that can be taken to mitigate each threat and a way of validating the model and threats, and verification of success of controls taken. 
+A threat model is a structured representation of all the information that affects the security of an application, i.e. it is a view of the application and its environment trhough the lens of security.
+It typically includes:
+- Description of the system to be modelled.
+- Assumptions that can be checked/challenged in the future as the threat landscape changes.
+- Potential threats to the system.
+- Controls that can be taken to mitigate each threat.
+- A way of validating the model and threats, and verification of success of controls taken.
+The threat landscape is ever changing and always evolving, so assumptions need to be challenged periodically. If an assumption were to be wrong, then security is nullified.
 ### Risk matrix
 The risk matrix is a matrix used in risk assessment to define the level of risk. The impact and likelihood of an attack are divided into a set of discrete intervals, which will help is assigning a value to the level of risk of a particular scenario. Beware that mitigations have a cost, in both their deployment and their maintenance. Also not all mititgations reduce risk, because the deployment of a mitigation changes the threat landscape and a new threat evaluation has to take place.
