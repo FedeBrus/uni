@@ -53,3 +53,5 @@ WHERE qualification
 GROUP BY groupingList
 HAVING groupQualification
 ```
+
+Se possibile è meglio filtrare prima perché risparmi in tempo di computazioen xD
