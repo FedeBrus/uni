@@ -61,4 +61,4 @@ It typically includes:
 - A way of validating the model and threats, and verification of success of controls taken.
 The threat landscape is ever changing and always evolving, so assumptions need to be challenged periodically. If an assumption were to be wrong, then security is nullified.
 ### Risk matrix
-The risk matrix is a matrix used in risk assessment to define the level of risk. The impact and likelihood of an attack are divided into a set of discrete intervals, which will help is assigning a value to the level of risk of a particular scenario.
+The risk matrix is a matrix used in risk assessment to define the level of risk. The impact and likelihood of an attack are divided into a set of discrete intervals, which will help is assigning a value to the level of risk of a particular scenario. Beware that mitigations have a cost, in both their deployment and their maintenance. Also not all mititgations reduce risk, because the deployment of a mitigation changes the threat landscape and a new threat evaluation has to take place.
