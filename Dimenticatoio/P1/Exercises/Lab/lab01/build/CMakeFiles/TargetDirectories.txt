@@ -1,9 +1,0 @@
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/es01.dir
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/es02.dir
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/es03.dir
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/es04.dir
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/es05.dir
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/es06.dir
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/es07.dir
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/edit_cache.dir
-/home/haida/Notes/uni/laboratorio/lab01/build/CMakeFiles/rebuild_cache.dir

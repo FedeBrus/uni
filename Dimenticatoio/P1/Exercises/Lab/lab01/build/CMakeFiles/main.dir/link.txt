@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/main.dir/es01.o -o main  libarray.a
