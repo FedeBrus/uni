@@ -120,5 +120,68 @@ Una cache Web, chiamata anche server proxy, è un'entità di rete che soddisfa l
 3. Se la cache Web non contiene l'oggetto, apre una connessione TCP al server di origine. La cache Web invia quindi una richiesta HTTP per l'oggetto nella connessione TCP cache-server. Dopo aver ricevuto questa richiesta, il server di origine invia l'oggetto all'interno di una risposta HTTP alla cache Web. 
 4. Quando la cache Web riceve l'oggetto, ne memorizza una copia nella sua memoria locale e ne invia una copia, all'interno di un messaggio di risposta HTTP, al browser client.
 
-Si noti che una cache è sia un server che un client allo stesso tempo. Una cache Web può ridurre sostanzialmente il tempo di risposta a una richiesta client. In secondo luogo, le cache Web possono ridurre sostanzialmente il traffico sulla connessione di accesso a Internet di un'istituzione.
+Si noti che una cache è sia un server che un client allo stesso tempo. Una cache Web può ridurre sostanzialmente il tempo di risposta a una richiesta client. In secondo luogo, le cache Web possono ridurre sostanzialmente il traffico sulla connessione di accesso a Internet di un'istituzione. Il caching Web viene implementato per due motivi. 
+1. può ridurre sostanzialmente il tempo di risposta a una richiesta client (La larghezza di banda tra client e cache è spesso maggiore del collo di bottiglia che può esserci tra client e server). 
+2. può ridurre sostanzialmente il traffico sulla connessione di accesso a Internet di un'istituzione. Riducendo il traffico, l'istituzione non deve aggiornare la larghezza di banda, riducendo così i costi (La somma da pagare agli ISP di livello superiore si riduce).
 ![[WebCaching.png]]
+#### Il GET condizionale 
+Sebbene la memorizzazione nella cache possa ridurre i tempi di risposta percepiti dall'utente, introduce un nuovo problema: la copia di un oggetto residente nella cache potrebbe essere obsoleta, ovvero l'oggetto ospitato nel server Web potrebbe essere stato modificato da quando la copia è stata memorizzata nella cache del client. 
+HTTP dispone di un meccanismo che consente a una cache di verificare che i suoi oggetti siano aggiornati. 
+Un messaggio di richiesta HTTP è un cosiddetto messaggio GET condizionale se
+1. il messaggio di richiesta utilizza il metodo GET
+2. il messaggio di richiesta include una riga di intestazione 'If-Modified-Since:'.
+
+```merm
+sequenceDiagram
+Client->>Web Cache: GET /fruit/kiwi.gif HTTP/1.1 <br>Host: www.exotiquecuisine.com
+Web Cache->>Web Server: GET /fruit/kiwi.gif HTTP/1.1 <br>Host: www.exotiquecuisine.com
+Web Server->>Web Cache: HTTP/1.1 200 OK <br>Date: Sat, 3 Oct 2015 15:39:29 <br>Server: Apache/1.3.0 (Unix) <br>Last-Modified: Wed, 9 Sep 2015 09:23:24 <br>Content-Type: image/gif <br>(data data data data data ...) 
+Web Cache->>Client: HTTP/1.1 200 OK <br>Date: Sat, 3 Oct 2015 15:39:29 <br>Server: Apache/1.3.0 (Unix) <br>Last-Modified: Wed, 9 Sep 2015 09:23:24 <br>Content-Type: image/gif <br>(data data data data data ...) 
+Client->>Web Cache: GET /fruit/kiwi.gif HTTP/1.1 <br>Host: www.exotiquecuisine.com
+Web Cache->>Web Server: GET /fruit/kiwi.gif HTTP/1.1 <br>Host: www.exotiquecuisine.com <nr>If-modified-since: Wed, 9 Sep 2015 09:23:24
+Web Server->>Web Cache: HTTP/1.1 304 Not Modified <br>Date: Sat, 10 Oct 2015 15:39:29 <br>Server: Apache/1.3.0 (Unix)
+```
+### HTTP/2
+Gli obbiettivi principali per HTTP/2 sono quelli di ridurre la latenza abilitanto il multiplexing di richieste e risposte su una singola connessione TCP. Per motivare la necessità di HTTP/2, ricordiamo che HTTP/1.1 utilizza connessioni TCP persistenti. Ma gli sviluppatori di browser Web hanno scoperto che l'invio di tutti gli oggetti in una pagina Web tramite una singola connessione TCP presenta un problema di blocco Head of Line (HOL). Utilizzando una singola connessione TCP, l'oggetto più grande impiegherà molto tempo per attraversare il collegamento a collo di bottiglia, mentre i piccoli oggetti saranno ritardati in attesa dietro di esso. I browser HTTP/1.1 aggirano questo problema aprendo più connessioni TCP parallele, inviando così oggetti nella stessa pagina web in parallelo al browser. Il controllo della congestione TCP mira a dare a ciascuna connessione TCP che condivide un collegamento una quota uguale della larghezza di banda disponibile di quel collegamento. Aprendo più connessioni TCP parallele per trasportare una singola pagina web, il browser può "barare" e accaparrarsi una porzione maggiore della larghezza di banda del collegamento.
+
+#### Framing HTTP/2
+La soluzione HTTP/2 per il blocco HOL consiste nello scomporre ogni messaggio in piccoli frame e nell'intercalare i messaggi di richiesta e risposta sulla stessa connessione TCP. In pratica ogni oggetto che compone la pagina web viene diviso in unità chiamate frame e l'invio dei frame viene parallelizzato per ciascun oggetto. Il framing viene eseguito dal sottolivello di framing del protocollo HTTP/2. Quando un server desidera inviare una risposta HTTP, la risposta viene elaborata dal sottolivello di framing, dove viene scomposta in frame. Il campo di intestazione della risposta diventa un frame e il corpo del messaggio viene scomposto in ulteriori frame. I frame della risposta vengono quindi intercalati dal sottolivello di framing nel server con i frame di altre risposte e inviati tramite l'unica connessione TCP persistente. Quando i frame arrivano al client, vengono prima riassemblati nei messaggi di risposta originali al sottolivello di framing e poi elaborati dal browser come di consueto. Analogamente, le richieste HTTP di un client vengono suddivise in frame e intercalate. Oltre a scomporre ogni messaggio HTTP in frame indipendenti, il sottolivello di framing codifica anche i frame in formato binario. I protocolli binari sono più efficienti da analizzare, generano frame leggermente più piccoli e sono meno soggetti a errori.
+
+#### Prioritizzazione dei messaggi di risposta e push del server
+Il sottolivello di framing organizza i messaggi in flussi paralleli di dati destinati allo stesso richiedente. Quando un client invia richieste simultanee a un server, può dare priorità alle risposte che sta richiedendo assegnando un peso compreso tra 1 e 256 a ciascun messaggio. Il numero più alto indica una priorità maggiore. Oltre a ciò, il client dichiara anche la dipendenza di ciascun messaggio da altri messaggi specificando l'ID del messaggio da cui dipende. Un'altra caratteristica di HTTP/2 è la possibilità per un server di inviare più risposte per una singola richiesta client. Oltre alla risposta alla richiesta originale, il server può inviare oggetti aggiuntivi al client, senza che il client debba richiederli. Ciò è possibile poiché la pagina base HTML indica gli oggetti che saranno necessari per il rendering completo della pagina Web. Quindi il server può analizzare la pagina HTML, identificare gli oggetti necessari e inviarli al client prima di ricevere richieste esplicite per tali oggetti.
+
+### Transport Layer Security (TLS) 
+Protocollo crittografico che permette una comunicazione sicura dalla sorgente al destinatario fornendo: autenticazione, integrità dei dati e Confidenzialità.
+Il funzionamento del protocollo TLS può essere suddiviso in tre fasi principali: Una negoziazione fra le parti dell'algoritmo da utilizzare, scambio delle chiavi e autenticazione e cifratura simmetrica e autenticazione dei messaggi.
+
+## FTP
+In una tipica sessione FTP, l'utente desidera trasferire file da o verso un host remoto.
+![[FTP.png]]
+L'FTP utilizza due connessioni TCP parallele per trasferire un file: una connessione di controllo e una connessione dati. La connessione di controllo viene utilizzata per inviare informazioni di controllo tra i due host, quali l'identificazione dell'utente, la password, i comandi per modificare la directory remota e i comandi per “inserire” e “recuperare” i file. La connessione dati viene utilizzata per inviare effettivamente un file. Poiché l'FTP utilizza una connessione di controllo separata, si dice che l'FTP invii le sue informazioni di controllo fuori banda. 
+Quando un utente avvia una sessione FTP con un host remoto, il lato client di FTP (utente) avvia prima una connessione TCP di controllo con il lato server (host remoto) sulla porta server numero 21. Il lato client di FTP invia l'identificazione dell'utente e la password tramite questa connessione di controllo. Il lato client dell'FTP invia anche, tramite la connessione di controllo, i comandi per modificare la directory remota. Quando il lato server riceve un comando per il trasferimento di un file tramite la connessione di controllo (da o verso l'host remoto), il lato server avvia una connessione dati TCP verso il lato client. L'FTP invia esattamente un file tramite la connessione dati e quindi chiude la connessione dati. Se, durante la stessa sessione, l'utente desidera trasferire un altro file, l'FTP apre un'altra connessione dati. Pertanto, con l'FTP, la connessione di controllo rimane aperta per tutta la durata della sessione utente, ma viene creata una nuova connessione dati per ogni file trasferito all'interno di una sessione (ovvero, le connessioni dati non sono persistenti). Durante una sessione, il server FTP deve mantenere lo stato dell'utente. In particolare, il server deve associare la connessione di controllo a un account utente specifico e deve tenere traccia della directory corrente dell'utente mentre questi naviga nell'albero delle directory remote. Tenere traccia di queste informazioni di stato per ogni sessione utente in corso limita in modo significativo il numero totale di sessioni che FTP può mantenere contemporaneamente. 
+![[TCP_Ports.png]]
+#### Comandi e risposte FTP
+I comandi, dal client al server, e le risposte, dal server al client, vengono inviati attraverso la connessione di controllo in formato ASCII a 7 bit. 
+Ogni comando termina con un ritorno a capo e un avanzamento riga. Ogni comando è composto da quattro caratteri ASCII maiuscoli, alcuni con argomenti opzionali. 
+• USER username: utilizzato per inviare l'identificazione dell'utente al server.
+• PASS password: utilizzato per inviare la password dell'utente al server.
+• LIST: utilizzato per chiedere al server di inviare un elenco di tutti i file presenti nella directory remota corrente. L'elenco dei file viene inviato tramite una connessione dati.
+• RETR filename: utilizzato per recuperare un file dalla directory corrente
+dell'host remoto.
+• STOR nomefile: utilizzato per memorizzare un file nella directory corrente
+dell'host remoto.
+
+Ogni comando è seguito da una risposta, inviata dal server al client. Le risposte sono numeri a tre cifre, con un messaggio opzionale che segue il numero. 
+
+Di seguito sono riportate alcune risposte tipiche:
+
+• 331 Username OK, password required
+• 125 Data connection already open; transfer starting
+• 425 Can't open data connection
+• 452 Error writing file
+
+## Posta elettronica (SMTP, POP3, IMAP)
+La posta elettronica è un mezzo di comunicazione asincrono:
+le persone inviano e leggono i messaggi quando lo ritengono opportuno, senza dover coordinarsi con gli impegni altrui.
+Quando si finisce di comporre il proprio messaggio, il proprio agente utente lo invia al proprio server di posta, dove il messaggio viene inserito nella coda dei messaggi in uscita del server di posta.
+Quando si vuole leggere un messaggio, il proprio agente utente recupera il messaggio dalla propria casella di posta nel propria server di posta.

@@ -67,6 +67,9 @@ Il throughput è una misura critica delle prestazioni nelle reti di computer, in
 Il throughput istantaneo è la velocità (in bit/sec) con cui l'host riceve i dati in un istante di tempo
 Il throughput medio di un trasferimento di F bit che impiega T secondi per essere completato è F/T bit/sec
 
+### Prodotto banda-ritardo
+Il prodotto banda-ritardo è il prodotto tra la banda o throughput del canele e il suo ritardo di propagazione, indica quanti bit sono presenti sul canale di comunicazione in un determinato istante.
+
 ### Il Concetto di Bottleneck
 Il throughput end-to-end è determinato dal collegamento bottleneck (collo di bottiglia) lungo il percorso
 Modello a due collegamenti: Si consideri un server e un client connessi da due collegamenti con velocità di trasmissione Rs (server-router) e Rc (router-client)
