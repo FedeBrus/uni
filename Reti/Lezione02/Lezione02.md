@@ -179,9 +179,75 @@ Di seguito sono riportate alcune risposte tipiche:
 • 125 Data connection already open; transfer starting
 • 425 Can't open data connection
 • 452 Error writing file
-
-## Posta elettronica (SMTP, POP3, IMAP)
+## Posta elettronica
 La posta elettronica è un mezzo di comunicazione asincrono:
 le persone inviano e leggono i messaggi quando lo ritengono opportuno, senza dover coordinarsi con gli impegni altrui.
-Quando si finisce di comporre il proprio messaggio, il proprio agente utente lo invia al proprio server di posta, dove il messaggio viene inserito nella coda dei messaggi in uscita del server di posta.
+Quando si finisce di comporre il proprio messaggio, il proprio user agent lo invia al proprio server di posta, dove il messaggio viene inserito nella coda dei messaggi in uscita del server di posta.
 Quando si vuole leggere un messaggio, il proprio agente utente recupera il messaggio dalla propria casella di posta nel propria server di posta.
+I server di posta formano il nucleo dell'infrastruttura della posta elettronica. Ogni destinatario possiede una casella di posta che si trova in uno dei server di posta. Una casella di posta gestisce e mantiene i messaggi che sono stati ricevuti. Un tipico missaggio parte dallo user agent del mittente, poi arriva al server di posta del mittente, poi viaggia fino al server di posta del destinatario dove verrò depositato nella casella di posta del destinatario. Quando il destinatario vuole leggere i messaggi in arrivo si autentica sul proprio server di posta. Se il server di posta del mittente non è in grado di inviare il messaggio al server di posta del destinatario, il messaggio viene conservato in una coda dei messaggi in uscita e il trasferimento verrà riprovato più tardi.
+![[PostaElettronica.png]]
+## SMTP
+Sia il lato client che il lato server di SMTP girano su ogni server di posta. Quando un server di posta invia posta ad altri server di posta, agisce come SMTP client. Quando un server di posta riceve posta da altri server di posta, agisce come SMTP server. 
+SMTP trasferisce i messaggi dai server di posta dei mittenti a quelli dei destinatari. SMTP risulta per gli standard odierni particolarmente datato. 
+Per esempio restringe il corpo di tutti i messaggi a un semplice ASCII a 7-bit. Ciò fa sì che i dati multimediali vengano codificati in ASCII prima di venir inviati con SMTP.
+
+![[PostaElettronicaEsempio.png]]
+
+È importante osservare che SMTP normalmente non utilizza server di posta intermedi per l'invio di posta, anche quando i due server di posta si trovano agli estremi opposti del mondo. Se il server di posta del destinatario è inattivo, il messaggio rimane nel server di posta di Alice e attende un nuovo tentativo: il messaggio non viene inserito in un server di posta intermedio.
+
+#### Handshaking SMTP
+Innanzitutto, il client SMTP stabilisce una connessione TCP sulla porta 25 con il server SMTP. Se il server è inattivo, il client riproverà più tardi. A seguire il server e il client performano un handshaking di livello applicativo. Durante questa fase, il client SMTP indica l'indirizzo e-mail del mittente e l'indirizzo e-mail del destinatario. Una volta fatto ciò, il client invia il messaggio. Il clien poi ripete questo procedimento sulla stessa connessione TCP  nel caso abbia altri messaggi da inviare a quel server; altrimenti chiude la connessione TCP.
+
+#### Struttura di un messaggio SMTP
+L'header e il corpo del messaggio sono separati da un riga vuota, ovvero CLRF.
+Ogni riga di intestazione contiene testo leggibile, costituito da una parola chiave seguita da due punti e da un valore. Alcune parole chiave sono obbligatorie, altre facoltative. Ogni intestazione deve avere una riga di intestazione 'From:' e una riga di intestazione 'To:'; un'intestazione può includere una riga di intestazione 'Subject:' e altre righe di intestazione facoltative. È importante notare che queste righe di intestazione sono diverse dai comandi SMTP. I comandi in quella sezione facevano parte del protocollo di handshaking SMTP; le righe di intestazione esaminate in questa sezione fanno parte del messaggio di posta elettronica stesso.
+
+### Protocolli di accesso di posta (mail access protocol)
+È naturale considerare di installare anche un server di posta sull'host locale del destinatario. Con questo approccio, il server di posta del mittente dialogherebbe direttamente con il PC del destinatario. Se il server di posta del destinatario risiedesse sul suo host locale, esso dovrebbe rimanere sempre attivo e connesso a Internet per ricevere nuova posta, che può arrivare in qualsiasi momento. Invece, un utente tipico esegue un agente utente sull'host locale ma accede alla propria casella di posta memorizzata su un server di posta condiviso sempre attivo. Questo server di posta è condiviso con altri utenti.
+
+## POP3
+Data la semplicità del protocollo, la sua funzionalità è piuttosto limitata. POP3 inizia quando l'agente utente (il client) apre una connessione TCP al server di posta (il server) sulla porta 110. Una volta stabilita la connessione TCP, POP3 procede attraverso tre fasi: autorizzazione, transazione e aggiornamento. 
+Durante la prima fase, l'agente utente invia un nome utente e una password (in chiaro) per autenticare l'utente. 
+Durante la seconda fase, la transazione, l'agente utente recupera i messaggi; sempre durante questa fase, l'agente utente può contrassegnare i messaggi per l'eliminazione, rimuovere i contrassegni di eliminazione e ottenere statistiche sulla posta. 
+La terza fase, l'aggiornamento, si verifica dopo che il client ha emesso il comando quit, terminando la sessione POP3; in questo momento, il server di posta elimina i messaggi contrassegnati per l'eliminazione. 
+In una transazione POP3, l'agente utente invia comandi e il server risponde a ciascun comando con una risposta. Sono possibili due risposte: +OK (a volte seguito da dati); -ERR, utilizzato dal server per indicare un errore. 
+
+La fase di autorizzazione prevede due comandi principali: 'user \<username\>' e pass \<password\>.
+
+Nella transizione in modalità "scarica ed elimina", lo user agent emetterà i comandi "list", "retr" e "dele".
+Nella transazione in modalità "scarica e conserva", lo user agent lascia i messaggi sul server di posta dopo averli scaricati. Il server POP3 non mantiene lo stato tra sessioni diverse, pertanto i messaggi risulteranno sempre come nuovi.
+
+## IMAP 
+Ha molte più funzionalità di POP3, ma è più complesso. Un server IMAP assocerà ogni messaggio a una cartella; Quando un messaggio arriva per la prima volta al server, viene associato alla cartella INBOX del destinatario. Il destinatario può quindi spostare il messaggio in una nuova cartella remota creata dall'utente, leggerlo, eliminarlo e così via. IMAP fornisce anche comandi che consentono agli utenti di cercare nelle cartelle remote i messaggi. Un server IMAP mantiene le informazioni sullo stato dell'utente tra le sessioni IMAP, ad esempio i nomi delle cartelle e quali messaggi sono associati a quali cartelle.
+
+### MIME
+Multipurpose Internet Mail Extensions (MIME) è uno standard che estende il formato dei messaggi di posta elettronica per supportare testo in set di caratteri diversi da ASCII, nonché allegati di file audio, video, immagini e programmi applicativi. Esistono degli header specifici per MIME tra cui 'MIME-Version:', 'Contet-Transfer-Encoding:' e 'Content-Type:'.
+Spesso questo da vita a delle inefficienze: se ad esempio decidessimo di codificare il messaggio in base64, noi staremmo utilizzando 8bit (ASCII supportato da SMTP) per codificarne 6.
+
+## DNS
+Il compito principale del domain name system (DNS) di Internet è quello di tradurre gli hostnames in indirizzi IP. Il DNS è: 
+1. Un database distribuito implementato tramite una gerarchia di server DNS
+2. Un protocollo di livello applicativo che permette agli hosts di interrogare il database distribuito. 
+
+Il protocollo DNS si affida a UDP e utilizza la porta 53.
+Il DNS è spesso utilizzato da altri protocolli di livello applicativo.
+
+Altri servizi offerti da DNS sono:
+#### Host aliasing
+Un host con un hostname complicato può avere uno o più alias. DNS può essere invocato da un applicazione per ottenere l'hostname canonico a partire da un alias.
+
+#### Mail server aliasing
+Allo stesso modo anche gli indirizzi di posta elettronica possiedono degli alias.
+Ciò può fare in modo che il Web server e il Mail server di un'azienda possano avere alias uguali.
+
+#### Distribuzione del carico
+DNS è utilizzato anche per performare ridistribuzione del carico tra server replicati. Site particolarmente trafficati sono replicati su diversi server, ciascuno su un end-system diverso con indirizzi IP diversi. A server replicati viene dato un'insieme di indirizzi IP associati allo stesso alias. Il database DNS contiene al suo interno questo insieme. Quando i client interrogano il DNS per un nome mappato a un insieme di indirizzi, il server risponde con l'intero insieme, ma ruota l'ordine con ogni risposta, ciò aiuta a ridistribuire il traffico equamente tra i diversi server replicati.
+### Gerarchia DNS
+DNS usa un grande numero di server, organizzate gerarchicamente e distribuiti geograficamente. Nessun server DNS possiede tutte le corrispondenze. Ci sono sostanzialmente 3 classi di server DNS. 
+- Server DNS radice. In Internet ci sono 13 root DNS server (chiamati con le lettere da A a M). Anche se ci riferiamo a ciascun dei 13 root DNS server come se fosse un solo server, ciascuno è in verità una rete di server replicati. Complessivamente, ci sono 247 root server.  
+- Top-level domain (TLD) servers. Questi server sono responsabili epr i domini  di livello superiore come com, org, net, edu, e gov, e di tutti i domini di livello superiori nazionali come uk, fr, ca, e jp.
+- Server DNS di competenza (autorevole). Ogni organizzazione con host pubblicamente accessibili su Internet deve provvedere record DNS pubblicamente accessibile i nomi di tali host ai relativi indirizzi IP. Un'organizzazione possono scegliere se implementare un proprio server DNS autorevole o pagare qualche service provider.
+![[GerarchiaDNS.png]]
+
+### Server DNS locale
+Esiste un altro tipo di server DNS, il server DNS locale. Ogni ISP possiede un server DNS locale. Quando un host si connette a un ISP, questo fornisce gli indirizzi dei server DNS locali. Quando un host esegue un'interrogazione DNS, questa viene inviata al server DNS locale, che agisce da proxy, inoltrando la query alla gerarchia DNS. 
