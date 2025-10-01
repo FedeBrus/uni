@@ -6,7 +6,8 @@ In un'architettura P2P, la dipendenza dai server dedicati nei data center è min
 #### Architettura peer-to-peer ibrida
 Un’architettura P2P ibrida combina elementi del modello client-server con quelli puramente peer-to-peer. In questo approccio, un server centrale può svolgere funzioni di coordinamento, come la gestione degli indirizzi dei peer o l’autenticazione degli utenti, mentre la distribuzione dei contenuti e la comunicazione avvengono direttamente tra i peer. Questo modello mantiene i vantaggi di scalabilità tipici del P2P, riducendo al tempo stesso alcune delle sue criticità, come la difficoltà nel trovare rapidamente le risorse o i problemi di sicurezza. Esempi di architettura ibrida si ritrovano in applicazioni come Skype nelle sue prime versioni.
 #### Cloud computing
-Il cloud computing è un’architettura che si basa sull’uso di potenti server remoti, accessibili tramite Internet, per fornire servizi di calcolo, archiviazione e applicazioni agli utenti. In questo modello, le risorse non risiedono sui dispositivi locali, ma vengono erogate su richiesta da data center distribuiti, garantendo elevata disponibilità, flessibilità e scalabilità. Gli utenti possono accedere ai servizi cloud da qualsiasi luogo e dispositivo connesso alla rete, senza preoccuparsi della gestione diretta dell’infrastruttura hardware.
+Il cloud computing è un’architettura che si basa sull’uso di potenti server remoti, accessibili tramite Internet, per fornire servizi di calcolo, archiviazione e applicazioni agli utenti. In questo modello, le risorse non risiedono sui dispositivi locali, ma vengono erogate su richiesta da data center distribuiti, garantendo elevata disponibilità, flessibilità e scalabilità. Gli utenti possono accedere ai servizi cloud da qualsiasi luogo e dispositivo connesso alla rete, senza preoccuparsi della gestione diretta dell’infrastruttura hardware. Il cloud computing prevede uno o più server reali, generalmente organizzati in un’architettura ad alta affidabilità e fisicamente collocati presso il data center del fornitore del servizio. Il fornitore di servizi espone delle interfacce per elencare e gestire i propri servizi. Il cliente amministratore utilizza tali interfacce per selezionare il servizio richiesto e per amministrarlo. Il cliente finale utilizza il servizio configurato dal cliente amministratore.
+
 ### Processi in comunicazione
 I processi su due diversi sistemi finali comunicano tra loro scambiandosi messaggi attraverso la rete informatica. Un processo di invio crea e invia messaggi alla rete; un processo di ricezione riceve questi messaggi e possibilmente risponde inviando messaggi di ritorno.
 #### Processi client e server 
@@ -251,3 +252,30 @@ DNS usa un grande numero di server, organizzate gerarchicamente e distribuiti ge
 
 ### Server DNS locale
 Esiste un altro tipo di server DNS, il server DNS locale. Ogni ISP possiede un server DNS locale. Quando un host si connette a un ISP, questo fornisce gli indirizzi dei server DNS locali. Quando un host esegue un'interrogazione DNS, questa viene inviata al server DNS locale, che agisce da proxy, inoltrando la query alla gerarchia DNS. 
+
+### Tipi di query DNS
+Le query DNS possono funzionare in modo iterativo o ricorsivo. L'approcio iterativo è preferito in quanto generalmente più efficiente.
+![[QueryIterativa.png]]
+![[QueryRicorsiva.png]]
+### Caching DNS
+In una catena di query, quando un server DNS riceve una risposta, la può cachare nella propria memoria. Se una coppia hostname/indirizzo IP è cachata in un server DNS e un'altra query arriva al server per lo stesso hostname, il server DNS provvede immediatamente la risposta. Siccome le corrispondenze non sono permanenti, i server DNS eliminano le informazioni dopo un periodo di tempo.
+
+### Record e messaggi DNS
+I sever DNS immagazzinano resource records (RRs). Ogni risposta DNS porta con sé uno o più RR. Un RR è una quadrupla che contiene i seguenti campi: (Name, Value, Type, TTL). 
+TTL è il time to live del RR; indica quando una risorsa deve essere rimossa dalla cache. 
+Il significato di Name e Value dipendono dal Type: 
+- Se Type=A, allora Name è l'hostname e Value è l'indirizzo IP
+- Se Type=NS, allora Name è il dominio e Value è l'hostname di un server DNS di competenza che sa come ottenere l'indirizzo IP per quel dominio
+- Se Type=CNAME, allora Value è l'hostname canonico per l'alias in Name. 
+- Se Type=MX, allora Value è il nome canonico di un server mail che a come alias Name.
+Ignorando la cache, un server non autorevole per un certo hostname non conterrà la corrispondenza di tipo A per tale nome, ma conterrà una corrispondenza NS per il server autorevole per quel nome e una corrispondenza di tipo A a tale server.
+
+### Messaggi DNS
+Sia le query che le reply hanno lo stesso formato. 
+- I primi 12 byte sono l'header. Il primo campo è un numero a 2 byte che identifica la query. Questo identificatore è copiato nel messaggio di risposta della query, permettendo al client di associare le risposte ricevute con le relative query. Seguono i flag. Un flag query/reply indica se il messaggio è una query (0) o una risposta (1). Un flag di autorevolezza viene asserito nella risposta quando un server DNS è autorevole per il nome interrogato. Un flag recursion-desired è asserito quando un client desidera che il server DNS performi la query in maniera ricorsiva. Un flag recursion-available è asserito in una risposta se il server DNS supporta la ricorsione. Nell'header ci sono 4 campi 'number-of' che indicano il numero di occorrenze dei tipi di dati dei cempi successivi.
+- La 'question section' contiene informazioni sulla query. La sezione include:
+	1. Un campo nome che contiene il nome interrogato
+	2. Un campo tipo che infica il tipo di interrogazione
+- In una risposta DNS, la 'answer section' contengono gli RR per il nome interrogato. Possono essere ritornati più RR.
+- La 'authority section' contiene record di altri server di competenza.
+- La 'additional section' contiene altri record utili.
