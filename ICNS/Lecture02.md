@@ -1,6 +1,3 @@
-Eache phase of the lifecycle need to be properly secured.
-Approfondisci side-channel attacks on cryptographic algorithms
-
 ### Identity and digital identity
 An identity is a set of attributes related to an entity, such as a person or an organization. Each attribute is a characteristic or property of an entity that can be used to describe its state, appearance, or other aspects; examples of attributes include an email address, telephone number or physical address. A digital identity is an identity whose attributes are stored and transmitted in digital form. 
 

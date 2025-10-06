@@ -105,3 +105,32 @@ Le sub query possono essere annidati in diversi punti di un’interrogazione SQL
 - Nella clausola FROM: serve a costruire una tabella temporanea su cui eseguire il resto della query
 - Nella clausola WHERE: serve a calcolare al volo un singolo valore su cui operare un confronto o un insieme di valori da confrontare con un valore già disponibile
 - Nella clausola HAVING (vedi prossime slide): serve a calcolare un valore per filtrare i gruppi che devono essere restituiti (simile al WHERE, ma si opera su gruppi e non su righe)
+
+### Definizioni
+- Subquery: una query annidata (inner query) all'interno di un'altra query (outer query)
+- Common Table Expression (CTE): è un insieme di tuple temporaneo, costruito sulla base di una query. Esiste solo per il tempo di esecuzione della query principale.
+- Tabella temporanea: tabella che viene creata e esiste temporaneamente per la durata di una sessione o di una transazione
+- Vista (view): è una tabella virtuale creata mediante una query. Non memorizza i dati sul DB, ma è persistente (può essere richiamata in ogni momento all'interno di una query)
+
+Subquery:
+- Vantaggi: le subquery possono essere annidate e utilizzate direttamente all'interno della struttura della query.
+- Limiti: le subquery possono talvolta causare problemi di prestazioni se usate in modo eccessivo in query complesse, rendendole più difficili da ottimizzare e comprendere.
+
+CTE:
+- Vantaggi: la CTE migliora la leggibilità consentendo di calcolare separatamente parti utilizzate nella query principale.
+- Limiti: il result set di una CTE è temporaneo e non può essere riutilizzato in più query.
+
+Tabelle temporanee:
+- Vantaggi: la tabella temporanea può essere utilizzata più volte in diverse parti delle query, rendendola ideale per query complesse o quando è necessario riutilizzare il risultato in più passaggi/query.
+- Limiti: occupa spazio di archiviazione temporaneamente ed è specifica della sessione, il che significa che, una volta terminata la sessione/transazione, la tabella viene eliminata.
+
+Viste:
+- Vantaggio: le viste sono persistenti, il che significa che possono essere utilizzate ripetutamente senza dover riscrivere la logica ogni volta.
+- Limiti:  le viste non sono adatte a operazioni complesse e su larga scala in cui i dati devono essere modificati frequentemente o interrogati in contesti diversi, poiché non memorizzano i dati ma interrogano ogni volta le tabelle sottostanti.
+
+### Join
+Ci sono 4 principali forme di JOIN:
+- (INNER) JOIN: la condizione del JOIN è soddisfatta dalle tuple di entrambe le tabelle.
+- LEFT (OUTER) JOIN: restituisce tutte le tuple della tabella di sinsitra e solo quelle che soddisfano la condizione del JOIN della relazione di destra.
+- RIGHT (OUTER) JOIN: restituisce tutte le tuple della tabella di destra e solo quelle che soddisfano la condizione del JOIN della relazione di sinistra.
+- FULL (OUTER) JOIN: restituisce tutte le tuple ogni volta che c'è un match in almeno una delle due tabelle.
