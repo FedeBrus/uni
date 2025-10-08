@@ -25,3 +25,14 @@ A brute force or exhaustive search attack consists in trying all the possible co
 
 ### Dictionary attacks
 Dictionary attacks consist in trying every passwords from an on-line dictionary, which is a collection of passwords or user name and password pairs that have been found to be commonly used. Many dictionaries are derived from large data breaches, which is what makes those attacks so effective. Even hashed passwords are subject to this attack; a service could mitigate this risk by implementing salting.
+
+The longer the key is used, the more dangerous the situation becomes, because attacker can make educated guesses for the key based on repetitions and patterns in teh ciphertexts. So basically you need to change keys periodically so that harvest now, decipher later attacks are no longer effective.
+
+The generation of keys should cover the keyspace evenly, there should be no biases on the generation on keys.
+
+To generate as random as possible keys we use pseudo-random number generators based on seeds. So if you know a part a sub-sequence it is hard to guess the numbers that will come or what seed generated them. 
+Cryptographical secure pseudo random number generators. There are other RNGs that are not cryptographically secure, where the seed can be easily identified.
+They are useful because you can more easily generate entropy heavy keys. For example you can use UNIX TIME, which is not at all random. Doing so is not smart because an attacker could know that you have generated a key in a certain timeframe can use that information to reduce the search. So other entropy sources are used such as thermal information and mouse and keyboards inputs.
+
+Storage is were Kerchoff's principle really kicks in (Mind that the key should be protected in each single phase, but when the key is being stored is when it is most vulnerable).
+Protection of the key relies on a combination of cryptography and access control.
