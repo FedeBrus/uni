@@ -26,6 +26,10 @@ A brute force or exhaustive search attack consists in trying all the possible co
 ### Dictionary attacks
 Dictionary attacks consist in trying every passwords from an on-line dictionary, which is a collection of passwords or user name and password pairs that have been found to be commonly used. Many dictionaries are derived from large data breaches, which is what makes those attacks so effective. Even hashed passwords are subject to this attack; a service could mitigate this risk by implementing salting.
 
+
+
+
+---
 The longer the key is used, the more dangerous the situation becomes, because attacker can make educated guesses for the key based on repetitions and patterns in teh ciphertexts. So basically you need to change keys periodically so that harvest now, decipher later attacks are no longer effective.
 
 The generation of keys should cover the keyspace evenly, there should be no biases on the generation on keys.
@@ -36,3 +40,24 @@ They are useful because you can more easily generate entropy heavy keys. For exa
 
 Storage is were Kerchoff's principle really kicks in (Mind that the key should be protected in each single phase, but when the key is being stored is when it is most vulnerable).
 Protection of the key relies on a combination of cryptography and access control.
+
+As a bare minimum, a cryptographic algorithm needs to be resistent to brute force attacks, which are all the most feasable because of more available computing power. So the cardinality of the keyspace should increase in size, this is the only solution to brute force.
+Since the key size may need to increase due to increasing computationl power, a cryptographic algorithm should be parametric to the size of the key.
+
+A symmetric cryptographic algorithm usually works by applying substitutions and permutations in sequence for multiple rounds. 
+Confusione and Diffusion
+Confusion is not being able to see how che ciphertext is related to the key
+Diffusion is not being able to see how the ciphertext is related to the plaintext
+Permutations and substitions don't actually use the same key. There's a key scheduling algorithm that takes a key as input and produces different keys derived from the original key that will be used in each step in each round.
+
+(DES) F is a combination of subsitution and permutation and some non-linear trasnformation.
+
+Since these algorihtms are very complex to design NIST made parametricity in respect to the key a requirement. It's much less effort to make an algorithm parametric than having to change each instance of the algorithm in the world.
+
+AES is theoritically secure. It is only vulnerable in its implementation, like timing-attacks. Search timing-attack and constant time programming.
+Symmetric key cryptography is actually quantum-resistent, we can just increase the key.
+The problem is public key cryptography.
+
+Hash functions are also resistent to quantum attacks.
+
+
