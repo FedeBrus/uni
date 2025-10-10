@@ -94,6 +94,31 @@ class Node:
 
         return p
 
+    def detach(self, son):
+        if son is not None:
+            if son.value < self.value:
+                self.left = None
+            elif son.value > self.value:
+                self.right = None
+
+            son.parent = None
+
+    def remove(self):
+        if self.left is None and self.right is None:
+            self.parent.detach(self)
+
+        elif self.left is None and self.right is not None:
+            self.parent.link(self.right)
+
+        elif self.left is not None and self.right is None:
+            self.parent.link(self.left)
+
+        else:
+            u = self.successor()
+            u.parent.link(u.right)
+
+
+
 class BinarySearchTree:
     def __init__(self):
         self.root = None
@@ -154,14 +179,25 @@ class BinarySearchTree:
 
         else:
             raise EmptyTreeException()
+
+    def remove(self, value):
+        if not self.isEmpty():
+            u = self.root.lookup(value)
+            if u is not None:
+                u.remove()
             
 bst = BinarySearchTree()
-bst.insert(1)
+bst.insert(7)
 bst.insert(2)
+bst.insert(8)
+bst.insert(1)
 bst.insert(5)
-bst.insert(4)
-bst.insert(9)
+bst.insert(12)
+bst.insert(3)
 bst.insert(6)
+bst.insert(9)
+bst.insert(15)
+bst.insert(4)
 
 
 print("DFS: ")
@@ -171,6 +207,16 @@ print("Ricerca 1: ", bst.lookup(1))
 print("Ricerca 2: ", bst.lookup(2))
 print("Ricerca 4: ", bst.lookup(4))
 print("Ricerca 12: ", bst.lookup(12))
+
+bst.remove(15)
+print("DFS: ")
+bst.dfs_inorder()
+bst.remove(12)
+print("DFS: ")
+bst.dfs_inorder()
+bst.remove(2)
+print("DFS: ")
+bst.dfs_inorder()
 
 try:
     print("Successore di 4: ", bst.successor(4))

@@ -226,4 +226,19 @@ Al livello più alto, possiamo distinguere tra approcci di controllo della conge
 Per il controllo della congestione assistito dalla rete, le informazioni sulla congestione vengono in genere restituite dalla rete al mittente in uno dei due modi. Un feedback diretto può essere inviato da un router di rete al mittente. Questa forma di notifica assume tipicamente la forma di un pacchetto choke. La seconda e più comune forma di notifica si verifica quando un router contrassegna/aggiorna un campo in un pacchetto che fluisce dal mittente al destinatario per indicare la congestione. Alla ricezione di un pacchetto contrassegnato, il destinatario notifica al mittente l'indicazione di congestione. Quest'ultima forma di notifica richiede un tempo di andata e ritorno completo.
 
 ### Controllo della congestione di TCP
+Il meccanismo di controllo della congestione TCP dal lato del mittente tiene traccia di una variabile chiuamata finestra di congestione (cwnd). La finestra di congestione impone un vincolo alla velocità con cui un mittente TCP può inviare traffico nella rete. La quantità di dati non confermati presso un mittente non può superare il minimo di cwnd e rwnd, ovvero:
+$$
+\text{LastByteSent} - \text{LastByteAcked} \leq min(\text{cwnd}, \text{rwnd})
+$$
+
+Il datagramma eliminato determina un evento di perdita presso il mittente, ovvero un timeout o la ricezione di tre ACK duplicati, che viene interpretato dal mittente come un'indicazione di congestione sul percorso mittente-destinatario. 
+Consideriamo ora il caso più ottimistico in cui la rete è priva di congestione. Il mittente TCP riceverà le conferme di ricezione per i segmenti. TCP interpreterà l'arrivo di queste conferme come un'indicazione che tutto procede correttamente, ovvero che i segmenti trasmessi nella rete vengono consegnati e aumentarà la dimensione della finestra di congestione (e quindi la velocità di trasmissione, ammesso che non si sia limitati da rwnd). Si noti che la finestra di congestione aumenta ad una velocità proporzionale al tasso con cui le conferme arrivano, che dipende dalla velocità della trasmissione punto-punto.
+
+TCP segue le seguenti regole:
+- Un segmento perso implica congestione e, pertanto, la velocità del mittente TCP dovrebbe essere ridotta quando un segmento viene perso.
+- Un segmento riconosciuto indica che la rete sta recapitando i segmenti del mittente al destinatario e, pertanto, la finestra di congestione può essere aumentata. 
+- Sondaggio della larghezza di banda. Il mittente TCP aumenta quindi la sua velocità di trasmissione per sondare la velocità a cui inizia l'insorgenza della congestione, si allontana da tale velocità e quindi ricomincia a sondare per vedere se la velocità di insorgenza della congestione è cambiata.
+
+---
 Il controllo della congestione di TCP consiste in un aumento lineare (additivo) di cwnd di 1 MSS per RTT e poi in un dimezzamento (diminuzione moltiplicativa) di cwnd in caso di perdita rilevata. Per questo motivo, il controllo della congestione di TCP è spesso definito come una forma di controllo della congestione additive-increase, multiplcative decrease (AIMD).
+
